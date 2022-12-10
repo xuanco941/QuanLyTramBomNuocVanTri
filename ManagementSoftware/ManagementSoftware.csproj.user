@@ -34,5 +34,8 @@
     <Compile Update="GUI\Section\FormAleart.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TestChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

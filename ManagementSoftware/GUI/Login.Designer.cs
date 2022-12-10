@@ -203,11 +203,11 @@
             this.buttonChangeStringConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeStringConnect.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonChangeStringConnect.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeStringConnect.Location = new System.Drawing.Point(0, 327);
+            this.buttonChangeStringConnect.Location = new System.Drawing.Point(0, 336);
             this.buttonChangeStringConnect.Name = "buttonChangeStringConnect";
-            this.buttonChangeStringConnect.Size = new System.Drawing.Size(92, 33);
+            this.buttonChangeStringConnect.Size = new System.Drawing.Size(84, 24);
             this.buttonChangeStringConnect.TabIndex = 21;
-            this.buttonChangeStringConnect.Text = "Thay chuỗi kết nối Database";
+            this.buttonChangeStringConnect.Text = "Đổi Database";
             this.buttonChangeStringConnect.UseVisualStyleBackColor = false;
             this.buttonChangeStringConnect.Click += new System.EventHandler(this.buttonBepTu_Click);
             // 

@@ -154,7 +154,7 @@ namespace ManagementSoftware.GUI
             this.buttonEmployee.Name = "buttonEmployee";
             this.buttonEmployee.Size = new System.Drawing.Size(174, 79);
             this.buttonEmployee.TabIndex = 9;
-            this.buttonEmployee.Text = "Quản lý nhân sự";
+            this.buttonEmployee.Text = "Thành viên";
             this.buttonEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonEmployee.UseVisualStyleBackColor = true;
@@ -300,7 +300,7 @@ namespace ManagementSoftware.GUI
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Test Jig";
+            this.Text = "Theo dõi trạm bơm";
             this.panelMenu.ResumeLayout(false);
             this.panelItemMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

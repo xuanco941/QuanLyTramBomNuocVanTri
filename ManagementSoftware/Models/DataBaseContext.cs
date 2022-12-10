@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.DAL;
+using ManagementSoftware.Models.TramBomNuoc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
@@ -9,6 +10,11 @@ namespace ManagementSoftware.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Activity> Activities { get; set; }
+
+        public DbSet<Digital> Digitals { get; set; }
+        public DbSet<Analog> Analogs { get; set; }
+        public DbSet<Alert> Alerts { get; set; }
+
 
 
 
@@ -56,6 +62,22 @@ namespace ManagementSoftware.Models
             modelBuilder.Entity<Activity>(entity =>
             {
                 entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+            });
+
+            //digital
+            modelBuilder.Entity<Digital>(entity =>
+            {
+                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
+            });
+            //analog
+            modelBuilder.Entity<Analog>(entity =>
+            {
+                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
+            });
+            //alert
+            modelBuilder.Entity<Alert>(entity =>
+            {
+                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
             });
 
 

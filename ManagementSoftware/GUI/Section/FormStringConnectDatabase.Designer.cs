@@ -139,7 +139,7 @@
             this.MaximizeBox = false;
             this.Name = "FormStringConnectDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thay đổi chuỗi kết nối cơ sở dữ liệu";
+            this.Text = "Thay đổi cơ sở dữ liệu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
