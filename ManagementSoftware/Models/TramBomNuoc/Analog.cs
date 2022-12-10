@@ -24,11 +24,15 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public double GiaTriLonNhat { get; set; }
         public double GiaTriNhoNhat { get; set; }
 
-
-
-
-
-
-
+        public Analog(string ganThe, string dieuKien, string nhom, string tinHieu, string donVi, double giaTriLonNhat, double giaTriNhoNhat)
+        {
+            GanThe = ganThe;
+            DieuKien = dieuKien;
+            Nhom = nhom;
+            TinHieu = tinHieu;
+            DonVi = donVi;
+            GiaTriLonNhat = giaTriLonNhat;
+            GiaTriNhoNhat = giaTriNhoNhat;
+        }
     }
 }

@@ -35,19 +35,20 @@
             // 
             this.chartControl1.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
             this.chartControl1.ChartArea.CursorReDraw = false;
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.IsWindowLess = false;
             // 
             // 
             // 
-            this.chartControl1.Legend.Location = new System.Drawing.Point(291, 75);
+            this.chartControl1.Legend.Location = new System.Drawing.Point(691, 75);
             this.chartControl1.Localize = null;
-            this.chartControl1.Location = new System.Drawing.Point(213, 93);
+            this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryXAxis.Margin = true;
             this.chartControl1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryYAxis.Margin = true;
-            this.chartControl1.Size = new System.Drawing.Size(400, 300);
+            this.chartControl1.Size = new System.Drawing.Size(800, 450);
             this.chartControl1.TabIndex = 0;
             this.chartControl1.Text = "chartControl1";
             // 

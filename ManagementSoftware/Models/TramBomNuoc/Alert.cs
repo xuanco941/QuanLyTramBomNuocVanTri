@@ -18,5 +18,13 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public string Nhom { get; set; }
         public string TinHieu { get; set; }
         public DateTime ThoiGian { get; set; }
+
+        public Alert(string ganThe, string dieuKien, string nhom, string tinHieu)
+        {
+            GanThe = ganThe;
+            DieuKien = dieuKien;
+            Nhom = nhom;
+            TinHieu = tinHieu;
+        }
     }
 }
