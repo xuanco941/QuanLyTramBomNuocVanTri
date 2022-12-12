@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSoftware.GUI.Section;
+using QuanLyTramBom;
 
 namespace ManagementSoftware.GUI
 {
@@ -107,6 +108,12 @@ namespace ManagementSoftware.GUI
         {
             Settings form = new Settings();
             ChangeFormContent(form, sender);
+        }
+
+        private void buttonTheoDoiTramBom_Click(object sender, EventArgs e)
+        {
+            Dashboard form = new Dashboard();
+            form.Show();
         }
     }
 }

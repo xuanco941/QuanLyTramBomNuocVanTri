@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ManagementSoftware.Models.TramBomNuoc
 {
@@ -13,6 +10,7 @@ namespace ManagementSoftware.Models.TramBomNuoc
     {
         [Key]
         public int IDAnalog { get; set; }
+        public string DiaChiPLC { get; set; }
         public string GanThe { get; set; }
         public string DieuKien { get; set; }
 
@@ -24,8 +22,9 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public double GiaTriLonNhat { get; set; }
         public double GiaTriNhoNhat { get; set; }
 
-        public Analog(string ganThe, string dieuKien, string nhom, string tinHieu, string donVi, double giaTriLonNhat, double giaTriNhoNhat)
+        public Analog(string diaChiPLC, string ganThe, string dieuKien, string nhom, string tinHieu, string donVi, double giaTriLonNhat, double giaTriNhoNhat)
         {
+            DiaChiPLC = diaChiPLC;
             GanThe = ganThe;
             DieuKien = dieuKien;
             Nhom = nhom;

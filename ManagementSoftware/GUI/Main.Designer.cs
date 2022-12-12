@@ -179,6 +179,7 @@ namespace ManagementSoftware.GUI
             this.buttonTheoDoiTramBom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonTheoDoiTramBom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonTheoDoiTramBom.UseVisualStyleBackColor = false;
+            this.buttonTheoDoiTramBom.Click += new System.EventHandler(this.buttonTheoDoiTramBom_Click);
             // 
             // panel3
             // 
