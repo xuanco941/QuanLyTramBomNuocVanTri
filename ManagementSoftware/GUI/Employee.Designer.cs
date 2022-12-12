@@ -505,6 +505,7 @@ namespace ManagementSoftware.GUI
             this.buttonChangeGroup.BorderRadius = 3;
             this.buttonChangeGroup.BorderSize = 0;
             this.buttonChangeGroup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonChangeGroup.Enabled = false;
             this.buttonChangeGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonChangeGroup.ForeColor = System.Drawing.Color.White;
@@ -531,6 +532,7 @@ namespace ManagementSoftware.GUI
             this.buttonAddGroup.BorderRadius = 3;
             this.buttonAddGroup.BorderSize = 0;
             this.buttonAddGroup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAddGroup.Enabled = false;
             this.buttonAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddGroup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAddGroup.ForeColor = System.Drawing.Color.White;

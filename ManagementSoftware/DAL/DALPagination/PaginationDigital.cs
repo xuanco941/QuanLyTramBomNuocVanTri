@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ManagementSoftware.DAL.DALPagination
 {
-    public class DALPaginationDigital
+    public class PaginationDigital
     {
         public static int NumberRows { get; set; } = Common.NumberRows;
         public int PageCurrent { get; set; } = 1;
@@ -39,6 +39,34 @@ namespace ManagementSoftware.DAL.DALPagination
 
                 this.TotalResults = l2.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom)).Count();
             }
+            //1
+            else if ((String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu == null || listTinHieu.Count <= 0) && (start != null && end != null))
+            {
+                this.ListResults = dbContext.Digitals.OrderByDescending(t => t.IDDigital)
+                .Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom))
+                .Skip(position)
+                .Take(NumberRows)
+                .ToList();
+
+                this.TotalResults = dbContext.Digitals.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom)).Count();
+            }
+            //2
+            else if ((String.IsNullOrEmpty(loaiBom) == true) && (listTinHieu != null && listTinHieu.Count > 0) && (start != null && end != null))
+            {
+                foreach (Digital digital in listTinHieu)
+                {
+                    l = dbContext.Digitals.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
+                    l2.AddRange(l);
+                }
+                this.ListResults = l2.OrderByDescending(t => t.IDDigital)
+                .Where(a => (start <= a.ThoiGian && end >= a.ThoiGian))
+                .Skip(position)
+                .Take(NumberRows)
+                .ToList();
+
+                this.TotalResults = l2.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian)).Count();
+            }
+            //3
 
             else if ((start == null || end == null) && (String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu != null && listTinHieu.Count > 0))
             {
@@ -56,6 +84,14 @@ namespace ManagementSoftware.DAL.DALPagination
                 this.TotalResults = l2.Where(a => a.Nhom == loaiBom).Count();
 
             }
+            //4
+            else if ((String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu == null || listTinHieu.Count <= 0) && (start == null || end == null))
+            {
+                this.ListResults = dbContext.Digitals.OrderByDescending(t => t.IDDigital).Where(a => (a.Nhom == loaiBom)).Skip(position).Take(NumberRows).ToList();
+
+                this.TotalResults = dbContext.Digitals.Where(a => a.Nhom == loaiBom).Count();
+            }
+            //5
             else if ((start == null || end == null) && (String.IsNullOrEmpty(loaiBom) == true) && (listTinHieu != null && listTinHieu.Count > 0))
             {
                 foreach (Digital digital in listTinHieu)
@@ -70,15 +106,25 @@ namespace ManagementSoftware.DAL.DALPagination
 
                 this.TotalResults = l2.Count();
             }
-            else if((String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu == null || listTinHieu.Count > 0) && (start != null && end != null))
+            //6
+            else if ((String.IsNullOrEmpty(loaiBom) == true) && (listTinHieu == null || listTinHieu.Count <= 0) && (start != null && end != null))
             {
                 this.ListResults = dbContext.Digitals.OrderByDescending(t => t.IDDigital)
-                .Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom))
+                .Where(a => (start <= a.ThoiGian && end >= a.ThoiGian))
                 .Skip(position)
                 .Take(NumberRows)
                 .ToList();
 
-                this.TotalResults = dbContext.Digitals.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom)).Count();
+                this.TotalResults = dbContext.Digitals.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian)).Count();
+            }
+            else
+            {
+                this.ListResults = dbContext.Digitals.OrderByDescending(t => t.IDDigital)
+                .Skip(position)
+                .Take(NumberRows)
+                .ToList();
+
+                this.TotalResults = dbContext.Digitals.Count();
             }
 
             this.PageCurrent = page;

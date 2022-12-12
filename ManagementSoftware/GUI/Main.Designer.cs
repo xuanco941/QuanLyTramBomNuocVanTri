@@ -121,6 +121,7 @@ namespace ManagementSoftware.GUI
             this.buttonSetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonSetting.UseVisualStyleBackColor = true;
+            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
             // 
             // buttonActivity
             // 

@@ -103,5 +103,10 @@ namespace ManagementSoftware.GUI
             Application.Restart();
         }
 
+        private void buttonSetting_Click(object sender, EventArgs e)
+        {
+            Settings form = new Settings();
+            ChangeFormContent(form, sender);
+        }
     }
 }
