@@ -20,13 +20,13 @@ namespace QuanLyTramBom
 
         private void InitializeTimePicker()
         {
-            dateTimePicker3.Format = DateTimePickerFormat.Time;
-            dateTimePicker3.ShowUpDown = true;
+           // dateTimePicker3.Format = DateTimePickerFormat.Time;
+            //dateTimePicker3.ShowUpDown = true;
            
         }
         private void FormLDKhuynhHuong_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Text = DateTime.Now.ToShortDateString();
+           // dateTimePicker1.Text = DateTime.Now.ToShortDateString();
         }
     }
 }

@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="GUI\QuanLyTramBom\FormCaiDatDoThiKhuynhHuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -40,6 +43,9 @@
     <Compile Update="GUI\QuanLyTramBom\FormDSVaoRaTT.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\FormKHThoiGianThuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\FormLDKhuynhHuong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -47,6 +53,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\FormLTLoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\QuanLyTramBom\FormQLHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\FormTimDuLieu.cs">
@@ -68,6 +77,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\testSyn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TestChart.cs">
