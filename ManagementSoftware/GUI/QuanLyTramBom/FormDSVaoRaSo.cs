@@ -27,5 +27,11 @@ namespace QuanLyTramBom
             FormTimDuLieu fm = new FormTimDuLieu();
             fm.ShowDialog();
         }
+
+        private void btnChangeNumElmPage_Click(object sender, EventArgs e)
+        {
+            FormTimDuLieu fm = new FormTimDuLieu();
+            fm.ShowDialog();
+        }
     }
 }

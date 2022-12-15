@@ -233,9 +233,59 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_checkmark_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-checkmark-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_printer_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-printer-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_tick_box_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-tick-box-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_tick_box_301 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-tick-box-301", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +336,16 @@ namespace ManagementSoftware.Properties {
         internal static System.Drawing.Bitmap setting_24 {
             get {
                 object obj = ResourceManager.GetObject("setting-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings_icon {
+            get {
+                object obj = ResourceManager.GetObject("Settings-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

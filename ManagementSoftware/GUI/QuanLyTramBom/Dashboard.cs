@@ -1,4 +1,6 @@
 ﻿
+using ManagementSoftware.GUI.QuanLyTramBom;
+
 namespace QuanLyTramBom
 {
     public partial class Dashboard : Form
@@ -25,7 +27,12 @@ namespace QuanLyTramBom
             form1.FormBorderStyle = FormBorderStyle.None;
             form1.Show();
 
-
+            FormKHThoiGianThuc form3 = new FormKHThoiGianThuc();
+            form3.TopLevel = false;
+            panelContent3.Controls.Add(form3);
+            form3.Dock = DockStyle.Fill;
+            form3.FormBorderStyle = FormBorderStyle.None;
+            form3.Show();
 
         }
 
@@ -75,10 +82,28 @@ namespace QuanLyTramBom
             {
                 FormLDKhuynhHuong form2 = new FormLDKhuynhHuong();
                 form2.TopLevel = false;
-                panelContent3.Controls.Add(form2);
+                panelContent2.Controls.Add(form2);
                 form2.Dock = DockStyle.Fill;
                 form2.FormBorderStyle = FormBorderStyle.None;
                 form2.Show();
+            }
+            else if (e.TabPage == tabPage3)
+            {
+                FormKHThoiGianThuc form3 = new FormKHThoiGianThuc();
+                form3.TopLevel = false;
+                panelContent3.Controls.Add(form3);
+                form3.Dock = DockStyle.Fill;
+                form3.FormBorderStyle = FormBorderStyle.None;
+                form3.Show();
+            }
+            else if (e.TabPage == tabPage5)
+            {
+                FormQLHeThong form4 = new FormQLHeThong();
+                form4.TopLevel = false;
+                panelContentQL.Controls.Add(form4);
+                form4.Dock = DockStyle.Fill;
+                form4.FormBorderStyle = FormBorderStyle.None;
+                form4.Show();
             }
         }
 
