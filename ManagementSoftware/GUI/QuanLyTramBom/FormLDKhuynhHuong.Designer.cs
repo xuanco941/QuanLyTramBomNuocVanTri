@@ -28,142 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3dItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            this.btnChangeNumElmPage = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // btnChangeNumElmPage
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hiển thị nhóm";
+            this.btnChangeNumElmPage.BackColor = System.Drawing.SystemColors.Control;
+            this.btnChangeNumElmPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeNumElmPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChangeNumElmPage.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnChangeNumElmPage.Image = global::ManagementSoftware.Properties.Resources.Settings_icon;
+            this.btnChangeNumElmPage.Location = new System.Drawing.Point(20, 20);
+            this.btnChangeNumElmPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnChangeNumElmPage.Name = "btnChangeNumElmPage";
+            this.btnChangeNumElmPage.Size = new System.Drawing.Size(150, 51);
+            this.btnChangeNumElmPage.TabIndex = 17;
+            this.btnChangeNumElmPage.Text = "Cài đặt";
+            this.btnChangeNumElmPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChangeNumElmPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChangeNumElmPage.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // panel1
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 1;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.chartControl1);
+            this.panel1.Location = new System.Drawing.Point(0, 87);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1242, 363);
+            this.panel1.TabIndex = 18;
             // 
-            // button1
+            // chartControl1
             // 
-            this.button1.Location = new System.Drawing.Point(218, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Thiết lập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.chartControl1.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.chartControl1.ChartArea.CursorReDraw = false;
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.IsWindowLess = false;
             // 
-            // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(699, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Hiển thị nhóm";
             // 
-            // label3
+            this.chartControl1.Legend.Location = new System.Drawing.Point(1133, 75);
+            this.chartControl1.Localize = null;
+            this.chartControl1.Location = new System.Drawing.Point(0, 0);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.chartControl1.PrimaryXAxis.Margin = true;
+            this.chartControl1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.chartControl1.PrimaryYAxis.Margin = true;
+            this.chartControl1.Size = new System.Drawing.Size(1242, 363);
+            this.chartControl1.TabIndex = 0;
+            this.chartControl1.Text = "chartControl1";
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(819, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 21);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "~";
             // 
-            // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(1079, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Đặt thời gian";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1090, 48);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(65, 23);
-            this.comboBox3.TabIndex = 11;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(788, 10);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(150, 23);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(846, 51);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(121, 23);
-            this.dateTimePicker2.TabIndex = 13;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(964, 10);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(109, 23);
-            this.dateTimePicker3.TabIndex = 14;
+            this.chartControl1.Title.Name = "Default";
+            this.chartControl1.Titles.Add(this.chartControl1.Title);
+            this.chartControl1.ToolBar.EnableDefaultItems = false;
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSaveItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarCopyItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSplitter1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPaletteItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarStyleItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarTypeItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3dItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem1);
+            this.chartControl1.VisualTheme = "";
             // 
             // FormLDKhuynhHuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 450);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnChangeNumElmPage);
             this.Name = "FormLDKhuynhHuong";
             this.Text = "FormLDKhuynhHuong";
             this.Load += new System.EventHandler(this.FormLDKhuynhHuong_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox1;
-        private Button button1;
-        private Label label2;
-        private Label label3;
-        private Button button2;
-        private ComboBox comboBox3;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker3;
+        private Button btnChangeNumElmPage;
+        private Panel panel1;
+        private Syncfusion.Windows.Forms.Chart.ChartControl chartControl1;
     }
 }

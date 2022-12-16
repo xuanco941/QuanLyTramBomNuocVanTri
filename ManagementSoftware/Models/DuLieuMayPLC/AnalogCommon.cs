@@ -41,7 +41,11 @@ namespace ManagementSoftware.Models.DuLieuMayPLC
         public static Analog D10058 = new Analog("D10058", "CP2_AI405C00", "DPS", NhomBom.Bom4, "Độ mở van xả bơm số 4", "%", 100, 0);
         public static Analog D10098 = new Analog("D10098", "CP2_AI499C00", "DPS", NhomBom.Bom4, "Tổng số giờ bơm 4 chạy", "Min", 9999999, 0);
 
-        public static List<Analog> listAnalog = new List<Analog>() { D10000, D10002 , D10004 , D10006 , D10008 , D10010 , D10016,  D10018 , D10020 , D10022 , D10024 , D10092 , D10030,  D10032,
+        public List<Analog> listAllAnalogs { get; set; }
+        public AnalogCommon()
+        {
+            listAllAnalogs = new List<Analog>() { D10000, D10002 , D10004 , D10006 , D10008 , D10010 , D10016,  D10018 , D10020 , D10022 , D10024 , D10092 , D10030,  D10032,
                                                                      D10034,  D10036,  D10038,  D10094,  D10040 , D10042 ,D10044 , D10046,  D10048 , D10096 , D10050,  D10052 , D10054 , D10056,  D10058 , D10098 };
+        }
     }
 }

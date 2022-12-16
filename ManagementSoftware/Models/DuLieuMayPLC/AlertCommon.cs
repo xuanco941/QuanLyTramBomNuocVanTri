@@ -120,14 +120,18 @@ namespace ManagementSoftware.Models.DuLieuMayPLC
         public static Alert M10273 = new Alert("M10273", "CP2_DI432A00", "DPS", NhomBom.Bom4, "Moment quá tải van xả bơm 4 (Mở)");
         public static Alert M10274 = new Alert("M10274", "CP2_DI433A00", "DPS", NhomBom.Bom4, "Moment quá tải van xả bơm 4 (Đóng)");
         public static Alert M10283 = new Alert("M10283", "CP2_DI412A00", "DPS", NhomBom.Bom4, "Cào rác số 4 lỗi");
-       
 
-        public static List<Alert> listAlert = new List<Alert>() { M10000,M10001,M10002,M10003,M10004,M10008,M10009,M10010,M10011,M10012,M10013,M10014,
+
+        public List<Alert> ListAllAlerts;
+        public AlertCommon()
+        {
+            ListAllAlerts = new List<Alert>() { M10000,M10001,M10002,M10003,M10004,M10008,M10009,M10010,M10011,M10012,M10013,M10014,
                                                                 M10018,  M10019,  M10023,  M10024,  M10025,  M10026,  M10034,  M10038,  M10043 , M10044 , M10047,  M10052,  M10053,  M10058,  M10060 , M10064 , M10068 , M10076 , M10078 ,
                                                                 M10080,  M10098,  M10099,  M10100,  M10101,  M10102,  M10103,  M10105,  M10106,  M10107,  M10108,  M10109,  M10110,  M10111,  M10112,  M10113,  M10116,  M10121,  M10136,
                                                                 M10147,  M10148,  M10149,  M10150,  M10151,  M10152,  M10154,  M10155,  M10156,  M10157,  M10158,  M10159,  M10160,  M10161,  M10162,  M10165,  M10170,  M10185,  M10196,
                                                                 M10197,  M10198,  M10199,  M10200,  M10201,  M10203,  M10204,  M10205,  M10206,  M10207,  M10208,  M10209,  M10210,  M10211,  M10214,  M10216,  M10217,  M10218,  M10219,
                                                                 M10224,  M10225,  M10234,  M10245,  M10246,  M10247,  M10248,  M10249,  M10250,  M10252,  M10253,  M10254,  M10255,  M10256,  M10257,  M10258,  M10259,  M10260,  M10263,  M10268,  M10273,  M10274,  M10283 };
-       
+
+        }
     }
 }

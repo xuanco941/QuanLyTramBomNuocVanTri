@@ -15,6 +15,7 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public string DieuKien { get; set; }
         public string Nhom { get; set; }
         public string TinHieu { get; set; }
+        public bool TrangThai { get; set; }
         public DateTime ThoiGian { get; set; }
 
         public Alert(string diaChiPLC, string ganThe, string dieuKien, string nhom, string tinHieu)

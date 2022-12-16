@@ -33,6 +33,13 @@ namespace ManagementSoftware
 
             printDocument1.PrintPage += new PrintPageEventHandler(printdoc1_PrintPage);
 
+
+
+
+            PLCSMain plc = new PLCSMain();
+            plc.GetData();
+
+
         }
         public void GetPrintArea(Panel pnl)
         {
