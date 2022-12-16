@@ -1,5 +1,7 @@
 ﻿
 using ManagementSoftware.GUI.QuanLyTramBom;
+using ManagementSoftware.Models.DuLieuMayPLC;
+using ManagementSoftware.Models.TramBomNuoc;
 
 namespace QuanLyTramBom
 {
@@ -12,7 +14,7 @@ namespace QuanLyTramBom
             
             WindowState = FormWindowState.Maximized;
 
-            Form2 form = new Form2();
+            ToanCanhMayBom form = new ToanCanhMayBom();
             form.TopLevel = false;
             panelContent1.Controls.Add(form);
             form.Dock = DockStyle.Fill;
@@ -63,7 +65,7 @@ namespace QuanLyTramBom
                     item.Close();
                 }
                */
-                Form2 form = new Form2();
+                ToanCanhMayBom form = new ToanCanhMayBom();
                 form.TopLevel= false;
                 panelContent1.Controls.Add(form);
                 form.Dock= DockStyle.Fill;
@@ -142,6 +144,13 @@ namespace QuanLyTramBom
             
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TableAlert tb = new TableAlert();
+            tb.ShowDialog();
+            
+        }
+
+       
     }
 }
