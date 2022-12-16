@@ -71,6 +71,7 @@ namespace ManagementSoftware.GUI
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroup)).BeginInit();
             this.panel4.SuspendLayout();
+            this.buttonPage = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -496,6 +497,27 @@ namespace ManagementSoftware.GUI
             this.buttonPageGroup2.UseVisualStyleBackColor = false;
             this.buttonPageGroup2.Click += new System.EventHandler(this.buttonPageGroup1_Click);
             // 
+            this.buttonPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPage.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonPage.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonPage.BorderRadius = 3;
+            this.buttonPage.BorderSize = 0;
+            this.buttonPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPage.ForeColor = System.Drawing.Color.Black;
+            this.buttonPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPage.Location = new System.Drawing.Point(83, 13);
+            this.buttonPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonPage.Name = "buttonPageGroup2";
+            this.buttonPage.Size = new System.Drawing.Size(74, 35);
+            this.buttonPage.TabIndex = 29;
+            this.buttonPage.Text = "2";
+            this.buttonPage.TextColor = System.Drawing.Color.Black;
+            this.buttonPage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonPage.UseVisualStyleBackColor = false;
+            this.buttonPage.Click += new System.EventHandler(this.buttonPageGroup1_Click);
             // buttonChangeGroup
             // 
             this.buttonChangeGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -663,5 +685,6 @@ namespace ManagementSoftware.GUI
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageGroup3;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageGroup1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPageGroup2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonPage;
     }
 }

@@ -527,7 +527,6 @@ C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Login.resources
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Main.resources
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.Dashboard.resources
-C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.Form2.resources
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoNam.resources
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoNgay.resources
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoThang.resources
@@ -557,3 +556,5 @@ C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.FormKHThoiGianThuc.resources
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.FormQLHeThong.resources
 C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.testSyn.resources
+C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.TableAlert.resources
+C:\Users\LENOVO\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.ToanCanhMayBom.resources
