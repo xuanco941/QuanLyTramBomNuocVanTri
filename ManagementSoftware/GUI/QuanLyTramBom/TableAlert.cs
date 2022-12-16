@@ -22,8 +22,22 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         private void TableAlert_Load(object sender, EventArgs e)
         {
-            List<Alert> alert = AlertCommon.listAlert;
-            dataGridView1.DataSource = alert;
+            LoadData();
+        }
+
+
+
+
+        void LoadData()
+        {
+            PLCSMain plc = new PLCSMain();
+            AlertCommon digital = new AlertCommon();
+            dataGridView1.DataSource = plc.GetListDataAlert(digital.ListAllAlerts);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

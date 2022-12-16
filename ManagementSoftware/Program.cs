@@ -35,7 +35,7 @@ namespace ManagementSoftware
             }
 
 
-            Application.Run(new FormTest());
+            Application.Run(new Login());
 
             if (Common.USERSESSION != null)
             {

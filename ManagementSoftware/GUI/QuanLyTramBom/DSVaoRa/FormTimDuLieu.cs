@@ -65,7 +65,7 @@ namespace QuanLyTramBom
         {
             checkedListBox1.Items.Clear();
             String nhombom = comboBox1.Text;
-            List<Digital> d = DigitalCommon.listD.Where((item) => item.Nhom == nhombom && item.DieuKien == comboBox3.Text).ToList();
+            List<Digital> d = new DigitalCommon().ListAllDigitals.Where((item) => item.Nhom == nhombom && item.DieuKien == comboBox3.Text).ToList();
             //.Where((item, index) => AlertCommon.listAlert[index].DieuKien == "DPS").ToList();
             foreach (var item in d)
             {
@@ -78,7 +78,7 @@ namespace QuanLyTramBom
         {
             checkedListBox1.Items.Clear();
             String nhombom = comboBox1.Text;
-            List<Digital> d = DigitalCommon.listD.Where((item) => item.Nhom == nhombom && item.DieuKien == comboBox3.Text).ToList();
+            List<Digital> d = new DigitalCommon().ListAllDigitals.Where((item) => item.Nhom == nhombom && item.DieuKien == comboBox3.Text).ToList();
             //.Where((item, index) => AlertCommon.listAlert[index].DieuKien == "DPS").ToList();
             foreach (var item in d)
             {

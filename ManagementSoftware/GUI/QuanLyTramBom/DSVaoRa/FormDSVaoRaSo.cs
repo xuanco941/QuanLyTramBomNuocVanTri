@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ManagementSoftware.Models.DuLieuMayPLC;
+using ManagementSoftware;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,7 @@ namespace QuanLyTramBom
         public FormDSVaoRaSo()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -32,6 +35,28 @@ namespace QuanLyTramBom
         {
             FormTimDuLieu fm = new FormTimDuLieu();
             fm.ShowDialog();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        void LoadData()
+        {
+            PLCSMain plc = new PLCSMain();
+            AnalogCommon digital = new AnalogCommon();
+            dataGridView1.DataSource = plc.GetListDataAnalog(digital.listAllAnalogs);
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
