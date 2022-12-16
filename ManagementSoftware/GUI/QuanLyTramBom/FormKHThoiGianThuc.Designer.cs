@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Location = new System.Drawing.Point(12, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 15);
             this.label1.TabIndex = 0;
@@ -51,8 +51,8 @@
             this.btnChangeNumElmPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeNumElmPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnChangeNumElmPage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnChangeNumElmPage.Image = global::ManagementSoftware.Properties.Resources.icons8_tick_box_30;
-            this.btnChangeNumElmPage.Location = new System.Drawing.Point(250, 18);
+            this.btnChangeNumElmPage.Image = global::ManagementSoftware.Properties.Resources.check;
+            this.btnChangeNumElmPage.Location = new System.Drawing.Point(250, 12);
             this.btnChangeNumElmPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnChangeNumElmPage.Name = "btnChangeNumElmPage";
             this.btnChangeNumElmPage.Size = new System.Drawing.Size(140, 35);
@@ -68,9 +68,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.chartControl1);
-            this.panel1.Location = new System.Drawing.Point(-1, 88);
+            this.panel1.Location = new System.Drawing.Point(0, 59);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 365);
+            this.panel1.Size = new System.Drawing.Size(800, 341);
             this.panel1.TabIndex = 22;
             // 
             // chartControl1
@@ -86,11 +86,12 @@
             this.chartControl1.Localize = null;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
+            this.chartControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.chartControl1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryXAxis.Margin = true;
             this.chartControl1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryYAxis.Margin = true;
-            this.chartControl1.Size = new System.Drawing.Size(800, 365);
+            this.chartControl1.Size = new System.Drawing.Size(800, 341);
             this.chartControl1.TabIndex = 0;
             this.chartControl1.Text = "chartControl1";
             // 
@@ -103,7 +104,7 @@
             // button26
             // 
             this.button26.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button26.Location = new System.Drawing.Point(111, 18);
+            this.button26.Location = new System.Drawing.Point(111, 12);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(132, 35);
             this.button26.TabIndex = 22;
@@ -121,6 +122,7 @@
             this.Controls.Add(this.btnChangeNumElmPage);
             this.Controls.Add(this.label1);
             this.Name = "FormKHThoiGianThuc";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.Text = "FormKHThoiGianThuc";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
