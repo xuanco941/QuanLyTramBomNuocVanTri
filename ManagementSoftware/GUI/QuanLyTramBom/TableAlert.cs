@@ -28,11 +28,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
-        void LoadData()
+        async void LoadData()
         {
             PLCSMain plc = new PLCSMain();
             AlertCommon digital = new AlertCommon();
-            dataGridView1.DataSource = plc.GetListDataAlert(digital.ListAllAlerts);
+            dataGridView1.DataSource = await plc.GetListDataAlert(digital.ListAllAlerts);
         }
 
         private void button1_Click(object sender, EventArgs e)

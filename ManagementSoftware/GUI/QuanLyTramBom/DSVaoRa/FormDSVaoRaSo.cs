@@ -48,11 +48,11 @@ namespace QuanLyTramBom
 
 
 
-        void LoadData()
+        async void LoadData()
         {
             PLCSMain plc = new PLCSMain();
             AnalogCommon digital = new AnalogCommon();
-            dataGridView1.DataSource = plc.GetListDataAnalog(digital.listAllAnalogs);
+            dataGridView1.DataSource = await plc.GetListDataAnalog(digital.listAllAnalogs);
         }
         private void button1_Click_1(object sender, EventArgs e)
         {

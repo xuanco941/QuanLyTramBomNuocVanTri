@@ -15,7 +15,7 @@ namespace ManagementSoftware
         public PLCSMain()
         {
             this.plc = new ActUtlType();
-            plc.ActLogicalStationNumber = 1;
+            plc.ActLogicalStationNumber = 2;
         }
 
         //int
@@ -34,6 +34,7 @@ namespace ManagementSoftware
                         result.Add(digital);
                     }
                 }
+                await this.Close();
                 return result;
             }
             else
@@ -57,7 +58,9 @@ namespace ManagementSoftware
                         result.Add(a);
                     }
                 }
+                await this.Close();
                 return result;
+
             }
             else
             {
@@ -92,6 +95,7 @@ namespace ManagementSoftware
                         result.Add(a);
                     }
                 }
+                await this.Close();
                 return result;
             }
             else
