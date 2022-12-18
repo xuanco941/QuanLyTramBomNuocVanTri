@@ -113,10 +113,11 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(0, 44);
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.Location = new System.Drawing.Point(-7, 44);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1341, 630);
+            this.tabControl1.Size = new System.Drawing.Size(1348, 631);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -126,10 +127,10 @@
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Controls.Add(this.panelContent1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1333, 602);
+            this.tabPage1.Size = new System.Drawing.Size(1340, 595);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Màn hình đồ họa";
             // 
@@ -141,7 +142,7 @@
             this.panel4.Controls.Add(this.panel16);
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1327, 62);
+            this.panel4.Size = new System.Drawing.Size(1334, 62);
             this.panel4.TabIndex = 6;
             // 
             // panel16
@@ -175,17 +176,18 @@
             this.panelContent1.BackColor = System.Drawing.Color.Gainsboro;
             this.panelContent1.Location = new System.Drawing.Point(3, 71);
             this.panelContent1.Name = "panelContent1";
-            this.panelContent1.Size = new System.Drawing.Size(1327, 528);
+            this.panelContent1.Size = new System.Drawing.Size(1334, 521);
             this.panelContent1.TabIndex = 5;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tableLayoutPanel6);
             this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1333, 602);
+            this.tabPage2.Size = new System.Drawing.Size(1340, 602);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Đồ thị khuynh hướng";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -250,7 +252,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1333, 602);
+            this.tabPage3.Size = new System.Drawing.Size(1340, 602);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lưu trữ dữ liệu";
             // 
@@ -392,7 +394,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1333, 602);
+            this.tabPage4.Size = new System.Drawing.Size(1340, 602);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Danh sách vào ra";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -416,7 +418,7 @@
             this.panel13.Location = new System.Drawing.Point(3, 3);
             this.panel13.Margin = new System.Windows.Forms.Padding(0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1327, 56);
+            this.panel13.Size = new System.Drawing.Size(1334, 56);
             this.panel13.TabIndex = 11;
             // 
             // tableLayoutPanel3
@@ -436,7 +438,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1327, 56);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1334, 56);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // button3
@@ -446,9 +448,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(242, 4);
+            this.button3.Location = new System.Drawing.Point(243, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(250, 48);
+            this.button3.Size = new System.Drawing.Size(251, 48);
             this.button3.TabIndex = 9;
             this.button3.Text = "Danh sách vào ra số";
             this.button3.UseVisualStyleBackColor = true;
@@ -463,7 +465,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(231, 48);
+            this.button4.Size = new System.Drawing.Size(232, 48);
             this.button4.TabIndex = 10;
             this.button4.Text = "Danh sách vào ra tương tự";
             this.button4.UseVisualStyleBackColor = true;
@@ -477,7 +479,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1333, 602);
+            this.tabPage5.Size = new System.Drawing.Size(1340, 602);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quản lý hệ thống";
             this.tabPage5.UseVisualStyleBackColor = true;
