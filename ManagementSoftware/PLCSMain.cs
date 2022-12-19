@@ -11,7 +11,6 @@ namespace ManagementSoftware
     public class PLCSMain
     {
         public ActUtlType plc;
-        public bool isConnected;
         public PLCSMain()
         {
             this.plc = new ActUtlType();
