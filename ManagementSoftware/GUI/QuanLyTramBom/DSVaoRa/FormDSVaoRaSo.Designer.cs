@@ -88,7 +88,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 66);
+            this.panel1.Size = new System.Drawing.Size(800, 61);
             this.panel1.TabIndex = 20;
             // 
             // btnChangeNumElmPage
@@ -102,7 +102,7 @@
             this.btnChangeNumElmPage.Location = new System.Drawing.Point(22, 9);
             this.btnChangeNumElmPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnChangeNumElmPage.Name = "btnChangeNumElmPage";
-            this.btnChangeNumElmPage.Size = new System.Drawing.Size(140, 51);
+            this.btnChangeNumElmPage.Size = new System.Drawing.Size(140, 42);
             this.btnChangeNumElmPage.TabIndex = 21;
             this.btnChangeNumElmPage.Text = "Tìm dữ liệu";
             this.btnChangeNumElmPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,9 +112,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(201, 22);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label1.Location = new System.Drawing.Point(169, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 15);
+            this.label1.Size = new System.Drawing.Size(221, 25);
             this.label1.TabIndex = 20;
             this.label1.Text = "Danh sách đầu vào ra số";
             // 
@@ -124,9 +126,9 @@
             this.panelThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelThongKe.Controls.Add(this.dataGridView1);
             this.panelThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelThongKe.Location = new System.Drawing.Point(0, 66);
+            this.panelThongKe.Location = new System.Drawing.Point(0, 61);
             this.panelThongKe.Name = "panelThongKe";
-            this.panelThongKe.Size = new System.Drawing.Size(800, 309);
+            this.panelThongKe.Size = new System.Drawing.Size(800, 314);
             this.panelThongKe.TabIndex = 22;
             // 
             // dataGridView1
@@ -136,7 +138,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(798, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(798, 312);
             this.dataGridView1.TabIndex = 0;
             // 
             // buttonCustomGoPage
@@ -335,7 +337,7 @@
             // inputNumPageGo
             // 
             this.inputNumPageGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputNumPageGo.BeforeTouchSize = new System.Drawing.Size(114, 25);
+            this.inputNumPageGo.BeforeTouchSize = new System.Drawing.Size(66, 35);
             this.inputNumPageGo.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.inputNumPageGo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputNumPageGo.IntegerValue = ((long)(1));
@@ -422,7 +424,7 @@
             // 
             // pageNumberGoto
             // 
-            this.pageNumberGoto.BeforeTouchSize = new System.Drawing.Size(114, 25);
+            this.pageNumberGoto.BeforeTouchSize = new System.Drawing.Size(66, 35);
             this.pageNumberGoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageNumberGoto.Dock = System.Windows.Forms.DockStyle.Top;
             this.pageNumberGoto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

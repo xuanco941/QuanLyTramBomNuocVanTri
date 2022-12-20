@@ -19,24 +19,6 @@ namespace QuanLyTramBom
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormTimDuLieu fm = new FormTimDuLieu();
-            fm.ShowDialog();
-        }
-
-        private void btnChangeNumElmPage_Click(object sender, EventArgs e)
-        {
-            FormTimDuLieu fm = new FormTimDuLieu();
-            fm.ShowDialog();
-        }
-
-
 
     }
 }
