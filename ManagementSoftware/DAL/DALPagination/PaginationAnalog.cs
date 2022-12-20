@@ -16,7 +16,7 @@ namespace ManagementSoftware.DAL.DALPagination
         public int TotalResults { get; set; } = 0;
         public List<Analog>? ListResults { get; set; }
 
-        public void Set(int page, DateTime? start, DateTime? end, string? loaiBom, List<Analog>? listTinHieu)
+        public void Set(int page, DateTime? start, DateTime? end, string? loaiBom, List<string>? listTinHieu)
         {
             DataBaseContext dbContext = new DataBaseContext();
 
@@ -26,9 +26,9 @@ namespace ManagementSoftware.DAL.DALPagination
             List<Analog> l2 = new List<Analog>();
             if ((String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu != null && listTinHieu.Count > 0) && (start != null && end != null))
             {
-                foreach (Analog digital in listTinHieu)
+                foreach (string digital in listTinHieu)
                 {
-                    l = dbContext.Analogs.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
+                    l = dbContext.Analogs.Where(a => (a.TinHieu == digital)).ToList();
                     l2.AddRange(l);
                 }
                 this.ListResults = l2.OrderByDescending(t => t.IDAnalog)
@@ -53,9 +53,9 @@ namespace ManagementSoftware.DAL.DALPagination
             //2
             else if ((String.IsNullOrEmpty(loaiBom) == true) && (listTinHieu != null && listTinHieu.Count > 0) && (start != null && end != null))
             {
-                foreach (Analog digital in listTinHieu)
+                foreach (string digital in listTinHieu)
                 {
-                    l = dbContext.Analogs.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
+                    l = dbContext.Analogs.Where(a => (a.TinHieu == digital)).ToList();
                     l2.AddRange(l);
                 }
                 this.ListResults = l2.OrderByDescending(t => t.IDAnalog)
@@ -70,9 +70,9 @@ namespace ManagementSoftware.DAL.DALPagination
 
             else if ((start == null || end == null) && (String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu != null && listTinHieu.Count > 0))
             {
-                foreach (Analog digital in listTinHieu)
+                foreach (string digital in listTinHieu)
                 {
-                    l = dbContext.Analogs.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
+                    l = dbContext.Analogs.Where(a => (a.TinHieu == digital)).ToList();
                     l2.AddRange(l);
                 }
                 this.ListResults = l2.OrderByDescending(t => t.IDAnalog)
@@ -94,9 +94,9 @@ namespace ManagementSoftware.DAL.DALPagination
             //5
             else if ((start == null || end == null) && (String.IsNullOrEmpty(loaiBom) == true) && (listTinHieu != null && listTinHieu.Count > 0))
             {
-                foreach (Analog digital in listTinHieu)
+                foreach (string digital in listTinHieu)
                 {
-                    l = dbContext.Analogs.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
+                    l = dbContext.Analogs.Where(a => (a.TinHieu == digital)).ToList();
                     l2.AddRange(l);
                 }
                 this.ListResults = l2.OrderByDescending(t => t.IDAnalog)

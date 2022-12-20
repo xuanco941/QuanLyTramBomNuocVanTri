@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDSVaoRaSo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnChangeNumElmPage = new System.Windows.Forms.Button();
+            this.btnSerachBox = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelThongKe = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -83,38 +83,39 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnChangeNumElmPage);
+            this.panel1.Controls.Add(this.btnSerachBox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 61);
+            this.panel1.Size = new System.Drawing.Size(800, 40);
             this.panel1.TabIndex = 20;
             // 
-            // btnChangeNumElmPage
+            // btnSerachBox
             // 
-            this.btnChangeNumElmPage.BackColor = System.Drawing.SystemColors.Control;
-            this.btnChangeNumElmPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangeNumElmPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnChangeNumElmPage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnChangeNumElmPage.Image = global::ManagementSoftware.Properties.Resources.loupe;
-            this.btnChangeNumElmPage.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChangeNumElmPage.Location = new System.Drawing.Point(22, 9);
-            this.btnChangeNumElmPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnChangeNumElmPage.Name = "btnChangeNumElmPage";
-            this.btnChangeNumElmPage.Size = new System.Drawing.Size(140, 42);
-            this.btnChangeNumElmPage.TabIndex = 21;
-            this.btnChangeNumElmPage.Text = "Tìm dữ liệu";
-            this.btnChangeNumElmPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChangeNumElmPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChangeNumElmPage.UseVisualStyleBackColor = false;
+            this.btnSerachBox.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSerachBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSerachBox.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSerachBox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSerachBox.Image = global::ManagementSoftware.Properties.Resources.loupe;
+            this.btnSerachBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSerachBox.Location = new System.Drawing.Point(229, 4);
+            this.btnSerachBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSerachBox.Name = "btnSerachBox";
+            this.btnSerachBox.Size = new System.Drawing.Size(140, 33);
+            this.btnSerachBox.TabIndex = 21;
+            this.btnSerachBox.Text = "Tìm dữ liệu";
+            this.btnSerachBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSerachBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSerachBox.UseVisualStyleBackColor = false;
+            this.btnSerachBox.Click += new System.EventHandler(this.btnSerachBox_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label1.Location = new System.Drawing.Point(169, 16);
+            this.label1.Location = new System.Drawing.Point(1, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 25);
             this.label1.TabIndex = 20;
@@ -126,19 +127,23 @@
             this.panelThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelThongKe.Controls.Add(this.dataGridView1);
             this.panelThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelThongKe.Location = new System.Drawing.Point(0, 61);
+            this.panelThongKe.Location = new System.Drawing.Point(0, 40);
             this.panelThongKe.Name = "panelThongKe";
-            this.panelThongKe.Size = new System.Drawing.Size(800, 314);
+            this.panelThongKe.Size = new System.Drawing.Size(800, 295);
             this.panelThongKe.TabIndex = 22;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(798, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(798, 293);
             this.dataGridView1.TabIndex = 0;
             // 
             // buttonCustomGoPage
@@ -153,7 +158,6 @@
             this.buttonCustomGoPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCustomGoPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCustomGoPage.ForeColor = System.Drawing.Color.Black;
-            this.buttonCustomGoPage.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomGoPage.Image")));
             this.buttonCustomGoPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCustomGoPage.Location = new System.Drawing.Point(3338, -120);
             this.buttonCustomGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -212,6 +216,7 @@
             this.buttonNextPage.TextColor = System.Drawing.Color.Black;
             this.buttonNextPage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonNextPage.UseVisualStyleBackColor = false;
+            this.buttonNextPage.Click += new System.EventHandler(this.buttonNextPage_Click);
             // 
             // buttonPreviousPage
             // 
@@ -235,6 +240,7 @@
             this.buttonPreviousPage.TextColor = System.Drawing.Color.Black;
             this.buttonPreviousPage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonPreviousPage.UseVisualStyleBackColor = false;
+            this.buttonPreviousPage.Click += new System.EventHandler(this.buttonPreviousPage_Click);
             // 
             // panel45
             // 
@@ -260,7 +266,6 @@
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSearch.ForeColor = System.Drawing.Color.Black;
-            this.buttonSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearch.Image")));
             this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSearch.Location = new System.Drawing.Point(309, 0);
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -271,6 +276,7 @@
             this.buttonSearch.TextColor = System.Drawing.Color.Black;
             this.buttonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // label20
             // 
@@ -421,6 +427,7 @@
             this.buttonGoto.TextColor = System.Drawing.Color.Black;
             this.buttonGoto.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonGoto.UseVisualStyleBackColor = false;
+            this.buttonGoto.Click += new System.EventHandler(this.buttonGoto_Click);
             // 
             // pageNumberGoto
             // 
@@ -534,7 +541,7 @@
             this.panelSearch.Controls.Add(this.buttonCustomGoPage);
             this.panelSearch.Controls.Add(this.inputNumPageGo);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelSearch.Location = new System.Drawing.Point(0, 375);
+            this.panelSearch.Location = new System.Drawing.Point(0, 335);
             this.panelSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelSearch.Name = "panelSearch";
             this.panelSearch.Size = new System.Drawing.Size(800, 75);
@@ -549,6 +556,7 @@
             this.Controls.Add(this.panelSearch);
             this.Controls.Add(this.panel1);
             this.Name = "FormDSVaoRaSo";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
             this.Text = "FormDSVaoRaSo";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -578,7 +586,7 @@
         #endregion
 
         private Panel panel1;
-        private Button btnChangeNumElmPage;
+        private Button btnSerachBox;
         private Label label1;
         private Panel panelThongKe;
         private DataGridView dataGridView1;
