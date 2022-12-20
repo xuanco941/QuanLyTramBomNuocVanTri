@@ -13,8 +13,12 @@ using System.Windows.Forms;
 
 namespace QuanLyTramBom
 {
+    
     public partial class FormTimDuLieu : Form
     {
+        public delegate void CallBackSetSearch(string loaibom, List<string> tinhieu);
+        public CallBackSetSearch callBackSetSearch;
+        public List<Digital> lisAllDigital;
         public FormTimDuLieu()
         {
             InitializeComponent();
@@ -43,17 +47,7 @@ namespace QuanLyTramBom
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
             {
                 checkedListBox1.SetItemChecked(i, false);
-            }
-            if (radioButton2.Checked)
-            {
-                checkedListBox1.Enabled= true;
-                
-            }
-            else
-            {
-                checkedListBox1.Enabled = false;
-            }
-                
+            }   
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -96,6 +90,27 @@ namespace QuanLyTramBom
             }
         }
 
-       
+        private void buttonAll_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            List<string>? listTinHieu = new List<string>();
+            foreach (object itemChecked in checkedListBox1.CheckedItems)
+            {
+                string selectedItem = itemChecked.ToString();
+                if (String.IsNullOrEmpty(selectedItem) == false)
+                {
+                    listTinHieu.Add(selectedItem);
+                }
+            }
+            callBackSetSearch?.Invoke(null, listTinHieu);
+            this.Close();
+        }
     }
 }

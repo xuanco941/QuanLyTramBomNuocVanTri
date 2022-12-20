@@ -935,7 +935,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::ManagementSoftware.Properties.Resources.M10069a;
+            this.pictureBox2.BackgroundImage = global::ManagementSoftware.Properties.Resources.DuoiXam;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(313, 428);
             this.pictureBox2.Name = "pictureBox2";
