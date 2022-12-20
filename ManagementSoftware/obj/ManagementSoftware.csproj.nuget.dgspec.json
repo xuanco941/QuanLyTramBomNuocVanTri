@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\TestKetnoi\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\preview\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\TestKetnoi\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\preview\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\TestKetnoi\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\preview\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
         "projectName": "ManagementSoftware",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\TestKetnoi\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\preview\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\TestKetnoi\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\preview\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
