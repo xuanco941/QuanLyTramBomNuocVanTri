@@ -333,6 +333,26 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_remove_38 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-remove-38", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_remove_381 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-remove-381", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_search_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-search-50", resourceCulture);
@@ -403,6 +423,16 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap push_38px {
+            get {
+                object obj = ResourceManager.GetObject("push-38px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap red_x_10333 {
             get {
                 object obj = ResourceManager.GetObject("red_x_10333", resourceCulture);
@@ -436,6 +466,26 @@ namespace ManagementSoftware.Properties {
         internal static System.Drawing.Bitmap setting_24 {
             get {
                 object obj = ResourceManager.GetObject("setting-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setting_38 {
+            get {
+                object obj = ResourceManager.GetObject("setting-38", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setting_381 {
+            get {
+                object obj = ResourceManager.GetObject("setting-381", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
