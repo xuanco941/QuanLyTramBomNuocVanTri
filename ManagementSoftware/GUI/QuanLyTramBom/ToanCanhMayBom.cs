@@ -21,10 +21,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             InitializeComponent();
 
             plcMain = new PLCSMain();
+
         }
         private void ToanCanhMayBom_Load(object sender, EventArgs e)
         {
-            AutoUpdate();
+            timer1.Start();
         }
         async Task LoadTextAnalog(Button btn, Analog a)
         {
@@ -41,7 +42,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         async void AutoUpdate()
         {
-            while (await plcMain.Open() == 0)
+            if (await plcMain.Open() == 0)
             {
                 //analog
                 await LoadTextAnalog(D10000, AnalogCommon.D10000);
@@ -83,7 +84,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             }
         }
 
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            AutoUpdate();
+        }
 
 
 
@@ -179,21 +183,21 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //vàng
             if (M10064 != null && M10064.TrangThai)
             {
-                pictureBoxToanCanh.Image = Resources.backpage;
+                pictureBoxToanCanh.BackgroundImage = Resources.TramBomVang;
             }
             //xanh
             else if (M10067 != null && M10067.TrangThai)
             {
-                pictureBoxToanCanh.Image = Resources.backpage;
+                pictureBoxToanCanh.BackgroundImage = Resources.NenXanh;
             }
             //đỏ
             else if ((M10066 != null && M10066.TrangThai) && (M10065 != null && M10065.TrangThai))
             {
-                pictureBoxToanCanh.Image = Resources.backpage;
+                pictureBoxToanCanh.BackgroundImage = Resources.TramBomDo;
             }
             else
             {
-                pictureBoxToanCanh.Image = Resources.backpage;
+                pictureBoxToanCanh.BackgroundImage = Resources.NenXam;
             }
 
         }
@@ -204,21 +208,29 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //vàng
             if (M10068 != null && M10068.TrangThai)
             {
-                pictureBoxToanCanh.Image = Resources.backpage;
+                pictureBoxBangTaiXienDuoi.BackgroundImage = Resources.M10068;
+                pictureBoxBangTaiXienTren.BackgroundImage = Resources.M10068b;
+                //pictureBoxBangTaiXienGiua.BackgroundImage = Resources.m10071;
             }
             //xanh
             else if (M10071 != null && M10071.TrangThai)
             {
-                pictureBoxToanCanh.Image = Resources.backpage;
+                pictureBoxBangTaiXienDuoi.BackgroundImage = Resources.M10071a;
+                pictureBoxBangTaiXienTren.BackgroundImage = Resources.M10071b;
+                //pictureBoxBangTaiXienGiua.BackgroundImage = Resources.m10071;
             }
             //đỏ
             else if ((M10069 != null && M10069.TrangThai) && (M10070 != null && M10070.TrangThai))
             {
-                pictureBoxToanCanh.Image = Resources.backpage;
+                pictureBoxBangTaiXienDuoi.BackgroundImage = Resources.M10069a;
+                pictureBoxBangTaiXienTren.BackgroundImage = Resources.M10069b;
+                //pictureBoxBangTaiXienGiua.BackgroundImage = Resources.m10071;
             }
             else
             {
-                pictureBoxToanCanh.Image = Resources.backpage;
+                pictureBoxBangTaiXienDuoi.BackgroundImage = Resources.xamDuoi2;
+                pictureBoxBangTaiXienTren.BackgroundImage = Resources.TrenXam;
+                //pictureBoxBangTaiXienGiua.BackgroundImage = Resources.m10071;
             }
 
         }
@@ -230,17 +242,17 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 //xanh
                 if (M10059.TrangThai)
                 {
-                    pictureBoxBomMoi1.Image = Resources.backpage;
+                    pictureBoxBomMoi1.Image = Resources.M10059;
                 }
                 //đỏ
                 else if (M10059.TrangThai)
                 {
-                    pictureBoxBomMoi1.Image = Resources.backpage;
+                    pictureBoxBomMoi1.Image = Resources.M10059_Do;
                 }
             }
             else
             {
-                pictureBoxBomMoi1.Image = Resources.backpage;
+                pictureBoxBomMoi1.Image = Resources.M10059xam;
             }
 
         }
@@ -251,17 +263,17 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 //xanh
                 if (M10061.TrangThai)
                 {
-                    pictureBoxBomMoi2.Image = Resources.backpage;
+                    pictureBoxBomMoi2.Image = Resources.M10061;
                 }
                 //đỏ
                 else if (M10061.TrangThai)
                 {
-                    pictureBoxBomMoi2.Image = Resources.backpage;
+                    pictureBoxBomMoi2.Image = Resources.M10061Do;
                 }
             }
             else
             {
-                pictureBoxBomMoi2.Image = Resources.backpage;
+                pictureBoxBomMoi2.Image = Resources.M10061Xam;
             }
 
         }
@@ -274,17 +286,17 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 //xanh
                 if (M10077.TrangThai)
                 {
-                    pictureBoxBomThoat1.Image = Resources.backpage;
+                    pictureBoxBomThoat1.Image = Resources.M10077;
                 }
                 //đỏ
                 else if (M10077.TrangThai)
                 {
-                    pictureBoxBomThoat1.Image = Resources.backpage;
+                    pictureBoxBomThoat1.Image = Resources.M10077Do;
                 }
             }
             else
             {
-                pictureBoxBomThoat1.Image = Resources.backpage;
+                pictureBoxBomThoat1.Image = Resources.M10077Xam;
             }
 
         }
@@ -295,17 +307,17 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 //xanh
                 if (M10079.TrangThai)
                 {
-                    pictureBoxBomThoat2.Image = Resources.backpage;
+                    pictureBoxBomThoat2.Image = Resources.M10079;
                 }
                 //đỏ
                 else if (M10079.TrangThai)
                 {
-                    pictureBoxBomThoat2.Image = Resources.backpage;
+                    pictureBoxBomThoat2.Image = Resources.M10079Do;
                 }
             }
             else
             {
-                pictureBoxBomThoat2.Image = Resources.backpage;
+                pictureBoxBomThoat2.Image = Resources.M10079xam;
             }
 
         }
@@ -367,7 +379,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             CLearTimer(TimerTinHieuVan4M10270);
             CLearTimer(TimerTinHieuVan4M10271);
 
-
+            timer1.Stop();
+            timer1.Dispose();
 
         }
 
@@ -402,12 +415,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         {
             if (nhapNhayPheuSo1)
             {
-                pictureBoxPheuSo1.Image = Resources.backpage;
+                pictureBoxPheuSo1.Image = Resources.Pheu1Tim;
                 nhapNhayPheuSo1 = false;
             }
             else
             {
-                pictureBoxPheuSo1.Image = Resources.backpage;
+                pictureBoxPheuSo1.Image = Resources.M10041;
                 nhapNhayPheuSo1 = true;
             }
         }
@@ -416,12 +429,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         {
             if (nhapNhayPheuSo1)
             {
-                pictureBoxPheuSo1.Image = Resources.backpage;
+                pictureBoxPheuSo1.Image = Resources.Pheu1Tim;
                 nhapNhayPheuSo1 = false;
             }
             else
             {
-                pictureBoxPheuSo1.Image = Resources.backpage;
+                pictureBoxPheuSo1.Image = Resources.M10042;
                 nhapNhayPheuSo1 = true;
             }
         }
@@ -433,14 +446,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 CLearTimer(TimerCheckColorPheuSo1M10039);
                 CLearTimer(TimerCheckColorPheuSo1M10040);
-                pictureBoxPheuSo1.Image = Resources.backpage;
+                pictureBoxPheuSo1.Image = Resources.M10042;
             }
             //đỏ
             else if (M10041 != null && M10041.TrangThai == true)
             {
                 CLearTimer(TimerCheckColorPheuSo1M10039);
                 CLearTimer(TimerCheckColorPheuSo1M10040);
-                pictureBoxPheuSo1.Image = Resources.backpage;
+                pictureBoxPheuSo1.Image = Resources.M10041;
             }
             //đỏ tím
             else if (M10039 != null && M10039.TrangThai == true)
@@ -448,7 +461,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 CLearTimer(TimerCheckColorPheuSo1M10040);
                 if (TimerCheckColorPheuSo1M10039 == null || TimerCheckColorPheuSo1M10039.Enabled == false)
                 {
-                    pictureBoxPheuSo1.Image = Resources.backpage;
+                    pictureBoxPheuSo1.Image = Resources.Pheu1Tim;
                     TimerCheckColorPheuSo1M10039 = new System.Timers.Timer();
                     TimerCheckColorPheuSo1M10039.Interval = intervalNhapNhay;
                     TimerCheckColorPheuSo1M10039.Elapsed += Timer_Tick_CheckColorPheuSo1M10039;
@@ -460,7 +473,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 CLearTimer(TimerCheckColorPheuSo1M10039);
                 if (TimerCheckColorPheuSo1M10040 == null || TimerCheckColorPheuSo1M10040.Enabled == false)
                 {
-                    pictureBoxPheuSo1.Image = Resources.backpage;
+                    pictureBoxPheuSo1.Image = Resources.Pheu1Tim;
                     TimerCheckColorPheuSo1M10040 = new System.Timers.Timer();
                     TimerCheckColorPheuSo1M10040.Interval = intervalNhapNhay;
                     TimerCheckColorPheuSo1M10040.Elapsed += Timer_Tick_CheckColorPheuSo1M10040;
@@ -471,7 +484,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 CLearTimer(TimerCheckColorPheuSo1M10040);
                 CLearTimer(TimerCheckColorPheuSo1M10039);
-                pictureBoxPheuSo1.Image = Resources.backpage;
+                pictureBoxPheuSo1.Image = Resources.Pheu1Xam;
             }
         }
 
@@ -495,12 +508,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         {
             if (nhapNhayPheuSo2)
             {
-                pictureBoxPheuSo2.Image = Resources.backpage;
+                pictureBoxPheuSo2.Image = Resources.Pheu2Tim;
                 nhapNhayPheuSo2 = false;
             }
             else
             {
-                pictureBoxPheuSo2.Image = Resources.backpage;
+                pictureBoxPheuSo2.Image = Resources.M10050;
                 nhapNhayPheuSo2 = true;
             }
         }
@@ -509,12 +522,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         {
             if (nhapNhayPheuSo2)
             {
-                pictureBoxPheuSo2.Image = Resources.backpage;
+                pictureBoxPheuSo2.Image = Resources.Pheu2Tim;
                 nhapNhayPheuSo2 = false;
             }
             else
             {
-                pictureBoxPheuSo2.Image = Resources.backpage;
+                pictureBoxPheuSo2.Image = Resources.M10051;
                 nhapNhayPheuSo2 = true;
             }
         }
@@ -526,14 +539,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 CLearTimer(TimerCheckColorPheuSo2M10048);
                 CLearTimer(TimerCheckColorPheuSo2M10049);
-                pictureBoxPheuSo2.Image = Resources.backpage;
+                pictureBoxPheuSo2.Image = Resources.M10051;
             }
             //đỏ
             else if (M10050 != null && M10050.TrangThai == true)
             {
                 CLearTimer(TimerCheckColorPheuSo2M10048);
                 CLearTimer(TimerCheckColorPheuSo2M10049);
-                pictureBoxPheuSo2.Image = Resources.backpage;
+                pictureBoxPheuSo2.Image = Resources.M10050;
             }
             //đỏ tím
             else if (M10048 != null && M10048.TrangThai == true)
@@ -541,7 +554,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 CLearTimer(TimerCheckColorPheuSo2M10049);
                 if (TimerCheckColorPheuSo2M10048 == null || TimerCheckColorPheuSo2M10048.Enabled == false)
                 {
-                    pictureBoxPheuSo2.Image = Resources.backpage;
+                    pictureBoxPheuSo2.Image = Resources.Pheu2Tim;
                     TimerCheckColorPheuSo2M10048 = new System.Timers.Timer();
                     TimerCheckColorPheuSo2M10048.Interval = intervalNhapNhay;
                     TimerCheckColorPheuSo2M10048.Elapsed += Timer_Tick_CheckColorPheuSo2M10048;
@@ -553,7 +566,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 CLearTimer(TimerCheckColorPheuSo2M10048);
                 if (TimerCheckColorPheuSo2M10049 == null || TimerCheckColorPheuSo2M10049.Enabled == false)
                 {
-                    pictureBoxPheuSo2.Image = Resources.backpage;
+                    pictureBoxPheuSo2.Image = Resources.Pheu2Tim;
                     TimerCheckColorPheuSo2M10049 = new System.Timers.Timer();
                     TimerCheckColorPheuSo2M10049.Interval = intervalNhapNhay;
                     TimerCheckColorPheuSo2M10049.Elapsed += Timer_Tick_CheckColorPheuSo2M10049;
@@ -564,7 +577,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 CLearTimer(TimerCheckColorPheuSo2M10048);
                 CLearTimer(TimerCheckColorPheuSo2M10049);
-                pictureBoxPheuSo2.Image = Resources.backpage;
+                pictureBoxPheuSo2.Image = Resources.Pheu2Xam;
             }
         }
 
@@ -935,6 +948,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             }
         }
 
-  
+
+
     }
 }

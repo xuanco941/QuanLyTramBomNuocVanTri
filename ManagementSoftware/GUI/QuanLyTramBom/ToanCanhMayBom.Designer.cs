@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBoxToanCanh = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -98,10 +99,11 @@
             this.pictureBoxPheuSo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPheuSo1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBangTaiXienTren = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBangTaiXienDuoi = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBangTaiXienGiua = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToanCanh)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -118,14 +120,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXienTren)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXienDuoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXienGiua)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxToanCanh
             // 
-            this.pictureBoxToanCanh.BackgroundImage = global::ManagementSoftware.Properties.Resources.imgTramBom;
+            this.pictureBoxToanCanh.BackgroundImage = global::ManagementSoftware.Properties.Resources.NenXam;
             this.pictureBoxToanCanh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxToanCanh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxToanCanh.InitialImage = null;
@@ -923,35 +925,35 @@
             this.label13.TabIndex = 57;
             this.label13.Text = "TOÀN CẢNH TRẠM BƠM";
             // 
-            // pictureBox1
+            // pictureBoxBangTaiXienTren
             // 
-            this.pictureBox1.BackgroundImage = global::ManagementSoftware.Properties.Resources._318877084_1369400657166807_4136150658551336155_n___Copy__3_1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(271, 400);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 20);
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxBangTaiXienTren.BackgroundImage = global::ManagementSoftware.Properties.Resources._318877084_1369400657166807_4136150658551336155_n___Copy__3_1;
+            this.pictureBoxBangTaiXienTren.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBangTaiXienTren.Location = new System.Drawing.Point(271, 400);
+            this.pictureBoxBangTaiXienTren.Name = "pictureBoxBangTaiXienTren";
+            this.pictureBoxBangTaiXienTren.Size = new System.Drawing.Size(28, 20);
+            this.pictureBoxBangTaiXienTren.TabIndex = 58;
+            this.pictureBoxBangTaiXienTren.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBoxBangTaiXienDuoi
             // 
-            this.pictureBox2.BackgroundImage = global::ManagementSoftware.Properties.Resources.M10069a;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(313, 428);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(190, 30);
-            this.pictureBox2.TabIndex = 59;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxBangTaiXienDuoi.BackgroundImage = global::ManagementSoftware.Properties.Resources.xamDuoi;
+            this.pictureBoxBangTaiXienDuoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBangTaiXienDuoi.Location = new System.Drawing.Point(313, 428);
+            this.pictureBoxBangTaiXienDuoi.Name = "pictureBoxBangTaiXienDuoi";
+            this.pictureBoxBangTaiXienDuoi.Size = new System.Drawing.Size(190, 30);
+            this.pictureBoxBangTaiXienDuoi.TabIndex = 59;
+            this.pictureBoxBangTaiXienDuoi.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBoxBangTaiXienGiua
             // 
-            this.pictureBox3.BackgroundImage = global::ManagementSoftware.Properties.Resources.Xamc;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(287, 416);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(8, 6);
-            this.pictureBox3.TabIndex = 60;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxBangTaiXienGiua.BackgroundImage = global::ManagementSoftware.Properties.Resources.Xamc;
+            this.pictureBoxBangTaiXienGiua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBangTaiXienGiua.Location = new System.Drawing.Point(287, 416);
+            this.pictureBoxBangTaiXienGiua.Name = "pictureBoxBangTaiXienGiua";
+            this.pictureBoxBangTaiXienGiua.Size = new System.Drawing.Size(8, 6);
+            this.pictureBoxBangTaiXienGiua.TabIndex = 60;
+            this.pictureBoxBangTaiXienGiua.TabStop = false;
             // 
             // label5
             // 
@@ -963,15 +965,20 @@
             this.label5.TabIndex = 61;
             this.label5.Text = "Đầu vào";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ToanCanhMayBom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1715, 755);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxBangTaiXienGiua);
+            this.Controls.Add(this.pictureBoxBangTaiXienDuoi);
+            this.Controls.Add(this.pictureBoxBangTaiXienTren);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBoxPheuSo1);
             this.Controls.Add(this.pictureBoxPheuSo2);
@@ -1033,9 +1040,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXienTren)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXienDuoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXienGiua)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1113,9 +1120,10 @@
         private PictureBox pictureBoxPheuSo2;
         private PictureBox pictureBoxPheuSo1;
         private Label label13;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
+        private PictureBox pictureBoxBangTaiXienTren;
+        private PictureBox pictureBoxBangTaiXienDuoi;
+        private PictureBox pictureBoxBangTaiXienGiua;
         private Label label5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
