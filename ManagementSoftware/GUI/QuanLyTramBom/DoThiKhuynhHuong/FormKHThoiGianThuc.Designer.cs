@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.button26 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.btnChangeNumElmPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChangeNumElmPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChangeNumElmPage.UseVisualStyleBackColor = false;
+            this.btnChangeNumElmPage.Click += new System.EventHandler(this.btnChangeNumElmPage_Click);
             // 
             // panel1
             // 
@@ -110,13 +112,23 @@
             this.button26.TabIndex = 22;
             this.button26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(653, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormKHThoiGianThuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnChangeNumElmPage);
@@ -137,5 +149,6 @@
         private Panel panel1;
         private Syncfusion.Windows.Forms.Chart.ChartControl chartControl1;
         private Button button26;
+        private Button button1;
     }
 }

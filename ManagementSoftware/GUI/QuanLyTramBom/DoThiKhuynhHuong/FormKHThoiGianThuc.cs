@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,18 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             InitializeComponent();
         }
 
-        private void button26_Click(object sender, EventArgs e)
-        {
+        
 
+        private void btnChangeNumElmPage_Click(object sender, EventArgs e)
+        {
+            ChonKhuynhHuong fmChonKH = new ChonKhuynhHuong();
+            fmChonKH.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormCaiDatDoThiKhuynhHuong fm = new FormCaiDatDoThiKhuynhHuong();
+            fm.ShowDialog();
         }
     }
 }
