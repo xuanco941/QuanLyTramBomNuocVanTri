@@ -14,8 +14,9 @@ namespace QuanLyTramBom
         {
             InitializeComponent();
 
-                     
-            WindowState = FormWindowState.Maximized;
+
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
 
             ToanCanhMayBom form = new ToanCanhMayBom();
             form.TopLevel = false;

@@ -31,6 +31,9 @@
     <Compile Update="GUI\EmployeeManagement\FormChangeGroup.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormTimDLDSVaoRaSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\ToanCanhMayBom.cs">
       <SubType>Form</SubType>
     </Compile>
