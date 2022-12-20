@@ -33,21 +33,11 @@ namespace QuanLyTramBom
 
 
 
-        async void LoadData()
-        {
-            PLCSMain plc = new PLCSMain();
-            DigitalCommon digital = new DigitalCommon();
-            dataGridView1.DataSource = await plc.GetListDataDigital(digital.ListAllDigitals);
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-            LoadData();
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
+        //async void LoadData()
+        //{
+        //    PLCSMain plc = new PLCSMain();
+        //    DigitalCommon digital = new DigitalCommon();
+        //    dataGridView1.DataSource = await plc.GetListDataDigital(digital.ListAllDigitals);
+        //}
     }
 }

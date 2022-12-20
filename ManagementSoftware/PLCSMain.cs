@@ -17,7 +17,6 @@ namespace ManagementSoftware
             plc.ActLogicalStationNumber = 2;
         }
 
-        //int
         //get all digital
         public async Task<List<Digital>?> GetListDataDigital(List<Digital> list)
         {
@@ -30,8 +29,8 @@ namespace ManagementSoftware
                     if (r != null)
                     {
                         digital.TrangThai = r == 0 ? false : true;
-                        result.Add(digital);
                     }
+                    result.Add(digital);
                 }
                 await this.Close();
                 return result;
@@ -40,6 +39,21 @@ namespace ManagementSoftware
             {
                 return null;
             }
+        }
+        //get a digital
+        public async Task<Digital?> GetADigital(Digital d)
+        {
+            int? r = await Query(d.DiaChiPLC);
+            if (r != null)
+            {
+                d.TrangThai = r == 0 ? false : true;
+                return d;
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
         //get list alert
@@ -54,8 +68,8 @@ namespace ManagementSoftware
                     if (r != null)
                     {
                         a.TrangThai = r == 0 ? false : true;
-                        result.Add(a);
                     }
+                    result.Add(a);
                 }
                 await this.Close();
                 return result;
@@ -90,9 +104,9 @@ namespace ManagementSoftware
                     {
                         Int32 temp = (Int32)(tempH * 65536 + tempL);
                         PLCConvertTypeData.Types.Double km = new PLCConvertTypeData.Types.Double();
-                        a.GiaTriDong = km.FromDWord(temp);
-                        result.Add(a);
+                        a.GiaTriDong = Math.Round(km.FromDWord(temp), 3, MidpointRounding.AwayFromZero);
                     }
+                    result.Add(a);
                 }
                 await this.Close();
                 return result;
@@ -102,7 +116,34 @@ namespace ManagementSoftware
                 return null;
             }
         }
+        //Get a analog (chưa open plc)
+        public async Task<Analog?> GetAnAnalog(Analog analog)
+        {
+            int? tempL = await Query(analog.DiaChiPLC);
+            char[] addrChar = analog.DiaChiPLC.ToCharArray();
+            string x = "";
+            string y = addrChar[0].ToString();
+            for (int i = 1; i < addrChar.Length; i++)
+            {
+                x = x + addrChar[i];
+            }
+            y = y + (int.Parse(x) + 1);
+            int? tempH = await Query(y);
 
+            if (tempL != null && tempH != null)
+            {
+                Int32 temp = (Int32)(tempH * 65536 + tempL);
+                PLCConvertTypeData.Types.Double km = new PLCConvertTypeData.Types.Double();
+                analog.GiaTriDong = Math.Round(km.FromDWord(temp), 3, MidpointRounding.AwayFromZero);
+
+                return analog;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
 
 
         //truy van du lieu 1 o nho

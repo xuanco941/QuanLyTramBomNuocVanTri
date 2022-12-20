@@ -17,11 +17,37 @@ namespace ManagementSoftware.DAL
             dbContext.SaveChanges();
         }
 
-        public static void AddRange(List<Alert> list)
+        public static async void AddRange(List<Alert> list)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            dbContext.Alerts.AddRange(list);
+            await dbContext.Alerts.AddRangeAsync(list);
+            await dbContext.SaveChangesAsync();
+        }
+        public static void DeleteRange(List<Alert> list)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            dbContext.Alerts.RemoveRange(list);
             dbContext.SaveChanges();
         }
+        public static List<Alert> GetAllAlert()
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.Alerts.ToList();
+        }
+        public static Alert? GetNewAlert()
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            if (dbContext.Alerts.Any())
+            {
+                int maxID = dbContext.Alerts.Max(a => a.IDAlert);
+                return dbContext.Alerts.FirstOrDefault(x => x.IDAlert == maxID);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
     }
 }

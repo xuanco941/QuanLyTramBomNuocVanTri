@@ -28,38 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBoxToanCanh = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
+            this.buttonPDien4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.buttonPDKTT4 = new System.Windows.Forms.Button();
+            this.buttonTaiCho4 = new System.Windows.Forms.Button();
+            this.buttonSanSang4 = new System.Windows.Forms.Button();
+            this.buttonTuXa4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
+            this.buttonPDien2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.buttonPDKTT2 = new System.Windows.Forms.Button();
+            this.buttonTaiCho2 = new System.Windows.Forms.Button();
+            this.buttonSanSang2 = new System.Windows.Forms.Button();
+            this.buttonTuXa2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonPDien3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.buttonPDKTT3 = new System.Windows.Forms.Button();
+            this.buttonTaiCho3 = new System.Windows.Forms.Button();
+            this.buttonSanSang3 = new System.Windows.Forms.Button();
+            this.buttonTuXa3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonPDien1 = new System.Windows.Forms.Button();
+            this.buttonPDKTT1 = new System.Windows.Forms.Button();
+            this.buttonSanSang1 = new System.Windows.Forms.Button();
+            this.buttonTuXa1 = new System.Windows.Forms.Button();
+            this.buttonTaiCho1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button22 = new System.Windows.Forms.Button();
+            this.button100 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
@@ -68,10 +67,10 @@
             this.D10036 = new System.Windows.Forms.Button();
             this.D10046 = new System.Windows.Forms.Button();
             this.D10056 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
+            this.buttonTinHieuMayBom1 = new System.Windows.Forms.Button();
+            this.buttonTinHieuMayBom2 = new System.Windows.Forms.Button();
+            this.buttonTinHieuMayBom3 = new System.Windows.Forms.Button();
+            this.buttonTinHieuMayBom4 = new System.Windows.Forms.Button();
             this.D10048 = new System.Windows.Forms.Button();
             this.D10024 = new System.Windows.Forms.Button();
             this.D10038 = new System.Windows.Forms.Button();
@@ -91,15 +90,16 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBoxBomMoi1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxBomMoi2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxBomThoat1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBomThoat2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVan1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVan4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVan2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVan3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPheuSo2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPheuSo1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToanCanh)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -107,41 +107,27 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomMoi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomMoi2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomThoat1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomThoat2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxToanCanh
             // 
-            this.pictureBox1.BackgroundImage = global::ManagementSoftware.Properties.Resources.imgTramBom;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1715, 755);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 5;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(31, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 25);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "TOÀN CẢNH TRẠM BƠM";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pictureBoxToanCanh.BackgroundImage = global::ManagementSoftware.Properties.Resources.imgTramBom;
+            this.pictureBoxToanCanh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxToanCanh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxToanCanh.InitialImage = null;
+            this.pictureBoxToanCanh.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxToanCanh.Name = "pictureBoxToanCanh";
+            this.pictureBoxToanCanh.Size = new System.Drawing.Size(1715, 755);
+            this.pictureBoxToanCanh.TabIndex = 0;
+            this.pictureBoxToanCanh.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -165,29 +151,29 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.button17);
+            this.panel4.Controls.Add(this.buttonPDien4);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.button18);
-            this.panel4.Controls.Add(this.button21);
-            this.panel4.Controls.Add(this.button19);
-            this.panel4.Controls.Add(this.button20);
+            this.panel4.Controls.Add(this.buttonPDKTT4);
+            this.panel4.Controls.Add(this.buttonTaiCho4);
+            this.panel4.Controls.Add(this.buttonSanSang4);
+            this.panel4.Controls.Add(this.buttonTuXa4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(375, 64);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(367, 56);
             this.panel4.TabIndex = 3;
             // 
-            // button17
+            // buttonPDien4
             // 
-            this.button17.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button17.Enabled = false;
-            this.button17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button17.Location = new System.Drawing.Point(196, 32);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(72, 20);
-            this.button17.TabIndex = 51;
-            this.button17.Text = "P.Điện";
-            this.button17.UseVisualStyleBackColor = false;
+            this.buttonPDien4.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDien4.Enabled = false;
+            this.buttonPDien4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien4.Location = new System.Drawing.Point(196, 32);
+            this.buttonPDien4.Name = "buttonPDien4";
+            this.buttonPDien4.Size = new System.Drawing.Size(72, 20);
+            this.buttonPDien4.TabIndex = 51;
+            this.buttonPDien4.Text = "P.Điện";
+            this.buttonPDien4.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -200,83 +186,82 @@
             this.label4.Text = "Bơm số 4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button18
+            // buttonPDKTT4
             // 
-            this.button18.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button18.Enabled = false;
-            this.button18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button18.Location = new System.Drawing.Point(105, 32);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(72, 20);
-            this.button18.TabIndex = 50;
-            this.button18.Text = "P.ĐKTT";
-            this.button18.UseVisualStyleBackColor = false;
+            this.buttonPDKTT4.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDKTT4.Enabled = false;
+            this.buttonPDKTT4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT4.Location = new System.Drawing.Point(105, 32);
+            this.buttonPDKTT4.Name = "buttonPDKTT4";
+            this.buttonPDKTT4.Size = new System.Drawing.Size(72, 20);
+            this.buttonPDKTT4.TabIndex = 50;
+            this.buttonPDKTT4.Text = "P.ĐKTT";
+            this.buttonPDKTT4.UseVisualStyleBackColor = false;
             // 
-            // button21
+            // buttonTaiCho4
             // 
-            this.button21.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button21.Enabled = false;
-            this.button21.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button21.Location = new System.Drawing.Point(105, 6);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(72, 20);
-            this.button21.TabIndex = 47;
-            this.button21.Text = "Tại chỗ";
-            this.button21.UseVisualStyleBackColor = false;
+            this.buttonTaiCho4.BackColor = System.Drawing.Color.Silver;
+            this.buttonTaiCho4.Enabled = false;
+            this.buttonTaiCho4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTaiCho4.FlatAppearance.BorderSize = 0;
+            this.buttonTaiCho4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho4.Location = new System.Drawing.Point(105, 6);
+            this.buttonTaiCho4.Name = "buttonTaiCho4";
+            this.buttonTaiCho4.Size = new System.Drawing.Size(72, 20);
+            this.buttonTaiCho4.TabIndex = 47;
+            this.buttonTaiCho4.Text = "Tại chỗ";
+            this.buttonTaiCho4.UseVisualStyleBackColor = false;
             // 
-            // button19
+            // buttonSanSang4
             // 
-            this.button19.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button19.Enabled = false;
-            this.button19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button19.Location = new System.Drawing.Point(283, 5);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(72, 20);
-            this.button19.TabIndex = 49;
-            this.button19.Text = "Sẵn sàng";
-            this.button19.UseVisualStyleBackColor = false;
+            this.buttonSanSang4.BackColor = System.Drawing.Color.Silver;
+            this.buttonSanSang4.Enabled = false;
+            this.buttonSanSang4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang4.Location = new System.Drawing.Point(283, 5);
+            this.buttonSanSang4.Name = "buttonSanSang4";
+            this.buttonSanSang4.Size = new System.Drawing.Size(72, 20);
+            this.buttonSanSang4.TabIndex = 49;
+            this.buttonSanSang4.Text = "Sẵn sàng";
+            this.buttonSanSang4.UseVisualStyleBackColor = false;
             // 
-            // button20
+            // buttonTuXa4
             // 
-            this.button20.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button20.Enabled = false;
-            this.button20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button20.Location = new System.Drawing.Point(196, 5);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(72, 20);
-            this.button20.TabIndex = 48;
-            this.button20.Text = "Từ xa";
-            this.button20.UseVisualStyleBackColor = false;
+            this.buttonTuXa4.BackColor = System.Drawing.Color.Silver;
+            this.buttonTuXa4.Enabled = false;
+            this.buttonTuXa4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa4.Location = new System.Drawing.Point(196, 5);
+            this.buttonTuXa4.Name = "buttonTuXa4";
+            this.buttonTuXa4.Size = new System.Drawing.Size(72, 20);
+            this.buttonTuXa4.TabIndex = 48;
+            this.buttonTuXa4.Text = "Từ xa";
+            this.buttonTuXa4.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button12);
+            this.panel3.Controls.Add(this.buttonPDien2);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.button13);
-            this.panel3.Controls.Add(this.button16);
-            this.panel3.Controls.Add(this.button14);
-            this.panel3.Controls.Add(this.button15);
+            this.panel3.Controls.Add(this.buttonPDKTT2);
+            this.panel3.Controls.Add(this.buttonTaiCho2);
+            this.panel3.Controls.Add(this.buttonSanSang2);
+            this.panel3.Controls.Add(this.buttonTuXa2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 64);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(366, 56);
             this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button12
+            // buttonPDien2
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button12.Enabled = false;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button12.Location = new System.Drawing.Point(202, 31);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(72, 20);
-            this.button12.TabIndex = 51;
-            this.button12.Text = "P.Điện";
-            this.button12.UseVisualStyleBackColor = false;
+            this.buttonPDien2.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDien2.Enabled = false;
+            this.buttonPDien2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien2.Location = new System.Drawing.Point(202, 31);
+            this.buttonPDien2.Name = "buttonPDien2";
+            this.buttonPDien2.Size = new System.Drawing.Size(72, 20);
+            this.buttonPDien2.TabIndex = 51;
+            this.buttonPDien2.Text = "P.Điện";
+            this.buttonPDien2.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -289,82 +274,82 @@
             this.label2.Text = "Bơm số 2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button13
+            // buttonPDKTT2
             // 
-            this.button13.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button13.Enabled = false;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button13.Location = new System.Drawing.Point(111, 31);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(72, 20);
-            this.button13.TabIndex = 50;
-            this.button13.Text = "P.ĐKTT";
-            this.button13.UseVisualStyleBackColor = false;
+            this.buttonPDKTT2.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDKTT2.Enabled = false;
+            this.buttonPDKTT2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT2.Location = new System.Drawing.Point(111, 31);
+            this.buttonPDKTT2.Name = "buttonPDKTT2";
+            this.buttonPDKTT2.Size = new System.Drawing.Size(72, 20);
+            this.buttonPDKTT2.TabIndex = 50;
+            this.buttonPDKTT2.Text = "P.ĐKTT";
+            this.buttonPDKTT2.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // buttonTaiCho2
             // 
-            this.button16.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button16.Enabled = false;
-            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button16.Location = new System.Drawing.Point(111, 5);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(72, 20);
-            this.button16.TabIndex = 47;
-            this.button16.Text = "Tại chỗ";
-            this.button16.UseVisualStyleBackColor = false;
+            this.buttonTaiCho2.BackColor = System.Drawing.Color.Silver;
+            this.buttonTaiCho2.Enabled = false;
+            this.buttonTaiCho2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTaiCho2.FlatAppearance.BorderSize = 0;
+            this.buttonTaiCho2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho2.Location = new System.Drawing.Point(111, 5);
+            this.buttonTaiCho2.Name = "buttonTaiCho2";
+            this.buttonTaiCho2.Size = new System.Drawing.Size(72, 20);
+            this.buttonTaiCho2.TabIndex = 47;
+            this.buttonTaiCho2.Text = "Tại chỗ";
+            this.buttonTaiCho2.UseVisualStyleBackColor = false;
             // 
-            // button14
+            // buttonSanSang2
             // 
-            this.button14.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button14.Enabled = false;
-            this.button14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button14.Location = new System.Drawing.Point(289, 5);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(72, 20);
-            this.button14.TabIndex = 49;
-            this.button14.Text = "Sẵn sàng";
-            this.button14.UseVisualStyleBackColor = false;
+            this.buttonSanSang2.BackColor = System.Drawing.Color.Silver;
+            this.buttonSanSang2.Enabled = false;
+            this.buttonSanSang2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang2.Location = new System.Drawing.Point(289, 5);
+            this.buttonSanSang2.Name = "buttonSanSang2";
+            this.buttonSanSang2.Size = new System.Drawing.Size(72, 20);
+            this.buttonSanSang2.TabIndex = 49;
+            this.buttonSanSang2.Text = "Sẵn sàng";
+            this.buttonSanSang2.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // buttonTuXa2
             // 
-            this.button15.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button15.Enabled = false;
-            this.button15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button15.Location = new System.Drawing.Point(202, 5);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(72, 20);
-            this.button15.TabIndex = 48;
-            this.button15.Text = "Từ xa";
-            this.button15.UseVisualStyleBackColor = false;
+            this.buttonTuXa2.BackColor = System.Drawing.Color.Silver;
+            this.buttonTuXa2.Enabled = false;
+            this.buttonTuXa2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa2.Location = new System.Drawing.Point(202, 5);
+            this.buttonTuXa2.Name = "buttonTuXa2";
+            this.buttonTuXa2.Size = new System.Drawing.Size(72, 20);
+            this.buttonTuXa2.TabIndex = 48;
+            this.buttonTuXa2.Text = "Từ xa";
+            this.buttonTuXa2.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.buttonPDien3);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button10);
+            this.panel2.Controls.Add(this.buttonPDKTT3);
+            this.panel2.Controls.Add(this.buttonTaiCho3);
+            this.panel2.Controls.Add(this.buttonSanSang3);
+            this.panel2.Controls.Add(this.buttonTuXa3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(375, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(367, 55);
             this.panel2.TabIndex = 1;
             // 
-            // button5
+            // buttonPDien3
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Enabled = false;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(196, 30);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(72, 20);
-            this.button5.TabIndex = 51;
-            this.button5.Text = "P.Điện";
-            this.button5.UseVisualStyleBackColor = false;
+            this.buttonPDien3.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDien3.Enabled = false;
+            this.buttonPDien3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien3.Location = new System.Drawing.Point(196, 30);
+            this.buttonPDien3.Name = "buttonPDien3";
+            this.buttonPDien3.Size = new System.Drawing.Size(72, 20);
+            this.buttonPDien3.TabIndex = 51;
+            this.buttonPDien3.Text = "P.Điện";
+            this.buttonPDien3.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -377,64 +362,64 @@
             this.label3.Text = "Bơm số 3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button8
+            // buttonPDKTT3
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Enabled = false;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(105, 30);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(72, 20);
-            this.button8.TabIndex = 50;
-            this.button8.Text = "P.ĐKTT";
-            this.button8.UseVisualStyleBackColor = false;
+            this.buttonPDKTT3.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDKTT3.Enabled = false;
+            this.buttonPDKTT3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT3.Location = new System.Drawing.Point(105, 30);
+            this.buttonPDKTT3.Name = "buttonPDKTT3";
+            this.buttonPDKTT3.Size = new System.Drawing.Size(72, 20);
+            this.buttonPDKTT3.TabIndex = 50;
+            this.buttonPDKTT3.Text = "P.ĐKTT";
+            this.buttonPDKTT3.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // buttonTaiCho3
             // 
-            this.button11.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button11.Enabled = false;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.Location = new System.Drawing.Point(105, 4);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(72, 20);
-            this.button11.TabIndex = 47;
-            this.button11.Text = "Tại chỗ";
-            this.button11.UseVisualStyleBackColor = false;
+            this.buttonTaiCho3.BackColor = System.Drawing.Color.Silver;
+            this.buttonTaiCho3.Enabled = false;
+            this.buttonTaiCho3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTaiCho3.FlatAppearance.BorderSize = 0;
+            this.buttonTaiCho3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho3.Location = new System.Drawing.Point(105, 4);
+            this.buttonTaiCho3.Name = "buttonTaiCho3";
+            this.buttonTaiCho3.Size = new System.Drawing.Size(72, 20);
+            this.buttonTaiCho3.TabIndex = 47;
+            this.buttonTaiCho3.Text = "Tại chỗ";
+            this.buttonTaiCho3.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // buttonSanSang3
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Enabled = false;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button9.Location = new System.Drawing.Point(283, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(72, 20);
-            this.button9.TabIndex = 49;
-            this.button9.Text = "Sẵn sàng";
-            this.button9.UseVisualStyleBackColor = false;
+            this.buttonSanSang3.BackColor = System.Drawing.Color.Silver;
+            this.buttonSanSang3.Enabled = false;
+            this.buttonSanSang3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang3.Location = new System.Drawing.Point(283, 5);
+            this.buttonSanSang3.Name = "buttonSanSang3";
+            this.buttonSanSang3.Size = new System.Drawing.Size(72, 20);
+            this.buttonSanSang3.TabIndex = 49;
+            this.buttonSanSang3.Text = "Sẵn sàng";
+            this.buttonSanSang3.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // buttonTuXa3
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button10.Enabled = false;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.Location = new System.Drawing.Point(196, 5);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(72, 20);
-            this.button10.TabIndex = 48;
-            this.button10.Text = "Từ xa";
-            this.button10.UseVisualStyleBackColor = false;
+            this.buttonTuXa3.BackColor = System.Drawing.Color.Silver;
+            this.buttonTuXa3.Enabled = false;
+            this.buttonTuXa3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa3.Location = new System.Drawing.Point(196, 5);
+            this.buttonTuXa3.Name = "buttonTuXa3";
+            this.buttonTuXa3.Size = new System.Drawing.Size(72, 20);
+            this.buttonTuXa3.TabIndex = 48;
+            this.buttonTuXa3.Text = "Từ xa";
+            this.buttonTuXa3.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonPDien1);
+            this.panel1.Controls.Add(this.buttonPDKTT1);
+            this.panel1.Controls.Add(this.buttonSanSang1);
+            this.panel1.Controls.Add(this.buttonTuXa1);
+            this.panel1.Controls.Add(this.buttonTaiCho1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
@@ -442,67 +427,67 @@
             this.panel1.Size = new System.Drawing.Size(366, 55);
             this.panel1.TabIndex = 0;
             // 
-            // button6
+            // buttonPDien1
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Enabled = false;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(202, 30);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(72, 20);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "P.Điện";
-            this.button6.UseVisualStyleBackColor = false;
+            this.buttonPDien1.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDien1.Enabled = false;
+            this.buttonPDien1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien1.Location = new System.Drawing.Point(202, 30);
+            this.buttonPDien1.Name = "buttonPDien1";
+            this.buttonPDien1.Size = new System.Drawing.Size(72, 20);
+            this.buttonPDien1.TabIndex = 5;
+            this.buttonPDien1.Text = "P.Điện";
+            this.buttonPDien1.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // buttonPDKTT1
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Enabled = false;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(111, 30);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(72, 20);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "P.ĐKTT";
-            this.button7.UseVisualStyleBackColor = false;
+            this.buttonPDKTT1.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDKTT1.Enabled = false;
+            this.buttonPDKTT1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT1.Location = new System.Drawing.Point(111, 30);
+            this.buttonPDKTT1.Name = "buttonPDKTT1";
+            this.buttonPDKTT1.Size = new System.Drawing.Size(72, 20);
+            this.buttonPDKTT1.TabIndex = 4;
+            this.buttonPDKTT1.Text = "P.ĐKTT";
+            this.buttonPDKTT1.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // buttonSanSang1
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Enabled = false;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(289, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 20);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Sẵn sàng";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonSanSang1.BackColor = System.Drawing.Color.Silver;
+            this.buttonSanSang1.Enabled = false;
+            this.buttonSanSang1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang1.Location = new System.Drawing.Point(289, 5);
+            this.buttonSanSang1.Name = "buttonSanSang1";
+            this.buttonSanSang1.Size = new System.Drawing.Size(72, 20);
+            this.buttonSanSang1.TabIndex = 3;
+            this.buttonSanSang1.Text = "Sẵn sàng";
+            this.buttonSanSang1.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonTuXa1
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(202, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 20);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Từ xa";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonTuXa1.BackColor = System.Drawing.Color.Silver;
+            this.buttonTuXa1.Enabled = false;
+            this.buttonTuXa1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa1.Location = new System.Drawing.Point(202, 5);
+            this.buttonTuXa1.Name = "buttonTuXa1";
+            this.buttonTuXa1.Size = new System.Drawing.Size(72, 20);
+            this.buttonTuXa1.TabIndex = 2;
+            this.buttonTuXa1.Text = "Từ xa";
+            this.buttonTuXa1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // buttonTaiCho1
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(111, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 20);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Tại chỗ";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonTaiCho1.BackColor = System.Drawing.Color.Silver;
+            this.buttonTaiCho1.Enabled = false;
+            this.buttonTaiCho1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTaiCho1.FlatAppearance.BorderSize = 0;
+            this.buttonTaiCho1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho1.Location = new System.Drawing.Point(111, 4);
+            this.buttonTaiCho1.Name = "buttonTaiCho1";
+            this.buttonTaiCho1.Size = new System.Drawing.Size(72, 20);
+            this.buttonTaiCho1.TabIndex = 1;
+            this.buttonTaiCho1.Text = "Tại chỗ";
+            this.buttonTaiCho1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -514,19 +499,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bơm số 1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button22
+            // button100
             // 
-            this.button22.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button22.FlatAppearance.BorderSize = 0;
-            this.button22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button22.Location = new System.Drawing.Point(422, 155);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(35, 27);
-            this.button22.TabIndex = 17;
-            this.button22.Text = "1";
-            this.button22.UseVisualStyleBackColor = false;
+            this.button100.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button100.FlatAppearance.BorderSize = 0;
+            this.button100.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button100.Location = new System.Drawing.Point(422, 155);
+            this.button100.Name = "button100";
+            this.button100.Size = new System.Drawing.Size(35, 27);
+            this.button100.TabIndex = 17;
+            this.button100.Text = "1";
+            this.button100.UseVisualStyleBackColor = false;
             // 
             // button23
             // 
@@ -613,53 +597,53 @@
             this.D10056.Text = "D10056";
             this.D10056.UseVisualStyleBackColor = false;
             // 
-            // button31
+            // buttonTinHieuMayBom1
             // 
-            this.button31.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button31.FlatAppearance.BorderSize = 0;
-            this.button31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button31.Location = new System.Drawing.Point(824, 157);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(35, 27);
-            this.button31.TabIndex = 26;
-            this.button31.Text = "1";
-            this.button31.UseVisualStyleBackColor = false;
+            this.buttonTinHieuMayBom1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonTinHieuMayBom1.FlatAppearance.BorderSize = 0;
+            this.buttonTinHieuMayBom1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonTinHieuMayBom1.Location = new System.Drawing.Point(824, 157);
+            this.buttonTinHieuMayBom1.Name = "buttonTinHieuMayBom1";
+            this.buttonTinHieuMayBom1.Size = new System.Drawing.Size(35, 27);
+            this.buttonTinHieuMayBom1.TabIndex = 26;
+            this.buttonTinHieuMayBom1.Text = "1";
+            this.buttonTinHieuMayBom1.UseVisualStyleBackColor = false;
             // 
-            // button32
+            // buttonTinHieuMayBom2
             // 
-            this.button32.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button32.FlatAppearance.BorderSize = 0;
-            this.button32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button32.Location = new System.Drawing.Point(824, 214);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(35, 27);
-            this.button32.TabIndex = 27;
-            this.button32.Text = "1";
-            this.button32.UseVisualStyleBackColor = false;
+            this.buttonTinHieuMayBom2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonTinHieuMayBom2.FlatAppearance.BorderSize = 0;
+            this.buttonTinHieuMayBom2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonTinHieuMayBom2.Location = new System.Drawing.Point(824, 214);
+            this.buttonTinHieuMayBom2.Name = "buttonTinHieuMayBom2";
+            this.buttonTinHieuMayBom2.Size = new System.Drawing.Size(35, 27);
+            this.buttonTinHieuMayBom2.TabIndex = 27;
+            this.buttonTinHieuMayBom2.Text = "2";
+            this.buttonTinHieuMayBom2.UseVisualStyleBackColor = false;
             // 
-            // button33
+            // buttonTinHieuMayBom3
             // 
-            this.button33.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button33.FlatAppearance.BorderSize = 0;
-            this.button33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button33.Location = new System.Drawing.Point(824, 261);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(35, 27);
-            this.button33.TabIndex = 28;
-            this.button33.Text = "1";
-            this.button33.UseVisualStyleBackColor = false;
+            this.buttonTinHieuMayBom3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonTinHieuMayBom3.FlatAppearance.BorderSize = 0;
+            this.buttonTinHieuMayBom3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonTinHieuMayBom3.Location = new System.Drawing.Point(824, 261);
+            this.buttonTinHieuMayBom3.Name = "buttonTinHieuMayBom3";
+            this.buttonTinHieuMayBom3.Size = new System.Drawing.Size(35, 27);
+            this.buttonTinHieuMayBom3.TabIndex = 28;
+            this.buttonTinHieuMayBom3.Text = "3";
+            this.buttonTinHieuMayBom3.UseVisualStyleBackColor = false;
             // 
-            // button34
+            // buttonTinHieuMayBom4
             // 
-            this.button34.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button34.FlatAppearance.BorderSize = 0;
-            this.button34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button34.Location = new System.Drawing.Point(824, 314);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(35, 27);
-            this.button34.TabIndex = 29;
-            this.button34.Text = "1";
-            this.button34.UseVisualStyleBackColor = false;
+            this.buttonTinHieuMayBom4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonTinHieuMayBom4.FlatAppearance.BorderSize = 0;
+            this.buttonTinHieuMayBom4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonTinHieuMayBom4.Location = new System.Drawing.Point(824, 314);
+            this.buttonTinHieuMayBom4.Name = "buttonTinHieuMayBom4";
+            this.buttonTinHieuMayBom4.Size = new System.Drawing.Size(35, 27);
+            this.buttonTinHieuMayBom4.TabIndex = 29;
+            this.buttonTinHieuMayBom4.Text = "4";
+            this.buttonTinHieuMayBom4.UseVisualStyleBackColor = false;
             // 
             // D10048
             // 
@@ -671,7 +655,6 @@
             this.D10048.TabIndex = 30;
             this.D10048.Text = "D10048";
             this.D10048.UseVisualStyleBackColor = false;
-            this.D10048.Click += new System.EventHandler(this.button35_Click);
             // 
             // D10024
             // 
@@ -745,7 +728,6 @@
             this.label7.TabIndex = 37;
             this.label7.Text = "Số 1";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -853,99 +835,111 @@
             this.pictureBoxBomMoi2.TabIndex = 48;
             this.pictureBoxBomMoi2.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBoxBomThoat1
             // 
-            this.pictureBox4.Image = global::ManagementSoftware.Properties.Resources._320069962_715201109812533_3112291369857608967_n;
-            this.pictureBox4.Location = new System.Drawing.Point(1216, 455);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(48, 20);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 49;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxBomThoat1.Image = global::ManagementSoftware.Properties.Resources._320069962_715201109812533_3112291369857608967_n;
+            this.pictureBoxBomThoat1.Location = new System.Drawing.Point(1216, 455);
+            this.pictureBoxBomThoat1.Name = "pictureBoxBomThoat1";
+            this.pictureBoxBomThoat1.Size = new System.Drawing.Size(48, 20);
+            this.pictureBoxBomThoat1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBomThoat1.TabIndex = 49;
+            this.pictureBoxBomThoat1.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBoxBomThoat2
             // 
-            this.pictureBox2.Image = global::ManagementSoftware.Properties.Resources.Bomxa2;
-            this.pictureBox2.Location = new System.Drawing.Point(1273, 455);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxBomThoat2.Image = global::ManagementSoftware.Properties.Resources.Bomxa2;
+            this.pictureBoxBomThoat2.Location = new System.Drawing.Point(1273, 455);
+            this.pictureBoxBomThoat2.Name = "pictureBoxBomThoat2";
+            this.pictureBoxBomThoat2.Size = new System.Drawing.Size(48, 20);
+            this.pictureBoxBomThoat2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBomThoat2.TabIndex = 50;
+            this.pictureBoxBomThoat2.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBoxVan1
             // 
-            this.pictureBox3.Image = global::ManagementSoftware.Properties.Resources._320280497_1185094479069198_3854544152610733047_n;
-            this.pictureBox3.Location = new System.Drawing.Point(928, 164);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(22, 16);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 51;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxVan1.Image = global::ManagementSoftware.Properties.Resources._320280497_1185094479069198_3854544152610733047_n;
+            this.pictureBoxVan1.Location = new System.Drawing.Point(928, 164);
+            this.pictureBoxVan1.Name = "pictureBoxVan1";
+            this.pictureBoxVan1.Size = new System.Drawing.Size(22, 16);
+            this.pictureBoxVan1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVan1.TabIndex = 51;
+            this.pictureBoxVan1.TabStop = false;
             // 
-            // pictureBox5
+            // pictureBoxVan4
             // 
-            this.pictureBox5.Image = global::ManagementSoftware.Properties.Resources._320280497_1185094479069198_3854544152610733047_n;
-            this.pictureBox5.Location = new System.Drawing.Point(928, 319);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(22, 16);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 52;
-            this.pictureBox5.TabStop = false;
+            this.pictureBoxVan4.Image = global::ManagementSoftware.Properties.Resources._320280497_1185094479069198_3854544152610733047_n;
+            this.pictureBoxVan4.Location = new System.Drawing.Point(928, 319);
+            this.pictureBoxVan4.Name = "pictureBoxVan4";
+            this.pictureBoxVan4.Size = new System.Drawing.Size(22, 16);
+            this.pictureBoxVan4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVan4.TabIndex = 52;
+            this.pictureBoxVan4.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBoxVan2
             // 
-            this.pictureBox6.Image = global::ManagementSoftware.Properties.Resources._320280497_1185094479069198_3854544152610733047_n1;
-            this.pictureBox6.Location = new System.Drawing.Point(928, 216);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(22, 16);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 53;
-            this.pictureBox6.TabStop = false;
+            this.pictureBoxVan2.Image = global::ManagementSoftware.Properties.Resources._320280497_1185094479069198_3854544152610733047_n1;
+            this.pictureBoxVan2.Location = new System.Drawing.Point(928, 216);
+            this.pictureBoxVan2.Name = "pictureBoxVan2";
+            this.pictureBoxVan2.Size = new System.Drawing.Size(22, 16);
+            this.pictureBoxVan2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVan2.TabIndex = 53;
+            this.pictureBoxVan2.TabStop = false;
             // 
-            // pictureBox7
+            // pictureBoxVan3
             // 
-            this.pictureBox7.Image = global::ManagementSoftware.Properties.Resources._320280497_1185094479069198_3854544152610733047_n;
-            this.pictureBox7.Location = new System.Drawing.Point(928, 267);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(22, 16);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 54;
-            this.pictureBox7.TabStop = false;
+            this.pictureBoxVan3.Image = global::ManagementSoftware.Properties.Resources._320280497_1185094479069198_3854544152610733047_n;
+            this.pictureBoxVan3.Location = new System.Drawing.Point(928, 267);
+            this.pictureBoxVan3.Name = "pictureBoxVan3";
+            this.pictureBoxVan3.Size = new System.Drawing.Size(22, 16);
+            this.pictureBoxVan3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVan3.TabIndex = 54;
+            this.pictureBoxVan3.TabStop = false;
             // 
-            // pictureBox8
+            // pictureBoxPheuSo2
             // 
-            this.pictureBox8.Image = global::ManagementSoftware.Properties.Resources._320396300_1361951851275264_6188606067988065577_n;
-            this.pictureBox8.Location = new System.Drawing.Point(223, 500);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(48, 24);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 55;
-            this.pictureBox8.TabStop = false;
+            this.pictureBoxPheuSo2.Image = global::ManagementSoftware.Properties.Resources._320396300_1361951851275264_6188606067988065577_n;
+            this.pictureBoxPheuSo2.Location = new System.Drawing.Point(223, 500);
+            this.pictureBoxPheuSo2.Name = "pictureBoxPheuSo2";
+            this.pictureBoxPheuSo2.Size = new System.Drawing.Size(48, 24);
+            this.pictureBoxPheuSo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPheuSo2.TabIndex = 55;
+            this.pictureBoxPheuSo2.TabStop = false;
             // 
-            // pictureBox9
+            // pictureBoxPheuSo1
             // 
-            this.pictureBox9.Image = global::ManagementSoftware.Properties.Resources.PheuTrn;
-            this.pictureBox9.Location = new System.Drawing.Point(113, 399);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(48, 24);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 56;
-            this.pictureBox9.TabStop = false;
+            this.pictureBoxPheuSo1.Image = global::ManagementSoftware.Properties.Resources.PheuTrn;
+            this.pictureBoxPheuSo1.Location = new System.Drawing.Point(113, 399);
+            this.pictureBoxPheuSo1.Name = "pictureBoxPheuSo1";
+            this.pictureBoxPheuSo1.Size = new System.Drawing.Size(48, 24);
+            this.pictureBoxPheuSo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPheuSo1.TabIndex = 56;
+            this.pictureBoxPheuSo1.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label13.Location = new System.Drawing.Point(37, 18);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(274, 31);
+            this.label13.TabIndex = 57;
+            this.label13.Text = "TOÀN CẢNH TRẠM BƠM";
             // 
             // ToanCanhMayBom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1715, 755);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.pictureBoxPheuSo1);
+            this.Controls.Add(this.pictureBoxPheuSo2);
+            this.Controls.Add(this.pictureBoxVan3);
+            this.Controls.Add(this.pictureBoxVan2);
+            this.Controls.Add(this.pictureBoxVan4);
+            this.Controls.Add(this.pictureBoxVan1);
+            this.Controls.Add(this.pictureBoxBomThoat2);
+            this.Controls.Add(this.pictureBoxBomThoat1);
             this.Controls.Add(this.pictureBoxBomMoi2);
             this.Controls.Add(this.pictureBoxBomMoi1);
             this.Controls.Add(this.label12);
@@ -965,10 +959,10 @@
             this.Controls.Add(this.D10038);
             this.Controls.Add(this.D10024);
             this.Controls.Add(this.D10048);
-            this.Controls.Add(this.button34);
-            this.Controls.Add(this.button33);
-            this.Controls.Add(this.button32);
-            this.Controls.Add(this.button31);
+            this.Controls.Add(this.buttonTinHieuMayBom4);
+            this.Controls.Add(this.buttonTinHieuMayBom3);
+            this.Controls.Add(this.buttonTinHieuMayBom2);
+            this.Controls.Add(this.buttonTinHieuMayBom1);
             this.Controls.Add(this.D10056);
             this.Controls.Add(this.D10046);
             this.Controls.Add(this.D10036);
@@ -977,14 +971,13 @@
             this.Controls.Add(this.button25);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.button23);
-            this.Controls.Add(this.button22);
+            this.Controls.Add(this.button100);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxToanCanh);
             this.Name = "ToanCanhMayBom";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.ToanCanhMayBom_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToanCanh)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -992,14 +985,14 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomMoi1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomMoi2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomThoat1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBomThoat2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1007,23 +1000,22 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private Button button1;
+        private PictureBox pictureBoxToanCanh;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel4;
         private Panel panel3;
         private Panel panel2;
         private Panel panel1;
         private Label label1;
-        private Button button6;
-        private Button button7;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button buttonPDien1;
+        private Button buttonPDKTT1;
+        private Button buttonSanSang1;
+        private Button buttonTuXa1;
+        private Button buttonTaiCho1;
         private Label label4;
         private Label label2;
         private Label label3;
-        private Button button22;
+        private Button button100;
         private Button button23;
         private Button button24;
         private Button button25;
@@ -1032,10 +1024,10 @@
         private Button D10036;
         private Button D10046;
         private Button D10056;
-        private Button button31;
-        private Button button32;
-        private Button button33;
-        private Button button34;
+        private Button buttonTinHieuMayBom1;
+        private Button buttonTinHieuMayBom2;
+        private Button buttonTinHieuMayBom3;
+        private Button buttonTinHieuMayBom4;
         private Button D10048;
         private Button D10024;
         private Button D10038;
@@ -1053,30 +1045,31 @@
         private Label label10;
         private Label label11;
         private Label label12;
-        private Button button17;
-        private Button button18;
-        private Button button21;
-        private Button button19;
-        private Button button20;
-        private Button button12;
-        private Button button13;
-        private Button button16;
-        private Button button14;
-        private Button button15;
-        private Button button5;
-        private Button button8;
-        private Button button11;
-        private Button button9;
-        private Button button10;
+        private Button buttonPDien4;
+        private Button buttonPDKTT4;
+        private Button buttonTaiCho4;
+        private Button buttonSanSang4;
+        private Button buttonTuXa4;
+        private Button buttonPDien2;
+        private Button buttonPDKTT2;
+        private Button buttonTaiCho2;
+        private Button buttonSanSang2;
+        private Button buttonTuXa2;
+        private Button buttonPDien3;
+        private Button buttonPDKTT3;
+        private Button buttonTaiCho3;
+        private Button buttonSanSang3;
+        private Button buttonTuXa3;
         private PictureBox pictureBoxBomMoi1;
         private PictureBox pictureBoxBomMoi2;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox9;
+        private PictureBox pictureBoxBomThoat1;
+        private PictureBox pictureBoxBomThoat2;
+        private PictureBox pictureBoxVan1;
+        private PictureBox pictureBoxVan4;
+        private PictureBox pictureBoxVan2;
+        private PictureBox pictureBoxVan3;
+        private PictureBox pictureBoxPheuSo2;
+        private PictureBox pictureBoxPheuSo1;
+        private Label label13;
     }
 }

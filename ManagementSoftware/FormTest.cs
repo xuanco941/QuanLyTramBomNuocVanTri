@@ -1,4 +1,5 @@
-﻿using Syncfusion.DocIO.DLS;
+﻿using ManagementSoftware.Properties;
+using Syncfusion.DocIO.DLS;
 using Syncfusion.Windows.Forms.Barcode;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,7 @@ namespace ManagementSoftware
 {
     public partial class FormTest : Form
     {
-        Bitmap MemoryImage;
-        private PrintDocument printDocument1 = new PrintDocument();
-        private PrintPreviewDialog previewdlg = new PrintPreviewDialog();
+
         public FormTest()
         {
             InitializeComponent();
@@ -33,7 +32,39 @@ namespace ManagementSoftware
 
             printDocument1.PrintPage += new PrintPageEventHandler(printdoc1_PrintPage);
 
+
+
+
+            pictureBox1.Image = Resources.check;
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 700;
+            timer.Elapsed += Tick;
+            timer.Start();
+
         }
+        public bool a;
+        private void Tick(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("AAAAAAAAAAAAAAAAAAAAAAAAAA");
+            if(a)
+            {
+                System.Diagnostics.Debug.WriteLine("BBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+                pictureBox1.Image = Resources.check;
+                a = false;
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
+                pictureBox1.Image = Resources.backpage;
+                a = true;
+            }
+        }
+
+
+
+        Bitmap MemoryImage;
+        private PrintDocument printDocument1 = new PrintDocument();
+        private PrintPreviewDialog previewdlg = new PrintPreviewDialog();
         public void GetPrintArea(Panel pnl)
         {
             MemoryImage = new Bitmap(pnl.Width, pnl.Height);
@@ -60,10 +91,15 @@ namespace ManagementSoftware
             previewdlg.ShowDialog();
         }
 
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             Print(this.panelPrintBarcode);
         }
+
+
+
+
 
         private void button2bgrwk_Click(object sender, EventArgs e)
         {

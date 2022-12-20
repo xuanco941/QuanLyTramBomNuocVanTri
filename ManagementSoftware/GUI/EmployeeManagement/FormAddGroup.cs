@@ -29,37 +29,7 @@ namespace ManagementSoftware.GUI.EmployeeManagement
 
 
         //validate checkbox
-        private void checkBoxIsViewResult_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxIsViewResult.Checked == false)
-            {
-                checkBoxIsDeleteResult.Checked = false;
-            }
-        }
-
-        private void checkBoxIsViewActivity_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxIsViewActivity.Checked == false)
-            {
-                checkBoxIsDeleteActivity.Checked = false;
-            }
-        }
-
-        private void checkBoxIsDeleteResult_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxIsDeleteResult.Checked == true)
-            {
-                checkBoxIsViewResult.Checked = true;
-            }
-        }
-
-        private void checkBoxIsDeleteActivity_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxIsDeleteActivity.Checked == true)
-            {
-                checkBoxIsViewActivity.Checked = true;
-            }
-        }
+       
 
         private void buttonAddGroup_Click(object sender, EventArgs e)
         {

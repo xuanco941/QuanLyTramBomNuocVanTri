@@ -1,17 +1,20 @@
 ﻿
+using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.QuanLyTramBom;
 using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
+using System.Globalization;
 
 namespace QuanLyTramBom
 {
     public partial class Dashboard : Form
     {
+
         public Dashboard()
         {
             InitializeComponent();
-            
-            
+
+                     
             WindowState = FormWindowState.Maximized;
 
             ToanCanhMayBom form = new ToanCanhMayBom();
@@ -36,23 +39,13 @@ namespace QuanLyTramBom
             form3.FormBorderStyle = FormBorderStyle.None;
             form3.Show();
 
-        }
+            //clock
+            clock1.MinimumSize = new Size(65, 65);
+            clock1.Size = new System.Drawing.Size(65,65);
+            clock1.Location = new Point(1259, 4);
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-            label2.Text = DateTime.Now.ToShortTimeString();
-            label3.Text = DateTime.Now.ToShortDateString();
-
-
-        }
-
-
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            timer1.Start();
-            label2.Text = DateTime.Now.ToShortTimeString();
-            label3.Text = DateTime.Now.ToShortDateString();
+            //timer new alert
+            timerGetNewAlert.Start();
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
@@ -98,22 +91,9 @@ namespace QuanLyTramBom
                 form3.FormBorderStyle = FormBorderStyle.None;
                 form3.Show();
             }
-            else if (e.TabPage == tabPage5)
-            {
-                FormQLHeThong form4 = new FormQLHeThong();
-                form4.TopLevel = false;
-                panelContentQL.Controls.Add(form4);
-                form4.Dock = DockStyle.Fill;
-                form4.FormBorderStyle = FormBorderStyle.None;
-                form4.Show();
-            }
         }
 
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -151,6 +131,19 @@ namespace QuanLyTramBom
             
         }
 
-       
+        private void timerGetNewAlert_Tick(object sender, EventArgs e)
+        {
+            Alert? a = DALAlert.GetNewAlert();
+            if (a != null)
+            {
+                labelSTT.Text = "ID"+ a.IDAlert;
+                labelGanThe.Text = a.GanThe;
+                labelThoiGian.Text = a.ThoiGian.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                labelDieuKien.Text = a.DieuKien;
+                labelNhom.Text = a.Nhom;
+                labelMoTa.Text = a.TinHieu;
+                labelGiaTri.Text = a.TrangThai == true ? "true" : "false";
+            }
+        }
     }
 }

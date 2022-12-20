@@ -17,11 +17,11 @@ namespace ManagementSoftware.DAL
             dbContext.SaveChanges();
         }
 
-        public static void AddRange(List<Analog> list)
+        public static async void AddRange(List<Analog> list)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            dbContext.Analogs.AddRange(list);
-            dbContext.SaveChanges();
+            await dbContext.Analogs.AddRangeAsync(list);
+            await dbContext.SaveChangesAsync();
         }
     }
 }

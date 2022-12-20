@@ -33,5 +33,6 @@ namespace ManagementSoftware.Models.TramBomNuoc
             GiaTriLonNhat = giaTriLonNhat;
             GiaTriNhoNhat = giaTriNhoNhat;
         }
+
     }
 }
