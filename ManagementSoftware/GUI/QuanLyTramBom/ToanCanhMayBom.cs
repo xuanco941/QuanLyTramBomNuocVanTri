@@ -22,7 +22,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
             plcMain = new PLCSMain();
         }
-
+        private void ToanCanhMayBom_Load(object sender, EventArgs e)
+        {
+            AutoUpdate();
+        }
         async Task LoadTextAnalog(Button btn, Analog a)
         {
             Analog? analog = await plcMain.GetAnAnalog(a);
@@ -932,11 +935,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             }
         }
 
-
-
-
-
-
-
+  
     }
 }

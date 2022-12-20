@@ -294,7 +294,6 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\C
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormDSVaoRaSo.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormDSVaoRaTT.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormTimDuLieu.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.FormQLHeThong.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoNam.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoNgay.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoThang.resources

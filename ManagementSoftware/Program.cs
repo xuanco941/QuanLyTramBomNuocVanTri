@@ -1,6 +1,8 @@
 ﻿using ManagementSoftware.Models;
 using ManagementSoftware.GUI;
 using System.Diagnostics;
+using ManagementSoftware.AutoAddData;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ManagementSoftware
 {
@@ -31,8 +33,11 @@ namespace ManagementSoftware
             catch
             {
                 MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
+
+            CommonAutoAddData.dataAlert.StartAutoSave(2000);
+            CommonAutoAddData.dataAnalog.StartAutoSave(60000);
+            CommonAutoAddData.dataDigital.StartAutoSave(60000);
 
 
             Application.Run(new Login());

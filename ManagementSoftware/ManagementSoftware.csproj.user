@@ -4,6 +4,9 @@
     <Compile Update="GUI\ControlButton\ButtonCus.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\DoThiKhuynhHuong\ChonKhuynhHuong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,9 +29,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\EmployeeManagement\FormChangeGroup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\ToanCanhMayBom.cs">
@@ -59,9 +59,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormLTLoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\FormQLHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormTimDuLieu.cs">

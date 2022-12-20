@@ -29,8 +29,8 @@ namespace ManagementSoftware
                     if (r != null)
                     {
                         digital.TrangThai = r == 0 ? false : true;
-                        result.Add(digital);
                     }
+                    result.Add(digital);
                 }
                 await this.Close();
                 return result;
@@ -68,8 +68,8 @@ namespace ManagementSoftware
                     if (r != null)
                     {
                         a.TrangThai = r == 0 ? false : true;
-                        result.Add(a);
                     }
+                    result.Add(a);
                 }
                 await this.Close();
                 return result;
@@ -105,8 +105,8 @@ namespace ManagementSoftware
                         Int32 temp = (Int32)(tempH * 65536 + tempL);
                         PLCConvertTypeData.Types.Double km = new PLCConvertTypeData.Types.Double();
                         a.GiaTriDong = Math.Round(km.FromDWord(temp), 3, MidpointRounding.AwayFromZero);
-                        result.Add(a);
                     }
+                    result.Add(a);
                 }
                 await this.Close();
                 return result;

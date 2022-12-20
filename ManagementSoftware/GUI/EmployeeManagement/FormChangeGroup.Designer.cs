@@ -36,14 +36,6 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.buttonUpdateGroup = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.comboBoxSelectGroup = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxIsDeleteActivity = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsDeleteResult = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsViewActivity = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsViewResult = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsSettingTemplateMachine = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsSettingShift = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsSettingMachine = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsControlMachine = new System.Windows.Forms.CheckBox();
             this.checkBoxIsManagementUser = new System.Windows.Forms.CheckBox();
             this.checkBoxIsManagementGroup = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -129,14 +121,6 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBoxIsDeleteActivity);
-            this.groupBox1.Controls.Add(this.checkBoxIsDeleteResult);
-            this.groupBox1.Controls.Add(this.checkBoxIsViewActivity);
-            this.groupBox1.Controls.Add(this.checkBoxIsViewResult);
-            this.groupBox1.Controls.Add(this.checkBoxIsSettingTemplateMachine);
-            this.groupBox1.Controls.Add(this.checkBoxIsSettingShift);
-            this.groupBox1.Controls.Add(this.checkBoxIsSettingMachine);
-            this.groupBox1.Controls.Add(this.checkBoxIsControlMachine);
             this.groupBox1.Controls.Add(this.checkBoxIsManagementUser);
             this.groupBox1.Controls.Add(this.checkBoxIsManagementGroup);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -149,110 +133,6 @@ namespace ManagementSoftware.GUI.EmployeeManagement
             this.groupBox1.TabIndex = 76;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cho phép";
-            // 
-            // checkBoxIsDeleteActivity
-            // 
-            this.checkBoxIsDeleteActivity.AutoSize = true;
-            this.checkBoxIsDeleteActivity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsDeleteActivity.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsDeleteActivity.Location = new System.Drawing.Point(24, 342);
-            this.checkBoxIsDeleteActivity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsDeleteActivity.Name = "checkBoxIsDeleteActivity";
-            this.checkBoxIsDeleteActivity.Size = new System.Drawing.Size(214, 29);
-            this.checkBoxIsDeleteActivity.TabIndex = 22;
-            this.checkBoxIsDeleteActivity.Text = "Xóa lịch sử hoạt động";
-            this.checkBoxIsDeleteActivity.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsDeleteResult
-            // 
-            this.checkBoxIsDeleteResult.AutoSize = true;
-            this.checkBoxIsDeleteResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsDeleteResult.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsDeleteResult.Location = new System.Drawing.Point(24, 307);
-            this.checkBoxIsDeleteResult.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsDeleteResult.Name = "checkBoxIsDeleteResult";
-            this.checkBoxIsDeleteResult.Size = new System.Drawing.Size(159, 29);
-            this.checkBoxIsDeleteResult.TabIndex = 21;
-            this.checkBoxIsDeleteResult.Text = "Xóa lịch sử nạp";
-            this.checkBoxIsDeleteResult.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsViewActivity
-            // 
-            this.checkBoxIsViewActivity.AutoSize = true;
-            this.checkBoxIsViewActivity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsViewActivity.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsViewActivity.Location = new System.Drawing.Point(24, 272);
-            this.checkBoxIsViewActivity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsViewActivity.Name = "checkBoxIsViewActivity";
-            this.checkBoxIsViewActivity.Size = new System.Drawing.Size(219, 29);
-            this.checkBoxIsViewActivity.TabIndex = 20;
-            this.checkBoxIsViewActivity.Text = "Xem lịch sử hoạt động";
-            this.checkBoxIsViewActivity.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsViewResult
-            // 
-            this.checkBoxIsViewResult.AutoSize = true;
-            this.checkBoxIsViewResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsViewResult.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsViewResult.Location = new System.Drawing.Point(24, 238);
-            this.checkBoxIsViewResult.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsViewResult.Name = "checkBoxIsViewResult";
-            this.checkBoxIsViewResult.Size = new System.Drawing.Size(164, 29);
-            this.checkBoxIsViewResult.TabIndex = 19;
-            this.checkBoxIsViewResult.Text = "Xem lịch sử nạp";
-            this.checkBoxIsViewResult.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsSettingTemplateMachine
-            // 
-            this.checkBoxIsSettingTemplateMachine.AutoSize = true;
-            this.checkBoxIsSettingTemplateMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsSettingTemplateMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingTemplateMachine.Location = new System.Drawing.Point(24, 203);
-            this.checkBoxIsSettingTemplateMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsSettingTemplateMachine.Name = "checkBoxIsSettingTemplateMachine";
-            this.checkBoxIsSettingTemplateMachine.Size = new System.Drawing.Size(147, 29);
-            this.checkBoxIsSettingTemplateMachine.TabIndex = 17;
-            this.checkBoxIsSettingTemplateMachine.Text = "Thiết lập bình";
-            this.checkBoxIsSettingTemplateMachine.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsSettingShift
-            // 
-            this.checkBoxIsSettingShift.AutoSize = true;
-            this.checkBoxIsSettingShift.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsSettingShift.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingShift.Location = new System.Drawing.Point(24, 168);
-            this.checkBoxIsSettingShift.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsSettingShift.Name = "checkBoxIsSettingShift";
-            this.checkBoxIsSettingShift.Size = new System.Drawing.Size(164, 29);
-            this.checkBoxIsSettingShift.TabIndex = 16;
-            this.checkBoxIsSettingShift.Text = "Thiết lập ca làm";
-            this.checkBoxIsSettingShift.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsSettingMachine
-            // 
-            this.checkBoxIsSettingMachine.AutoSize = true;
-            this.checkBoxIsSettingMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsSettingMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsSettingMachine.Location = new System.Drawing.Point(24, 134);
-            this.checkBoxIsSettingMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsSettingMachine.Name = "checkBoxIsSettingMachine";
-            this.checkBoxIsSettingMachine.Size = new System.Drawing.Size(209, 29);
-            this.checkBoxIsSettingMachine.TabIndex = 15;
-            this.checkBoxIsSettingMachine.Text = "Cài đặt thông số máy";
-            this.checkBoxIsSettingMachine.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsControlMachine
-            // 
-            this.checkBoxIsControlMachine.AutoSize = true;
-            this.checkBoxIsControlMachine.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxIsControlMachine.ForeColor = System.Drawing.Color.White;
-            this.checkBoxIsControlMachine.Location = new System.Drawing.Point(24, 99);
-            this.checkBoxIsControlMachine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxIsControlMachine.Name = "checkBoxIsControlMachine";
-            this.checkBoxIsControlMachine.Size = new System.Drawing.Size(161, 29);
-            this.checkBoxIsControlMachine.TabIndex = 14;
-            this.checkBoxIsControlMachine.Text = "Điều khiển máy";
-            this.checkBoxIsControlMachine.UseVisualStyleBackColor = true;
             // 
             // checkBoxIsManagementUser
             // 
@@ -335,14 +215,6 @@ namespace ManagementSoftware.GUI.EmployeeManagement
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonUpdateGroup;
         private ComboBox comboBoxSelectGroup;
         private GroupBox groupBox1;
-        private CheckBox checkBoxIsDeleteActivity;
-        private CheckBox checkBoxIsDeleteResult;
-        private CheckBox checkBoxIsViewActivity;
-        private CheckBox checkBoxIsViewResult;
-        private CheckBox checkBoxIsSettingTemplateMachine;
-        private CheckBox checkBoxIsSettingShift;
-        private CheckBox checkBoxIsSettingMachine;
-        private CheckBox checkBoxIsControlMachine;
         private CheckBox checkBoxIsManagementUser;
         private CheckBox checkBoxIsManagementGroup;
         private Panel panel1;

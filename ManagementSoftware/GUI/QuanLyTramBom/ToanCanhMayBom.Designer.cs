@@ -976,6 +976,7 @@
             this.Controls.Add(this.pictureBoxToanCanh);
             this.Name = "ToanCanhMayBom";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.ToanCanhMayBom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToanCanh)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

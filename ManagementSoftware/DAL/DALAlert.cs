@@ -34,5 +34,20 @@ namespace ManagementSoftware.DAL
             DataBaseContext dbContext = new DataBaseContext();
             return dbContext.Alerts.ToList();
         }
+        public static Alert? GetNewAlert()
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            if (dbContext.Alerts.Any())
+            {
+                int maxID = dbContext.Alerts.Max(a => a.IDAlert);
+                return dbContext.Alerts.FirstOrDefault(x => x.IDAlert == maxID);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
     }
 }

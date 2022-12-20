@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Syncfusion.Windows.Forms.Tools.DigitalClockRenderer digitalClockRenderer1 = new Syncfusion.Windows.Forms.Tools.DigitalClockRenderer();
+            Syncfusion.Windows.Forms.Tools.ClockRenderer clockRenderer1 = new Syncfusion.Windows.Forms.Tools.ClockRenderer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -62,19 +64,22 @@
             this.button14 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelContentQL = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.clock1 = new Syncfusion.Windows.Forms.Tools.Clock();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.labelGiaTri = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.labelMoTa = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.labelNhom = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.labelThoiGian = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.labelGanThe = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.labelSTT = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.labelDieuKien = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -82,6 +87,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.timerGetNewAlert = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -97,8 +103,14 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
@@ -184,10 +196,10 @@
             this.tabPage2.Controls.Add(this.tableLayoutPanel6);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1340, 602);
+            this.tabPage2.Size = new System.Drawing.Size(1340, 595);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Đồ thị khuynh hướng";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -249,10 +261,10 @@
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(75)))), ((int)(((byte)(103)))));
             this.tabPage3.Controls.Add(this.panel14);
             this.tabPage3.Controls.Add(this.panelContent2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1340, 602);
+            this.tabPage3.Size = new System.Drawing.Size(1340, 595);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lưu trữ dữ liệu";
             // 
@@ -391,10 +403,10 @@
             // 
             this.tabPage4.Controls.Add(this.panelContent4);
             this.tabPage4.Controls.Add(this.panel13);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Location = new System.Drawing.Point(4, 32);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1340, 602);
+            this.tabPage4.Size = new System.Drawing.Size(1340, 595);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Danh sách vào ra";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -476,10 +488,10 @@
             this.tabPage5.Controls.Add(this.tableLayoutPanel7);
             this.tabPage5.Controls.Add(this.panel3);
             this.tabPage5.Controls.Add(this.panelContentQL);
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Location = new System.Drawing.Point(4, 32);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1340, 602);
+            this.tabPage5.Size = new System.Drawing.Size(1340, 595);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Quản lý hệ thống";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -550,53 +562,45 @@
             this.panelContentQL.Size = new System.Drawing.Size(1334, 535);
             this.panelContentQL.TabIndex = 0;
             // 
-            // label2
+            // clock1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "time";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(1256, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(85, 49);
-            this.panel1.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "date";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            this.clock1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clock1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.clock1.BeforeTouchSize = new System.Drawing.Size(75, 75);
+            this.clock1.ClockFormat = "HH:mm:ss";
+            this.clock1.ClockFrame = Syncfusion.Windows.Forms.Tools.ClockFrames.RectangularFrame;
+            this.clock1.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
+            this.clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Analog;
+            this.clock1.CurrentDateTime = new System.DateTime(2022, 12, 20, 15, 55, 40, 628);
+            this.clock1.CustomTime = new System.DateTime(2022, 12, 20, 16, 55, 48, 777);
+            this.clock1.DigitalRenderer = digitalClockRenderer1;
+            this.clock1.DisplayDates = true;
+            this.clock1.Location = new System.Drawing.Point(1259, 0);
+            this.clock1.MinimumSize = new System.Drawing.Size(75, 75);
+            this.clock1.Name = "clock1";
+            this.clock1.Now = new System.DateTime(((long)(0)));
+            this.clock1.Remainder = new System.DateTime(2022, 12, 20, 15, 55, 40, 626);
+            this.clock1.Renderer = clockRenderer1;
+            this.clock1.ShowClockFrame = false;
+            this.clock1.ShowCustomTimeClock = false;
+            this.clock1.ShowHourDesignator = false;
+            this.clock1.Size = new System.Drawing.Size(75, 75);
+            this.clock1.StopTimer = false;
+            this.clock1.TabIndex = 2;
+            this.clock1.Text = "clock1";
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 8;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.Controls.Add(this.panel11, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel10, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel9, 4, 0);
@@ -604,7 +608,6 @@
             this.tableLayoutPanel2.Controls.Add(this.panel7, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel5, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel12, 7, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 7);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -615,78 +618,140 @@
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.labelGiaTri);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(711, 3);
+            this.panel11.Location = new System.Drawing.Point(789, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(112, 28);
+            this.panel11.Size = new System.Drawing.Size(86, 28);
             this.panel11.TabIndex = 6;
+            // 
+            // labelGiaTri
+            // 
+            this.labelGiaTri.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelGiaTri.Location = new System.Drawing.Point(0, 0);
+            this.labelGiaTri.Name = "labelGiaTri";
+            this.labelGiaTri.Size = new System.Drawing.Size(84, 26);
+            this.labelGiaTri.TabIndex = 1;
+            this.labelGiaTri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.labelMoTa);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(593, 3);
+            this.panel10.Location = new System.Drawing.Point(438, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(112, 28);
+            this.panel10.Size = new System.Drawing.Size(345, 28);
             this.panel10.TabIndex = 5;
+            // 
+            // labelMoTa
+            // 
+            this.labelMoTa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelMoTa.Location = new System.Drawing.Point(0, 0);
+            this.labelMoTa.Name = "labelMoTa";
+            this.labelMoTa.Size = new System.Drawing.Size(343, 26);
+            this.labelMoTa.TabIndex = 1;
+            this.labelMoTa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.labelNhom);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(475, 3);
+            this.panel9.Location = new System.Drawing.Point(351, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(112, 28);
+            this.panel9.Size = new System.Drawing.Size(81, 28);
             this.panel9.TabIndex = 4;
+            // 
+            // labelNhom
+            // 
+            this.labelNhom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelNhom.Location = new System.Drawing.Point(0, 0);
+            this.labelNhom.Name = "labelNhom";
+            this.labelNhom.Size = new System.Drawing.Size(79, 26);
+            this.labelNhom.TabIndex = 1;
+            this.labelNhom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.labelThoiGian);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(239, 3);
+            this.panel8.Location = new System.Drawing.Point(177, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(112, 28);
+            this.panel8.Size = new System.Drawing.Size(81, 28);
             this.panel8.TabIndex = 3;
+            // 
+            // labelThoiGian
+            // 
+            this.labelThoiGian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelThoiGian.Location = new System.Drawing.Point(0, 0);
+            this.labelThoiGian.Name = "labelThoiGian";
+            this.labelThoiGian.Size = new System.Drawing.Size(79, 26);
+            this.labelThoiGian.TabIndex = 1;
+            this.labelThoiGian.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.labelGanThe);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(121, 3);
+            this.panel7.Location = new System.Drawing.Point(90, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(112, 28);
+            this.panel7.Size = new System.Drawing.Size(81, 28);
             this.panel7.TabIndex = 2;
+            // 
+            // labelGanThe
+            // 
+            this.labelGanThe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelGanThe.Location = new System.Drawing.Point(0, 0);
+            this.labelGanThe.Name = "labelGanThe";
+            this.labelGanThe.Size = new System.Drawing.Size(79, 26);
+            this.labelGanThe.TabIndex = 1;
+            this.labelGanThe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.labelSTT);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(112, 28);
+            this.panel6.Size = new System.Drawing.Size(81, 28);
             this.panel6.TabIndex = 1;
+            // 
+            // labelSTT
+            // 
+            this.labelSTT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelSTT.Location = new System.Drawing.Point(0, 0);
+            this.labelSTT.Name = "labelSTT";
+            this.labelSTT.Size = new System.Drawing.Size(79, 26);
+            this.labelSTT.TabIndex = 0;
+            this.labelSTT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.labelDieuKien);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(357, 3);
+            this.panel5.Location = new System.Drawing.Point(264, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(112, 28);
+            this.panel5.Size = new System.Drawing.Size(81, 28);
             this.panel5.TabIndex = 0;
             // 
-            // panel12
+            // labelDieuKien
             // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(829, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(46, 28);
-            this.panel12.TabIndex = 7;
+            this.labelDieuKien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelDieuKien.Location = new System.Drawing.Point(0, 0);
+            this.labelDieuKien.Name = "labelDieuKien";
+            this.labelDieuKien.Size = new System.Drawing.Size(79, 26);
+            this.labelDieuKien.TabIndex = 1;
+            this.labelDieuKien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(899, 7);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 34);
@@ -783,19 +848,23 @@
             this.button16.Text = "Danh sách vào ra tương tự";
             this.button16.UseVisualStyleBackColor = true;
             // 
+            // timerGetNewAlert
+            // 
+            this.timerGetNewAlert.Interval = 1500;
+            this.timerGetNewAlert.Tick += new System.EventHandler(this.timerGetNewAlert_Tick);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 674);
+            this.Controls.Add(this.clock1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -811,9 +880,14 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -828,10 +902,6 @@
         private TabPage tabPage3;
         private TabPage tabPage4;
         private TabPage tabPage5;
-        private Label label2;
-        private Panel panel1;
-        private Label label3;
-        private System.Windows.Forms.Timer timer1;
         private Panel panelContent1;
         private Panel panelContent2;
         private TableLayoutPanel tableLayoutPanel2;
@@ -843,7 +913,6 @@
         private Panel panel6;
         private Panel panel5;
         private Panel panelContent4;
-        private Panel panel12;
         private Button button2;
         private Button button4;
         private Button button3;
@@ -876,5 +945,14 @@
         private TableLayoutPanel tableLayoutPanel5;
         private Button button15;
         private Button button16;
+        private Syncfusion.Windows.Forms.Tools.Clock clock1;
+        private Label labelGiaTri;
+        private Label labelMoTa;
+        private Label labelNhom;
+        private Label labelThoiGian;
+        private Label labelGanThe;
+        private Label labelSTT;
+        private Label labelDieuKien;
+        private System.Windows.Forms.Timer timerGetNewAlert;
     }
 }
