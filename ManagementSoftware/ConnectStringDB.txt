@@ -1,1 +1,1 @@
-Data Source=DESKTOP-NU3N490\SQLEXPRESS;Initial Catalog=TramBomNuoc;User ID=sa;Password=123
+Data Source=2131204W\SQLEXPRESS;Initial Catalog=TramBomNuoc;User ID=sa;Password=quangtu1

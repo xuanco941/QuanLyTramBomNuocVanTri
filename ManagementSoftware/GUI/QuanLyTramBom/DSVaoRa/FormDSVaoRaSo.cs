@@ -106,7 +106,7 @@ namespace QuanLyTramBom
             timeStart = TimeStart.Value;
             timeEnd = TimeEnd.Value;
             LoadFormThongKe();
-        }
+       }
 
         private void buttonGoto_Click(object sender, EventArgs e)
         {
@@ -116,7 +116,7 @@ namespace QuanLyTramBom
 
         void SetTenBomVaTinHieu(string? bom, List<string>? tinhieu)
         {
-            this.loaiBom = bom;
+           this.loaiBom = bom;
             this.listTinHieu = tinhieu;
             LoadFormThongKe();
         }

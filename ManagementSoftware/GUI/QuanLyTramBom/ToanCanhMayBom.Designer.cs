@@ -937,6 +937,7 @@
             // 
             // pictureBoxBangTaiXienDuoi
             // 
+<<<<<<< HEAD
             this.pictureBoxBangTaiXienDuoi.BackgroundImage = global::ManagementSoftware.Properties.Resources.xamDuoi;
             this.pictureBoxBangTaiXienDuoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxBangTaiXienDuoi.Location = new System.Drawing.Point(313, 428);
@@ -944,6 +945,15 @@
             this.pictureBoxBangTaiXienDuoi.Size = new System.Drawing.Size(190, 30);
             this.pictureBoxBangTaiXienDuoi.TabIndex = 59;
             this.pictureBoxBangTaiXienDuoi.TabStop = false;
+=======
+            this.pictureBox2.BackgroundImage = global::ManagementSoftware.Properties.Resources.DuoiXam;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(313, 428);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(190, 30);
+            this.pictureBox2.TabIndex = 59;
+            this.pictureBox2.TabStop = false;
+>>>>>>> 709b40f8f62cb563b5b1c7d5951fd072ce9d9f3d
             // 
             // pictureBoxBangTaiXienGiua
             // 
