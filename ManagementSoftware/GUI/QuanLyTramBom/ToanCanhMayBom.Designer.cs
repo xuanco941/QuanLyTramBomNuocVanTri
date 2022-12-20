@@ -76,7 +76,6 @@
             this.D10038 = new System.Windows.Forms.Button();
             this.D10058 = new System.Windows.Forms.Button();
             this.D10010 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -99,6 +98,10 @@
             this.pictureBoxPheuSo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPheuSo1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToanCanh)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -115,6 +118,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxToanCanh
@@ -614,7 +620,7 @@
             this.buttonTinHieuMayBom2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonTinHieuMayBom2.FlatAppearance.BorderSize = 0;
             this.buttonTinHieuMayBom2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonTinHieuMayBom2.Location = new System.Drawing.Point(824, 214);
+            this.buttonTinHieuMayBom2.Location = new System.Drawing.Point(824, 211);
             this.buttonTinHieuMayBom2.Name = "buttonTinHieuMayBom2";
             this.buttonTinHieuMayBom2.Size = new System.Drawing.Size(35, 27);
             this.buttonTinHieuMayBom2.TabIndex = 27;
@@ -700,15 +706,6 @@
             this.D10010.Text = "D10010";
             this.D10010.UseVisualStyleBackColor = false;
             // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(1205, 4);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 18);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Đầu vào ";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -722,7 +719,7 @@
             // label7
             // 
             this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(1205, 18);
+            this.label7.Location = new System.Drawing.Point(1197, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 18);
             this.label7.TabIndex = 37;
@@ -926,11 +923,55 @@
             this.label13.TabIndex = 57;
             this.label13.Text = "TOÀN CẢNH TRẠM BƠM";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ManagementSoftware.Properties.Resources._318877084_1369400657166807_4136150658551336155_n___Copy__3_1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(271, 400);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 20);
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::ManagementSoftware.Properties.Resources.M10069a;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(313, 428);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(190, 30);
+            this.pictureBox2.TabIndex = 59;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::ManagementSoftware.Properties.Resources.Xamc;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(287, 416);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(8, 6);
+            this.pictureBox3.TabIndex = 60;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(1197, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 15);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Đầu vào";
+            // 
             // ToanCanhMayBom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1715, 755);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBoxPheuSo1);
             this.Controls.Add(this.pictureBoxPheuSo2);
@@ -953,7 +994,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.D10010);
             this.Controls.Add(this.D10058);
             this.Controls.Add(this.D10038);
@@ -993,6 +1033,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1033,7 +1076,6 @@
         private Button D10038;
         private Button D10058;
         private Button D10010;
-        private Label label5;
         private Label label6;
         private Label label7;
         private Label label8;
@@ -1071,5 +1113,9 @@
         private PictureBox pictureBoxPheuSo2;
         private PictureBox pictureBoxPheuSo1;
         private Label label13;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private Label label5;
     }
 }
