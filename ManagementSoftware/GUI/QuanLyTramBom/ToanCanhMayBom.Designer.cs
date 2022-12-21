@@ -101,6 +101,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToanCanh)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -117,6 +119,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxToanCanh
@@ -944,11 +948,33 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ManagementSoftware.Properties.Resources.M10065;
+            this.pictureBox1.Location = new System.Drawing.Point(468, 135);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 232);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ManagementSoftware.Properties.Resources.M10068;
+            this.pictureBox2.Location = new System.Drawing.Point(204, 366);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(286, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 63;
+            this.pictureBox2.TabStop = false;
+            // 
             // ToanCanhMayBom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1699, 716);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBoxPheuSo1);
@@ -1011,6 +1037,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1090,5 +1118,7 @@
         private Label label13;
         private Label label5;
         private System.Windows.Forms.Timer timer1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
