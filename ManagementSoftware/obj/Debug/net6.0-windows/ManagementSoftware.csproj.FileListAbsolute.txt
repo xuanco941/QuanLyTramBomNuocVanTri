@@ -291,15 +291,10 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\C
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong.ChonKhuynhHuong.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.FormKHThoiGianThuc.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.FormCaiDatDoThiKhuynhHuong.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormDSVaoRaSo.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormDSVaoRaTT.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormTimDuLieu.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoNam.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoNgay.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormBaoCaoThang.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormLDKhuynhHuong.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormLTHoatDong.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormLTLoi.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.TableAlert.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.ToanCanhMayBom.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Section.FormAlert.resources
@@ -319,7 +314,6 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\C
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.pdb
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.genruntimeconfig.cache
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa.FormTimDLDSVaoRaSo.resources
 C:\Users\LENOVO\Desktop\sangmai\QuanLyTramBomNuocVanTri\ManagementSoftware\bin\Debug\net6.0-windows\ManagementSoftware.exe
 C:\Users\LENOVO\Desktop\sangmai\QuanLyTramBomNuocVanTri\ManagementSoftware\bin\Debug\net6.0-windows\ConnectStringDB.txt
 C:\Users\LENOVO\Desktop\sangmai\QuanLyTramBomNuocVanTri\ManagementSoftware\bin\Debug\net6.0-windows\ManagementSoftware.deps.json
@@ -427,3 +421,9 @@ C:\Users\LENOVO\Desktop\sangmai\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\D
 C:\Users\LENOVO\Desktop\sangmai\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.pdb
 C:\Users\LENOVO\Desktop\sangmai\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\sangmai\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormDSDigital.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa.FormSearchDigital.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa.FormDSAnalog.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa.FormQuanLyDSVaoRa.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa.FormSearchAnalog.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.FormQuanLyLuuTruDuLieu.resources

@@ -14,7 +14,7 @@ namespace ManagementSoftware
         public PLCSMain()
         {
             this.plc = new ActUtlType();
-            plc.ActLogicalStationNumber = 2;
+            plc.ActLogicalStationNumber = 1;
         }
 
         //get all digital

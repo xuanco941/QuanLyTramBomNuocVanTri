@@ -28,24 +28,24 @@ namespace ManagementSoftware.Models.DuLieuMayPLC
         public static Analog D10036 = new Analog("D10036", "CP2_AI204C00", "DPS", NhomBom.Bom2, "Dòng điện động cơ bơm số 2", "A", 100, 0);
         public static Analog D10038 = new Analog("D10038", "CP2_AI205C00", "DPS", NhomBom.Bom2, "Độ mở van xả bơm số 2", "%", 100, 0);
         public static Analog D10094 = new Analog("D10094", "CP2_AI299C00", "DPS", NhomBom.Bom2, "Tổng số giờ bơm 2 chạy", "Min", 9999999, 0);
-        public static Analog D10040 = new Analog("D10040", "CP2_AI301C00", "DPS", NhomBom.Bom3, "Nhiệt độ cuộn dây pha U ĐC bơm 3", "℃", 150, 0);
-        public static Analog D10042 = new Analog("D10042", "CP2_AI302C00", "DPS", NhomBom.Bom3, "Nhiệt độ cuộn dây pha V ĐC bơm 3", "℃", 150, 0);
-        public static Analog D10044 = new Analog("D10044", "CP2_AI303C00", "DPS", NhomBom.Bom3, "Nhiệt độ cuộn dây pha W ĐC bơm 3", "℃", 150, 0);
-        public static Analog D10046 = new Analog("D10046", "CP2_AI304C00", "DPS", NhomBom.Bom3, "Dòng điện động cơ bơm số 3", "A", 100, 0);
-        public static Analog D10048 = new Analog("D10048", "CP2_AI305C00", "DPS", NhomBom.Bom3, "Độ mở van xả bơm số 3", "%", 100, 0);
+        public static Analog D10044 = new Analog("D10044", "CP2_AI301C00", "DPS", NhomBom.Bom3, "Nhiệt độ cuộn dây pha U ĐC bơm 3", "℃", 150, 0);
+        public static Analog D10046 = new Analog("D10046", "CP2_AI302C00", "DPS", NhomBom.Bom3, "Nhiệt độ cuộn dây pha V ĐC bơm 3", "℃", 150, 0);
+        public static Analog D10048 = new Analog("D10048", "CP2_AI303C00", "DPS", NhomBom.Bom3, "Nhiệt độ cuộn dây pha W ĐC bơm 3", "℃", 150, 0);
+        public static Analog D10050 = new Analog("D10050", "CP2_AI304C00", "DPS", NhomBom.Bom3, "Dòng điện động cơ bơm số 3", "A", 100, 0);
+        public static Analog D10052 = new Analog("D10052", "CP2_AI305C00", "DPS", NhomBom.Bom3, "Độ mở van xả bơm số 3", "%", 100, 0);
         public static Analog D10096 = new Analog("D10096", "CP2_AI399C00", "DPS", NhomBom.Bom3, "Tổng số giờ bơm 3 chạy", "Min", 9999999, 0);
-        public static Analog D10050 = new Analog("D10050", "CP2_AI401C00", "DPS", NhomBom.Bom4, "Nhiệt độ cuộn dây pha U ĐC bơm 4", "℃", 150, 0);
-        public static Analog D10052 = new Analog("D10052", "CP2_AI402C00", "DPS", NhomBom.Bom4, "Nhiệt độ cuộn dây pha V ĐC bơm 4", "℃", 150, 0);
-        public static Analog D10054 = new Analog("D10054", "CP2_AI403C00", "DPS", NhomBom.Bom4, "Nhiệt độ cuộn dây pha W ĐC bơm 4", "℃", 150, 0);
-        public static Analog D10056 = new Analog("D10056", "CP2_AI404C00", "DPS", NhomBom.Bom4, "Dòng điện động cơ bơm số 4", "A", 100, 0);
-        public static Analog D10058 = new Analog("D10058", "CP2_AI405C00", "DPS", NhomBom.Bom4, "Độ mở van xả bơm số 4", "%", 100, 0);
+        public static Analog D10058 = new Analog("D10058", "CP2_AI401C00", "DPS", NhomBom.Bom4, "Nhiệt độ cuộn dây pha U ĐC bơm 4", "℃", 150, 0);
+        public static Analog D10060 = new Analog("D10060", "CP2_AI402C00", "DPS", NhomBom.Bom4, "Nhiệt độ cuộn dây pha V ĐC bơm 4", "℃", 150, 0);
+        public static Analog D10062 = new Analog("D10062", "CP2_AI403C00", "DPS", NhomBom.Bom4, "Nhiệt độ cuộn dây pha W ĐC bơm 4", "℃", 150, 0);
+        public static Analog D10064 = new Analog("D10064", "CP2_AI404C00", "DPS", NhomBom.Bom4, "Dòng điện động cơ bơm số 4", "A", 100, 0);
+        public static Analog D10066 = new Analog("D10066", "CP2_AI405C00", "DPS", NhomBom.Bom4, "Độ mở van xả bơm số 4", "%", 100, 0);
         public static Analog D10098 = new Analog("D10098", "CP2_AI499C00", "DPS", NhomBom.Bom4, "Tổng số giờ bơm 4 chạy", "Min", 9999999, 0);
 
         public List<Analog> listAllAnalogs { get; set; }
         public AnalogCommon()
         {
             listAllAnalogs = new List<Analog>() { D10000, D10002 , D10004 , D10006 , D10008 , D10010 , D10016,  D10018 , D10020 , D10022 , D10024 , D10092 , D10030,  D10032,
-                                                                     D10034,  D10036,  D10038,  D10094,  D10040 , D10042 ,D10044 , D10046,  D10048 , D10096 , D10050,  D10052 , D10054 , D10056,  D10058 , D10098 };
+                                                                     D10034,  D10036,  D10038,  D10094,  D10044 , D10046 ,D10048 , D10050,  D10052 , D10096 , D10058,  D10060 , D10062 , D10064,  D10066 , D10098 };
         }
     }
 }

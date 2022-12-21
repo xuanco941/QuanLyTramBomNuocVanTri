@@ -2,7 +2,6 @@
 using ManagementSoftware.GUI;
 using System.Diagnostics;
 using ManagementSoftware.AutoAddData;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ManagementSoftware
 {

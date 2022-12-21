@@ -31,7 +31,19 @@
     <Compile Update="GUI\EmployeeManagement\FormChangeGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormTimDLDSVaoRaSo.cs">
+    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormDSAnalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormQuanLyDSVaoRa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormSearchAnalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormSearchDigital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormQuanLyLuuTruDuLieu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\ToanCanhMayBom.cs">
@@ -46,25 +58,13 @@
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormBaoCaoThang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormDSVaoRaSo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormDSVaoRaTT.cs">
+    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormDSDigital.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\DoThiKhuynhHuong\FormKHThoiGianThuc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormLDKhuynhHuong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormLTHoatDong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormLTLoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormTimDuLieu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\TableAlert.cs">
