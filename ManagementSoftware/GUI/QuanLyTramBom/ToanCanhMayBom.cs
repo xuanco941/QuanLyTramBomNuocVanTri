@@ -67,8 +67,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
                 //digital
-                //CheckColorBangTaiThang(await plcMain.GetADigital(DigitalCommon.M10065), await plcMain.GetADigital(DigitalCommon.M10066), await plcMain.GetADigital(DigitalCommon.M10067), await plcMain.GetADigital(DigitalCommon.M10064));
-                //CheckColorBangTaiXien(await plcMain.GetADigital(DigitalCommon.M10069), await plcMain.GetADigital(DigitalCommon.M10070), await plcMain.GetADigital(DigitalCommon.M10071), await plcMain.GetADigital(DigitalCommon.M10068));
+                CheckColorBangTaiThang(await plcMain.GetADigital(DigitalCommon.M10065), await plcMain.GetADigital(DigitalCommon.M10066), await plcMain.GetADigital(DigitalCommon.M10067), await plcMain.GetADigital(DigitalCommon.M10064));
+                CheckColorBangTaiXien(await plcMain.GetADigital(DigitalCommon.M10069), await plcMain.GetADigital(DigitalCommon.M10070), await plcMain.GetADigital(DigitalCommon.M10071), await plcMain.GetADigital(DigitalCommon.M10068));
                 CheckColorBomMoi1(await plcMain.GetADigital(DigitalCommon.M10059));
                 CheckColorBomMoi2(await plcMain.GetADigital(DigitalCommon.M10061));
                 CheckColorBomThoat1(await plcMain.GetADigital(DigitalCommon.M10077));
@@ -212,51 +212,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         }
 
-        ////băng tải thẳng
-        //void CheckColorBangTaiThang(Digital? M10065, Digital? M10066, Digital? M10067, Digital? M10064)
-        //{
-        //    // nhap nhay vang bang tai thang
-        //    if ((M10064 != null && M10064.TrangThai) && (M10067 != null && M10067.TrangThai))
-        //    {
-        //        pictureBoxToanCanh.BackgroundImage = Resources.NenXanh;
-        //    }
-        //    // nhap nhay do
-        //    else if ((M10066 != null && M10066.TrangThai) && (M10065 != null && M10065.TrangThai))
-        //    {
-        //        pictureBoxToanCanh.BackgroundImage = Resources.NenXanh;
-        //    }
-        //    else
-        //    {
-        //        pictureBoxToanCanh.BackgroundImage = Resources.NenXanh;
-        //    }
 
-        //}
-
-        ////băng tải xiên
-        //void CheckColorBangTaiXien(Digital? M10069, Digital? M10070, Digital? M10071, Digital? M10068)
-        //{
-
-        //    //nhap nhay vang xanh
-        //    if ((M10071 != null && M10071.TrangThai) && (M10068 != null && M10068.TrangThai))
-        //    {
-        //        pictureBoxBangTaiXienDuoi.BackgroundImage = Resources.backpage;
-        //        pictureBoxBangTaiXienTren.BackgroundImage = Resources.M10071b;
-        //        //pictureBoxBangTaiXienGiua.BackgroundImage = Resources.m10071;
-        //    }
-        //    //chi mau đỏ
-        //    else if ((M10069 != null && M10069.TrangThai) && (M10070 != null && M10070.TrangThai))
-        //    {
-        //        pictureBoxBangTaiXienDuoi.BackgroundImage = Resources.backpage;
-        //        pictureBoxBangTaiXienTren.BackgroundImage = Resources.backpage;
-        //        //pictureBoxBangTaiXienGiua.BackgroundImage = Resources.m10069;
-        //    }
-        //    else //mau xanh
-        //    {
-        //        pictureBoxBangTaiXienDuoi.BackgroundImage = Resources.NenXanh;
-
-        //    }
-
-        //}
         //bơm mồi
         void CheckColorBomMoi1(Digital? M10059)
         {
@@ -382,6 +338,17 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         bool nhapNhayTinHieuVan4;
 
 
+        System.Timers.Timer TimerBTDocDo; //đỏ xanh
+        System.Timers.Timer TimerBTDocVang; //vàng xanh
+        bool nhapNhayBTDoc;
+
+
+        System.Timers.Timer TimerBTXienDo; //đỏ xanh
+        System.Timers.Timer TimerBTXienVang; //vàng xanh
+        bool nhapNhayBTXien;
+
+
+
         public void CloseForm()
         {
             CLearTimer(TimerCheckColorPheuSo1M10039);
@@ -402,6 +369,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             CLearTimer(TimerTinHieuVan4M10270);
             CLearTimer(TimerTinHieuVan4M10271);
 
+            CLearTimer(TimerBTDocDo);
+            CLearTimer(TimerBTDocVang);
+
+            CLearTimer(TimerBTXienDo);
+            CLearTimer(TimerBTXienVang);
+
             timer1.Stop();
             timer1.Dispose();
 
@@ -421,7 +394,157 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
+        //đỏ - xanh
+        private void Timer_Tick_CheckColorBTDocDo(object sender, EventArgs e)
+        {
+            if (nhapNhayBTDoc)
+            {
+                pictureBoxBangTaiDoc.Image = Resources.BTDocDo;
+                nhapNhayBTDoc = false;
+            }
+            else
+            {
+                pictureBoxBangTaiDoc.Image = Resources.BTDocXanh;
+                nhapNhayBTDoc = true;
+            }
+        }
 
+
+        //vàng - xanh
+        private void Timer_Tick_CheckColorBTDocVang(object sender, EventArgs e)
+        {
+            if (nhapNhayBTDoc)
+            {
+                pictureBoxBangTaiDoc.Image = Resources.BTDocVang;
+                nhapNhayBTDoc = false;
+            }
+            else
+            {
+                pictureBoxBangTaiDoc.Image = Resources.BTDocXanh;
+                nhapNhayBTDoc = true;
+            }
+        }
+
+
+
+
+        //băng tải thẳng
+        void CheckColorBangTaiThang(Digital? M10065, Digital? M10066, Digital? M10067, Digital? M10064)
+        {
+            // nhap nhay vang bang tai thang
+            if ((M10064 != null && M10064.TrangThai) && (M10067 != null && M10067.TrangThai))
+            {
+                CLearTimer(TimerBTDocDo);
+                if (TimerBTDocVang == null || TimerBTDocVang.Enabled == false)
+                {
+                    pictureBoxBangTaiDoc.Image = Resources.BTDocVang;
+                    TimerBTDocVang = new System.Timers.Timer();
+                    TimerBTDocVang.Interval = intervalNhapNhay;
+                    TimerBTDocVang.Elapsed += Timer_Tick_CheckColorBTDocVang;
+                    TimerBTDocVang.Start();
+                }
+            }
+            // nhap nhay do
+            else if ((M10066 != null && M10066.TrangThai) && (M10065 != null && M10065.TrangThai))
+            {
+                CLearTimer(TimerBTDocVang);
+                if (TimerBTDocDo == null || TimerBTDocDo.Enabled == false)
+                {
+                    pictureBoxBangTaiDoc.Image = Resources.BTDocDo;
+                    TimerBTDocDo = new System.Timers.Timer();
+                    TimerBTDocDo.Interval = intervalNhapNhay;
+                    TimerBTDocDo.Elapsed += Timer_Tick_CheckColorBTDocDo;
+                    TimerBTDocDo.Start();
+                }
+            }
+            else
+            {
+                pictureBoxBangTaiDoc.Image = Resources.BTDocXanh;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //băng tải xiên
+
+        //đỏ - xanh
+        private void Timer_Tick_CheckColorBTXienDo(object sender, EventArgs e)
+        {
+            if (nhapNhayBTXien)
+            {
+                pictureBoxBangTaiXien.Image = Resources.BTXienDo;
+                nhapNhayBTXien = false;
+            }
+            else
+            {
+                pictureBoxBangTaiXien.Image = Resources.BTXienXanh;
+                nhapNhayBTXien = true;
+            }
+        }
+
+
+        //vàng - xanh
+        private void Timer_Tick_CheckColorBTXienVang(object sender, EventArgs e)
+        {
+            if (nhapNhayBTXien)
+            {
+                pictureBoxBangTaiXien.Image = Resources.BTXienVang;
+                nhapNhayBTXien = false;
+            }
+            else
+            {
+                pictureBoxBangTaiXien.Image = Resources.BTXienXanh;
+                nhapNhayBTXien = true;
+            }
+        }
+        void CheckColorBangTaiXien(Digital? M10069, Digital? M10070, Digital? M10071, Digital? M10068)
+        {
+
+            //nhap nhay vang xanh
+            if ((M10071 != null && M10071.TrangThai) && (M10068 != null && M10068.TrangThai))
+            {
+                CLearTimer(TimerBTXienDo);
+                if (TimerBTXienVang == null || TimerBTXienVang.Enabled == false)
+                {
+                    pictureBoxBangTaiXien.Image = Resources.BTXienVang;
+                    TimerBTXienVang = new System.Timers.Timer();
+                    TimerBTXienVang.Interval = intervalNhapNhay;
+                    TimerBTXienVang.Elapsed += Timer_Tick_CheckColorBTXienVang;
+                    TimerBTXienVang.Start();
+                }
+            }
+            //chi mau đỏ
+            else if ((M10069 != null && M10069.TrangThai) && (M10070 != null && M10070.TrangThai))
+            {
+                CLearTimer(TimerBTXienVang);
+                if (TimerBTXienVang == null || TimerBTXienVang.Enabled == false)
+                {
+                    pictureBoxBangTaiXien.Image = Resources.BTXienDo;
+                    TimerBTXienDo = new System.Timers.Timer();
+                    TimerBTXienDo.Interval = intervalNhapNhay;
+                    TimerBTXienDo.Elapsed += Timer_Tick_CheckColorBTXienDo;
+                    TimerBTXienDo.Start();
+                }
+            }
+            else //mau xanh
+            {
+                pictureBoxBangTaiXien.Image = Resources.BTXienXanh;
+
+            }
+
+        }
 
 
 

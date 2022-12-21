@@ -118,6 +118,7 @@
             this.Controls.Add(this.panel13);
             this.Name = "FormQuanLyDSVaoRa";
             this.Text = "FormQuanLyDSVaoRa";
+            this.Load += new System.EventHandler(this.FormQuanLyDSVaoRa_Load);
             this.panel13.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);

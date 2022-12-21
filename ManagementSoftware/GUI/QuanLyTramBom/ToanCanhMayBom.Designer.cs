@@ -101,6 +101,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxBangTaiDoc = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBangTaiXien = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToanCanh)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -117,6 +119,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiDoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXien)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxToanCanh
@@ -944,11 +948,33 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBoxBangTaiDoc
+            // 
+            this.pictureBoxBangTaiDoc.Image = global::ManagementSoftware.Properties.Resources.M10065;
+            this.pictureBoxBangTaiDoc.Location = new System.Drawing.Point(468, 135);
+            this.pictureBoxBangTaiDoc.Name = "pictureBoxBangTaiDoc";
+            this.pictureBoxBangTaiDoc.Size = new System.Drawing.Size(22, 232);
+            this.pictureBoxBangTaiDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBangTaiDoc.TabIndex = 62;
+            this.pictureBoxBangTaiDoc.TabStop = false;
+            // 
+            // pictureBoxBangTaiXien
+            // 
+            this.pictureBoxBangTaiXien.Image = global::ManagementSoftware.Properties.Resources.M10068;
+            this.pictureBoxBangTaiXien.Location = new System.Drawing.Point(204, 366);
+            this.pictureBoxBangTaiXien.Name = "pictureBoxBangTaiXien";
+            this.pictureBoxBangTaiXien.Size = new System.Drawing.Size(286, 97);
+            this.pictureBoxBangTaiXien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBangTaiXien.TabIndex = 63;
+            this.pictureBoxBangTaiXien.TabStop = false;
+            // 
             // ToanCanhMayBom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1699, 716);
+            this.Controls.Add(this.pictureBoxBangTaiXien);
+            this.Controls.Add(this.pictureBoxBangTaiDoc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBoxPheuSo1);
@@ -1011,6 +1037,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1090,5 +1118,7 @@
         private Label label13;
         private Label label5;
         private System.Windows.Forms.Timer timer1;
+        private PictureBox pictureBoxBangTaiDoc;
+        private PictureBox pictureBoxBangTaiXien;
     }
 }

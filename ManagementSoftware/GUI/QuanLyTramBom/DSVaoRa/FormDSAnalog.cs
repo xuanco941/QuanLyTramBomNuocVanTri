@@ -18,7 +18,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
         public FormDSAnalog()
         {
             InitializeComponent();
-            LoadFormThongKe();
         }
 
         private List<string>? listTinHieu = null;
@@ -77,10 +76,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
                 }
             }
 
-            dataGridView1.Invoke(() =>
-            {
+    
                 dataGridView1.DataSource = dt;
-            });
 
         }
 
@@ -95,6 +92,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             FormSearchAnalog form = new FormSearchAnalog();
             form.callBackSetSearch = new FormSearchAnalog.CallBackSetSearch(SetTenBomVaTinHieu);
             form.ShowDialog();
+        }
+
+        private void FormDSAnalog_Load(object sender, EventArgs e)
+        {
+            LoadFormThongKe();
+
         }
     }
 }

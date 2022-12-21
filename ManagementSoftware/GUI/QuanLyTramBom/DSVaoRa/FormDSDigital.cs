@@ -45,9 +45,10 @@ namespace QuanLyTramBom
             dt.Columns.Add("Bật tên");
             dt.Columns.Add("Tắt tên");
 
+
             List<Digital>? list = await plc.GetListDataDigital(new DigitalCommon().ListAllDigitals);
 
-            if(list!=null && list.Count > 0)
+            if (list != null && list.Count > 0)
             {
                 int i = 1;
                 if (this.listTinHieu == null)
@@ -70,7 +71,7 @@ namespace QuanLyTramBom
                             listLoc.Add(d);
                         }
                     }
-                    if(listLoc!=null && listLoc.Count > 0)
+                    if (listLoc != null && listLoc.Count > 0)
                     {
                         foreach (Digital a in listLoc)
                         {
@@ -82,10 +83,8 @@ namespace QuanLyTramBom
                 }
             }
 
-            dataGridView1.Invoke(() =>
-            {
-                dataGridView1.DataSource = dt;
-            });
+
+            dataGridView1.DataSource = dt;
 
         }
 
@@ -100,6 +99,12 @@ namespace QuanLyTramBom
             FormSearchDigital form = new FormSearchDigital();
             form.callBackSetSearch = new FormSearchDigital.CallBackSetSearch(SetTenBomVaTinHieu);
             form.ShowDialog();
+        }
+
+        private void FormDSDigital_Load(object sender, EventArgs e)
+        {
+            LoadFormThongKe();
+
         }
     }
 }

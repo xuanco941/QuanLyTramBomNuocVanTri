@@ -21,27 +21,14 @@ namespace QuanLyTramBom
             //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
 
-            ToanCanhMayBom formToanCanh = new ToanCanhMayBom();
-            formToanCanh.TopLevel = false;
-            panelContentToanCanh.Controls.Add(formToanCanh);
-            formToanCanh.Dock = DockStyle.Fill;
-            formToanCanh.FormBorderStyle = FormBorderStyle.None;
-            formToanCanh.Show();
 
-            FormQuanLyDSVaoRa formQuanLyDSVaoRa = new FormQuanLyDSVaoRa();
-            formQuanLyDSVaoRa.TopLevel = false;
-            tabPage4.Controls.Add(formQuanLyDSVaoRa);
-            formQuanLyDSVaoRa.Dock = DockStyle.Fill;
-            formQuanLyDSVaoRa.FormBorderStyle = FormBorderStyle.None;
-            formQuanLyDSVaoRa.Show();
 
             //clock
             clock1.MinimumSize = new Size(65, 65);
             clock1.Size = new System.Drawing.Size(65, 65);
             clock1.Location = new Point(1259, 5);
 
-            //timer new alert
-            timerGetNewAlert.Start();
+
         }
 
         //void CLoseAllTab()
@@ -66,7 +53,24 @@ namespace QuanLyTramBom
         //}
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
+            if(e.TabPage != tabPage1)
+            {
+                foreach (ToanCanhMayBom form in panelContentToanCanh.Controls)
+                {
+                    form.CloseForm();
+                    form.Close();
+                }
 
+            }
+            else
+            {
+                ToanCanhMayBom formToanCanh = new ToanCanhMayBom();
+                formToanCanh.TopLevel = false;
+                panelContentToanCanh.Controls.Add(formToanCanh);
+                formToanCanh.Dock = DockStyle.Fill;
+                formToanCanh.FormBorderStyle = FormBorderStyle.None;
+                formToanCanh.Show();
+            }
             if (e.TabPage == tabPage2)
             {
                 FormLDKhuynhHuong form2 = new FormLDKhuynhHuong();
@@ -111,5 +115,29 @@ namespace QuanLyTramBom
             }
         }
 
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            ToanCanhMayBom formToanCanh = new ToanCanhMayBom();
+            formToanCanh.TopLevel = false;
+            panelContentToanCanh.Controls.Add(formToanCanh);
+            formToanCanh.Dock = DockStyle.Fill;
+            formToanCanh.FormBorderStyle = FormBorderStyle.None;
+            formToanCanh.Show();
+
+            FormQuanLyDSVaoRa formQuanLyDSVaoRa = new FormQuanLyDSVaoRa();
+            formQuanLyDSVaoRa.TopLevel = false;
+            tabPage4.Controls.Add(formQuanLyDSVaoRa);
+            formQuanLyDSVaoRa.Dock = DockStyle.Fill;
+            formQuanLyDSVaoRa.FormBorderStyle = FormBorderStyle.None;
+            formQuanLyDSVaoRa.Show();
+            //timer new alert
+            timerGetNewAlert.Start();
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timerGetNewAlert.Stop();
+            timerGetNewAlert.Dispose();
+        }
     }
 }

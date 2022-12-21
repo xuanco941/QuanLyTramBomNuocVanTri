@@ -131,6 +131,7 @@
             this.Name = "FormDSAnalog";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
             this.Text = "FormDSAnalag";
+            this.Load += new System.EventHandler(this.FormDSAnalog_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

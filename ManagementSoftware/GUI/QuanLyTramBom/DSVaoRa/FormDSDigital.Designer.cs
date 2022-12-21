@@ -144,6 +144,7 @@
             this.Name = "FormDSDigital";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
             this.Text = "FormDSVaoRaSo";
+            this.Load += new System.EventHandler(this.FormDSDigital_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelThongKe.ResumeLayout(false);

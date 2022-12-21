@@ -74,6 +74,7 @@
             this.comboBoxDieuKien.Name = "comboBoxDieuKien";
             this.comboBoxDieuKien.Size = new System.Drawing.Size(277, 23);
             this.comboBoxDieuKien.TabIndex = 2;
+            this.comboBoxDieuKien.SelectedIndexChanged += new System.EventHandler(this.comboBoxDieuKien_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -94,6 +95,7 @@
             this.comboBoxNhomBom.Name = "comboBoxNhomBom";
             this.comboBoxNhomBom.Size = new System.Drawing.Size(277, 23);
             this.comboBoxNhomBom.TabIndex = 0;
+            this.comboBoxNhomBom.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhomBom_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -127,6 +129,7 @@
             this.buttonSelectAll.TextColor = System.Drawing.Color.White;
             this.buttonSelectAll.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonSelectAll.UseVisualStyleBackColor = false;
+            this.buttonSelectAll.Click += new System.EventHandler(this.buttonSelectAll_Click_1);
             // 
             // checkedListBox1
             // 
@@ -154,6 +157,7 @@
             this.buttonClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // btnAccept
             // 
@@ -171,6 +175,7 @@
             this.btnAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAccept.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAccept.UseVisualStyleBackColor = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click_1);
             // 
             // FormSearchAnalog
             // 
@@ -183,6 +188,7 @@
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.btnAccept);
             this.Name = "FormSearchAnalog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchAnalog";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

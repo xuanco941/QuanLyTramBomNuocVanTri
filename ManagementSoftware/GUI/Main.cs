@@ -18,9 +18,6 @@ namespace ManagementSoftware.GUI
         public Main()
         {
             InitializeComponent();
-
-            //fullscreen
-            this.WindowState = FormWindowState.Maximized;
          
         }
 
@@ -113,7 +110,7 @@ namespace ManagementSoftware.GUI
         private void buttonTheoDoiTramBom_Click(object sender, EventArgs e)
         {
             Dashboard form = new Dashboard();
-            form.Show();
+            form.ShowDialog();
         }
     }
 }
