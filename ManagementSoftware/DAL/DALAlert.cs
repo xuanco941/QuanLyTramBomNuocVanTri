@@ -10,6 +10,19 @@ namespace ManagementSoftware.DAL
 {
     public class DALAlert
     {
+        public static void AddAlertHistory(Alert d)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            AlertHistory alertHistory = new AlertHistory();
+            alertHistory.TinHieu = d.TinHieu;
+            alertHistory.DiaChiPLC = d.DiaChiPLC;
+            alertHistory.DieuKien = d.DieuKien;
+            alertHistory.TrangThai = d.TrangThai;
+            alertHistory.GanThe = d.GanThe;
+            alertHistory.Nhom = d.Nhom;
+            dbContext.AlertHistories.Add(alertHistory);
+            dbContext.SaveChanges();
+        }
         public static void Add(Alert d)
         {
             DataBaseContext dbContext = new DataBaseContext();

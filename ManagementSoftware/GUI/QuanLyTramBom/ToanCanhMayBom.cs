@@ -34,17 +34,13 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             Analog? analog = await plcMain.GetAnAnalog(a);
             if (analog != null)
             {
-                btn.Invoke(() =>
-                {
-                    btn.Text = analog.GiaTriDong.ToString() + analog.DonVi;
-                });
+
+                btn.Text = analog.GiaTriDong.ToString() + analog.DonVi;
             }
             else
             {
-                btn.Invoke(() =>
-                {
-                    btn.Text = "N/A";
-                });
+
+                btn.Text = "N/A";
             }
         }
 
@@ -125,7 +121,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
         //Check tin hieu may bom
-       void CheckTinHieuMayBom(Digital? M10097, Digital? M10146, Digital? M10195, Digital? M10244)
+        void CheckTinHieuMayBom(Digital? M10097, Digital? M10146, Digital? M10195, Digital? M10244)
         {
             ButtonTinHieuMayBom(buttonTinHieuMayBom1, M10097);
             ButtonTinHieuMayBom(buttonTinHieuMayBom2, M10146);

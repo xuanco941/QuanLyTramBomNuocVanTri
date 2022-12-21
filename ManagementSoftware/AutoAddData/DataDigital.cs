@@ -11,9 +11,8 @@ namespace ManagementSoftware.AutoAddData
 {
     public class DataDigital
     {
-        Thread thread;
-        PLCSMain plcMain;
-        System.Timers.Timer timer;
+        static PLCSMain plcMain = new PLCSMain();
+        public static System.Timers.Timer timer;
 
         public DataDigital()
         {
@@ -34,32 +33,22 @@ namespace ManagementSoftware.AutoAddData
                 await plcMain.Close();
             }
         }
-        public void StartAutoSave(int timeInterval)
+        public static void StopTimer()
         {
             if (timer != null && timer.Enabled == true)
             {
                 timer.Stop();
                 timer.Dispose();
             }
-            if (thread != null)
-            {
-                try
-                {
-                    thread?.Abort();
-                }
-                catch
-                {
-
-                }
-            }
-            thread = new Thread(() =>
+        }
+        public static void StartTimer(int timeInterval)
+        {
+            new Thread(() =>
             {
                 timer = new System.Timers.Timer();
                 timer.Interval = timeInterval;
                 timer.Start();
-            });
-
-            thread.Start();
+            }).Start();
         }
     }
 }
