@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBoxToanCanh = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -65,16 +66,16 @@
             this.D10008 = new System.Windows.Forms.Button();
             this.D10022 = new System.Windows.Forms.Button();
             this.D10036 = new System.Windows.Forms.Button();
-            this.D10046 = new System.Windows.Forms.Button();
-            this.D10056 = new System.Windows.Forms.Button();
+            this.D10050 = new System.Windows.Forms.Button();
+            this.D10064 = new System.Windows.Forms.Button();
             this.buttonTinHieuMayBom1 = new System.Windows.Forms.Button();
             this.buttonTinHieuMayBom2 = new System.Windows.Forms.Button();
             this.buttonTinHieuMayBom3 = new System.Windows.Forms.Button();
             this.buttonTinHieuMayBom4 = new System.Windows.Forms.Button();
-            this.D10048 = new System.Windows.Forms.Button();
+            this.D10052 = new System.Windows.Forms.Button();
             this.D10024 = new System.Windows.Forms.Button();
             this.D10038 = new System.Windows.Forms.Button();
-            this.D10058 = new System.Windows.Forms.Button();
+            this.D10066 = new System.Windows.Forms.Button();
             this.D10010 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -98,10 +99,8 @@
             this.pictureBoxPheuSo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPheuSo1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToanCanh)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -118,20 +117,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxToanCanh
             // 
-            this.pictureBoxToanCanh.BackgroundImage = global::ManagementSoftware.Properties.Resources.imgTramBom;
+            this.pictureBoxToanCanh.BackgroundImage = global::ManagementSoftware.Properties.Resources.NenXanh;
             this.pictureBoxToanCanh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxToanCanh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxToanCanh.InitialImage = null;
             this.pictureBoxToanCanh.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxToanCanh.Name = "pictureBoxToanCanh";
-            this.pictureBoxToanCanh.Size = new System.Drawing.Size(1715, 755);
+            this.pictureBoxToanCanh.Size = new System.Drawing.Size(1699, 716);
             this.pictureBoxToanCanh.TabIndex = 0;
             this.pictureBoxToanCanh.TabStop = false;
             // 
@@ -145,7 +141,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(373, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(365, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -173,7 +169,7 @@
             // 
             this.buttonPDien4.BackColor = System.Drawing.Color.Silver;
             this.buttonPDien4.Enabled = false;
-            this.buttonPDien4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPDien4.Location = new System.Drawing.Point(196, 32);
             this.buttonPDien4.Name = "buttonPDien4";
             this.buttonPDien4.Size = new System.Drawing.Size(72, 20);
@@ -196,7 +192,7 @@
             // 
             this.buttonPDKTT4.BackColor = System.Drawing.Color.Silver;
             this.buttonPDKTT4.Enabled = false;
-            this.buttonPDKTT4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPDKTT4.Location = new System.Drawing.Point(105, 32);
             this.buttonPDKTT4.Name = "buttonPDKTT4";
             this.buttonPDKTT4.Size = new System.Drawing.Size(72, 20);
@@ -210,7 +206,7 @@
             this.buttonTaiCho4.Enabled = false;
             this.buttonTaiCho4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonTaiCho4.FlatAppearance.BorderSize = 0;
-            this.buttonTaiCho4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTaiCho4.Location = new System.Drawing.Point(105, 6);
             this.buttonTaiCho4.Name = "buttonTaiCho4";
             this.buttonTaiCho4.Size = new System.Drawing.Size(72, 20);
@@ -222,7 +218,7 @@
             // 
             this.buttonSanSang4.BackColor = System.Drawing.Color.Silver;
             this.buttonSanSang4.Enabled = false;
-            this.buttonSanSang4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSanSang4.Location = new System.Drawing.Point(283, 5);
             this.buttonSanSang4.Name = "buttonSanSang4";
             this.buttonSanSang4.Size = new System.Drawing.Size(72, 20);
@@ -234,7 +230,7 @@
             // 
             this.buttonTuXa4.BackColor = System.Drawing.Color.Silver;
             this.buttonTuXa4.Enabled = false;
-            this.buttonTuXa4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTuXa4.Location = new System.Drawing.Point(196, 5);
             this.buttonTuXa4.Name = "buttonTuXa4";
             this.buttonTuXa4.Size = new System.Drawing.Size(72, 20);
@@ -261,7 +257,7 @@
             // 
             this.buttonPDien2.BackColor = System.Drawing.Color.Silver;
             this.buttonPDien2.Enabled = false;
-            this.buttonPDien2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPDien2.Location = new System.Drawing.Point(202, 31);
             this.buttonPDien2.Name = "buttonPDien2";
             this.buttonPDien2.Size = new System.Drawing.Size(72, 20);
@@ -284,7 +280,7 @@
             // 
             this.buttonPDKTT2.BackColor = System.Drawing.Color.Silver;
             this.buttonPDKTT2.Enabled = false;
-            this.buttonPDKTT2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPDKTT2.Location = new System.Drawing.Point(111, 31);
             this.buttonPDKTT2.Name = "buttonPDKTT2";
             this.buttonPDKTT2.Size = new System.Drawing.Size(72, 20);
@@ -298,7 +294,7 @@
             this.buttonTaiCho2.Enabled = false;
             this.buttonTaiCho2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonTaiCho2.FlatAppearance.BorderSize = 0;
-            this.buttonTaiCho2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTaiCho2.Location = new System.Drawing.Point(111, 5);
             this.buttonTaiCho2.Name = "buttonTaiCho2";
             this.buttonTaiCho2.Size = new System.Drawing.Size(72, 20);
@@ -310,7 +306,7 @@
             // 
             this.buttonSanSang2.BackColor = System.Drawing.Color.Silver;
             this.buttonSanSang2.Enabled = false;
-            this.buttonSanSang2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSanSang2.Location = new System.Drawing.Point(289, 5);
             this.buttonSanSang2.Name = "buttonSanSang2";
             this.buttonSanSang2.Size = new System.Drawing.Size(72, 20);
@@ -322,7 +318,7 @@
             // 
             this.buttonTuXa2.BackColor = System.Drawing.Color.Silver;
             this.buttonTuXa2.Enabled = false;
-            this.buttonTuXa2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTuXa2.Location = new System.Drawing.Point(202, 5);
             this.buttonTuXa2.Name = "buttonTuXa2";
             this.buttonTuXa2.Size = new System.Drawing.Size(72, 20);
@@ -349,7 +345,7 @@
             // 
             this.buttonPDien3.BackColor = System.Drawing.Color.Silver;
             this.buttonPDien3.Enabled = false;
-            this.buttonPDien3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPDien3.Location = new System.Drawing.Point(196, 30);
             this.buttonPDien3.Name = "buttonPDien3";
             this.buttonPDien3.Size = new System.Drawing.Size(72, 20);
@@ -372,7 +368,7 @@
             // 
             this.buttonPDKTT3.BackColor = System.Drawing.Color.Silver;
             this.buttonPDKTT3.Enabled = false;
-            this.buttonPDKTT3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPDKTT3.Location = new System.Drawing.Point(105, 30);
             this.buttonPDKTT3.Name = "buttonPDKTT3";
             this.buttonPDKTT3.Size = new System.Drawing.Size(72, 20);
@@ -386,7 +382,7 @@
             this.buttonTaiCho3.Enabled = false;
             this.buttonTaiCho3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonTaiCho3.FlatAppearance.BorderSize = 0;
-            this.buttonTaiCho3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTaiCho3.Location = new System.Drawing.Point(105, 4);
             this.buttonTaiCho3.Name = "buttonTaiCho3";
             this.buttonTaiCho3.Size = new System.Drawing.Size(72, 20);
@@ -398,7 +394,7 @@
             // 
             this.buttonSanSang3.BackColor = System.Drawing.Color.Silver;
             this.buttonSanSang3.Enabled = false;
-            this.buttonSanSang3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSanSang3.Location = new System.Drawing.Point(283, 5);
             this.buttonSanSang3.Name = "buttonSanSang3";
             this.buttonSanSang3.Size = new System.Drawing.Size(72, 20);
@@ -410,7 +406,7 @@
             // 
             this.buttonTuXa3.BackColor = System.Drawing.Color.Silver;
             this.buttonTuXa3.Enabled = false;
-            this.buttonTuXa3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTuXa3.Location = new System.Drawing.Point(196, 5);
             this.buttonTuXa3.Name = "buttonTuXa3";
             this.buttonTuXa3.Size = new System.Drawing.Size(72, 20);
@@ -437,7 +433,7 @@
             // 
             this.buttonPDien1.BackColor = System.Drawing.Color.Silver;
             this.buttonPDien1.Enabled = false;
-            this.buttonPDien1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPDien1.Location = new System.Drawing.Point(202, 30);
             this.buttonPDien1.Name = "buttonPDien1";
             this.buttonPDien1.Size = new System.Drawing.Size(72, 20);
@@ -449,7 +445,7 @@
             // 
             this.buttonPDKTT1.BackColor = System.Drawing.Color.Silver;
             this.buttonPDKTT1.Enabled = false;
-            this.buttonPDKTT1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonPDKTT1.Location = new System.Drawing.Point(111, 30);
             this.buttonPDKTT1.Name = "buttonPDKTT1";
             this.buttonPDKTT1.Size = new System.Drawing.Size(72, 20);
@@ -461,7 +457,7 @@
             // 
             this.buttonSanSang1.BackColor = System.Drawing.Color.Silver;
             this.buttonSanSang1.Enabled = false;
-            this.buttonSanSang1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonSanSang1.Location = new System.Drawing.Point(289, 5);
             this.buttonSanSang1.Name = "buttonSanSang1";
             this.buttonSanSang1.Size = new System.Drawing.Size(72, 20);
@@ -473,7 +469,7 @@
             // 
             this.buttonTuXa1.BackColor = System.Drawing.Color.Silver;
             this.buttonTuXa1.Enabled = false;
-            this.buttonTuXa1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTuXa1.Location = new System.Drawing.Point(202, 5);
             this.buttonTuXa1.Name = "buttonTuXa1";
             this.buttonTuXa1.Size = new System.Drawing.Size(72, 20);
@@ -487,7 +483,7 @@
             this.buttonTaiCho1.Enabled = false;
             this.buttonTaiCho1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonTaiCho1.FlatAppearance.BorderSize = 0;
-            this.buttonTaiCho1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTaiCho1.Location = new System.Drawing.Point(111, 4);
             this.buttonTaiCho1.Name = "buttonTaiCho1";
             this.buttonTaiCho1.Size = new System.Drawing.Size(72, 20);
@@ -508,9 +504,10 @@
             // 
             // button100
             // 
-            this.button100.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button100.BackColor = System.Drawing.Color.SteelBlue;
             this.button100.FlatAppearance.BorderSize = 0;
-            this.button100.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button100.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button100.ForeColor = System.Drawing.SystemColors.Control;
             this.button100.Location = new System.Drawing.Point(422, 155);
             this.button100.Name = "button100";
             this.button100.Size = new System.Drawing.Size(35, 27);
@@ -520,7 +517,9 @@
             // 
             // button23
             // 
-            this.button23.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button23.BackColor = System.Drawing.Color.SteelBlue;
+            this.button23.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button23.ForeColor = System.Drawing.SystemColors.Control;
             this.button23.Location = new System.Drawing.Point(422, 210);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(35, 27);
@@ -530,7 +529,9 @@
             // 
             // button24
             // 
-            this.button24.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button24.BackColor = System.Drawing.Color.SteelBlue;
+            this.button24.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button24.ForeColor = System.Drawing.SystemColors.Control;
             this.button24.Location = new System.Drawing.Point(422, 261);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(35, 27);
@@ -540,7 +541,9 @@
             // 
             // button25
             // 
-            this.button25.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button25.BackColor = System.Drawing.Color.SteelBlue;
+            this.button25.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button25.ForeColor = System.Drawing.SystemColors.Control;
             this.button25.Location = new System.Drawing.Point(422, 311);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(35, 27);
@@ -551,18 +554,17 @@
             // D10008
             // 
             this.D10008.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10008.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10008.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D10008.Location = new System.Drawing.Point(116, 240);
             this.D10008.Name = "D10008";
             this.D10008.Size = new System.Drawing.Size(108, 16);
             this.D10008.TabIndex = 21;
-            this.D10008.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.D10008.UseVisualStyleBackColor = false;
             // 
             // D10022
             // 
             this.D10022.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10022.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10022.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D10022.Location = new System.Drawing.Point(613, 149);
             this.D10022.Name = "D10022";
             this.D10022.Size = new System.Drawing.Size(108, 16);
@@ -573,7 +575,7 @@
             // D10036
             // 
             this.D10036.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10036.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10036.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D10036.Location = new System.Drawing.Point(613, 200);
             this.D10036.Name = "D10036";
             this.D10036.Size = new System.Drawing.Size(108, 16);
@@ -581,32 +583,33 @@
             this.D10036.Text = "D10036";
             this.D10036.UseVisualStyleBackColor = false;
             // 
-            // D10046
+            // D10050
             // 
-            this.D10046.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10046.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10046.Location = new System.Drawing.Point(613, 254);
-            this.D10046.Name = "D10046";
-            this.D10046.Size = new System.Drawing.Size(108, 16);
-            this.D10046.TabIndex = 24;
-            this.D10046.Text = "D10046";
-            this.D10046.UseVisualStyleBackColor = false;
+            this.D10050.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.D10050.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10050.Location = new System.Drawing.Point(613, 254);
+            this.D10050.Name = "D10050";
+            this.D10050.Size = new System.Drawing.Size(108, 16);
+            this.D10050.TabIndex = 24;
+            this.D10050.Text = "D10050";
+            this.D10050.UseVisualStyleBackColor = false;
             // 
-            // D10056
+            // D10064
             // 
-            this.D10056.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10056.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10056.Location = new System.Drawing.Point(613, 304);
-            this.D10056.Name = "D10056";
-            this.D10056.Size = new System.Drawing.Size(108, 16);
-            this.D10056.TabIndex = 25;
-            this.D10056.Text = "D10056";
-            this.D10056.UseVisualStyleBackColor = false;
+            this.D10064.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.D10064.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10064.Location = new System.Drawing.Point(613, 304);
+            this.D10064.Name = "D10064";
+            this.D10064.Size = new System.Drawing.Size(108, 16);
+            this.D10064.TabIndex = 25;
+            this.D10064.Text = "D10064";
+            this.D10064.UseVisualStyleBackColor = false;
             // 
             // buttonTinHieuMayBom1
             // 
             this.buttonTinHieuMayBom1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonTinHieuMayBom1.FlatAppearance.BorderSize = 0;
+            this.buttonTinHieuMayBom1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTinHieuMayBom1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonTinHieuMayBom1.Location = new System.Drawing.Point(824, 157);
             this.buttonTinHieuMayBom1.Name = "buttonTinHieuMayBom1";
@@ -619,6 +622,7 @@
             // 
             this.buttonTinHieuMayBom2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonTinHieuMayBom2.FlatAppearance.BorderSize = 0;
+            this.buttonTinHieuMayBom2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTinHieuMayBom2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonTinHieuMayBom2.Location = new System.Drawing.Point(824, 211);
             this.buttonTinHieuMayBom2.Name = "buttonTinHieuMayBom2";
@@ -631,6 +635,7 @@
             // 
             this.buttonTinHieuMayBom3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonTinHieuMayBom3.FlatAppearance.BorderSize = 0;
+            this.buttonTinHieuMayBom3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTinHieuMayBom3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonTinHieuMayBom3.Location = new System.Drawing.Point(824, 261);
             this.buttonTinHieuMayBom3.Name = "buttonTinHieuMayBom3";
@@ -643,6 +648,7 @@
             // 
             this.buttonTinHieuMayBom4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonTinHieuMayBom4.FlatAppearance.BorderSize = 0;
+            this.buttonTinHieuMayBom4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonTinHieuMayBom4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonTinHieuMayBom4.Location = new System.Drawing.Point(824, 314);
             this.buttonTinHieuMayBom4.Name = "buttonTinHieuMayBom4";
@@ -651,21 +657,21 @@
             this.buttonTinHieuMayBom4.Text = "4";
             this.buttonTinHieuMayBom4.UseVisualStyleBackColor = false;
             // 
-            // D10048
+            // D10052
             // 
-            this.D10048.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10048.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10048.Location = new System.Drawing.Point(892, 251);
-            this.D10048.Name = "D10048";
-            this.D10048.Size = new System.Drawing.Size(90, 15);
-            this.D10048.TabIndex = 30;
-            this.D10048.Text = "D10048";
-            this.D10048.UseVisualStyleBackColor = false;
+            this.D10052.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.D10052.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10052.Location = new System.Drawing.Point(892, 251);
+            this.D10052.Name = "D10052";
+            this.D10052.Size = new System.Drawing.Size(90, 15);
+            this.D10052.TabIndex = 30;
+            this.D10052.Text = "D10052";
+            this.D10052.UseVisualStyleBackColor = false;
             // 
             // D10024
             // 
             this.D10024.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10024.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10024.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D10024.Location = new System.Drawing.Point(892, 147);
             this.D10024.Name = "D10024";
             this.D10024.Size = new System.Drawing.Size(90, 15);
@@ -676,7 +682,7 @@
             // D10038
             // 
             this.D10038.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10038.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10038.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D10038.Location = new System.Drawing.Point(892, 199);
             this.D10038.Name = "D10038";
             this.D10038.Size = new System.Drawing.Size(90, 15);
@@ -684,21 +690,21 @@
             this.D10038.Text = "D10038";
             this.D10038.UseVisualStyleBackColor = false;
             // 
-            // D10058
+            // D10066
             // 
-            this.D10058.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10058.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10058.Location = new System.Drawing.Point(892, 302);
-            this.D10058.Name = "D10058";
-            this.D10058.Size = new System.Drawing.Size(90, 15);
-            this.D10058.TabIndex = 33;
-            this.D10058.Text = "D10058";
-            this.D10058.UseVisualStyleBackColor = false;
+            this.D10066.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.D10066.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10066.Location = new System.Drawing.Point(892, 302);
+            this.D10066.Name = "D10066";
+            this.D10066.Size = new System.Drawing.Size(90, 15);
+            this.D10066.TabIndex = 33;
+            this.D10066.Text = "D10066";
+            this.D10066.UseVisualStyleBackColor = false;
             // 
             // D10010
             // 
             this.D10010.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.D10010.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.D10010.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D10010.Location = new System.Drawing.Point(1197, 240);
             this.D10010.Name = "D10010";
             this.D10010.Size = new System.Drawing.Size(110, 18);
@@ -923,36 +929,6 @@
             this.label13.TabIndex = 57;
             this.label13.Text = "TOÀN CẢNH TRẠM BƠM";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ManagementSoftware.Properties.Resources._318877084_1369400657166807_4136150658551336155_n___Copy__3_1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(271, 400);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 20);
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::ManagementSoftware.Properties.Resources.DuoiXam;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(313, 428);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(190, 30);
-            this.pictureBox2.TabIndex = 59;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::ManagementSoftware.Properties.Resources.Xamc;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(287, 416);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(8, 6);
-            this.pictureBox3.TabIndex = 60;
-            this.pictureBox3.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -963,15 +939,17 @@
             this.label5.TabIndex = 61;
             this.label5.Text = "Đầu vào";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ToanCanhMayBom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1715, 755);
+            this.ClientSize = new System.Drawing.Size(1699, 716);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBoxPheuSo1);
             this.Controls.Add(this.pictureBoxPheuSo2);
@@ -995,16 +973,16 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.D10010);
-            this.Controls.Add(this.D10058);
+            this.Controls.Add(this.D10066);
             this.Controls.Add(this.D10038);
             this.Controls.Add(this.D10024);
-            this.Controls.Add(this.D10048);
+            this.Controls.Add(this.D10052);
             this.Controls.Add(this.buttonTinHieuMayBom4);
             this.Controls.Add(this.buttonTinHieuMayBom3);
             this.Controls.Add(this.buttonTinHieuMayBom2);
             this.Controls.Add(this.buttonTinHieuMayBom1);
-            this.Controls.Add(this.D10056);
-            this.Controls.Add(this.D10046);
+            this.Controls.Add(this.D10064);
+            this.Controls.Add(this.D10050);
             this.Controls.Add(this.D10036);
             this.Controls.Add(this.D10022);
             this.Controls.Add(this.D10008);
@@ -1033,9 +1011,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVan3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPheuSo1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1065,16 +1040,16 @@
         private Button D10008;
         private Button D10022;
         private Button D10036;
-        private Button D10046;
-        private Button D10056;
+        private Button D10050;
+        private Button D10064;
         private Button buttonTinHieuMayBom1;
         private Button buttonTinHieuMayBom2;
         private Button buttonTinHieuMayBom3;
         private Button buttonTinHieuMayBom4;
-        private Button D10048;
+        private Button D10052;
         private Button D10024;
         private Button D10038;
-        private Button D10058;
+        private Button D10066;
         private Button D10010;
         private Label label6;
         private Label label7;
@@ -1113,9 +1088,7 @@
         private PictureBox pictureBoxPheuSo2;
         private PictureBox pictureBoxPheuSo1;
         private Label label13;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
         private Label label5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
