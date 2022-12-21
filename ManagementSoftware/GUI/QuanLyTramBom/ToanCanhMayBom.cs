@@ -34,11 +34,17 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             Analog? analog = await plcMain.GetAnAnalog(a);
             if (analog != null)
             {
-                btn.Text = analog.GiaTriDong.ToString() + analog.DonVi;
+                btn.Invoke(() =>
+                {
+                    btn.Text = analog.GiaTriDong.ToString() + analog.DonVi;
+                });
             }
             else
             {
-                btn.Text = "N/A";
+                btn.Invoke(() =>
+                {
+                    btn.Text = "N/A";
+                });
             }
         }
 

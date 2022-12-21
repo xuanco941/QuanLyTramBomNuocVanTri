@@ -70,6 +70,7 @@
             // 
             // buttonAnalog
             // 
+            this.buttonAnalog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAnalog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonAnalog.FlatAppearance.BorderSize = 0;
             this.buttonAnalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -85,6 +86,7 @@
             // 
             // buttonDigital
             // 
+            this.buttonDigital.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDigital.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDigital.FlatAppearance.BorderSize = 0;
             this.buttonDigital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
