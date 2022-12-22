@@ -1,6 +1,7 @@
 ﻿using ManagementSoftware.DAL;
 using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
+using ManagementSoftware.PLC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace ManagementSoftware.AutoAddData
 {
     public class DataAnalog
     {
-        static PLCSMain plcMain = new PLCSMain();
+        static PLCAnalog plcMain = new PLCAnalog();
         public static System.Timers.Timer timer;
 
         private static async void MyTimer_Tick(object sender, EventArgs e)

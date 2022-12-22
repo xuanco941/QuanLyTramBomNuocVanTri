@@ -1,5 +1,4 @@
 ﻿using ManagementSoftware.Models.DuLieuMayPLC;
-using ManagementSoftware;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +12,9 @@ using ManagementSoftware.Models.TramBomNuoc;
 using System.Globalization;
 using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
 using Syncfusion.XPS;
+using ManagementSoftware.PLC;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using Syncfusion.Windows.Forms.Tools;
 
 namespace QuanLyTramBom
 {
@@ -29,7 +31,7 @@ namespace QuanLyTramBom
 
         async void LoadFormThongKe()
         {
-            PLCSMain plc = new PLCSMain();
+            PLCDigital plc = new PLCDigital();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("Gắn thẻ");
@@ -82,40 +84,56 @@ namespace QuanLyTramBom
             }
 
 
-            dataGridView1.DataSource = dt;
-            bool checkColor = false;
-            for (int i = 0; i < listCheckColor.Count; i++)
+
+            if (IsHandleCreated)
             {
-                this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-
-                //dataGridView1.Rows[i].Cells[4].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                if (checkColor == true)
+                BeginInvoke(() =>
                 {
-                    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSeaGreen;
-                }
+                    dataGridView1.DataSource = dt;
+                    bool checkColor = false;
+                    for (int i = 0; i < listCheckColor.Count; i++)
+                    {
+                        this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                if (listCheckColor[i] == true)
-                {
-                    dataGridView1.Rows[i].Cells[4].Style.BackColor = Color.Red;
-                    dataGridView1.Rows[i].Cells[4].Style.ForeColor = Color.White;
-                }
-                else
-                {
-                    dataGridView1.Rows[i].Cells[4].Style.BackColor = Color.LimeGreen;
 
-                }
-                checkColor = !checkColor;
+                        //dataGridView1.Rows[i].Cells[4].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        if (checkColor == true)
+                        {
+                            dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSeaGreen;
+                        }
+
+                        if (listCheckColor[i] == true)
+                        {
+                            dataGridView1.Rows[i].Cells[4].Style.BackColor = Color.Red;
+                            dataGridView1.Rows[i].Cells[4].Style.ForeColor = Color.White;
+                        }
+                        else
+                        {
+                            dataGridView1.Rows[i].Cells[4].Style.BackColor = Color.LimeGreen;
+
+                        }
+                        checkColor = !checkColor;
+                    }
+                });
+                return;
+
+
+
             }
+
 
         }
 
         void SetTenBomVaTinHieu(List<string>? tinhieu)
         {
             this.listTinHieu = tinhieu;
-            LoadFormThongKe();
+            new Thread(() =>
+            {
+                LoadFormThongKe();
+
+            }).Start();
         }
 
         private void btnSerachBox_Click(object sender, EventArgs e)
@@ -127,8 +145,11 @@ namespace QuanLyTramBom
 
         private void FormDSDigital_Load(object sender, EventArgs e)
         {
-            LoadFormThongKe();
+            new Thread(() =>
+            {
+                LoadFormThongKe();
 
+            }).Start();
         }
     }
 }

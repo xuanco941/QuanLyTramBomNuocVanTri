@@ -1,5 +1,6 @@
 ﻿using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
+using ManagementSoftware.PLC;
 using ManagementSoftware.Properties;
 using Syncfusion.Windows.Forms.Tools;
 using System;
@@ -16,12 +17,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 {
     public partial class ToanCanhMayBom : Form
     {
-        PLCSMain plcMain;
+        PLCAnalog plcAnalog;
+        PLCDigital plcDigital;
         public ToanCanhMayBom()
         {
             InitializeComponent();
 
-            plcMain = new PLCSMain();
+            plcAnalog = new PLCAnalog();
+            plcDigital = new PLCDigital();
 
 
         }
@@ -31,22 +34,29 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         }
         async Task LoadTextAnalog(Button btn, Analog a)
         {
-            Analog? analog = await plcMain.GetAnAnalog(a);
-            if (analog != null)
+            Analog? analog = await plcAnalog.GetAnAnalog(a);
+            if (IsHandleCreated)
             {
-
-                btn.Text = analog.GiaTriDong.ToString() + analog.DonVi;
+                BeginInvoke(() =>
+                {
+                    if (analog != null)
+                    {
+                        btn.Text = analog.GiaTriDong.ToString() + analog.DonVi;
+                    }
+                    else
+                    {
+                        btn.Text = "N/A";
+                    }
+                });
+                return;
             }
-            else
-            {
 
-                btn.Text = "N/A";
-            }
+
         }
 
-        async void AutoUpdate()
+        async void AutoUpdateAnalog()
         {
-            if (await plcMain.Open() == 0)
+            if (await plcAnalog.Open() == 0)
             {
                 //analog
                 await LoadTextAnalog(D10000, AnalogCommon.D10000);
@@ -64,35 +74,49 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 await LoadTextAnalog(D10064, AnalogCommon.D10064);
                 await LoadTextAnalog(D10066, AnalogCommon.D10066);
 
-
-
-                //digital
-                CheckColorBangTaiThang(await plcMain.GetADigital(DigitalCommon.M10065), await plcMain.GetADigital(DigitalCommon.M10066), await plcMain.GetADigital(DigitalCommon.M10067), await plcMain.GetADigital(DigitalCommon.M10064));
-                CheckColorBangTaiXien(await plcMain.GetADigital(DigitalCommon.M10069), await plcMain.GetADigital(DigitalCommon.M10070), await plcMain.GetADigital(DigitalCommon.M10071), await plcMain.GetADigital(DigitalCommon.M10068));
-                CheckColorBomMoi1(await plcMain.GetADigital(DigitalCommon.M10059));
-                CheckColorBomMoi2(await plcMain.GetADigital(DigitalCommon.M10061));
-                CheckColorBomThoat1(await plcMain.GetADigital(DigitalCommon.M10077));
-                CheckColorBomThoat2(await plcMain.GetADigital(DigitalCommon.M10079));
-                CheckColorPheuSo1(await plcMain.GetADigital(DigitalCommon.M10042), await plcMain.GetADigital(DigitalCommon.M10041), await plcMain.GetADigital(DigitalCommon.M10039), await plcMain.GetADigital(DigitalCommon.M10040));
-                CheckColorPheuSo2(await plcMain.GetADigital(DigitalCommon.M10051), await plcMain.GetADigital(DigitalCommon.M10050), await plcMain.GetADigital(DigitalCommon.M10048), await plcMain.GetADigital(DigitalCommon.M10049));
-                CheckColorVan1(await plcMain.GetADigital(DigitalCommon.M10125), await plcMain.GetADigital(DigitalCommon.M10124), await plcMain.GetADigital(DigitalCommon.M10122), await plcMain.GetADigital(DigitalCommon.M10123));
-                CheckColorVan2(await plcMain.GetADigital(DigitalCommon.M10174), await plcMain.GetADigital(DigitalCommon.M10173), await plcMain.GetADigital(DigitalCommon.M10171), await plcMain.GetADigital(DigitalCommon.M10172));
-                CheckColorVan3(await plcMain.GetADigital(DigitalCommon.M10223), await plcMain.GetADigital(DigitalCommon.M10222), await plcMain.GetADigital(DigitalCommon.M10220), await plcMain.GetADigital(DigitalCommon.M10221));
-                CheckColorVan4(await plcMain.GetADigital(DigitalCommon.M10272), await plcMain.GetADigital(DigitalCommon.M10271), await plcMain.GetADigital(DigitalCommon.M10270), await plcMain.GetADigital(DigitalCommon.M10269));
-                CheckColorTrangThaiBom1(await plcMain.GetADigital(DigitalCommon.M10095), await plcMain.GetADigital(DigitalCommon.M10096), await plcMain.GetADigital(DigitalCommon.M10118));
-                CheckColorTrangThaiBom2(await plcMain.GetADigital(DigitalCommon.M10144), await plcMain.GetADigital(DigitalCommon.M10145), await plcMain.GetADigital(DigitalCommon.M10167));
-                CheckColorTrangThaiBom3(await plcMain.GetADigital(DigitalCommon.M10193), await plcMain.GetADigital(DigitalCommon.M10194), await plcMain.GetADigital(DigitalCommon.M10216));
-                CheckColorTrangThaiBom4(await plcMain.GetADigital(DigitalCommon.M10242), await plcMain.GetADigital(DigitalCommon.M10243), await plcMain.GetADigital(DigitalCommon.M10265));
-
-                CheckTinHieuMayBom(await plcMain.GetADigital(DigitalCommon.M10097), await plcMain.GetADigital(DigitalCommon.M10146), await plcMain.GetADigital(DigitalCommon.M10195), await plcMain.GetADigital(DigitalCommon.M10244));
-
-                await plcMain.Close();
+                await plcAnalog.Close();
             }
         }
 
+        async void AutoUpdateDigital()
+        {
+            if (await plcDigital.Open() == 0)
+            {
+                //digital
+                CheckColorBangTaiThang(await plcDigital.GetADigital(DigitalCommon.M10065), await plcDigital.GetADigital(DigitalCommon.M10066), await plcDigital.GetADigital(DigitalCommon.M10067), await plcDigital.GetADigital(DigitalCommon.M10064));
+                CheckColorBangTaiXien(await plcDigital.GetADigital(DigitalCommon.M10069), await plcDigital.GetADigital(DigitalCommon.M10070), await plcDigital.GetADigital(DigitalCommon.M10071), await plcDigital.GetADigital(DigitalCommon.M10068));
+                CheckColorBomMoi1(await plcDigital.GetADigital(DigitalCommon.M10059));
+                CheckColorBomMoi2(await plcDigital.GetADigital(DigitalCommon.M10061));
+                CheckColorBomThoat1(await plcDigital.GetADigital(DigitalCommon.M10077));
+                CheckColorBomThoat2(await plcDigital.GetADigital(DigitalCommon.M10079));
+                CheckColorPheuSo1(await plcDigital.GetADigital(DigitalCommon.M10042), await plcDigital.GetADigital(DigitalCommon.M10041), await plcDigital.GetADigital(DigitalCommon.M10039), await plcDigital.GetADigital(DigitalCommon.M10040));
+                CheckColorPheuSo2(await plcDigital.GetADigital(DigitalCommon.M10051), await plcDigital.GetADigital(DigitalCommon.M10050), await plcDigital.GetADigital(DigitalCommon.M10048), await plcDigital.GetADigital(DigitalCommon.M10049));
+                CheckColorVan1(await plcDigital.GetADigital(DigitalCommon.M10125), await plcDigital.GetADigital(DigitalCommon.M10124), await plcDigital.GetADigital(DigitalCommon.M10122), await plcDigital.GetADigital(DigitalCommon.M10123));
+                CheckColorVan2(await plcDigital.GetADigital(DigitalCommon.M10174), await plcDigital.GetADigital(DigitalCommon.M10173), await plcDigital.GetADigital(DigitalCommon.M10171), await plcDigital.GetADigital(DigitalCommon.M10172));
+                CheckColorVan3(await plcDigital.GetADigital(DigitalCommon.M10223), await plcDigital.GetADigital(DigitalCommon.M10222), await plcDigital.GetADigital(DigitalCommon.M10220), await plcDigital.GetADigital(DigitalCommon.M10221));
+                CheckColorVan4(await plcDigital.GetADigital(DigitalCommon.M10272), await plcDigital.GetADigital(DigitalCommon.M10271), await plcDigital.GetADigital(DigitalCommon.M10270), await plcDigital.GetADigital(DigitalCommon.M10269));
+                CheckColorTrangThaiBom1(await plcDigital.GetADigital(DigitalCommon.M10095), await plcDigital.GetADigital(DigitalCommon.M10096), await plcDigital.GetADigital(DigitalCommon.M10118));
+                CheckColorTrangThaiBom2(await plcDigital.GetADigital(DigitalCommon.M10144), await plcDigital.GetADigital(DigitalCommon.M10145), await plcDigital.GetADigital(DigitalCommon.M10167));
+                CheckColorTrangThaiBom3(await plcDigital.GetADigital(DigitalCommon.M10193), await plcDigital.GetADigital(DigitalCommon.M10194), await plcDigital.GetADigital(DigitalCommon.M10216));
+                CheckColorTrangThaiBom4(await plcDigital.GetADigital(DigitalCommon.M10242), await plcDigital.GetADigital(DigitalCommon.M10243), await plcDigital.GetADigital(DigitalCommon.M10265));
+
+                CheckTinHieuMayBom(await plcDigital.GetADigital(DigitalCommon.M10097), await plcDigital.GetADigital(DigitalCommon.M10146), await plcDigital.GetADigital(DigitalCommon.M10195), await plcDigital.GetADigital(DigitalCommon.M10244));
+
+                await plcDigital.Close();
+            }
+        }
+
+
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            AutoUpdate();
+            new Thread(() =>
+            {
+                AutoUpdateAnalog();
+            }).Start();
+
+            AutoUpdateDigital();
         }
 
 

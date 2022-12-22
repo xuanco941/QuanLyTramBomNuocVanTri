@@ -1,6 +1,7 @@
 ﻿using ManagementSoftware.DAL;
 using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
+using ManagementSoftware.PLC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,12 @@ namespace ManagementSoftware.AutoAddData
 {
     public class DataDigital
     {
-        static PLCSMain plcMain = new PLCSMain();
+        static PLCDigital plcMain = new PLCDigital();
         public static System.Timers.Timer timer;
 
         public DataDigital()
         {
-            plcMain = new PLCSMain();
+            plcMain = new PLCDigital();
             timer = new System.Timers.Timer();
             timer.Interval = 60000;
             timer.Elapsed += MyTimer_Tick;

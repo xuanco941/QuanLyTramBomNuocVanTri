@@ -2,13 +2,14 @@
 using ManagementSoftware.DAL;
 using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
+using ManagementSoftware.PLC;
 using System.Timers;
 
 namespace ManagementSoftware.AutoAddData
 {
     public class DataAlertNews
     {
-        static PLCSMain plcMain = new PLCSMain();
+        static PLCAlert plcMain = new PLCAlert();
         public static System.Timers.Timer timer;
         static List<Alert>? listAlert;
         private static async void MyTimer_Tick(object sender, EventArgs e)

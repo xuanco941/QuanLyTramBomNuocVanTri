@@ -1,5 +1,6 @@
 ﻿using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
+using ManagementSoftware.PLC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 
         async void LoadFormThongKe()
         {
-            PLCSMain plc = new PLCSMain();
+            PLCAnalog plc = new PLCAnalog();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("%");
@@ -79,29 +80,46 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             }
 
 
-            dataGridView1.DataSource = dt;
 
-            bool checkColor = false;
-            foreach (DataGridViewRow row in dataGridView1.Rows)
+            if (IsHandleCreated)
             {
-                this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                this.dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-                //row.Cells[4].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                if (checkColor == true)
+                BeginInvoke(() =>
                 {
-                    row.DefaultCellStyle.BackColor = Color.PaleGreen;
-                }
-                checkColor = !checkColor;
+                    dataGridView1.DataSource = dt;
+
+                    bool checkColor = false;
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        this.dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                        //row.Cells[4].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        if (checkColor == true)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.PaleGreen;
+                        }
+                        checkColor = !checkColor;
+                    }
+                });
+                return;
+
+
+
             }
+
+            
 
         }
 
         void SetTenBomVaTinHieu(List<string>? tinhieu)
         {
             this.listTinHieu = tinhieu;
-            LoadFormThongKe();
+            new Thread(() =>
+            {
+                LoadFormThongKe();
+
+            }).Start();
         }
 
         private void btnSerachBox_Click_1(object sender, EventArgs e)
@@ -113,8 +131,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 
         private void FormDSAnalog_Load(object sender, EventArgs e)
         {
-            LoadFormThongKe();
+            new Thread(() =>
+            {
+                LoadFormThongKe();
 
+            }).Start();
         }
     }
 }

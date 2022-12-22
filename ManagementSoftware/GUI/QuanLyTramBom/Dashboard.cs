@@ -1,11 +1,10 @@
 ﻿
+using ManagementSoftware.AutoAddData;
 using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.QuanLyTramBom;
 using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
-using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu;
-using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
-using Syncfusion.XlsIO.Parser.Biff_Records;
+using ManagementSoftware.PLC;
 using System.Globalization;
 
 namespace QuanLyTramBom
@@ -53,7 +52,7 @@ namespace QuanLyTramBom
         //}
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            if(e.TabPage != tabPage1)
+            if (e.TabPage != tabPage1)
             {
                 foreach (ToanCanhMayBom form in panelContentToanCanh.Controls)
                 {
@@ -99,19 +98,49 @@ namespace QuanLyTramBom
 
         }
 
-        private void timerGetNewAlert_Tick(object sender, EventArgs e)
+
+        void SetTextControl(Label label, string text)
         {
-            Alert? a = DALAlert.GetNewAlert();
-            if (a != null)
+            label.Invoke(new Action(() => { label.Text = text; }));
+        }
+        private async void timerGetNewAlert_Tick(object sender, EventArgs e)
+        {
+            PLCAlert plc = new PLCAlert();
+            if(AlertCurrent.Data!=null && AlertCurrent.Data.Count > 0)
             {
-                labelSTT.Text = "ID" + a.IDAlert;
-                labelGanThe.Text = a.GanThe;
-                labelThoiGian.Text = a.ThoiGian.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                labelDieuKien.Text = a.DieuKien;
-                labelNhom.Text = a.Nhom;
-                labelMoTa.Text = a.TinHieu;
-                int count = DALAlert.GetAllAlert().Count;
-                labelGiaTri.Text = count.ToString();
+                List<Alert>? listALl = await plc.GetListDataAlertTrue();
+                if (listALl != null)
+                {
+                    foreach (var i in listALl)
+                    {
+                        foreach (var j in AlertCurrent.Data)
+                        {
+                            if(i.TinHieu != j.TinHieu)
+                            {
+                                AlertCurrent.Data.Add(i);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                AlertCurrent.Data = await plc.GetListDataAlertTrue();
+            }
+            if (AlertCurrent.Data != null && AlertCurrent.Data.Count > 0)
+            {
+                DateTime dateTimeMax = AlertCurrent.Data.Max((m) => m.ThoiGian);
+                Alert? alertERR = AlertCurrent.Data.Where((a) => a.ThoiGian == dateTimeMax).FirstOrDefault();
+                if (alertERR != null)
+                {
+                    SetTextControl(labelNgay, alertERR.ThoiGian.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
+                    SetTextControl(labelNhom, alertERR.Nhom);
+                    SetTextControl(labelMoTa, alertERR.TinHieu);
+                    SetTextControl(labelGanThe, alertERR.GanThe);
+                    SetTextControl(labelThoiGian, alertERR.ThoiGian.ToString("hh:mm:ss", CultureInfo.InvariantCulture));
+                    SetTextControl(labelDieuKien, alertERR.DieuKien);
+                    SetTextControl(labelGiaTri, AlertCurrent.Data.Count.ToString());
+                }
             }
         }
 
@@ -130,6 +159,8 @@ namespace QuanLyTramBom
             formQuanLyDSVaoRa.Dock = DockStyle.Fill;
             formQuanLyDSVaoRa.FormBorderStyle = FormBorderStyle.None;
             formQuanLyDSVaoRa.Show();
+
+
             //timer new alert
             timerGetNewAlert.Start();
         }

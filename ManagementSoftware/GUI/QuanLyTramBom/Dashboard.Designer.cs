@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.DigitalClockRenderer digitalClockRenderer1 = new Syncfusion.Windows.Forms.Tools.DigitalClockRenderer();
-            Syncfusion.Windows.Forms.Tools.ClockRenderer clockRenderer1 = new Syncfusion.Windows.Forms.Tools.ClockRenderer();
+            Syncfusion.Windows.Forms.Tools.DigitalClockRenderer digitalClockRenderer2 = new Syncfusion.Windows.Forms.Tools.DigitalClockRenderer();
+            Syncfusion.Windows.Forms.Tools.ClockRenderer clockRenderer2 = new Syncfusion.Windows.Forms.Tools.ClockRenderer();
             this.clock1 = new Syncfusion.Windows.Forms.Tools.Clock();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -42,9 +42,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.labelThoiGian = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.labelGanThe = new System.Windows.Forms.Label();
+            this.labelNgay = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.labelSTT = new System.Windows.Forms.Label();
+            this.labelGanThe = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelDieuKien = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -109,15 +109,15 @@
             this.clock1.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
             this.clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Analog;
             this.clock1.CurrentDateTime = new System.DateTime(2022, 12, 20, 15, 55, 40, 628);
-            this.clock1.CustomTime = new System.DateTime(2022, 12, 22, 9, 7, 48, 116);
-            this.clock1.DigitalRenderer = digitalClockRenderer1;
+            this.clock1.CustomTime = new System.DateTime(2022, 12, 22, 13, 8, 30, 150);
+            this.clock1.DigitalRenderer = digitalClockRenderer2;
             this.clock1.DisplayDates = true;
             this.clock1.Location = new System.Drawing.Point(1259, 0);
             this.clock1.MinimumSize = new System.Drawing.Size(75, 75);
             this.clock1.Name = "clock1";
             this.clock1.Now = new System.DateTime(((long)(0)));
             this.clock1.Remainder = new System.DateTime(2022, 12, 20, 15, 55, 40, 626);
-            this.clock1.Renderer = clockRenderer1;
+            this.clock1.Renderer = clockRenderer2;
             this.clock1.ShowClockFrame = false;
             this.clock1.ShowCustomTimeClock = false;
             this.clock1.ShowHourDesignator = false;
@@ -164,7 +164,11 @@
             // 
             // labelGiaTri
             // 
+            this.labelGiaTri.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelGiaTri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelGiaTri.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelGiaTri.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelGiaTri.ForeColor = System.Drawing.Color.Red;
             this.labelGiaTri.Location = new System.Drawing.Point(0, 0);
             this.labelGiaTri.Name = "labelGiaTri";
             this.labelGiaTri.Size = new System.Drawing.Size(84, 26);
@@ -184,6 +188,8 @@
             // labelMoTa
             // 
             this.labelMoTa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelMoTa.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMoTa.ForeColor = System.Drawing.Color.Red;
             this.labelMoTa.Location = new System.Drawing.Point(0, 0);
             this.labelMoTa.Name = "labelMoTa";
             this.labelMoTa.Size = new System.Drawing.Size(343, 26);
@@ -203,6 +209,8 @@
             // labelNhom
             // 
             this.labelNhom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelNhom.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNhom.ForeColor = System.Drawing.Color.Red;
             this.labelNhom.Location = new System.Drawing.Point(0, 0);
             this.labelNhom.Name = "labelNhom";
             this.labelNhom.Size = new System.Drawing.Size(79, 26);
@@ -222,6 +230,8 @@
             // labelThoiGian
             // 
             this.labelThoiGian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelThoiGian.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelThoiGian.ForeColor = System.Drawing.Color.Red;
             this.labelThoiGian.Location = new System.Drawing.Point(0, 0);
             this.labelThoiGian.Name = "labelThoiGian";
             this.labelThoiGian.Size = new System.Drawing.Size(79, 26);
@@ -231,40 +241,44 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.labelGanThe);
+            this.panel7.Controls.Add(this.labelNgay);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(90, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(81, 28);
             this.panel7.TabIndex = 2;
             // 
-            // labelGanThe
+            // labelNgay
             // 
-            this.labelGanThe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelGanThe.Location = new System.Drawing.Point(0, 0);
-            this.labelGanThe.Name = "labelGanThe";
-            this.labelGanThe.Size = new System.Drawing.Size(79, 26);
-            this.labelGanThe.TabIndex = 1;
-            this.labelGanThe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNgay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNgay.ForeColor = System.Drawing.Color.Red;
+            this.labelNgay.Location = new System.Drawing.Point(0, 0);
+            this.labelNgay.Name = "labelNgay";
+            this.labelNgay.Size = new System.Drawing.Size(79, 26);
+            this.labelNgay.TabIndex = 3;
+            this.labelNgay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.labelSTT);
+            this.panel6.Controls.Add(this.labelGanThe);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(81, 28);
             this.panel6.TabIndex = 1;
             // 
-            // labelSTT
+            // labelGanThe
             // 
-            this.labelSTT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelSTT.Location = new System.Drawing.Point(0, 0);
-            this.labelSTT.Name = "labelSTT";
-            this.labelSTT.Size = new System.Drawing.Size(79, 26);
-            this.labelSTT.TabIndex = 0;
-            this.labelSTT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGanThe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelGanThe.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelGanThe.ForeColor = System.Drawing.Color.Red;
+            this.labelGanThe.Location = new System.Drawing.Point(0, 0);
+            this.labelGanThe.Name = "labelGanThe";
+            this.labelGanThe.Size = new System.Drawing.Size(79, 26);
+            this.labelGanThe.TabIndex = 2;
+            this.labelGanThe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -279,6 +293,8 @@
             // labelDieuKien
             // 
             this.labelDieuKien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelDieuKien.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDieuKien.ForeColor = System.Drawing.Color.Red;
             this.labelDieuKien.Location = new System.Drawing.Point(0, 0);
             this.labelDieuKien.Name = "labelDieuKien";
             this.labelDieuKien.Size = new System.Drawing.Size(79, 26);
@@ -741,8 +757,6 @@
         private Label labelMoTa;
         private Label labelNhom;
         private Label labelThoiGian;
-        private Label labelGanThe;
-        private Label labelSTT;
         private Label labelDieuKien;
         private System.Windows.Forms.Timer timerGetNewAlert;
         private TabPage tabPage4;
@@ -767,5 +781,7 @@
         private Panel panel16;
         private Button button9;
         private Panel panelContentToanCanh;
+        private Label labelNgay;
+        private Label labelGanThe;
     }
 }

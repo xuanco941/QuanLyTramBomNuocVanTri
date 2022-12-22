@@ -19,6 +19,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
         }
         void LoadFormDSDigital()
         {
+            buttonDigital.Enabled = false;
+            buttonAnalog.Enabled = false;
             foreach (Form item in panelContent.Controls)
             {
                 item.Close();
@@ -33,9 +35,13 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 
             buttonDigital.ForeColor = Color.White;
             buttonAnalog.ForeColor = Color.CornflowerBlue;
+            buttonDigital.Enabled = true;
+            buttonAnalog.Enabled = true;
         }
         void LoadFormDSAnalog()
         {
+            buttonDigital.Enabled = false;
+            buttonAnalog.Enabled = false;
             foreach (Form item in panelContent.Controls)
             {
                 item.Close();
@@ -50,6 +56,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             form.Show();
             buttonDigital.ForeColor = Color.CornflowerBlue;
             buttonAnalog.ForeColor = Color.White;
+            buttonDigital.Enabled = true;
+            buttonAnalog.Enabled = true;
         }
 
         private void buttonDigital_Click(object sender, EventArgs e)
