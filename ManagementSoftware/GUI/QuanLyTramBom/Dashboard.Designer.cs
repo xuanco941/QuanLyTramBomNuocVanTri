@@ -109,7 +109,7 @@
             this.clock1.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
             this.clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Analog;
             this.clock1.CurrentDateTime = new System.DateTime(2022, 12, 20, 15, 55, 40, 628);
-            this.clock1.CustomTime = new System.DateTime(2022, 12, 21, 17, 9, 37, 805);
+            this.clock1.CustomTime = new System.DateTime(2022, 12, 22, 9, 7, 48, 116);
             this.clock1.DigitalRenderer = digitalClockRenderer1;
             this.clock1.DisplayDates = true;
             this.clock1.Location = new System.Drawing.Point(1259, 0);
@@ -693,7 +693,7 @@
             this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "DPS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -18,6 +18,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
         public FormDSAnalog()
         {
             InitializeComponent();
+            dataGridView1.RowTemplate.Height = 40;
+
         }
 
         private List<string>? listTinHieu = null;
@@ -29,7 +31,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             PLCSMain plc = new PLCSMain();
 
             DataTable dt = new DataTable();
-            dt.Columns.Add("STT");
+            dt.Columns.Add("%");
             dt.Columns.Add("Gắn thẻ");
             dt.Columns.Add("Điều kiện");
             dt.Columns.Add("Nhóm");
@@ -51,7 +53,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
                     foreach (Analog a in list)
                     {
                         string createAt = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-                        dt.Rows.Add(i, a.GanThe, a.DieuKien, a.Nhom, a.TinHieu, a.GiaTriDong, createAt,a.DonVi, a.GiaTriLonNhat, a.GiaTriNhoNhat);
+                        dt.Rows.Add(i, a.GanThe, a.DieuKien, a.Nhom, a.TinHieu, a.GiaTriDong, createAt, a.DonVi, a.GiaTriLonNhat, a.GiaTriNhoNhat);
                     }
                 }
                 else
@@ -76,8 +78,23 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
                 }
             }
 
-    
-                dataGridView1.DataSource = dt;
+
+            dataGridView1.DataSource = dt;
+
+            bool checkColor = false;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                //row.Cells[4].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                if (checkColor == true)
+                {
+                    row.DefaultCellStyle.BackColor = Color.PaleGreen;
+                }
+                checkColor = !checkColor;
+            }
 
         }
 

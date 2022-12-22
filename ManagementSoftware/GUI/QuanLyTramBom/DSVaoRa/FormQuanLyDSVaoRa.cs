@@ -31,8 +31,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             panelContent.Controls.Add(form);
             form.Show();
 
-            buttonAnalog.ForeColor = Color.CornflowerBlue;
             buttonDigital.ForeColor = Color.White;
+            buttonAnalog.ForeColor = Color.CornflowerBlue;
         }
         void LoadFormDSAnalog()
         {
@@ -48,8 +48,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             form.FormBorderStyle = FormBorderStyle.None;
             panelContent.Controls.Add(form);
             form.Show();
-            buttonAnalog.ForeColor = Color.CornflowerBlue;
-            buttonDigital.ForeColor = Color.White;
+            buttonDigital.ForeColor = Color.CornflowerBlue;
+            buttonAnalog.ForeColor = Color.White;
         }
 
         private void buttonDigital_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 
         private void FormQuanLyDSVaoRa_Load(object sender, EventArgs e)
         {
-            LoadFormDSDigital();
+            LoadFormDSAnalog();
 
         }
     }

@@ -30,8 +30,8 @@
         {
             this.panel13 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonAnalog = new System.Windows.Forms.Button();
             this.buttonDigital = new System.Windows.Forms.Button();
+            this.buttonAnalog = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
             this.panel13.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -58,8 +58,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.92023F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.35446F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.7253F));
-            this.tableLayoutPanel3.Controls.Add(this.buttonAnalog, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonDigital, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonDigital, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonAnalog, 0, 0);
             this.tableLayoutPanel3.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -67,22 +67,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(2397, 56);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // buttonAnalog
-            // 
-            this.buttonAnalog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAnalog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAnalog.FlatAppearance.BorderSize = 0;
-            this.buttonAnalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAnalog.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonAnalog.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonAnalog.Location = new System.Drawing.Point(433, 4);
-            this.buttonAnalog.Name = "buttonAnalog";
-            this.buttonAnalog.Size = new System.Drawing.Size(457, 48);
-            this.buttonAnalog.TabIndex = 9;
-            this.buttonAnalog.Text = "Danh sách vào ra số";
-            this.buttonAnalog.UseVisualStyleBackColor = true;
-            this.buttonAnalog.Click += new System.EventHandler(this.buttonAnalog_Click);
             // 
             // buttonDigital
             // 
@@ -92,13 +76,29 @@
             this.buttonDigital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDigital.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonDigital.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDigital.Location = new System.Drawing.Point(4, 4);
+            this.buttonDigital.Location = new System.Drawing.Point(433, 4);
             this.buttonDigital.Name = "buttonDigital";
-            this.buttonDigital.Size = new System.Drawing.Size(422, 48);
-            this.buttonDigital.TabIndex = 10;
-            this.buttonDigital.Text = "Danh sách vào ra tương tự";
+            this.buttonDigital.Size = new System.Drawing.Size(457, 48);
+            this.buttonDigital.TabIndex = 9;
+            this.buttonDigital.Text = "Danh sách vào ra số";
             this.buttonDigital.UseVisualStyleBackColor = true;
-            this.buttonDigital.Click += new System.EventHandler(this.buttonDigital_Click);
+            this.buttonDigital.Click += new System.EventHandler(this.buttonAnalog_Click);
+            // 
+            // buttonAnalog
+            // 
+            this.buttonAnalog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAnalog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAnalog.FlatAppearance.BorderSize = 0;
+            this.buttonAnalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAnalog.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAnalog.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAnalog.Location = new System.Drawing.Point(4, 4);
+            this.buttonAnalog.Name = "buttonAnalog";
+            this.buttonAnalog.Size = new System.Drawing.Size(422, 48);
+            this.buttonAnalog.TabIndex = 10;
+            this.buttonAnalog.Text = "Danh sách vào ra tương tự";
+            this.buttonAnalog.UseVisualStyleBackColor = true;
+            this.buttonAnalog.Click += new System.EventHandler(this.buttonDigital_Click);
             // 
             // panelContent
             // 
@@ -129,8 +129,8 @@
 
         private Panel panel13;
         private TableLayoutPanel tableLayoutPanel3;
-        private Button buttonAnalog;
         private Button buttonDigital;
+        private Button buttonAnalog;
         private Panel panelContent;
     }
 }

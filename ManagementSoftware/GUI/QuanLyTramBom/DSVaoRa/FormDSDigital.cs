@@ -9,12 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ManagementSoftware.DAL.DALPagination;
-using ManagementSoftware.DAL;
 using ManagementSoftware.Models.TramBomNuoc;
 using System.Globalization;
-using ManagementSoftware.GUI;
 using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
+using Syncfusion.XPS;
 
 namespace QuanLyTramBom
 {
@@ -23,19 +21,17 @@ namespace QuanLyTramBom
         public FormDSDigital()
         {
             InitializeComponent();
-            LoadFormThongKe();
+            dataGridView1.RowTemplate.Height = 40;
+
         }
 
         private List<string>? listTinHieu = null;
-
-        // tổng số trang
 
         async void LoadFormThongKe()
         {
             PLCSMain plc = new PLCSMain();
 
             DataTable dt = new DataTable();
-            dt.Columns.Add("STT");
             dt.Columns.Add("Gắn thẻ");
             dt.Columns.Add("Điều kiện");
             dt.Columns.Add("Nhóm");
@@ -48,16 +44,17 @@ namespace QuanLyTramBom
 
             List<Digital>? list = await plc.GetListDataDigital(new DigitalCommon().ListAllDigitals);
 
+            List<bool> listCheckColor = new List<bool>();
             if (list != null && list.Count > 0)
             {
-                int i = 1;
                 if (this.listTinHieu == null)
                 {
                     foreach (Digital a in list)
                     {
                         string createAt = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                         string trangthai = a.TrangThai == true ? a.Bat : "0-" + a.Tat;
-                        dt.Rows.Add(i, a.GanThe, a.DieuKien, a.Nhom, a.TinHieu, trangthai, createAt, a.Bat, a.Tat);
+                        listCheckColor.Add(a.TrangThai);
+                        dt.Rows.Add(a.GanThe, a.DieuKien, a.Nhom, a.TinHieu, trangthai, createAt, a.Bat, a.Tat);
                     }
                 }
                 else
@@ -77,7 +74,8 @@ namespace QuanLyTramBom
                         {
                             string createAt = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                             string trangthai = a.TrangThai == true ? a.Bat : "0-" + a.Tat;
-                            dt.Rows.Add(i, a.GanThe, a.DieuKien, a.Nhom, a.TinHieu, trangthai, createAt, a.Bat, a.Tat);
+                            listCheckColor.Add(a.TrangThai);
+                            dt.Rows.Add(a.GanThe, a.DieuKien, a.Nhom, a.TinHieu, trangthai, createAt, a.Bat, a.Tat);
                         }
                     }
                 }
@@ -85,6 +83,32 @@ namespace QuanLyTramBom
 
 
             dataGridView1.DataSource = dt;
+            bool checkColor = false;
+            for (int i = 0; i < listCheckColor.Count; i++)
+            {
+                this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+
+                //dataGridView1.Rows[i].Cells[4].Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                if (checkColor == true)
+                {
+                    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSeaGreen;
+                }
+
+                if (listCheckColor[i] == true)
+                {
+                    dataGridView1.Rows[i].Cells[4].Style.BackColor = Color.Red;
+                    dataGridView1.Rows[i].Cells[4].Style.ForeColor = Color.White;
+                }
+                else
+                {
+                    dataGridView1.Rows[i].Cells[4].Style.BackColor = Color.LimeGreen;
+
+                }
+                checkColor = !checkColor;
+            }
 
         }
 

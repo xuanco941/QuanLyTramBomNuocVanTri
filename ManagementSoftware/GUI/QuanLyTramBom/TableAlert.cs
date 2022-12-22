@@ -21,6 +21,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         public TableAlert()
         {
             InitializeComponent();
+            dataGridView1.RowTemplate.Height = 40;
         }
 
         private void TableAlert_Load(object sender, EventArgs e)
@@ -71,6 +72,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             dataGridView1.DataSource = dt;
             //mo thanh search
             panelSearch.Enabled = true;
+
+            this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
 
         }
