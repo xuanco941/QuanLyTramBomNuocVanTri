@@ -31,7 +31,6 @@ namespace QuanLyTramBom
 
         async void LoadFormThongKe()
         {
-            PLCDigital plc = new PLCDigital();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("Gắn thẻ");
@@ -44,7 +43,7 @@ namespace QuanLyTramBom
             dt.Columns.Add("Tắt tên");
 
 
-            List<Digital>? list = await plc.GetListDataDigital(new DigitalCommon().ListAllDigitals);
+            List<Digital>? list = await PLCDigital.GetListDataDigital(new DigitalCommon().ListAllDigitals);
 
             List<bool> listCheckColor = new List<bool>();
             if (list != null && list.Count > 0)

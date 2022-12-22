@@ -105,10 +105,9 @@ namespace QuanLyTramBom
         }
         private async void timerGetNewAlert_Tick(object sender, EventArgs e)
         {
-            PLCAlert plc = new PLCAlert();
             if(AlertCurrent.Data!=null && AlertCurrent.Data.Count > 0)
             {
-                List<Alert>? listALl = await plc.GetListDataAlertTrue();
+                List<Alert>? listALl = await PLCAlert.GetListDataAlertTrue();
                 if (listALl != null)
                 {
                     foreach (var i in listALl)
@@ -125,7 +124,7 @@ namespace QuanLyTramBom
             }
             else
             {
-                AlertCurrent.Data = await plc.GetListDataAlertTrue();
+                AlertCurrent.Data = await PLCAlert.GetListDataAlertTrue();
             }
             if (AlertCurrent.Data != null && AlertCurrent.Data.Count > 0)
             {
@@ -141,6 +140,16 @@ namespace QuanLyTramBom
                     SetTextControl(labelDieuKien, alertERR.DieuKien);
                     SetTextControl(labelGiaTri, AlertCurrent.Data.Count.ToString());
                 }
+            }
+            else
+            {
+                SetTextControl(labelNgay,"");
+                SetTextControl(labelNhom, "");
+                SetTextControl(labelMoTa, "");
+                SetTextControl(labelGanThe, "");
+                SetTextControl(labelThoiGian, "");
+                SetTextControl(labelDieuKien, "");
+                SetTextControl(labelGiaTri, "");
             }
         }
 

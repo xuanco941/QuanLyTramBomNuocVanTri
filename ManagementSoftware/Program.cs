@@ -2,6 +2,7 @@
 using ManagementSoftware.GUI;
 using System.Diagnostics;
 using ManagementSoftware.AutoAddData;
+using ManagementSoftware.PLC;
 
 namespace ManagementSoftware
 {
@@ -33,10 +34,11 @@ namespace ManagementSoftware
             {
                 MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            PLCMain.plc.Open(); // open plc
 
-            DataAlertNews.StartTimer(2500);
-            DataAnalog.StartTimer(2000);
-            DataDigital.StartTimer(2000);
+            //new DataAlert().StartTimer(2000);
+            //new DataAnalog().StartTimer(2000);
+            //new DataDigital().StartTimer(2000);
 
 
             Application.Run(new Login());

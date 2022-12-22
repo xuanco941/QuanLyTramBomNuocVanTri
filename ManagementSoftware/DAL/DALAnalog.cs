@@ -17,7 +17,7 @@ namespace ManagementSoftware.DAL
             dbContext.SaveChanges();
         }
 
-        public static async void AddRange(List<Analog> list)
+        public static async Task AddRange(List<Analog> list)
         {
             DataBaseContext dbContext = new DataBaseContext();
             await dbContext.Analogs.AddRangeAsync(list);

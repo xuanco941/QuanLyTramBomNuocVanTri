@@ -29,8 +29,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 
         async void LoadFormThongKe()
         {
-            PLCAnalog plc = new PLCAnalog();
-
             DataTable dt = new DataTable();
             dt.Columns.Add("%");
             dt.Columns.Add("Gắn thẻ");
@@ -44,7 +42,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             dt.Columns.Add("Giá trị nhỏ nhất");
 
 
-            List<Analog>? list = await plc.GetListDataAnalog(new AnalogCommon().listAllAnalogs);
+            List<Analog>? list = await PLCAnalog.GetListDataAnalog(new AnalogCommon().listAllAnalogs);
 
             if (list != null && list.Count > 0)
             {

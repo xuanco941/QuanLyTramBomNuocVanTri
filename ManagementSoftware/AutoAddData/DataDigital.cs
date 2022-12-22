@@ -12,29 +12,21 @@ namespace ManagementSoftware.AutoAddData
 {
     public class DataDigital
     {
-        static PLCDigital plcMain = new PLCDigital();
-        public static System.Timers.Timer timer;
+        public System.Timers.Timer timer;
 
-        public DataDigital()
+        async Task SaveData()
         {
-            plcMain = new PLCDigital();
-            timer = new System.Timers.Timer();
-            timer.Interval = 60000;
-            timer.Elapsed += MyTimer_Tick;
+            List<Digital>? l = await PLCDigital.GetListDataDigital(new DigitalCommon().ListAllDigitals);
+            if (l != null && l.Count > 0)
+            {
+                await DALDigital.AddRange(l);
+            }
         }
         private async void MyTimer_Tick(object sender, EventArgs e)
         {
-            if (await plcMain.Open() == 0)
-            {
-                List<Digital>? l = await plcMain.GetListDataDigital(new DigitalCommon().ListAllDigitals);
-                if (l != null && l.Count > 0)
-                {
-                    DALDigital.AddRange(l);
-                }
-                await plcMain.Close();
-            }
+            await SaveData();
         }
-        public static void StopTimer()
+        public void StopTimer()
         {
             if (timer != null && timer.Enabled == true)
             {
@@ -42,14 +34,11 @@ namespace ManagementSoftware.AutoAddData
                 timer.Dispose();
             }
         }
-        public static void StartTimer(int timeInterval)
+        public void StartTimer(int timeInterval)
         {
-            new Thread(() =>
-            {
-                timer = new System.Timers.Timer();
-                timer.Interval = timeInterval;
-                timer.Start();
-            }).Start();
+            timer = new System.Timers.Timer();
+            timer.Interval = timeInterval;
+            timer.Start();
         }
     }
 }
