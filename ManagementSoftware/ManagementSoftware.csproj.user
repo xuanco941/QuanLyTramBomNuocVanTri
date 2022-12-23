@@ -76,6 +76,9 @@
     <Compile Update="GUI\QuanLyTramBom\TableAlert.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\ToanCanhTramBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Section\FormStringConnectDatabase.cs">
       <SubType>Form</SubType>
     </Compile>

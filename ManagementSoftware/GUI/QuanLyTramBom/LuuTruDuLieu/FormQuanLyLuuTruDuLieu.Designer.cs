@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panelContent = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonDigital = new System.Windows.Forms.Button();
-            this.buttonAnalog = new System.Windows.Forms.Button();
-            this.panel13.SuspendLayout();
+            this.buttonBaoCaoNam = new System.Windows.Forms.Button();
+            this.buttonLuuTruHoatDong = new System.Windows.Forms.Button();
+            this.buttonLuocSuKhuynhHuong = new System.Windows.Forms.Button();
+            this.buttonLuuTruLoi = new System.Windows.Forms.Button();
+            this.buttonBaoCaoThang = new System.Windows.Forms.Button();
+            this.buttonBaoCaoNgay = new System.Windows.Forms.Button();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,21 +43,10 @@
             // 
             this.panelContent.BackColor = System.Drawing.Color.LightGray;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 56);
+            this.panelContent.Location = new System.Drawing.Point(0, 0);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1252, 436);
+            this.panelContent.Size = new System.Drawing.Size(1252, 492);
             this.panelContent.TabIndex = 15;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(75)))), ((int)(((byte)(103)))));
-            this.panel13.Controls.Add(this.tableLayoutPanel3);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Margin = new System.Windows.Forms.Padding(0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1252, 56);
-            this.panel13.TabIndex = 14;
             // 
             // tableLayoutPanel3
             // 
@@ -68,57 +59,120 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Controls.Add(this.buttonDigital, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonAnalog, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonBaoCaoNgay, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonBaoCaoThang, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonLuuTruLoi, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonLuocSuKhuynhHuong, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonBaoCaoNam, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonLuuTruHoatDong, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1252, 56);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1252, 40);
+            this.tableLayoutPanel3.TabIndex = 16;
             // 
-            // buttonDigital
+            // buttonBaoCaoNam
             // 
-            this.buttonDigital.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDigital.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDigital.FlatAppearance.BorderSize = 0;
-            this.buttonDigital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDigital.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonDigital.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDigital.Location = new System.Drawing.Point(212, 4);
-            this.buttonDigital.Name = "buttonDigital";
-            this.buttonDigital.Size = new System.Drawing.Size(201, 48);
-            this.buttonDigital.TabIndex = 9;
-            this.buttonDigital.Text = "Danh sách vào ra số";
-            this.buttonDigital.UseVisualStyleBackColor = true;
+            this.buttonBaoCaoNam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBaoCaoNam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonBaoCaoNam.FlatAppearance.BorderSize = 0;
+            this.buttonBaoCaoNam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBaoCaoNam.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoNam.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.buttonBaoCaoNam.Location = new System.Drawing.Point(1044, 4);
+            this.buttonBaoCaoNam.Name = "buttonBaoCaoNam";
+            this.buttonBaoCaoNam.Size = new System.Drawing.Size(204, 32);
+            this.buttonBaoCaoNam.TabIndex = 9;
+            this.buttonBaoCaoNam.Text = "Báo cáo năm";
+            this.buttonBaoCaoNam.UseVisualStyleBackColor = true;
             // 
-            // buttonAnalog
+            // buttonLuuTruHoatDong
             // 
-            this.buttonAnalog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAnalog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAnalog.FlatAppearance.BorderSize = 0;
-            this.buttonAnalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAnalog.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonAnalog.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonAnalog.Location = new System.Drawing.Point(4, 4);
-            this.buttonAnalog.Name = "buttonAnalog";
-            this.buttonAnalog.Size = new System.Drawing.Size(201, 48);
-            this.buttonAnalog.TabIndex = 10;
-            this.buttonAnalog.Text = "Danh sách vào ra tương tự";
-            this.buttonAnalog.UseVisualStyleBackColor = true;
+            this.buttonLuuTruHoatDong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLuuTruHoatDong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonLuuTruHoatDong.FlatAppearance.BorderSize = 0;
+            this.buttonLuuTruHoatDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLuuTruHoatDong.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLuuTruHoatDong.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.buttonLuuTruHoatDong.Location = new System.Drawing.Point(212, 4);
+            this.buttonLuuTruHoatDong.Name = "buttonLuuTruHoatDong";
+            this.buttonLuuTruHoatDong.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuuTruHoatDong.TabIndex = 10;
+            this.buttonLuuTruHoatDong.Text = "Lưu trữ hoạt động";
+            this.buttonLuuTruHoatDong.UseVisualStyleBackColor = true;
+            // 
+            // buttonLuocSuKhuynhHuong
+            // 
+            this.buttonLuocSuKhuynhHuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLuocSuKhuynhHuong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonLuocSuKhuynhHuong.FlatAppearance.BorderSize = 0;
+            this.buttonLuocSuKhuynhHuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLuocSuKhuynhHuong.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLuocSuKhuynhHuong.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.buttonLuocSuKhuynhHuong.Location = new System.Drawing.Point(4, 4);
+            this.buttonLuocSuKhuynhHuong.Name = "buttonLuocSuKhuynhHuong";
+            this.buttonLuocSuKhuynhHuong.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuocSuKhuynhHuong.TabIndex = 11;
+            this.buttonLuocSuKhuynhHuong.Text = "Lược sử khuynh hướng";
+            this.buttonLuocSuKhuynhHuong.UseVisualStyleBackColor = true;
+            // 
+            // buttonLuuTruLoi
+            // 
+            this.buttonLuuTruLoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLuuTruLoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonLuuTruLoi.FlatAppearance.BorderSize = 0;
+            this.buttonLuuTruLoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLuuTruLoi.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLuuTruLoi.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.buttonLuuTruLoi.Location = new System.Drawing.Point(420, 4);
+            this.buttonLuuTruLoi.Name = "buttonLuuTruLoi";
+            this.buttonLuuTruLoi.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuuTruLoi.TabIndex = 12;
+            this.buttonLuuTruLoi.Text = "Lưu trữ lỗi";
+            this.buttonLuuTruLoi.UseVisualStyleBackColor = true;
+            // 
+            // buttonBaoCaoThang
+            // 
+            this.buttonBaoCaoThang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBaoCaoThang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonBaoCaoThang.FlatAppearance.BorderSize = 0;
+            this.buttonBaoCaoThang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBaoCaoThang.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoThang.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.buttonBaoCaoThang.Location = new System.Drawing.Point(836, 4);
+            this.buttonBaoCaoThang.Name = "buttonBaoCaoThang";
+            this.buttonBaoCaoThang.Size = new System.Drawing.Size(201, 32);
+            this.buttonBaoCaoThang.TabIndex = 13;
+            this.buttonBaoCaoThang.Text = "Báo cáo tháng";
+            this.buttonBaoCaoThang.UseVisualStyleBackColor = true;
+            // 
+            // buttonBaoCaoNgay
+            // 
+            this.buttonBaoCaoNgay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBaoCaoNgay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonBaoCaoNgay.FlatAppearance.BorderSize = 0;
+            this.buttonBaoCaoNgay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBaoCaoNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoNgay.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.buttonBaoCaoNgay.Location = new System.Drawing.Point(628, 4);
+            this.buttonBaoCaoNgay.Name = "buttonBaoCaoNgay";
+            this.buttonBaoCaoNgay.Size = new System.Drawing.Size(201, 32);
+            this.buttonBaoCaoNgay.TabIndex = 14;
+            this.buttonBaoCaoNgay.Text = "Báo cáo ngày";
+            this.buttonBaoCaoNgay.UseVisualStyleBackColor = true;
             // 
             // FormQuanLyLuuTruDuLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1252, 492);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.panelContent);
-            this.Controls.Add(this.panel13);
             this.Name = "FormQuanLyLuuTruDuLieu";
             this.Text = "FormQuanLyLuuTruDuLieu";
-            this.panel13.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -127,9 +181,12 @@
         #endregion
 
         private Panel panelContent;
-        private Panel panel13;
         private TableLayoutPanel tableLayoutPanel3;
-        private Button buttonDigital;
-        private Button buttonAnalog;
+        private Button buttonBaoCaoNam;
+        private Button buttonLuuTruHoatDong;
+        private Button buttonBaoCaoNgay;
+        private Button buttonBaoCaoThang;
+        private Button buttonLuuTruLoi;
+        private Button buttonLuocSuKhuynhHuong;
     }
 }

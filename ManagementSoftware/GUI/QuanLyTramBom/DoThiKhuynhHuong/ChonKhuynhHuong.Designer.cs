@@ -44,7 +44,6 @@
             this.btnChangeNumElmPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeNumElmPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnChangeNumElmPage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            
             this.btnChangeNumElmPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChangeNumElmPage.Location = new System.Drawing.Point(10, 57);
             this.btnChangeNumElmPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -62,7 +61,6 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(10, 105);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -81,7 +79,6 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-       
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.Location = new System.Drawing.Point(10, 10);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -164,6 +161,7 @@
             this.Controls.Add(this.btnChangeNumElmPage);
             this.Name = "ChonKhuynhHuong";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

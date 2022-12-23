@@ -28,52 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnChangeNumElmPage = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonLuocSuKhuynhHuong = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // tableLayoutPanel3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hiển thị nhóm";
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(75)))), ((int)(((byte)(103)))));
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.buttonLuocSuKhuynhHuong, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(800, 40);
+            this.tableLayoutPanel3.TabIndex = 17;
             // 
-            // btnChangeNumElmPage
+            // buttonLuocSuKhuynhHuong
             // 
-            this.btnChangeNumElmPage.BackColor = System.Drawing.SystemColors.Control;
-            this.btnChangeNumElmPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangeNumElmPage.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnChangeNumElmPage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnChangeNumElmPage.Image = global::ManagementSoftware.Properties.Resources.check;
-            this.btnChangeNumElmPage.Location = new System.Drawing.Point(250, 12);
-            this.btnChangeNumElmPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnChangeNumElmPage.Name = "btnChangeNumElmPage";
-            this.btnChangeNumElmPage.Size = new System.Drawing.Size(140, 35);
-            this.btnChangeNumElmPage.TabIndex = 21;
-            this.btnChangeNumElmPage.Text = "Thiết lập";
-            this.btnChangeNumElmPage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChangeNumElmPage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnChangeNumElmPage.UseVisualStyleBackColor = false;
-            this.btnChangeNumElmPage.Click += new System.EventHandler(this.btnChangeNumElmPage_Click);
+            this.buttonLuocSuKhuynhHuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLuocSuKhuynhHuong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonLuocSuKhuynhHuong.FlatAppearance.BorderSize = 0;
+            this.buttonLuocSuKhuynhHuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLuocSuKhuynhHuong.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLuocSuKhuynhHuong.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.buttonLuocSuKhuynhHuong.Location = new System.Drawing.Point(4, 4);
+            this.buttonLuocSuKhuynhHuong.Name = "buttonLuocSuKhuynhHuong";
+            this.buttonLuocSuKhuynhHuong.Size = new System.Drawing.Size(792, 32);
+            this.buttonLuocSuKhuynhHuong.TabIndex = 11;
+            this.buttonLuocSuKhuynhHuong.Text = "Khuynh hướng thời gian thực";
+            this.buttonLuocSuKhuynhHuong.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.chartControl1);
-            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 341);
-            this.panel1.TabIndex = 22;
+            this.panel1.Size = new System.Drawing.Size(800, 62);
+            this.panel1.TabIndex = 18;
             // 
             // chartControl1
             // 
@@ -86,15 +90,14 @@
             // 
             this.chartControl1.Legend.Location = new System.Drawing.Point(691, 75);
             this.chartControl1.Localize = null;
-            this.chartControl1.Location = new System.Drawing.Point(0, 0);
+            this.chartControl1.Location = new System.Drawing.Point(0, 102);
             this.chartControl1.Name = "chartControl1";
-            this.chartControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.chartControl1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryXAxis.Margin = true;
             this.chartControl1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryYAxis.Margin = true;
-            this.chartControl1.Size = new System.Drawing.Size(800, 341);
-            this.chartControl1.TabIndex = 0;
+            this.chartControl1.Size = new System.Drawing.Size(800, 348);
+            this.chartControl1.TabIndex = 19;
             this.chartControl1.Text = "chartControl1";
             // 
             // 
@@ -103,52 +106,26 @@
             this.chartControl1.Titles.Add(this.chartControl1.Title);
             this.chartControl1.VisualTheme = "";
             // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button26.Location = new System.Drawing.Point(111, 12);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(132, 35);
-            this.button26.TabIndex = 22;
-            this.button26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(653, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormKHThoiGianThuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button26);
+            this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnChangeNumElmPage);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Name = "FormKHThoiGianThuc";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.Text = "FormKHThoiGianThuc";
-            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Label label1;
-        private Button btnChangeNumElmPage;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Button buttonLuocSuKhuynhHuong;
         private Panel panel1;
         private Syncfusion.Windows.Forms.Chart.ChartControl chartControl1;
-        private Button button26;
-        private Button button1;
     }
 }

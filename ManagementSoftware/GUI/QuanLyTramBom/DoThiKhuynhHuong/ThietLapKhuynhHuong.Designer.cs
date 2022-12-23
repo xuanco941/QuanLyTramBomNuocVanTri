@@ -807,6 +807,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormCaiDatDoThiKhuynhHuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thiết lập";
             this.Load += new System.EventHandler(this.FormCaiDatDoThiKhuynhHuong_Load);
             this.groupBox1.ResumeLayout(false);
