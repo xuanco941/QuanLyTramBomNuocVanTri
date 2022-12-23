@@ -121,6 +121,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormDSDigital";
             this.Text = "FormDSVaoRaSo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDSDigital_FormClosing);
             this.Load += new System.EventHandler(this.FormDSDigital_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

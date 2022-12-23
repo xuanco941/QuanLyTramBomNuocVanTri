@@ -13,20 +13,24 @@ namespace ManagementSoftware.AutoAddData
     public class DataAnalog
     {
         public System.Timers.Timer timer;
-
-        async Task SaveData()
+        public PLCAnalog plc;
+        public DataAnalog()
         {
-            List<Analog>? l = await PLCAnalog.GetListDataAnalog(new AnalogCommon().listAllAnalogs);
+            plc = new PLCAnalog();
+        }
+
+        async void SaveData()
+        {
+            List<Analog>? l = await plc.GetListDataAnalog(new AnalogCommon().listAllAnalogs);
             if (l != null && l.Count > 0)
             {
-
                 await DALAnalog.AddRange(l);
             }
         }
 
-        private async void MyTimer_Tick(object sender, EventArgs e)
+        private void MyTimer_Tick(object sender, EventArgs e)
         {
-            await SaveData();
+             SaveData();
         }
         public void StopTimer()
         {
@@ -34,10 +38,12 @@ namespace ManagementSoftware.AutoAddData
             {
                 timer.Stop();
                 timer.Dispose();
+                plc?.Close();
             }
         }
         public void StartTimer(int timeInterval)
         {
+            plc?.Open();
             timer = new System.Timers.Timer();
             timer.Elapsed += MyTimer_Tick;
             timer.Interval = timeInterval;

@@ -13,18 +13,23 @@ namespace ManagementSoftware.AutoAddData
     public class DataDigital
     {
         public System.Timers.Timer timer;
-
-        async Task SaveData()
+        public PLCDigital plc;
+        public DataDigital()
         {
-            List<Digital>? l = await PLCDigital.GetListDataDigital(new DigitalCommon().ListAllDigitals);
+            plc = new PLCDigital();
+        }
+
+        async void SaveData()
+        {
+            List<Digital>? l = await plc.GetListDataDigital(new DigitalCommon().ListAllDigitals);
             if (l != null && l.Count > 0)
             {
                 await DALDigital.AddRange(l);
             }
         }
-        private async void MyTimer_Tick(object sender, EventArgs e)
+        private void MyTimer_Tick(object sender, EventArgs e)
         {
-            await SaveData();
+            SaveData();
         }
         public void StopTimer()
         {
@@ -32,11 +37,14 @@ namespace ManagementSoftware.AutoAddData
             {
                 timer.Stop();
                 timer.Dispose();
+                plc?.Close();
             }
         }
         public void StartTimer(int timeInterval)
         {
+            plc?.Open();
             timer = new System.Timers.Timer();
+            timer.Elapsed += MyTimer_Tick;
             timer.Interval = timeInterval;
             timer.Start();
         }

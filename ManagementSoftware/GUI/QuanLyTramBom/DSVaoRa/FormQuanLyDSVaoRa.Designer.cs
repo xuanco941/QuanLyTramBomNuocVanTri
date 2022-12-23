@@ -39,9 +39,9 @@
             // 
             this.panelContent.BackColor = System.Drawing.Color.LightGray;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 45);
+            this.panelContent.Location = new System.Drawing.Point(0, 40);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(963, 349);
+            this.panelContent.Size = new System.Drawing.Size(963, 354);
             this.panelContent.TabIndex = 18;
             // 
             // tableLayoutPanel1
@@ -60,7 +60,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(963, 45);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(963, 40);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
             // buttonDigital
@@ -73,7 +73,7 @@
             this.buttonDigital.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonDigital.Location = new System.Drawing.Point(340, 4);
             this.buttonDigital.Name = "buttonDigital";
-            this.buttonDigital.Size = new System.Drawing.Size(329, 37);
+            this.buttonDigital.Size = new System.Drawing.Size(329, 32);
             this.buttonDigital.TabIndex = 9;
             this.buttonDigital.Text = "Danh sách vào ra số";
             this.buttonDigital.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             this.buttonAnalog.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonAnalog.Location = new System.Drawing.Point(4, 4);
             this.buttonAnalog.Name = "buttonAnalog";
-            this.buttonAnalog.Size = new System.Drawing.Size(329, 37);
+            this.buttonAnalog.Size = new System.Drawing.Size(329, 32);
             this.buttonAnalog.TabIndex = 10;
             this.buttonAnalog.Text = "Danh sách vào ra tương tự";
             this.buttonAnalog.UseVisualStyleBackColor = true;

@@ -24,12 +24,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             InitializeComponent();
 
             listAllAnalog = new DigitalCommon().ListAllDigitals;
-            comboBoxNhomBom.DataSource = new List<string>() { "Tất cả", NhomBom.Chung, NhomBom.Bom1, NhomBom.Bom2, NhomBom.Bom3, NhomBom.Bom4 };
             comboBoxDieuKien.DataSource = new List<string>() { "DPS" };
-            foreach (var item in listAllAnalog)
-            {
-                checkedListBox1.Items.Add(item.TinHieu);
-            }
+            comboBoxNhomBom.DataSource = new List<string>() { "Tất cả", NhomBom.Chung, NhomBom.Bom1, NhomBom.Bom2, NhomBom.Bom3, NhomBom.Bom4 };
+
 
         }
 

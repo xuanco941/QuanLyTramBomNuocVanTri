@@ -10,20 +10,22 @@ namespace ManagementSoftware.AutoAddData
     public class DataAlert
     {
         public System.Timers.Timer timer;
+        PLCAlert plc;
+        public DataAlert() {
+            plc = new PLCAlert();
+        }
 
-        async Task SaveData()
+        async void SaveData()
         {
-            List<Alert>? l = await PLCAlert.GetListDataAlert(new AlertCommon().ListAllAlerts);
-            System.Diagnostics.Debug.WriteLine(l.Count + "Counttttttttttttttt");
+            List<Alert>? l = await plc.GetListDataAlert(new AlertCommon().ListAllAlerts);
             if (l != null && l.Count > 0)
             {
-
                 await DALAlert.AddRange(l);
             }
         }
-        private async void MyTimer_Tick(object sender, EventArgs e)
+        private void MyTimer_Tick(object sender, EventArgs e)
         {
-            await SaveData();
+            SaveData();
 
         }
         public void StopTimer()
@@ -32,10 +34,12 @@ namespace ManagementSoftware.AutoAddData
             {
                 timer.Stop();
                 timer.Dispose();
+                plc?.Close();
             }
         }
         public void StartTimer(int timeInterval)
         {
+            plc?.Open();
             timer = new System.Timers.Timer();
             timer.Elapsed += MyTimer_Tick;
             timer.Interval = timeInterval;

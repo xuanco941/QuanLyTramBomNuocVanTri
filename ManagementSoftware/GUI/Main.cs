@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManagementSoftware.AutoAddData;
 using ManagementSoftware.GUI.Section;
 using QuanLyTramBom;
 
@@ -18,7 +19,7 @@ namespace ManagementSoftware.GUI
         public Main()
         {
             InitializeComponent();
-         
+
         }
 
 

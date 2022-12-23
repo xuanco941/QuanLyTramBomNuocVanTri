@@ -10,9 +10,14 @@ namespace ManagementSoftware.PLC
 {
     public class PLCMain
     {
-        public static ActUtlType plc = new ActUtlType() { ActLogicalStationNumber = 1};
+        public ActUtlType plc;
+        public PLCMain()
+        {
+            this.plc = new ActUtlType();
+            plc.ActLogicalStationNumber = 1;
+        }
 
-        public static async Task<int> Open()
+        public async Task<int> Open()
         {
             Func<int> func = () =>
             {
@@ -24,7 +29,7 @@ namespace ManagementSoftware.PLC
 
             return task.Result;
         }
-        public static async Task<int> Close()
+        public async Task<int> Close()
         {
             Func<int> func = () =>
             {
@@ -39,7 +44,7 @@ namespace ManagementSoftware.PLC
 
 
         //truy van du lieu 1 o nho
-        public static async Task<int?> Query(string addr)
+        public async Task<int?> Query(string addr)
         {
             Func<int?> func = () =>
             {

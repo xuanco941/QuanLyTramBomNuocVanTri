@@ -7,7 +7,6 @@ using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
 using Syncfusion.Windows.Forms.Tools;
 using System.Globalization;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace QuanLyTramBom
 {
@@ -113,11 +112,14 @@ namespace QuanLyTramBom
             }
 
         }
+
+
+        PLCAlert plcAlert = new PLCAlert();
         private async void timerGetNewAlert_Tick(object sender, EventArgs e)
         {
             if(AlertCurrent.Data!=null && AlertCurrent.Data.Count > 0)
             {
-                List<Alert>? listALl = await PLCAlert.GetListDataAlertTrue();
+                List<Alert>? listALl = await plcAlert.GetListDataAlertTrue();
                 if (listALl != null)
                 {
                     foreach (var i in listALl)
@@ -134,7 +136,7 @@ namespace QuanLyTramBom
             }
             else
             {
-                AlertCurrent.Data = await PLCAlert.GetListDataAlertTrue();
+                AlertCurrent.Data = await plcAlert.GetListDataAlertTrue();
             }
             if (AlertCurrent.Data != null && AlertCurrent.Data.Count > 0)
             {

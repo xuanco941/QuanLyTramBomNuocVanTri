@@ -34,11 +34,21 @@ namespace ManagementSoftware
             {
                 MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            PLCMain.plc.Open(); // open plc
 
-            //new DataAlert().StartTimer(2000);
-            //new DataAnalog().StartTimer(2000);
-            //new DataDigital().StartTimer(2000);
+            new Thread(() =>
+            {
+                new DataAlert().StartTimer(60000);
+
+            }).Start();
+            new Thread(() =>
+            {
+                new DataAnalog().StartTimer(60000);
+
+            }).Start();
+            new Thread(() =>
+            {
+                new DataDigital().StartTimer(60000);
+            }).Start();
 
 
             Application.Run(new Login());

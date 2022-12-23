@@ -18,16 +18,21 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 {
     public partial class FormDSAnalog : Form
     {
+        PLCAnalog plcAnalog;
         public FormDSAnalog()
         {
             InitializeComponent();
 
             dataGridView1.RowTemplate.Height = 40;
+            plcAnalog = new PLCAnalog();
+
 
         }
 
-        private void FormDSAnalog_Load(object sender, EventArgs e)
+        private async void FormDSAnalog_Load(object sender, EventArgs e)
         {
+            await plcAnalog.Open();
+
             DataGridViewProgressColumn columnProgress = new DataGridViewProgressColumn();
             columnProgress.HeaderText = "Value/Max";
 
@@ -130,7 +135,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 
             if (this.listTinHieu == null)
             {
-                Show(await PLCAnalog.GetListDataAnalog(new AnalogCommon().listAllAnalogs));
+                Show(await plcAnalog.GetListDataAnalog(new AnalogCommon().listAllAnalogs));
             }
             else
             {
@@ -146,7 +151,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
                 }
                 if (listLoc != null && listLoc.Count > 0)
                 {
-                    Show(await PLCAnalog.GetListDataAnalog(listLoc));
+                    Show(await plcAnalog.GetListDataAnalog(listLoc));
                 }
             }
         }
@@ -171,100 +176,16 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             form.ShowDialog();
         }
 
+        private async void FormDSAnalog_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            await plcAnalog.Close();
+        }
 
 
 
 
 
 
-
-
-
-
-
-
-
-        //async void LoadFormThongKe()
-        //{
-        //    DataTable dt = new DataTable();
-        //    dt.Columns.Add("%");
-        //    dt.Columns.Add("Gắn thẻ");
-        //    dt.Columns.Add("Điều kiện");
-        //    dt.Columns.Add("Nhóm");
-        //    dt.Columns.Add("Tín hiệu");
-        //    dt.Columns.Add("Giá trị dòng");
-        //    dt.Columns.Add("Thời gian");
-        //    dt.Columns.Add("Đơn vị");
-        //    dt.Columns.Add("Giá trị lớn nhất");
-        //    dt.Columns.Add("Giá trị nhỏ nhất");
-
-
-        //    List<Analog>? list = await PLCAnalog.GetListDataAnalog(new AnalogCommon().listAllAnalogs);
-
-        //    if (list != null && list.Count > 0)
-        //    {
-        //        int i = 1;
-        //        if (this.listTinHieu == null)
-        //        {
-        //            foreach (Analog a in list)
-        //            {
-        //                string createAt = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-        //                dt.Rows.Add(i, a.GanThe, a.DieuKien, a.Nhom, a.TinHieu, a.GiaTriDong, createAt, a.DonVi, a.GiaTriLonNhat, a.GiaTriNhoNhat);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            List<Analog>? listLoc = new List<Analog>();
-        //            foreach (string tinhieu in listTinHieu)
-        //            {
-        //                Analog? d = list.Where(d2 => d2.TinHieu == tinhieu).FirstOrDefault();
-        //                if (d != null)
-        //                {
-        //                    listLoc.Add(d);
-        //                }
-        //            }
-        //            if (listLoc != null && listLoc.Count > 0)
-        //            {
-        //                foreach (Analog a in listLoc)
-        //                {
-        //                    string createAt = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
-        //                    dt.Rows.Add(i, a.GanThe, a.DieuKien, a.Nhom, a.TinHieu, a.GiaTriDong, createAt, a.DonVi, a.GiaTriLonNhat, a.GiaTriNhoNhat);
-        //                }
-        //            }
-        //        }
-        //    }
-
-
-
-        //    if (IsHandleCreated)
-        //    {
-        //        BeginInvoke(() =>
-        //        {
-        //            dataGridView1.DataSource = dt;
-
-        //            bool checkColor = false;
-        //            foreach (DataGridViewRow row in dataGridView1.Rows)
-        //            {
-        //                this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //                this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        //                this.dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-        //                if (checkColor == true)
-        //                {
-        //                    row.DefaultCellStyle.BackColor = Color.PaleGreen;
-        //                }
-        //                checkColor = !checkColor;
-        //            }
-        //        });
-        //        return;
-
-
-
-        //    }
-
-
-
-        //}
 
 
 

@@ -10,11 +10,11 @@ namespace ManagementSoftware.DAL
 {
     public class DALAnalog
     {
-        public static void Add(Analog d)
+        public static async Task Add(Analog d)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            dbContext.Analogs.Add(d);
-            dbContext.SaveChanges();
+            await dbContext.Analogs.AddAsync(d);
+            await dbContext.SaveChangesAsync();
         }
 
         public static async Task AddRange(List<Analog> list)

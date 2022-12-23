@@ -1,4 +1,5 @@
-﻿using ManagementSoftware.BUS;
+﻿using ManagementSoftware.AutoAddData;
+using ManagementSoftware.BUS;
 using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models;
 using System;
@@ -21,6 +22,7 @@ namespace ManagementSoftware.GUI
             InitializeComponent();
             this.ActiveControl = textBoxTaiKhoan;
             //buttonChangeStringConnect.Enabled = false;
+
         }
 
 

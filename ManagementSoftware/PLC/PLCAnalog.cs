@@ -1,4 +1,5 @@
-﻿using ManagementSoftware.Models.TramBomNuoc;
+﻿using ActUtlTypeLib;
+using ManagementSoftware.Models.TramBomNuoc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace ManagementSoftware.PLC
 {
-    public class PLCAnalog
+    public class PLCAnalog : PLCMain
     {
+
         //get list analog
-        public static async Task<List<Analog>?> GetListDataAnalog(List<Analog> list)
+        public async Task<List<Analog>?> GetListDataAnalog(List<Analog> list)
         {
             List<Analog> result = new List<Analog>();
             foreach (Analog a in list)
             {
-                int? tempL = await PLCMain.Query(a.DiaChiPLC);
+                int? tempL = await Query(a.DiaChiPLC);
                 char[] addrChar = a.DiaChiPLC.ToCharArray();
                 string x = "";
                 string y = addrChar[0].ToString();
@@ -24,7 +26,7 @@ namespace ManagementSoftware.PLC
                     x = x + addrChar[i];
                 }
                 y = y + (int.Parse(x) + 1);
-                int? tempH = await PLCMain.Query(y);
+                int? tempH = await Query(y);
 
                 if (tempL != null && tempH != null)
                 {
@@ -38,9 +40,9 @@ namespace ManagementSoftware.PLC
 
         }
         //Get a analog (chưa open plc)
-        public static async Task<Analog?> GetAnAnalog(Analog analog)
+        public async Task<Analog?> GetAnAnalog(Analog analog)
         {
-            int? tempL = await PLCMain.Query(analog.DiaChiPLC);
+            int? tempL = await Query(analog.DiaChiPLC);
             char[] addrChar = analog.DiaChiPLC.ToCharArray();
             string x = "";
             string y = addrChar[0].ToString();
@@ -49,7 +51,7 @@ namespace ManagementSoftware.PLC
                 x = x + addrChar[i];
             }
             y = y + (int.Parse(x) + 1);
-            int? tempH = await PLCMain.Query(y);
+            int? tempH = await Query(y);
 
             if (tempL != null && tempH != null)
             {
@@ -65,5 +67,6 @@ namespace ManagementSoftware.PLC
             }
 
         }
+
     }
 }
