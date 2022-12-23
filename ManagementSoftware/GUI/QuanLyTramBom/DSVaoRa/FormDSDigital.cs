@@ -11,10 +11,7 @@ using System.Windows.Forms;
 using ManagementSoftware.Models.TramBomNuoc;
 using System.Globalization;
 using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
-using Syncfusion.XPS;
 using ManagementSoftware.PLC;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-using Syncfusion.Windows.Forms.Tools;
 
 namespace QuanLyTramBom
 {

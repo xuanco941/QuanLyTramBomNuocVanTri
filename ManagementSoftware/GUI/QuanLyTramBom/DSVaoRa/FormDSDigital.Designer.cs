@@ -90,7 +90,7 @@
             this.panelThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelThongKe.Location = new System.Drawing.Point(0, 40);
             this.panelThongKe.Name = "panelThongKe";
-            this.panelThongKe.Size = new System.Drawing.Size(800, 370);
+            this.panelThongKe.Size = new System.Drawing.Size(800, 410);
             this.panelThongKe.TabIndex = 22;
             // 
             // dataGridView1
@@ -133,7 +133,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(798, 368);
+            this.dataGridView1.Size = new System.Drawing.Size(798, 408);
             this.dataGridView1.TabIndex = 25;
             // 
             // FormDSDigital
@@ -144,7 +144,6 @@
             this.Controls.Add(this.panelThongKe);
             this.Controls.Add(this.panel1);
             this.Name = "FormDSDigital";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
             this.Text = "FormDSVaoRaSo";
             this.Load += new System.EventHandler(this.FormDSDigital_Load);
             this.panel1.ResumeLayout(false);

@@ -120,7 +120,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 370);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 410);
             this.dataGridView1.TabIndex = 24;
             // 
             // FormDSAnalog
@@ -131,7 +131,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "FormDSAnalog";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
             this.Text = "FormDSAnalag";
             this.Load += new System.EventHandler(this.FormDSAnalog_Load);
             this.panel1.ResumeLayout(false);

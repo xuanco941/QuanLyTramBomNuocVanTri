@@ -72,6 +72,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelContent3 = new System.Windows.Forms.Panel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelContentToanCanh = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -94,6 +95,7 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel16.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -109,7 +111,7 @@
             this.clock1.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
             this.clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Analog;
             this.clock1.CurrentDateTime = new System.DateTime(2022, 12, 20, 15, 55, 40, 628);
-            this.clock1.CustomTime = new System.DateTime(2022, 12, 22, 13, 8, 30, 150);
+            this.clock1.CustomTime = new System.DateTime(2022, 12, 22, 16, 0, 22, 56);
             this.clock1.DigitalRenderer = digitalClockRenderer2;
             this.clock1.DisplayDates = true;
             this.clock1.Location = new System.Drawing.Point(1259, 0);
@@ -628,7 +630,7 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.panelContentToanCanh);
+            this.tabPage1.Controls.Add(this.tableLayoutPanel3);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
@@ -637,15 +639,30 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Màn hình đồ họa";
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.Controls.Add(this.panelContentToanCanh, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 65);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1334, 527);
+            this.tableLayoutPanel3.TabIndex = 9;
+            // 
             // panelContentToanCanh
             // 
-            this.panelContentToanCanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContentToanCanh.Location = new System.Drawing.Point(3, 71);
+            this.panelContentToanCanh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContentToanCanh.Location = new System.Drawing.Point(136, 3);
             this.panelContentToanCanh.Name = "panelContentToanCanh";
-            this.panelContentToanCanh.Size = new System.Drawing.Size(1334, 521);
-            this.panelContentToanCanh.TabIndex = 9;
+            this.panelContentToanCanh.Size = new System.Drawing.Size(1061, 521);
+            this.panelContentToanCanh.TabIndex = 11;
             // 
             // panel4
             // 
@@ -729,6 +746,7 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -780,8 +798,9 @@
         private Panel panel4;
         private Panel panel16;
         private Button button9;
-        private Panel panelContentToanCanh;
         private Label labelNgay;
         private Label labelGanThe;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Panel panelContentToanCanh;
     }
 }

@@ -5,7 +5,9 @@ using ManagementSoftware.GUI.QuanLyTramBom;
 using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
+using Syncfusion.Windows.Forms.Tools;
 using System.Globalization;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace QuanLyTramBom
 {
@@ -17,7 +19,7 @@ namespace QuanLyTramBom
             InitializeComponent();
 
 
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
 
 
@@ -101,7 +103,15 @@ namespace QuanLyTramBom
 
         void SetTextControl(Label label, string text)
         {
-            label.Invoke(new Action(() => { label.Text = text; }));
+            if (IsHandleCreated)
+            {
+                BeginInvoke(() =>
+                {
+                    label.Text = text;
+                });
+                return;
+            }
+
         }
         private async void timerGetNewAlert_Tick(object sender, EventArgs e)
         {

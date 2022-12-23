@@ -48,21 +48,22 @@
             this.groupBox1.Controls.Add(this.comboBoxDieuKien);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBoxNhomBom);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(51, 27);
+            this.groupBox1.Location = new System.Drawing.Point(51, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(807, 147);
-            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "1) Điều kiện lựa chọn";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(245, 82);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(231, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 17);
+            this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Điều kiện";
             // 
@@ -72,17 +73,17 @@
             this.comboBoxDieuKien.FormattingEnabled = true;
             this.comboBoxDieuKien.Location = new System.Drawing.Point(312, 81);
             this.comboBoxDieuKien.Name = "comboBoxDieuKien";
-            this.comboBoxDieuKien.Size = new System.Drawing.Size(277, 23);
+            this.comboBoxDieuKien.Size = new System.Drawing.Size(277, 33);
             this.comboBoxDieuKien.TabIndex = 2;
-            this.comboBoxDieuKien.SelectedIndexChanged += new System.EventHandler(this.comboBoxDieuKien_SelectedIndexChanged);
+            this.comboBoxDieuKien.SelectedIndexChanged += new System.EventHandler(this.comboBoxDieuKien_SelectedIndexChanged_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(262, 40);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(252, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 17);
+            this.label1.Size = new System.Drawing.Size(54, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nhóm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,18 +94,19 @@
             this.comboBoxNhomBom.FormattingEnabled = true;
             this.comboBoxNhomBom.Location = new System.Drawing.Point(312, 39);
             this.comboBoxNhomBom.Name = "comboBoxNhomBom";
-            this.comboBoxNhomBom.Size = new System.Drawing.Size(277, 23);
+            this.comboBoxNhomBom.Size = new System.Drawing.Size(277, 33);
             this.comboBoxNhomBom.TabIndex = 0;
-            this.comboBoxNhomBom.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhomBom_SelectedIndexChanged);
+            this.comboBoxNhomBom.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhomBom_SelectedIndexChanged_1);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.buttonSelectAll);
             this.groupBox2.Controls.Add(this.checkedListBox1);
-            this.groupBox2.Location = new System.Drawing.Point(51, 214);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Location = new System.Drawing.Point(51, 184);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(807, 275);
-            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "2) Lựa chọn tín hiệu";
             // 
@@ -117,28 +119,28 @@
             this.buttonSelectAll.BorderSize = 0;
             this.buttonSelectAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSelectAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSelectAll.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSelectAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSelectAll.ForeColor = System.Drawing.Color.White;
             this.buttonSelectAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSelectAll.Location = new System.Drawing.Point(58, 33);
             this.buttonSelectAll.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSelectAll.Name = "buttonSelectAll";
-            this.buttonSelectAll.Size = new System.Drawing.Size(91, 30);
+            this.buttonSelectAll.Size = new System.Drawing.Size(100, 34);
             this.buttonSelectAll.TabIndex = 13;
             this.buttonSelectAll.Text = "Chọn tất cả";
             this.buttonSelectAll.TextColor = System.Drawing.Color.White;
             this.buttonSelectAll.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonSelectAll.UseVisualStyleBackColor = false;
-            this.buttonSelectAll.Click += new System.EventHandler(this.buttonSelectAll_Click);
+            this.buttonSelectAll.Click += new System.EventHandler(this.buttonSelectAll_Click_1);
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(58, 69);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(706, 182);
+            this.checkedListBox1.Size = new System.Drawing.Size(706, 177);
             this.checkedListBox1.TabIndex = 4;
             // 
             // buttonClose
@@ -148,16 +150,16 @@
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonClose.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.buttonClose.Image = global::ManagementSoftware.Properties.Resources.icons8_close_30;
-            this.buttonClose.Location = new System.Drawing.Point(500, 495);
+            this.buttonClose.Location = new System.Drawing.Point(485, 490);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(140, 51);
-            this.buttonClose.TabIndex = 31;
+            this.buttonClose.TabIndex = 39;
             this.buttonClose.Text = "Hủy";
             this.buttonClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click_1);
             // 
             // btnAccept
             // 
@@ -166,18 +168,18 @@
             this.btnAccept.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAccept.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnAccept.Image = global::ManagementSoftware.Properties.Resources.backpage;
-            this.btnAccept.Location = new System.Drawing.Point(296, 495);
+            this.btnAccept.Location = new System.Drawing.Point(303, 490);
             this.btnAccept.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(140, 51);
-            this.btnAccept.TabIndex = 30;
+            this.btnAccept.TabIndex = 38;
             this.btnAccept.Text = "Đồng ý";
             this.btnAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAccept.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAccept.UseVisualStyleBackColor = false;
-            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click_1);
             // 
-            // FormTimDLDSVaoRaSo
+            // FormSearchDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,7 +189,7 @@
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.btnAccept);
             this.MaximizeBox = false;
-            this.Name = "FormTimDLDSVaoRaSo";
+            this.Name = "FormSearchDigital";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTimDLDSVaoRaSo";
             this.groupBox1.ResumeLayout(false);
@@ -205,9 +207,9 @@
         private Label label1;
         private ComboBox comboBoxNhomBom;
         private GroupBox groupBox2;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonSelectAll;
         private CheckedListBox checkedListBox1;
         private Button buttonClose;
         private Button btnAccept;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonSelectAll;
     }
 }

@@ -33,8 +33,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 
         }
 
-
-
         void SetCheckList()
         {
             checkedListBox1.Items.Clear();
@@ -59,18 +57,19 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
                 }
             }
         }
-        private void comboBoxNhomBom_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void comboBoxNhomBom_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             SetCheckList();
         }
 
-        private void comboBoxDieuKien_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxDieuKien_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             SetCheckList();
         }
 
-
-        private void buttonSelectAll_Click(object sender, EventArgs e)
+        private void buttonSelectAll_Click_1(object sender, EventArgs e)
         {
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
             {
@@ -78,7 +77,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             }
         }
 
-        private void btnAccept_Click(object sender, EventArgs e)
+        private void btnAccept_Click_1(object sender, EventArgs e)
         {
             List<string>? listTinHieu = new List<string>();
             foreach (object itemChecked in checkedListBox1.CheckedItems)
@@ -93,9 +92,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
             this.Close();
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
+        private void buttonClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
+
         }
     }
 }

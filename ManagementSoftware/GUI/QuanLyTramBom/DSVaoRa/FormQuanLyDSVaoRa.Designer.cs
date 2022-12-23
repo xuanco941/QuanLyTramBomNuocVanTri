@@ -74,7 +74,7 @@
             this.buttonDigital.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDigital.FlatAppearance.BorderSize = 0;
             this.buttonDigital.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDigital.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonDigital.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonDigital.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonDigital.Location = new System.Drawing.Point(433, 4);
             this.buttonDigital.Name = "buttonDigital";
@@ -90,7 +90,7 @@
             this.buttonAnalog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonAnalog.FlatAppearance.BorderSize = 0;
             this.buttonAnalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAnalog.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAnalog.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAnalog.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAnalog.Location = new System.Drawing.Point(4, 4);
             this.buttonAnalog.Name = "buttonAnalog";

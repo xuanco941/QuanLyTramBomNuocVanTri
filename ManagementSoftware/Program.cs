@@ -41,7 +41,7 @@ namespace ManagementSoftware
             //new DataDigital().StartTimer(2000);
 
 
-            Application.Run(new Login());
+            Application.Run(new FormTest());
 
             if (Common.USERSESSION != null)
             {

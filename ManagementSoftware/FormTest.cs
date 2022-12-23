@@ -1,4 +1,5 @@
-﻿using ManagementSoftware.Properties;
+﻿using Custom;
+using ManagementSoftware.Properties;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.Windows.Forms.Barcode;
 using System;
@@ -41,6 +42,9 @@ namespace ManagementSoftware
             timer.Elapsed += Tick;
             timer.Start();
 
+
+            TestDGV();
+
         }
         public bool a;
         private void Tick(object sender, EventArgs e)
@@ -60,6 +64,30 @@ namespace ManagementSoftware
             }
         }
 
+        void TestDGV()
+        {
+            DataGridViewProgressColumn column = new DataGridViewProgressColumn();
+
+            dataGridView1.ColumnCount = 2;
+            dataGridView1.Columns[0].Name = "TESTHeader1";
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[1].Name = "TESTHeader22";
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns.Add(column);
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            column.HeaderText = "Progress";
+
+
+            object[] row1 = new object[] { "test1", "test2", 50 };
+            object[] row2 = new object[] { "test1", "test2", 55 };
+            object[] row3 = new object[] { "test1", "test2", 22 };
+            object[] rows = new object[] { row1, row2, row3 };
+
+            foreach (object[] row in rows)
+            {
+                dataGridView1.Rows.Add(row);
+            }
+        }
 
 
         Bitmap MemoryImage;
