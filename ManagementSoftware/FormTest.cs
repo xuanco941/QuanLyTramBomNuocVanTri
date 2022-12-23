@@ -43,8 +43,15 @@ namespace ManagementSoftware
             timer.Start();
 
 
-            TestDGV();
+            DataGridViewColumn clumn1 = new DataGridViewTextBoxColumn();
+            clumn1.HeaderText = "TESTHeader1";
+            clumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns.Add(clumn1);
 
+            DataGridViewProgressColumn column = new DataGridViewProgressColumn();
+            clumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            column.HeaderText = "Progress";
+            dataGridView1.Columns.Add(column);
         }
         public bool a;
         private void Tick(object sender, EventArgs e)
@@ -66,27 +73,13 @@ namespace ManagementSoftware
 
         void TestDGV()
         {
-            DataGridViewProgressColumn column = new DataGridViewProgressColumn();
+  
+            object[] row1 = new object[] { "abc",50.23 };
+            object[] row2 = new object[] { "axc", 99.9 };
 
-            dataGridView1.ColumnCount = 2;
-            dataGridView1.Columns[0].Name = "TESTHeader1";
-            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns[1].Name = "TESTHeader22";
-            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns.Add(column);
-            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            column.HeaderText = "Progress";
+            dataGridView1.Rows.Add(row1);
+            dataGridView1.Rows.Add(row2);
 
-
-            object[] row1 = new object[] { "test1", "test2", 50 };
-            object[] row2 = new object[] { "test1", "test2", 55 };
-            object[] row3 = new object[] { "test1", "test2", 22 };
-            object[] rows = new object[] { row1, row2, row3 };
-
-            foreach (object[] row in rows)
-            {
-                dataGridView1.Rows.Add(row);
-            }
         }
 
 
@@ -156,6 +149,16 @@ namespace ManagementSoftware
         {
             // some work takes 5 sec
             Thread.Sleep(5000);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TestDGV();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
         }
     }
 }

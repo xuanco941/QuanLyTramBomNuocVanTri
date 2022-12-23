@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.DigitalClockRenderer digitalClockRenderer2 = new Syncfusion.Windows.Forms.Tools.DigitalClockRenderer();
-            Syncfusion.Windows.Forms.Tools.ClockRenderer clockRenderer2 = new Syncfusion.Windows.Forms.Tools.ClockRenderer();
+            Syncfusion.Windows.Forms.Tools.DigitalClockRenderer digitalClockRenderer1 = new Syncfusion.Windows.Forms.Tools.DigitalClockRenderer();
+            Syncfusion.Windows.Forms.Tools.ClockRenderer clockRenderer1 = new Syncfusion.Windows.Forms.Tools.ClockRenderer();
             this.clock1 = new Syncfusion.Windows.Forms.Tools.Clock();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -111,15 +111,15 @@
             this.clock1.ClockShape = Syncfusion.Windows.Forms.Tools.ClockShapes.Rectangle;
             this.clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Analog;
             this.clock1.CurrentDateTime = new System.DateTime(2022, 12, 20, 15, 55, 40, 628);
-            this.clock1.CustomTime = new System.DateTime(2022, 12, 22, 16, 0, 22, 56);
-            this.clock1.DigitalRenderer = digitalClockRenderer2;
+            this.clock1.CustomTime = new System.DateTime(2022, 12, 23, 14, 20, 52, 41);
+            this.clock1.DigitalRenderer = digitalClockRenderer1;
             this.clock1.DisplayDates = true;
             this.clock1.Location = new System.Drawing.Point(1259, 0);
             this.clock1.MinimumSize = new System.Drawing.Size(75, 75);
             this.clock1.Name = "clock1";
             this.clock1.Now = new System.DateTime(((long)(0)));
             this.clock1.Remainder = new System.DateTime(2022, 12, 20, 15, 55, 40, 626);
-            this.clock1.Renderer = clockRenderer2;
+            this.clock1.Renderer = clockRenderer1;
             this.clock1.ShowClockFrame = false;
             this.clock1.ShowCustomTimeClock = false;
             this.clock1.ShowHourDesignator = false;
@@ -643,25 +643,24 @@
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
             this.tableLayoutPanel3.Controls.Add(this.panelContentToanCanh, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 65);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1334, 527);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // panelContentToanCanh
             // 
             this.panelContentToanCanh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentToanCanh.Location = new System.Drawing.Point(136, 3);
+            this.panelContentToanCanh.Location = new System.Drawing.Point(103, 3);
             this.panelContentToanCanh.Name = "panelContentToanCanh";
-            this.panelContentToanCanh.Size = new System.Drawing.Size(1061, 521);
+            this.panelContentToanCanh.Size = new System.Drawing.Size(1127, 521);
             this.panelContentToanCanh.TabIndex = 11;
             // 
             // panel4

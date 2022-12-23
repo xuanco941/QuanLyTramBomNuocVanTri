@@ -43,6 +43,12 @@
     <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormSearchDigital.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\Analog\FormDSVaoRaSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\Analog\FormTimDLDSVaoRaSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormQuanLyLuuTruDuLieu.cs">
       <SubType>Form</SubType>
     </Compile>

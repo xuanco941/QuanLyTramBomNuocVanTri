@@ -53,10 +53,10 @@
             this.panelSearch.Controls.Add(this.buttonCustomGoPage);
             this.panelSearch.Controls.Add(this.inputNumPageGo);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelSearch.Location = new System.Drawing.Point(0, 399);
+            this.panelSearch.Location = new System.Drawing.Point(0, 389);
             this.panelSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(801, 46);
+            this.panelSearch.Size = new System.Drawing.Size(801, 56);
             this.panelSearch.TabIndex = 4;
             // 
             // buttonClear
@@ -76,7 +76,7 @@
             this.buttonClear.Location = new System.Drawing.Point(0, 0);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(799, 44);
+            this.buttonClear.Size = new System.Drawing.Size(799, 54);
             this.buttonClear.TabIndex = 35;
             this.buttonClear.Text = "Reload";
             this.buttonClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,7 +99,7 @@
             this.buttonCustomGoPage.ForeColor = System.Drawing.Color.Black;
             this.buttonCustomGoPage.Image = ((System.Drawing.Image)(resources.GetObject("buttonCustomGoPage.Image")));
             this.buttonCustomGoPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustomGoPage.Location = new System.Drawing.Point(2738, -124);
+            this.buttonCustomGoPage.Location = new System.Drawing.Point(2738, -114);
             this.buttonCustomGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustomGoPage.Name = "buttonCustomGoPage";
             this.buttonCustomGoPage.Size = new System.Drawing.Size(93, 35);
@@ -117,7 +117,7 @@
             this.inputNumPageGo.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.inputNumPageGo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputNumPageGo.IntegerValue = ((long)(1));
-            this.inputNumPageGo.Location = new System.Drawing.Point(2668, -122);
+            this.inputNumPageGo.Location = new System.Drawing.Point(2668, -112);
             this.inputNumPageGo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.inputNumPageGo.Multiline = true;
             this.inputNumPageGo.Name = "inputNumPageGo";
@@ -134,7 +134,7 @@
             this.panelThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelThongKe.Location = new System.Drawing.Point(0, 0);
             this.panelThongKe.Name = "panelThongKe";
-            this.panelThongKe.Size = new System.Drawing.Size(801, 399);
+            this.panelThongKe.Size = new System.Drawing.Size(801, 389);
             this.panelThongKe.TabIndex = 6;
             // 
             // dataGridView1
@@ -177,7 +177,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(799, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(799, 387);
             this.dataGridView1.TabIndex = 25;
             // 
             // TableAlert

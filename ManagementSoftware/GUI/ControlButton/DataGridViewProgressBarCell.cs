@@ -53,14 +53,14 @@ namespace Custom
                 if (percentage > 0.0)
                 {
                     // Draw the progress bar and the text
-                    g.FillRectangle(new SolidBrush(Color.FromArgb(203, 235, 108)), cellBounds.X + 2, cellBounds.Y + 2, Convert.ToInt32((percentage * cellBounds.Width - 4)), cellBounds.Height - 4);
+                    g.FillRectangle(new SolidBrush(Color.FromArgb(238, 214, 0)), cellBounds.X + 2, cellBounds.Y + 2, Convert.ToInt32((percentage * cellBounds.Width - 4)), cellBounds.Height - 4);
                     g.DrawString(progressVal.ToString() + "%", cellStyle.Font, foreColorBrush, cellBounds.X + (cellBounds.Width / 2) - 5, cellBounds.Y + 2);
 
                 }
                 else
                 {
                     // draw the text
-                    if (this.DataGridView.CurrentRow.Index == rowIndex)
+                    if (this.DataGridView!=null && this.DataGridView.CurrentRow !=null && this.DataGridView.CurrentRow.Index == rowIndex)
                         g.DrawString(progressVal.ToString() + "%", cellStyle.Font, new SolidBrush(cellStyle.SelectionForeColor), cellBounds.X + 6, cellBounds.Y + 2);
                     else
                         g.DrawString(progressVal.ToString() + "%", cellStyle.Font, foreColorBrush, cellBounds.X + 6, cellBounds.Y + 2);

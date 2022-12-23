@@ -76,48 +76,48 @@
             this.pictureBoxBangTaiXien = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gridLayoutBomSo1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
-            this.gridLayoutBomSo3 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
-            this.gridLayoutBomSo2 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
-            this.gridLayoutBomSo4 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.buttonPDKTT4 = new System.Windows.Forms.Button();
-            this.buttonTuXa4 = new System.Windows.Forms.Button();
-            this.buttonPDien4 = new System.Windows.Forms.Button();
-            this.buttonTaiCho4 = new System.Windows.Forms.Button();
-            this.buttonSanSang4 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.buttonPDien2 = new System.Windows.Forms.Button();
-            this.buttonTaiCho2 = new System.Windows.Forms.Button();
-            this.buttonSanSang2 = new System.Windows.Forms.Button();
-            this.buttonTuXa2 = new System.Windows.Forms.Button();
-            this.buttonPDKTT2 = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.buttonTaiCho3 = new System.Windows.Forms.Button();
-            this.buttonTuXa3 = new System.Windows.Forms.Button();
-            this.buttonSanSang3 = new System.Windows.Forms.Button();
-            this.buttonPDKTT3 = new System.Windows.Forms.Button();
-            this.buttonPDien3 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelBomSo1 = new System.Windows.Forms.Panel();
             this.buttonTaiCho1 = new System.Windows.Forms.Button();
             this.buttonTuXa1 = new System.Windows.Forms.Button();
             this.buttonSanSang1 = new System.Windows.Forms.Button();
             this.buttonPDKTT1 = new System.Windows.Forms.Button();
             this.buttonPDien1 = new System.Windows.Forms.Button();
+            this.gridLayoutBomSo3 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.buttonTaiCho3 = new System.Windows.Forms.Button();
+            this.buttonTuXa3 = new System.Windows.Forms.Button();
+            this.buttonSanSang3 = new System.Windows.Forms.Button();
+            this.buttonPDKTT3 = new System.Windows.Forms.Button();
+            this.buttonPDien3 = new System.Windows.Forms.Button();
+            this.gridLayoutBomSo2 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.buttonPDien2 = new System.Windows.Forms.Button();
+            this.buttonTaiCho2 = new System.Windows.Forms.Button();
+            this.buttonSanSang2 = new System.Windows.Forms.Button();
+            this.buttonTuXa2 = new System.Windows.Forms.Button();
+            this.buttonPDKTT2 = new System.Windows.Forms.Button();
+            this.gridLayoutBomSo4 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.buttonPDien4 = new System.Windows.Forms.Button();
+            this.buttonPDKTT4 = new System.Windows.Forms.Button();
+            this.buttonTuXa4 = new System.Windows.Forms.Button();
+            this.buttonTaiCho4 = new System.Windows.Forms.Button();
+            this.buttonSanSang4 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -137,24 +137,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayoutBomSo1)).BeginInit();
+            this.panelBomSo1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayoutBomSo3)).BeginInit();
+            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayoutBomSo2)).BeginInit();
+            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayoutBomSo4)).BeginInit();
+            this.panel14.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelBomSo1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -375,7 +375,7 @@
             // 
             this.D10010.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.D10010.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10010.Location = new System.Drawing.Point(1175, 265);
+            this.D10010.Location = new System.Drawing.Point(1058, 240);
             this.D10010.Name = "D10010";
             this.D10010.Size = new System.Drawing.Size(110, 18);
             this.D10010.TabIndex = 34;
@@ -637,325 +637,91 @@
             this.gridLayoutBomSo1.ContainerControl = this.panelBomSo1;
             this.gridLayoutBomSo1.Rows = 2;
             // 
+            // panelBomSo1
+            // 
+            this.panelBomSo1.Controls.Add(this.buttonTaiCho1);
+            this.panelBomSo1.Controls.Add(this.buttonTuXa1);
+            this.panelBomSo1.Controls.Add(this.buttonSanSang1);
+            this.panelBomSo1.Controls.Add(this.buttonPDKTT1);
+            this.panelBomSo1.Controls.Add(this.buttonPDien1);
+            this.panelBomSo1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBomSo1.Location = new System.Drawing.Point(81, 0);
+            this.panelBomSo1.Name = "panelBomSo1";
+            this.panelBomSo1.Size = new System.Drawing.Size(274, 52);
+            this.panelBomSo1.TabIndex = 1;
+            // 
+            // buttonTaiCho1
+            // 
+            this.buttonTaiCho1.BackColor = System.Drawing.Color.Silver;
+            this.buttonTaiCho1.Enabled = false;
+            this.buttonTaiCho1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTaiCho1.FlatAppearance.BorderSize = 0;
+            this.buttonTaiCho1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho1.Location = new System.Drawing.Point(1, 0);
+            this.buttonTaiCho1.Name = "buttonTaiCho1";
+            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonTaiCho1, true);
+            this.buttonTaiCho1.Size = new System.Drawing.Size(91, 26);
+            this.buttonTaiCho1.TabIndex = 6;
+            this.buttonTaiCho1.Text = "Tại chỗ";
+            this.buttonTaiCho1.UseVisualStyleBackColor = false;
+            // 
+            // buttonTuXa1
+            // 
+            this.buttonTuXa1.BackColor = System.Drawing.Color.Silver;
+            this.buttonTuXa1.Enabled = false;
+            this.buttonTuXa1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa1.Location = new System.Drawing.Point(92, 0);
+            this.buttonTuXa1.Name = "buttonTuXa1";
+            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonTuXa1, true);
+            this.buttonTuXa1.Size = new System.Drawing.Size(91, 26);
+            this.buttonTuXa1.TabIndex = 7;
+            this.buttonTuXa1.Text = "Từ xa";
+            this.buttonTuXa1.UseVisualStyleBackColor = false;
+            // 
+            // buttonSanSang1
+            // 
+            this.buttonSanSang1.BackColor = System.Drawing.Color.Silver;
+            this.buttonSanSang1.Enabled = false;
+            this.buttonSanSang1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang1.Location = new System.Drawing.Point(183, 0);
+            this.buttonSanSang1.Name = "buttonSanSang1";
+            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonSanSang1, true);
+            this.buttonSanSang1.Size = new System.Drawing.Size(91, 26);
+            this.buttonSanSang1.TabIndex = 8;
+            this.buttonSanSang1.Text = "Sẵn sàng";
+            this.buttonSanSang1.UseVisualStyleBackColor = false;
+            // 
+            // buttonPDKTT1
+            // 
+            this.buttonPDKTT1.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDKTT1.Enabled = false;
+            this.buttonPDKTT1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT1.Location = new System.Drawing.Point(1, 26);
+            this.buttonPDKTT1.Name = "buttonPDKTT1";
+            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonPDKTT1, true);
+            this.buttonPDKTT1.Size = new System.Drawing.Size(91, 26);
+            this.buttonPDKTT1.TabIndex = 9;
+            this.buttonPDKTT1.Text = "P.ĐKTT";
+            this.buttonPDKTT1.UseVisualStyleBackColor = false;
+            // 
+            // buttonPDien1
+            // 
+            this.buttonPDien1.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDien1.Enabled = false;
+            this.buttonPDien1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien1.Location = new System.Drawing.Point(92, 26);
+            this.buttonPDien1.Name = "buttonPDien1";
+            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonPDien1, true);
+            this.buttonPDien1.Size = new System.Drawing.Size(91, 26);
+            this.buttonPDien1.TabIndex = 10;
+            this.buttonPDien1.Text = "P.Điện";
+            this.buttonPDien1.UseVisualStyleBackColor = false;
+            // 
             // gridLayoutBomSo3
             // 
             this.gridLayoutBomSo3.Columns = 3;
             this.gridLayoutBomSo3.ContainerControl = this.panel10;
             this.gridLayoutBomSo3.Rows = 2;
-            // 
-            // gridLayoutBomSo2
-            // 
-            this.gridLayoutBomSo2.Columns = 3;
-            this.gridLayoutBomSo2.ContainerControl = this.panel12;
-            this.gridLayoutBomSo2.Rows = 2;
-            // 
-            // gridLayoutBomSo4
-            // 
-            this.gridLayoutBomSo4.Columns = 3;
-            this.gridLayoutBomSo4.ContainerControl = this.panel14;
-            this.gridLayoutBomSo4.Rows = 2;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.tableLayoutPanel2.Controls.Add(this.panel5, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel6, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel7, 2, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1227, 129);
-            this.tableLayoutPanel2.TabIndex = 67;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(214, 123);
-            this.panel5.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(214, 123);
-            this.label13.TabIndex = 59;
-            this.label13.Text = "TOÀN CẢNH TRẠM BƠM";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.tableLayoutPanel1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(223, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(730, 123);
-            this.panel6.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(730, 123);
-            this.tableLayoutPanel1.TabIndex = 67;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel14);
-            this.panel4.Controls.Add(this.panel13);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(368, 65);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(358, 54);
-            this.panel4.TabIndex = 3;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.buttonPDien4);
-            this.panel14.Controls.Add(this.buttonPDKTT4);
-            this.panel14.Controls.Add(this.buttonTuXa4);
-            this.panel14.Controls.Add(this.buttonTaiCho4);
-            this.panel14.Controls.Add(this.buttonSanSang4);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(81, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(275, 52);
-            this.panel14.TabIndex = 1;
-            // 
-            // buttonPDKTT4
-            // 
-            this.buttonPDKTT4.BackColor = System.Drawing.Color.Silver;
-            this.buttonPDKTT4.Enabled = false;
-            this.buttonPDKTT4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPDKTT4.Location = new System.Drawing.Point(92, 0);
-            this.buttonPDKTT4.Name = "buttonPDKTT4";
-            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonPDKTT4, true);
-            this.buttonPDKTT4.Size = new System.Drawing.Size(91, 26);
-            this.buttonPDKTT4.TabIndex = 66;
-            this.buttonPDKTT4.Text = "P.ĐKTT";
-            this.buttonPDKTT4.UseVisualStyleBackColor = false;
-            // 
-            // buttonTuXa4
-            // 
-            this.buttonTuXa4.BackColor = System.Drawing.Color.Silver;
-            this.buttonTuXa4.Enabled = false;
-            this.buttonTuXa4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonTuXa4.Location = new System.Drawing.Point(183, 0);
-            this.buttonTuXa4.Name = "buttonTuXa4";
-            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonTuXa4, true);
-            this.buttonTuXa4.Size = new System.Drawing.Size(91, 26);
-            this.buttonTuXa4.TabIndex = 64;
-            this.buttonTuXa4.Text = "Từ xa";
-            this.buttonTuXa4.UseVisualStyleBackColor = false;
-            // 
-            // buttonPDien4
-            // 
-            this.buttonPDien4.BackColor = System.Drawing.Color.Silver;
-            this.buttonPDien4.Enabled = false;
-            this.buttonPDien4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPDien4.Location = new System.Drawing.Point(1, 0);
-            this.buttonPDien4.Name = "buttonPDien4";
-            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonPDien4, true);
-            this.buttonPDien4.Size = new System.Drawing.Size(91, 26);
-            this.buttonPDien4.TabIndex = 67;
-            this.buttonPDien4.Text = "P.Điện";
-            this.buttonPDien4.UseVisualStyleBackColor = false;
-            // 
-            // buttonTaiCho4
-            // 
-            this.buttonTaiCho4.BackColor = System.Drawing.Color.Silver;
-            this.buttonTaiCho4.Enabled = false;
-            this.buttonTaiCho4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonTaiCho4.FlatAppearance.BorderSize = 0;
-            this.buttonTaiCho4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonTaiCho4.Location = new System.Drawing.Point(1, 26);
-            this.buttonTaiCho4.Name = "buttonTaiCho4";
-            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonTaiCho4, true);
-            this.buttonTaiCho4.Size = new System.Drawing.Size(91, 26);
-            this.buttonTaiCho4.TabIndex = 63;
-            this.buttonTaiCho4.Text = "Tại chỗ";
-            this.buttonTaiCho4.UseVisualStyleBackColor = false;
-            // 
-            // buttonSanSang4
-            // 
-            this.buttonSanSang4.BackColor = System.Drawing.Color.Silver;
-            this.buttonSanSang4.Enabled = false;
-            this.buttonSanSang4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSanSang4.Location = new System.Drawing.Point(92, 26);
-            this.buttonSanSang4.Name = "buttonSanSang4";
-            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonSanSang4, true);
-            this.buttonSanSang4.Size = new System.Drawing.Size(91, 26);
-            this.buttonSanSang4.TabIndex = 65;
-            this.buttonSanSang4.Text = "Sẵn sàng";
-            this.buttonSanSang4.UseVisualStyleBackColor = false;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label4);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(81, 52);
-            this.panel13.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 52);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Bơm số 4";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel12);
-            this.panel3.Controls.Add(this.panel11);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(4, 65);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(357, 54);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.buttonPDien2);
-            this.panel12.Controls.Add(this.buttonTaiCho2);
-            this.panel12.Controls.Add(this.buttonSanSang2);
-            this.panel12.Controls.Add(this.buttonTuXa2);
-            this.panel12.Controls.Add(this.buttonPDKTT2);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(81, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(274, 52);
-            this.panel12.TabIndex = 1;
-            // 
-            // buttonPDien2
-            // 
-            this.buttonPDien2.BackColor = System.Drawing.Color.Silver;
-            this.buttonPDien2.Enabled = false;
-            this.buttonPDien2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPDien2.Location = new System.Drawing.Point(1, 0);
-            this.buttonPDien2.Name = "buttonPDien2";
-            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonPDien2, true);
-            this.buttonPDien2.Size = new System.Drawing.Size(91, 26);
-            this.buttonPDien2.TabIndex = 62;
-            this.buttonPDien2.Text = "P.Điện";
-            this.buttonPDien2.UseVisualStyleBackColor = false;
-            // 
-            // buttonTaiCho2
-            // 
-            this.buttonTaiCho2.BackColor = System.Drawing.Color.Silver;
-            this.buttonTaiCho2.Enabled = false;
-            this.buttonTaiCho2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonTaiCho2.FlatAppearance.BorderSize = 0;
-            this.buttonTaiCho2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonTaiCho2.Location = new System.Drawing.Point(92, 0);
-            this.buttonTaiCho2.Name = "buttonTaiCho2";
-            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonTaiCho2, true);
-            this.buttonTaiCho2.Size = new System.Drawing.Size(91, 26);
-            this.buttonTaiCho2.TabIndex = 58;
-            this.buttonTaiCho2.Text = "Tại chỗ";
-            this.buttonTaiCho2.UseVisualStyleBackColor = false;
-            // 
-            // buttonSanSang2
-            // 
-            this.buttonSanSang2.BackColor = System.Drawing.Color.Silver;
-            this.buttonSanSang2.Enabled = false;
-            this.buttonSanSang2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSanSang2.Location = new System.Drawing.Point(183, 0);
-            this.buttonSanSang2.Name = "buttonSanSang2";
-            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonSanSang2, true);
-            this.buttonSanSang2.Size = new System.Drawing.Size(91, 26);
-            this.buttonSanSang2.TabIndex = 60;
-            this.buttonSanSang2.Text = "Sẵn sàng";
-            this.buttonSanSang2.UseVisualStyleBackColor = false;
-            // 
-            // buttonTuXa2
-            // 
-            this.buttonTuXa2.BackColor = System.Drawing.Color.Silver;
-            this.buttonTuXa2.Enabled = false;
-            this.buttonTuXa2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonTuXa2.Location = new System.Drawing.Point(1, 26);
-            this.buttonTuXa2.Name = "buttonTuXa2";
-            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonTuXa2, true);
-            this.buttonTuXa2.Size = new System.Drawing.Size(91, 26);
-            this.buttonTuXa2.TabIndex = 59;
-            this.buttonTuXa2.Text = "Từ xa";
-            this.buttonTuXa2.UseVisualStyleBackColor = false;
-            // 
-            // buttonPDKTT2
-            // 
-            this.buttonPDKTT2.BackColor = System.Drawing.Color.Silver;
-            this.buttonPDKTT2.Enabled = false;
-            this.buttonPDKTT2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPDKTT2.Location = new System.Drawing.Point(92, 26);
-            this.buttonPDKTT2.Name = "buttonPDKTT2";
-            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonPDKTT2, true);
-            this.buttonPDKTT2.Size = new System.Drawing.Size(91, 26);
-            this.buttonPDKTT2.TabIndex = 61;
-            this.buttonPDKTT2.Text = "P.ĐKTT";
-            this.buttonPDKTT2.UseVisualStyleBackColor = false;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label2);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(81, 52);
-            this.panel11.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 52);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Bơm số 2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.panel9);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(368, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(358, 54);
-            this.panel2.TabIndex = 1;
             // 
             // panel10
             // 
@@ -1037,6 +803,321 @@
             this.buttonPDien3.Text = "P.Điện";
             this.buttonPDien3.UseVisualStyleBackColor = false;
             // 
+            // gridLayoutBomSo2
+            // 
+            this.gridLayoutBomSo2.Columns = 3;
+            this.gridLayoutBomSo2.ContainerControl = this.panel12;
+            this.gridLayoutBomSo2.Rows = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.buttonPDien2);
+            this.panel12.Controls.Add(this.buttonTaiCho2);
+            this.panel12.Controls.Add(this.buttonSanSang2);
+            this.panel12.Controls.Add(this.buttonTuXa2);
+            this.panel12.Controls.Add(this.buttonPDKTT2);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(81, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(274, 52);
+            this.panel12.TabIndex = 1;
+            // 
+            // buttonPDien2
+            // 
+            this.buttonPDien2.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDien2.Enabled = false;
+            this.buttonPDien2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien2.Location = new System.Drawing.Point(1, 0);
+            this.buttonPDien2.Name = "buttonPDien2";
+            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonPDien2, true);
+            this.buttonPDien2.Size = new System.Drawing.Size(91, 26);
+            this.buttonPDien2.TabIndex = 62;
+            this.buttonPDien2.Text = "P.Điện";
+            this.buttonPDien2.UseVisualStyleBackColor = false;
+            // 
+            // buttonTaiCho2
+            // 
+            this.buttonTaiCho2.BackColor = System.Drawing.Color.Silver;
+            this.buttonTaiCho2.Enabled = false;
+            this.buttonTaiCho2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTaiCho2.FlatAppearance.BorderSize = 0;
+            this.buttonTaiCho2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho2.Location = new System.Drawing.Point(92, 0);
+            this.buttonTaiCho2.Name = "buttonTaiCho2";
+            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonTaiCho2, true);
+            this.buttonTaiCho2.Size = new System.Drawing.Size(91, 26);
+            this.buttonTaiCho2.TabIndex = 58;
+            this.buttonTaiCho2.Text = "Tại chỗ";
+            this.buttonTaiCho2.UseVisualStyleBackColor = false;
+            // 
+            // buttonSanSang2
+            // 
+            this.buttonSanSang2.BackColor = System.Drawing.Color.Silver;
+            this.buttonSanSang2.Enabled = false;
+            this.buttonSanSang2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang2.Location = new System.Drawing.Point(183, 0);
+            this.buttonSanSang2.Name = "buttonSanSang2";
+            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonSanSang2, true);
+            this.buttonSanSang2.Size = new System.Drawing.Size(91, 26);
+            this.buttonSanSang2.TabIndex = 60;
+            this.buttonSanSang2.Text = "Sẵn sàng";
+            this.buttonSanSang2.UseVisualStyleBackColor = false;
+            // 
+            // buttonTuXa2
+            // 
+            this.buttonTuXa2.BackColor = System.Drawing.Color.Silver;
+            this.buttonTuXa2.Enabled = false;
+            this.buttonTuXa2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa2.Location = new System.Drawing.Point(1, 26);
+            this.buttonTuXa2.Name = "buttonTuXa2";
+            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonTuXa2, true);
+            this.buttonTuXa2.Size = new System.Drawing.Size(91, 26);
+            this.buttonTuXa2.TabIndex = 59;
+            this.buttonTuXa2.Text = "Từ xa";
+            this.buttonTuXa2.UseVisualStyleBackColor = false;
+            // 
+            // buttonPDKTT2
+            // 
+            this.buttonPDKTT2.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDKTT2.Enabled = false;
+            this.buttonPDKTT2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT2.Location = new System.Drawing.Point(92, 26);
+            this.buttonPDKTT2.Name = "buttonPDKTT2";
+            this.gridLayoutBomSo2.SetParticipateInLayout(this.buttonPDKTT2, true);
+            this.buttonPDKTT2.Size = new System.Drawing.Size(91, 26);
+            this.buttonPDKTT2.TabIndex = 61;
+            this.buttonPDKTT2.Text = "P.ĐKTT";
+            this.buttonPDKTT2.UseVisualStyleBackColor = false;
+            // 
+            // gridLayoutBomSo4
+            // 
+            this.gridLayoutBomSo4.Columns = 3;
+            this.gridLayoutBomSo4.ContainerControl = this.panel14;
+            this.gridLayoutBomSo4.Rows = 2;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.buttonPDien4);
+            this.panel14.Controls.Add(this.buttonPDKTT4);
+            this.panel14.Controls.Add(this.buttonTuXa4);
+            this.panel14.Controls.Add(this.buttonTaiCho4);
+            this.panel14.Controls.Add(this.buttonSanSang4);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(81, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(275, 52);
+            this.panel14.TabIndex = 1;
+            // 
+            // buttonPDien4
+            // 
+            this.buttonPDien4.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDien4.Enabled = false;
+            this.buttonPDien4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDien4.Location = new System.Drawing.Point(1, 0);
+            this.buttonPDien4.Name = "buttonPDien4";
+            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonPDien4, true);
+            this.buttonPDien4.Size = new System.Drawing.Size(91, 26);
+            this.buttonPDien4.TabIndex = 67;
+            this.buttonPDien4.Text = "P.Điện";
+            this.buttonPDien4.UseVisualStyleBackColor = false;
+            // 
+            // buttonPDKTT4
+            // 
+            this.buttonPDKTT4.BackColor = System.Drawing.Color.Silver;
+            this.buttonPDKTT4.Enabled = false;
+            this.buttonPDKTT4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonPDKTT4.Location = new System.Drawing.Point(92, 0);
+            this.buttonPDKTT4.Name = "buttonPDKTT4";
+            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonPDKTT4, true);
+            this.buttonPDKTT4.Size = new System.Drawing.Size(91, 26);
+            this.buttonPDKTT4.TabIndex = 66;
+            this.buttonPDKTT4.Text = "P.ĐKTT";
+            this.buttonPDKTT4.UseVisualStyleBackColor = false;
+            // 
+            // buttonTuXa4
+            // 
+            this.buttonTuXa4.BackColor = System.Drawing.Color.Silver;
+            this.buttonTuXa4.Enabled = false;
+            this.buttonTuXa4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonTuXa4.Location = new System.Drawing.Point(183, 0);
+            this.buttonTuXa4.Name = "buttonTuXa4";
+            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonTuXa4, true);
+            this.buttonTuXa4.Size = new System.Drawing.Size(91, 26);
+            this.buttonTuXa4.TabIndex = 64;
+            this.buttonTuXa4.Text = "Từ xa";
+            this.buttonTuXa4.UseVisualStyleBackColor = false;
+            // 
+            // buttonTaiCho4
+            // 
+            this.buttonTaiCho4.BackColor = System.Drawing.Color.Silver;
+            this.buttonTaiCho4.Enabled = false;
+            this.buttonTaiCho4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonTaiCho4.FlatAppearance.BorderSize = 0;
+            this.buttonTaiCho4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonTaiCho4.Location = new System.Drawing.Point(1, 26);
+            this.buttonTaiCho4.Name = "buttonTaiCho4";
+            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonTaiCho4, true);
+            this.buttonTaiCho4.Size = new System.Drawing.Size(91, 26);
+            this.buttonTaiCho4.TabIndex = 63;
+            this.buttonTaiCho4.Text = "Tại chỗ";
+            this.buttonTaiCho4.UseVisualStyleBackColor = false;
+            // 
+            // buttonSanSang4
+            // 
+            this.buttonSanSang4.BackColor = System.Drawing.Color.Silver;
+            this.buttonSanSang4.Enabled = false;
+            this.buttonSanSang4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSanSang4.Location = new System.Drawing.Point(92, 26);
+            this.buttonSanSang4.Name = "buttonSanSang4";
+            this.gridLayoutBomSo4.SetParticipateInLayout(this.buttonSanSang4, true);
+            this.buttonSanSang4.Size = new System.Drawing.Size(91, 26);
+            this.buttonSanSang4.TabIndex = 65;
+            this.buttonSanSang4.Text = "Sẵn sàng";
+            this.buttonSanSang4.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel6, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel7, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1227, 129);
+            this.tableLayoutPanel2.TabIndex = 67;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(214, 123);
+            this.panel5.TabIndex = 0;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(214, 123);
+            this.label13.TabIndex = 59;
+            this.label13.Text = "TOÀN CẢNH TRẠM BƠM";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.tableLayoutPanel1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(223, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(730, 123);
+            this.panel6.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(730, 123);
+            this.tableLayoutPanel1.TabIndex = 67;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel14);
+            this.panel4.Controls.Add(this.panel13);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(368, 65);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(358, 54);
+            this.panel4.TabIndex = 3;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.label4);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(81, 52);
+            this.panel13.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 52);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Bơm số 4";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel12);
+            this.panel3.Controls.Add(this.panel11);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(4, 65);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(357, 54);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label2);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(81, 52);
+            this.panel11.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 52);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Bơm số 2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(368, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(358, 54);
+            this.panel2.TabIndex = 1;
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label3);
@@ -1067,86 +1148,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(357, 54);
             this.panel1.TabIndex = 0;
-            // 
-            // panelBomSo1
-            // 
-            this.panelBomSo1.Controls.Add(this.buttonTaiCho1);
-            this.panelBomSo1.Controls.Add(this.buttonTuXa1);
-            this.panelBomSo1.Controls.Add(this.buttonSanSang1);
-            this.panelBomSo1.Controls.Add(this.buttonPDKTT1);
-            this.panelBomSo1.Controls.Add(this.buttonPDien1);
-            this.panelBomSo1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBomSo1.Location = new System.Drawing.Point(81, 0);
-            this.panelBomSo1.Name = "panelBomSo1";
-            this.panelBomSo1.Size = new System.Drawing.Size(274, 52);
-            this.panelBomSo1.TabIndex = 1;
-            // 
-            // buttonTaiCho1
-            // 
-            this.buttonTaiCho1.BackColor = System.Drawing.Color.Silver;
-            this.buttonTaiCho1.Enabled = false;
-            this.buttonTaiCho1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonTaiCho1.FlatAppearance.BorderSize = 0;
-            this.buttonTaiCho1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonTaiCho1.Location = new System.Drawing.Point(1, 0);
-            this.buttonTaiCho1.Name = "buttonTaiCho1";
-            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonTaiCho1, true);
-            this.buttonTaiCho1.Size = new System.Drawing.Size(91, 26);
-            this.buttonTaiCho1.TabIndex = 6;
-            this.buttonTaiCho1.Text = "Tại chỗ";
-            this.buttonTaiCho1.UseVisualStyleBackColor = false;
-            // 
-            // buttonTuXa1
-            // 
-            this.buttonTuXa1.BackColor = System.Drawing.Color.Silver;
-            this.buttonTuXa1.Enabled = false;
-            this.buttonTuXa1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonTuXa1.Location = new System.Drawing.Point(92, 0);
-            this.buttonTuXa1.Name = "buttonTuXa1";
-            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonTuXa1, true);
-            this.buttonTuXa1.Size = new System.Drawing.Size(91, 26);
-            this.buttonTuXa1.TabIndex = 7;
-            this.buttonTuXa1.Text = "Từ xa";
-            this.buttonTuXa1.UseVisualStyleBackColor = false;
-            // 
-            // buttonSanSang1
-            // 
-            this.buttonSanSang1.BackColor = System.Drawing.Color.Silver;
-            this.buttonSanSang1.Enabled = false;
-            this.buttonSanSang1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSanSang1.Location = new System.Drawing.Point(183, 0);
-            this.buttonSanSang1.Name = "buttonSanSang1";
-            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonSanSang1, true);
-            this.buttonSanSang1.Size = new System.Drawing.Size(91, 26);
-            this.buttonSanSang1.TabIndex = 8;
-            this.buttonSanSang1.Text = "Sẵn sàng";
-            this.buttonSanSang1.UseVisualStyleBackColor = false;
-            // 
-            // buttonPDKTT1
-            // 
-            this.buttonPDKTT1.BackColor = System.Drawing.Color.Silver;
-            this.buttonPDKTT1.Enabled = false;
-            this.buttonPDKTT1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPDKTT1.Location = new System.Drawing.Point(1, 26);
-            this.buttonPDKTT1.Name = "buttonPDKTT1";
-            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonPDKTT1, true);
-            this.buttonPDKTT1.Size = new System.Drawing.Size(91, 26);
-            this.buttonPDKTT1.TabIndex = 9;
-            this.buttonPDKTT1.Text = "P.ĐKTT";
-            this.buttonPDKTT1.UseVisualStyleBackColor = false;
-            // 
-            // buttonPDien1
-            // 
-            this.buttonPDien1.BackColor = System.Drawing.Color.Silver;
-            this.buttonPDien1.Enabled = false;
-            this.buttonPDien1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPDien1.Location = new System.Drawing.Point(92, 26);
-            this.buttonPDien1.Name = "buttonPDien1";
-            this.gridLayoutBomSo1.SetParticipateInLayout(this.buttonPDien1, true);
-            this.buttonPDien1.Size = new System.Drawing.Size(91, 26);
-            this.buttonPDien1.TabIndex = 10;
-            this.buttonPDien1.Text = "P.Điện";
-            this.buttonPDien1.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
@@ -1260,24 +1261,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBangTaiXien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLayoutBomSo1)).EndInit();
+            this.panelBomSo1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridLayoutBomSo3)).EndInit();
+            this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridLayoutBomSo2)).EndInit();
+            this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridLayoutBomSo4)).EndInit();
+            this.panel14.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panelBomSo1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);

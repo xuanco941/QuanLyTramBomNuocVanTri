@@ -534,3 +534,5 @@ C:\Users\LENOVO\Desktop\homnay\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\De
 C:\Users\LENOVO\Desktop\homnay\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.pdb
 C:\Users\LENOVO\Desktop\homnay\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\homnay\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormDSVaoRaSo.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa.FormTimDLDSVaoRaSo.resources
