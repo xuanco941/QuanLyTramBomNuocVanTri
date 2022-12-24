@@ -63,7 +63,7 @@
             this.buttonLuocSuKhuynhHuong.FlatAppearance.BorderSize = 0;
             this.buttonLuocSuKhuynhHuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLuocSuKhuynhHuong.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonLuocSuKhuynhHuong.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.buttonLuocSuKhuynhHuong.ForeColor = System.Drawing.Color.White;
             this.buttonLuocSuKhuynhHuong.Location = new System.Drawing.Point(4, 4);
             this.buttonLuocSuKhuynhHuong.Name = "buttonLuocSuKhuynhHuong";
             this.buttonLuocSuKhuynhHuong.Size = new System.Drawing.Size(792, 32);

@@ -209,14 +209,14 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 8;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66667F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.888889F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.888889F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.888889F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.888889F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.888889F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.777778F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.44444F));
             this.tableLayoutPanel2.Controls.Add(this.panel11, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel10, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel9, 4, 0);
@@ -239,9 +239,9 @@
             this.panel11.Controls.Add(this.buttonViewTableLoi);
             this.panel11.Controls.Add(this.labelGiaTri);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(687, 3);
+            this.panel11.Location = new System.Drawing.Point(889, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(70, 28);
+            this.panel11.Size = new System.Drawing.Size(82, 28);
             this.panel11.TabIndex = 6;
             // 
             // buttonViewTableLoi
@@ -250,10 +250,11 @@
             this.buttonViewTableLoi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonViewTableLoi.Location = new System.Drawing.Point(0, 0);
             this.buttonViewTableLoi.Name = "buttonViewTableLoi";
-            this.buttonViewTableLoi.Size = new System.Drawing.Size(68, 26);
+            this.buttonViewTableLoi.Size = new System.Drawing.Size(80, 26);
             this.buttonViewTableLoi.TabIndex = 8;
             this.buttonViewTableLoi.Text = "Bảng lỗi";
             this.buttonViewTableLoi.UseVisualStyleBackColor = true;
+            this.buttonViewTableLoi.Click += new System.EventHandler(this.buttonViewTableLoi_Click_1);
             // 
             // labelGiaTri
             // 
@@ -264,7 +265,7 @@
             this.labelGiaTri.ForeColor = System.Drawing.Color.Red;
             this.labelGiaTri.Location = new System.Drawing.Point(0, 0);
             this.labelGiaTri.Name = "labelGiaTri";
-            this.labelGiaTri.Size = new System.Drawing.Size(68, 26);
+            this.labelGiaTri.Size = new System.Drawing.Size(80, 26);
             this.labelGiaTri.TabIndex = 1;
             this.labelGiaTri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -273,9 +274,9 @@
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.labelMoTa);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(383, 3);
+            this.panel10.Location = new System.Drawing.Point(508, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(298, 28);
+            this.panel10.Size = new System.Drawing.Size(375, 28);
             this.panel10.TabIndex = 5;
             // 
             // labelMoTa
@@ -285,7 +286,7 @@
             this.labelMoTa.ForeColor = System.Drawing.Color.Red;
             this.labelMoTa.Location = new System.Drawing.Point(0, 0);
             this.labelMoTa.Name = "labelMoTa";
-            this.labelMoTa.Size = new System.Drawing.Size(296, 26);
+            this.labelMoTa.Size = new System.Drawing.Size(373, 26);
             this.labelMoTa.TabIndex = 1;
             this.labelMoTa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -294,9 +295,9 @@
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.labelNhom);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(307, 3);
+            this.panel9.Location = new System.Drawing.Point(407, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(70, 28);
+            this.panel9.Size = new System.Drawing.Size(95, 28);
             this.panel9.TabIndex = 4;
             // 
             // labelNhom
@@ -306,7 +307,7 @@
             this.labelNhom.ForeColor = System.Drawing.Color.Red;
             this.labelNhom.Location = new System.Drawing.Point(0, 0);
             this.labelNhom.Name = "labelNhom";
-            this.labelNhom.Size = new System.Drawing.Size(68, 26);
+            this.labelNhom.Size = new System.Drawing.Size(93, 26);
             this.labelNhom.TabIndex = 1;
             this.labelNhom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -315,9 +316,9 @@
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.labelThoiGian);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(155, 3);
+            this.panel8.Location = new System.Drawing.Point(205, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(70, 28);
+            this.panel8.Size = new System.Drawing.Size(95, 28);
             this.panel8.TabIndex = 3;
             // 
             // labelThoiGian
@@ -327,7 +328,7 @@
             this.labelThoiGian.ForeColor = System.Drawing.Color.Red;
             this.labelThoiGian.Location = new System.Drawing.Point(0, 0);
             this.labelThoiGian.Name = "labelThoiGian";
-            this.labelThoiGian.Size = new System.Drawing.Size(68, 26);
+            this.labelThoiGian.Size = new System.Drawing.Size(93, 26);
             this.labelThoiGian.TabIndex = 1;
             this.labelThoiGian.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -336,9 +337,9 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.labelNgay);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(79, 3);
+            this.panel7.Location = new System.Drawing.Point(104, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(70, 28);
+            this.panel7.Size = new System.Drawing.Size(95, 28);
             this.panel7.TabIndex = 2;
             // 
             // labelNgay
@@ -348,7 +349,7 @@
             this.labelNgay.ForeColor = System.Drawing.Color.Red;
             this.labelNgay.Location = new System.Drawing.Point(0, 0);
             this.labelNgay.Name = "labelNgay";
-            this.labelNgay.Size = new System.Drawing.Size(68, 26);
+            this.labelNgay.Size = new System.Drawing.Size(93, 26);
             this.labelNgay.TabIndex = 3;
             this.labelNgay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -359,7 +360,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(70, 28);
+            this.panel6.Size = new System.Drawing.Size(95, 28);
             this.panel6.TabIndex = 1;
             // 
             // labelGanThe
@@ -369,7 +370,7 @@
             this.labelGanThe.ForeColor = System.Drawing.Color.Red;
             this.labelGanThe.Location = new System.Drawing.Point(0, 0);
             this.labelGanThe.Name = "labelGanThe";
-            this.labelGanThe.Size = new System.Drawing.Size(68, 26);
+            this.labelGanThe.Size = new System.Drawing.Size(93, 26);
             this.labelGanThe.TabIndex = 2;
             this.labelGanThe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -378,9 +379,9 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.labelDieuKien);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(231, 3);
+            this.panel5.Location = new System.Drawing.Point(306, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(70, 28);
+            this.panel5.Size = new System.Drawing.Size(95, 28);
             this.panel5.TabIndex = 0;
             // 
             // labelDieuKien
@@ -390,7 +391,7 @@
             this.labelDieuKien.ForeColor = System.Drawing.Color.Red;
             this.labelDieuKien.Location = new System.Drawing.Point(0, 0);
             this.labelDieuKien.Name = "labelDieuKien";
-            this.labelDieuKien.Size = new System.Drawing.Size(68, 26);
+            this.labelDieuKien.Size = new System.Drawing.Size(93, 26);
             this.labelDieuKien.TabIndex = 1;
             this.labelDieuKien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

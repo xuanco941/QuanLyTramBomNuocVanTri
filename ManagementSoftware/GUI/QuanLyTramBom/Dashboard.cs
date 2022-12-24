@@ -31,7 +31,6 @@ namespace QuanLyTramBom
             //clock1.Location = new Point(1259, 5);
 
             plcAlert = new PLCAlert();
-            plcAlert.Open();
         }
 
 
@@ -49,7 +48,7 @@ namespace QuanLyTramBom
 
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+        private async void Dashboard_Load(object sender, EventArgs e)
         {
             ToanCanhTramBom formToanCanh = new ToanCanhTramBom();
             formToanCanh.TopLevel = false;
@@ -60,22 +59,18 @@ namespace QuanLyTramBom
 
             //timer new alert
             timerGetNewAlert.Start();
+            await plcAlert.Open();
+
         }
 
-        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (timerGetNewAlert != null && timerGetNewAlert.Enabled == true)
             {
                 timerGetNewAlert.Stop();
                 timerGetNewAlert.Dispose();
             }
-            plcAlert.Close();
-        }
-
-        private void buttonViewTableLoi_Click(object sender, EventArgs e)
-        {
-            TableAlert tb = new TableAlert();
-            tb.ShowDialog();
+            await plcAlert.Close();
         }
 
         private async void timerGetNewAlert_Tick_1(object sender, EventArgs e)
@@ -219,6 +214,12 @@ namespace QuanLyTramBom
                 form.FormBorderStyle = FormBorderStyle.None;
                 form.Show();
             }
+        }
+
+        private void buttonViewTableLoi_Click_1(object sender, EventArgs e)
+        {
+            TableAlert tb = new TableAlert();
+            tb.ShowDialog();
         }
     }
 }
