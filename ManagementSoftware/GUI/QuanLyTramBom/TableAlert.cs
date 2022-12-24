@@ -49,7 +49,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 foreach (AlertHistory alert in list.ToList())
                 {
                     string createAt = alert.ThoiGian.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
-                    string thoiGian = alert.ThoiGian.ToString("hh:mm:ss", CultureInfo.InvariantCulture);
+                    string thoiGian = alert.ThoiGian.ToString("HH:mm:ss", CultureInfo.InvariantCulture);
 
                     string c = alert.TrangThai.ToString();
                     dt.Rows.Add(alert.GanThe, createAt, thoiGian, alert.DieuKien, alert.Nhom, alert.TinHieu, c);

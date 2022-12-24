@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelContent = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonBaoCaoNgay = new System.Windows.Forms.Button();
             this.buttonBaoCaoThang = new System.Windows.Forms.Button();
@@ -36,17 +35,9 @@
             this.buttonLuocSuKhuynhHuong = new System.Windows.Forms.Button();
             this.buttonBaoCaoNam = new System.Windows.Forms.Button();
             this.buttonLuuTruHoatDong = new System.Windows.Forms.Button();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelContent
-            // 
-            this.panelContent.BackColor = System.Drawing.Color.LightGray;
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 0);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1252, 492);
-            this.panelContent.TabIndex = 15;
             // 
             // tableLayoutPanel3
             // 
@@ -170,23 +161,30 @@
             this.buttonLuuTruHoatDong.UseVisualStyleBackColor = true;
             this.buttonLuuTruHoatDong.Click += new System.EventHandler(this.buttonLuuTruHoatDong_Click);
             // 
+            // panelContent
+            // 
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(0, 40);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1252, 452);
+            this.panelContent.TabIndex = 17;
+            // 
             // FormQuanLyLuuTruDuLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1252, 492);
-            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.panelContent);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Name = "FormQuanLyLuuTruDuLieu";
             this.Text = "FormQuanLyLuuTruDuLieu";
+            this.Load += new System.EventHandler(this.FormQuanLyLuuTruDuLieu_Load);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Panel panelContent;
         private TableLayoutPanel tableLayoutPanel3;
         private Button buttonBaoCaoNam;
         private Button buttonLuuTruHoatDong;
@@ -194,5 +192,6 @@
         private Button buttonBaoCaoThang;
         private Button buttonLuuTruLoi;
         private Button buttonLuocSuKhuynhHuong;
+        private Panel panelContent;
     }
 }

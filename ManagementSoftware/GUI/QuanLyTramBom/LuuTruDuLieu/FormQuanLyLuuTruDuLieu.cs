@@ -1,5 +1,4 @@
 ﻿using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.Alert;
-using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.Digital;
 using QuanLyTramBom;
 using System;
 using System.Collections.Generic;
@@ -21,27 +20,38 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
         }
         void ChuyenTrang(Form form)
         {
-            foreach (Form item in panelContent.Controls)
+            if (panelContent.Controls.Count > 0)
             {
-                if(item.Name == form.Name)
+                Form f = (Form)panelContent.Controls[0];
+                if (f.Text != form.Text)
                 {
+                    f.Close();
+                    f.Dispose();
+                    panelContent.Controls.Clear();
                     form.TopLevel = false;
                     panelContent.Controls.Add(form);
                     form.Dock = DockStyle.Fill;
                     form.FormBorderStyle = FormBorderStyle.None;
                     form.Show();
-                    continue;
                 }
-                item.Close();
-                item.Dispose();
             }
+            else
+            {
+                form.TopLevel = false;
+                panelContent.Controls.Add(form);
+                form.Dock = DockStyle.Fill;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Show();
+            }
+            
+
         }
- 
+
         void ButtonHandle(Button btn)
         {
             foreach (Button item in tableLayoutPanel3.Controls)
             {
-                if(item.Text != btn.Text)
+                if (item.Text != btn.Text)
                 {
                     item.ForeColor = Color.LightSlateGray;
                 }
@@ -91,6 +101,13 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
             FormBaoCaoNam form = new FormBaoCaoNam();
             ChuyenTrang(form);
             ButtonHandle((Button)sender);
+        }
+
+        private void FormQuanLyLuuTruDuLieu_Load(object sender, EventArgs e)
+        {
+            FormLDKhuynhHuong form = new FormLDKhuynhHuong();
+            ChuyenTrang(form);
+            ButtonHandle(buttonLuocSuKhuynhHuong);
         }
     }
 }

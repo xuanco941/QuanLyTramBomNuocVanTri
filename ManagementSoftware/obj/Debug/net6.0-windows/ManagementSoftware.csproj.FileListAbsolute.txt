@@ -109,4 +109,4 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\C
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.genruntimeconfig.cache
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.Alert.FormLuuTruLoi.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.Digital.FormLuuTruHoatDong.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.FormLuuTruHoatDong.resources
