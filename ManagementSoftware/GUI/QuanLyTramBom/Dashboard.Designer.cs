@@ -63,6 +63,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -221,6 +222,7 @@
             this.tableLayoutPanel2.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel5, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 7, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 8, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.MaximumSize = new System.Drawing.Size(0, 50);
@@ -526,6 +528,13 @@
             this.tabPage4.Text = "Danh sách vào ra";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(960, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(180, 28);
+            this.panel3.TabIndex = 8;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -595,5 +604,6 @@
         private TabPage tabPage4;
         private Panel panel2;
         private Button buttonViewTableLoi;
+        private Panel panel3;
     }
 }

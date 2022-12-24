@@ -78,7 +78,7 @@
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(1538, 54);
             this.buttonClear.TabIndex = 35;
-            this.buttonClear.Text = "Reload";
+            this.buttonClear.Text = "Run";
             this.buttonClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonClear.TextColor = System.Drawing.Color.Black;
             this.buttonClear.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;

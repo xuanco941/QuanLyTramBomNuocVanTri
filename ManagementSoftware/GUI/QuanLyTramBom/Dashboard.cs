@@ -5,6 +5,7 @@ using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
 using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
+using Syncfusion.Windows.Forms.Tools;
 
 namespace QuanLyTramBom
 {
@@ -19,16 +20,60 @@ namespace QuanLyTramBom
 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
+            plcAlert = new PLCAlert();
 
 
 
             ////clock
-            //clock1.MinimumSize = new Size(65, 65);
-            //clock1.Size = new System.Drawing.Size(65, 65);
-            //clock1.Location = new Point(1259, 5);
 
-            plcAlert = new PLCAlert();
+
+            Panel floater = CreateFloatingPanel(panel3);
+            floater.BackColor = Color.Transparent;
+            Clock clock1 = new Clock();
+            clock1.MinimumSize = new Size(65, 65);
+            clock1.Size = new System.Drawing.Size(65, 65);
+            floater.Location = new Point(1830, 1);
+            floater.Size = new Size(65, 65);
+            floater.Controls.Add(clock1);
+
+
         }
+
+        public Panel CreateFloatingPanel(Panel originalPanel)
+        {
+            Bitmap bmp = new Bitmap(originalPanel.Width,
+                originalPanel.Height);
+            Rectangle rect = new Rectangle(0, 0,
+                bmp.Width, bmp.Height);
+            originalPanel.DrawToBitmap(bmp, rect);
+            foreach (Control ctrl in originalPanel.Controls)
+            {
+                ctrl.Visible = false;
+            }
+            using (Graphics g = Graphics.FromHwnd(originalPanel.Handle))
+            {
+                g.DrawImage(bmp, 0, 0);
+                bmp.Dispose();
+                SolidBrush brush =
+                    new SolidBrush(Color.FromArgb(128, Color.Gray));
+                g.FillRectangle(brush, rect);
+                brush.Dispose();
+            }
+            Panel floater = new Panel();
+            floater.Size = originalPanel.Size;
+            floater.Left = originalPanel.Left - 50;
+            floater.Top = originalPanel.Top - 50;
+            this.Controls.Add(floater);
+            floater.BringToFront();
+            return floater;
+        }
+
+
+
+
+
+
+
 
 
 
