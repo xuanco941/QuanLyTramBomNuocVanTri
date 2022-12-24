@@ -75,6 +75,9 @@ namespace QuanLyTramBom
 
         private async void timerGetNewAlert_Tick_1(object sender, EventArgs e)
         {
+
+            List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
+
             //    if (AlertCurrent.Data != null && AlertCurrent.Data.Count > 0)
             //    {
             //        List<Alert>? listALl = await plcAlert.GetListDataAlertTrue();

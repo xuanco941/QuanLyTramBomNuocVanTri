@@ -17,11 +17,13 @@ namespace ManagementSoftware.AutoAddData
 
         async void SaveData()
         {
+            await plc.Open();
             List<Alert>? l = await plc.GetListDataAlert(new AlertCommon().ListAllAlerts);
             if (l != null && l.Count > 0)
             {
                 await DALAlert.AddRange(l);
             }
+            await plc.Close();
         }
         private void MyTimer_Tick(object sender, EventArgs e)
         {
@@ -34,12 +36,10 @@ namespace ManagementSoftware.AutoAddData
             {
                 timer.Stop();
                 timer.Dispose();
-                plc?.Close();
             }
         }
         public void StartTimer(int timeInterval)
         {
-            plc?.Open();
             timer = new System.Timers.Timer();
             timer.Elapsed += MyTimer_Tick;
             timer.Interval = timeInterval;

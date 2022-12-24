@@ -14,6 +14,7 @@ namespace ManagementSoftware.Models
         public DbSet<Digital> Digitals { get; set; }
         public DbSet<Analog> Analogs { get; set; }
         public DbSet<Alert> Alerts { get; set; }
+        public DbSet<AlertHistory> AlertHistorys { get; set; }
 
 
 
@@ -79,13 +80,18 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
             });
+            //alert history
+            modelBuilder.Entity<AlertHistory>(entity =>
+            {
+                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
+            });
 
 
 
         }
         public void CreateDatabase()
         {
-            //this.Database.EnsureDeleted();
+            this.Database.EnsureDeleted();
             if (this.Database.EnsureCreated() == true)
             {
                 //tao quuyen cho admin
