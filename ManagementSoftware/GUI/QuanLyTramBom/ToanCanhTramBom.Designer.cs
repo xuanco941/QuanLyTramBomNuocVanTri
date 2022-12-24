@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelContent = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -100,6 +101,7 @@
             // 
             this.panelContent.BackgroundImage = global::ManagementSoftware.Properties.Resources.ToanCanh;
             this.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelContent.Controls.Add(this.label23);
             this.panelContent.Controls.Add(this.label22);
             this.panelContent.Controls.Add(this.label21);
             this.panelContent.Controls.Add(this.label17);
@@ -153,6 +155,17 @@
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1227, 686);
             this.panelContent.TabIndex = 19;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.Location = new System.Drawing.Point(730, 457);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(51, 19);
+            this.label23.TabIndex = 47;
+            this.label23.Text = "NƯỚC";
             // 
             // label22
             // 
@@ -269,7 +282,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(715, 448);
+            this.label12.Location = new System.Drawing.Point(715, 445);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(76, 19);
             this.label12.TabIndex = 35;
@@ -280,7 +293,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(816, 500);
+            this.label11.Location = new System.Drawing.Point(845, 515);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(74, 19);
             this.label11.TabIndex = 34;
@@ -747,5 +760,6 @@
         private Label label13;
         private Label label12;
         private Label label11;
+        private Label label23;
     }
 }
