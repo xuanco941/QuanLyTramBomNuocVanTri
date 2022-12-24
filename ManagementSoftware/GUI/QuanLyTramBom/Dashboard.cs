@@ -1,13 +1,10 @@
 ﻿
-using ManagementSoftware.AutoAddData;
 using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.QuanLyTramBom;
 using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
 using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
-using Syncfusion.Windows.Forms.Tools;
-using System.Globalization;
 
 namespace QuanLyTramBom
 {
@@ -47,7 +44,7 @@ namespace QuanLyTramBom
             }
 
         }
-
+        System.Timers.Timer timer;
         private async void Dashboard_Load(object sender, EventArgs e)
         {
             ToanCanhTramBom formToanCanh = new ToanCanhTramBom();
@@ -56,75 +53,96 @@ namespace QuanLyTramBom
             formToanCanh.Dock = DockStyle.Fill;
             formToanCanh.FormBorderStyle = FormBorderStyle.None;
             formToanCanh.Show();
+            await plcAlert.Open();
 
             //timer new alert
-            timerGetNewAlert.Start();
-            await plcAlert.Open();
+            new Thread(() =>
+            {
+                timer = new System.Timers.Timer();
+                timer.Elapsed += timerGetNewAlert_Tick_1;
+                timer.Interval = 2000;
+                timer.Start();
+                
+            }).Start();
 
         }
 
         private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (timerGetNewAlert != null && timerGetNewAlert.Enabled == true)
+            if (timer != null && timer.Enabled == true)
             {
-                timerGetNewAlert.Stop();
-                timerGetNewAlert.Dispose();
+                timer.Stop();
+                timer.Dispose();
             }
             await plcAlert.Close();
         }
 
         private async void timerGetNewAlert_Tick_1(object sender, EventArgs e)
         {
-
             List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
+            List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
+            if (alertTrue != null && alertTrue.Count>0)
+            {
+                
+                if (alertHistories != null && alertHistories.Count > 0)
+                {
 
-            //    if (AlertCurrent.Data != null && AlertCurrent.Data.Count > 0)
-            //    {
-            //        List<Alert>? listALl = await plcAlert.GetListDataAlertTrue();
-            //        if (listALl != null)
-            //        {
-            //            foreach (var i in listALl)
-            //            {
-            //                foreach (var j in AlertCurrent.Data.ToList())
-            //                {
-            //                    if (i.TinHieu != j.TinHieu)
-            //                    {
-            //                        AlertCurrent.Data.Add(i);
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    }
-            //    else
-            //    {
-            //        AlertCurrent.Data = await plcAlert.GetListDataAlertTrue();
-            //    }
-            //    if (AlertCurrent.Data != null && AlertCurrent.Data.Count > 0)
-            //    {
-            //        DateTime dateTimeMax = AlertCurrent.Data.Max((m) => m.ThoiGian);
-            //        Alert? alertERR = AlertCurrent.Data.Where((a) => a.ThoiGian == dateTimeMax).FirstOrDefault();
-            //        if (alertERR != null)
-            //        {
-            //            SetTextControl(labelNgay, alertERR.ThoiGian.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
-            //            SetTextControl(labelNhom, alertERR.Nhom);
-            //            SetTextControl(labelMoTa, alertERR.TinHieu);
-            //            SetTextControl(labelGanThe, alertERR.GanThe);
-            //            SetTextControl(labelThoiGian, alertERR.ThoiGian.ToString("hh:mm:ss", CultureInfo.InvariantCulture));
-            //            SetTextControl(labelDieuKien, alertERR.DieuKien);
-            //            SetTextControl(labelGiaTri, AlertCurrent.Data.Count.ToString());
-            //        }
-            //    }
-            //    else
-            //    {
-            //        SetTextControl(labelNgay, "");
-            //        SetTextControl(labelNhom, "");
-            //        SetTextControl(labelMoTa, "");
-            //        SetTextControl(labelGanThe, "");
-            //        SetTextControl(labelThoiGian, "");
-            //        SetTextControl(labelDieuKien, "");
-            //        SetTextControl(labelGiaTri, "");
-            //    }
+                    foreach (var i in alertTrue)
+                    {
+                        bool check = false;
+                        foreach (var j in alertHistories.ToList())
+                        {
+                            if (i.TinHieu != j.TinHieu)
+                            {
+                                check = true;
+                            }
+                            else
+                            {
+                                check = false;
+                                break;
+                            }
+                        }
+                        if (check == true)
+                        {
+                           await DALAlertHistory.AddAlertHistory(i);
+                        }
+                    }
+
+                }
+                else
+                {
+                    await DALAlertHistory.AddRangeHistory(alertTrue);
+                }
+
+
+            }
+
+            if (alertHistories != null && alertHistories.Count > 0)
+            {
+                AlertHistory? alertERR = DALAlertHistory.GetNewestAlertHistory();
+                if (alertERR != null)
+                {
+                    SetTextControl(labelNgay, alertERR.ThoiGian.ToString("dd/MM/yyyy"));
+                    SetTextControl(labelNhom, alertERR.Nhom);
+                    SetTextControl(labelMoTa, alertERR.TinHieu);
+                    SetTextControl(labelGanThe, alertERR.GanThe);
+                    SetTextControl(labelThoiGian, alertERR.ThoiGian.ToString("hh:mm:ss"));
+                    SetTextControl(labelDieuKien, alertERR.DieuKien);
+                    SetTextControl(labelGiaTri, alertHistories.Count.ToString());
+                }
+            }
+            else
+            {
+                SetTextControl(labelNgay, "");
+                SetTextControl(labelNhom, "");
+                SetTextControl(labelMoTa, "");
+                SetTextControl(labelGanThe, "");
+                SetTextControl(labelThoiGian, "");
+                SetTextControl(labelDieuKien, "");
+                SetTextControl(labelGiaTri, "");
+            }
         }
+
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
@@ -218,8 +236,7 @@ namespace QuanLyTramBom
                 form.Show();
             }
         }
-
-        private void buttonViewTableLoi_Click_1(object sender, EventArgs e)
+        private void buttonViewTableLoi_Click(object sender, EventArgs e)
         {
             TableAlert tb = new TableAlert();
             tb.ShowDialog();

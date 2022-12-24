@@ -34,6 +34,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         {
             panelSearch.Enabled = false;
 
+            List<AlertHistory>? list = DALAlertHistory.GetAllAlertHistory();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("Gắn thẻ");
@@ -43,9 +44,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             dt.Columns.Add("Nhóm");
             dt.Columns.Add("Mô tả");
             dt.Columns.Add("Giá trị");
-            if (AlertCurrent.Data != null && AlertCurrent.Data.Count>0)
+            if (list != null && list.Count>0)
             {
-                foreach (Alert alert in AlertCurrent.Data)
+                foreach (AlertHistory alert in list.ToList())
                 {
                     string createAt = alert.ThoiGian.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
                     string thoiGian = alert.ThoiGian.ToString("hh:mm:ss", CultureInfo.InvariantCulture);
@@ -59,16 +60,24 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             panelSearch.Enabled = true;
 
             this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
+
+            bool changeColor = false;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (changeColor)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Tan;
+                }
+                changeColor = !changeColor; 
+            }
 
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            AlertCurrent.Data?.Clear();
+            DALAlertHistory.DeleteAllAlertHistory();
             LoadFormThongKe();
         }
     }

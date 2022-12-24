@@ -20,13 +20,29 @@ namespace ManagementSoftware.DAL
             await dbContext.AlertHistorys.AddAsync(alertHistory);
             await dbContext.SaveChangesAsync();
         }
+
+        public static async Task AddRangeHistory(List<Alert> d)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            List<AlertHistory> list = new List<AlertHistory>();
+            foreach (var item in d)
+            {
+                AlertHistory a = new AlertHistory(item.DiaChiPLC, item.GanThe, item.DieuKien, item.Nhom, item.TinHieu);
+                a.TrangThai = item.TrangThai;
+                list.Add(a);
+                
+            }
+            await dbContext.AlertHistorys.AddRangeAsync(list);
+            await dbContext.SaveChangesAsync();
+        }
+
         public static void DeleteAllAlertHistory()
         {
             DataBaseContext dbContext = new DataBaseContext();
             dbContext.AlertHistorys.RemoveRange(dbContext.AlertHistorys);
             dbContext.SaveChanges();
         }
-        public static AlertHistory? GetTopAlertHistory()
+        public static AlertHistory? GetNewestAlertHistory()
         {
             DataBaseContext dbContext = new DataBaseContext();
             int max = dbContext.AlertHistorys.Max(a => a.IDAlert);
