@@ -92,13 +92,14 @@ namespace QuanLyTramBom
         System.Timers.Timer timer;
         private async void Dashboard_Load(object sender, EventArgs e)
         {
+            await plcAlert.Open();
+
             ToanCanhTramBom formToanCanh = new ToanCanhTramBom();
             formToanCanh.TopLevel = false;
             panelContentToanCanh.Controls.Add(formToanCanh);
             formToanCanh.Dock = DockStyle.Fill;
             formToanCanh.FormBorderStyle = FormBorderStyle.None;
             formToanCanh.Show();
-            await plcAlert.Open();
 
             //timer new alert
             new Thread(() =>
