@@ -41,7 +41,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                 int i = 1;
                 foreach (Digital d in digitals.ToList())
                 {
-                    string createAt = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    string createAt = d.ThoiGian.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                     string trangthai = d.TrangThai == true ? d.Bat : "0-" + d.Tat;
                     if (IsHandleCreated)
                     {

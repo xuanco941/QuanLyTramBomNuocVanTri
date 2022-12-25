@@ -25,31 +25,31 @@ namespace ManagementSoftware.DAL.DALPagination
             List<Digital> l = new List<Digital>();
             if ((listTinHieu != null && listTinHieu.Count > 0) && (start != null && end != null))
             {
+                
                 foreach (string tinHieu in listTinHieu)
                 {
-                    Digital? d = dbContext.Digitals.Where(x => x.TinHieu == tinHieu).FirstOrDefault(); // chưa fix
+                    List<Digital>? d = dbContext.Digitals.Where(x => x.TinHieu == tinHieu && (start<=x.ThoiGian && end>= x.ThoiGian)).ToList(); // chưa fix
                     if (d != null)
                     {
-                        l.Add(d);
+                        l.AddRange(d);
                     }
                 }
                 this.ListResults = l.OrderByDescending(t => t.IDDigital)
-                .Where(a => start <= a.ThoiGian && end >= a.ThoiGian)
                 .Skip(position)
                 .Take(NumberRows)
                 .ToList();
 
-                this.TotalResults = l.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian)).Count();
+                this.TotalResults = l.Count;
             }
             //2
             else if ((listTinHieu != null && listTinHieu.Count > 0) && (start == null || end == null))
             {
                 foreach (string tinHieu in listTinHieu)
                 {
-                    Digital? d = dbContext.Digitals.Where(x => x.TinHieu == tinHieu).FirstOrDefault();
+                    List<Digital>? d = dbContext.Digitals.Where(x => x.TinHieu == tinHieu).ToList(); // chưa fix
                     if (d != null)
                     {
-                        l.Add(d);
+                        l.AddRange(d);
                     }
                 }
                 this.ListResults = l.OrderByDescending(t => t.IDDigital)
@@ -57,7 +57,7 @@ namespace ManagementSoftware.DAL.DALPagination
                 .Take(NumberRows)
                 .ToList();
 
-                this.TotalResults = l.Count();
+                this.TotalResults = l.Count;
             }
             //3
             else if ((listTinHieu == null || listTinHieu.Count < 1) && (start != null || end != null))

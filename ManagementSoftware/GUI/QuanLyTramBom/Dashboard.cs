@@ -105,7 +105,7 @@ namespace QuanLyTramBom
             {
                 timer = new System.Timers.Timer();
                 timer.Elapsed += timerGetNewAlert_Tick_1;
-                timer.Interval = 2000;
+                timer.Interval = 1500;
                 timer.Start();
                 
             }).Start();
