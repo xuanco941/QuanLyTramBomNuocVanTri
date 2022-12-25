@@ -58,7 +58,6 @@
             // 
             // buttonLuocSuKhuynhHuong
             // 
-            this.buttonLuocSuKhuynhHuong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLuocSuKhuynhHuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonLuocSuKhuynhHuong.FlatAppearance.BorderSize = 0;
             this.buttonLuocSuKhuynhHuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

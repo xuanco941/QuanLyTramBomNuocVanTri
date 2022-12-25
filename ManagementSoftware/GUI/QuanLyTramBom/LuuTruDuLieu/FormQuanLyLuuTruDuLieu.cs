@@ -1,5 +1,4 @@
-﻿using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.Alert;
-using QuanLyTramBom;
+﻿using QuanLyTramBom;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

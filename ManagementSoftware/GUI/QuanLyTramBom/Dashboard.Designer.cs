@@ -53,6 +53,7 @@
             this.labelDieuKien = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonViewTableLoi = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -63,7 +64,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -403,6 +403,13 @@
             this.buttonViewTableLoi.UseVisualStyleBackColor = true;
             this.buttonViewTableLoi.Click += new System.EventHandler(this.buttonViewTableLoi_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(960, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(180, 28);
+            this.panel3.TabIndex = 8;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.tabControl1);
@@ -460,7 +467,6 @@
             // 
             // button3
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -527,13 +533,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Danh sách vào ra";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(960, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(180, 28);
-            this.panel3.TabIndex = 8;
             // 
             // Dashboard
             // 

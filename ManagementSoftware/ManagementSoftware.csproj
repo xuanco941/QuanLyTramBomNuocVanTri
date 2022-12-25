@@ -83,8 +83,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="GUI\QuanLyTramBom\LuuTruDuLieu\Digital\" />
-  </ItemGroup>
-
 </Project>
