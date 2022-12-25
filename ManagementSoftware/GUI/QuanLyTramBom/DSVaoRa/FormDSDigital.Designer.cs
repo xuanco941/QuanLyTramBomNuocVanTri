@@ -51,7 +51,7 @@
             this.btnSerachBox.Location = new System.Drawing.Point(0, 0);
             this.btnSerachBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSerachBox.Name = "btnSerachBox";
-            this.btnSerachBox.Size = new System.Drawing.Size(194, 45);
+            this.btnSerachBox.Size = new System.Drawing.Size(194, 40);
             this.btnSerachBox.TabIndex = 21;
             this.btnSerachBox.Text = "Tìm dữ liệu";
             this.btnSerachBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -66,7 +66,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.MaximumSize = new System.Drawing.Size(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 45);
+            this.panel1.Size = new System.Drawing.Size(800, 40);
             this.panel1.TabIndex = 25;
             // 
             // dataGridView1
@@ -94,7 +94,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -109,7 +109,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 405);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 410);
             this.dataGridView1.TabIndex = 26;
             // 
             // FormDSDigital

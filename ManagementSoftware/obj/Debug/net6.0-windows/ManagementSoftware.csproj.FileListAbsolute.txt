@@ -75,7 +75,6 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\C
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.Dashboard.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong.ChonKhuynhHuong.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.FormKHThoiGianThuc.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.FormCaiDatDoThiKhuynhHuong.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa.FormDSAnalog.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\QuanLyTramBom.FormDSDigital.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa.FormQuanLyDSVaoRa.resources
@@ -109,3 +108,4 @@ C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\C
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.FormLuuTruHoatDong.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.FormLuuTruLoi.resources
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.LuuTruLoi.FormSearchAlert.resources
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.ThietLapKhuynhHuong.resources

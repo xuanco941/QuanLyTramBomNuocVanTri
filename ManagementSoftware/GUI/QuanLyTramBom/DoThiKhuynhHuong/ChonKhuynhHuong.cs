@@ -16,5 +16,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
         {
             InitializeComponent();
         }
+
+        private void buttonTaoMoi_Click(object sender, EventArgs e)
+        {
+            ThietLapKhuynhHuong form = new ThietLapKhuynhHuong();
+            form.ShowDialog();
+        }
     }
 }

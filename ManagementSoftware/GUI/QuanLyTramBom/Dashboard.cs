@@ -90,28 +90,6 @@ namespace QuanLyTramBom
 
         }
         System.Timers.Timer timer;
-        private async void Dashboard_Load(object sender, EventArgs e)
-        {
-            await plcAlert.Open();
-
-            ToanCanhTramBom formToanCanh = new ToanCanhTramBom();
-            formToanCanh.TopLevel = false;
-            panelContentToanCanh.Controls.Add(formToanCanh);
-            formToanCanh.Dock = DockStyle.Fill;
-            formToanCanh.FormBorderStyle = FormBorderStyle.None;
-            formToanCanh.Show();
-
-            //timer new alert
-            new Thread(() =>
-            {
-                timer = new System.Timers.Timer();
-                timer.Elapsed += timerGetNewAlert_Tick_1;
-                timer.Interval = 1500;
-                timer.Start();
-                
-            }).Start();
-
-        }
 
         private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -127,9 +105,9 @@ namespace QuanLyTramBom
         {
             List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
             List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
-            if (alertTrue != null && alertTrue.Count>0)
+            if (alertTrue != null && alertTrue.Count > 0)
             {
-                
+
                 if (alertHistories != null && alertHistories.Count > 0)
                 {
 
@@ -150,7 +128,7 @@ namespace QuanLyTramBom
                         }
                         if (check == true)
                         {
-                           await DALAlertHistory.AddAlertHistory(i);
+                            await DALAlertHistory.AddAlertHistory(i);
                         }
                     }
 
@@ -188,7 +166,52 @@ namespace QuanLyTramBom
                 SetTextControl(labelGiaTri, "");
             }
         }
+        private void buttonViewTableLoi_Click(object sender, EventArgs e)
+        {
+            TableAlert tb = new TableAlert();
+            tb.ShowDialog();
+        }
 
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// ///////////////////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+
+        private async void Dashboard_Load(object sender, EventArgs e)
+        {
+            await plcAlert.Open();
+
+            ToanCanhTramBom formToanCanh = new ToanCanhTramBom();
+            formToanCanh.TopLevel = false;
+            panelContentToanCanh.Controls.Add(formToanCanh);
+            formToanCanh.Dock = DockStyle.Fill;
+            formToanCanh.FormBorderStyle = FormBorderStyle.None;
+            formToanCanh.Show();
+
+            //timer new alert
+            new Thread(() =>
+            {
+                timer = new System.Timers.Timer();
+                timer.Elapsed += timerGetNewAlert_Tick_1;
+                timer.Interval = 1500;
+                timer.Start();
+
+            }).Start();
+
+        }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
@@ -282,10 +305,66 @@ namespace QuanLyTramBom
                 form.Show();
             }
         }
-        private void buttonViewTableLoi_Click(object sender, EventArgs e)
-        {
-            TableAlert tb = new TableAlert();
-            tb.ShowDialog();
-        }
+
+
+
+
+        //ToanCanhTramBom DformToanCanh;
+        //bool checkLoadedDformToanCanh = false;
+
+        //FormKHThoiGianThuc DformKHThoiGianThuc;
+        //bool checkLoadedDformKHThoiGianThuc = false;
+
+        //FormQuanLyLuuTruDuLieu DformQuanLyDuLieu;
+        //bool checkLoadedDformQuanLyDuLieu = false;
+
+        //FormQuanLyDSVaoRa DformQuanLyDSVaoRa;
+        //bool checkLoadedDformQuanLyDSVaoRa = false;
+
+
+
+
+        //void DashboardLoad()
+        //{
+        //    if (checkLoadedDformToanCanh == false)
+        //    {
+        //        DformToanCanh = new ToanCanhTramBom();
+        //        DformToanCanh.TopLevel = false;
+        //        panelContentToanCanh.Controls.Add(DformToanCanh);
+        //        DformToanCanh.Dock = DockStyle.Fill;
+        //        DformToanCanh.FormBorderStyle = FormBorderStyle.None;
+        //        DformToanCanh.Show();
+
+        //        checkLoadedDformToanCanh = true;
+        //    }
+        //    if(checkLoadedDformKHThoiGianThuc == false)
+        //    {
+        //        DformKHThoiGianThuc = new FormKHThoiGianThuc();
+        //        DformKHThoiGianThuc.TopLevel = false;
+        //        tabPage2.Controls.Add(DformKHThoiGianThuc);
+        //        DformKHThoiGianThuc.Dock = DockStyle.Fill;
+        //        DformKHThoiGianThuc.FormBorderStyle = FormBorderStyle.None;
+        //        DformKHThoiGianThuc.Show();
+                
+        //        c
+        //    }
+
+
+        //    FormQuanLyLuuTruDuLieu form = new FormQuanLyLuuTruDuLieu();
+        //    form.TopLevel = false;
+        //    tabPage3.Controls.Add(form);
+        //    form.Dock = DockStyle.Fill;
+        //    form.FormBorderStyle = FormBorderStyle.None;
+        //    form.Show();
+
+        //    FormQuanLyDSVaoRa form = new FormQuanLyDSVaoRa();
+        //    form.TopLevel = false;
+        //    tabPage4.Controls.Add(form);
+        //    form.Dock = DockStyle.Fill;
+        //    form.FormBorderStyle = FormBorderStyle.None;
+        //    form.Show();
+
+
+        //}
     }
 }

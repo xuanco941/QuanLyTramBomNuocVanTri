@@ -488,17 +488,17 @@
             // 
             // btnSerachBox
             // 
-            this.btnSerachBox.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSerachBox.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSerachBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSerachBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSerachBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSerachBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSerachBox.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSerachBox.Image = global::ManagementSoftware.Properties.Resources.loupe;
             this.btnSerachBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSerachBox.Location = new System.Drawing.Point(0, 0);
             this.btnSerachBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSerachBox.Name = "btnSerachBox";
-            this.btnSerachBox.Size = new System.Drawing.Size(140, 40);
+            this.btnSerachBox.Size = new System.Drawing.Size(160, 40);
             this.btnSerachBox.TabIndex = 21;
             this.btnSerachBox.Text = "Tìm dữ liệu";
             this.btnSerachBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

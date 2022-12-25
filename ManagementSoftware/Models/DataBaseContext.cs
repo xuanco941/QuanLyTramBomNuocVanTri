@@ -15,6 +15,8 @@ namespace ManagementSoftware.Models
         public DbSet<Analog> Analogs { get; set; }
         public DbSet<Alert> Alerts { get; set; }
         public DbSet<AlertHistory> AlertHistorys { get; set; }
+        public DbSet<DoThiKhuynhHuong> DoThiKhuynhHuongs { get; set; }
+        public DbSet<XuHuongVaTinHieu> XuHuongVaTinHieus { get; set; }
 
 
 
@@ -85,13 +87,15 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
             });
-
+            modelBuilder.Entity<DoThiKhuynhHuong>(entity => {
+                entity.HasIndex(e => e.TenDoThi).IsUnique();
+            });
 
 
         }
         public void CreateDatabase()
         {
-            //this.Database.EnsureDeleted();
+            this.Database.EnsureDeleted();
             if (this.Database.EnsureCreated() == true)
             {
                 //tao quuyen cho admin

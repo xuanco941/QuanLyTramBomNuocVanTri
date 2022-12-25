@@ -57,19 +57,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="btnChangeNumElmPage.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="button1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="button2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="button3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="button4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonTaoMoi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAWVJREFUOE+t
+        lL9OwzAQxi0QvBBv0GREAgEpUuNsCImNF0DKyN/ulWAiAomlMWKChYEdNgIUFp4AhR3unHPqOkdjECf9
+        lMj33dc6Z5/gIrqI5oM8Xg+VPAtyWQCfRIFr4VB2UUPy6QHi1UDJVyj+amEUqmSFypoBvzgbqOSQKZxK
+        mMuDNE1nyGYcfzGrUfEe2VSht8kJicWrDQ2XqxnKZW1WNUCOGgKLo/tjDZezeNONwm4yyQn6DycaLmfT
+        UUkEhvLcTbj4GgKZgL0/M4kJfmFY4D8s7cXe9XZtYLh5v9O466i1a4Hyvw0/0PDJWWxgDLicTSdPHgXd
+        V1Zg8DWEfpzioe6ySQtvwzxeEwuDzTm4jy+8oMLLEAZKPYFwarAiYut2R8PlDOFlb0mbmcCpwQl9gNpd
+        shkHjiBI7rviVmDSsOPLBE6Ntm+KoKaxzZ8CG4UXHQozPFvwxMNf0nuG3UQNya0Q4htGuhU/s1T81QAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
 </root>
