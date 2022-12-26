@@ -29,12 +29,14 @@ namespace QuanLyTramBom
         private void btnSerachBox_Click(object sender, EventArgs e)
         {
             // d là dữ liệu đầu vào
-            DateTime d = dateTimePicker1.Value;
+            DateTime d = dateTimePicker1.Value.Date;
+         
             //real Date thuong la no tu lay giờ hiện tại của minh
             // nên t bảo bạn nếu báo cáo ngày thì chuyển dữ liệu đầu vào về 0 giờ thì mới lấy đc đủ 24 tiếng, báo cáo tháng với năm thì kh ảnh hưởng
             // 
 
             List<BaoCao> list = DALBaoCao.BaoCaoNgay(d);
+
             dataGridView1.DataSource = list;
 
 
