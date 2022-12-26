@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.DAL;
+using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using System;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ManagementSoftware
 {
@@ -29,6 +31,7 @@ namespace ManagementSoftware
         }
         void SetCBNhom(ComboBox dieuKien, ComboBox cbNhom)
         {
+            cbNhom.Controls.Clear();
             if (!String.IsNullOrEmpty(dieuKien.Text))
             {
                 cbNhom.Enabled = true;
@@ -42,6 +45,7 @@ namespace ManagementSoftware
         }
         void SetAutoFillCBTinHieu(ComboBox cbdieuKien, ComboBox cbNhom, ComboBox cbTinHieu)
         {
+            cbTinHieu.Controls.Clear();
             if (cbNhom.Enabled == true && !String.IsNullOrEmpty(cbdieuKien.Text) && !String.IsNullOrEmpty(cbNhom.Text))
             {
                 cbTinHieu.Enabled = true;
@@ -65,7 +69,20 @@ namespace ManagementSoftware
                     max.Text = analog.GiaTriLonNhat.ToString();
                     min.Text = analog.GiaTriNhoNhat.ToString();
                 }
-
+                else
+                {
+                    ganThe.Text = "";
+                    donVi.Text = "";
+                    max.Text = "";
+                    min.Text = "";
+                }
+            }
+            else
+            {
+                ganThe.Text = "";
+                donVi.Text ="";
+                max.Text = "";
+                min.Text = "";
             }
 
 
@@ -203,7 +220,7 @@ namespace ManagementSoftware
             }
         }
 
-        XuHuongVaTinHieu? GetAXuHuong(ComboBox dieukien, ComboBox cbNhom, ComboBox cbTinHieu, TextBox ganThe, TextBox donvi, TextBox max, TextBox min, Panel color)
+        XuHuongVaTinHieu? GetAXuHuong(ComboBox dieukien, ComboBox cbNhom, ComboBox cbTinHieu, TextBox ganThe, TextBox donvi, TextBox max, TextBox min, Panel color, Label number)
         {
             XuHuongVaTinHieu? xuHuongVaTinHieu = new XuHuongVaTinHieu();
             string strDieuKien = dieukien.Text;
@@ -218,6 +235,7 @@ namespace ManagementSoftware
                 String.IsNullOrEmpty(strGanThe) == false && String.IsNullOrEmpty(strDonVi) == false && String.IsNullOrEmpty(strMax) == false &&
                 String.IsNullOrEmpty(strMin) == false && String.IsNullOrEmpty(strColor) == false)
             {
+                xuHuongVaTinHieu.Number = int.Parse(number.Text);
                 xuHuongVaTinHieu.DieuKien = strDieuKien;
                 xuHuongVaTinHieu.Nhom = strNhom;
                 xuHuongVaTinHieu.TinHieu = strTinHieu;
@@ -225,6 +243,7 @@ namespace ManagementSoftware
                 xuHuongVaTinHieu.DonVi = strDonVi;
                 xuHuongVaTinHieu.Max = double.Parse(strMax);
                 xuHuongVaTinHieu.Min = double.Parse(strMin);
+                xuHuongVaTinHieu.Color = strColor;
                 return xuHuongVaTinHieu;
 
             }
@@ -242,60 +261,77 @@ namespace ManagementSoftware
             {
                 MessageBox.Show("Không để trống ô nhập tên khuynh hướng.", "Lỗi Cú Pháp", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (DALKhuynhHuong.CheckName(textBoxName.Text) == false)
+            {
+                MessageBox.Show("Tên khuynh hướng này đã tồn tại, vui lòng nhập tên khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             else
             {
-                XuHuongVaTinHieu? xuHuongVaTinHieu1 = GetAXuHuong(comboBoxDk1, comboBoxNhom1, comboBoxTinHieu1, textBoxThe1, textBoxGiaTri1, textBoxMax1, textBoxMin1, panelColor1);
-                if(xuHuongVaTinHieu1 != null)
+                XuHuongVaTinHieu? xuHuongVaTinHieu1 = GetAXuHuong(comboBoxDk1, comboBoxNhom1, comboBoxTinHieu1, textBoxThe1, textBoxGiaTri1, textBoxMax1, textBoxMin1, panelColor1, labelNumber1);
+                if (xuHuongVaTinHieu1 != null)
                 {
                     list.Add(xuHuongVaTinHieu1);
                 }
-                XuHuongVaTinHieu? xuHuongVaTinHieu2 = GetAXuHuong(comboBoxDk2, comboBoxNhom2, comboBoxTinHieu2, textBoxThe2, textBoxGiaTri2, textBoxMax2, textBoxMin2, panelColor2);
+                XuHuongVaTinHieu? xuHuongVaTinHieu2 = GetAXuHuong(comboBoxDk2, comboBoxNhom2, comboBoxTinHieu2, textBoxThe2, textBoxGiaTri2, textBoxMax2, textBoxMin2, panelColor2, labelNumber2);
                 if (xuHuongVaTinHieu2 != null)
                 {
                     list.Add(xuHuongVaTinHieu2);
                 }
-                XuHuongVaTinHieu? xuHuongVaTinHieu3 = GetAXuHuong(comboBoxDk3, comboBoxNhom3, comboBoxTinHieu3, textBoxThe3, textBoxGiaTri3, textBoxMax3, textBoxMin3, panelColor3);
+                XuHuongVaTinHieu? xuHuongVaTinHieu3 = GetAXuHuong(comboBoxDk3, comboBoxNhom3, comboBoxTinHieu3, textBoxThe3, textBoxGiaTri3, textBoxMax3, textBoxMin3, panelColor3, labelNumber3);
                 if (xuHuongVaTinHieu3 != null)
                 {
                     list.Add(xuHuongVaTinHieu3);
                 }
-                XuHuongVaTinHieu? xuHuongVaTinHieu4 = GetAXuHuong(comboBoxDk4, comboBoxNhom4, comboBoxTinHieu4, textBoxThe4, textBoxGiaTri4, textBoxMax4, textBoxMin4, panelColor4);
+                XuHuongVaTinHieu? xuHuongVaTinHieu4 = GetAXuHuong(comboBoxDk4, comboBoxNhom4, comboBoxTinHieu4, textBoxThe4, textBoxGiaTri4, textBoxMax4, textBoxMin4, panelColor4, labelNumber4);
                 if (xuHuongVaTinHieu4 != null)
                 {
                     list.Add(xuHuongVaTinHieu4);
                 }
-                XuHuongVaTinHieu? xuHuongVaTinHieu5 = GetAXuHuong(comboBoxDk5, comboBoxNhom5, comboBoxTinHieu5, textBoxThe5, textBoxGiaTri5, textBoxMax5, textBoxMin5, panelColor5);
+                XuHuongVaTinHieu? xuHuongVaTinHieu5 = GetAXuHuong(comboBoxDk5, comboBoxNhom5, comboBoxTinHieu5, textBoxThe5, textBoxGiaTri5, textBoxMax5, textBoxMin5, panelColor5, labelNumber5);
                 if (xuHuongVaTinHieu5 != null)
                 {
                     list.Add(xuHuongVaTinHieu5);
                 }
-                XuHuongVaTinHieu? xuHuongVaTinHieu6 = GetAXuHuong(comboBoxDk6, comboBoxNhom6, comboBoxTinHieu6, textBoxThe6, textBoxGiaTri6, textBoxMax6, textBoxMin6, panelColor6);
+                XuHuongVaTinHieu? xuHuongVaTinHieu6 = GetAXuHuong(comboBoxDk6, comboBoxNhom6, comboBoxTinHieu6, textBoxThe6, textBoxGiaTri6, textBoxMax6, textBoxMin6, panelColor6, labelNumber6);
                 if (xuHuongVaTinHieu6 != null)
                 {
                     list.Add(xuHuongVaTinHieu6);
                 }
-                XuHuongVaTinHieu? xuHuongVaTinHieu7 = GetAXuHuong(comboBoxDk7, comboBoxNhom7, comboBoxTinHieu7, textBoxThe7, textBoxGiaTri7, textBoxMax7, textBoxMin7, panelColor7);
+                XuHuongVaTinHieu? xuHuongVaTinHieu7 = GetAXuHuong(comboBoxDk7, comboBoxNhom7, comboBoxTinHieu7, textBoxThe7, textBoxGiaTri7, textBoxMax7, textBoxMin7, panelColor7, labelNumber7);
                 if (xuHuongVaTinHieu7 != null)
                 {
                     list.Add(xuHuongVaTinHieu7);
                 }
-                XuHuongVaTinHieu? xuHuongVaTinHieu8 = GetAXuHuong(comboBoxDk8, comboBoxNhom8, comboBoxTinHieu8, textBoxThe8, textBoxGiaTri8, textBoxMax8, textBoxMin8, panelColor8);
+                XuHuongVaTinHieu? xuHuongVaTinHieu8 = GetAXuHuong(comboBoxDk8, comboBoxNhom8, comboBoxTinHieu8, textBoxThe8, textBoxGiaTri8, textBoxMax8, textBoxMin8, panelColor8, labelNumber8);
                 if (xuHuongVaTinHieu8 != null)
                 {
                     list.Add(xuHuongVaTinHieu8);
                 }
-            }
-            if (list != null && list.Count > 0)
-            {
-                if(DALKhuynhHuong.Add(textBoxName.Name,list) == false)
+                if (list != null && list.Count > 0)
                 {
-                    MessageBox.Show("Thêm không thành công, vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (DALKhuynhHuong.Add(textBoxName.Text, list) > 0)
+                    {
+                        this.Close();
+                        callBack?.Invoke();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm không thành công, vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    this.Close();
+                    MessageBox.Show("Cần thêm ít nhất 1 mẫu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+
+        }
+
+        public delegate void CallBack();
+        public CallBack callBack;
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

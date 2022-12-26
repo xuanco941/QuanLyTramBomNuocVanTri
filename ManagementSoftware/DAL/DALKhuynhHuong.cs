@@ -11,7 +11,7 @@ namespace ManagementSoftware.DAL
     public class DALKhuynhHuong
     {
 
-        public static bool Add(string name, List<XuHuongVaTinHieu> x)
+        public static int Add(string name, List<XuHuongVaTinHieu> x)
         {
             DataBaseContext dbContext = new DataBaseContext();
             DoThiKhuynhHuong doThiKhuynhHuong = new DoThiKhuynhHuong();
@@ -21,10 +21,10 @@ namespace ManagementSoftware.DAL
 
             foreach (XuHuongVaTinHieu item in x)
             {
-                item.IDDoThiKhuynhHuong = doThiKhuynhHuong.IDDoThiKhuynhHuong;
+                item.DoThiKhuynhHuongID = doThiKhuynhHuong.DoThiKhuynhHuongID;
             }
             dbContext.XuHuongVaTinHieus.AddRange(x);
-            return dbContext.SaveChanges() > 0;
+            return dbContext.SaveChanges();
         }
         public static bool Update(string name, string newName, List<XuHuongVaTinHieu> newTinHieus)
         {
@@ -33,7 +33,7 @@ namespace ManagementSoftware.DAL
             if (userUpdate != null)
             {
                 userUpdate.TenDoThi = newName;
-                dbContext.XuHuongVaTinHieus.RemoveRange(dbContext.XuHuongVaTinHieus.Where(x => x.IDDoThiKhuynhHuong == userUpdate.IDDoThiKhuynhHuong));
+                dbContext.XuHuongVaTinHieus.RemoveRange(dbContext.XuHuongVaTinHieus.Where(x => x.DoThiKhuynhHuongID == userUpdate.DoThiKhuynhHuongID));
                 dbContext.XuHuongVaTinHieus.AddRange(newTinHieus);
             }
 
@@ -55,8 +55,19 @@ namespace ManagementSoftware.DAL
         {
             DataBaseContext dbContext = new DataBaseContext();
             int count = dbContext.DoThiKhuynhHuongs.Where(d => d.TenDoThi == name).ToList().Count;
-            return count < 1;
-
+            return count <= 0 ? true : false;
         }
+        public static List<DoThiKhuynhHuong>? GetAll()
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.DoThiKhuynhHuongs.ToList();
+        }
+        public static DoThiKhuynhHuong? GetAKhuynhHuong(int id)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            return dbContext.DoThiKhuynhHuongs.Where(a => a.DoThiKhuynhHuongID == id).FirstOrDefault();
+        }
+
+
     }
 }

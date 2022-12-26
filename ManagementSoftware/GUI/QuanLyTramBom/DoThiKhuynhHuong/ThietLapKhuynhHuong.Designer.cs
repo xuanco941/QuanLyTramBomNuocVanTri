@@ -64,18 +64,18 @@
             this.comboBoxTinHieu1 = new System.Windows.Forms.ComboBox();
             this.comboBoxNhom1 = new System.Windows.Forms.ComboBox();
             this.comboBoxDk1 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelNumber2 = new System.Windows.Forms.Label();
+            this.labelNumber3 = new System.Windows.Forms.Label();
+            this.labelNumber4 = new System.Windows.Forms.Label();
+            this.labelNumber5 = new System.Windows.Forms.Label();
+            this.labelNumber6 = new System.Windows.Forms.Label();
+            this.labelNumber7 = new System.Windows.Forms.Label();
+            this.labelNumber8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelNumber1 = new System.Windows.Forms.Label();
             this.textBoxGiaTri1 = new System.Windows.Forms.TextBox();
             this.textBoxMax1 = new System.Windows.Forms.TextBox();
             this.textBoxMin1 = new System.Windows.Forms.TextBox();
@@ -127,16 +127,17 @@
             // 
             // textBoxName
             // 
+            this.textBoxName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxName.Location = new System.Drawing.Point(115, 45);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(412, 25);
+            this.textBoxName.Size = new System.Drawing.Size(412, 29);
             this.textBoxName.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(7, 45);
+            this.label1.Location = new System.Drawing.Point(27, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 0;
@@ -176,22 +177,22 @@
             this.groupBox2.Controls.Add(this.comboBoxTinHieu1);
             this.groupBox2.Controls.Add(this.comboBoxNhom1);
             this.groupBox2.Controls.Add(this.comboBoxDk1);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.labelNumber2);
+            this.groupBox2.Controls.Add(this.labelNumber3);
+            this.groupBox2.Controls.Add(this.labelNumber4);
+            this.groupBox2.Controls.Add(this.labelNumber5);
+            this.groupBox2.Controls.Add(this.labelNumber6);
+            this.groupBox2.Controls.Add(this.labelNumber7);
+            this.groupBox2.Controls.Add(this.labelNumber8);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Controls.Add(this.labelNumber1);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(24, 139);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(860, 377);
+            this.groupBox2.Size = new System.Drawing.Size(873, 376);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thiết lập đường xu hướng và tín hiệu";
@@ -199,368 +200,432 @@
             // textBoxThe8
             // 
             this.textBoxThe8.Enabled = false;
+            this.textBoxThe8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxThe8.Location = new System.Drawing.Point(715, 337);
             this.textBoxThe8.Name = "textBoxThe8";
-            this.textBoxThe8.Size = new System.Drawing.Size(100, 25);
+            this.textBoxThe8.Size = new System.Drawing.Size(100, 27);
             this.textBoxThe8.TabIndex = 43;
+            this.textBoxThe8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTinHieu8
             // 
+            this.comboBoxTinHieu8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTinHieu8.Enabled = false;
+            this.comboBoxTinHieu8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTinHieu8.FormattingEnabled = true;
             this.comboBoxTinHieu8.Location = new System.Drawing.Point(456, 337);
             this.comboBoxTinHieu8.Name = "comboBoxTinHieu8";
-            this.comboBoxTinHieu8.Size = new System.Drawing.Size(195, 25);
+            this.comboBoxTinHieu8.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu8.TabIndex = 42;
             this.comboBoxTinHieu8.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom8
             // 
+            this.comboBoxNhom8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhom8.Enabled = false;
+            this.comboBoxNhom8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxNhom8.FormattingEnabled = true;
             this.comboBoxNhom8.Location = new System.Drawing.Point(271, 337);
             this.comboBoxNhom8.Name = "comboBoxNhom8";
-            this.comboBoxNhom8.Size = new System.Drawing.Size(126, 25);
+            this.comboBoxNhom8.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom8.TabIndex = 41;
             this.comboBoxNhom8.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk8
             // 
+            this.comboBoxDk8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDk8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDk8.FormattingEnabled = true;
             this.comboBoxDk8.Location = new System.Drawing.Point(88, 337);
             this.comboBoxDk8.Name = "comboBoxDk8";
-            this.comboBoxDk8.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxDk8.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk8.TabIndex = 40;
             this.comboBoxDk8.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe7
             // 
             this.textBoxThe7.Enabled = false;
+            this.textBoxThe7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxThe7.Location = new System.Drawing.Point(715, 297);
             this.textBoxThe7.Name = "textBoxThe7";
-            this.textBoxThe7.Size = new System.Drawing.Size(100, 25);
+            this.textBoxThe7.Size = new System.Drawing.Size(100, 27);
             this.textBoxThe7.TabIndex = 39;
+            this.textBoxThe7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTinHieu7
             // 
+            this.comboBoxTinHieu7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTinHieu7.Enabled = false;
+            this.comboBoxTinHieu7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTinHieu7.FormattingEnabled = true;
             this.comboBoxTinHieu7.Location = new System.Drawing.Point(456, 297);
             this.comboBoxTinHieu7.Name = "comboBoxTinHieu7";
-            this.comboBoxTinHieu7.Size = new System.Drawing.Size(195, 25);
+            this.comboBoxTinHieu7.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu7.TabIndex = 38;
             this.comboBoxTinHieu7.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom7
             // 
+            this.comboBoxNhom7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhom7.Enabled = false;
+            this.comboBoxNhom7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxNhom7.FormattingEnabled = true;
             this.comboBoxNhom7.Location = new System.Drawing.Point(271, 297);
             this.comboBoxNhom7.Name = "comboBoxNhom7";
-            this.comboBoxNhom7.Size = new System.Drawing.Size(126, 25);
+            this.comboBoxNhom7.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom7.TabIndex = 37;
             this.comboBoxNhom7.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk7
             // 
+            this.comboBoxDk7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDk7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDk7.FormattingEnabled = true;
             this.comboBoxDk7.Location = new System.Drawing.Point(88, 297);
             this.comboBoxDk7.Name = "comboBoxDk7";
-            this.comboBoxDk7.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxDk7.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk7.TabIndex = 36;
             this.comboBoxDk7.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe6
             // 
             this.textBoxThe6.Enabled = false;
+            this.textBoxThe6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxThe6.Location = new System.Drawing.Point(715, 257);
             this.textBoxThe6.Name = "textBoxThe6";
-            this.textBoxThe6.Size = new System.Drawing.Size(100, 25);
+            this.textBoxThe6.Size = new System.Drawing.Size(100, 27);
             this.textBoxThe6.TabIndex = 35;
+            this.textBoxThe6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTinHieu6
             // 
+            this.comboBoxTinHieu6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTinHieu6.Enabled = false;
+            this.comboBoxTinHieu6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTinHieu6.FormattingEnabled = true;
             this.comboBoxTinHieu6.Location = new System.Drawing.Point(456, 257);
             this.comboBoxTinHieu6.Name = "comboBoxTinHieu6";
-            this.comboBoxTinHieu6.Size = new System.Drawing.Size(195, 25);
+            this.comboBoxTinHieu6.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu6.TabIndex = 34;
             this.comboBoxTinHieu6.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom6
             // 
+            this.comboBoxNhom6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhom6.Enabled = false;
+            this.comboBoxNhom6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxNhom6.FormattingEnabled = true;
             this.comboBoxNhom6.Location = new System.Drawing.Point(271, 257);
             this.comboBoxNhom6.Name = "comboBoxNhom6";
-            this.comboBoxNhom6.Size = new System.Drawing.Size(126, 25);
+            this.comboBoxNhom6.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom6.TabIndex = 33;
             this.comboBoxNhom6.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk6
             // 
+            this.comboBoxDk6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDk6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDk6.FormattingEnabled = true;
             this.comboBoxDk6.Location = new System.Drawing.Point(88, 257);
             this.comboBoxDk6.Name = "comboBoxDk6";
-            this.comboBoxDk6.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxDk6.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk6.TabIndex = 32;
             this.comboBoxDk6.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe5
             // 
             this.textBoxThe5.Enabled = false;
+            this.textBoxThe5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxThe5.Location = new System.Drawing.Point(715, 217);
             this.textBoxThe5.Name = "textBoxThe5";
-            this.textBoxThe5.Size = new System.Drawing.Size(100, 25);
+            this.textBoxThe5.Size = new System.Drawing.Size(100, 27);
             this.textBoxThe5.TabIndex = 31;
+            this.textBoxThe5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTinHieu5
             // 
+            this.comboBoxTinHieu5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTinHieu5.Enabled = false;
+            this.comboBoxTinHieu5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTinHieu5.FormattingEnabled = true;
             this.comboBoxTinHieu5.Location = new System.Drawing.Point(456, 217);
             this.comboBoxTinHieu5.Name = "comboBoxTinHieu5";
-            this.comboBoxTinHieu5.Size = new System.Drawing.Size(195, 25);
+            this.comboBoxTinHieu5.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu5.TabIndex = 30;
             this.comboBoxTinHieu5.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom5
             // 
+            this.comboBoxNhom5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhom5.Enabled = false;
+            this.comboBoxNhom5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxNhom5.FormattingEnabled = true;
             this.comboBoxNhom5.Location = new System.Drawing.Point(271, 217);
             this.comboBoxNhom5.Name = "comboBoxNhom5";
-            this.comboBoxNhom5.Size = new System.Drawing.Size(126, 25);
+            this.comboBoxNhom5.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom5.TabIndex = 29;
             this.comboBoxNhom5.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk5
             // 
+            this.comboBoxDk5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDk5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDk5.FormattingEnabled = true;
             this.comboBoxDk5.Location = new System.Drawing.Point(88, 217);
             this.comboBoxDk5.Name = "comboBoxDk5";
-            this.comboBoxDk5.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxDk5.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk5.TabIndex = 28;
             this.comboBoxDk5.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe4
             // 
             this.textBoxThe4.Enabled = false;
+            this.textBoxThe4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxThe4.Location = new System.Drawing.Point(715, 177);
             this.textBoxThe4.Name = "textBoxThe4";
-            this.textBoxThe4.Size = new System.Drawing.Size(100, 25);
+            this.textBoxThe4.Size = new System.Drawing.Size(100, 27);
             this.textBoxThe4.TabIndex = 27;
+            this.textBoxThe4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTinHieu4
             // 
+            this.comboBoxTinHieu4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTinHieu4.Enabled = false;
+            this.comboBoxTinHieu4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTinHieu4.FormattingEnabled = true;
             this.comboBoxTinHieu4.Location = new System.Drawing.Point(456, 177);
             this.comboBoxTinHieu4.Name = "comboBoxTinHieu4";
-            this.comboBoxTinHieu4.Size = new System.Drawing.Size(195, 25);
+            this.comboBoxTinHieu4.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu4.TabIndex = 26;
             this.comboBoxTinHieu4.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom4
             // 
+            this.comboBoxNhom4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhom4.Enabled = false;
+            this.comboBoxNhom4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxNhom4.FormattingEnabled = true;
             this.comboBoxNhom4.Location = new System.Drawing.Point(271, 177);
             this.comboBoxNhom4.Name = "comboBoxNhom4";
-            this.comboBoxNhom4.Size = new System.Drawing.Size(126, 25);
+            this.comboBoxNhom4.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom4.TabIndex = 25;
             this.comboBoxNhom4.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk4
             // 
+            this.comboBoxDk4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDk4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDk4.FormattingEnabled = true;
             this.comboBoxDk4.Location = new System.Drawing.Point(88, 177);
             this.comboBoxDk4.Name = "comboBoxDk4";
-            this.comboBoxDk4.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxDk4.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk4.TabIndex = 24;
             this.comboBoxDk4.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe3
             // 
             this.textBoxThe3.Enabled = false;
+            this.textBoxThe3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxThe3.Location = new System.Drawing.Point(715, 137);
             this.textBoxThe3.Name = "textBoxThe3";
-            this.textBoxThe3.Size = new System.Drawing.Size(100, 25);
+            this.textBoxThe3.Size = new System.Drawing.Size(100, 27);
             this.textBoxThe3.TabIndex = 23;
+            this.textBoxThe3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTinHieu3
             // 
+            this.comboBoxTinHieu3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTinHieu3.Enabled = false;
+            this.comboBoxTinHieu3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTinHieu3.FormattingEnabled = true;
             this.comboBoxTinHieu3.Location = new System.Drawing.Point(456, 137);
             this.comboBoxTinHieu3.Name = "comboBoxTinHieu3";
-            this.comboBoxTinHieu3.Size = new System.Drawing.Size(195, 25);
+            this.comboBoxTinHieu3.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu3.TabIndex = 22;
             this.comboBoxTinHieu3.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom3
             // 
+            this.comboBoxNhom3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhom3.Enabled = false;
+            this.comboBoxNhom3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxNhom3.FormattingEnabled = true;
             this.comboBoxNhom3.Location = new System.Drawing.Point(271, 137);
             this.comboBoxNhom3.Name = "comboBoxNhom3";
-            this.comboBoxNhom3.Size = new System.Drawing.Size(126, 25);
+            this.comboBoxNhom3.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom3.TabIndex = 21;
             this.comboBoxNhom3.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk3
             // 
+            this.comboBoxDk3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDk3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDk3.FormattingEnabled = true;
             this.comboBoxDk3.Location = new System.Drawing.Point(88, 137);
             this.comboBoxDk3.Name = "comboBoxDk3";
-            this.comboBoxDk3.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxDk3.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk3.TabIndex = 20;
             this.comboBoxDk3.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe2
             // 
             this.textBoxThe2.Enabled = false;
+            this.textBoxThe2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxThe2.Location = new System.Drawing.Point(715, 97);
             this.textBoxThe2.Name = "textBoxThe2";
-            this.textBoxThe2.Size = new System.Drawing.Size(100, 25);
+            this.textBoxThe2.Size = new System.Drawing.Size(100, 27);
             this.textBoxThe2.TabIndex = 19;
+            this.textBoxThe2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTinHieu2
             // 
+            this.comboBoxTinHieu2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTinHieu2.Enabled = false;
+            this.comboBoxTinHieu2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTinHieu2.FormattingEnabled = true;
             this.comboBoxTinHieu2.Location = new System.Drawing.Point(456, 97);
             this.comboBoxTinHieu2.Name = "comboBoxTinHieu2";
-            this.comboBoxTinHieu2.Size = new System.Drawing.Size(195, 25);
+            this.comboBoxTinHieu2.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu2.TabIndex = 18;
             this.comboBoxTinHieu2.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom2
             // 
+            this.comboBoxNhom2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhom2.Enabled = false;
+            this.comboBoxNhom2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxNhom2.FormattingEnabled = true;
             this.comboBoxNhom2.Location = new System.Drawing.Point(271, 97);
             this.comboBoxNhom2.Name = "comboBoxNhom2";
-            this.comboBoxNhom2.Size = new System.Drawing.Size(126, 25);
+            this.comboBoxNhom2.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom2.TabIndex = 17;
             this.comboBoxNhom2.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk2
             // 
+            this.comboBoxDk2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDk2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDk2.FormattingEnabled = true;
             this.comboBoxDk2.Location = new System.Drawing.Point(88, 97);
             this.comboBoxDk2.Name = "comboBoxDk2";
-            this.comboBoxDk2.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxDk2.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk2.TabIndex = 16;
             this.comboBoxDk2.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe1
             // 
             this.textBoxThe1.Enabled = false;
+            this.textBoxThe1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxThe1.Location = new System.Drawing.Point(715, 63);
             this.textBoxThe1.Name = "textBoxThe1";
-            this.textBoxThe1.Size = new System.Drawing.Size(100, 25);
+            this.textBoxThe1.Size = new System.Drawing.Size(100, 27);
             this.textBoxThe1.TabIndex = 15;
+            this.textBoxThe1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBoxTinHieu1
             // 
+            this.comboBoxTinHieu1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTinHieu1.Enabled = false;
+            this.comboBoxTinHieu1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTinHieu1.FormattingEnabled = true;
             this.comboBoxTinHieu1.Location = new System.Drawing.Point(456, 63);
             this.comboBoxTinHieu1.Name = "comboBoxTinHieu1";
-            this.comboBoxTinHieu1.Size = new System.Drawing.Size(195, 25);
+            this.comboBoxTinHieu1.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu1.TabIndex = 14;
             this.comboBoxTinHieu1.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom1
             // 
+            this.comboBoxNhom1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNhom1.Enabled = false;
+            this.comboBoxNhom1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxNhom1.FormattingEnabled = true;
             this.comboBoxNhom1.Location = new System.Drawing.Point(271, 63);
             this.comboBoxNhom1.Name = "comboBoxNhom1";
-            this.comboBoxNhom1.Size = new System.Drawing.Size(126, 25);
+            this.comboBoxNhom1.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom1.TabIndex = 13;
             this.comboBoxNhom1.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk1
             // 
+            this.comboBoxDk1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDk1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxDk1.FormattingEnabled = true;
             this.comboBoxDk1.Location = new System.Drawing.Point(88, 63);
             this.comboBoxDk1.Name = "comboBoxDk1";
-            this.comboBoxDk1.Size = new System.Drawing.Size(121, 25);
+            this.comboBoxDk1.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk1.TabIndex = 12;
             this.comboBoxDk1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
-            // label13
+            // labelNumber2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(23, 100);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(17, 19);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "2";
+            this.labelNumber2.AutoSize = true;
+            this.labelNumber2.Location = new System.Drawing.Point(23, 100);
+            this.labelNumber2.Name = "labelNumber2";
+            this.labelNumber2.Size = new System.Drawing.Size(17, 20);
+            this.labelNumber2.TabIndex = 11;
+            this.labelNumber2.Text = "2";
             // 
-            // label12
+            // labelNumber3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(23, 140);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(17, 19);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "3";
+            this.labelNumber3.AutoSize = true;
+            this.labelNumber3.Location = new System.Drawing.Point(23, 140);
+            this.labelNumber3.Name = "labelNumber3";
+            this.labelNumber3.Size = new System.Drawing.Size(17, 20);
+            this.labelNumber3.TabIndex = 10;
+            this.labelNumber3.Text = "3";
             // 
-            // label11
+            // labelNumber4
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 180);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(17, 19);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "4";
+            this.labelNumber4.AutoSize = true;
+            this.labelNumber4.Location = new System.Drawing.Point(23, 180);
+            this.labelNumber4.Name = "labelNumber4";
+            this.labelNumber4.Size = new System.Drawing.Size(17, 20);
+            this.labelNumber4.TabIndex = 9;
+            this.labelNumber4.Text = "4";
             // 
-            // label10
+            // labelNumber5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 220);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(17, 19);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "5";
+            this.labelNumber5.AutoSize = true;
+            this.labelNumber5.Location = new System.Drawing.Point(23, 220);
+            this.labelNumber5.Name = "labelNumber5";
+            this.labelNumber5.Size = new System.Drawing.Size(17, 20);
+            this.labelNumber5.TabIndex = 8;
+            this.labelNumber5.Text = "5";
             // 
-            // label9
+            // labelNumber6
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 260);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(17, 19);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "6";
+            this.labelNumber6.AutoSize = true;
+            this.labelNumber6.Location = new System.Drawing.Point(23, 260);
+            this.labelNumber6.Name = "labelNumber6";
+            this.labelNumber6.Size = new System.Drawing.Size(17, 20);
+            this.labelNumber6.TabIndex = 7;
+            this.labelNumber6.Text = "6";
             // 
-            // label8
+            // labelNumber7
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 300);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 19);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "7";
+            this.labelNumber7.AutoSize = true;
+            this.labelNumber7.Location = new System.Drawing.Point(23, 300);
+            this.labelNumber7.Name = "labelNumber7";
+            this.labelNumber7.Size = new System.Drawing.Size(17, 20);
+            this.labelNumber7.TabIndex = 6;
+            this.labelNumber7.Text = "7";
             // 
-            // label7
+            // labelNumber8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 340);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 19);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "8";
+            this.labelNumber8.AutoSize = true;
+            this.labelNumber8.Location = new System.Drawing.Point(23, 340);
+            this.labelNumber8.Name = "labelNumber8";
+            this.labelNumber8.Size = new System.Drawing.Size(17, 20);
+            this.labelNumber8.TabIndex = 5;
+            this.labelNumber8.Text = "8";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(122, 35);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 19);
+            this.label6.Size = new System.Drawing.Size(71, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "Điều kiện";
             // 
@@ -569,7 +634,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(524, 35);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 19);
+            this.label5.Size = new System.Drawing.Size(61, 20);
             this.label5.TabIndex = 3;
             this.label5.Text = "Tín hiệu";
             // 
@@ -578,7 +643,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(308, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 19);
+            this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Nhóm";
             // 
@@ -587,49 +652,55 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(736, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 19);
+            this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Gắn thẻ";
             // 
-            // label2
+            // labelNumber1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "1";
+            this.labelNumber1.AutoSize = true;
+            this.labelNumber1.Location = new System.Drawing.Point(23, 60);
+            this.labelNumber1.Name = "labelNumber1";
+            this.labelNumber1.Size = new System.Drawing.Size(17, 20);
+            this.labelNumber1.TabIndex = 0;
+            this.labelNumber1.Text = "1";
             // 
             // textBoxGiaTri1
             // 
             this.textBoxGiaTri1.Enabled = false;
+            this.textBoxGiaTri1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxGiaTri1.Location = new System.Drawing.Point(24, 533);
             this.textBoxGiaTri1.Name = "textBoxGiaTri1";
-            this.textBoxGiaTri1.Size = new System.Drawing.Size(100, 23);
+            this.textBoxGiaTri1.Size = new System.Drawing.Size(100, 27);
             this.textBoxGiaTri1.TabIndex = 2;
+            this.textBoxGiaTri1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMax1
             // 
             this.textBoxMax1.Enabled = false;
+            this.textBoxMax1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax1.Location = new System.Drawing.Point(24, 562);
             this.textBoxMax1.Name = "textBoxMax1";
-            this.textBoxMax1.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMax1.Size = new System.Drawing.Size(100, 27);
             this.textBoxMax1.TabIndex = 3;
+            this.textBoxMax1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMin1
             // 
             this.textBoxMin1.Enabled = false;
+            this.textBoxMin1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin1.Location = new System.Drawing.Point(24, 664);
             this.textBoxMin1.Name = "textBoxMin1";
-            this.textBoxMin1.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMin1.Size = new System.Drawing.Size(100, 27);
             this.textBoxMin1.TabIndex = 4;
+            this.textBoxMin1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button4.BackColor = System.Drawing.SystemColors.Control;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button4.Image = global::ManagementSoftware.Properties.Resources.icons8_close_30;
             this.button4.Location = new System.Drawing.Point(525, 717);
@@ -641,13 +712,14 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button3.Image = global::ManagementSoftware.Properties.Resources.ico_select_min;
             this.button3.Location = new System.Drawing.Point(318, 717);
@@ -664,170 +736,212 @@
             // textBoxMin2
             // 
             this.textBoxMin2.Enabled = false;
+            this.textBoxMin2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin2.Location = new System.Drawing.Point(139, 664);
             this.textBoxMin2.Name = "textBoxMin2";
-            this.textBoxMin2.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMin2.Size = new System.Drawing.Size(100, 27);
             this.textBoxMin2.TabIndex = 30;
+            this.textBoxMin2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMax2
             // 
             this.textBoxMax2.Enabled = false;
+            this.textBoxMax2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax2.Location = new System.Drawing.Point(139, 562);
             this.textBoxMax2.Name = "textBoxMax2";
-            this.textBoxMax2.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMax2.Size = new System.Drawing.Size(100, 27);
             this.textBoxMax2.TabIndex = 29;
+            this.textBoxMax2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxGiaTri2
             // 
             this.textBoxGiaTri2.Enabled = false;
+            this.textBoxGiaTri2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxGiaTri2.Location = new System.Drawing.Point(139, 533);
             this.textBoxGiaTri2.Name = "textBoxGiaTri2";
-            this.textBoxGiaTri2.Size = new System.Drawing.Size(100, 23);
+            this.textBoxGiaTri2.Size = new System.Drawing.Size(100, 27);
             this.textBoxGiaTri2.TabIndex = 28;
+            this.textBoxGiaTri2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMin3
             // 
             this.textBoxMin3.Enabled = false;
+            this.textBoxMin3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin3.Location = new System.Drawing.Point(255, 664);
             this.textBoxMin3.Name = "textBoxMin3";
-            this.textBoxMin3.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMin3.Size = new System.Drawing.Size(100, 27);
             this.textBoxMin3.TabIndex = 33;
+            this.textBoxMin3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMax3
             // 
             this.textBoxMax3.Enabled = false;
+            this.textBoxMax3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax3.Location = new System.Drawing.Point(255, 562);
             this.textBoxMax3.Name = "textBoxMax3";
-            this.textBoxMax3.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMax3.Size = new System.Drawing.Size(100, 27);
             this.textBoxMax3.TabIndex = 32;
+            this.textBoxMax3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxGiaTri3
             // 
             this.textBoxGiaTri3.Enabled = false;
+            this.textBoxGiaTri3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxGiaTri3.Location = new System.Drawing.Point(255, 533);
             this.textBoxGiaTri3.Name = "textBoxGiaTri3";
-            this.textBoxGiaTri3.Size = new System.Drawing.Size(100, 23);
+            this.textBoxGiaTri3.Size = new System.Drawing.Size(100, 27);
             this.textBoxGiaTri3.TabIndex = 31;
+            this.textBoxGiaTri3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMin4
             // 
             this.textBoxMin4.Enabled = false;
+            this.textBoxMin4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin4.Location = new System.Drawing.Point(370, 664);
             this.textBoxMin4.Name = "textBoxMin4";
-            this.textBoxMin4.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMin4.Size = new System.Drawing.Size(100, 27);
             this.textBoxMin4.TabIndex = 36;
+            this.textBoxMin4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMax4
             // 
             this.textBoxMax4.Enabled = false;
+            this.textBoxMax4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax4.Location = new System.Drawing.Point(370, 562);
             this.textBoxMax4.Name = "textBoxMax4";
-            this.textBoxMax4.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMax4.Size = new System.Drawing.Size(100, 27);
             this.textBoxMax4.TabIndex = 35;
+            this.textBoxMax4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxGiaTri4
             // 
             this.textBoxGiaTri4.Enabled = false;
+            this.textBoxGiaTri4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxGiaTri4.Location = new System.Drawing.Point(370, 533);
             this.textBoxGiaTri4.Name = "textBoxGiaTri4";
-            this.textBoxGiaTri4.Size = new System.Drawing.Size(100, 23);
+            this.textBoxGiaTri4.Size = new System.Drawing.Size(100, 27);
             this.textBoxGiaTri4.TabIndex = 34;
+            this.textBoxGiaTri4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMin5
             // 
             this.textBoxMin5.Enabled = false;
+            this.textBoxMin5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin5.Location = new System.Drawing.Point(480, 664);
             this.textBoxMin5.Name = "textBoxMin5";
-            this.textBoxMin5.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMin5.Size = new System.Drawing.Size(100, 27);
             this.textBoxMin5.TabIndex = 39;
+            this.textBoxMin5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMax5
             // 
             this.textBoxMax5.Enabled = false;
+            this.textBoxMax5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax5.Location = new System.Drawing.Point(480, 562);
             this.textBoxMax5.Name = "textBoxMax5";
-            this.textBoxMax5.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMax5.Size = new System.Drawing.Size(100, 27);
             this.textBoxMax5.TabIndex = 38;
+            this.textBoxMax5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxGiaTri5
             // 
             this.textBoxGiaTri5.Enabled = false;
+            this.textBoxGiaTri5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxGiaTri5.Location = new System.Drawing.Point(480, 533);
             this.textBoxGiaTri5.Name = "textBoxGiaTri5";
-            this.textBoxGiaTri5.Size = new System.Drawing.Size(100, 23);
+            this.textBoxGiaTri5.Size = new System.Drawing.Size(100, 27);
             this.textBoxGiaTri5.TabIndex = 37;
+            this.textBoxGiaTri5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMin6
             // 
             this.textBoxMin6.Enabled = false;
+            this.textBoxMin6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin6.Location = new System.Drawing.Point(586, 664);
             this.textBoxMin6.Name = "textBoxMin6";
-            this.textBoxMin6.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMin6.Size = new System.Drawing.Size(100, 27);
             this.textBoxMin6.TabIndex = 42;
+            this.textBoxMin6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMax6
             // 
             this.textBoxMax6.Enabled = false;
+            this.textBoxMax6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax6.Location = new System.Drawing.Point(586, 562);
             this.textBoxMax6.Name = "textBoxMax6";
-            this.textBoxMax6.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMax6.Size = new System.Drawing.Size(100, 27);
             this.textBoxMax6.TabIndex = 41;
+            this.textBoxMax6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxGiaTri6
             // 
             this.textBoxGiaTri6.Enabled = false;
+            this.textBoxGiaTri6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxGiaTri6.Location = new System.Drawing.Point(586, 533);
             this.textBoxGiaTri6.Name = "textBoxGiaTri6";
-            this.textBoxGiaTri6.Size = new System.Drawing.Size(100, 23);
+            this.textBoxGiaTri6.Size = new System.Drawing.Size(100, 27);
             this.textBoxGiaTri6.TabIndex = 40;
+            this.textBoxGiaTri6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMin7
             // 
             this.textBoxMin7.Enabled = false;
+            this.textBoxMin7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin7.Location = new System.Drawing.Point(692, 664);
             this.textBoxMin7.Name = "textBoxMin7";
-            this.textBoxMin7.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMin7.Size = new System.Drawing.Size(100, 27);
             this.textBoxMin7.TabIndex = 45;
+            this.textBoxMin7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMax7
             // 
             this.textBoxMax7.Enabled = false;
+            this.textBoxMax7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax7.Location = new System.Drawing.Point(692, 562);
             this.textBoxMax7.Name = "textBoxMax7";
-            this.textBoxMax7.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMax7.Size = new System.Drawing.Size(100, 27);
             this.textBoxMax7.TabIndex = 44;
+            this.textBoxMax7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxGiaTri7
             // 
             this.textBoxGiaTri7.Enabled = false;
+            this.textBoxGiaTri7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxGiaTri7.Location = new System.Drawing.Point(692, 533);
             this.textBoxGiaTri7.Name = "textBoxGiaTri7";
-            this.textBoxGiaTri7.Size = new System.Drawing.Size(100, 23);
+            this.textBoxGiaTri7.Size = new System.Drawing.Size(100, 27);
             this.textBoxGiaTri7.TabIndex = 43;
+            this.textBoxGiaTri7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMin8
             // 
             this.textBoxMin8.Enabled = false;
+            this.textBoxMin8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin8.Location = new System.Drawing.Point(797, 664);
             this.textBoxMin8.Name = "textBoxMin8";
-            this.textBoxMin8.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMin8.Size = new System.Drawing.Size(100, 27);
             this.textBoxMin8.TabIndex = 48;
+            this.textBoxMin8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMax8
             // 
             this.textBoxMax8.Enabled = false;
+            this.textBoxMax8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax8.Location = new System.Drawing.Point(797, 562);
             this.textBoxMax8.Name = "textBoxMax8";
-            this.textBoxMax8.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMax8.Size = new System.Drawing.Size(100, 27);
             this.textBoxMax8.TabIndex = 47;
+            this.textBoxMax8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxGiaTri8
             // 
             this.textBoxGiaTri8.Enabled = false;
+            this.textBoxGiaTri8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxGiaTri8.Location = new System.Drawing.Point(797, 533);
             this.textBoxGiaTri8.Name = "textBoxGiaTri8";
-            this.textBoxGiaTri8.Size = new System.Drawing.Size(100, 23);
+            this.textBoxGiaTri8.Size = new System.Drawing.Size(100, 27);
             this.textBoxGiaTri8.TabIndex = 46;
+            this.textBoxGiaTri8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panelColor1
             // 
@@ -839,7 +953,7 @@
             // 
             // panelColor2
             // 
-            this.panelColor2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor2.BackColor = System.Drawing.Color.Yellow;
             this.panelColor2.Location = new System.Drawing.Point(182, 591);
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(17, 68);
@@ -847,7 +961,7 @@
             // 
             // panelColor3
             // 
-            this.panelColor3.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor3.BackColor = System.Drawing.Color.Khaki;
             this.panelColor3.Location = new System.Drawing.Point(296, 591);
             this.panelColor3.Name = "panelColor3";
             this.panelColor3.Size = new System.Drawing.Size(17, 68);
@@ -855,23 +969,23 @@
             // 
             // panelColor4
             // 
-            this.panelColor4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panelColor4.Location = new System.Drawing.Point(421, 591);
+            this.panelColor4.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panelColor4.Location = new System.Drawing.Point(415, 591);
             this.panelColor4.Name = "panelColor4";
             this.panelColor4.Size = new System.Drawing.Size(17, 68);
             this.panelColor4.TabIndex = 52;
             // 
             // panelColor5
             // 
-            this.panelColor5.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panelColor5.Location = new System.Drawing.Point(525, 591);
+            this.panelColor5.BackColor = System.Drawing.Color.RosyBrown;
+            this.panelColor5.Location = new System.Drawing.Point(523, 591);
             this.panelColor5.Name = "panelColor5";
             this.panelColor5.Size = new System.Drawing.Size(17, 68);
             this.panelColor5.TabIndex = 53;
             // 
             // panelColor6
             // 
-            this.panelColor6.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor6.BackColor = System.Drawing.Color.Red;
             this.panelColor6.Location = new System.Drawing.Point(627, 590);
             this.panelColor6.Name = "panelColor6";
             this.panelColor6.Size = new System.Drawing.Size(17, 68);
@@ -879,7 +993,7 @@
             // 
             // panelColor7
             // 
-            this.panelColor7.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor7.BackColor = System.Drawing.Color.DarkOrchid;
             this.panelColor7.Location = new System.Drawing.Point(731, 591);
             this.panelColor7.Name = "panelColor7";
             this.panelColor7.Size = new System.Drawing.Size(17, 68);
@@ -887,7 +1001,7 @@
             // 
             // panelColor8
             // 
-            this.panelColor8.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor8.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panelColor8.Location = new System.Drawing.Point(840, 591);
             this.panelColor8.Name = "panelColor8";
             this.panelColor8.Size = new System.Drawing.Size(17, 68);
@@ -954,18 +1068,18 @@
         private TextBox textBoxName;
         private Label label1;
         private GroupBox groupBox2;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
-        private Label label9;
-        private Label label8;
-        private Label label7;
+        private Label labelNumber2;
+        private Label labelNumber3;
+        private Label labelNumber4;
+        private Label labelNumber5;
+        private Label labelNumber6;
+        private Label labelNumber7;
+        private Label labelNumber8;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
-        private Label label2;
+        private Label labelNumber1;
         private TextBox textBoxThe1;
         private ComboBox comboBoxTinHieu1;
         private ComboBox comboBoxNhom1;

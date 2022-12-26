@@ -12,7 +12,7 @@ namespace ManagementSoftware.Models.TramBomNuoc
     public class DoThiKhuynhHuong
     {
         [Key]
-        public int IDDoThiKhuynhHuong { get; set; }
+        public int DoThiKhuynhHuongID { get; set; }
         [Required]
         public string TenDoThi { get; set; }
 
