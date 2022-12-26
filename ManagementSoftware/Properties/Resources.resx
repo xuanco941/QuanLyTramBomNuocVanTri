@@ -394,4 +394,52 @@
   <data name="VanDo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VanDo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BomChinh1Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh1Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomChinh1Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh1Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomChinh2Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh2Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomChinh2Xanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh2Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomChinh3Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh3Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomChinh3Xanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh3Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomChinh4Do1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh4Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomChinh4Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh4Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomMoi1Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomMoi1Do .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomMoi2Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomMoi2Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomMoi2Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomMoi2Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomMoiXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomMoiXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomThoat1Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomThoat1Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomThoat1Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomThoat1Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomThoat2Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomThoat2Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomThoat2Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomThoat2Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

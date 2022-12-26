@@ -169,7 +169,7 @@ namespace QuanLyTramBom
         private void buttonBangLoi_Click(object sender, EventArgs e)
         {
             TableAlert tb = new TableAlert();
-            tb.ShowDialog()
+            tb.ShowDialog();
         }
 
 

@@ -282,6 +282,20 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // bom thoat
         void CheckColorBomThoat1(Digital? M10077)
         {
