@@ -3,6 +3,8 @@ using ManagementSoftware.GUI;
 using System.Diagnostics;
 using ManagementSoftware.AutoAddData;
 using ManagementSoftware.PLC;
+using ManagementSoftware.GUI.QuanLyTramBom;
+using QuanLyTramBom;
 
 namespace ManagementSoftware
 {
@@ -51,7 +53,7 @@ namespace ManagementSoftware
             }).Start();
 
 
-            Application.Run(new Login());
+            Application.Run(new Dashboard());
 
             if (Common.USERSESSION != null)
             {

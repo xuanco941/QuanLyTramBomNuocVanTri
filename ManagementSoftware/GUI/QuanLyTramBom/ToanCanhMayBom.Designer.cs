@@ -1150,7 +1150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ManagementSoftware.Properties.Resources.ToanCanh;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1256, 835);
+            this.ClientSize = new System.Drawing.Size(1258, 716);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBoxBangTaiXien);
             this.Controls.Add(this.pictureBoxBangTaiDoc);

@@ -17,6 +17,5 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             InitializeComponent();
         }
 
-        
     }
 }
