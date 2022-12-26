@@ -25,6 +25,10 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public int IDDoThiKhuynhHuong { get; set; }
         public DoThiKhuynhHuong DoThiKhuynhHuong { get; set; }
 
+        public XuHuongVaTinHieu()
+        {
+        }
+
         public XuHuongVaTinHieu(string dieuKien, string nhom, string tinHieu, string ganThe, string donVi, double min, double max, string color)
         {
             DieuKien = dieuKien;

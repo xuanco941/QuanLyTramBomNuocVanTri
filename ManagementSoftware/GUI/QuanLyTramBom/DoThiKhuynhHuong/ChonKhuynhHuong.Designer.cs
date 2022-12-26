@@ -29,21 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChonKhuynhHuong));
-            this.panelKhuynhHuong = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonTaoMoi = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.buttonCustom1 = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
-            // 
-            // panelKhuynhHuong
-            // 
-            this.panelKhuynhHuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelKhuynhHuong.Location = new System.Drawing.Point(0, 67);
-            this.panelKhuynhHuong.Name = "panelKhuynhHuong";
-            this.panelKhuynhHuong.Size = new System.Drawing.Size(472, 452);
-            this.panelKhuynhHuong.TabIndex = 23;
             // 
             // button3
             // 
@@ -53,7 +44,7 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button3.Image = global::ManagementSoftware.Properties.Resources.ico_select_min;
-            this.button3.Location = new System.Drawing.Point(114, 525);
+            this.button3.Location = new System.Drawing.Point(75, 491);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 40);
@@ -71,7 +62,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button4.Image = global::ManagementSoftware.Properties.Resources.icons8_close_30;
-            this.button4.Location = new System.Drawing.Point(244, 525);
+            this.button4.Location = new System.Drawing.Point(203, 491);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 40);
@@ -94,7 +85,7 @@
             this.buttonTaoMoi.ForeColor = System.Drawing.Color.White;
             this.buttonTaoMoi.Image = ((System.Drawing.Image)(resources.GetObject("buttonTaoMoi.Image")));
             this.buttonTaoMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTaoMoi.Location = new System.Drawing.Point(4, 19);
+            this.buttonTaoMoi.Location = new System.Drawing.Point(24, 20);
             this.buttonTaoMoi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonTaoMoi.Name = "buttonTaoMoi";
             this.buttonTaoMoi.Size = new System.Drawing.Size(118, 42);
@@ -119,7 +110,7 @@
             this.buttonCustom1.ForeColor = System.Drawing.Color.White;
             this.buttonCustom1.Image = global::ManagementSoftware.Properties.Resources.iconfinder_Synchronize_278832;
             this.buttonCustom1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustom1.Location = new System.Drawing.Point(144, 19);
+            this.buttonCustom1.Location = new System.Drawing.Point(155, 20);
             this.buttonCustom1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustom1.Name = "buttonCustom1";
             this.buttonCustom1.Size = new System.Drawing.Size(118, 42);
@@ -130,16 +121,27 @@
             this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonCustom1.UseVisualStyleBackColor = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Location = new System.Drawing.Point(24, 68);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(363, 404);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Biểu mẫu có sẵn";
+            // 
             // ChonKhuynhHuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 572);
+            this.ClientSize = new System.Drawing.Size(414, 564);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonCustom1);
             this.Controls.Add(this.buttonTaoMoi);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.panelKhuynhHuong);
+            this.MaximizeBox = false;
             this.Name = "ChonKhuynhHuong";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -149,10 +151,10 @@
         }
 
         #endregion
-        private Panel panelKhuynhHuong;
         private Button button3;
         private Button button4;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonTaoMoi;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonCustom1;
+        private GroupBox groupBox1;
     }
 }

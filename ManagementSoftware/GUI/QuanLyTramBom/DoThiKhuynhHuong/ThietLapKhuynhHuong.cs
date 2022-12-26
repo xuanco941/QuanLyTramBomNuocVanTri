@@ -1,4 +1,5 @@
-﻿using ManagementSoftware.Models.DuLieuMayPLC;
+﻿using ManagementSoftware.DAL;
+using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using System;
 using System.Collections.Generic;
@@ -57,7 +58,7 @@ namespace ManagementSoftware
             if (cbTinHieu.Enabled == true && !String.IsNullOrEmpty(cbNhom.Text) && !String.IsNullOrEmpty(cbNhom.Text) && !String.IsNullOrEmpty(cbTinHieu.Text))
             {
                 Analog? analog = list.Where(a => a.TinHieu == cbTinHieu.Text).FirstOrDefault();
-                if(analog!= null)
+                if (analog != null)
                 {
                     ganThe.Text = analog.GanThe;
                     donVi.Text = analog.DonVi;
@@ -198,6 +199,101 @@ namespace ManagementSoftware
                 else if (comboBoxTinHieu.Name == comboBoxTinHieu8.Name)
                 {
                     SetAutoFillTextBox(comboBoxNhom8, comboBoxTinHieu, textBoxThe8, textBoxGiaTri8, textBoxMax8, textBoxMin8);
+                }
+            }
+        }
+
+        XuHuongVaTinHieu? GetAXuHuong(ComboBox dieukien, ComboBox cbNhom, ComboBox cbTinHieu, TextBox ganThe, TextBox donvi, TextBox max, TextBox min, Panel color)
+        {
+            XuHuongVaTinHieu? xuHuongVaTinHieu = new XuHuongVaTinHieu();
+            string strDieuKien = dieukien.Text;
+            string strNhom = cbNhom.Text;
+            string strTinHieu = cbTinHieu.Text;
+            string strGanThe = ganThe.Text;
+            string strDonVi = donvi.Text;
+            string strMax = max.Text;
+            string strMin = min.Text;
+            string strColor = color.BackColor.Name;
+            if (String.IsNullOrEmpty(strDieuKien) == false && String.IsNullOrEmpty(strNhom) == false && String.IsNullOrEmpty(strTinHieu) == false &&
+                String.IsNullOrEmpty(strGanThe) == false && String.IsNullOrEmpty(strDonVi) == false && String.IsNullOrEmpty(strMax) == false &&
+                String.IsNullOrEmpty(strMin) == false && String.IsNullOrEmpty(strColor) == false)
+            {
+                xuHuongVaTinHieu.DieuKien = strDieuKien;
+                xuHuongVaTinHieu.Nhom = strNhom;
+                xuHuongVaTinHieu.TinHieu = strTinHieu;
+                xuHuongVaTinHieu.GanThe = strGanThe;
+                xuHuongVaTinHieu.DonVi = strDonVi;
+                xuHuongVaTinHieu.Max = double.Parse(strMax);
+                xuHuongVaTinHieu.Min = double.Parse(strMin);
+                return xuHuongVaTinHieu;
+
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<XuHuongVaTinHieu> list = new List<XuHuongVaTinHieu>();
+            if (String.IsNullOrEmpty(textBoxName.Text) == true)
+            {
+                MessageBox.Show("Không để trống ô nhập tên khuynh hướng.", "Lỗi Cú Pháp", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                XuHuongVaTinHieu? xuHuongVaTinHieu1 = GetAXuHuong(comboBoxDk1, comboBoxNhom1, comboBoxTinHieu1, textBoxThe1, textBoxGiaTri1, textBoxMax1, textBoxMin1, panelColor1);
+                if(xuHuongVaTinHieu1 != null)
+                {
+                    list.Add(xuHuongVaTinHieu1);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu2 = GetAXuHuong(comboBoxDk2, comboBoxNhom2, comboBoxTinHieu2, textBoxThe2, textBoxGiaTri2, textBoxMax2, textBoxMin2, panelColor2);
+                if (xuHuongVaTinHieu2 != null)
+                {
+                    list.Add(xuHuongVaTinHieu2);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu3 = GetAXuHuong(comboBoxDk3, comboBoxNhom3, comboBoxTinHieu3, textBoxThe3, textBoxGiaTri3, textBoxMax3, textBoxMin3, panelColor3);
+                if (xuHuongVaTinHieu3 != null)
+                {
+                    list.Add(xuHuongVaTinHieu3);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu4 = GetAXuHuong(comboBoxDk4, comboBoxNhom4, comboBoxTinHieu4, textBoxThe4, textBoxGiaTri4, textBoxMax4, textBoxMin4, panelColor4);
+                if (xuHuongVaTinHieu4 != null)
+                {
+                    list.Add(xuHuongVaTinHieu4);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu5 = GetAXuHuong(comboBoxDk5, comboBoxNhom5, comboBoxTinHieu5, textBoxThe5, textBoxGiaTri5, textBoxMax5, textBoxMin5, panelColor5);
+                if (xuHuongVaTinHieu5 != null)
+                {
+                    list.Add(xuHuongVaTinHieu5);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu6 = GetAXuHuong(comboBoxDk6, comboBoxNhom6, comboBoxTinHieu6, textBoxThe6, textBoxGiaTri6, textBoxMax6, textBoxMin6, panelColor6);
+                if (xuHuongVaTinHieu6 != null)
+                {
+                    list.Add(xuHuongVaTinHieu6);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu7 = GetAXuHuong(comboBoxDk7, comboBoxNhom7, comboBoxTinHieu7, textBoxThe7, textBoxGiaTri7, textBoxMax7, textBoxMin7, panelColor7);
+                if (xuHuongVaTinHieu7 != null)
+                {
+                    list.Add(xuHuongVaTinHieu7);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu8 = GetAXuHuong(comboBoxDk8, comboBoxNhom8, comboBoxTinHieu8, textBoxThe8, textBoxGiaTri8, textBoxMax8, textBoxMin8, panelColor8);
+                if (xuHuongVaTinHieu8 != null)
+                {
+                    list.Add(xuHuongVaTinHieu8);
+                }
+            }
+            if (list != null && list.Count > 0)
+            {
+                if(DALKhuynhHuong.Add(textBoxName.Name,list) == false)
+                {
+                    MessageBox.Show("Thêm không thành công, vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    this.Close();
                 }
             }
         }
