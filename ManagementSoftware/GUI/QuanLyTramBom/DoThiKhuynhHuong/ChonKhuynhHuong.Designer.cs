@@ -46,7 +46,7 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button3.Image = global::ManagementSoftware.Properties.Resources.ico_select_min;
-            this.button3.Location = new System.Drawing.Point(73, 441);
+            this.button3.Location = new System.Drawing.Point(85, 441);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 40);
@@ -64,7 +64,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button4.Image = global::ManagementSoftware.Properties.Resources.icons8_close_30;
-            this.button4.Location = new System.Drawing.Point(201, 441);
+            this.button4.Location = new System.Drawing.Point(213, 441);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 40);
@@ -123,6 +123,7 @@
             this.buttonCustom1.TextColor = System.Drawing.Color.White;
             this.buttonCustom1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonCustom1.UseVisualStyleBackColor = false;
+            this.buttonCustom1.Click += new System.EventHandler(this.buttonCustom1_Click);
             // 
             // groupBox1
             // 

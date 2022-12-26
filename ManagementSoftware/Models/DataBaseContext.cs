@@ -95,7 +95,7 @@ namespace ManagementSoftware.Models
         }
         public void CreateDatabase()
         {
-            //this.Database.EnsureDeleted();
+            this.Database.EnsureDeleted();
             if (this.Database.EnsureCreated() == true)
             {
                 //tao quuyen cho admin
