@@ -45,6 +45,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
                         btn.Tag = a.DoThiKhuynhHuongID;
                         btn.Dock = DockStyle.Top;
                         btn.Cursor = Cursors.Hand;
+                        btn.ForeColor = Color.Black;
                         panelContent.Controls.Add(btn);
 
                     }
