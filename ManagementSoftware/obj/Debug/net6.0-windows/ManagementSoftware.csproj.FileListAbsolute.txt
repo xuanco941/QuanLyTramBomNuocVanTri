@@ -331,3 +331,9 @@ C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\obj\Debug\net6.0-windows\refint\
 C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.pdb
 C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
+C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\bin\Debug\net6.0-windows\ClosedXML.dll
+C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\bin\Debug\net6.0-windows\ExcelNumberFormat.dll
+C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\bin\Debug\net6.0-windows\Irony.dll
+C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+C:\Users\LENOVO\Desktop\Lan2\ManagementSoftware\bin\Debug\net6.0-windows\XLParser.dll

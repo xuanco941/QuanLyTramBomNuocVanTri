@@ -160,9 +160,6 @@
   <data name="M10124" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10124.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backpage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="M10097 - Đỏ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10097 - Đỏ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -190,8 +187,11 @@
   <data name="M10061Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10061Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="M10061" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\M10061.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BTDocXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTDocXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M10059xam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M10059xam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="M10273" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10273.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,8 +220,8 @@
   <data name="M10067" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10067.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BTDocXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTDocXanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-printer-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-printer-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="M10069" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M100691.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -231,6 +231,12 @@
   </data>
   <data name="320280497_1185094479069198_3854544152610733047_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\320280497_1185094479069198_3854544152610733047_n1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VanDo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VanDo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="M10061" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M10061.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="M10050" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10050.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -264,9 +270,6 @@
   </data>
   <data name="VanXam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VanXam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="red_x_10333" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\red-x-10333.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTDocDo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTDocDo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,11 +322,14 @@
   <data name="M100681" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10068.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BomChinh2Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomChinh2Xanh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loupe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loupe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BomChinh2Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BomChinh2Xanh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BTDocVang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTDocVang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ToanCanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ToanCanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,8 +337,8 @@
   <data name="320396300_1361951851275264_6188606067988065577_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\320396300_1361951851275264_6188606067988065577_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="M10059xam" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\M10059xam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="red_x_10333" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red-x-10333.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dashboard-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,8 +352,8 @@
   <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="M10272" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\M10272.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backpage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="M10064" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10064.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -382,8 +388,8 @@
   <data name="Screenshot 2022-12-18 151906" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2022-12-18 151906.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BTDocVang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTDocVang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="M10272" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\M10272.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="M10059" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10059.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -391,7 +397,7 @@
   <data name="M10077" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10077.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="VanDo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VanDo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-send-to-printer-38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-send-to-printer-38.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
