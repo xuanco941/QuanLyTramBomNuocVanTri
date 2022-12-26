@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelContent = new System.Windows.Forms.Panel();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -78,7 +79,11 @@
             this.D10036 = new System.Windows.Forms.Label();
             this.D10022 = new System.Windows.Forms.Label();
             this.D10008 = new System.Windows.Forms.Label();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.panelContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -95,12 +100,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContent
             // 
             this.panelContent.BackgroundImage = global::ManagementSoftware.Properties.Resources.ToanCanh;
             this.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelContent.Controls.Add(this.pictureBox20);
+            this.panelContent.Controls.Add(this.pictureBox19);
+            this.panelContent.Controls.Add(this.pictureBox18);
+            this.panelContent.Controls.Add(this.pictureBox17);
             this.panelContent.Controls.Add(this.label23);
             this.panelContent.Controls.Add(this.label22);
             this.panelContent.Controls.Add(this.label21);
@@ -155,6 +167,16 @@
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1227, 686);
             this.panelContent.TabIndex = 19;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::ManagementSoftware.Properties.Resources.M10097___Đỏ;
+            this.pictureBox17.Location = new System.Drawing.Point(686, 210);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 48;
+            this.pictureBox17.TabStop = false;
             // 
             // label23
             // 
@@ -301,7 +323,6 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Image = global::ManagementSoftware.Properties.Resources.m10061___đỏ;
             this.pictureBox14.Location = new System.Drawing.Point(836, 557);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(28, 27);
@@ -311,7 +332,6 @@
             // 
             // pictureBox16
             // 
-            this.pictureBox16.Image = global::ManagementSoftware.Properties.Resources.m10061___Xanh;
             this.pictureBox16.Location = new System.Drawing.Point(1062, 528);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(26, 25);
@@ -321,7 +341,6 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.Image = global::ManagementSoftware.Properties.Resources.M10059___xanh1;
             this.pictureBox15.Location = new System.Drawing.Point(1032, 528);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(26, 25);
@@ -331,7 +350,6 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.Image = global::ManagementSoftware.Properties.Resources.M10059___đỏ;
             this.pictureBox13.Location = new System.Drawing.Point(836, 526);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(28, 27);
@@ -341,7 +359,6 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Image = global::ManagementSoftware.Properties.Resources.Màu_đỏ;
             this.pictureBox12.Location = new System.Drawing.Point(775, 321);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(16, 18);
@@ -351,7 +368,6 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.Image = global::ManagementSoftware.Properties.Resources.Màu_đỏ;
             this.pictureBox11.Location = new System.Drawing.Point(775, 370);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(16, 18);
@@ -361,7 +377,6 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::ManagementSoftware.Properties.Resources.Màu_đỏ;
             this.pictureBox10.Location = new System.Drawing.Point(775, 218);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(16, 18);
@@ -371,7 +386,6 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::ManagementSoftware.Properties.Resources.Màu_đỏ;
             this.pictureBox9.Location = new System.Drawing.Point(775, 269);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(16, 18);
@@ -381,7 +395,6 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::ManagementSoftware.Properties.Resources.BangTaiXien;
             this.pictureBox8.Location = new System.Drawing.Point(241, 417);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(194, 79);
@@ -391,7 +404,6 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::ManagementSoftware.Properties.Resources.Bang_tai_thang_màu_đỏ;
             this.pictureBox7.Location = new System.Drawing.Point(409, 193);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(15, 227);
@@ -401,7 +413,6 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::ManagementSoftware.Properties.Resources.PheuDuoi;
             this.pictureBox6.Location = new System.Drawing.Point(261, 537);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 27);
@@ -411,7 +422,6 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::ManagementSoftware.Properties.Resources.PheuTren;
             this.pictureBox5.Location = new System.Drawing.Point(171, 430);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(30, 27);
@@ -421,7 +431,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::ManagementSoftware.Properties.Resources.CaoRac3Do;
             this.pictureBox4.Location = new System.Drawing.Point(362, 308);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(44, 41);
@@ -431,7 +440,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::ManagementSoftware.Properties.Resources.CaoRac4Vang;
             this.pictureBox3.Location = new System.Drawing.Point(362, 359);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(44, 41);
@@ -441,7 +449,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ManagementSoftware.Properties.Resources.CaoRac2Vang;
             this.pictureBox2.Location = new System.Drawing.Point(362, 257);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 41);
@@ -452,7 +459,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::ManagementSoftware.Properties.Resources.CaoRac1Do;
             this.pictureBox1.Location = new System.Drawing.Point(362, 205);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 41);
@@ -680,6 +686,30 @@
             this.D10008.TabIndex = 0;
             this.D10008.Text = "5.78";
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(686, 261);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox18.TabIndex = 49;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Location = new System.Drawing.Point(686, 312);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox19.TabIndex = 50;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Location = new System.Drawing.Point(686, 363);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox20.TabIndex = 51;
+            this.pictureBox20.TabStop = false;
+            // 
             // ToanCanhTramBom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -690,6 +720,7 @@
             this.Text = "ToanCanhTramBom";
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -706,6 +737,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -761,5 +795,9 @@
         private Label label12;
         private Label label11;
         private Label label23;
+        private PictureBox pictureBox17;
+        private PictureBox pictureBox20;
+        private PictureBox pictureBox19;
+        private PictureBox pictureBox18;
     }
 }

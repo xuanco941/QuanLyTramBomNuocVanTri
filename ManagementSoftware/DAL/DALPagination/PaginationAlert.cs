@@ -10,112 +10,65 @@ namespace ManagementSoftware.DAL.DALPagination
 {
     public class PaginationAlert
     {
-        public static int NumberRows { get; set; } = 50;
+        public static int NumberRows { get; set; } = Common.NumberRows;
         public int PageCurrent { get; set; } = 1;
         public int TotalPages { get; set; } = 1;
         public int TotalResults { get; set; } = 0;
         public List<Alert>? ListResults { get; set; }
 
-        public void Set(int page, DateTime? start, DateTime? end, string? loaiBom, List<Alert>? listTinHieu)
+        public void Set(int page, DateTime? start, DateTime? end, List<string>? listTinHieu)
         {
             DataBaseContext dbContext = new DataBaseContext();
 
             int position = (page - 1) * NumberRows;
 
             List<Alert> l = new List<Alert>();
-            List<Alert> l2 = new List<Alert>();
-            if ((String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu != null && listTinHieu.Count > 0) && (start != null && end != null))
+            if ((listTinHieu != null && listTinHieu.Count > 0) && (start != null && end != null))
             {
-                foreach (Alert digital in listTinHieu)
+
+                foreach (string tinHieu in listTinHieu)
                 {
-                    l = dbContext.Alerts.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
-                    l2.AddRange(l);
+                    List<Alert>? d = dbContext.Alerts.Where(x => x.TinHieu == tinHieu && (start <= x.ThoiGian && end >= x.ThoiGian)).ToList();
+                    if (d != null)
+                    {
+                        l.AddRange(d);
+                    }
                 }
-                this.ListResults = l2.OrderByDescending(t => t.IDAlert)
-                .Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom))
+                this.ListResults = l.OrderByDescending(t => t.IDAlert)
                 .Skip(position)
                 .Take(NumberRows)
                 .ToList();
 
-                this.TotalResults = l2.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom)).Count();
-            }
-            //1
-            else if ((String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu == null || listTinHieu.Count <= 0) && (start != null && end != null))
-            {
-                this.ListResults = dbContext.Alerts.OrderByDescending(t => t.IDAlert)
-                .Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom))
-                .Skip(position)
-                .Take(NumberRows)
-                .ToList();
-
-                this.TotalResults = dbContext.Alerts.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian && a.Nhom == loaiBom)).Count();
+                this.TotalResults = l.Count;
             }
             //2
-            else if ((String.IsNullOrEmpty(loaiBom) == true) && (listTinHieu != null && listTinHieu.Count > 0) && (start != null && end != null))
+            else if ((listTinHieu != null && listTinHieu.Count > 0) && (start == null || end == null))
             {
-                foreach (Alert digital in listTinHieu)
+                foreach (string tinHieu in listTinHieu)
                 {
-                    l = dbContext.Alerts.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
-                    l2.AddRange(l);
+                    List<Alert>? d = dbContext.Alerts.Where(x => x.TinHieu == tinHieu).ToList(); // chưa fix
+                    if (d != null)
+                    {
+                        l.AddRange(d);
+                    }
                 }
-                this.ListResults = l2.OrderByDescending(t => t.IDAlert)
-                .Where(a => (start <= a.ThoiGian && end >= a.ThoiGian))
+                this.ListResults = l.OrderByDescending(t => t.IDAlert)
                 .Skip(position)
                 .Take(NumberRows)
                 .ToList();
 
-                this.TotalResults = l2.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian)).Count();
+                this.TotalResults = l.Count;
             }
             //3
-
-            else if ((start == null || end == null) && (String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu != null && listTinHieu.Count > 0))
-            {
-                foreach (Alert digital in listTinHieu)
-                {
-                    l = dbContext.Alerts.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
-                    l2.AddRange(l);
-                }
-                this.ListResults = l2.OrderByDescending(t => t.IDAlert)
-                .Where(a => (a.Nhom == loaiBom))
-                .Skip(position)
-                .Take(NumberRows)
-                .ToList();
-
-                this.TotalResults = l2.Where(a => a.Nhom == loaiBom).Count();
-
-            }
-            //4
-            else if ((String.IsNullOrEmpty(loaiBom) == false) && (listTinHieu == null || listTinHieu.Count <= 0) && (start == null || end == null))
-            {
-                this.ListResults = dbContext.Alerts.OrderByDescending(t => t.IDAlert).Where(a => (a.Nhom == loaiBom)).Skip(position).Take(NumberRows).ToList();
-
-                this.TotalResults = dbContext.Alerts.Where(a => a.Nhom == loaiBom).Count();
-            }
-            //5
-            else if ((start == null || end == null) && (String.IsNullOrEmpty(loaiBom) == true) && (listTinHieu != null && listTinHieu.Count > 0))
-            {
-                foreach (Alert digital in listTinHieu)
-                {
-                    l = dbContext.Alerts.Where(a => (a.TinHieu == digital.TinHieu)).ToList();
-                    l2.AddRange(l);
-                }
-                this.ListResults = l2.OrderByDescending(t => t.IDAlert)
-                .Skip(position)
-                .Take(NumberRows)
-                .ToList();
-
-                this.TotalResults = l2.Count();
-            }
-            //6
-            else if ((String.IsNullOrEmpty(loaiBom) == true) && (listTinHieu == null || listTinHieu.Count <= 0) && (start != null && end != null))
+            else if ((listTinHieu == null || listTinHieu.Count < 1) && (start != null || end != null))
             {
                 this.ListResults = dbContext.Alerts.OrderByDescending(t => t.IDAlert)
-                .Where(a => (start <= a.ThoiGian && end >= a.ThoiGian))
+                .Where(a => start <= a.ThoiGian && end >= a.ThoiGian)
                 .Skip(position)
                 .Take(NumberRows)
                 .ToList();
 
-                this.TotalResults = dbContext.Alerts.Where(a => (start <= a.ThoiGian && end >= a.ThoiGian)).Count();
+                this.TotalResults = dbContext.Alerts.Where(a => start <= a.ThoiGian && end >= a.ThoiGian).Count();
             }
             else
             {

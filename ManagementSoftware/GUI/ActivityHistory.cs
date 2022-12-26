@@ -87,7 +87,7 @@ namespace ManagementSoftware.GUI
                         fullnameButton = activity.Username + " (không tồn tại)";
                     }
                     //format date từ sql -> c#
-                    string createAt = activity.CreateAt.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    string createAt = activity.CreateAt.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                     dt.Rows.Add(activity.ActivityID, activity.ActivityName, activity.Description, createAt, fullnameButton);
                 });
             }

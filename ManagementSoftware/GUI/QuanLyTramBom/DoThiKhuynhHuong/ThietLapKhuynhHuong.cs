@@ -1,4 +1,5 @@
-﻿using ManagementSoftware.Models.DuLieuMayPLC;
+﻿using ManagementSoftware.DAL;
+using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using System;
 using System.Collections.Generic;
@@ -12,448 +13,289 @@ using System.Windows.Forms;
 
 namespace ManagementSoftware
 {
-    public partial class FormCaiDatDoThiKhuynhHuong : Form
+    public partial class ThietLapKhuynhHuong : Form
     {
-        public FormCaiDatDoThiKhuynhHuong()
+        public ThietLapKhuynhHuong()
         {
             InitializeComponent();
         }
 
-        private void FormCaiDatDoThiKhuynhHuong_Load(object sender, EventArgs e)
+
+        List<Analog> list = new AnalogCommon().listAllAnalogs;
+
+        void SetCBDieuKien(ComboBox dieuKien)
         {
-            List<String> bom = new List<String>();
-            bom.Add("Chung");
-            bom.Add("Bơm 1");
-            bom.Add("Bơm 2");
-            bom.Add("Bơm 3");
-            bom.Add("Bơm 4");
-            List<String> dieukien = new List<String>();
-            dieukien.Add("DPS");
-            for (int i = 0; i < dieukien.Count; i ++) {
-                comboBoxDk1.Items.Add(dieukien[i]);
-                comboBoxDk2.Items.Add(dieukien[i]);
-                comboBoxDk3.Items.Add(dieukien[i]);
-                comboBoxDk4.Items.Add(dieukien[i]);
-                comboBoxDk5.Items.Add(dieukien[i]);
-                comboBoxDk6.Items.Add(dieukien[i]);
-                comboBoxDk7.Items.Add(dieukien[i]);
-                comboBoxDk8.Items.Add(dieukien[i]);
-            }
-            for (int i = 0; i < bom.Count; i++)
-            {
-                comboBoxNhom1.Items.Add(bom[i]);
-                comboBoxNhom2.Items.Add(bom[i]);
-                comboBoxNhom3.Items.Add(bom[i]);
-                comboBoxNhom4.Items.Add(bom[i]);
-                comboBoxNhom5.Items.Add(bom[i]);
-                comboBoxNhom6.Items.Add(bom[i]);
-                comboBoxNhom7.Items.Add(bom[i]);
-                comboBoxNhom8.Items.Add(bom[i]);
-            }
+            dieuKien.DataSource = new List<string>() { "", "DPS" };
         }
-        #region nhom1
-        private void comboBoxDk1_SelectedValueChanged(object sender, EventArgs e)
+        void SetCBNhom(ComboBox dieuKien, ComboBox cbNhom)
         {
-            comboBoxTinHieu1.Items.Clear();
-            List<Analog> d;
-            String dieukien = comboBoxDk1.Text;
-            if (comboBoxNhom1.Text != "")
+            if (!String.IsNullOrEmpty(dieuKien.Text))
             {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom1.Text && item.DieuKien == comboBoxDk1.Text).ToList();
+                cbNhom.Enabled = true;
+                cbNhom.DataSource = list.Where(a => a.DieuKien == dieuKien.Text).Select(a => a.Nhom).Distinct().ToList();
             }
             else
             {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.DieuKien == dieukien).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu1.Items.Add(item.ToString());
+                cbNhom.Text = "";
+                cbNhom.Enabled = false;
             }
         }
+        void SetAutoFillCBTinHieu(ComboBox cbdieuKien, ComboBox cbNhom, ComboBox cbTinHieu)
+        {
+            if (cbNhom.Enabled == true && !String.IsNullOrEmpty(cbdieuKien.Text) && !String.IsNullOrEmpty(cbNhom.Text))
+            {
+                cbTinHieu.Enabled = true;
+                cbTinHieu.DataSource = list.Where(a => a.Nhom == cbNhom.Text).Select(a => a.TinHieu).ToList();
+            }
+            else
+            {
+                cbTinHieu.Text = "";
+                cbTinHieu.Enabled = false;
+            }
+        }
+        void SetAutoFillTextBox(ComboBox cbNhom, ComboBox cbTinHieu, TextBox ganThe, TextBox donVi, TextBox max, TextBox min)
+        {
+            if (cbTinHieu.Enabled == true && !String.IsNullOrEmpty(cbNhom.Text) && !String.IsNullOrEmpty(cbNhom.Text) && !String.IsNullOrEmpty(cbTinHieu.Text))
+            {
+                Analog? analog = list.Where(a => a.TinHieu == cbTinHieu.Text).FirstOrDefault();
+                if (analog != null)
+                {
+                    ganThe.Text = analog.GanThe;
+                    donVi.Text = analog.DonVi;
+                    max.Text = analog.GiaTriLonNhat.ToString();
+                    min.Text = analog.GiaTriNhoNhat.ToString();
+                }
 
+            }
+
+
+        }
+
+        private void ThietLapKhuynhHuong_Load(object sender, EventArgs e)
+        {
+            SetCBDieuKien(comboBoxDk1);
+            SetCBDieuKien(comboBoxDk2);
+            SetCBDieuKien(comboBoxDk3);
+            SetCBDieuKien(comboBoxDk4);
+            SetCBDieuKien(comboBoxDk5);
+            SetCBDieuKien(comboBoxDk6);
+            SetCBDieuKien(comboBoxDk7);
+            SetCBDieuKien(comboBoxDk8);
+
+
+        }
+        private void comboBoxDk1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox comboBoxDieuKien = sender as ComboBox;
+            if (comboBoxDieuKien != null)
+            {
+                if (comboBoxDieuKien.Name == comboBoxDk1.Name)
+                {
+                    SetCBNhom(comboBoxDieuKien, comboBoxNhom1);
+                }
+                else if (comboBoxDieuKien.Name == comboBoxDk2.Name)
+                {
+                    SetCBNhom(comboBoxDieuKien, comboBoxNhom2);
+                }
+                else if (comboBoxDieuKien.Name == comboBoxDk3.Name)
+                {
+                    SetCBNhom(comboBoxDieuKien, comboBoxNhom3);
+                }
+                else if (comboBoxDieuKien.Name == comboBoxDk4.Name)
+                {
+                    SetCBNhom(comboBoxDieuKien, comboBoxNhom4);
+                }
+                else if (comboBoxDieuKien.Name == comboBoxDk5.Name)
+                {
+                    SetCBNhom(comboBoxDieuKien, comboBoxNhom5);
+                }
+                else if (comboBoxDieuKien.Name == comboBoxDk6.Name)
+                {
+                    SetCBNhom(comboBoxDieuKien, comboBoxNhom6);
+                }
+                else if (comboBoxDieuKien.Name == comboBoxDk7.Name)
+                {
+                    SetCBNhom(comboBoxDieuKien, comboBoxNhom7);
+                }
+                else if (comboBoxDieuKien.Name == comboBoxDk8.Name)
+                {
+                    SetCBNhom(comboBoxDieuKien, comboBoxNhom8);
+                }
+            }
+        }
         private void comboBoxNhom1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxTinHieu1.Items.Clear();
-            List<Analog> d;
-            String nhombom = comboBoxNhom1.Text;
-            if (comboBoxDk1.Text != "")
+            ComboBox comboBoxNhom = sender as ComboBox;
+            if (comboBoxNhom != null)
             {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom1.Text && item.DieuKien == comboBoxDk1.Text).ToList();
+                if (comboBoxNhom.Name == comboBoxNhom1.Name)
+                {
+                    SetAutoFillCBTinHieu(comboBoxDk1, comboBoxNhom, comboBoxTinHieu1);
+                }
+                else if (comboBoxNhom.Name == comboBoxNhom2.Name)
+                {
+                    SetAutoFillCBTinHieu(comboBoxDk2, comboBoxNhom, comboBoxTinHieu2);
+                }
+                else if (comboBoxNhom.Name == comboBoxNhom3.Name)
+                {
+                    SetAutoFillCBTinHieu(comboBoxDk3, comboBoxNhom, comboBoxTinHieu3);
+                }
+                else if (comboBoxNhom.Name == comboBoxNhom4.Name)
+                {
+                    SetAutoFillCBTinHieu(comboBoxDk4, comboBoxNhom, comboBoxTinHieu4);
+                }
+                else if (comboBoxNhom.Name == comboBoxNhom5.Name)
+                {
+                    SetAutoFillCBTinHieu(comboBoxDk5, comboBoxNhom, comboBoxTinHieu5);
+                }
+                else if (comboBoxNhom.Name == comboBoxNhom6.Name)
+                {
+                    SetAutoFillCBTinHieu(comboBoxDk6, comboBoxNhom, comboBoxTinHieu6);
+                }
+                else if (comboBoxNhom.Name == comboBoxNhom7.Name)
+                {
+                    SetAutoFillCBTinHieu(comboBoxDk7, comboBoxNhom, comboBoxTinHieu7);
+                }
+                else if (comboBoxNhom.Name == comboBoxNhom8.Name)
+                {
+                    SetAutoFillCBTinHieu(comboBoxDk8, comboBoxNhom, comboBoxTinHieu8);
+                }
             }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == nhombom).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu1.Items.Add(item.TinHieu.ToString());
-            }
-        }
-
-        private void textBoxThe1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void comboBoxTinHieu1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            Analog d = new AnalogCommon().listAllAnalogs.FirstOrDefault((item) => item.TinHieu == comboBoxTinHieu1.Text && item.Nhom == comboBoxNhom1.Text && item.DieuKien == comboBoxDk1.Text);
-            textBoxThe1.Text = d.GanThe;
-            textBoxGiaTri1.Text = d.DonVi;
-            textBoxMax1.Text = d.GiaTriLonNhat.ToString();
-            textBoxMin1.Text = d.GiaTriNhoNhat.ToString();
-
-        }
-        #endregion nhom1
-        #region nhom2
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu2.Items.Clear();
-            List<Analog> d;
-            String dieukien = comboBoxDk2.Text;
-            if (comboBoxNhom2.Text != "")
+            ComboBox comboBoxTinHieu = sender as ComboBox;
+            if (comboBoxTinHieu != null)
             {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom2.Text && item.DieuKien == comboBoxDk2.Text).ToList();
+                if (comboBoxTinHieu.Name == comboBoxTinHieu1.Name)
+                {
+                    SetAutoFillTextBox(comboBoxNhom1, comboBoxTinHieu, textBoxThe1, textBoxGiaTri1, textBoxMax1, textBoxMin1);
+                }
+                else if (comboBoxTinHieu.Name == comboBoxTinHieu2.Name)
+                {
+                    SetAutoFillTextBox(comboBoxNhom2, comboBoxTinHieu, textBoxThe2, textBoxGiaTri2, textBoxMax2, textBoxMin2);
+                }
+                else if (comboBoxTinHieu.Name == comboBoxTinHieu3.Name)
+                {
+                    SetAutoFillTextBox(comboBoxNhom3, comboBoxTinHieu, textBoxThe3, textBoxGiaTri3, textBoxMax3, textBoxMin3);
+                }
+                else if (comboBoxTinHieu.Name == comboBoxTinHieu4.Name)
+                {
+                    SetAutoFillTextBox(comboBoxNhom4, comboBoxTinHieu, textBoxThe4, textBoxGiaTri4, textBoxMax4, textBoxMin4);
+                }
+                else if (comboBoxTinHieu.Name == comboBoxTinHieu5.Name)
+                {
+                    SetAutoFillTextBox(comboBoxNhom5, comboBoxTinHieu, textBoxThe5, textBoxGiaTri5, textBoxMax5, textBoxMin5);
+                }
+                else if (comboBoxTinHieu.Name == comboBoxTinHieu6.Name)
+                {
+                    SetAutoFillTextBox(comboBoxNhom6, comboBoxTinHieu, textBoxThe6, textBoxGiaTri6, textBoxMax6, textBoxMin6);
+                }
+                else if (comboBoxTinHieu.Name == comboBoxTinHieu7.Name)
+                {
+                    SetAutoFillTextBox(comboBoxNhom7, comboBoxTinHieu, textBoxThe7, textBoxGiaTri7, textBoxMax7, textBoxMin7);
+                }
+                else if (comboBoxTinHieu.Name == comboBoxTinHieu8.Name)
+                {
+                    SetAutoFillTextBox(comboBoxNhom8, comboBoxTinHieu, textBoxThe8, textBoxGiaTri8, textBoxMax8, textBoxMin8);
+                }
+            }
+        }
+
+        XuHuongVaTinHieu? GetAXuHuong(ComboBox dieukien, ComboBox cbNhom, ComboBox cbTinHieu, TextBox ganThe, TextBox donvi, TextBox max, TextBox min, Panel color)
+        {
+            XuHuongVaTinHieu? xuHuongVaTinHieu = new XuHuongVaTinHieu();
+            string strDieuKien = dieukien.Text;
+            string strNhom = cbNhom.Text;
+            string strTinHieu = cbTinHieu.Text;
+            string strGanThe = ganThe.Text;
+            string strDonVi = donvi.Text;
+            string strMax = max.Text;
+            string strMin = min.Text;
+            string strColor = color.BackColor.Name;
+            if (String.IsNullOrEmpty(strDieuKien) == false && String.IsNullOrEmpty(strNhom) == false && String.IsNullOrEmpty(strTinHieu) == false &&
+                String.IsNullOrEmpty(strGanThe) == false && String.IsNullOrEmpty(strDonVi) == false && String.IsNullOrEmpty(strMax) == false &&
+                String.IsNullOrEmpty(strMin) == false && String.IsNullOrEmpty(strColor) == false)
+            {
+                xuHuongVaTinHieu.DieuKien = strDieuKien;
+                xuHuongVaTinHieu.Nhom = strNhom;
+                xuHuongVaTinHieu.TinHieu = strTinHieu;
+                xuHuongVaTinHieu.GanThe = strGanThe;
+                xuHuongVaTinHieu.DonVi = strDonVi;
+                xuHuongVaTinHieu.Max = double.Parse(strMax);
+                xuHuongVaTinHieu.Min = double.Parse(strMin);
+                return xuHuongVaTinHieu;
+
             }
             else
             {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.DieuKien == dieukien).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu2.Items.Add(item.ToString());
+                return null;
             }
 
         }
 
-        private void comboBoxNhom2_SelectedIndexChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            comboBoxTinHieu2.Items.Clear();
-            List<Analog> d;
-            String nhombom = comboBoxNhom2.Text;
-            if (comboBoxDk2.Text != "")
+            List<XuHuongVaTinHieu> list = new List<XuHuongVaTinHieu>();
+            if (String.IsNullOrEmpty(textBoxName.Text) == true)
             {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom2.Text && item.DieuKien == comboBoxDk2.Text).ToList();
+                MessageBox.Show("Không để trống ô nhập tên khuynh hướng.", "Lỗi Cú Pháp", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == nhombom).ToList();
-
+                XuHuongVaTinHieu? xuHuongVaTinHieu1 = GetAXuHuong(comboBoxDk1, comboBoxNhom1, comboBoxTinHieu1, textBoxThe1, textBoxGiaTri1, textBoxMax1, textBoxMin1, panelColor1);
+                if(xuHuongVaTinHieu1 != null)
+                {
+                    list.Add(xuHuongVaTinHieu1);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu2 = GetAXuHuong(comboBoxDk2, comboBoxNhom2, comboBoxTinHieu2, textBoxThe2, textBoxGiaTri2, textBoxMax2, textBoxMin2, panelColor2);
+                if (xuHuongVaTinHieu2 != null)
+                {
+                    list.Add(xuHuongVaTinHieu2);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu3 = GetAXuHuong(comboBoxDk3, comboBoxNhom3, comboBoxTinHieu3, textBoxThe3, textBoxGiaTri3, textBoxMax3, textBoxMin3, panelColor3);
+                if (xuHuongVaTinHieu3 != null)
+                {
+                    list.Add(xuHuongVaTinHieu3);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu4 = GetAXuHuong(comboBoxDk4, comboBoxNhom4, comboBoxTinHieu4, textBoxThe4, textBoxGiaTri4, textBoxMax4, textBoxMin4, panelColor4);
+                if (xuHuongVaTinHieu4 != null)
+                {
+                    list.Add(xuHuongVaTinHieu4);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu5 = GetAXuHuong(comboBoxDk5, comboBoxNhom5, comboBoxTinHieu5, textBoxThe5, textBoxGiaTri5, textBoxMax5, textBoxMin5, panelColor5);
+                if (xuHuongVaTinHieu5 != null)
+                {
+                    list.Add(xuHuongVaTinHieu5);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu6 = GetAXuHuong(comboBoxDk6, comboBoxNhom6, comboBoxTinHieu6, textBoxThe6, textBoxGiaTri6, textBoxMax6, textBoxMin6, panelColor6);
+                if (xuHuongVaTinHieu6 != null)
+                {
+                    list.Add(xuHuongVaTinHieu6);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu7 = GetAXuHuong(comboBoxDk7, comboBoxNhom7, comboBoxTinHieu7, textBoxThe7, textBoxGiaTri7, textBoxMax7, textBoxMin7, panelColor7);
+                if (xuHuongVaTinHieu7 != null)
+                {
+                    list.Add(xuHuongVaTinHieu7);
+                }
+                XuHuongVaTinHieu? xuHuongVaTinHieu8 = GetAXuHuong(comboBoxDk8, comboBoxNhom8, comboBoxTinHieu8, textBoxThe8, textBoxGiaTri8, textBoxMax8, textBoxMin8, panelColor8);
+                if (xuHuongVaTinHieu8 != null)
+                {
+                    list.Add(xuHuongVaTinHieu8);
+                }
             }
-            foreach (var item in d)
+            if (list != null && list.Count > 0)
             {
-                comboBoxTinHieu2.Items.Add(item.TinHieu.ToString());
+                if(DALKhuynhHuong.Add(textBoxName.Name,list) == false)
+                {
+                    MessageBox.Show("Thêm không thành công, vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    this.Close();
+                }
             }
-
-        }
-
-        private void comboBoxTinHieu2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Analog d = new AnalogCommon().listAllAnalogs.FirstOrDefault((item) => item.TinHieu == comboBoxTinHieu2.Text && item.Nhom == comboBoxNhom2.Text && item.DieuKien == comboBoxDk2.Text);
-            textBoxThe2.Text = d.GanThe;
-            textBoxGiaTri2.Text = d.DonVi;
-            textBoxMax2.Text = d.GiaTriLonNhat.ToString();
-            textBoxMin2.Text = d.GiaTriNhoNhat.ToString();
-        }
-        #endregion nhom2
-        #region nhom3
-        private void comboBoxDk3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu3.Items.Clear();
-            List<Analog> d;
-            String dieukien = comboBoxDk3.Text;
-            if (comboBoxNhom3.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom3.Text && item.DieuKien == comboBoxDk3.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.DieuKien == dieukien).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu3.Items.Add(item.ToString());
-            }
-        }
-
-        private void comboBoxNhom3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu3.Items.Clear();
-            List<Analog> d;
-            String nhombom = comboBoxNhom3.Text;
-            if (comboBoxDk3.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom3.Text && item.DieuKien == comboBoxDk3.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == nhombom).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu3.Items.Add(item.TinHieu.ToString());
-            }
-        }
-
-        private void comboBoxTinHieu3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Analog d = new AnalogCommon().listAllAnalogs.FirstOrDefault((item) => item.TinHieu == comboBoxTinHieu3.Text && item.Nhom == comboBoxNhom3.Text && item.DieuKien == comboBoxDk3.Text);
-            textBoxThe3.Text = d.GanThe;
-            textBoxGiaTri3.Text = d.DonVi;
-            textBoxMax3.Text = d.GiaTriLonNhat.ToString();
-            textBoxMin3.Text = d.GiaTriNhoNhat.ToString();
-
-        }
-        #endregion nhom3
-        private void comboBoxDk4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu4.Items.Clear();
-            List<Analog> d;
-            String dieukien = comboBoxDk4.Text;
-            if (comboBoxNhom4.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom4.Text && item.DieuKien == comboBoxDk4.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.DieuKien == dieukien).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu4.Items.Add(item.ToString());
-            }
-        }
-
-        private void comboBoxNhom4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu4.Items.Clear();
-            List<Analog> d;
-            String nhombom = comboBoxNhom4.Text;
-            if (comboBoxDk4.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom4.Text && item.DieuKien == comboBoxDk4.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == nhombom).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu4.Items.Add(item.TinHieu.ToString());
-            }
-        }
-
-        private void comboBoxTinHieu4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Analog d = new AnalogCommon().listAllAnalogs.FirstOrDefault((item) => item.TinHieu == comboBoxTinHieu4.Text && item.Nhom == comboBoxNhom4.Text && item.DieuKien == comboBoxDk4.Text);
-            textBoxThe4.Text = d.GanThe;
-            textBoxGiaTri4.Text = d.DonVi;
-            textBoxMax4.Text = d.GiaTriLonNhat.ToString();
-            textBoxMin4.Text = d.GiaTriNhoNhat.ToString();
-        }
-
-        private void comboBoxDk5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu5.Items.Clear();
-            List<Analog> d;
-            String dieukien = comboBoxDk5.Text;
-            if (comboBoxNhom5.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom5.Text && item.DieuKien == comboBoxDk5.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.DieuKien == dieukien).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu5.Items.Add(item.ToString());
-            }
-        }
-
-        private void comboBoxNhom5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu5.Items.Clear();
-            List<Analog> d;
-            String nhombom = comboBoxNhom5.Text;
-            if (comboBoxDk5.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom3.Text && item.DieuKien == comboBoxDk5.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == nhombom).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu5.Items.Add(item.TinHieu.ToString());
-            }
-        }
-
-        private void comboBoxTinHieu5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Analog d = new AnalogCommon().listAllAnalogs.FirstOrDefault((item) => item.TinHieu == comboBoxTinHieu5.Text && item.Nhom == comboBoxNhom5.Text && item.DieuKien == comboBoxDk5.Text);
-            textBoxThe5.Text = d.GanThe;
-            textBoxGiaTri5.Text = d.DonVi;
-            textBoxMax5.Text = d.GiaTriLonNhat.ToString();
-            textBoxMin5.Text = d.GiaTriNhoNhat.ToString();
-        }
-
-        private void comboBoxDk6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu6.Items.Clear();
-            List<Analog> d;
-            String dieukien = comboBoxDk6.Text;
-            if (comboBoxNhom6.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom6.Text && item.DieuKien == comboBoxDk6.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.DieuKien == dieukien).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu6.Items.Add(item.ToString());
-            }
-        }
-
-        private void comboBoxNhom6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu6.Items.Clear();
-            List<Analog> d;
-            String nhombom = comboBoxNhom6.Text;
-            if (comboBoxDk6.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom6.Text && item.DieuKien == comboBoxDk6.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == nhombom).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu6.Items.Add(item.TinHieu.ToString());
-            }
-        }
-
-        private void comboBoxTinHieu6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Analog d = new AnalogCommon().listAllAnalogs.FirstOrDefault((item) => item.TinHieu == comboBoxTinHieu6.Text && item.Nhom == comboBoxNhom6.Text && item.DieuKien == comboBoxDk6.Text);
-            textBoxThe6.Text = d.GanThe;
-            textBoxGiaTri6.Text = d.DonVi;
-            textBoxMax6.Text = d.GiaTriLonNhat.ToString();
-            textBoxMin6.Text = d.GiaTriNhoNhat.ToString();
-        }
-
-        private void comboBoxDk7_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu7.Items.Clear();
-            List<Analog> d;
-            String dieukien = comboBoxDk7.Text;
-            if (comboBoxNhom7.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom7.Text && item.DieuKien == comboBoxDk7.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.DieuKien == dieukien).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu7.Items.Add(item.ToString());
-            }
-        }
-
-        private void comboBoxNhom7_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu7.Items.Clear();
-            List<Analog> d;
-            String nhombom = comboBoxNhom7.Text;
-            if (comboBoxDk7.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom7.Text && item.DieuKien == comboBoxDk7.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == nhombom).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu7.Items.Add(item.TinHieu.ToString());
-            }
-        }
-
-        private void comboBoxTinHieu7_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Analog d = new AnalogCommon().listAllAnalogs.FirstOrDefault((item) => item.TinHieu == comboBoxTinHieu7.Text && item.Nhom == comboBoxNhom7.Text && item.DieuKien == comboBoxDk7.Text);
-            textBoxThe7.Text = d.GanThe;
-            textBoxGiaTri7.Text = d.DonVi;
-            textBoxMax7.Text = d.GiaTriLonNhat.ToString();
-            textBoxMin7.Text = d.GiaTriNhoNhat.ToString();
-        }
-
-        private void comboBoxDk8_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu8.Items.Clear();
-            List<Analog> d;
-            String dieukien = comboBoxDk8.Text;
-            if (comboBoxNhom8.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom8.Text && item.DieuKien == comboBoxDk8.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.DieuKien == dieukien).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu8.Items.Add(item.ToString());
-            }
-        }
-
-        private void comboBoxNhom8_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBoxTinHieu8.Items.Clear();
-            List<Analog> d;
-            String nhombom = comboBoxNhom8.Text;
-            if (comboBoxDk8.Text != "")
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == comboBoxNhom8.Text && item.DieuKien == comboBoxDk8.Text).ToList();
-            }
-            else
-            {
-                d = new AnalogCommon().listAllAnalogs.Where((item) => item.Nhom == nhombom).ToList();
-
-            }
-            foreach (var item in d)
-            {
-                comboBoxTinHieu8.Items.Add(item.TinHieu.ToString());
-            }
-        }
-
-        private void comboBoxTinHieu8_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Analog d = new AnalogCommon().listAllAnalogs.FirstOrDefault((item) => item.TinHieu == comboBoxTinHieu7.Text && item.Nhom == comboBoxNhom7.Text && item.DieuKien == comboBoxDk7.Text);
-            textBoxThe8.Text = d.GanThe;
-            textBoxGiaTri8.Text = d.DonVi;
-            textBoxMax8.Text = d.GiaTriLonNhat.ToString();
-            textBoxMin8.Text = d.GiaTriNhoNhat.ToString();
         }
     }
 

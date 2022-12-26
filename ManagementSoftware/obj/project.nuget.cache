@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IFdG8HfstVkjb7O/n1d58M3SDRcLnAgr5JK2Gq6FNufjgHmA88Q3+7wOfzqSQKmrSke4/rJzd3Bcsp1/eeSqMA==",
+  "dgSpecHash": "0bA3g9tahOJVitDwZIwrOpEE85M4FO2YGhLLCwftKxCe1HO0tTsbEl4XMqzRb0+uNa+BOEbD9Y9oSoi2MWTiow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\homnay\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\thu2\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

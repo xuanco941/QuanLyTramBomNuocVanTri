@@ -1,6 +1,6 @@
 ﻿namespace ManagementSoftware
 {
-    partial class FormCaiDatDoThiKhuynhHuong
+    partial class ThietLapKhuynhHuong
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxThe8 = new System.Windows.Forms.TextBox();
@@ -102,13 +102,21 @@
             this.textBoxMin8 = new System.Windows.Forms.TextBox();
             this.textBoxMax8 = new System.Windows.Forms.TextBox();
             this.textBoxGiaTri8 = new System.Windows.Forms.TextBox();
+            this.panelColor1 = new System.Windows.Forms.Panel();
+            this.panelColor2 = new System.Windows.Forms.Panel();
+            this.panelColor3 = new System.Windows.Forms.Panel();
+            this.panelColor4 = new System.Windows.Forms.Panel();
+            this.panelColor5 = new System.Windows.Forms.Panel();
+            this.panelColor6 = new System.Windows.Forms.Panel();
+            this.panelColor7 = new System.Windows.Forms.Panel();
+            this.panelColor8 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(24, 12);
@@ -117,12 +125,12 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(412, 25);
-            this.textBox1.TabIndex = 1;
+            this.textBoxName.Location = new System.Drawing.Point(115, 45);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(412, 25);
+            this.textBoxName.TabIndex = 1;
             // 
             // label1
             // 
@@ -190,263 +198,286 @@
             // 
             // textBoxThe8
             // 
-            this.textBoxThe8.Location = new System.Drawing.Point(707, 334);
+            this.textBoxThe8.Enabled = false;
+            this.textBoxThe8.Location = new System.Drawing.Point(715, 337);
             this.textBoxThe8.Name = "textBoxThe8";
             this.textBoxThe8.Size = new System.Drawing.Size(100, 25);
             this.textBoxThe8.TabIndex = 43;
             // 
             // comboBoxTinHieu8
             // 
+            this.comboBoxTinHieu8.Enabled = false;
             this.comboBoxTinHieu8.FormattingEnabled = true;
-            this.comboBoxTinHieu8.Location = new System.Drawing.Point(515, 334);
+            this.comboBoxTinHieu8.Location = new System.Drawing.Point(456, 337);
             this.comboBoxTinHieu8.Name = "comboBoxTinHieu8";
-            this.comboBoxTinHieu8.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxTinHieu8.Size = new System.Drawing.Size(195, 25);
             this.comboBoxTinHieu8.TabIndex = 42;
-            this.comboBoxTinHieu8.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
+            this.comboBoxTinHieu8.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom8
             // 
+            this.comboBoxNhom8.Enabled = false;
             this.comboBoxNhom8.FormattingEnabled = true;
-            this.comboBoxNhom8.Location = new System.Drawing.Point(330, 334);
+            this.comboBoxNhom8.Location = new System.Drawing.Point(271, 337);
             this.comboBoxNhom8.Name = "comboBoxNhom8";
             this.comboBoxNhom8.Size = new System.Drawing.Size(126, 25);
             this.comboBoxNhom8.TabIndex = 41;
-            this.comboBoxNhom8.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
+            this.comboBoxNhom8.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk8
             // 
             this.comboBoxDk8.FormattingEnabled = true;
-            this.comboBoxDk8.Location = new System.Drawing.Point(147, 334);
+            this.comboBoxDk8.Location = new System.Drawing.Point(88, 337);
             this.comboBoxDk8.Name = "comboBoxDk8";
             this.comboBoxDk8.Size = new System.Drawing.Size(121, 25);
             this.comboBoxDk8.TabIndex = 40;
-            this.comboBoxDk8.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
+            this.comboBoxDk8.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe7
             // 
-            this.textBoxThe7.Location = new System.Drawing.Point(707, 294);
+            this.textBoxThe7.Enabled = false;
+            this.textBoxThe7.Location = new System.Drawing.Point(715, 297);
             this.textBoxThe7.Name = "textBoxThe7";
             this.textBoxThe7.Size = new System.Drawing.Size(100, 25);
             this.textBoxThe7.TabIndex = 39;
             // 
             // comboBoxTinHieu7
             // 
+            this.comboBoxTinHieu7.Enabled = false;
             this.comboBoxTinHieu7.FormattingEnabled = true;
-            this.comboBoxTinHieu7.Location = new System.Drawing.Point(515, 294);
+            this.comboBoxTinHieu7.Location = new System.Drawing.Point(456, 297);
             this.comboBoxTinHieu7.Name = "comboBoxTinHieu7";
-            this.comboBoxTinHieu7.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxTinHieu7.Size = new System.Drawing.Size(195, 25);
             this.comboBoxTinHieu7.TabIndex = 38;
-            this.comboBoxTinHieu7.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu7_SelectedIndexChanged);
+            this.comboBoxTinHieu7.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom7
             // 
+            this.comboBoxNhom7.Enabled = false;
             this.comboBoxNhom7.FormattingEnabled = true;
-            this.comboBoxNhom7.Location = new System.Drawing.Point(330, 294);
+            this.comboBoxNhom7.Location = new System.Drawing.Point(271, 297);
             this.comboBoxNhom7.Name = "comboBoxNhom7";
             this.comboBoxNhom7.Size = new System.Drawing.Size(126, 25);
             this.comboBoxNhom7.TabIndex = 37;
-            this.comboBoxNhom7.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom7_SelectedIndexChanged);
+            this.comboBoxNhom7.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk7
             // 
             this.comboBoxDk7.FormattingEnabled = true;
-            this.comboBoxDk7.Location = new System.Drawing.Point(147, 294);
+            this.comboBoxDk7.Location = new System.Drawing.Point(88, 297);
             this.comboBoxDk7.Name = "comboBoxDk7";
             this.comboBoxDk7.Size = new System.Drawing.Size(121, 25);
             this.comboBoxDk7.TabIndex = 36;
-            this.comboBoxDk7.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk7_SelectedIndexChanged);
+            this.comboBoxDk7.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe6
             // 
-            this.textBoxThe6.Location = new System.Drawing.Point(707, 254);
+            this.textBoxThe6.Enabled = false;
+            this.textBoxThe6.Location = new System.Drawing.Point(715, 257);
             this.textBoxThe6.Name = "textBoxThe6";
             this.textBoxThe6.Size = new System.Drawing.Size(100, 25);
             this.textBoxThe6.TabIndex = 35;
             // 
             // comboBoxTinHieu6
             // 
+            this.comboBoxTinHieu6.Enabled = false;
             this.comboBoxTinHieu6.FormattingEnabled = true;
-            this.comboBoxTinHieu6.Location = new System.Drawing.Point(515, 254);
+            this.comboBoxTinHieu6.Location = new System.Drawing.Point(456, 257);
             this.comboBoxTinHieu6.Name = "comboBoxTinHieu6";
-            this.comboBoxTinHieu6.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxTinHieu6.Size = new System.Drawing.Size(195, 25);
             this.comboBoxTinHieu6.TabIndex = 34;
-            this.comboBoxTinHieu6.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu6_SelectedIndexChanged);
+            this.comboBoxTinHieu6.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom6
             // 
+            this.comboBoxNhom6.Enabled = false;
             this.comboBoxNhom6.FormattingEnabled = true;
-            this.comboBoxNhom6.Location = new System.Drawing.Point(330, 254);
+            this.comboBoxNhom6.Location = new System.Drawing.Point(271, 257);
             this.comboBoxNhom6.Name = "comboBoxNhom6";
             this.comboBoxNhom6.Size = new System.Drawing.Size(126, 25);
             this.comboBoxNhom6.TabIndex = 33;
-            this.comboBoxNhom6.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom6_SelectedIndexChanged);
+            this.comboBoxNhom6.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk6
             // 
             this.comboBoxDk6.FormattingEnabled = true;
-            this.comboBoxDk6.Location = new System.Drawing.Point(147, 254);
+            this.comboBoxDk6.Location = new System.Drawing.Point(88, 257);
             this.comboBoxDk6.Name = "comboBoxDk6";
             this.comboBoxDk6.Size = new System.Drawing.Size(121, 25);
             this.comboBoxDk6.TabIndex = 32;
-            this.comboBoxDk6.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk6_SelectedIndexChanged);
+            this.comboBoxDk6.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe5
             // 
-            this.textBoxThe5.Location = new System.Drawing.Point(707, 214);
+            this.textBoxThe5.Enabled = false;
+            this.textBoxThe5.Location = new System.Drawing.Point(715, 217);
             this.textBoxThe5.Name = "textBoxThe5";
             this.textBoxThe5.Size = new System.Drawing.Size(100, 25);
             this.textBoxThe5.TabIndex = 31;
             // 
             // comboBoxTinHieu5
             // 
+            this.comboBoxTinHieu5.Enabled = false;
             this.comboBoxTinHieu5.FormattingEnabled = true;
-            this.comboBoxTinHieu5.Location = new System.Drawing.Point(515, 214);
+            this.comboBoxTinHieu5.Location = new System.Drawing.Point(456, 217);
             this.comboBoxTinHieu5.Name = "comboBoxTinHieu5";
-            this.comboBoxTinHieu5.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxTinHieu5.Size = new System.Drawing.Size(195, 25);
             this.comboBoxTinHieu5.TabIndex = 30;
-            this.comboBoxTinHieu5.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu5_SelectedIndexChanged);
+            this.comboBoxTinHieu5.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom5
             // 
+            this.comboBoxNhom5.Enabled = false;
             this.comboBoxNhom5.FormattingEnabled = true;
-            this.comboBoxNhom5.Location = new System.Drawing.Point(330, 214);
+            this.comboBoxNhom5.Location = new System.Drawing.Point(271, 217);
             this.comboBoxNhom5.Name = "comboBoxNhom5";
             this.comboBoxNhom5.Size = new System.Drawing.Size(126, 25);
             this.comboBoxNhom5.TabIndex = 29;
-            this.comboBoxNhom5.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom5_SelectedIndexChanged);
+            this.comboBoxNhom5.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk5
             // 
             this.comboBoxDk5.FormattingEnabled = true;
-            this.comboBoxDk5.Location = new System.Drawing.Point(147, 214);
+            this.comboBoxDk5.Location = new System.Drawing.Point(88, 217);
             this.comboBoxDk5.Name = "comboBoxDk5";
             this.comboBoxDk5.Size = new System.Drawing.Size(121, 25);
             this.comboBoxDk5.TabIndex = 28;
-            this.comboBoxDk5.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk5_SelectedIndexChanged);
+            this.comboBoxDk5.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe4
             // 
-            this.textBoxThe4.Location = new System.Drawing.Point(707, 174);
+            this.textBoxThe4.Enabled = false;
+            this.textBoxThe4.Location = new System.Drawing.Point(715, 177);
             this.textBoxThe4.Name = "textBoxThe4";
             this.textBoxThe4.Size = new System.Drawing.Size(100, 25);
             this.textBoxThe4.TabIndex = 27;
             // 
             // comboBoxTinHieu4
             // 
+            this.comboBoxTinHieu4.Enabled = false;
             this.comboBoxTinHieu4.FormattingEnabled = true;
-            this.comboBoxTinHieu4.Location = new System.Drawing.Point(515, 174);
+            this.comboBoxTinHieu4.Location = new System.Drawing.Point(456, 177);
             this.comboBoxTinHieu4.Name = "comboBoxTinHieu4";
-            this.comboBoxTinHieu4.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxTinHieu4.Size = new System.Drawing.Size(195, 25);
             this.comboBoxTinHieu4.TabIndex = 26;
-            this.comboBoxTinHieu4.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu4_SelectedIndexChanged);
+            this.comboBoxTinHieu4.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom4
             // 
+            this.comboBoxNhom4.Enabled = false;
             this.comboBoxNhom4.FormattingEnabled = true;
-            this.comboBoxNhom4.Location = new System.Drawing.Point(330, 174);
+            this.comboBoxNhom4.Location = new System.Drawing.Point(271, 177);
             this.comboBoxNhom4.Name = "comboBoxNhom4";
             this.comboBoxNhom4.Size = new System.Drawing.Size(126, 25);
             this.comboBoxNhom4.TabIndex = 25;
-            this.comboBoxNhom4.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom4_SelectedIndexChanged);
+            this.comboBoxNhom4.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk4
             // 
             this.comboBoxDk4.FormattingEnabled = true;
-            this.comboBoxDk4.Location = new System.Drawing.Point(147, 174);
+            this.comboBoxDk4.Location = new System.Drawing.Point(88, 177);
             this.comboBoxDk4.Name = "comboBoxDk4";
             this.comboBoxDk4.Size = new System.Drawing.Size(121, 25);
             this.comboBoxDk4.TabIndex = 24;
-            this.comboBoxDk4.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk4_SelectedIndexChanged);
+            this.comboBoxDk4.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe3
             // 
-            this.textBoxThe3.Location = new System.Drawing.Point(707, 134);
+            this.textBoxThe3.Enabled = false;
+            this.textBoxThe3.Location = new System.Drawing.Point(715, 137);
             this.textBoxThe3.Name = "textBoxThe3";
             this.textBoxThe3.Size = new System.Drawing.Size(100, 25);
             this.textBoxThe3.TabIndex = 23;
             // 
             // comboBoxTinHieu3
             // 
+            this.comboBoxTinHieu3.Enabled = false;
             this.comboBoxTinHieu3.FormattingEnabled = true;
-            this.comboBoxTinHieu3.Location = new System.Drawing.Point(515, 134);
+            this.comboBoxTinHieu3.Location = new System.Drawing.Point(456, 137);
             this.comboBoxTinHieu3.Name = "comboBoxTinHieu3";
-            this.comboBoxTinHieu3.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxTinHieu3.Size = new System.Drawing.Size(195, 25);
             this.comboBoxTinHieu3.TabIndex = 22;
-            this.comboBoxTinHieu3.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu3_SelectedIndexChanged);
+            this.comboBoxTinHieu3.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom3
             // 
+            this.comboBoxNhom3.Enabled = false;
             this.comboBoxNhom3.FormattingEnabled = true;
-            this.comboBoxNhom3.Location = new System.Drawing.Point(330, 134);
+            this.comboBoxNhom3.Location = new System.Drawing.Point(271, 137);
             this.comboBoxNhom3.Name = "comboBoxNhom3";
             this.comboBoxNhom3.Size = new System.Drawing.Size(126, 25);
             this.comboBoxNhom3.TabIndex = 21;
-            this.comboBoxNhom3.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom3_SelectedIndexChanged);
+            this.comboBoxNhom3.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk3
             // 
             this.comboBoxDk3.FormattingEnabled = true;
-            this.comboBoxDk3.Location = new System.Drawing.Point(147, 134);
+            this.comboBoxDk3.Location = new System.Drawing.Point(88, 137);
             this.comboBoxDk3.Name = "comboBoxDk3";
             this.comboBoxDk3.Size = new System.Drawing.Size(121, 25);
             this.comboBoxDk3.TabIndex = 20;
-            this.comboBoxDk3.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk3_SelectedIndexChanged);
+            this.comboBoxDk3.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe2
             // 
-            this.textBoxThe2.Location = new System.Drawing.Point(707, 94);
+            this.textBoxThe2.Enabled = false;
+            this.textBoxThe2.Location = new System.Drawing.Point(715, 97);
             this.textBoxThe2.Name = "textBoxThe2";
             this.textBoxThe2.Size = new System.Drawing.Size(100, 25);
             this.textBoxThe2.TabIndex = 19;
             // 
             // comboBoxTinHieu2
             // 
+            this.comboBoxTinHieu2.Enabled = false;
             this.comboBoxTinHieu2.FormattingEnabled = true;
-            this.comboBoxTinHieu2.Location = new System.Drawing.Point(515, 94);
+            this.comboBoxTinHieu2.Location = new System.Drawing.Point(456, 97);
             this.comboBoxTinHieu2.Name = "comboBoxTinHieu2";
-            this.comboBoxTinHieu2.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxTinHieu2.Size = new System.Drawing.Size(195, 25);
             this.comboBoxTinHieu2.TabIndex = 18;
-            this.comboBoxTinHieu2.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu2_SelectedIndexChanged);
+            this.comboBoxTinHieu2.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom2
             // 
+            this.comboBoxNhom2.Enabled = false;
             this.comboBoxNhom2.FormattingEnabled = true;
-            this.comboBoxNhom2.Location = new System.Drawing.Point(330, 94);
+            this.comboBoxNhom2.Location = new System.Drawing.Point(271, 97);
             this.comboBoxNhom2.Name = "comboBoxNhom2";
             this.comboBoxNhom2.Size = new System.Drawing.Size(126, 25);
             this.comboBoxNhom2.TabIndex = 17;
-            this.comboBoxNhom2.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom2_SelectedIndexChanged);
+            this.comboBoxNhom2.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom1_SelectedIndexChanged);
             // 
             // comboBoxDk2
             // 
             this.comboBoxDk2.FormattingEnabled = true;
-            this.comboBoxDk2.Location = new System.Drawing.Point(147, 94);
+            this.comboBoxDk2.Location = new System.Drawing.Point(88, 97);
             this.comboBoxDk2.Name = "comboBoxDk2";
             this.comboBoxDk2.Size = new System.Drawing.Size(121, 25);
             this.comboBoxDk2.TabIndex = 16;
-            this.comboBoxDk2.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBoxDk2.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // textBoxThe1
             // 
-            this.textBoxThe1.Location = new System.Drawing.Point(707, 60);
+            this.textBoxThe1.Enabled = false;
+            this.textBoxThe1.Location = new System.Drawing.Point(715, 63);
             this.textBoxThe1.Name = "textBoxThe1";
             this.textBoxThe1.Size = new System.Drawing.Size(100, 25);
             this.textBoxThe1.TabIndex = 15;
-            this.textBoxThe1.TextChanged += new System.EventHandler(this.textBoxThe1_TextChanged);
             // 
             // comboBoxTinHieu1
             // 
+            this.comboBoxTinHieu1.Enabled = false;
             this.comboBoxTinHieu1.FormattingEnabled = true;
-            this.comboBoxTinHieu1.Location = new System.Drawing.Point(515, 60);
+            this.comboBoxTinHieu1.Location = new System.Drawing.Point(456, 63);
             this.comboBoxTinHieu1.Name = "comboBoxTinHieu1";
-            this.comboBoxTinHieu1.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxTinHieu1.Size = new System.Drawing.Size(195, 25);
             this.comboBoxTinHieu1.TabIndex = 14;
             this.comboBoxTinHieu1.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu1_SelectedIndexChanged);
             // 
             // comboBoxNhom1
             // 
+            this.comboBoxNhom1.Enabled = false;
             this.comboBoxNhom1.FormattingEnabled = true;
-            this.comboBoxNhom1.Location = new System.Drawing.Point(330, 60);
+            this.comboBoxNhom1.Location = new System.Drawing.Point(271, 63);
             this.comboBoxNhom1.Name = "comboBoxNhom1";
             this.comboBoxNhom1.Size = new System.Drawing.Size(126, 25);
             this.comboBoxNhom1.TabIndex = 13;
@@ -455,11 +486,11 @@
             // comboBoxDk1
             // 
             this.comboBoxDk1.FormattingEnabled = true;
-            this.comboBoxDk1.Location = new System.Drawing.Point(147, 60);
+            this.comboBoxDk1.Location = new System.Drawing.Point(88, 63);
             this.comboBoxDk1.Name = "comboBoxDk1";
             this.comboBoxDk1.Size = new System.Drawing.Size(121, 25);
             this.comboBoxDk1.TabIndex = 12;
-            this.comboBoxDk1.SelectedValueChanged += new System.EventHandler(this.comboBoxDk1_SelectedValueChanged);
+            this.comboBoxDk1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk1_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -527,7 +558,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(181, 32);
+            this.label6.Location = new System.Drawing.Point(122, 35);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 4;
@@ -536,7 +567,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(548, 32);
+            this.label5.Location = new System.Drawing.Point(524, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 19);
             this.label5.TabIndex = 3;
@@ -545,7 +576,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(367, 32);
+            this.label4.Location = new System.Drawing.Point(308, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 19);
             this.label4.TabIndex = 2;
@@ -554,7 +585,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(728, 32);
+            this.label3.Location = new System.Drawing.Point(736, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 19);
             this.label3.TabIndex = 1;
@@ -571,6 +602,7 @@
             // 
             // textBoxGiaTri1
             // 
+            this.textBoxGiaTri1.Enabled = false;
             this.textBoxGiaTri1.Location = new System.Drawing.Point(24, 533);
             this.textBoxGiaTri1.Name = "textBoxGiaTri1";
             this.textBoxGiaTri1.Size = new System.Drawing.Size(100, 23);
@@ -578,6 +610,7 @@
             // 
             // textBoxMax1
             // 
+            this.textBoxMax1.Enabled = false;
             this.textBoxMax1.Location = new System.Drawing.Point(24, 562);
             this.textBoxMax1.Name = "textBoxMax1";
             this.textBoxMax1.Size = new System.Drawing.Size(100, 23);
@@ -585,6 +618,7 @@
             // 
             // textBoxMin1
             // 
+            this.textBoxMin1.Enabled = false;
             this.textBoxMin1.Location = new System.Drawing.Point(24, 664);
             this.textBoxMin1.Name = "textBoxMin1";
             this.textBoxMin1.Size = new System.Drawing.Size(100, 23);
@@ -598,7 +632,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button4.Image = global::ManagementSoftware.Properties.Resources.icons8_close_30;
-            this.button4.Location = new System.Drawing.Point(460, 717);
+            this.button4.Location = new System.Drawing.Point(525, 717);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 40);
@@ -625,9 +659,11 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBoxMin2
             // 
+            this.textBoxMin2.Enabled = false;
             this.textBoxMin2.Location = new System.Drawing.Point(139, 664);
             this.textBoxMin2.Name = "textBoxMin2";
             this.textBoxMin2.Size = new System.Drawing.Size(100, 23);
@@ -635,6 +671,7 @@
             // 
             // textBoxMax2
             // 
+            this.textBoxMax2.Enabled = false;
             this.textBoxMax2.Location = new System.Drawing.Point(139, 562);
             this.textBoxMax2.Name = "textBoxMax2";
             this.textBoxMax2.Size = new System.Drawing.Size(100, 23);
@@ -642,6 +679,7 @@
             // 
             // textBoxGiaTri2
             // 
+            this.textBoxGiaTri2.Enabled = false;
             this.textBoxGiaTri2.Location = new System.Drawing.Point(139, 533);
             this.textBoxGiaTri2.Name = "textBoxGiaTri2";
             this.textBoxGiaTri2.Size = new System.Drawing.Size(100, 23);
@@ -649,6 +687,7 @@
             // 
             // textBoxMin3
             // 
+            this.textBoxMin3.Enabled = false;
             this.textBoxMin3.Location = new System.Drawing.Point(255, 664);
             this.textBoxMin3.Name = "textBoxMin3";
             this.textBoxMin3.Size = new System.Drawing.Size(100, 23);
@@ -656,6 +695,7 @@
             // 
             // textBoxMax3
             // 
+            this.textBoxMax3.Enabled = false;
             this.textBoxMax3.Location = new System.Drawing.Point(255, 562);
             this.textBoxMax3.Name = "textBoxMax3";
             this.textBoxMax3.Size = new System.Drawing.Size(100, 23);
@@ -663,6 +703,7 @@
             // 
             // textBoxGiaTri3
             // 
+            this.textBoxGiaTri3.Enabled = false;
             this.textBoxGiaTri3.Location = new System.Drawing.Point(255, 533);
             this.textBoxGiaTri3.Name = "textBoxGiaTri3";
             this.textBoxGiaTri3.Size = new System.Drawing.Size(100, 23);
@@ -670,6 +711,7 @@
             // 
             // textBoxMin4
             // 
+            this.textBoxMin4.Enabled = false;
             this.textBoxMin4.Location = new System.Drawing.Point(370, 664);
             this.textBoxMin4.Name = "textBoxMin4";
             this.textBoxMin4.Size = new System.Drawing.Size(100, 23);
@@ -677,6 +719,7 @@
             // 
             // textBoxMax4
             // 
+            this.textBoxMax4.Enabled = false;
             this.textBoxMax4.Location = new System.Drawing.Point(370, 562);
             this.textBoxMax4.Name = "textBoxMax4";
             this.textBoxMax4.Size = new System.Drawing.Size(100, 23);
@@ -684,6 +727,7 @@
             // 
             // textBoxGiaTri4
             // 
+            this.textBoxGiaTri4.Enabled = false;
             this.textBoxGiaTri4.Location = new System.Drawing.Point(370, 533);
             this.textBoxGiaTri4.Name = "textBoxGiaTri4";
             this.textBoxGiaTri4.Size = new System.Drawing.Size(100, 23);
@@ -691,6 +735,7 @@
             // 
             // textBoxMin5
             // 
+            this.textBoxMin5.Enabled = false;
             this.textBoxMin5.Location = new System.Drawing.Point(480, 664);
             this.textBoxMin5.Name = "textBoxMin5";
             this.textBoxMin5.Size = new System.Drawing.Size(100, 23);
@@ -698,6 +743,7 @@
             // 
             // textBoxMax5
             // 
+            this.textBoxMax5.Enabled = false;
             this.textBoxMax5.Location = new System.Drawing.Point(480, 562);
             this.textBoxMax5.Name = "textBoxMax5";
             this.textBoxMax5.Size = new System.Drawing.Size(100, 23);
@@ -705,6 +751,7 @@
             // 
             // textBoxGiaTri5
             // 
+            this.textBoxGiaTri5.Enabled = false;
             this.textBoxGiaTri5.Location = new System.Drawing.Point(480, 533);
             this.textBoxGiaTri5.Name = "textBoxGiaTri5";
             this.textBoxGiaTri5.Size = new System.Drawing.Size(100, 23);
@@ -712,6 +759,7 @@
             // 
             // textBoxMin6
             // 
+            this.textBoxMin6.Enabled = false;
             this.textBoxMin6.Location = new System.Drawing.Point(586, 664);
             this.textBoxMin6.Name = "textBoxMin6";
             this.textBoxMin6.Size = new System.Drawing.Size(100, 23);
@@ -719,6 +767,7 @@
             // 
             // textBoxMax6
             // 
+            this.textBoxMax6.Enabled = false;
             this.textBoxMax6.Location = new System.Drawing.Point(586, 562);
             this.textBoxMax6.Name = "textBoxMax6";
             this.textBoxMax6.Size = new System.Drawing.Size(100, 23);
@@ -726,6 +775,7 @@
             // 
             // textBoxGiaTri6
             // 
+            this.textBoxGiaTri6.Enabled = false;
             this.textBoxGiaTri6.Location = new System.Drawing.Point(586, 533);
             this.textBoxGiaTri6.Name = "textBoxGiaTri6";
             this.textBoxGiaTri6.Size = new System.Drawing.Size(100, 23);
@@ -733,6 +783,7 @@
             // 
             // textBoxMin7
             // 
+            this.textBoxMin7.Enabled = false;
             this.textBoxMin7.Location = new System.Drawing.Point(692, 664);
             this.textBoxMin7.Name = "textBoxMin7";
             this.textBoxMin7.Size = new System.Drawing.Size(100, 23);
@@ -740,6 +791,7 @@
             // 
             // textBoxMax7
             // 
+            this.textBoxMax7.Enabled = false;
             this.textBoxMax7.Location = new System.Drawing.Point(692, 562);
             this.textBoxMax7.Name = "textBoxMax7";
             this.textBoxMax7.Size = new System.Drawing.Size(100, 23);
@@ -747,6 +799,7 @@
             // 
             // textBoxGiaTri7
             // 
+            this.textBoxGiaTri7.Enabled = false;
             this.textBoxGiaTri7.Location = new System.Drawing.Point(692, 533);
             this.textBoxGiaTri7.Name = "textBoxGiaTri7";
             this.textBoxGiaTri7.Size = new System.Drawing.Size(100, 23);
@@ -754,6 +807,7 @@
             // 
             // textBoxMin8
             // 
+            this.textBoxMin8.Enabled = false;
             this.textBoxMin8.Location = new System.Drawing.Point(797, 664);
             this.textBoxMin8.Name = "textBoxMin8";
             this.textBoxMin8.Size = new System.Drawing.Size(100, 23);
@@ -761,6 +815,7 @@
             // 
             // textBoxMax8
             // 
+            this.textBoxMax8.Enabled = false;
             this.textBoxMax8.Location = new System.Drawing.Point(797, 562);
             this.textBoxMax8.Name = "textBoxMax8";
             this.textBoxMax8.Size = new System.Drawing.Size(100, 23);
@@ -768,16 +823,89 @@
             // 
             // textBoxGiaTri8
             // 
+            this.textBoxGiaTri8.Enabled = false;
             this.textBoxGiaTri8.Location = new System.Drawing.Point(797, 533);
             this.textBoxGiaTri8.Name = "textBoxGiaTri8";
             this.textBoxGiaTri8.Size = new System.Drawing.Size(100, 23);
             this.textBoxGiaTri8.TabIndex = 46;
             // 
-            // FormCaiDatDoThiKhuynhHuong
+            // panelColor1
+            // 
+            this.panelColor1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor1.Location = new System.Drawing.Point(66, 591);
+            this.panelColor1.Name = "panelColor1";
+            this.panelColor1.Size = new System.Drawing.Size(17, 68);
+            this.panelColor1.TabIndex = 49;
+            // 
+            // panelColor2
+            // 
+            this.panelColor2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor2.Location = new System.Drawing.Point(182, 591);
+            this.panelColor2.Name = "panelColor2";
+            this.panelColor2.Size = new System.Drawing.Size(17, 68);
+            this.panelColor2.TabIndex = 50;
+            // 
+            // panelColor3
+            // 
+            this.panelColor3.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor3.Location = new System.Drawing.Point(296, 591);
+            this.panelColor3.Name = "panelColor3";
+            this.panelColor3.Size = new System.Drawing.Size(17, 68);
+            this.panelColor3.TabIndex = 51;
+            // 
+            // panelColor4
+            // 
+            this.panelColor4.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor4.Location = new System.Drawing.Point(421, 591);
+            this.panelColor4.Name = "panelColor4";
+            this.panelColor4.Size = new System.Drawing.Size(17, 68);
+            this.panelColor4.TabIndex = 52;
+            // 
+            // panelColor5
+            // 
+            this.panelColor5.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor5.Location = new System.Drawing.Point(525, 591);
+            this.panelColor5.Name = "panelColor5";
+            this.panelColor5.Size = new System.Drawing.Size(17, 68);
+            this.panelColor5.TabIndex = 53;
+            // 
+            // panelColor6
+            // 
+            this.panelColor6.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor6.Location = new System.Drawing.Point(627, 590);
+            this.panelColor6.Name = "panelColor6";
+            this.panelColor6.Size = new System.Drawing.Size(17, 68);
+            this.panelColor6.TabIndex = 54;
+            // 
+            // panelColor7
+            // 
+            this.panelColor7.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor7.Location = new System.Drawing.Point(731, 591);
+            this.panelColor7.Name = "panelColor7";
+            this.panelColor7.Size = new System.Drawing.Size(17, 68);
+            this.panelColor7.TabIndex = 55;
+            // 
+            // panelColor8
+            // 
+            this.panelColor8.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor8.Location = new System.Drawing.Point(840, 591);
+            this.panelColor8.Name = "panelColor8";
+            this.panelColor8.Size = new System.Drawing.Size(17, 68);
+            this.panelColor8.TabIndex = 56;
+            // 
+            // ThietLapKhuynhHuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 769);
+            this.Controls.Add(this.panelColor8);
+            this.Controls.Add(this.panelColor7);
+            this.Controls.Add(this.panelColor6);
+            this.Controls.Add(this.panelColor5);
+            this.Controls.Add(this.panelColor4);
+            this.Controls.Add(this.panelColor3);
+            this.Controls.Add(this.panelColor2);
+            this.Controls.Add(this.panelColor1);
             this.Controls.Add(this.textBoxMin8);
             this.Controls.Add(this.textBoxMax8);
             this.Controls.Add(this.textBoxGiaTri8);
@@ -806,10 +934,11 @@
             this.Controls.Add(this.textBoxGiaTri1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FormCaiDatDoThiKhuynhHuong";
+            this.MaximizeBox = false;
+            this.Name = "ThietLapKhuynhHuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thiết lập";
-            this.Load += new System.EventHandler(this.FormCaiDatDoThiKhuynhHuong_Load);
+            this.Load += new System.EventHandler(this.ThietLapKhuynhHuong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -822,7 +951,7 @@
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox textBox1;
+        private TextBox textBoxName;
         private Label label1;
         private GroupBox groupBox2;
         private Label label13;
@@ -895,5 +1024,13 @@
         private TextBox textBoxMin8;
         private TextBox textBoxMax8;
         private TextBox textBoxGiaTri8;
+        private Panel panelColor1;
+        private Panel panelColor2;
+        private Panel panelColor3;
+        private Panel panelColor4;
+        private Panel panelColor5;
+        private Panel panelColor6;
+        private Panel panelColor7;
+        private Panel panelColor8;
     }
 }

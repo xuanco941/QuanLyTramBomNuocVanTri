@@ -29,6 +29,8 @@ namespace QuanLyTramBom
         }
         void CreateColumn()
         {
+            DataGridViewColumn STT = new DataGridViewTextBoxColumn();
+            STT.HeaderText = "STT";
             DataGridViewColumn GanThe = new DataGridViewTextBoxColumn();
             GanThe.HeaderText = "Gắn thẻ";
             GanThe.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -50,7 +52,7 @@ namespace QuanLyTramBom
             TatTen.HeaderText = "Tắt tên";
 
 
-
+            dataGridView1.Columns.Add(STT);
             dataGridView1.Columns.Add(GanThe);
             dataGridView1.Columns.Add(DieuKien);
             dataGridView1.Columns.Add(Nhom);
@@ -68,9 +70,10 @@ namespace QuanLyTramBom
             if (digitals != null && digitals.Count > 0)
             {
                 bool checkColor = false;
+                int i = 1;
                 foreach (Digital d in digitals.ToList())
                 {
-                    string createAt = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    string createAt = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                     string trangthai = d.TrangThai == true ? d.Bat : "0-" + d.Tat;
                     if (IsHandleCreated)
                     {
@@ -79,23 +82,24 @@ namespace QuanLyTramBom
                             int rowId = dataGridView1.Rows.Add();
                             DataGridViewRow row = dataGridView1.Rows[rowId];
 
-                            row.Cells[0].Value = d.GanThe;
-                            row.Cells[1].Value = d.DieuKien;
-                            row.Cells[2].Value = d.Nhom;
-                            row.Cells[3].Value = d.TinHieu;
-                            row.Cells[4].Value = trangthai;
-                            row.Cells[5].Value = createAt;
-                            row.Cells[6].Value = d.Bat;
-                            row.Cells[7].Value = d.Tat;
+                            row.Cells[0].Value = i;
+                            row.Cells[1].Value = d.GanThe;
+                            row.Cells[2].Value = d.DieuKien;
+                            row.Cells[3].Value = d.Nhom;
+                            row.Cells[4].Value = d.TinHieu;
+                            row.Cells[5].Value = trangthai;
+                            row.Cells[6].Value = createAt;
+                            row.Cells[7].Value = d.Bat;
+                            row.Cells[8].Value = d.Tat;
 
                             if (d.TrangThai == true)
                             {
-                                row.Cells[4].Style.BackColor = Color.Red;
-                                row.Cells[4].Style.ForeColor = Color.White;
+                                row.Cells[5].Style.BackColor = Color.Red;
+                                row.Cells[5].Style.ForeColor = Color.White;
                             }
                             else
                             {
-                                row.Cells[4].Style.BackColor = Color.LimeGreen;
+                                row.Cells[5].Style.BackColor = Color.LimeGreen;
 
                             }
 
@@ -105,6 +109,7 @@ namespace QuanLyTramBom
                             }
 
                             checkColor = !checkColor;
+                            i++;
                         });
                     }
                 }

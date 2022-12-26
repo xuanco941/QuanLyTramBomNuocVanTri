@@ -88,7 +88,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
                 foreach (Analog a in analogs)
                 {
 
-                    string createAt = DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    string createAt = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
                     double phantram = Math.Round(((a.GiaTriDong / a.GiaTriLonNhat) * 100), 2);
 
 
