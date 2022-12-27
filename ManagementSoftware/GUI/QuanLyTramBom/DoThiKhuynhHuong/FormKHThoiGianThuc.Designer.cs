@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonLuocSuKhuynhHuong = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,6 +38,7 @@
             this.labelHienThiNhom = new System.Windows.Forms.Label();
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -187,6 +189,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chú thích";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // FormKHThoiGianThuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -216,5 +222,6 @@
         private Label labelHienThiNhom;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxTenKhuynhHuong;
         private GroupBox groupBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

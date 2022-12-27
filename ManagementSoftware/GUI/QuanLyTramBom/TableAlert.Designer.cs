@@ -190,6 +190,7 @@
             this.Name = "TableAlert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableAlert";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TableAlert_FormClosing);
             this.Load += new System.EventHandler(this.TableAlert_Load);
             this.panelSearch.ResumeLayout(false);
             this.panelSearch.PerformLayout();

@@ -16,6 +16,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
 {
     public partial class ChonKhuynhHuong : Form
     {
+        public delegate void CallBack(string name);
+        public CallBack callBack;
         public ChonKhuynhHuong()
         {
             InitializeComponent();
@@ -83,6 +85,17 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
                 CapNhatKhuynhHuong form = new CapNhatKhuynhHuong("");
                 form.callBack = new CapNhatKhuynhHuong.CallBack(LoadGroupBox);
                 form.ShowDialog();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var checkedButton = panelContent.Controls.OfType<RadioButton>()
+                                                              .FirstOrDefault(r => r.Checked);
+            if (checkedButton != null)
+            {
+                callBack?.Invoke(checkedButton.Text);
+                this.Close();
             }
         }
     }

@@ -18,6 +18,10 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public bool TrangThai { get; set; }
         public DateTime ThoiGian { get; set; }
 
+        public Alert()
+        {
+        }
+
         public Alert(string diaChiPLC, string ganThe, string dieuKien, string nhom, string tinHieu)
         {
             DiaChiPLC = diaChiPLC;

@@ -3,6 +3,7 @@ using ManagementSoftware.DAL;
 using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
+using ManagementSoftware.PLC;
 using Syncfusion.XPS;
 using System;
 using System.Collections.Generic;
@@ -19,22 +20,30 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 {
     public partial class TableAlert : Form
     {
+        PLCAlert plc;
         public TableAlert()
         {
             InitializeComponent();
+            plc = new PLCAlert();
             dataGridView1.RowTemplate.Height = 40;
         }
 
-        private void TableAlert_Load(object sender, EventArgs e)
+        private async void TableAlert_Load(object sender, EventArgs e)
         {
-            LoadFormThongKe();
+            List<AlertHistory>? list = DALAlertHistory.GetAllAlertHistory();
+            List<Alert>? list2 = new List<Alert>();
+            foreach (var item in list)
+            {
+                list2.Add(new Alert() { DiaChiPLC = item.DiaChiPLC, DieuKien = item.DieuKien, GanThe = item.GanThe, Nhom = item.Nhom, ThoiGian = item.ThoiGian, TinHieu = item.TinHieu, TrangThai = item.TrangThai });
+            }
+            await plc.Open();
+            LoadFormThongKe(list2);
         }
 
-        void LoadFormThongKe()
+        void LoadFormThongKe(List<Alert>? list)
         {
             panelSearch.Enabled = false;
 
-            List<AlertHistory>? list = DALAlertHistory.GetAllAlertHistory();
 
             DataTable dt = new DataTable();
             dt.Columns.Add("Gắn thẻ");
@@ -46,7 +55,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             dt.Columns.Add("Giá trị");
             if (list != null && list.Count>0)
             {
-                foreach (AlertHistory alert in list.ToList())
+                foreach (Alert alert in list.ToList())
                 {
                     string createAt = alert.ThoiGian.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
                     string thoiGian = alert.ThoiGian.ToString("HH:mm:ss", CultureInfo.InvariantCulture);
@@ -78,10 +87,16 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         }
 
-        private void buttonClear_Click(object sender, EventArgs e)
+        private async void buttonClear_Click(object sender, EventArgs e)
         {
             DALAlertHistory.DeleteAllAlertHistory();
-            LoadFormThongKe();
+            
+            LoadFormThongKe(await plc.GetListDataAlertTrue());
+        }
+
+        private async void TableAlert_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            await plc.Close();
         }
     }
 }
