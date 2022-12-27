@@ -4,6 +4,9 @@
     <Compile Update="GUI\ControlButton\ButtonCus.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="GUI\ControlButton\CusDatetimepickers.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -46,6 +49,12 @@
     <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormSearchDigital.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\KhuynhHuongDuLieu\ChonKhuynhHuongDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\KhuynhHuongDuLieu\FormCapNhatKhuynhHuongDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\LuuTruLoi\FormLuuTruLoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +65,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\LuuTruLoi\FormSearchAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\KhuynhHuongDuLieu\ThietLapKhuynhHuongDL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\ToanCanhMayBom.cs">
@@ -76,7 +88,7 @@
     <Compile Update="GUI\QuanLyTramBom\DoThiKhuynhHuong\FormKHThoiGianThuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormLDKhuynhHuong.cs">
+    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\KhuynhHuongDuLieu\FormLDKhuynhHuong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\TableAlert.cs">

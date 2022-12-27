@@ -74,8 +74,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnSerachBox = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new ManagementSoftware.GUI.ControlButton.CusDatetimepickers();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -610,15 +610,26 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnSerachBox);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1103, 76);
             this.panel1.TabIndex = 8;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker1.CustomFormat = "MM/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(195, 26);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(137, 23);
+            this.dateTimePicker1.TabIndex = 29;
+            this.dateTimePicker1.Value = new System.DateTime(2022, 12, 27, 15, 8, 22, 791);
             // 
             // label1
             // 
@@ -629,16 +640,6 @@
             this.label1.Size = new System.Drawing.Size(143, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Trình đơn năm";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(194, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 29);
-            this.dateTimePicker1.TabIndex = 1;
             // 
             // FormBaoCaoNam
             // 
@@ -694,7 +695,6 @@
         private Button btnSerachBox;
         private Panel panel1;
         private Label label1;
-        private DateTimePicker dateTimePicker1;
         private SaveFileDialog saveFileDialog1;
         private Panel panel5;
         private TableLayoutPanel tableLayoutPanel1;
@@ -732,5 +732,6 @@
         private Label labelTongTime2;
         private Panel panel16;
         private Label label9;
+        private ManagementSoftware.GUI.ControlButton.CusDatetimepickers dateTimePicker1;
     }
 }

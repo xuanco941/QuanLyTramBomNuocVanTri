@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,10 @@ namespace QuanLyTramBom
             InitializeComponent();
         }
 
-
+        private void btnThietLap_Click(object sender, EventArgs e)
+        {
+            ChonKhuynhHuongDL fr = new ChonKhuynhHuongDL();
+            fr.ShowDialog();
+        }
     }
 }
