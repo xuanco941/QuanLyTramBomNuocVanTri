@@ -26,14 +26,17 @@ namespace ManagementSoftware.DAL
             dbContext.XuHuongVaTinHieus.AddRange(x);
             return dbContext.SaveChanges();
         }
-        public static bool Update(string name, string newName, List<XuHuongVaTinHieu> newTinHieus)
+        public static bool Update(string name, List<XuHuongVaTinHieu> newTinHieus)
         {
             DataBaseContext dbContext = new DataBaseContext();
             var userUpdate = dbContext.DoThiKhuynhHuongs.FirstOrDefault(u => u.TenDoThi == name);
             if (userUpdate != null)
             {
-                userUpdate.TenDoThi = newName;
                 dbContext.XuHuongVaTinHieus.RemoveRange(dbContext.XuHuongVaTinHieus.Where(x => x.DoThiKhuynhHuongID == userUpdate.DoThiKhuynhHuongID));
+                foreach (XuHuongVaTinHieu item in newTinHieus)
+                {
+                    item.DoThiKhuynhHuongID = userUpdate.DoThiKhuynhHuongID;
+                }
                 dbContext.XuHuongVaTinHieus.AddRange(newTinHieus);
             }
 
@@ -68,6 +71,17 @@ namespace ManagementSoftware.DAL
             return dbContext.DoThiKhuynhHuongs.Where(a => a.DoThiKhuynhHuongID == id).FirstOrDefault();
         }
 
+        public static List<XuHuongVaTinHieu>? GetAListXuHuongFromName(string nameDT)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            DoThiKhuynhHuong? dt = dbContext.DoThiKhuynhHuongs.Where(a => a.TenDoThi == nameDT).FirstOrDefault();
+            List<XuHuongVaTinHieu> listXuHuong = new List<XuHuongVaTinHieu>();
+            if (dt != null)
+            {
+                listXuHuong = dbContext.XuHuongVaTinHieus.Where(x => x.DoThiKhuynhHuongID == dt.DoThiKhuynhHuongID).ToList();
+            }
+            return listXuHuong;
+        }
 
     }
 }

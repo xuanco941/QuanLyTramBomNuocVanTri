@@ -1,5 +1,6 @@
 ﻿using ManagementSoftware.BUS;
 using ManagementSoftware.DAL;
+using ManagementSoftware.Models.TramBomNuoc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
 {
@@ -30,7 +32,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
         {
             panelContent.Controls.Clear();
             var list = DALKhuynhHuong.GetAll();
-            if (list != null && list.Count>0)
+            if (list != null && list.Count > 0)
             {
                 foreach (var a in list)
                 {
@@ -54,7 +56,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
             }
         }
 
-        
+
         private void ChonKhuynhHuong_Load(object sender, EventArgs e)
         {
             LoadGroupBox();
@@ -67,8 +69,21 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
 
         private void buttonCustom1_Click(object sender, EventArgs e)
         {
-            ThietLapKhuynhHuong form = new ThietLapKhuynhHuong();
-            form.ShowDialog();
+            var checkedButton = panelContent.Controls.OfType<RadioButton>()
+                                                  .FirstOrDefault(r => r.Checked);
+            if (checkedButton != null)
+            {
+
+                CapNhatKhuynhHuong form = new CapNhatKhuynhHuong(checkedButton.Text);
+                form.callBack = new CapNhatKhuynhHuong.CallBack(LoadGroupBox);
+                form.ShowDialog();
+            }
+            else
+            {
+                CapNhatKhuynhHuong form = new CapNhatKhuynhHuong("");
+                form.callBack = new CapNhatKhuynhHuong.CallBack(LoadGroupBox);
+                form.ShowDialog();
+            }
         }
     }
 }

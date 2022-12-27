@@ -1382,7 +1382,7 @@
             this.D10066.AutoSize = true;
             this.D10066.BackColor = System.Drawing.Color.Transparent;
             this.D10066.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10066.Location = new System.Drawing.Point(780, 352);
+            this.D10066.Location = new System.Drawing.Point(774, 352);
             this.D10066.Name = "D10066";
             this.D10066.Size = new System.Drawing.Size(39, 25);
             this.D10066.TabIndex = 8;
@@ -1393,7 +1393,7 @@
             this.D10052.AutoSize = true;
             this.D10052.BackColor = System.Drawing.Color.Transparent;
             this.D10052.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10052.Location = new System.Drawing.Point(780, 303);
+            this.D10052.Location = new System.Drawing.Point(774, 303);
             this.D10052.Name = "D10052";
             this.D10052.Size = new System.Drawing.Size(39, 25);
             this.D10052.TabIndex = 7;
@@ -1404,7 +1404,7 @@
             this.D10038.AutoSize = true;
             this.D10038.BackColor = System.Drawing.Color.Transparent;
             this.D10038.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10038.Location = new System.Drawing.Point(780, 251);
+            this.D10038.Location = new System.Drawing.Point(774, 251);
             this.D10038.Name = "D10038";
             this.D10038.Size = new System.Drawing.Size(39, 25);
             this.D10038.TabIndex = 6;
@@ -1415,7 +1415,7 @@
             this.D10024.AutoSize = true;
             this.D10024.BackColor = System.Drawing.Color.Transparent;
             this.D10024.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10024.Location = new System.Drawing.Point(780, 200);
+            this.D10024.Location = new System.Drawing.Point(774, 200);
             this.D10024.Name = "D10024";
             this.D10024.Size = new System.Drawing.Size(39, 25);
             this.D10024.TabIndex = 5;
@@ -1426,7 +1426,7 @@
             this.D10064.AutoSize = true;
             this.D10064.BackColor = System.Drawing.Color.Transparent;
             this.D10064.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10064.Location = new System.Drawing.Point(572, 352);
+            this.D10064.Location = new System.Drawing.Point(567, 352);
             this.D10064.Name = "D10064";
             this.D10064.Size = new System.Drawing.Size(39, 25);
             this.D10064.TabIndex = 4;
@@ -1437,7 +1437,7 @@
             this.D10050.AutoSize = true;
             this.D10050.BackColor = System.Drawing.Color.Transparent;
             this.D10050.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10050.Location = new System.Drawing.Point(572, 303);
+            this.D10050.Location = new System.Drawing.Point(567, 303);
             this.D10050.Name = "D10050";
             this.D10050.Size = new System.Drawing.Size(39, 25);
             this.D10050.TabIndex = 3;
@@ -1448,7 +1448,7 @@
             this.D10036.AutoSize = true;
             this.D10036.BackColor = System.Drawing.Color.Transparent;
             this.D10036.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10036.Location = new System.Drawing.Point(572, 251);
+            this.D10036.Location = new System.Drawing.Point(567, 251);
             this.D10036.Name = "D10036";
             this.D10036.Size = new System.Drawing.Size(39, 25);
             this.D10036.TabIndex = 2;
@@ -1459,7 +1459,7 @@
             this.D10022.AutoSize = true;
             this.D10022.BackColor = System.Drawing.Color.Transparent;
             this.D10022.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.D10022.Location = new System.Drawing.Point(572, 201);
+            this.D10022.Location = new System.Drawing.Point(567, 201);
             this.D10022.Name = "D10022";
             this.D10022.Size = new System.Drawing.Size(39, 25);
             this.D10022.TabIndex = 1;

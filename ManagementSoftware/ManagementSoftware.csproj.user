@@ -7,6 +7,9 @@
     <Compile Update="GUI\QuanLyTramBom\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\DoThiKhuynhHuong\CapNhatKhuynhHuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\DoThiKhuynhHuong\ChonKhuynhHuong.cs">
       <SubType>Form</SubType>
     </Compile>
