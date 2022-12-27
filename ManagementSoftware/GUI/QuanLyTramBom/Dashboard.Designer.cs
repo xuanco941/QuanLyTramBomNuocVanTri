@@ -52,13 +52,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelDieuKien = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonViewTableLoi = new System.Windows.Forms.Button();
+            this.buttonBangLoi = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelContentToanCanh = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -78,7 +76,6 @@
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -211,9 +208,9 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel2.Controls.Add(this.panel11, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel10, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel9, 4, 0);
@@ -239,7 +236,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(800, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(74, 28);
+            this.panel11.Size = new System.Drawing.Size(62, 28);
             this.panel11.TabIndex = 6;
             // 
             // labelGiaTri
@@ -251,7 +248,7 @@
             this.labelGiaTri.ForeColor = System.Drawing.Color.Red;
             this.labelGiaTri.Location = new System.Drawing.Point(0, 0);
             this.labelGiaTri.Name = "labelGiaTri";
-            this.labelGiaTri.Size = new System.Drawing.Size(72, 26);
+            this.labelGiaTri.Size = new System.Drawing.Size(60, 26);
             this.labelGiaTri.TabIndex = 1;
             this.labelGiaTri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -383,31 +380,41 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonViewTableLoi);
+            this.panel2.Controls.Add(this.buttonBangLoi);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(880, 3);
+            this.panel2.Location = new System.Drawing.Point(868, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(74, 28);
             this.panel2.TabIndex = 7;
             // 
-            // buttonViewTableLoi
+            // buttonBangLoi
             // 
-            this.buttonViewTableLoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonViewTableLoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonViewTableLoi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonViewTableLoi.Location = new System.Drawing.Point(0, 0);
-            this.buttonViewTableLoi.Name = "buttonViewTableLoi";
-            this.buttonViewTableLoi.Size = new System.Drawing.Size(74, 28);
-            this.buttonViewTableLoi.TabIndex = 9;
-            this.buttonViewTableLoi.Text = "Bảng lỗi";
-            this.buttonViewTableLoi.UseVisualStyleBackColor = true;
-            this.buttonViewTableLoi.Click += new System.EventHandler(this.buttonViewTableLoi_Click);
+            this.buttonBangLoi.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonBangLoi.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.buttonBangLoi.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonBangLoi.BorderRadius = 4;
+            this.buttonBangLoi.BorderSize = 1;
+            this.buttonBangLoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBangLoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonBangLoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBangLoi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBangLoi.ForeColor = System.Drawing.Color.White;
+            this.buttonBangLoi.Location = new System.Drawing.Point(0, 0);
+            this.buttonBangLoi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonBangLoi.Name = "buttonBangLoi";
+            this.buttonBangLoi.Size = new System.Drawing.Size(74, 28);
+            this.buttonBangLoi.TabIndex = 13;
+            this.buttonBangLoi.Text = "Bảng Lỗi";
+            this.buttonBangLoi.TextColor = System.Drawing.Color.White;
+            this.buttonBangLoi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonBangLoi.UseVisualStyleBackColor = false;
+            this.buttonBangLoi.Click += new System.EventHandler(this.buttonBangLoi_Click);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(960, 3);
+            this.panel3.Location = new System.Drawing.Point(948, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(180, 28);
+            this.panel3.Size = new System.Drawing.Size(169, 28);
             this.panel3.TabIndex = 8;
             // 
             // panel1
@@ -438,7 +445,6 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.tableLayoutPanel6);
             this.tabPage1.Controls.Add(this.tableLayoutPanel3);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
@@ -446,38 +452,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1135, 513);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Màn hình đồ họa";
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(75)))), ((int)(((byte)(103)))));
-            this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.button3, 0, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel6.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1129, 50);
-            this.tableLayoutPanel6.TabIndex = 19;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(1121, 42);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Toàn cảnh trạm bơm";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -561,7 +535,6 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -594,15 +567,13 @@
         private Panel panel1;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private TableLayoutPanel tableLayoutPanel6;
-        private Button button3;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panelContentToanCanh;
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TabPage tabPage4;
         private Panel panel2;
-        private Button buttonViewTableLoi;
         private Panel panel3;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonBangLoi;
     }
 }

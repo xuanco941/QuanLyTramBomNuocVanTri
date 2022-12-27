@@ -166,15 +166,11 @@ namespace QuanLyTramBom
                 SetTextControl(labelGiaTri, "");
             }
         }
-        private void buttonViewTableLoi_Click(object sender, EventArgs e)
+        private void buttonBangLoi_Click(object sender, EventArgs e)
         {
             TableAlert tb = new TableAlert();
             tb.ShowDialog();
         }
-
-
-
-
 
 
 
@@ -309,6 +305,8 @@ namespace QuanLyTramBom
 
 
 
+
+
         //ToanCanhTramBom DformToanCanh;
         //bool checkLoadedDformToanCanh = false;
 
@@ -345,7 +343,7 @@ namespace QuanLyTramBom
         //        DformKHThoiGianThuc.Dock = DockStyle.Fill;
         //        DformKHThoiGianThuc.FormBorderStyle = FormBorderStyle.None;
         //        DformKHThoiGianThuc.Show();
-                
+
         //        c
         //    }
 

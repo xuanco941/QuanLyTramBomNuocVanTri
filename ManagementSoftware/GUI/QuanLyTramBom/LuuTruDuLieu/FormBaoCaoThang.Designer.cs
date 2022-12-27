@@ -167,7 +167,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Image = global::ManagementSoftware.Properties.Resources.icons8_send_to_printer_38;
+            this.button1.Image = global::ManagementSoftware.Properties.Resources.printEXCEL;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(597, 16);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

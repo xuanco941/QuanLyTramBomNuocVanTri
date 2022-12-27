@@ -13,6 +13,7 @@ namespace ManagementSoftware.Models.TramBomNuoc
     {
         [Key]
         public int IDXuHuongVaTinHieu { get; set; }
+        public int Number { get; set; }
         public string DieuKien { get; set; }
         public string Nhom { get; set; }
         public string TinHieu { get; set; }
@@ -22,23 +23,8 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public double Max { get; set; }
         public string Color { get; set; }
 
-        public int IDDoThiKhuynhHuong { get; set; }
+        public int DoThiKhuynhHuongID { get; set; }
         public DoThiKhuynhHuong DoThiKhuynhHuong { get; set; }
 
-        public XuHuongVaTinHieu()
-        {
-        }
-
-        public XuHuongVaTinHieu(string dieuKien, string nhom, string tinHieu, string ganThe, string donVi, double min, double max, string color)
-        {
-            DieuKien = dieuKien;
-            Nhom = nhom;
-            TinHieu = tinHieu;
-            GanThe = ganThe;
-            DonVi = donVi;
-            Min = min;
-            Max = max;
-            Color = color;
-        }
     }
 }

@@ -3,6 +3,8 @@ using ManagementSoftware.GUI;
 using System.Diagnostics;
 using ManagementSoftware.AutoAddData;
 using ManagementSoftware.PLC;
+using ManagementSoftware.GUI.QuanLyTramBom;
+using QuanLyTramBom;
 
 namespace ManagementSoftware
 {
