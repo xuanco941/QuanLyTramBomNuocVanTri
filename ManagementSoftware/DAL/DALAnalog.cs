@@ -23,5 +23,21 @@ namespace ManagementSoftware.DAL
             await dbContext.Analogs.AddRangeAsync(list);
             await dbContext.SaveChangesAsync();
         }
+
+        //public static List<DataDoThi> GetListDataOn1Hour(string nameTinHieu)
+        //{
+        //    System.DateTime timeNow = DateTime.Now;
+        //    System.DateTime timeStart = timeNow.AddHours(-1);
+        //    while (timeStart.Date != timeNow.Date)
+        //    {
+
+        //    }    
+
+        //}
+    }
+    class DataDoThi
+    {
+        public DateTime dateTime { set; get; }
+        public double Value { get; set; }
     }
 }

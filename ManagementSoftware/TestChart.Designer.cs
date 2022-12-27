@@ -32,6 +32,7 @@
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.button1 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // chartControl1
@@ -71,16 +72,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(543, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 2;
+            // 
             // TestChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chartControl1);
             this.Name = "TestChart";
             this.Text = "TestChart";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,5 +99,6 @@
         private Syncfusion.Windows.Forms.Chart.ChartControl chartControl1;
         private Button button1;
         private ToolTip toolTip1;
+        private TextBox textBox1;
     }
 }

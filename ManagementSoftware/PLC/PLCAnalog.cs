@@ -32,7 +32,7 @@ namespace ManagementSoftware.PLC
                 {
                     int temp = (int)(tempH * 65536 + tempL);
                     PLCConvertTypeData.Types.Double km = new PLCConvertTypeData.Types.Double();
-                    a.GiaTriDong = Math.Round(km.FromDWord(temp), 3, MidpointRounding.AwayFromZero);
+                    a.GiaTriDong = Math.Round(km.FromDWord(temp), 2, MidpointRounding.AwayFromZero);
                 }
                 result.Add(a);
             }

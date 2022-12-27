@@ -11,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ManagementSoftware
 {
@@ -20,6 +19,9 @@ namespace ManagementSoftware
         public TestChart()
         {
             InitializeComponent();
+
+            DateTime dateTime = DateTime.Now;
+            textBox1.Text = dateTime.AddHours(-1).ToString() + "  " + dateTime; 
 
             chartControl1.Title.Text = "Essential Chart";
             this.chartControl1.Title.Font = new System.Drawing.Font("Candara", 16F, System.Drawing.FontStyle.Bold);
@@ -74,6 +76,7 @@ namespace ManagementSoftware
             series2.Points.Add("D1", 33);
             series2.Points.Add("C1", 53);
             series2.Points.Add("B1", 23);
+
 
             series1.PointsToolTipFormat = "Sales:{4}K";
 
