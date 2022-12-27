@@ -83,7 +83,7 @@ namespace QuanLyTramBom
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            List<BaoCao> baocaongay = DALBaoCao.BaoCaoNgay(dateTimePicker1.Value);
+            List<BaoCao> baocaongay = DALBaoCao.BaoCaoNgay(dateTimePicker1.Value.Date);
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel | *.xlsx | Excel 2010 | *.xls" })
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
