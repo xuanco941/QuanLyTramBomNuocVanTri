@@ -19,10 +19,7 @@ namespace QuanLyTramBom
         {
             InitializeComponent();
         }
-
-
-
-        private void btnSerachBox_Click(object sender, EventArgs e)
+        private void btnSerachBox_Click_1(object sender, EventArgs e)
         {
             // d là dữ liệu đầu vào
             DateTime d = dateTimePicker1.Value;
@@ -80,7 +77,7 @@ namespace QuanLyTramBom
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             DateTime d = dateTimePicker1.Value;
 
@@ -246,11 +243,6 @@ namespace QuanLyTramBom
                     }
                     catch { MessageBox.Show("Không thể xuất file"); }
                 }
-        }
-
-        private void FormBaoCaoThang_Load(object sender, EventArgs e)
-        {
-
         }
     }
     }
