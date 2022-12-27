@@ -88,6 +88,7 @@
             this.labelNumber5 = new System.Windows.Forms.Label();
             this.labelNumber6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxTenKH = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelColor7 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -109,8 +110,7 @@
             this.textBoxMax1 = new System.Windows.Forms.TextBox();
             this.textBoxGiaTri1 = new System.Windows.Forms.TextBox();
             this.textBoxMax3 = new System.Windows.Forms.TextBox();
-            this.buttonExit = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonDelete = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -175,6 +175,7 @@
             this.comboBoxTinHieu8.Name = "comboBoxTinHieu8";
             this.comboBoxTinHieu8.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu8.TabIndex = 42;
+            this.comboBoxTinHieu8.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
             // 
             // comboBoxNhom8
             // 
@@ -186,6 +187,7 @@
             this.comboBoxNhom8.Name = "comboBoxNhom8";
             this.comboBoxNhom8.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom8.TabIndex = 41;
+            this.comboBoxNhom8.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
             // 
             // comboBoxDk8
             // 
@@ -196,6 +198,7 @@
             this.comboBoxDk8.Name = "comboBoxDk8";
             this.comboBoxDk8.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk8.TabIndex = 40;
+            this.comboBoxDk8.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
             // 
             // textBoxThe7
             // 
@@ -217,6 +220,7 @@
             this.comboBoxTinHieu7.Name = "comboBoxTinHieu7";
             this.comboBoxTinHieu7.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu7.TabIndex = 38;
+            this.comboBoxTinHieu7.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
             // 
             // comboBoxNhom7
             // 
@@ -228,6 +232,7 @@
             this.comboBoxNhom7.Name = "comboBoxNhom7";
             this.comboBoxNhom7.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom7.TabIndex = 37;
+            this.comboBoxNhom7.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
             // 
             // comboBoxDk7
             // 
@@ -238,6 +243,7 @@
             this.comboBoxDk7.Name = "comboBoxDk7";
             this.comboBoxDk7.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk7.TabIndex = 36;
+            this.comboBoxDk7.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
             // 
             // textBoxMax7
             // 
@@ -279,6 +285,7 @@
             this.comboBoxTinHieu6.Name = "comboBoxTinHieu6";
             this.comboBoxTinHieu6.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu6.TabIndex = 34;
+            this.comboBoxTinHieu6.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
             // 
             // comboBoxDk6
             // 
@@ -289,6 +296,7 @@
             this.comboBoxDk6.Name = "comboBoxDk6";
             this.comboBoxDk6.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk6.TabIndex = 32;
+            this.comboBoxDk6.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
             // 
             // textBoxThe5
             // 
@@ -310,6 +318,7 @@
             this.comboBoxTinHieu5.Name = "comboBoxTinHieu5";
             this.comboBoxTinHieu5.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu5.TabIndex = 30;
+            this.comboBoxTinHieu5.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
             // 
             // comboBoxNhom5
             // 
@@ -321,6 +330,7 @@
             this.comboBoxNhom5.Name = "comboBoxNhom5";
             this.comboBoxNhom5.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom5.TabIndex = 29;
+            this.comboBoxNhom5.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
             // 
             // textBoxMin8
             // 
@@ -372,6 +382,7 @@
             this.comboBoxNhom6.Name = "comboBoxNhom6";
             this.comboBoxNhom6.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom6.TabIndex = 33;
+            this.comboBoxNhom6.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
             // 
             // panelColor2
             // 
@@ -390,6 +401,7 @@
             this.comboBoxDk5.Name = "comboBoxDk5";
             this.comboBoxDk5.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk5.TabIndex = 28;
+            this.comboBoxDk5.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
             // 
             // textBoxThe4
             // 
@@ -411,6 +423,7 @@
             this.comboBoxTinHieu4.Name = "comboBoxTinHieu4";
             this.comboBoxTinHieu4.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu4.TabIndex = 26;
+            this.comboBoxTinHieu4.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
             // 
             // comboBoxNhom4
             // 
@@ -422,6 +435,7 @@
             this.comboBoxNhom4.Name = "comboBoxNhom4";
             this.comboBoxNhom4.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom4.TabIndex = 25;
+            this.comboBoxNhom4.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
             // 
             // comboBoxDk4
             // 
@@ -432,6 +446,7 @@
             this.comboBoxDk4.Name = "comboBoxDk4";
             this.comboBoxDk4.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk4.TabIndex = 24;
+            this.comboBoxDk4.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
             // 
             // textBoxThe3
             // 
@@ -453,6 +468,7 @@
             this.comboBoxTinHieu3.Name = "comboBoxTinHieu3";
             this.comboBoxTinHieu3.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu3.TabIndex = 22;
+            this.comboBoxTinHieu3.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
             // 
             // comboBoxDk3
             // 
@@ -463,6 +479,7 @@
             this.comboBoxDk3.Name = "comboBoxDk3";
             this.comboBoxDk3.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk3.TabIndex = 20;
+            this.comboBoxDk3.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
             // 
             // panelColor1
             // 
@@ -512,6 +529,7 @@
             this.comboBoxNhom3.Name = "comboBoxNhom3";
             this.comboBoxNhom3.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom3.TabIndex = 21;
+            this.comboBoxNhom3.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
             // 
             // textBoxMin4
             // 
@@ -585,6 +603,7 @@
             this.comboBoxTinHieu2.Name = "comboBoxTinHieu2";
             this.comboBoxTinHieu2.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu2.TabIndex = 18;
+            this.comboBoxTinHieu2.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
             // 
             // comboBoxNhom2
             // 
@@ -596,6 +615,7 @@
             this.comboBoxNhom2.Name = "comboBoxNhom2";
             this.comboBoxNhom2.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom2.TabIndex = 17;
+            this.comboBoxNhom2.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
             // 
             // panelColor3
             // 
@@ -614,6 +634,7 @@
             this.comboBoxDk2.Name = "comboBoxDk2";
             this.comboBoxDk2.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk2.TabIndex = 16;
+            this.comboBoxDk2.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
             // 
             // textBoxThe1
             // 
@@ -635,6 +656,7 @@
             this.comboBoxTinHieu1.Name = "comboBoxTinHieu1";
             this.comboBoxTinHieu1.Size = new System.Drawing.Size(195, 28);
             this.comboBoxTinHieu1.TabIndex = 14;
+            this.comboBoxTinHieu1.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinHieu8_SelectedIndexChanged);
             // 
             // comboBoxNhom1
             // 
@@ -646,6 +668,7 @@
             this.comboBoxNhom1.Name = "comboBoxNhom1";
             this.comboBoxNhom1.Size = new System.Drawing.Size(126, 28);
             this.comboBoxNhom1.TabIndex = 13;
+            this.comboBoxNhom1.SelectedIndexChanged += new System.EventHandler(this.comboBoxNhom8_SelectedIndexChanged);
             // 
             // comboBoxDk1
             // 
@@ -656,6 +679,7 @@
             this.comboBoxDk1.Name = "comboBoxDk1";
             this.comboBoxDk1.Size = new System.Drawing.Size(121, 28);
             this.comboBoxDk1.TabIndex = 12;
+            this.comboBoxDk1.SelectedIndexChanged += new System.EventHandler(this.comboBoxDk8_SelectedIndexChanged);
             // 
             // labelNumber2
             // 
@@ -704,7 +728,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboBoxTenKH);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(18, 12);
@@ -712,6 +736,16 @@
             this.groupBox1.Size = new System.Drawing.Size(565, 110);
             this.groupBox1.TabIndex = 57;
             this.groupBox1.TabStop = false;
+            // 
+            // comboBoxTenKH
+            // 
+            this.comboBoxTenKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTenKH.FormattingEnabled = true;
+            this.comboBoxTenKH.Location = new System.Drawing.Point(112, 48);
+            this.comboBoxTenKH.Name = "comboBoxTenKH";
+            this.comboBoxTenKH.Size = new System.Drawing.Size(404, 25);
+            this.comboBoxTenKH.TabIndex = 1;
+            this.comboBoxTenKH.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenKH_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -915,6 +949,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button3
             // 
@@ -933,6 +968,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // textBoxMin1
             // 
@@ -974,44 +1010,37 @@
             this.textBoxMax3.TabIndex = 68;
             this.textBoxMax3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // buttonExit
+            // buttonDelete
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.Firebrick;
-            this.buttonExit.BackgroundColor = System.Drawing.Color.Firebrick;
-            this.buttonExit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonExit.BorderRadius = 15;
-            this.buttonExit.BorderSize = 0;
-            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Image = global::ManagementSoftware.Properties.Resources.icons8_close_30;
-            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExit.Location = new System.Drawing.Point(686, 48);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(147, 47);
-            this.buttonExit.TabIndex = 93;
-            this.buttonExit.Text = "Xóa mẫu này";
-            this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.TextColor = System.Drawing.Color.White;
-            this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonExit.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(404, 25);
-            this.comboBox1.TabIndex = 1;
+            this.buttonDelete.BackColor = System.Drawing.Color.Firebrick;
+            this.buttonDelete.BackgroundColor = System.Drawing.Color.Firebrick;
+            this.buttonDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonDelete.BorderRadius = 15;
+            this.buttonDelete.BorderSize = 0;
+            this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonDelete.Image = global::ManagementSoftware.Properties.Resources.icons8_close_30;
+            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDelete.Location = new System.Drawing.Point(686, 48);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(147, 47);
+            this.buttonDelete.TabIndex = 93;
+            this.buttonDelete.Text = "Xóa mẫu này";
+            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDelete.TextColor = System.Drawing.Color.White;
+            this.buttonDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // CapNhatKhuynhHuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 769);
-            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.textBoxMin7);
             this.Controls.Add(this.textBoxMax6);
             this.Controls.Add(this.textBoxGiaTri6);
@@ -1052,6 +1081,7 @@
             this.Name = "CapNhatKhuynhHuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CapNhatKhuynhHuong";
+            this.Load += new System.EventHandler(this.CapNhatKhuynhHuong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1144,7 +1174,7 @@
         private TextBox textBoxMax1;
         private TextBox textBoxGiaTri1;
         private TextBox textBoxMax3;
-        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonExit;
-        private ComboBox comboBox1;
+        private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonDelete;
+        private ComboBox comboBoxTenKH;
     }
 }

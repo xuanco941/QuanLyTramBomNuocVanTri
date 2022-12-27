@@ -12,6 +12,7 @@ using ClosedXML.Excel;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.DAL;
 using DocumentFormat.OpenXml.Office2013.Word;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace QuanLyTramBom
 {
@@ -20,32 +21,10 @@ namespace QuanLyTramBom
         public FormBaoCaoNam()
         {
             InitializeComponent();
-           
-        }
-        
-        private void Excel_Click(object sender, EventArgs e)
-        {
-           
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormBaoCaoNam_Load(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void FormBaoCaoNam_Load_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnSerachBox_Click(object sender, EventArgs e)
+        private void btnSerachBox_Click_1(object sender, EventArgs e)
         {
             // d là dữ liệu đầu vào
             DateTime d = dateTimePicker1.Value;
@@ -54,7 +33,34 @@ namespace QuanLyTramBom
             // 
 
             List<BaoCao> list = DALBaoCao.BaoCaoNam(d);
-            dataGridView1.DataSource = list;
+
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("THỜI GIAN");
+            dt.Columns.Add("MỰC NƯỚC BƠM XẢ (M)");
+            dt.Columns.Add("MỰC NƯỚC BƠM HÚT (M)");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 1");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 2");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 3");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 4");
+
+            int i = 1;
+            foreach (BaoCao item in list)
+            {
+                double xa = Math.Round((item.MucNuocBeXa / list.Count), 2, MidpointRounding.AwayFromZero);
+                double hut = Math.Round((item.MucNuocBeHut / list.Count), 2, MidpointRounding.AwayFromZero);
+
+
+                string tongTime1 = item.ThoiGianChayBom1.ToString(@"hh\:mm");
+                string tongTime2 = item.ThoiGianChayBom2.ToString(@"hh\:mm");
+                string tongTime3 = item.ThoiGianChayBom3.ToString(@"hh\:mm");
+                string tongTime4 = item.ThoiGianChayBom4.ToString(@"hh\:mm");
+
+                dt.Rows.Add(i,xa,hut,tongTime1,tongTime2,tongTime3,tongTime4);
+                i++;
+            }
+
+            dataGridView1.DataSource = dt;
 
 
             //tính tổng, tb
@@ -85,26 +91,23 @@ namespace QuanLyTramBom
                 TongThoiGianChayBom3 = TimeSpan.FromMinutes(minute5 + minute6);
                 TongThoiGianChayBom4 = TimeSpan.FromMinutes(minute8 + minute7);
 
-
                 TongThoiGianChayBom1 = TimeSpan.FromMinutes(minute2 + minute1);
 
             }
 
             //label
-            TrungBinhXa.Text = "TB Bể xả :" + (trungBinhBeXa / list.Count).ToString();
+            labelTBXa.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero));
             // b dùng hàm Math.Round để giới hạn còn 2 chữ số sau thập phân
-            //TrungBinhXa.Text = Math.Round( (trungBinhBeXa / list.Count),2,MidpointRounding.AwayFromZero).ToString();
-            TrungBinhHut.Text = "TB Bể hút:" + (trungBinhBeHut / list.Count).ToString();
+            labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
 
-            TongBom1.Text = "Tổng TG Bơm 1 chạy : " + TongThoiGianChayBom1.Hours.ToString() + ":" + TongThoiGianChayBom1.Minutes.ToString();
-            TongBom2.Text = "Tổng TG Bơm 2 chạy : " + TongThoiGianChayBom2.Hours.ToString() + ":" + TongThoiGianChayBom2.Minutes.ToString();
-            TongBom3.Text = "Tổng TG Bơm 3 chạy : " + TongThoiGianChayBom3.Hours.ToString() + ":" + TongThoiGianChayBom3.Minutes.ToString();
-            TongBom4.Text = "Tổng TG Bơm 4 chạy : " + TongThoiGianChayBom4.Hours.ToString() + ":" + TongThoiGianChayBom4.Minutes.ToString();
-
+            labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + "giờ " + TongThoiGianChayBom1.Minutes.ToString() + "phút";
+            labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + "giờ " + TongThoiGianChayBom2.Minutes.ToString() + "phút";
+            labelTongTime3.Text = TongThoiGianChayBom3.Hours.ToString() + "giờ " + TongThoiGianChayBom3.Minutes.ToString() + "phút";
+            labelTongTime4.Text = TongThoiGianChayBom4.Hours.ToString() + "giờ " + TongThoiGianChayBom4.Minutes.ToString() + "phút";
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             List<BaoCao> baocaonam = DALBaoCao.BaoCaoNam(dateTimePicker1.Value);
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel | *.xlsx | Excel 2010 | *.xls" })
@@ -269,5 +272,6 @@ namespace QuanLyTramBom
                 }
             }
         }
+
     }
 }

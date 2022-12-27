@@ -325,12 +325,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             if (M10059 != null)
             {
                 //xanh
-                if (M10059.TrangThai)
+                if (M10059.TrangThai == false)
                 {
                     BomMoi1.Image = Resources.BomMoiXanh;
                 }
                 //đỏ
-                else if (M10059.TrangThai)
+                else
                 {
                     BomMoi1.Image = Resources.BomMoi1Do;
                 }
@@ -346,12 +346,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             if (M10061 != null)
             {
                 //xanh
-                if (M10061.TrangThai)
+                if (M10061.TrangThai == false)
                 {
                     BomMoi2.Image = Resources.BomMoi2Xanh;
                 }
                 //đỏ
-                else if (M10061.TrangThai)
+                else
                 {
                     BomMoi2.Image = Resources.BomMoi2Do;
                 }
@@ -382,7 +382,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     BomThoat1.Image = Resources.BomThoat1Xanh;
                 }
                 //đỏ
-                else if (M10077.TrangThai)
+                else
                 {
                     BomThoat1.Image = Resources.BomThoat1Do;
                 }
@@ -403,7 +403,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     BomThoat2.Image = Resources.BomThoat2Xanh;
                 }
                 //đỏ
-                else if (M10079.TrangThai)
+                else
                 {
                     BomThoat2.Image = Resources.BomThoat2Do;
                 }
@@ -696,7 +696,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 CLearTimer(TimerBTXienDo);
                 if (TimerBTXienVang == null || TimerBTXienVang.Enabled == false)
                 {
-                    pictureBoxBangTaiXien.Image = Resources.BangTaiThangVang;
+                    pictureBoxBangTaiXien.Image = Resources.BangTaiXienVang;
                     TimerBTXienVang = new System.Timers.Timer();
                     TimerBTXienVang.Interval = intervalNhapNhay;
                     TimerBTXienVang.Elapsed += Timer_Tick_CheckColorBTXienVang;

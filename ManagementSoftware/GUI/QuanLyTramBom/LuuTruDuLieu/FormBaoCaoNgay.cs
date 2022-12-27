@@ -21,16 +21,11 @@ namespace QuanLyTramBom
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnSerachBox_Click(object sender, EventArgs e)
+        private void btnSerachBox_Click_1(object sender, EventArgs e)
         {
             // d là dữ liệu đầu vào
             DateTime d = dateTimePicker1.Value.Date;
-         
+
             //real Date thuong la no tu lay giờ hiện tại của minh
             // nên t bảo bạn nếu báo cáo ngày thì chuyển dữ liệu đầu vào về 0 giờ thì mới lấy đc đủ 24 tiếng, báo cáo tháng với năm thì kh ảnh hưởng
             // 
@@ -84,10 +79,9 @@ namespace QuanLyTramBom
             TongBom3.Text = "Tổng TG Bơm 3 chạy : " + TongThoiGianChayBom3.Hours.ToString() + ":" + TongThoiGianChayBom3.Minutes.ToString();
             TongBom4.Text = "Tổng TG Bơm 4 chạy : " + TongThoiGianChayBom4.Hours.ToString() + ":" + TongThoiGianChayBom4.Minutes.ToString();
 
-
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_2(object sender, EventArgs e)
         {
             List<BaoCao> baocaongay = DALBaoCao.BaoCaoNgay(dateTimePicker1.Value);
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel | *.xlsx | Excel 2010 | *.xls" })
