@@ -87,10 +87,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         }
 
-        private async void buttonClear_Click(object sender, EventArgs e)
+        async Task taskDelete()
         {
             DALAlertHistory.DeleteAllAlertHistory();
-            
+        }
+
+        private async void buttonClear_Click(object sender, EventArgs e)
+        {
+            await taskDelete();
             LoadFormThongKe(await plc.GetListDataAlertTrue());
         }
 

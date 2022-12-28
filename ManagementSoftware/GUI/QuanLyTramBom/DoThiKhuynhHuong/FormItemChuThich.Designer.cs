@@ -48,6 +48,7 @@
             // 
             this.labelDonVi.AutoSize = true;
             this.labelDonVi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDonVi.ForeColor = System.Drawing.Color.White;
             this.labelDonVi.Location = new System.Drawing.Point(344, 0);
             this.labelDonVi.Name = "labelDonVi";
             this.gridLayout1.SetParticipateInLayout(this.labelDonVi, true);
@@ -59,6 +60,7 @@
             // 
             this.labelValue.AutoSize = true;
             this.labelValue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelValue.ForeColor = System.Drawing.Color.White;
             this.labelValue.Location = new System.Drawing.Point(230, 0);
             this.labelValue.Name = "labelValue";
             this.gridLayout1.SetParticipateInLayout(this.labelValue, true);
@@ -70,6 +72,7 @@
             // 
             this.labelTinHieu.AutoSize = true;
             this.labelTinHieu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTinHieu.ForeColor = System.Drawing.Color.White;
             this.labelTinHieu.Location = new System.Drawing.Point(116, 0);
             this.labelTinHieu.Name = "labelTinHieu";
             this.gridLayout1.SetParticipateInLayout(this.labelTinHieu, true);
@@ -81,6 +84,7 @@
             // 
             this.labelanThe.AutoSize = true;
             this.labelanThe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelanThe.ForeColor = System.Drawing.Color.White;
             this.labelanThe.Location = new System.Drawing.Point(2, 0);
             this.labelanThe.Name = "labelanThe";
             this.labelanThe.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
@@ -98,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(802, 17);
             this.Controls.Add(this.labelanThe);
             this.Controls.Add(this.labelTinHieu);

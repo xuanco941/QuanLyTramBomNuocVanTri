@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ManagementSoftware.GUI.QuanLyTramBom
 {
@@ -21,20 +22,49 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         List<XuHuongVaTinHieu>? listXuHuong;
         public FormKHThoiGianThuc()
         {
+
             InitializeComponent();
 
             chartControl1.Title.Text = "Khuynh Hướng Thời Gian Thực";
             this.chartControl1.Title.Font = new System.Drawing.Font("Candara", 20F, System.Drawing.FontStyle.Bold);
-            this.chartControl1.Tooltip.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            this.chartControl1.Tooltip.BorderStyle = BorderStyle.FixedSingle;
+
             this.chartControl1.Crosshair.Visible = true;
-            this.chartControl1.ShowToolTips = true;
-            this.chartControl1.Tooltip.BorderStyle = BorderStyle.FixedSingle;
-            this.chartControl1.Tooltip.BackgroundColor = new BrushInfo(Color.DarkGreen);
-            chartControl1.Tooltip.ForeColor = Color.White;
+
+            //this.chartControl1.Tooltip.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            //this.chartControl1.Tooltip.BorderStyle = BorderStyle.FixedSingle;
+            //this.chartControl1.ShowToolTips = true;
+            //this.chartControl1.Tooltip.BorderStyle = BorderStyle.FixedSingle;
+            //this.chartControl1.Tooltip.BackgroundColor = new BrushInfo(Color.DarkGreen);
+            //chartControl1.Tooltip.ForeColor = Color.White;
+
+            this.chartControl1.PrimaryYAxis.RoundingPlaces = 2;
+
 
 
             chartControl1.ShowToolbar = true;
+            //this.chartControl1.PrimaryXAxis.TickLabelsDrawingMode = ChartAxisTickLabelDrawingMode.UserMode;
+
+
+    
+
+
+
+
+            this.chartControl1.PrimaryXAxis.IntervalType = ChartDateTimeIntervalType.Minutes;
+
+            this.chartControl1.PrimaryXAxis.LabelIntersectAction = ChartLabelIntersectAction.Wrap;
+
+            this.chartControl1.PrimaryXAxis.ValueType = ChartValueType.DateTime;
+
+            this.chartControl1.PrimaryXAxis.RangeType = ChartAxisRangeType.Set;
+
+            this.chartControl1.PrimaryXAxis.DateTimeInterval.Type = ChartDateTimeIntervalType.Minutes;
+            DateTime end = DateTime.Now;
+            DateTime start = end.AddHours(-1);
+            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 3.5, ChartDateTimeIntervalType.Minutes);
+
+            this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yyyy";
+
         }
 
 
@@ -68,7 +98,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         }
 
 
-        async Task CloeseFormItem(List<FormItemChuThich> forms)
+        async Task CloseFormItem(List<FormItemChuThich> forms)
         {
             foreach (FormItemChuThich f in forms)
             {
@@ -83,7 +113,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 l.Add(i);
             }
-            await CloeseFormItem(l);
+            await CloseFormItem(l);
             listXuHuong = DALKhuynhHuong.GetAListXuHuongFromName(name);
             textBoxTenKhuynhHuong.Texts = name;
 
@@ -226,7 +256,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 foreach (DataDoThi item in list)
                 {
-                    series.Points.Add(item.time.ToString("HH:mm:ss \n dd/MM/yyyy"), item.value);
+                    series.Points.Add(item.time, item.value);
                 }
             }
             chartControl1.Series.Add(series);
@@ -236,7 +266,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         async void UpdateChart()
         {
 
-            string a = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
+
+            DateTime end = DateTime.Now;
+            DateTime start = end.AddHours(-1);
+
+            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 3.5, ChartDateTimeIntervalType.Minutes);
 
             if (series1 != null)
             {
@@ -288,6 +322,29 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         private void FormKHThoiGianThuc_FormClosing(object sender, FormClosingEventArgs e)
         {
             ClearTimer();
+        }
+
+        private void chartControl1_MouseMove(object sender, MouseEventArgs e)
+        {
+            ChartPoint point = this.chartControl1.ChartArea.GetValueByPoint(new Point(e.X, e.Y));
+
+            //string text = "Result of method GetValueByPoint - {" + point.X.ToString() + "," + point.YValues[0].ToString() + "}";
+            Point clickPoint = new Point(e.X, e.Y);
+            string text = "";
+            try
+            {
+                text = this.chartControl1.ChartArea.GetValueByPoint(clickPoint).DateX.ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.AwayFromZero));
+            }
+            catch
+            {
+                text = DateTime.FromOADate(point.X).ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.AwayFromZero));
+            }
+            finally
+            {
+                toolTip1.SetToolTip(chartControl1, text);
+            }
+
+
         }
     }
 }

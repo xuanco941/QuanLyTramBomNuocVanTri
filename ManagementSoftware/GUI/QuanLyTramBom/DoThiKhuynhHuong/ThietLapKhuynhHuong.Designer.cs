@@ -945,7 +945,7 @@
             // 
             // panelColor1
             // 
-            this.panelColor1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panelColor1.BackColor = System.Drawing.Color.Orange;
             this.panelColor1.Location = new System.Drawing.Point(66, 591);
             this.panelColor1.Name = "panelColor1";
             this.panelColor1.Size = new System.Drawing.Size(17, 68);
@@ -961,7 +961,7 @@
             // 
             // panelColor3
             // 
-            this.panelColor3.BackColor = System.Drawing.Color.Khaki;
+            this.panelColor3.BackColor = System.Drawing.Color.SkyBlue;
             this.panelColor3.Location = new System.Drawing.Point(296, 591);
             this.panelColor3.Name = "panelColor3";
             this.panelColor3.Size = new System.Drawing.Size(17, 68);
@@ -969,7 +969,7 @@
             // 
             // panelColor4
             // 
-            this.panelColor4.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panelColor4.BackColor = System.Drawing.Color.Pink;
             this.panelColor4.Location = new System.Drawing.Point(415, 591);
             this.panelColor4.Name = "panelColor4";
             this.panelColor4.Size = new System.Drawing.Size(17, 68);
@@ -977,7 +977,7 @@
             // 
             // panelColor5
             // 
-            this.panelColor5.BackColor = System.Drawing.Color.RosyBrown;
+            this.panelColor5.BackColor = System.Drawing.SystemColors.Highlight;
             this.panelColor5.Location = new System.Drawing.Point(523, 591);
             this.panelColor5.Name = "panelColor5";
             this.panelColor5.Size = new System.Drawing.Size(17, 68);
@@ -1001,7 +1001,7 @@
             // 
             // panelColor8
             // 
-            this.panelColor8.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panelColor8.BackColor = System.Drawing.Color.Lime;
             this.panelColor8.Location = new System.Drawing.Point(840, 591);
             this.panelColor8.Name = "panelColor8";
             this.panelColor8.Size = new System.Drawing.Size(17, 68);

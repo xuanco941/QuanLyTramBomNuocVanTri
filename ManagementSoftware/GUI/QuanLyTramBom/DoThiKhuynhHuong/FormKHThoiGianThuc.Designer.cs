@@ -37,6 +37,7 @@
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelChuThich = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -140,23 +141,30 @@
             this.chartControl1.Title.Name = "Default";
             this.chartControl1.Titles.Add(this.chartControl1.Title);
             this.chartControl1.VisualTheme = "";
+            this.chartControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chartControl1_MouseMove);
             // 
             // timer1
             // 
-            this.timer1.Interval = 5000;
+            this.timer1.Interval = 10000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panelChuThich
             // 
             this.panelChuThich.AutoScroll = true;
-            this.panelChuThich.BackColor = System.Drawing.Color.DarkGray;
+            this.panelChuThich.BackColor = System.Drawing.SystemColors.InfoText;
             this.panelChuThich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelChuThich.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelChuThich.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panelChuThich.Location = new System.Drawing.Point(0, 478);
             this.panelChuThich.Name = "panelChuThich";
+            this.panelChuThich.Padding = new System.Windows.Forms.Padding(5, 2, 2, 2);
             this.panelChuThich.Size = new System.Drawing.Size(884, 123);
             this.panelChuThich.TabIndex = 20;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.Color.DarkGreen;
+            this.toolTip1.ForeColor = System.Drawing.Color.White;
             // 
             // FormKHThoiGianThuc
             // 
@@ -184,5 +192,6 @@
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxTenKhuynhHuong;
         private System.Windows.Forms.Timer timer1;
         private Panel panelChuThich;
+        private ToolTip toolTip1;
     }
 }

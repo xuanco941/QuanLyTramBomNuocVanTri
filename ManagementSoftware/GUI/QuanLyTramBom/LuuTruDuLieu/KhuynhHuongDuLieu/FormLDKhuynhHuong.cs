@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu;
+using Syncfusion.Windows.Forms.Chart;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyTramBom
 {
@@ -23,5 +25,7 @@ namespace QuanLyTramBom
             ChonKhuynhHuongDL fr = new ChonKhuynhHuongDL();
             fr.ShowDialog();
         }
+
+
     }
 }

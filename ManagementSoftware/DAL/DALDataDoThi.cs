@@ -54,30 +54,10 @@ namespace ManagementSoftware.DAL
                 }
             }
 
-            List<DataDoThi> results = new List<DataDoThi>();
-
-            if(dataDoThi!=null && dataDoThi.Count > 0)
-            {
-                int soDu = dataDoThi.Count % 17;
-                int count = dataDoThi.Count/17;
-                int i = 0;
-               while(i < dataDoThi.Count )
-                {
-                    results.Add(dataDoThi[i]);
-
-                    if ((count * 16)-1 == i)
-                    {
-                        i = i + count + soDu;
-                    }
-                    else
-                    {
-                        i = i + count;
-                    }
-                }
-            }
+           
 
 
-            return results;
+            return dataDoThi;
         }
     }
 }
