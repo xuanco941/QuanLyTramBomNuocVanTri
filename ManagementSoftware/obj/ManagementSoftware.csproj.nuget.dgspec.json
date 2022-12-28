@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\321\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\321\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\321\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
         "projectName": "ManagementSoftware",
-        "projectPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
-        "packagesPath": "C:\\Users\\xuanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\321\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\321\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\xuanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
