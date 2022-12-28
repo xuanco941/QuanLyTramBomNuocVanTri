@@ -32,7 +32,32 @@ namespace QuanLyTramBom
 
             List<BaoCao> list = DALBaoCao.BaoCaoNgay(d);
 
-            dataGridView1.DataSource = list;
+            DataTable dt = new DataTable();
+            dt.Columns.Add("THỜI GIAN");
+            dt.Columns.Add("MỰC NƯỚC BƠM XẢ (M)");
+            dt.Columns.Add("MỰC NƯỚC BƠM HÚT (M)");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 1 (H)");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 2 (H)");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 3 (H)");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 4 (H)");
+
+            int i = 1;
+            foreach (BaoCao item in list)
+            {
+                double xa = Math.Round((item.MucNuocBeXa / list.Count), 2, MidpointRounding.AwayFromZero);
+                double hut = Math.Round((item.MucNuocBeHut / list.Count), 2, MidpointRounding.AwayFromZero);
+
+
+                string tongTime1 = item.ThoiGianChayBom1.Hours.ToString() + " h " + item.ThoiGianChayBom1.Minutes.ToString() + " min ";
+                string tongTime2 = item.ThoiGianChayBom2.Hours.ToString() + " h " + item.ThoiGianChayBom2.Minutes.ToString() + " min ";
+                string tongTime3 = item.ThoiGianChayBom3.Hours.ToString() + " h " + item.ThoiGianChayBom3.Minutes.ToString() + " min ";
+                string tongTime4 = item.ThoiGianChayBom4.Hours.ToString() + " h " + item.ThoiGianChayBom4.Minutes.ToString() + " min ";
+
+                dt.Rows.Add(i, xa, hut, tongTime1, tongTime2, tongTime3, tongTime4);
+                i++;
+            }
+
+            dataGridView1.DataSource = dt;
 
 
             //tính tổng, tb
@@ -67,24 +92,22 @@ namespace QuanLyTramBom
                 TongThoiGianChayBom1 = TimeSpan.FromMinutes(minute2 + minute1);
 
             }
-
             //label
-            TrungBinhXa.Text = "TB Bể xả :" + (trungBinhBeXa / list.Count).ToString();
+            labelTBXa.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero));
             // b dùng hàm Math.Round để giới hạn còn 2 chữ số sau thập phân
-            //TrungBinhXa.Text = Math.Round( (trungBinhBeXa / list.Count),2,MidpointRounding.AwayFromZero).ToString();
-            TrungBinhHut.Text = "TB Bể hút:" + (trungBinhBeHut / list.Count).ToString();
+            labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
 
-            TongBom1.Text = "Tổng TG Bơm 1 chạy : " + TongThoiGianChayBom1.Hours.ToString() + ":" + TongThoiGianChayBom1.Minutes.ToString();
-            TongBom2.Text = "Tổng TG Bơm 2 chạy : " + TongThoiGianChayBom2.Hours.ToString() + ":" + TongThoiGianChayBom2.Minutes.ToString();
-            TongBom3.Text = "Tổng TG Bơm 3 chạy : " + TongThoiGianChayBom3.Hours.ToString() + ":" + TongThoiGianChayBom3.Minutes.ToString();
-            TongBom4.Text = "Tổng TG Bơm 4 chạy : " + TongThoiGianChayBom4.Hours.ToString() + ":" + TongThoiGianChayBom4.Minutes.ToString();
+            labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + " giờ " + TongThoiGianChayBom1.Minutes.ToString() + " phút";
+            labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + " giờ " + TongThoiGianChayBom2.Minutes.ToString() + " phút";
+            labelTongTime3.Text = TongThoiGianChayBom3.Hours.ToString() + " giờ " + TongThoiGianChayBom3.Minutes.ToString() + " phút";
+            labelTongTime4.Text = TongThoiGianChayBom4.Hours.ToString() + " giờ " + TongThoiGianChayBom4.Minutes.ToString() + " phút";
 
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             List<BaoCao> baocaongay = DALBaoCao.BaoCaoNgay(dateTimePicker1.Value.Date);
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel | *.xlsx | Excel 2010 | *.xls" })
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel | *.xlsx | Excel 2016 | *.xls" })
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     try
@@ -189,7 +212,7 @@ namespace QuanLyTramBom
                             ws.Cell("G7").Value = "BƠM 4\r\nTHỜI GIAN CHẠY";
                             ws.Cell("G7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("G7").Style.Font.Bold = true;
-
+                            //add du lieu vao excel
 
                             var a = from p in baocaongay
                                     select new { p.ThoiGian, p.MucNuocBeHut, p.MucNuocBeXa, p.ThoiGianChayBom1, p.ThoiGianChayBom2, p.ThoiGianChayBom3, p.ThoiGianChayBom4 };
