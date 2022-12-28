@@ -1,5 +1,6 @@
 ﻿using ClosedXML.Excel;
 using ManagementSoftware.DAL;
+using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu;
 using ManagementSoftware.Models.TramBomNuoc;
 using System;
 using System.Collections.Generic;
@@ -97,10 +98,10 @@ namespace QuanLyTramBom
             // b dùng hàm Math.Round để giới hạn còn 2 chữ số sau thập phân
             labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
 
-            labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + " giờ " + TongThoiGianChayBom1.Minutes.ToString() + " phút";
-            labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + " giờ " + TongThoiGianChayBom2.Minutes.ToString() + " phút";
-            labelTongTime3.Text = TongThoiGianChayBom3.Hours.ToString() + " giờ " + TongThoiGianChayBom3.Minutes.ToString() + " phút";
-            labelTongTime4.Text = TongThoiGianChayBom4.Hours.ToString() + " giờ " + TongThoiGianChayBom4.Minutes.ToString() + " phút";
+            labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + " h " + TongThoiGianChayBom1.Minutes.ToString() + " min";
+            labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + " h " + TongThoiGianChayBom2.Minutes.ToString() + " min";
+            labelTongTime3.Text = TongThoiGianChayBom3.Hours.ToString() + " h " + TongThoiGianChayBom3.Minutes.ToString() + " min";
+            labelTongTime4.Text = TongThoiGianChayBom4.Hours.ToString() + " h " + TongThoiGianChayBom4.Minutes.ToString() + " min";
 
         }
 
@@ -214,8 +215,26 @@ namespace QuanLyTramBom
                             ws.Cell("G7").Style.Font.Bold = true;
                             //add du lieu vao excel
 
-                            var a = from p in baocaongay
-                                    select new { p.ThoiGian, p.MucNuocBeHut, p.MucNuocBeXa, p.ThoiGianChayBom1, p.ThoiGianChayBom2, p.ThoiGianChayBom3, p.ThoiGianChayBom4 };
+
+
+                            List<ClassFormatDate> listData = new List<ClassFormatDate>();
+
+                            foreach (var item in baocaongay)
+                            {
+                                ClassFormatDate c = new ClassFormatDate();
+                                c.MucNuocHut = item.MucNuocBeHut;
+                                c.MucNuocXa = item.MucNuocBeXa;
+                                c.ThoiGianChayBom1 = item.ThoiGianChayBom1.Hours.ToString() + "h " + item.ThoiGianChayBom1.Minutes.ToString() + "min";
+                                c.ThoiGianChayBom2 = item.ThoiGianChayBom2.Hours.ToString() + "h " + item.ThoiGianChayBom2.Minutes.ToString() + "min";
+                                c.ThoiGianChayBom3 = item.ThoiGianChayBom3.Hours.ToString() + "h " + item.ThoiGianChayBom3.Minutes.ToString() + "min";
+                                c.ThoiGianChayBom4 = item.ThoiGianChayBom4.Hours.ToString() + "h " + item.ThoiGianChayBom4.Minutes.ToString() + "min";
+
+
+                                listData.Add(c);
+                            }
+
+                            var a = from p in listData
+                                    select new { p.ThoiGian, p.MucNuocHut, p.MucNuocXa, p.ThoiGianChayBom1, p.ThoiGianChayBom2, p.ThoiGianChayBom3, p.ThoiGianChayBom4 };
                             var range = ws.Cell(10, 1).InsertData(a.AsEnumerable());
 
 
@@ -248,12 +267,12 @@ namespace QuanLyTramBom
 
                             }
 
-                            ws.Cell("B35").Value = (trungBinhBeHut / baocaongay.Count).ToString();
-                            ws.Cell("C35").Value = (trungBinhBeXa / baocaongay.Count).ToString();
-                            ws.Cell("D34").Value = TongThoiGianChayBom1.Hours.ToString() + ":" + TongThoiGianChayBom1.Minutes.ToString();
-                            ws.Cell("E34").Value = TongThoiGianChayBom2.Hours.ToString() + ":" + TongThoiGianChayBom2.Minutes.ToString();
-                            ws.Cell("F34").Value = TongThoiGianChayBom3.Hours.ToString() + ":" + TongThoiGianChayBom3.Minutes.ToString();
-                            ws.Cell("G34").Value = TongThoiGianChayBom4.Hours.ToString() + ":" + TongThoiGianChayBom4.Minutes.ToString();
+                            ws.Cell("B35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / baocaongay.Count),2,MidpointRounding.AwayFromZero));
+                            ws.Cell("C35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / baocaongay.Count), 2, MidpointRounding.AwayFromZero));
+                            ws.Cell("D34").Value = TongThoiGianChayBom1.Hours.ToString() + "h " + TongThoiGianChayBom1.Minutes.ToString()+"min";
+                            ws.Cell("E34").Value = TongThoiGianChayBom2.Hours.ToString() + "h " + TongThoiGianChayBom2.Minutes.ToString() + "min";
+                            ws.Cell("F34").Value = TongThoiGianChayBom3.Hours.ToString() + "h " + TongThoiGianChayBom3.Minutes.ToString() + "min";
+                            ws.Cell("G34").Value = TongThoiGianChayBom4.Hours.ToString() + "h " + TongThoiGianChayBom4.Minutes.ToString() + "min";
 
 
 

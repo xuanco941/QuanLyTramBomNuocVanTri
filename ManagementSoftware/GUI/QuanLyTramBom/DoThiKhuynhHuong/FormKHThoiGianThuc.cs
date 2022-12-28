@@ -32,9 +32,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             this.chartControl1.ShowToolTips = true;
             this.chartControl1.Tooltip.BorderStyle = BorderStyle.FixedSingle;
             this.chartControl1.Tooltip.BackgroundColor = new BrushInfo(Color.DarkGreen);
-
-
-
         }
 
 
@@ -66,13 +63,24 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
         }
-        void Set(string name)
+
+
+        async Task CloeseFormItem(List<FormItemChuThich> forms)
         {
-            foreach (FormItemChuThich f in panelChuThich.Controls)
+            foreach (FormItemChuThich f in forms)
             {
                 f.Close();
                 f.Dispose();
             }
+        }
+        async void Set(string name)
+        {
+            List<FormItemChuThich> l = new List<FormItemChuThich>();
+            foreach (FormItemChuThich i in panelChuThich.Controls)
+            {
+                l.Add(i);
+            }
+            await CloeseFormItem(l);
             listXuHuong = DALKhuynhHuong.GetAListXuHuongFromName(name);
             textBoxTenKhuynhHuong.Texts = name;
 
@@ -179,12 +187,17 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         void UpdateChart()
         {
 
+            DateTime a = DateTime.Now;
+
             if (series1 != null)
             {
+                series1.Points.Add(a, new Random().Next(100));
                 chartControl1.Series.Add(series1);
             }
             if (series2 != null)
             {
+                series2.Points.Add(a, new Random().Next(100));
+
                 chartControl1.Series.Add(series2);
             }
             if (series3 != null)

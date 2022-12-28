@@ -19,6 +19,8 @@ namespace ManagementSoftware.DAL
         {
             DataBaseContext dbContext = new DataBaseContext();
 
+
+
             List<DataDoThi> dataDoThi = new List<DataDoThi>();
             System.DateTime timeNow = System.DateTime.Now;
             System.DateTime timeStart = timeNow.AddHours(-1);
