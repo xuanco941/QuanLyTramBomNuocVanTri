@@ -57,6 +57,14 @@ namespace ManagementSoftware
             series1.Points.Add("G1", 58);
             series1.Points.Add("E1", 28);
             series1.Points.Add("F1", 48);
+            series2.Points.Add("51", 23);
+            series2.Points.Add("51", 33);
+            series2.Points.Add("61", 53);
+            series2.Points.Add("71", 23);
+            series2.Points.Add("t1", 1);
+            series2.Points.Add("51", 100);
+            series2.Points.Add("41", 54);
+            series2.Points.Add("31", 23);
 
             series2.Points.Add("A1", 23);
             series2.Points.Add("D1", 33);

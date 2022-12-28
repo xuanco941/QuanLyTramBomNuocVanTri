@@ -16,6 +16,9 @@
     <Compile Update="GUI\QuanLyTramBom\DoThiKhuynhHuong\ChonKhuynhHuong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\DoThiKhuynhHuong\FormItemChuThich.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\DoThiKhuynhHuong\ThietLapKhuynhHuong.cs">
       <SubType>Form</SubType>
     </Compile>

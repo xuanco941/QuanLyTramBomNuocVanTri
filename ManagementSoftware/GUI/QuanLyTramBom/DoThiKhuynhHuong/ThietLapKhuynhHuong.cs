@@ -17,13 +17,41 @@ namespace ManagementSoftware
 {
     public partial class ThietLapKhuynhHuong : Form
     {
+        List<XuHuongVaTinHieu> list;
         public ThietLapKhuynhHuong()
         {
             InitializeComponent();
+
+            list = new List<XuHuongVaTinHieu>();
+
+            foreach (var item in new AnalogCommon().listAllAnalogs)
+            {
+                XuHuongVaTinHieu x = new XuHuongVaTinHieu();
+                x.TinHieu = item.TinHieu;
+                x.Min = item.GiaTriNhoNhat;
+                x.Max = item.GiaTriLonNhat;
+                x.DiaChiPLC = item.DiaChiPLC;
+                x.DonVi = item.DonVi;
+                x.DieuKien = item.DieuKien;
+                x.Nhom = item.Nhom;
+                x.GanThe = item.GanThe;
+                list.Add(x);
+            }
+            foreach (var item in new DigitalCommon().ListAllDigitals)
+            {
+                XuHuongVaTinHieu x = new XuHuongVaTinHieu();
+                x.TinHieu = item.TinHieu;
+                x.Min = 0;
+                x.Max = 1;
+                x.DiaChiPLC = item.DiaChiPLC;
+                x.DonVi = "Bool";
+                x.DieuKien = item.DieuKien;
+                x.Nhom = item.Nhom;
+                x.GanThe = item.GanThe;
+                list.Add(x);
+            }
         }
 
-
-        List<Analog> list = new AnalogCommon().listAllAnalogs;
 
         void SetCBDieuKien(ComboBox dieuKien)
         {
@@ -59,13 +87,13 @@ namespace ManagementSoftware
         {
             if (!String.IsNullOrEmpty(cbTinHieu.Text))
             {
-                Analog? analog = list.Where(a => a.TinHieu == cbTinHieu.Text).FirstOrDefault();
+                XuHuongVaTinHieu? analog = list.Where(a => a.TinHieu == cbTinHieu.Text).FirstOrDefault();
                 if (analog != null)
                 {
                     ganThe.Text = analog.GanThe;
                     donVi.Text = analog.DonVi;
-                    max.Text = analog.GiaTriLonNhat.ToString();
-                    min.Text = analog.GiaTriNhoNhat.ToString();
+                    max.Text = analog.Max.ToString();
+                    min.Text = analog.Min.ToString();
                 }
                 else
                 {
@@ -229,9 +257,10 @@ namespace ManagementSoftware
             string strMax = max.Text;
             string strMin = min.Text;
             string strColor = color.BackColor.Name;
+            string? diaChiPLC = list.Where(a => a.GanThe == strGanThe).Select(a => a.DiaChiPLC).FirstOrDefault();
             if (String.IsNullOrEmpty(strDieuKien) == false && String.IsNullOrEmpty(strNhom) == false && String.IsNullOrEmpty(strTinHieu) == false &&
                 String.IsNullOrEmpty(strGanThe) == false && String.IsNullOrEmpty(strDonVi) == false && String.IsNullOrEmpty(strMax) == false &&
-                String.IsNullOrEmpty(strMin) == false && String.IsNullOrEmpty(strColor) == false)
+                String.IsNullOrEmpty(strMin) == false && String.IsNullOrEmpty(strColor) == false && String.IsNullOrEmpty(diaChiPLC)==false)
             {
                 xuHuongVaTinHieu.Number = int.Parse(number.Text);
                 xuHuongVaTinHieu.DieuKien = strDieuKien;
@@ -242,6 +271,7 @@ namespace ManagementSoftware
                 xuHuongVaTinHieu.Max = double.Parse(strMax);
                 xuHuongVaTinHieu.Min = double.Parse(strMin);
                 xuHuongVaTinHieu.Color = strColor;
+                xuHuongVaTinHieu.DiaChiPLC = diaChiPLC;
                 return xuHuongVaTinHieu;
 
             }
@@ -251,7 +281,7 @@ namespace ManagementSoftware
             }
 
         }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             List<XuHuongVaTinHieu> list = new List<XuHuongVaTinHieu>();
