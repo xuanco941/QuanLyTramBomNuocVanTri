@@ -132,7 +132,7 @@
             this.chartControl1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryYAxis.Margin = true;
             this.chartControl1.ShowToolTips = true;
-            this.chartControl1.Size = new System.Drawing.Size(884, 438);
+            this.chartControl1.Size = new System.Drawing.Size(884, 444);
             this.chartControl1.TabIndex = 19;
             this.chartControl1.Text = "chartControl1";
             // 
@@ -155,10 +155,10 @@
             this.panelChuThich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelChuThich.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelChuThich.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.panelChuThich.Location = new System.Drawing.Point(0, 478);
+            this.panelChuThich.Location = new System.Drawing.Point(0, 484);
             this.panelChuThich.Name = "panelChuThich";
             this.panelChuThich.Padding = new System.Windows.Forms.Padding(5, 2, 2, 2);
-            this.panelChuThich.Size = new System.Drawing.Size(884, 123);
+            this.panelChuThich.Size = new System.Drawing.Size(884, 117);
             this.panelChuThich.TabIndex = 20;
             // 
             // toolTip1

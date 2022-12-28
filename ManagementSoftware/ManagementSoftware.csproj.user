@@ -52,16 +52,7 @@
     <Compile Update="GUI\QuanLyTramBom\DSVaoRa\FormSearchDigital.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\KhuynhHuongDuLieu\ChonKhuynhHuongDL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\KhuynhHuongDuLieu\FormCapNhatKhuynhHuongDL.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\KhuynhHuongDuLieu\FormLDKhuynhHuong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\KhuynhHuongDuLieu\ThietLapKhuynhHuongDL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\LuuTruLoi\FormLuuTruLoi.cs">
@@ -74,9 +65,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\LuuTruLoi\FormSearchAlert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\QuanLyTramBom\ToanCanhMayBom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormBaoCaoNam.cs">
@@ -124,5 +112,10 @@
     <Compile Update="TestChart.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="GUI\QuanLyTramBom\ToanCanhTramBom.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

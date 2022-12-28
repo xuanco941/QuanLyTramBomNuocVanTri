@@ -58,15 +58,15 @@
             // 
             // labelValue
             // 
-            this.labelValue.AutoSize = true;
             this.labelValue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelValue.ForeColor = System.Drawing.Color.White;
             this.labelValue.Location = new System.Drawing.Point(230, 0);
             this.labelValue.Name = "labelValue";
             this.gridLayout1.SetParticipateInLayout(this.labelValue, true);
-            this.labelValue.Size = new System.Drawing.Size(53, 17);
+            this.labelValue.Size = new System.Drawing.Size(114, 17);
             this.labelValue.TabIndex = 33;
             this.labelValue.Text = "valuelb";
+            this.labelValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelTinHieu
             // 

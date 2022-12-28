@@ -5,6 +5,7 @@ using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
 using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
+using ManagementSoftware.Properties;
 using Syncfusion.Windows.Forms.Tools;
 
 namespace QuanLyTramBom
@@ -27,7 +28,7 @@ namespace QuanLyTramBom
             ////clock
 
 
-            Panel floater = CreateFloatingPanel(panel3);
+            Panel floater = CreateFloatingPanel(panel4);
             floater.BackColor = Color.Transparent;
             Clock clock1 = new Clock();
             clock1.MinimumSize = new Size(65, 65);
@@ -35,6 +36,19 @@ namespace QuanLyTramBom
             floater.Location = new Point(1830, 1);
             floater.Size = new Size(65, 65);
             floater.Controls.Add(clock1);
+
+
+            Panel floater2 = CreateFloatingPanel(panel12);
+            floater.BackColor = Color.Transparent;
+            PictureBox pic = new PictureBox();
+            pic.Cursor = Cursors.Hand;
+            pic.Image = Resources.printer;
+            pic.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic.MinimumSize = new Size(50, 50);
+            pic.Size = new Size(50, 50);
+            floater2.Location = new Point(1680, 4);
+            floater2.Size = new Size(65, 65);
+            floater2.Controls.Add(pic);
 
 
         }

@@ -569,9 +569,15 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            DALKhuynhHuong.Delete(comboBoxTenKH.Text);
-            callBack?.Invoke();
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DALKhuynhHuong.Delete(comboBoxTenKH.Text);
+                callBack?.Invoke();
+                this.Close();
+            } 
+
+  
         }
 
         private void CapNhatKhuynhHuong_Load(object sender, EventArgs e)

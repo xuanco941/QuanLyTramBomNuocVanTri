@@ -29,7 +29,7 @@ namespace QuanLyTramBom
 
         }
 
-        
+        List<BaoCao> list;
 
         private void btnSerachBox_Click_1(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace QuanLyTramBom
             // nên t bảo bạn nếu báo cáo ngày thì chuyển dữ liệu đầu vào về 0 giờ thì mới lấy đc đủ 24 tiếng, báo cáo tháng với năm thì kh ảnh hưởng
             // 
 
-            List<BaoCao> list = DALBaoCao.BaoCaoNam(d);
+            list = DALBaoCao.BaoCaoNam(d);
 
 
             DataTable dt = new DataTable();
@@ -116,7 +116,7 @@ namespace QuanLyTramBom
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            List<BaoCao> baocaonam = DALBaoCao.BaoCaoNam(dateTimePicker1.Value);
+            
             using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel | *.xlsx | Excel 2010 | *.xls" })
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
@@ -243,7 +243,7 @@ namespace QuanLyTramBom
 
                             List<ClassFormatDate> listData = new List<ClassFormatDate>();
 
-                            foreach (var item in baocaonam)
+                            foreach (var item in list)
                             {
                                 ClassFormatDate c = new ClassFormatDate();
                                 c.MucNuocHut = item.MucNuocBeHut;
@@ -271,7 +271,7 @@ namespace QuanLyTramBom
                             TimeSpan TongThoiGianChayBom4 = TimeSpan.FromMinutes(0);
 
 
-                            foreach (BaoCao item in baocaonam)
+                            foreach (BaoCao item in list)
                             {
                                 trungBinhBeHut = trungBinhBeHut + item.MucNuocBeHut;
                                 trungBinhBeXa = trungBinhBeXa + item.MucNuocBeXa;
@@ -292,8 +292,8 @@ namespace QuanLyTramBom
 
                             }
 
-                            ws.Cell("B23").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / baocaonam.Count), 2, MidpointRounding.AwayFromZero));
-                            ws.Cell("C23").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / baocaonam.Count), 2, MidpointRounding.AwayFromZero));
+                            ws.Cell("B23").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
+                            ws.Cell("C23").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero));
                             ws.Cell("D22").Value = TongThoiGianChayBom1.Hours.ToString() + "h " + TongThoiGianChayBom1.Minutes.ToString() + "min";
                             ws.Cell("E22").Value = TongThoiGianChayBom2.Hours.ToString() + "h " + TongThoiGianChayBom2.Minutes.ToString() + "min";
                             ws.Cell("F22").Value = TongThoiGianChayBom3.Hours.ToString() + "h " + TongThoiGianChayBom3.Minutes.ToString() + "min";

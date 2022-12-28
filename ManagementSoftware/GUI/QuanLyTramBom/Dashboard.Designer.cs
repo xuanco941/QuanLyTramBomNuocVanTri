@@ -54,6 +54,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonBangLoi = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -73,6 +75,7 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -244,7 +247,7 @@
             this.labelGiaTri.BackColor = System.Drawing.Color.WhiteSmoke;
             this.labelGiaTri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelGiaTri.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelGiaTri.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelGiaTri.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelGiaTri.ForeColor = System.Drawing.Color.Red;
             this.labelGiaTri.Location = new System.Drawing.Point(0, 0);
             this.labelGiaTri.Name = "labelGiaTri";
@@ -265,7 +268,7 @@
             // labelMoTa
             // 
             this.labelMoTa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelMoTa.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMoTa.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelMoTa.ForeColor = System.Drawing.Color.Red;
             this.labelMoTa.Location = new System.Drawing.Point(0, 0);
             this.labelMoTa.Name = "labelMoTa";
@@ -286,7 +289,7 @@
             // labelNhom
             // 
             this.labelNhom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNhom.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNhom.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelNhom.ForeColor = System.Drawing.Color.Red;
             this.labelNhom.Location = new System.Drawing.Point(0, 0);
             this.labelNhom.Name = "labelNhom";
@@ -307,7 +310,7 @@
             // labelThoiGian
             // 
             this.labelThoiGian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelThoiGian.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelThoiGian.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelThoiGian.ForeColor = System.Drawing.Color.Red;
             this.labelThoiGian.Location = new System.Drawing.Point(0, 0);
             this.labelThoiGian.Name = "labelThoiGian";
@@ -328,7 +331,7 @@
             // labelNgay
             // 
             this.labelNgay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelNgay.ForeColor = System.Drawing.Color.Red;
             this.labelNgay.Location = new System.Drawing.Point(0, 0);
             this.labelNgay.Name = "labelNgay";
@@ -349,7 +352,7 @@
             // labelGanThe
             // 
             this.labelGanThe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelGanThe.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelGanThe.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelGanThe.ForeColor = System.Drawing.Color.Red;
             this.labelGanThe.Location = new System.Drawing.Point(0, 0);
             this.labelGanThe.Name = "labelGanThe";
@@ -370,7 +373,7 @@
             // labelDieuKien
             // 
             this.labelDieuKien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelDieuKien.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDieuKien.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelDieuKien.ForeColor = System.Drawing.Color.Red;
             this.labelDieuKien.Location = new System.Drawing.Point(0, 0);
             this.labelDieuKien.Name = "labelDieuKien";
@@ -412,10 +415,29 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel12);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(948, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(169, 28);
+            this.panel3.Size = new System.Drawing.Size(192, 28);
             this.panel3.TabIndex = 8;
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(89, 28);
+            this.panel12.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(111, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(81, 28);
+            this.panel4.TabIndex = 0;
             // 
             // panel1
             // 
@@ -532,6 +554,7 @@
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -575,5 +598,7 @@
         private Panel panel2;
         private Panel panel3;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonBangLoi;
+        private Panel panel12;
+        private Panel panel4;
     }
 }

@@ -53,7 +53,7 @@ namespace ManagementSoftware
             }).Start();
 
 
-            Application.Run(new Login());
+            Application.Run(new Dashboard());
 
             if (Common.USERSESSION != null)
             {

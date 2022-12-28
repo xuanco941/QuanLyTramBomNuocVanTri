@@ -13,7 +13,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ManagementSoftware.GUI.QuanLyTramBom
 {
@@ -113,7 +112,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 l.Add(i);
             }
-            await CloseFormItem(l);
+            if (l != null && l.Count > 0)
+            {
+                await CloseFormItem(l);
+            }
             listXuHuong = DALKhuynhHuong.GetAListXuHuongFromName(name);
             textBoxTenKhuynhHuong.Texts = name;
 
@@ -319,9 +321,18 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             UpdateChart();
         }
 
-        private void FormKHThoiGianThuc_FormClosing(object sender, FormClosingEventArgs e)
+        private async void FormKHThoiGianThuc_FormClosing(object sender, FormClosingEventArgs e)
         {
             ClearTimer();
+            List<FormItemChuThich> l = new List<FormItemChuThich>();
+            foreach (FormItemChuThich i in panelChuThich.Controls)
+            {
+                l.Add(i);
+            }
+            if (l!=null && l.Count > 0)
+            {
+                await CloseFormItem(l);
+            }
         }
 
         private void chartControl1_MouseMove(object sender, MouseEventArgs e)
