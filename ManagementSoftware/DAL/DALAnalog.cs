@@ -25,22 +25,6 @@ namespace ManagementSoftware.DAL
             await dbContext.Analogs.AddRangeAsync(list);
             await dbContext.SaveChangesAsync();
         }
-
-        //public static List<DataDoThi>? GetListDataOn1Hour(string nameTinHieu)
-        //{
-        //    DataBaseContext dbContext = new DataBaseContext();
-
-        //    List<DataDoThi> dataDoThi = new List<DataDoThi>();
-        //    System.DateTime timeNow = System.DateTime.Now;
-        //    System.DateTime timeStart = timeNow.AddHours(-1);
-        //    while (timeStart.Date != timeNow.Date)
-        //    {
-        //        DateTime count = timeStart.AddMinutes(2);
-
-        //    }
-
-        //    return dataDoThi;
-        //}
     }
 
 }

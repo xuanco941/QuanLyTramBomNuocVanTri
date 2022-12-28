@@ -3,6 +3,7 @@ using ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong;
 using ManagementSoftware.Models.TramBomNuoc;
 using Syncfusion.Drawing;
 using Syncfusion.Windows.Forms.Chart;
+using Syncfusion.XPS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,33 +54,25 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
-        void SetLabel(bool c,Label ganThe, Label tinHieu, Label giaTri, Label donVi, string strGanThe, string strTinHieu, string strGiaTri, string strDonVi, Color color)
+        void SetChuThich(XuHuongVaTinHieu x)
         {
-            if (c == true)
-            {
-                ganThe.ForeColor = color;
-                tinHieu.ForeColor = color;
-                giaTri.ForeColor = color;
-                donVi.ForeColor = color;
 
-
-                ganThe.Text = strGanThe;
-                tinHieu.Text = strTinHieu;
-                giaTri.Text = strGiaTri;
-                donVi.Text = strDonVi;
-            }
-            else
-            {
-                ganThe.Text = "";
-                tinHieu.Text = "";
-                giaTri.Text = "";
-                donVi.Text = "";
-            }
+            FormItemChuThich form = new FormItemChuThich(x);
+            form.TopLevel = false;
+            panelChuThich.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Top;
+            form.Show();
 
 
         }
         void Set(string name)
         {
+            foreach (FormItemChuThich f in panelChuThich.Controls)
+            {
+                f.Close();
+                f.Dispose();
+            }
             listXuHuong = DALKhuynhHuong.GetAListXuHuongFromName(name);
             textBoxTenKhuynhHuong.Texts = name;
 
@@ -105,7 +98,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series1 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
                         series1.Style.Border.Width = 3;
                         series1.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
-                        SetLabel(true, labelGanThe1, labelTinHieu1,labelGiaTri1,labelDonVi1,item.GanThe,item.TinHieu,item.Min.ToString(),item.DonVi,Color.FromName(item.Color));
+                        SetChuThich(item);
 
                     }
                     else if (item.Number == 2)
@@ -113,7 +106,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series2 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
                         series2.Style.Border.Width = 3;
                         series2.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
-                        SetLabel(true, labelGanThe2, labelTinHieu2, labelGiaTri2, labelDonVi2, item.GanThe, item.TinHieu, item.Min.ToString(), item.DonVi, Color.FromName(item.Color));
+                        SetChuThich(item);
 
                     }
                     else if (item.Number == 3)
@@ -121,6 +114,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series3 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
                         series3.Style.Border.Width = 3;
                         series3.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        SetChuThich(item);
 
                     }
                     else if (item.Number == 4)
@@ -128,6 +122,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series4 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
                         series4.Style.Border.Width = 3;
                         series4.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        SetChuThich(item);
 
                     }
                     else if (item.Number == 5)
@@ -135,6 +130,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series5 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
                         series5.Style.Border.Width = 3;
                         series5.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        SetChuThich(item);
 
                     }
                     else if (item.Number == 6)
@@ -142,6 +138,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series6 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
                         series6.Style.Border.Width = 3;
                         series6.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        SetChuThich(item);
 
                     }
                     else if (item.Number == 7)
@@ -149,6 +146,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series7 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
                         series7.Style.Border.Width = 3;
                         series7.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        SetChuThich(item);
 
                     }
                     else if (item.Number == 8)
@@ -156,6 +154,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series8 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
                         series8.Style.Border.Width = 3;
                         series8.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        SetChuThich(item);
 
                     }
                 }
@@ -227,5 +226,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             UpdateChart();
         }
 
+        private void FormKHThoiGianThuc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ClearTimer();
+        }
     }
 }
