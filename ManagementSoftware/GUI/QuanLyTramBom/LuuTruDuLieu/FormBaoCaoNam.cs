@@ -12,7 +12,6 @@ using ClosedXML.Excel;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.DAL;
 using DocumentFormat.OpenXml.Office2013.Word;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace QuanLyTramBom
 {
@@ -22,6 +21,18 @@ namespace QuanLyTramBom
         {
             InitializeComponent();
 
+
+        }
+
+        class cloneEx
+        {
+            string ThoiGian;
+            string MucNuocBeHut;
+            string MucNuocBeXa;
+            string ThoiGianChayBom1;
+            string ThoiGianChayBom2;
+            string ThoiGianChayBom3;
+            string ThoiGianChayBom4;
         }
 
         private void btnSerachBox_Click_1(object sender, EventArgs e)
@@ -39,10 +50,10 @@ namespace QuanLyTramBom
             dt.Columns.Add("THỜI GIAN");
             dt.Columns.Add("MỰC NƯỚC BƠM XẢ (M)");
             dt.Columns.Add("MỰC NƯỚC BƠM HÚT (M)");
-            dt.Columns.Add("THỜI GIAN CHẠY BƠM 1");
-            dt.Columns.Add("THỜI GIAN CHẠY BƠM 2");
-            dt.Columns.Add("THỜI GIAN CHẠY BƠM 3");
-            dt.Columns.Add("THỜI GIAN CHẠY BƠM 4");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 1 (H)");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 2 (H)");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 3 (H)");
+            dt.Columns.Add("THỜI GIAN CHẠY BƠM 4 (H)");
 
             int i = 1;
             foreach (BaoCao item in list)
@@ -51,10 +62,10 @@ namespace QuanLyTramBom
                 double hut = Math.Round((item.MucNuocBeHut / list.Count), 2, MidpointRounding.AwayFromZero);
 
 
-                string tongTime1 = item.ThoiGianChayBom1.ToString(@"hh\:mm");
-                string tongTime2 = item.ThoiGianChayBom2.ToString(@"hh\:mm");
-                string tongTime3 = item.ThoiGianChayBom3.ToString(@"hh\:mm");
-                string tongTime4 = item.ThoiGianChayBom4.ToString(@"hh\:mm");
+                string tongTime1 = item.ThoiGianChayBom1.Hours.ToString() + " h " + item.ThoiGianChayBom1.Minutes.ToString() + " min ";
+                string tongTime2 = item.ThoiGianChayBom2.Hours.ToString() + " h " + item.ThoiGianChayBom2.Minutes.ToString() + " min ";
+                string tongTime3 = item.ThoiGianChayBom3.Hours.ToString() + " h " + item.ThoiGianChayBom3.Minutes.ToString() + " min ";
+                string tongTime4 = item.ThoiGianChayBom4.Hours.ToString() + " h " + item.ThoiGianChayBom4.Minutes.ToString() + " min ";
 
                 dt.Rows.Add(i,xa,hut,tongTime1,tongTime2,tongTime3,tongTime4);
                 i++;
@@ -100,10 +111,10 @@ namespace QuanLyTramBom
             // b dùng hàm Math.Round để giới hạn còn 2 chữ số sau thập phân
             labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
 
-            labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + "giờ " + TongThoiGianChayBom1.Minutes.ToString() + "phút";
-            labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + "giờ " + TongThoiGianChayBom2.Minutes.ToString() + "phút";
-            labelTongTime3.Text = TongThoiGianChayBom3.Hours.ToString() + "giờ " + TongThoiGianChayBom3.Minutes.ToString() + "phút";
-            labelTongTime4.Text = TongThoiGianChayBom4.Hours.ToString() + "giờ " + TongThoiGianChayBom4.Minutes.ToString() + "phút";
+            labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + " giờ " + TongThoiGianChayBom1.Minutes.ToString() + " phút";
+            labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + " giờ " + TongThoiGianChayBom2.Minutes.ToString() + " phút";
+            labelTongTime3.Text = TongThoiGianChayBom3.Hours.ToString() + " giờ " + TongThoiGianChayBom3.Minutes.ToString() + " phút";
+            labelTongTime4.Text = TongThoiGianChayBom4.Hours.ToString() + " giờ " + TongThoiGianChayBom4.Minutes.ToString() + " phút";
 
         }
 
@@ -217,9 +228,14 @@ namespace QuanLyTramBom
                             ws.Cell("G7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("G7").Style.Font.Bold = true;
 
+                            cloneEx clone = new cloneEx();
+
+
+                            //add du lieu vao excel
+
 
                             var a = from p in baocaonam
-                                    select new { p.ThoiGian, p.MucNuocBeHut, p.MucNuocBeXa, p.ThoiGianChayBom1, p.ThoiGianChayBom2, p.ThoiGianChayBom3, p.ThoiGianChayBom4 };
+                                    select new { p.ThoiGian, p.MucNuocBeHut, p.MucNuocBeXa, p.ThoiGianChayBom1.Hours, p.ThoiGianChayBom2, p.ThoiGianChayBom3, p.ThoiGianChayBom4 };
                             var range = ws.Cell(10, 1).InsertData(a.AsEnumerable());
 
 
