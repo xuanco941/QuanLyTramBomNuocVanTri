@@ -7863,11 +7863,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\again\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\homnay\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
       "projectName": "ManagementSoftware",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\again\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\homnay\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\again\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\homnay\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

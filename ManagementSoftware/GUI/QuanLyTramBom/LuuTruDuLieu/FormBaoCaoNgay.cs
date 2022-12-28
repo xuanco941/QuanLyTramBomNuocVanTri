@@ -120,31 +120,37 @@ namespace QuanLyTramBom
                             ws.Cell("D2").Value = "CP2 BÁO CÁO NGÀY";
                             ws.Cell("D2").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("D2").Style.Font.Bold = true;
-                            ws.Cell("D2").Style.Font.FontSize = 13;
+                            ws.Cell("D2").Style.Font.FontSize = 15;
 
                             ws.Cell("B9").Value = "m";
                             ws.Cell("B9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("B9").Style.Font.Bold = true;
+                            ws.Cell("B9").Style.Font.FontSize = 14;
 
                             ws.Cell("C9").Value = "m";
                             ws.Cell("C9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("C9").Style.Font.Bold = true;
+                            ws.Cell("C9").Style.Font.FontSize = 14;
 
                             ws.Cell("D9").Value = "h";
                             ws.Cell("D9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("D9").Style.Font.Bold = true;
+                            ws.Cell("D9").Style.Font.FontSize = 14;
 
                             ws.Cell("E9").Value = "h";
                             ws.Cell("E9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("E9").Style.Font.Bold = true;
+                            ws.Cell("E9").Style.Font.FontSize = 14;
 
                             ws.Cell("F9").Value = "h";
                             ws.Cell("F9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("F9").Style.Font.Bold = true;
+                            ws.Cell("F9").Style.Font.FontSize = 14;
 
                             ws.Cell("G9").Value = "h";
                             ws.Cell("G9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                             ws.Cell("G9").Style.Font.Bold = true;
+                            ws.Cell("G9").Style.Font.FontSize = 14;
 
                             ws.Cell("A5").Value = dateTimePicker1.Value;
                             ws.Cell("A5").Style.Font.Underline = XLFontUnderlineValues.Double;
@@ -163,6 +169,7 @@ namespace QuanLyTramBom
                             ws.Cell("A7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
                             ws.Cell("A7").Value = "THỜI GIAN";
                             ws.Cell("A7").Style.Font.Bold = true;
+                            ws.Cell("A7").Style.Font.FontSize = 14;
                             //chieu rong cell
                             #region 
                             var col1 = ws.Column("A");
@@ -183,6 +190,7 @@ namespace QuanLyTramBom
                             col7.Width = 20;
                             col8.Width = 20;
                             #endregion
+                            ws.Range("B7:G7").Style.Font.FontSize= 14;
                             ws.Range("B7:B8").Column(1).Merge();
                             ws.Cell("B7").Value = "MỰC NƯỚC\r\nBỂ HÚT";
                             ws.Cell("B7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
@@ -237,7 +245,10 @@ namespace QuanLyTramBom
                                     select new { p.ThoiGian, p.MucNuocHut, p.MucNuocXa, p.ThoiGianChayBom1, p.ThoiGianChayBom2, p.ThoiGianChayBom3, p.ThoiGianChayBom4 };
                             var range = ws.Cell(10, 1).InsertData(a.AsEnumerable());
 
-
+                            ws.Range("A10:G35").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                            ws.Range("A10:G35").Style.Font.FontSize= 13;
+                            ws.Range("A7:G7").Style.Font.FontSize = 12;
+                            
                             double trungBinhBeXa = 0;
                             double trungBinhBeHut = 0;
                             TimeSpan TongThoiGianChayBom1 = TimeSpan.FromMinutes(0);
@@ -278,7 +289,7 @@ namespace QuanLyTramBom
 
 
                             string tenfile = ".xlsx";
-                            workBook.SaveAs(sfd.FileName + DateTime.Now.ToString("dd_MM_yyyy") + tenfile);
+                            workBook.SaveAs(sfd.FileName + DateTime.Now.ToString("dd_MM_yyyy_hhmmss") + tenfile);
                             MessageBox.Show("Xuất file thành công");
 
 

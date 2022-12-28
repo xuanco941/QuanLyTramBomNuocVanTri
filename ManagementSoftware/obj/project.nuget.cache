@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lnhaUfwkMWADAGPd1K2ZtlffJhQEbfcBsGqXCgBAN1QV/nwOmsg3i4vpe0WuMdlxnNHmH8NcoYj0nbFlk+wlhw==",
+  "dgSpecHash": "LZZEJvw85lmiXkqF0lFoJJo6dy7PqEwd9cfPkzUbQcUvTrqMnFP+nZZVK/b8Zcx0IUaaf1bic2FpYskU2eBYvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\again\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\homnay\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\closedxml\\0.97.0\\closedxml.0.97.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",
