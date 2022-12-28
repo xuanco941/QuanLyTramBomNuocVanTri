@@ -22,6 +22,7 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public double Min { get; set; }
         public double Max { get; set; }
         public string Color { get; set; }
+        public string DiaChiPLC { get; set; }
 
         public int DoThiKhuynhHuongID { get; set; }
         public DoThiKhuynhHuong DoThiKhuynhHuong { get; set; }

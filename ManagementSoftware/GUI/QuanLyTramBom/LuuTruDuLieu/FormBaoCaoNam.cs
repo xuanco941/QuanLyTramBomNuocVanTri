@@ -12,7 +12,6 @@ using ClosedXML.Excel;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.DAL;
 using DocumentFormat.OpenXml.Office2013.Word;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace QuanLyTramBom
 {

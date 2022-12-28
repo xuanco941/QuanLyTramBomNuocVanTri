@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ManagementSoftware.Models.DuLieuMayPLC;
+using Microsoft.EntityFrameworkCore;
 
 namespace ManagementSoftware.DAL
 {
@@ -24,4 +26,5 @@ namespace ManagementSoftware.DAL
             await dbContext.SaveChangesAsync();
         }
     }
+
 }
