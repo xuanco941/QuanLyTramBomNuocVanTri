@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -75,10 +74,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnSerachBox = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new ManagementSoftware.GUI.ControlButton.CusDatetimepickers();
             this.label1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.monthCalendarAdv1 = new Syncfusion.Windows.Forms.Tools.MonthCalendarAdv();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -108,7 +107,6 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.monthCalendarAdv1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -613,7 +611,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.monthCalendarAdv1);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnSerachBox);
@@ -624,10 +622,20 @@
             this.panel1.Size = new System.Drawing.Size(1103, 76);
             this.panel1.TabIndex = 8;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(949, 26);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.CustomFormat = "MM/yyyy";
+            this.dateTimePicker1.CustomFormat = "yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(195, 26);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -644,34 +652,6 @@
             this.label1.Size = new System.Drawing.Size(143, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Trình đơn năm";
-            // 
-            // monthCalendarAdv1
-            // 
-            this.monthCalendarAdv1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.monthCalendarAdv1.Culture = new System.Globalization.CultureInfo("");
-            this.monthCalendarAdv1.DaysFont = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.monthCalendarAdv1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.monthCalendarAdv1.HeaderFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.monthCalendarAdv1.HighlightColor = System.Drawing.Color.Black;
-            this.monthCalendarAdv1.Iso8601CalenderFormat = false;
-            this.monthCalendarAdv1.Location = new System.Drawing.Point(880, 22);
-            this.monthCalendarAdv1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.monthCalendarAdv1.Name = "monthCalendarAdv1";
-            // 
-            // 
-            // 
-            this.monthCalendarAdv1.NoneButton.Location = new System.Drawing.Point(141, 0);
-            this.monthCalendarAdv1.NoneButton.Size = new System.Drawing.Size(72, 20);
-            this.monthCalendarAdv1.NoneButton.Text = "None";
-            this.monthCalendarAdv1.Size = new System.Drawing.Size(213, 183);
-            this.monthCalendarAdv1.TabIndex = 30;
-            // 
-            // 
-            // 
-            this.monthCalendarAdv1.TodayButton.Location = new System.Drawing.Point(0, 0);
-            this.monthCalendarAdv1.TodayButton.Size = new System.Drawing.Size(141, 20);
-            this.monthCalendarAdv1.TodayButton.Text = "Today";
-            this.monthCalendarAdv1.WeekFont = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             // 
             // FormBaoCaoNam
             // 
@@ -713,7 +693,6 @@
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.monthCalendarAdv1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -766,6 +745,6 @@
         private Panel panel16;
         private Label label9;
         private ManagementSoftware.GUI.ControlButton.CusDatetimepickers dateTimePicker1;
-        private Syncfusion.Windows.Forms.Tools.MonthCalendarAdv monthCalendarAdv1;
+        private Button button2;
     }
 }
