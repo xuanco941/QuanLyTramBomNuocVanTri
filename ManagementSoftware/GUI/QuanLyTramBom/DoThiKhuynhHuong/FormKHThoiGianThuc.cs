@@ -19,7 +19,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
     public partial class FormKHThoiGianThuc : Form
     {
         List<XuHuongVaTinHieu>? listXuHuong;
-
         public FormKHThoiGianThuc()
         {
             InitializeComponent();
@@ -32,6 +31,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             this.chartControl1.ShowToolTips = true;
             this.chartControl1.Tooltip.BorderStyle = BorderStyle.FixedSingle;
             this.chartControl1.Tooltip.BackgroundColor = new BrushInfo(Color.DarkGreen);
+            chartControl1.Tooltip.ForeColor = Color.White;
+
+
+            chartControl1.ShowToolbar = true;
         }
 
 
@@ -104,69 +107,92 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     if (item.Number == 1)
                     {
                         series1 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series1.Style.Border.Width = 3;
-                        series1.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        series1.Style.Border.Width = 5;
+                        series1.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
+                        series1.Tag = item.Max;
+                       series1.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red,Color.FromName(item.Color));
                         SetChuThich(item);
 
                     }
                     else if (item.Number == 2)
                     {
                         series2 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series2.Style.Border.Width = 3;
-                        series2.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        series2.Style.Border.Width = 5;
+                        series2.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
+                        series2.Tag = item.Max;
+                        series2.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
+
                         SetChuThich(item);
 
                     }
                     else if (item.Number == 3)
                     {
                         series3 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series3.Style.Border.Width = 3;
-                        series3.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        series3.Style.Border.Width = 5;
+                        series3.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
+                        series3.Tag = item.Max;
+                        series3.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
+
                         SetChuThich(item);
 
                     }
                     else if (item.Number == 4)
                     {
                         series4 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series4.Style.Border.Width = 3;
-                        series4.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        series4.Style.Border.Width = 5;
+                        series4.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
+                        series4.Tag = item.Max;
+                        series4.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
+
                         SetChuThich(item);
 
                     }
                     else if (item.Number == 5)
                     {
                         series5 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series5.Style.Border.Width = 3;
-                        series5.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        series5.Style.Border.Width = 5;
+                        series5.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
+                        series5.Tag = item.Max;
+                        series5.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
+
                         SetChuThich(item);
 
                     }
                     else if (item.Number == 6)
                     {
                         series6 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series6.Style.Border.Width = 3;
-                        series6.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        series6.Style.Border.Width = 5;
+                        series6.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
+                        series6.Tag = item.Max;
+                        series6.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
+
                         SetChuThich(item);
 
                     }
                     else if (item.Number == 7)
                     {
                         series7 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series7.Style.Border.Width = 3;
-                        series7.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        series7.Style.Border.Width = 5;
+                        series7.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
+                        series7.Tag = item.Max;
+                        series7.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
+
                         SetChuThich(item);
 
                     }
                     else if (item.Number == 8)
                     {
                         series8 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series8.Style.Border.Width = 3;
-                        series8.PointsToolTipFormat = "{3} " + item.TinHieu + "{4}" + item.DonVi;
+                        series8.Style.Border.Width = 5;
+                        series8.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
+                        series8.Tag = item.Max;
+                        series8.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
+
                         SetChuThich(item);
 
                     }
                 }
-
+                UpdateChart();
                 timer1.Start();
             }
 
@@ -184,45 +210,65 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
-        void UpdateChart()
+
+
+
+        async Task wait(ChartSeries series)
+        {
+            series.Points.Clear();
+        }
+        async Task SetValueSeries(ChartSeries series)
+        {
+            await wait(series);
+            double a = (double)series.Tag;
+            List<DataDoThi>? list = new DALDataDoThi().GetListDataOn1Hour(series.Text, a);
+            if (list != null && list.Count>0)
+            {
+                foreach (DataDoThi item in list)
+                {
+                    series.Points.Add(item.time.ToString("HH:mm:ss \n dd/MM/yyyy"), item.value);
+                }
+            }
+            chartControl1.Series.Add(series);
+
+        }
+
+        async void UpdateChart()
         {
 
-            DateTime a = DateTime.Now;
+            string a = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
 
             if (series1 != null)
             {
-                series1.Points.Add(a, new Random().Next(100));
-                chartControl1.Series.Add(series1);
+                await SetValueSeries(series1);
             }
             if (series2 != null)
             {
-                series2.Points.Add(a, new Random().Next(100));
-
-                chartControl1.Series.Add(series2);
+                await SetValueSeries(series2);
             }
             if (series3 != null)
             {
-                chartControl1.Series.Add(series3);
+                await SetValueSeries(series3);
             }
             if (series4 != null)
             {
-                chartControl1.Series.Add(series4);
+                await SetValueSeries(series4);
             }
             if (series5 != null)
             {
-                chartControl1.Series.Add(series5);
+                await SetValueSeries(series5);
             }
             if (series6 != null)
             {
-                chartControl1.Series.Add(series6);
+                await SetValueSeries(series6);
             }
             if (series7 != null)
             {
-                chartControl1.Series.Add(series7);
+                await SetValueSeries(series7);
             }
             if (series8 != null)
             {
-                chartControl1.Series.Add(series8);
+                await SetValueSeries(series8);
             }
         }
 

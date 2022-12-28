@@ -23,8 +23,6 @@ namespace ManagementSoftware.Models
 
 
 
-
-
         // Tạo ILoggerFactory 
         public static readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
         {

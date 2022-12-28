@@ -19,10 +19,12 @@ namespace ManagementSoftware.DAL
 
 
         //ngày
-        public static List<BaoCao> BaoCaoNgay(DateTime dateTime)
+        public static List<BaoCao> BaoCaoNgay(DateTime date)
         {
             DataBaseContext dbContext = new DataBaseContext();
             List<BaoCao> results = new List<BaoCao>();
+
+            DateTime dateTime = new DateTime(date.Year, date.Month, date.Day, 0, 0, 0);
 
             DateTime endDate = dateTime.AddDays(1);
 
@@ -130,13 +132,14 @@ namespace ManagementSoftware.DAL
 
 
         //tháng
-        public static List<BaoCao> BaoCaoThang(DateTime dateTime)
+        public static List<BaoCao> BaoCaoThang(DateTime date)
         {
             DataBaseContext dbContext = new DataBaseContext();
             List<BaoCao> results = new List<BaoCao>();
 
-            DateTime endDate = dateTime.AddMonths(1);
+            DateTime dateTime = new DateTime(date.Year, date.Month, 1, 0, 0, 0);
 
+            DateTime endDate = dateTime.AddMonths(1);
 
             int i = 1;
             while (dateTime.Date != endDate.Date)
@@ -245,13 +248,14 @@ namespace ManagementSoftware.DAL
 
 
         //năm
-        public static List<BaoCao> BaoCaoNam(DateTime dateTime)
+        public static List<BaoCao> BaoCaoNam(DateTime date)
         {
             DataBaseContext dbContext = new DataBaseContext();
             List<BaoCao> results = new List<BaoCao>();
 
-            DateTime endDate = dateTime.AddYears(1);
+            DateTime dateTime = new DateTime(date.Year, 1, 1, 0, 0, 0);
 
+            DateTime endDate = dateTime.AddYears(1);
 
             int i = 1;
             while (dateTime.Date != endDate.Date)
