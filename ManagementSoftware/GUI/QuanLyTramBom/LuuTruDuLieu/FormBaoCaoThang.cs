@@ -169,7 +169,7 @@ namespace QuanLyTramBom
                             ws.Cell("A7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
                             ws.Cell("A7").Value = "THỜI GIAN";
                             ws.Cell("A7").Style.Font.Bold = true;
-                            ws.Cell("A7").Style.Font.FontSize= 15;
+                            ws.Cell("A7").Style.Font.FontSize= 14;
                             //chieu rong cell
                             #region 
                             var col1 = ws.Column("A");

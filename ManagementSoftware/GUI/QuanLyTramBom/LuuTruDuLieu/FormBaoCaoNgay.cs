@@ -190,7 +190,7 @@ namespace QuanLyTramBom
                             col7.Width = 20;
                             col8.Width = 20;
                             #endregion
-                            ws.Range("B7:G7").Style.Font.FontSize= 14;
+                            
                             ws.Range("B7:B8").Column(1).Merge();
                             ws.Cell("B7").Value = "MỰC NƯỚC\r\nBỂ HÚT";
                             ws.Cell("B7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
@@ -246,8 +246,8 @@ namespace QuanLyTramBom
                             var range = ws.Cell(10, 1).InsertData(a.AsEnumerable());
 
                             ws.Range("A10:G35").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                            ws.Range("A10:G35").Style.Font.FontSize= 13;
-                            ws.Range("A7:G7").Style.Font.FontSize = 12;
+                            ws.Range("A10:G35").Style.Font.FontSize= 14;
+                            ws.Range("B7:G7").Style.Font.FontSize = 12;
                             
                             double trungBinhBeXa = 0;
                             double trungBinhBeHut = 0;

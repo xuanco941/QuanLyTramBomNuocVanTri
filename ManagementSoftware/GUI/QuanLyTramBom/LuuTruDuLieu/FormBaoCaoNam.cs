@@ -293,7 +293,7 @@ namespace QuanLyTramBom
                             }
 
                             ws.Cell("B23").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / baocaonam.Count), 2, MidpointRounding.AwayFromZero));
-                            ws.Cell("C35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / baocaonam.Count), 2, MidpointRounding.AwayFromZero));
+                            ws.Cell("C23").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / baocaonam.Count), 2, MidpointRounding.AwayFromZero));
                             ws.Cell("D22").Value = TongThoiGianChayBom1.Hours.ToString() + "h " + TongThoiGianChayBom1.Minutes.ToString() + "min";
                             ws.Cell("E22").Value = TongThoiGianChayBom2.Hours.ToString() + "h " + TongThoiGianChayBom2.Minutes.ToString() + "min";
                             ws.Cell("F22").Value = TongThoiGianChayBom3.Hours.ToString() + "h " + TongThoiGianChayBom3.Minutes.ToString() + "min";
