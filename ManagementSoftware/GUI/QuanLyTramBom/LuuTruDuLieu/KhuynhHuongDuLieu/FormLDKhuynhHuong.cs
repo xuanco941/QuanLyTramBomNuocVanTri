@@ -364,7 +364,14 @@ namespace QuanLyTramBom
             }
             catch
             {
-                text = DateTime.FromOADate(point.X).ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.AwayFromZero));
+                try
+                {
+                    text = DateTime.FromOADate(point.X).ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.AwayFromZero));
+                }
+                catch
+                {
+
+                }
             }
             finally
             {

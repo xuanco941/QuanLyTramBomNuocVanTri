@@ -26,30 +26,31 @@ namespace QuanLyTramBom
 
             InitializeComponent();
             dateTimePicker1.ShowUpDown = true;
+            dataGridView1.RowTemplate.Height = 35;
 
         }
 
         List<BaoCao> list;
+        DateTime d;
 
         private void btnSerachBox_Click_1(object sender, EventArgs e)
         {
             // d là dữ liệu đầu vào
-            DateTime d = dateTimePicker1.Value;
+            d = dateTimePicker1.Value;
             //real Date thuong la no tu lay giờ hiện tại của minh
             // nên t bảo bạn nếu báo cáo ngày thì chuyển dữ liệu đầu vào về 0 giờ thì mới lấy đc đủ 24 tiếng, báo cáo tháng với năm thì kh ảnh hưởng
             // 
 
             list = DALBaoCao.BaoCaoNam(d);
 
-
             DataTable dt = new DataTable();
             dt.Columns.Add("THỜI GIAN");
-            dt.Columns.Add("MỰC NƯỚC BƠM XẢ (M)");
-            dt.Columns.Add("MỰC NƯỚC BƠM HÚT (M)");
-            dt.Columns.Add("THỜI GIAN CHẠY BƠM 1 (H)");
-            dt.Columns.Add("THỜI GIAN CHẠY BƠM 2 (H)");
-            dt.Columns.Add("THỜI GIAN CHẠY BƠM 3 (H)");
-            dt.Columns.Add("THỜI GIAN CHẠY BƠM 4 (H)");
+            dt.Columns.Add("MỰC NƯỚC\nBƠM XẢ\n(m)");
+            dt.Columns.Add("MỰC NƯỚC\nBƠM HÚT\n(m)");
+            dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 1\n(h)");
+            dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 2\n(h)");
+            dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 3\n(h)");
+            dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 4\n(h)");
 
             int i = 1;
             foreach (BaoCao item in list)
@@ -66,8 +67,6 @@ namespace QuanLyTramBom
                 dt.Rows.Add(i, xa, hut, tongTime1, tongTime2, tongTime3, tongTime4);
                 i++;
             }
-
-            dataGridView1.DataSource = dt;
 
 
             //tính tổng, tb
@@ -98,20 +97,29 @@ namespace QuanLyTramBom
                 TongThoiGianChayBom3 = TimeSpan.FromMinutes(minute5 + minute6);
                 TongThoiGianChayBom4 = TimeSpan.FromMinutes(minute8 + minute7);
 
-                TongThoiGianChayBom1 = TimeSpan.FromMinutes(minute2 + minute1);
-
             }
 
             //label
-            labelTBXa.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero));
+            labelTBXa.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)) + " m";
             // b dùng hàm Math.Round để giới hạn còn 2 chữ số sau thập phân
-            labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
+            labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)) + " m";
 
             labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + " h " + TongThoiGianChayBom1.Minutes.ToString() + " min";
             labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + " h " + TongThoiGianChayBom2.Minutes.ToString() + " min";
             labelTongTime3.Text = TongThoiGianChayBom3.Hours.ToString() + " h " + TongThoiGianChayBom3.Minutes.ToString() + " min";
             labelTongTime4.Text = TongThoiGianChayBom4.Hours.ToString() + " h " + TongThoiGianChayBom4.Minutes.ToString() + " min";
 
+
+
+            dt.Rows.Add("Tổng", "", "", TongThoiGianChayBom1.Hours.ToString() + " h " + TongThoiGianChayBom1.Minutes.ToString() + " min ", TongThoiGianChayBom2.Hours.ToString() + " h " + TongThoiGianChayBom2.Minutes.ToString() + " min ",
+TongThoiGianChayBom3.Hours.ToString() + " h  " + TongThoiGianChayBom3.Minutes.ToString() + " min ", TongThoiGianChayBom4.Hours.ToString() + " h " + TongThoiGianChayBom4.Minutes.ToString() + " min ");
+            dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)), "", "", "", "");
+            dataGridView1.DataSource = dt;
+
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                item.Cells[0].Style.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -167,9 +175,9 @@ namespace QuanLyTramBom
                                 ws.Cell("G9").Style.Font.Bold = true;
                                 ws.Cell("G9").Style.Font.FontSize = 14;
 
-                                ws.Cell("A5").Value = dateTimePicker1.Value;
+                                ws.Cell("A5").Value = d.ToString("yyyy");
                                 ws.Cell("A5").Style.Font.Underline = XLFontUnderlineValues.Double;
-                                ws.Cell("A7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                ws.Cell("A5").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
 
                                 ws.Cell("A22").Value = "TỔNG";
@@ -320,39 +328,48 @@ namespace QuanLyTramBom
 
         }
 
+        private void buttonPrinter_Click(object sender, EventArgs e)
+        {
+            if (list != null && list.Count > 0 && dataGridView1.Rows.Count > 0)
+            {
+                DGVPrinter printer = new DGVPrinter();
 
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    DGVPrinter printer = new DGVPrinter();
+                printer.Title = "CP2 Báo cáo năm";
+                printer.TitleFont = new System.Drawing.Font("Segoe UI", 16, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-        //    printer.Title = "CP2 Bao cao thang";
-        //    printer.TitleFont = new System.Drawing.Font("Segoe UI", 16, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                printer.SubTitle = d.ToString("yyyy", CultureInfo.InvariantCulture);
 
-        //    printer.SubTitle = "(" + DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture) + ")";
+                printer.SubTitleAlignment = StringAlignment.Near;
+                printer.SubTitleFont = new Font("Segoe UI", 9, FontStyle.Underline);
 
-        //    printer.TitleSpacing = 5;
+                printer.TitleSpacing = 5;
 
-        //    printer.SubTitleSpacing = 30;
+                printer.SubTitleSpacing = 4;
 
-        //    printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
 
-        //    printer.PageNumbers = true;
+                //printer.PageNumbers = true;
 
-        //    printer.PageNumberInHeader = true;
+                //printer.PageNumberInHeader = true;
 
-        //    printer.PorportionalColumns = true;
+                printer.PorportionalColumns = true;
 
-        //    printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.HeaderCellAlignment = StringAlignment.Near;
 
-        //    printer.Footer = "TPA";
+                //printer.Footer = "TPA";
 
-        //    printer.FooterSpacing = 15;
+                //printer.FooterSpacing = 5;
 
+                printer.ColumnWidth = DGVPrinter.ColumnWidthSetting.DataWidth;
+                printer.TableAlignment = DGVPrinter.Alignment.Center;
+                printer.KeepRowsTogether = true;
 
-
-
-
-        //    printer.PrintDataGridView(dataGridView1);
-        //}
+                printer.PrintDataGridView(dataGridView1);
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy dữ liệu để in báo cáo.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

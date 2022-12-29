@@ -21,7 +21,11 @@ namespace QuanLyTramBom
 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
+            //this.MaximizeBox = false;
+            //this.MinimizeBox= false;
+            //this.FormBorderStyle = FormBorderStyle.None;
             plcAlert = new PLCAlert();
+
 
 
 
@@ -38,6 +42,7 @@ namespace QuanLyTramBom
             floater.Controls.Add(clock1);
 
 
+            //printer
             Panel floater2 = CreateFloatingPanel(panel12);
             floater.BackColor = Color.Transparent;
             PictureBox pic = new PictureBox();
@@ -49,8 +54,16 @@ namespace QuanLyTramBom
             floater2.Location = new Point(1680, 4);
             floater2.Size = new Size(50, 50);
             floater2.Controls.Add(pic);
+            pic.Click += new System.EventHandler(this.btnButton_Click);
 
 
+        }
+
+
+        void btnButton_Click(object sender, EventArgs e)
+        {
+            FormInBaoCao form = new FormInBaoCao();
+            form.ShowDialog();
         }
 
         public Panel CreateFloatingPanel(Panel originalPanel)

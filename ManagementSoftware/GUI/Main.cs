@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSoftware.AutoAddData;
+using ManagementSoftware.GUI.QuanLyTramBom;
 using ManagementSoftware.GUI.Section;
 using QuanLyTramBom;
 
@@ -19,6 +20,7 @@ namespace ManagementSoftware.GUI
         public Main()
         {
             InitializeComponent();
+            this.FormBorderStyle= FormBorderStyle.None;
 
         }
 
@@ -98,8 +100,9 @@ namespace ManagementSoftware.GUI
 
         private void buttonDangXuat_Click(object sender, EventArgs e)
         {
-            Common.USERSESSION = null;
-            Application.Restart();
+            //Common.USERSESSION = null;
+            //Application.Restart();
+            new XacNhanDangXuat().ShowDialog();
         }
 
         private void buttonSetting_Click(object sender, EventArgs e)

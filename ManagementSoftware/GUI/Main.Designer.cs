@@ -67,7 +67,7 @@ namespace ManagementSoftware.GUI
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(176, 545);
+            this.panelMenu.Size = new System.Drawing.Size(176, 941);
             this.panelMenu.TabIndex = 0;
             // 
             // panelItemMenu
@@ -82,7 +82,7 @@ namespace ManagementSoftware.GUI
             this.panelItemMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelItemMenu.Location = new System.Drawing.Point(0, 76);
             this.panelItemMenu.Name = "panelItemMenu";
-            this.panelItemMenu.Size = new System.Drawing.Size(176, 469);
+            this.panelItemMenu.Size = new System.Drawing.Size(176, 865);
             this.panelItemMenu.TabIndex = 1;
             // 
             // buttonDangXuat
@@ -221,7 +221,7 @@ namespace ManagementSoftware.GUI
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(176, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(888, 545);
+            this.panelContainer.Size = new System.Drawing.Size(1319, 941);
             this.panelContainer.TabIndex = 3;
             // 
             // panelContent
@@ -232,7 +232,7 @@ namespace ManagementSoftware.GUI
             this.panelContent.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelContent.Location = new System.Drawing.Point(0, 76);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(888, 469);
+            this.panelContent.Size = new System.Drawing.Size(1319, 865);
             this.panelContent.TabIndex = 5;
             // 
             // pictureBox2
@@ -241,7 +241,7 @@ namespace ManagementSoftware.GUI
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(886, 467);
+            this.pictureBox2.Size = new System.Drawing.Size(1317, 863);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -252,7 +252,7 @@ namespace ManagementSoftware.GUI
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(888, 76);
+            this.panelHeader.Size = new System.Drawing.Size(1319, 76);
             this.panelHeader.TabIndex = 4;
             // 
             // tableLayoutPanel1
@@ -267,14 +267,14 @@ namespace ManagementSoftware.GUI
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(888, 76);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1319, 76);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panelAleart
             // 
             this.panelAleart.AutoScroll = true;
             this.panelAleart.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelAleart.Location = new System.Drawing.Point(465, 3);
+            this.panelAleart.Location = new System.Drawing.Point(896, 3);
             this.panelAleart.MaximumSize = new System.Drawing.Size(1260, 70);
             this.panelAleart.MinimumSize = new System.Drawing.Size(420, 70);
             this.panelAleart.Name = "panelAleart";
@@ -294,7 +294,7 @@ namespace ManagementSoftware.GUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1064, 545);
+            this.ClientSize = new System.Drawing.Size(1495, 941);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

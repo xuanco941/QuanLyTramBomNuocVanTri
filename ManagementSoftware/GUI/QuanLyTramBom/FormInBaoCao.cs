@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyTramBom;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,61 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         public FormInBaoCao()
         {
             InitializeComponent();
+           
+
+            FormBaoCaoNgay form = new FormBaoCaoNgay();
+            form.TopLevel = false;
+            panelContent.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach (Form item in panelContent.Controls)
+            {
+                item.Close();
+                item.Dispose();
+            }
+            FormBaoCaoNgay form = new FormBaoCaoNgay();
+            form.TopLevel = false;
+            panelContent.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+
+
+        }
+
+        private void buttonBaoCaoThang_Click(object sender, EventArgs e)
+        {
+            foreach (Form item in panelContent.Controls)
+            {
+                item.Close();
+                item.Dispose();
+            }
+            FormBaoCaoThang form = new FormBaoCaoThang();
+            form.TopLevel = false;
+            panelContent.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void buttonBaoCaoNam_Click(object sender, EventArgs e)
+        {
+            foreach (Form item in panelContent.Controls)
+            {
+                item.Close();
+                item.Dispose();
+            }
+            FormBaoCaoNam form = new FormBaoCaoNam();
+            form.TopLevel = false;
+            panelContent.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
     }
 }
