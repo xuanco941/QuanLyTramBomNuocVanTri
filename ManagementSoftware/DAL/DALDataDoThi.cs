@@ -59,5 +59,59 @@ namespace ManagementSoftware.DAL
 
             return dataDoThi;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public List<DataDoThi>? GetListDataHistory(string tinHieu, double checkAnalogOrDigital,DateTime start, DateTime end)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+
+
+            List<DataDoThi>? dataDoThi = new List<DataDoThi>();
+
+            if (checkAnalogOrDigital > 1)
+            {
+                List<Analog> analogs = dbContext.Analogs.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
+                if (analogs != null && analogs.Count > 0)
+                {
+                    foreach (var item in analogs)
+                    {
+                        DataDoThi data = new DataDoThi();
+                        data.time = item.ThoiGian;
+                        data.value = item.GiaTriDong;
+                        dataDoThi.Add(data);
+                    }
+                }
+            }
+            else
+            {
+                List<Digital> analogs = dbContext.Digitals.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
+                if (analogs != null && analogs.Count > 0)
+                {
+                    foreach (var item in analogs)
+                    {
+                        DataDoThi data = new DataDoThi();
+                        data.time = item.ThoiGian;
+                        data.value = item.TrangThai == true ? 1 : 0;
+                    }
+                }
+            }
+
+
+
+
+            return dataDoThi;
+        }
     }
 }

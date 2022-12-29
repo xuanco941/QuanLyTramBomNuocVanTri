@@ -3,6 +3,7 @@ using ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong;
 using ManagementSoftware.Models.TramBomNuoc;
 using Syncfusion.Drawing;
 using Syncfusion.Windows.Forms.Chart;
+using Syncfusion.Windows.Forms.Tools;
 using Syncfusion.XPS;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ManagementSoftware.GUI.QuanLyTramBom
 {
@@ -85,13 +87,23 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         void SetChuThich(XuHuongVaTinHieu x)
         {
+            new Thread(() =>
+            {
+                if (IsHandleCreated)
+                {
+                    BeginInvoke(() =>
+                    {
+                        FormItemChuThich form = new FormItemChuThich(x);
+                        form.TopLevel = false;
+                        panelChuThich.Controls.Add(form);
+                        form.FormBorderStyle = FormBorderStyle.None;
+                        form.Dock = DockStyle.Top;
+                        form.Show();
+                    });
+                    return;
+                }
+            }).Start();
 
-            FormItemChuThich form = new FormItemChuThich(x);
-            form.TopLevel = false;
-            panelChuThich.Controls.Add(form);
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Top;
-            form.Show();
 
 
         }

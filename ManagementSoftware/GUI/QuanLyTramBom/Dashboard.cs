@@ -47,7 +47,7 @@ namespace QuanLyTramBom
             pic.MinimumSize = new Size(50, 50);
             pic.Size = new Size(50, 50);
             floater2.Location = new Point(1680, 4);
-            floater2.Size = new Size(65, 65);
+            floater2.Size = new Size(50, 50);
             floater2.Controls.Add(pic);
 
 

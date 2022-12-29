@@ -19,13 +19,16 @@ namespace QuanLyTramBom
     public partial class FormLDKhuynhHuong : Form
     {
         List<XuHuongVaTinHieu>? listXuHuong;
-        DateTime? timeStart;
-        DateTime? timeEnd;
-        string? timeInterval;
+        DateTime timeStart;
+        DateTime timeEnd;
+        ChartDateTimeIntervalType typeInterval;
+
+        double numberInterval;
+
         public FormLDKhuynhHuong()
         {
             InitializeComponent();
-            chartControl1.Title.Text = "Khuynh Hướng Thời Gian Thực";
+            chartControl1.Title.Text = "Lịch Sử Khuynh Hướng";
             this.chartControl1.Title.Font = new System.Drawing.Font("Candara", 20F, System.Drawing.FontStyle.Bold);
 
             this.chartControl1.Crosshair.Visible = true;
@@ -33,7 +36,10 @@ namespace QuanLyTramBom
 
             chartControl1.ShowToolbar = true;
 
-            this.chartControl1.PrimaryXAxis.IntervalType = ChartDateTimeIntervalType.Minutes;
+
+
+            this.chartControl1.PrimaryXAxis.ZoomRange(new DoubleRange(1, 5));
+
 
             this.chartControl1.PrimaryXAxis.LabelIntersectAction = ChartLabelIntersectAction.Wrap;
 
@@ -41,12 +47,18 @@ namespace QuanLyTramBom
 
             this.chartControl1.PrimaryXAxis.RangeType = ChartAxisRangeType.Set;
 
-            this.chartControl1.PrimaryXAxis.DateTimeInterval.Type = ChartDateTimeIntervalType.Minutes;
-            DateTime end = DateTime.Now;
-            DateTime start = end.AddHours(-1);
-            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 3.5, ChartDateTimeIntervalType.Minutes);
-
             this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yyyy";
+
+
+            comboBoxTimeInterval.DataSource = new List<string>() { "1 min", "1 hour", "1 day" };
+
+            timeEnd = DateTime.Now;
+            timeStart = timeEnd.AddDays(-1);
+            typeInterval = ChartDateTimeIntervalType.Hours;
+            numberInterval = 6;
+
+            UpdateChart();
+
         }
         //Chart Series
         Syncfusion.Windows.Forms.Chart.ChartSeries? series1;
@@ -71,13 +83,23 @@ namespace QuanLyTramBom
 
         void SetChuThich(XuHuongVaTinHieu x)
         {
+            new Thread(() =>
+            {
+                if (IsHandleCreated)
+                {
+                    BeginInvoke(() =>
+                    {
+                        FormItemChuThich form = new FormItemChuThich(x);
+                        form.TopLevel = false;
+                        panelChuThich.Controls.Add(form);
+                        form.FormBorderStyle = FormBorderStyle.None;
+                        form.Dock = DockStyle.Top;
+                        form.Show();
+                    });
+                    return;
+                }
+            }).Start();
 
-            FormItemChuThich form = new FormItemChuThich(x);
-            form.TopLevel = false;
-            panelChuThich.Controls.Add(form);
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Top;
-            form.Show();
 
 
         }
@@ -93,6 +115,8 @@ namespace QuanLyTramBom
         }
         async void Set(string name)
         {
+            SetTime();
+
             List<FormItemChuThich> l = new List<FormItemChuThich>();
             foreach (FormItemChuThich i in panelChuThich.Controls)
             {
@@ -224,7 +248,7 @@ namespace QuanLyTramBom
         {
             await wait(series);
             double a = (double)series.Tag;
-            List<DataDoThi>? list = new DALDataDoThi().GetListDataOn1Hour(series.Text, a);
+            List<DataDoThi>? list = new DALDataDoThi().GetListDataHistory(series.Text, a, timeStart, timeEnd);
             if (list != null && list.Count > 0)
             {
                 foreach (DataDoThi item in list)
@@ -235,15 +259,31 @@ namespace QuanLyTramBom
             chartControl1.Series.Add(series);
 
         }
-
         async void UpdateChart()
         {
+            TimeSpan khoangCachTime = timeEnd - timeStart;
+
+            if (typeInterval == ChartDateTimeIntervalType.Minutes)
+            {
+                double x = khoangCachTime.TotalMinutes;
+                numberInterval = 120;
+            }
+            else if (typeInterval == ChartDateTimeIntervalType.Hours)
+            {
+                double x = khoangCachTime.TotalMinutes;
+                numberInterval = 48;
+            }
+            else if (typeInterval == ChartDateTimeIntervalType.Days)
+            {
+                double x = khoangCachTime.TotalMinutes;
+                numberInterval = 2;
+            }
+
+            this.chartControl1.PrimaryXAxis.DateTimeInterval.Type = typeInterval;
+            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(timeStart, timeEnd, numberInterval, typeInterval);
+            this.chartControl1.PrimaryXAxis.IntervalType = typeInterval;
 
 
-            DateTime end = DateTime.Now;
-            DateTime start = end.AddHours(-1);
-
-            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 3.5, ChartDateTimeIntervalType.Minutes);
 
             if (series1 != null)
             {
@@ -279,6 +319,38 @@ namespace QuanLyTramBom
             }
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SetTime();
+            UpdateChart();
+        }
+
+
+        void SetTime()
+        {
+            timeStart = dateTimePickerTuNgay.Value;
+            timeEnd = dateTimePickerDenNgay.Value;
+            if (comboBoxTimeInterval.Text == "1 min")
+            {
+                typeInterval = ChartDateTimeIntervalType.Minutes;
+            }
+            else if (comboBoxTimeInterval.Text == "1 hour")
+            {
+                typeInterval = ChartDateTimeIntervalType.Hours;
+            }
+            else if (comboBoxTimeInterval.Text == "1 day")
+            {
+                typeInterval = ChartDateTimeIntervalType.Days;
+            }
+        }
+
+
+
+
+
+
+
         private void chartControl1_MouseMove_1(object sender, MouseEventArgs e)
         {
             ChartPoint point = this.chartControl1.ChartArea.GetValueByPoint(new Point(e.X, e.Y));
@@ -313,5 +385,6 @@ namespace QuanLyTramBom
                 await CloseFormItem(l);
             }
         }
+
     }
 }

@@ -35,10 +35,10 @@
             this.labelHienThiNhom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxTimeInterval = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerTuNgay = new System.Windows.Forms.DateTimePicker();
             this.btnThietLap = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDenNgay = new System.Windows.Forms.DateTimePicker();
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.panelChuThich = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -52,10 +52,10 @@
             this.panel2.Controls.Add(this.labelHienThiNhom);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.comboBoxTimeInterval);
+            this.panel2.Controls.Add(this.dateTimePickerTuNgay);
             this.panel2.Controls.Add(this.btnThietLap);
-            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.dateTimePickerDenNgay);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -79,6 +79,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxTenKhuynhHuong
             // 
@@ -138,33 +139,32 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Đến ngày";
             // 
-            // comboBox1
+            // comboBoxTimeInterval
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.comboBoxTimeInterval.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxTimeInterval.AutoCompleteCustomSource.AddRange(new string[] {
             "1 Min",
             "1 Hours",
             "1 Day"});
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1 Min",
-            "1 Hours",
-            "1 Day"});
-            this.comboBox1.Location = new System.Drawing.Point(701, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(70, 23);
-            this.comboBox1.TabIndex = 20;
+            this.comboBoxTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTimeInterval.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxTimeInterval.FormattingEnabled = true;
+            this.comboBoxTimeInterval.Location = new System.Drawing.Point(670, 3);
+            this.comboBoxTimeInterval.Name = "comboBoxTimeInterval";
+            this.comboBoxTimeInterval.Size = new System.Drawing.Size(145, 29);
+            this.comboBoxTimeInterval.TabIndex = 20;
             // 
-            // dateTimePicker1
+            // dateTimePickerTuNgay
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy   HH:m";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(505, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(143, 23);
-            this.dateTimePicker1.TabIndex = 19;
-            this.dateTimePicker1.Value = new System.DateTime(2022, 12, 27, 23, 17, 45, 0);
+            this.dateTimePickerTuNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerTuNgay.CustomFormat = "dd/MM/yyyy   HH:m";
+            this.dateTimePickerTuNgay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerTuNgay.Location = new System.Drawing.Point(505, 3);
+            this.dateTimePickerTuNgay.Name = "dateTimePickerTuNgay";
+            this.dateTimePickerTuNgay.Size = new System.Drawing.Size(143, 25);
+            this.dateTimePickerTuNgay.TabIndex = 19;
+            this.dateTimePickerTuNgay.Value = new System.DateTime(2022, 12, 27, 23, 17, 45, 0);
             // 
             // btnThietLap
             // 
@@ -184,16 +184,17 @@
             this.btnThietLap.UseVisualStyleBackColor = false;
             this.btnThietLap.Click += new System.EventHandler(this.btnThietLap_Click);
             // 
-            // dateTimePicker2
+            // dateTimePickerDenNgay
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy   HH:m";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(505, 31);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(143, 23);
-            this.dateTimePicker2.TabIndex = 21;
-            this.dateTimePicker2.Value = new System.DateTime(2022, 12, 27, 23, 10, 49, 0);
+            this.dateTimePickerDenNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerDenNgay.CustomFormat = "dd/MM/yyyy   HH:m";
+            this.dateTimePickerDenNgay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDenNgay.Location = new System.Drawing.Point(505, 31);
+            this.dateTimePickerDenNgay.Name = "dateTimePickerDenNgay";
+            this.dateTimePickerDenNgay.Size = new System.Drawing.Size(143, 25);
+            this.dateTimePickerDenNgay.TabIndex = 21;
+            this.dateTimePickerDenNgay.Value = new System.DateTime(2022, 12, 27, 23, 10, 49, 0);
             // 
             // chartControl1
             // 
@@ -258,10 +259,10 @@
 
         private Panel panel2;
         private Button btnThietLap;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePickerTuNgay;
         private Label label1;
-        private DateTimePicker dateTimePicker2;
-        private ComboBox comboBox1;
+        private DateTimePicker dateTimePickerDenNgay;
+        private ComboBox comboBoxTimeInterval;
         private Label label2;
         private Label labelHienThiNhom;
         private LW_PhanMemBaoGia.MyControls.TextBoxT textBoxTenKhuynhHuong;
