@@ -213,16 +213,6 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BomChinh2Xanh1 {
-            get {
-                object obj = ResourceManager.GetObject("BomChinh2Xanh1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BomChinh3Do {
             get {
                 object obj = ResourceManager.GetObject("BomChinh3Do", resourceCulture);
@@ -243,29 +233,9 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BomChinh3Xanh1 {
-            get {
-                object obj = ResourceManager.GetObject("BomChinh3Xanh1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BomChinh4Do {
             get {
                 object obj = ResourceManager.GetObject("BomChinh4Do", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap BomChinh4Do1 {
-            get {
-                object obj = ResourceManager.GetObject("BomChinh4Do1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

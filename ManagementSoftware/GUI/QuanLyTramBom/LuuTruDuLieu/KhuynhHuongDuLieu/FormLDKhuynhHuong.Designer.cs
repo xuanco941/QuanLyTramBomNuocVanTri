@@ -67,10 +67,10 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Image = global::ManagementSoftware.Properties.Resources.icons8_alarm_clock_20;
-            this.button1.Location = new System.Drawing.Point(670, 29);
+            this.button1.Location = new System.Drawing.Point(670, 31);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 26);
@@ -119,11 +119,11 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(432, 6);
+            this.label1.Location = new System.Drawing.Point(425, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 19);
+            this.label1.Size = new System.Drawing.Size(85, 25);
             this.label1.TabIndex = 22;
             this.label1.Text = "Từ ngày";
             // 
@@ -131,11 +131,11 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(432, 34);
+            this.label2.Location = new System.Drawing.Point(425, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 23;
             this.label2.Text = "Đến ngày";
             // 
@@ -147,22 +147,23 @@
             "1 Hours",
             "1 Day"});
             this.comboBoxTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTimeInterval.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxTimeInterval.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTimeInterval.FormattingEnabled = true;
             this.comboBoxTimeInterval.Location = new System.Drawing.Point(670, 3);
             this.comboBoxTimeInterval.Name = "comboBoxTimeInterval";
-            this.comboBoxTimeInterval.Size = new System.Drawing.Size(145, 29);
+            this.comboBoxTimeInterval.Size = new System.Drawing.Size(145, 33);
             this.comboBoxTimeInterval.TabIndex = 20;
             // 
             // dateTimePickerTuNgay
             // 
             this.dateTimePickerTuNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerTuNgay.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerTuNgay.CustomFormat = "dd/MM/yyyy   HH:m";
-            this.dateTimePickerTuNgay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerTuNgay.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerTuNgay.Location = new System.Drawing.Point(505, 3);
             this.dateTimePickerTuNgay.Name = "dateTimePickerTuNgay";
-            this.dateTimePickerTuNgay.Size = new System.Drawing.Size(143, 25);
+            this.dateTimePickerTuNgay.Size = new System.Drawing.Size(152, 32);
             this.dateTimePickerTuNgay.TabIndex = 19;
             this.dateTimePickerTuNgay.Value = new System.DateTime(2022, 12, 27, 23, 17, 45, 0);
             // 
@@ -188,11 +189,11 @@
             // 
             this.dateTimePickerDenNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerDenNgay.CustomFormat = "dd/MM/yyyy   HH:m";
-            this.dateTimePickerDenNgay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerDenNgay.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDenNgay.Location = new System.Drawing.Point(505, 31);
+            this.dateTimePickerDenNgay.Location = new System.Drawing.Point(505, 34);
             this.dateTimePickerDenNgay.Name = "dateTimePickerDenNgay";
-            this.dateTimePickerDenNgay.Size = new System.Drawing.Size(143, 25);
+            this.dateTimePickerDenNgay.Size = new System.Drawing.Size(152, 32);
             this.dateTimePickerDenNgay.TabIndex = 21;
             this.dateTimePickerDenNgay.Value = new System.DateTime(2022, 12, 27, 23, 10, 49, 0);
             // 
@@ -214,7 +215,7 @@
             this.chartControl1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.chartControl1.PrimaryYAxis.Margin = true;
             this.chartControl1.ShowToolTips = true;
-            this.chartControl1.Size = new System.Drawing.Size(884, 424);
+            this.chartControl1.Size = new System.Drawing.Size(884, 421);
             this.chartControl1.TabIndex = 20;
             this.chartControl1.Text = "chartControl1";
             // 
@@ -232,10 +233,10 @@
             this.panelChuThich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelChuThich.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelChuThich.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.panelChuThich.Location = new System.Drawing.Point(0, 484);
+            this.panelChuThich.Location = new System.Drawing.Point(0, 481);
             this.panelChuThich.Name = "panelChuThich";
             this.panelChuThich.Padding = new System.Windows.Forms.Padding(5, 2, 2, 2);
-            this.panelChuThich.Size = new System.Drawing.Size(884, 117);
+            this.panelChuThich.Size = new System.Drawing.Size(884, 120);
             this.panelChuThich.TabIndex = 21;
             // 
             // FormLDKhuynhHuong

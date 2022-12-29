@@ -455,7 +455,7 @@
             this.gridLayout4.SetParticipateInLayout(this.TaiCho4, true);
             this.TaiCho4.Size = new System.Drawing.Size(97, 25);
             this.TaiCho4.TabIndex = 4;
-            this.TaiCho4.Text = "Tại chỗ";
+            this.TaiCho4.Text = "TẠI CHỖ";
             this.TaiCho4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TuXa4
@@ -468,7 +468,7 @@
             this.gridLayout4.SetParticipateInLayout(this.TuXa4, true);
             this.TuXa4.Size = new System.Drawing.Size(97, 25);
             this.TuXa4.TabIndex = 3;
-            this.TuXa4.Text = "Từ xa";
+            this.TuXa4.Text = "TỪ XA";
             this.TuXa4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SanSang4
@@ -481,7 +481,7 @@
             this.gridLayout4.SetParticipateInLayout(this.SanSang4, true);
             this.SanSang4.Size = new System.Drawing.Size(97, 25);
             this.SanSang4.TabIndex = 2;
-            this.SanSang4.Text = "Sẵn sàng";
+            this.SanSang4.Text = "SẴN SÀNG";
             this.SanSang4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PDKTT4
@@ -507,7 +507,7 @@
             this.gridLayout4.SetParticipateInLayout(this.PDien4, true);
             this.PDien4.Size = new System.Drawing.Size(97, 25);
             this.PDien4.TabIndex = 0;
-            this.PDien4.Text = "P.Điện";
+            this.PDien4.Text = "P.ĐIỆN";
             this.PDien4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel18
@@ -575,7 +575,7 @@
             this.gridLayout2.SetParticipateInLayout(this.TaiCho2, true);
             this.TaiCho2.Size = new System.Drawing.Size(97, 25);
             this.TaiCho2.TabIndex = 4;
-            this.TaiCho2.Text = "Tại chỗ";
+            this.TaiCho2.Text = "TẠI CHỖ";
             this.TaiCho2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TuXa2
@@ -588,7 +588,7 @@
             this.gridLayout2.SetParticipateInLayout(this.TuXa2, true);
             this.TuXa2.Size = new System.Drawing.Size(97, 25);
             this.TuXa2.TabIndex = 3;
-            this.TuXa2.Text = "Từ xa";
+            this.TuXa2.Text = "TỪ XA";
             this.TuXa2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SanSang2
@@ -601,7 +601,7 @@
             this.gridLayout2.SetParticipateInLayout(this.SanSang2, true);
             this.SanSang2.Size = new System.Drawing.Size(97, 25);
             this.SanSang2.TabIndex = 2;
-            this.SanSang2.Text = "Sẵn sàng";
+            this.SanSang2.Text = "SẴN SÀNG";
             this.SanSang2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PDKTT2
@@ -627,7 +627,7 @@
             this.gridLayout2.SetParticipateInLayout(this.PDien2, true);
             this.PDien2.Size = new System.Drawing.Size(97, 25);
             this.PDien2.TabIndex = 0;
-            this.PDien2.Text = "P.Điện";
+            this.PDien2.Text = "P.ĐIỆN";
             this.PDien2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel15
@@ -695,7 +695,7 @@
             this.gridLayout3.SetParticipateInLayout(this.TaiCho3, true);
             this.TaiCho3.Size = new System.Drawing.Size(97, 25);
             this.TaiCho3.TabIndex = 3;
-            this.TaiCho3.Text = "Tại chỗ";
+            this.TaiCho3.Text = "TẠI CHỖ";
             this.TaiCho3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TuXa3
@@ -708,7 +708,7 @@
             this.gridLayout3.SetParticipateInLayout(this.TuXa3, true);
             this.TuXa3.Size = new System.Drawing.Size(97, 25);
             this.TuXa3.TabIndex = 4;
-            this.TuXa3.Text = "Từ xa";
+            this.TuXa3.Text = "TỪ XA";
             this.TuXa3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SanSang3
@@ -721,7 +721,7 @@
             this.gridLayout3.SetParticipateInLayout(this.SanSang3, true);
             this.SanSang3.Size = new System.Drawing.Size(97, 25);
             this.SanSang3.TabIndex = 1;
-            this.SanSang3.Text = "Sẵn sàng";
+            this.SanSang3.Text = "SẴN SÀNG";
             this.SanSang3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PDKTT3
@@ -747,7 +747,7 @@
             this.gridLayout3.SetParticipateInLayout(this.PDien3, true);
             this.PDien3.Size = new System.Drawing.Size(97, 25);
             this.PDien3.TabIndex = 0;
-            this.PDien3.Text = "P.Điện";
+            this.PDien3.Text = "P.ĐIỆN";
             this.PDien3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel12
@@ -806,7 +806,7 @@
             this.gridLayout1.SetParticipateInLayout(this.TaiCho1, true);
             this.TaiCho1.Size = new System.Drawing.Size(97, 25);
             this.TaiCho1.TabIndex = 4;
-            this.TaiCho1.Text = "Tại chỗ";
+            this.TaiCho1.Text = "TẠI CHỖ";
             this.TaiCho1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TuXa1
@@ -819,7 +819,7 @@
             this.gridLayout1.SetParticipateInLayout(this.TuXa1, true);
             this.TuXa1.Size = new System.Drawing.Size(97, 25);
             this.TuXa1.TabIndex = 3;
-            this.TuXa1.Text = "Từ xa";
+            this.TuXa1.Text = "TỪ XA";
             this.TuXa1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SanSang1
@@ -832,7 +832,7 @@
             this.gridLayout1.SetParticipateInLayout(this.SanSang1, true);
             this.SanSang1.Size = new System.Drawing.Size(97, 25);
             this.SanSang1.TabIndex = 2;
-            this.SanSang1.Text = "Sẵn sàng";
+            this.SanSang1.Text = "SẴN SÀNG";
             this.SanSang1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PDKTT1
@@ -858,7 +858,7 @@
             this.gridLayout1.SetParticipateInLayout(this.PDien1, true);
             this.PDien1.Size = new System.Drawing.Size(97, 25);
             this.PDien1.TabIndex = 0;
-            this.PDien1.Text = "P.Điện";
+            this.PDien1.Text = "P.ĐIỆN";
             this.PDien1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel8
@@ -887,10 +887,10 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label24.Location = new System.Drawing.Point(379, 445);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(129, 19);
+            this.label24.Size = new System.Drawing.Size(174, 25);
             this.label24.TabIndex = 52;
             this.label24.Text = "BĂNG TẢI THẲNG";
             // 
@@ -898,7 +898,7 @@
             // 
             this.TinHieuMayBom4.BackColor = System.Drawing.Color.Transparent;
             this.TinHieuMayBom4.Image = global::ManagementSoftware.Properties.Resources.BomChinh4Do;
-            this.TinHieuMayBom4.Location = new System.Drawing.Point(686, 363);
+            this.TinHieuMayBom4.Location = new System.Drawing.Point(686, 366);
             this.TinHieuMayBom4.Name = "TinHieuMayBom4";
             this.TinHieuMayBom4.Size = new System.Drawing.Size(38, 30);
             this.TinHieuMayBom4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -909,7 +909,7 @@
             // 
             this.TinHieuMayBom3.BackColor = System.Drawing.Color.Transparent;
             this.TinHieuMayBom3.Image = global::ManagementSoftware.Properties.Resources.BomChinh3Xanh;
-            this.TinHieuMayBom3.Location = new System.Drawing.Point(686, 312);
+            this.TinHieuMayBom3.Location = new System.Drawing.Point(686, 314);
             this.TinHieuMayBom3.Name = "TinHieuMayBom3";
             this.TinHieuMayBom3.Size = new System.Drawing.Size(38, 30);
             this.TinHieuMayBom3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -920,7 +920,7 @@
             // 
             this.TinHieuMayBom2.BackColor = System.Drawing.Color.Transparent;
             this.TinHieuMayBom2.Image = global::ManagementSoftware.Properties.Resources.BomChinh2Xanh;
-            this.TinHieuMayBom2.Location = new System.Drawing.Point(686, 261);
+            this.TinHieuMayBom2.Location = new System.Drawing.Point(686, 263);
             this.TinHieuMayBom2.Name = "TinHieuMayBom2";
             this.TinHieuMayBom2.Size = new System.Drawing.Size(38, 30);
             this.TinHieuMayBom2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -931,7 +931,7 @@
             // 
             this.TinHieuMayBom1.BackColor = System.Drawing.Color.Transparent;
             this.TinHieuMayBom1.Image = global::ManagementSoftware.Properties.Resources.M10097___Đỏ;
-            this.TinHieuMayBom1.Location = new System.Drawing.Point(686, 210);
+            this.TinHieuMayBom1.Location = new System.Drawing.Point(686, 212);
             this.TinHieuMayBom1.Name = "TinHieuMayBom1";
             this.TinHieuMayBom1.Size = new System.Drawing.Size(38, 30);
             this.TinHieuMayBom1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -942,10 +942,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(730, 457);
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.Location = new System.Drawing.Point(728, 457);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(51, 19);
+            this.label23.Size = new System.Drawing.Size(58, 21);
             this.label23.TabIndex = 47;
             this.label23.Text = "NƯỚC";
             // 
@@ -953,10 +953,10 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label22.Location = new System.Drawing.Point(325, 499);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 19);
+            this.label22.Size = new System.Drawing.Size(149, 25);
             this.label22.TabIndex = 46;
             this.label22.Text = "BĂNG TẢI XIÊN";
             // 
@@ -964,10 +964,10 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(304, 420);
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.Location = new System.Drawing.Point(304, 410);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(75, 19);
+            this.label21.Size = new System.Drawing.Size(98, 25);
             this.label21.TabIndex = 45;
             this.label21.Text = "CÀO RÁC ";
             // 
@@ -975,10 +975,10 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(141, 273);
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(141, 269);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 19);
+            this.label17.Size = new System.Drawing.Size(114, 28);
             this.label17.TabIndex = 44;
             this.label17.Text = "KÊNH HÚT";
             // 
@@ -986,10 +986,10 @@
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(140, 260);
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(140, 254);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(92, 19);
+            this.label20.Size = new System.Drawing.Size(131, 28);
             this.label20.TabIndex = 43;
             this.label20.Text = "MỰC NƯỚC ";
             // 
@@ -997,10 +997,10 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(978, 276);
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.Location = new System.Drawing.Point(978, 269);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(70, 19);
+            this.label19.Size = new System.Drawing.Size(100, 28);
             this.label19.TabIndex = 42;
             this.label19.Text = "KÊNH XẢ";
             // 
@@ -1008,10 +1008,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(977, 263);
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(977, 254);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(92, 19);
+            this.label18.Size = new System.Drawing.Size(131, 28);
             this.label18.TabIndex = 41;
             this.label18.Text = "MỰC NƯỚC ";
             // 
@@ -1019,10 +1019,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(1023, 570);
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(1003, 568);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(93, 19);
+            this.label16.Size = new System.Drawing.Size(125, 25);
             this.label16.TabIndex = 39;
             this.label16.Text = "BƠM THOÁT";
             // 
@@ -1031,7 +1031,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(1117, 477);
+            this.label15.Location = new System.Drawing.Point(1117, 479);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 15);
             this.label15.TabIndex = 38;
@@ -1041,10 +1041,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(705, 543);
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(698, 541);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 15);
+            this.label14.Size = new System.Drawing.Size(103, 21);
             this.label14.TabIndex = 37;
             this.label14.Text = "BƠM CHÍNH";
             // 
@@ -1052,10 +1052,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(582, 526);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(578, 526);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(116, 19);
+            this.label13.Size = new System.Drawing.Size(131, 21);
             this.label13.TabIndex = 36;
             this.label13.Text = "BỂ CHỨA NƯỚC";
             // 
@@ -1063,10 +1063,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.Location = new System.Drawing.Point(715, 445);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 19);
+            this.label12.Size = new System.Drawing.Size(85, 21);
             this.label12.TabIndex = 35;
             this.label12.Text = "BÌNH CẤP";
             // 
@@ -1074,10 +1074,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(845, 515);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(825, 500);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 19);
+            this.label11.Size = new System.Drawing.Size(100, 25);
             this.label11.TabIndex = 34;
             this.label11.Text = "BƠM MỒI";
             // 
@@ -1098,7 +1098,7 @@
             this.BomThoat2.Image = ((System.Drawing.Image)(resources.GetObject("BomThoat2.Image")));
             this.BomThoat2.Location = new System.Drawing.Point(1062, 528);
             this.BomThoat2.Name = "BomThoat2";
-            this.BomThoat2.Size = new System.Drawing.Size(26, 25);
+            this.BomThoat2.Size = new System.Drawing.Size(26, 24);
             this.BomThoat2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BomThoat2.TabIndex = 32;
             this.BomThoat2.TabStop = false;

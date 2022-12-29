@@ -62,7 +62,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1252, 40);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1252, 32);
             this.tableLayoutPanel3.TabIndex = 16;
             // 
             // buttonBaoCaoNgay
@@ -75,7 +75,7 @@
             this.buttonBaoCaoNgay.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoNgay.Location = new System.Drawing.Point(628, 4);
             this.buttonBaoCaoNgay.Name = "buttonBaoCaoNgay";
-            this.buttonBaoCaoNgay.Size = new System.Drawing.Size(201, 32);
+            this.buttonBaoCaoNgay.Size = new System.Drawing.Size(201, 24);
             this.buttonBaoCaoNgay.TabIndex = 14;
             this.buttonBaoCaoNgay.Text = "Báo cáo ngày";
             this.buttonBaoCaoNgay.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             this.buttonBaoCaoThang.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoThang.Location = new System.Drawing.Point(836, 4);
             this.buttonBaoCaoThang.Name = "buttonBaoCaoThang";
-            this.buttonBaoCaoThang.Size = new System.Drawing.Size(201, 32);
+            this.buttonBaoCaoThang.Size = new System.Drawing.Size(201, 24);
             this.buttonBaoCaoThang.TabIndex = 13;
             this.buttonBaoCaoThang.Text = "Báo cáo tháng";
             this.buttonBaoCaoThang.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             this.buttonLuuTruLoi.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonLuuTruLoi.Location = new System.Drawing.Point(420, 4);
             this.buttonLuuTruLoi.Name = "buttonLuuTruLoi";
-            this.buttonLuuTruLoi.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuuTruLoi.Size = new System.Drawing.Size(201, 24);
             this.buttonLuuTruLoi.TabIndex = 12;
             this.buttonLuuTruLoi.Text = "Lưu trữ lỗi";
             this.buttonLuuTruLoi.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
             this.buttonLuocSuKhuynhHuong.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonLuocSuKhuynhHuong.Location = new System.Drawing.Point(4, 4);
             this.buttonLuocSuKhuynhHuong.Name = "buttonLuocSuKhuynhHuong";
-            this.buttonLuocSuKhuynhHuong.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuocSuKhuynhHuong.Size = new System.Drawing.Size(201, 24);
             this.buttonLuocSuKhuynhHuong.TabIndex = 11;
             this.buttonLuocSuKhuynhHuong.Text = "Lược sử khuynh hướng";
             this.buttonLuocSuKhuynhHuong.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@
             this.buttonBaoCaoNam.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoNam.Location = new System.Drawing.Point(1044, 4);
             this.buttonBaoCaoNam.Name = "buttonBaoCaoNam";
-            this.buttonBaoCaoNam.Size = new System.Drawing.Size(204, 32);
+            this.buttonBaoCaoNam.Size = new System.Drawing.Size(204, 24);
             this.buttonBaoCaoNam.TabIndex = 9;
             this.buttonBaoCaoNam.Text = "Báo cáo năm";
             this.buttonBaoCaoNam.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@
             this.buttonLuuTruHoatDong.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonLuuTruHoatDong.Location = new System.Drawing.Point(212, 4);
             this.buttonLuuTruHoatDong.Name = "buttonLuuTruHoatDong";
-            this.buttonLuuTruHoatDong.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuuTruHoatDong.Size = new System.Drawing.Size(201, 24);
             this.buttonLuuTruHoatDong.TabIndex = 10;
             this.buttonLuuTruHoatDong.Text = "Lưu trữ hoạt động";
             this.buttonLuuTruHoatDong.UseVisualStyleBackColor = true;
@@ -164,9 +164,9 @@
             // panelContent
             // 
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 40);
+            this.panelContent.Location = new System.Drawing.Point(0, 32);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1252, 452);
+            this.panelContent.Size = new System.Drawing.Size(1252, 460);
             this.panelContent.TabIndex = 17;
             // 
             // FormQuanLyLuuTruDuLieu

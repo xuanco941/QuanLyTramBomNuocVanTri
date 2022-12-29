@@ -35,10 +35,11 @@ namespace QuanLyTramBom
             Panel floater = CreateFloatingPanel(panel4);
             floater.BackColor = Color.Transparent;
             Clock clock1 = new Clock();
+            clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Digital;
             clock1.MinimumSize = new Size(65, 65);
-            clock1.Size = new System.Drawing.Size(65, 65);
-            floater.Location = new Point(1830, 1);
-            floater.Size = new Size(65, 65);
+            clock1.Size = new System.Drawing.Size(120, 90);
+            floater.Location = new Point(1780, 1);
+            floater.Size = new Size(120, 60);
             floater.Controls.Add(clock1);
 
 
