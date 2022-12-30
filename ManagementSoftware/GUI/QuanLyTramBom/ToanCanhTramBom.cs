@@ -252,14 +252,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 }
                 else
                 {
-                    lb2.BackColor = Color.Red;
                     lb1.BackColor = Color.Silver;
+                    lb2.BackColor = Color.Red;
                 }
             }
             else
             {
                 lb1.BackColor = Color.Silver;
-                lb2.BackColor = Color.Red;
+                lb2.BackColor = Color.Silver;
             }
         }
         void CheckColorTrangThaiBom1(Digital? M10095, Digital? M10096, Digital? M10118)

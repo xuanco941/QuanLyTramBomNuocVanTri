@@ -20,15 +20,15 @@ namespace ManagementSoftware
             printDocument1.PrintPage += new PrintPageEventHandler(printdoc1_PrintPage);
 
 
-            for (int i = 0; i < 31; i++)
-            {
-                Form1 form = new Form1();
-                form.TopLevel = false;
-                panel1.Controls.Add(form);
-                form.FormBorderStyle = FormBorderStyle.None;
-                form.Dock = DockStyle.Top;
-                form.Show();
-            }
+            //for (int i = 0; i < 31; i++)
+            //{
+            //    Form1 form = new Form1();
+            //    form.TopLevel = false;
+            //    panel1.Controls.Add(form);
+            //    form.FormBorderStyle = FormBorderStyle.None;
+            //    form.Dock = DockStyle.Top;
+            //    form.Show();
+            //}
 
         }
 
