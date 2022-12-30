@@ -62,7 +62,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1252, 40);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1252, 27);
             this.tableLayoutPanel3.TabIndex = 16;
             // 
             // buttonBaoCaoNgay
@@ -71,11 +71,11 @@
             this.buttonBaoCaoNgay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonBaoCaoNgay.FlatAppearance.BorderSize = 0;
             this.buttonBaoCaoNgay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBaoCaoNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonBaoCaoNgay.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoNgay.Location = new System.Drawing.Point(628, 4);
             this.buttonBaoCaoNgay.Name = "buttonBaoCaoNgay";
-            this.buttonBaoCaoNgay.Size = new System.Drawing.Size(201, 32);
+            this.buttonBaoCaoNgay.Size = new System.Drawing.Size(201, 19);
             this.buttonBaoCaoNgay.TabIndex = 14;
             this.buttonBaoCaoNgay.Text = "Báo cáo ngày";
             this.buttonBaoCaoNgay.UseVisualStyleBackColor = true;
@@ -87,11 +87,11 @@
             this.buttonBaoCaoThang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonBaoCaoThang.FlatAppearance.BorderSize = 0;
             this.buttonBaoCaoThang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBaoCaoThang.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoThang.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonBaoCaoThang.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoThang.Location = new System.Drawing.Point(836, 4);
             this.buttonBaoCaoThang.Name = "buttonBaoCaoThang";
-            this.buttonBaoCaoThang.Size = new System.Drawing.Size(201, 32);
+            this.buttonBaoCaoThang.Size = new System.Drawing.Size(201, 19);
             this.buttonBaoCaoThang.TabIndex = 13;
             this.buttonBaoCaoThang.Text = "Báo cáo tháng";
             this.buttonBaoCaoThang.UseVisualStyleBackColor = true;
@@ -103,11 +103,11 @@
             this.buttonLuuTruLoi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonLuuTruLoi.FlatAppearance.BorderSize = 0;
             this.buttonLuuTruLoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLuuTruLoi.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLuuTruLoi.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonLuuTruLoi.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonLuuTruLoi.Location = new System.Drawing.Point(420, 4);
             this.buttonLuuTruLoi.Name = "buttonLuuTruLoi";
-            this.buttonLuuTruLoi.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuuTruLoi.Size = new System.Drawing.Size(201, 19);
             this.buttonLuuTruLoi.TabIndex = 12;
             this.buttonLuuTruLoi.Text = "Lưu trữ lỗi";
             this.buttonLuuTruLoi.UseVisualStyleBackColor = true;
@@ -119,11 +119,11 @@
             this.buttonLuocSuKhuynhHuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonLuocSuKhuynhHuong.FlatAppearance.BorderSize = 0;
             this.buttonLuocSuKhuynhHuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLuocSuKhuynhHuong.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLuocSuKhuynhHuong.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonLuocSuKhuynhHuong.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonLuocSuKhuynhHuong.Location = new System.Drawing.Point(4, 4);
             this.buttonLuocSuKhuynhHuong.Name = "buttonLuocSuKhuynhHuong";
-            this.buttonLuocSuKhuynhHuong.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuocSuKhuynhHuong.Size = new System.Drawing.Size(201, 19);
             this.buttonLuocSuKhuynhHuong.TabIndex = 11;
             this.buttonLuocSuKhuynhHuong.Text = "Lược sử khuynh hướng";
             this.buttonLuocSuKhuynhHuong.UseVisualStyleBackColor = true;
@@ -135,11 +135,11 @@
             this.buttonBaoCaoNam.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonBaoCaoNam.FlatAppearance.BorderSize = 0;
             this.buttonBaoCaoNam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBaoCaoNam.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoNam.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonBaoCaoNam.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoNam.Location = new System.Drawing.Point(1044, 4);
             this.buttonBaoCaoNam.Name = "buttonBaoCaoNam";
-            this.buttonBaoCaoNam.Size = new System.Drawing.Size(204, 32);
+            this.buttonBaoCaoNam.Size = new System.Drawing.Size(204, 19);
             this.buttonBaoCaoNam.TabIndex = 9;
             this.buttonBaoCaoNam.Text = "Báo cáo năm";
             this.buttonBaoCaoNam.UseVisualStyleBackColor = true;
@@ -151,11 +151,11 @@
             this.buttonLuuTruHoatDong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonLuuTruHoatDong.FlatAppearance.BorderSize = 0;
             this.buttonLuuTruHoatDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLuuTruHoatDong.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLuuTruHoatDong.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonLuuTruHoatDong.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonLuuTruHoatDong.Location = new System.Drawing.Point(212, 4);
             this.buttonLuuTruHoatDong.Name = "buttonLuuTruHoatDong";
-            this.buttonLuuTruHoatDong.Size = new System.Drawing.Size(201, 32);
+            this.buttonLuuTruHoatDong.Size = new System.Drawing.Size(201, 19);
             this.buttonLuuTruHoatDong.TabIndex = 10;
             this.buttonLuuTruHoatDong.Text = "Lưu trữ hoạt động";
             this.buttonLuuTruHoatDong.UseVisualStyleBackColor = true;
@@ -164,9 +164,9 @@
             // panelContent
             // 
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 40);
+            this.panelContent.Location = new System.Drawing.Point(0, 27);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1252, 452);
+            this.panelContent.Size = new System.Drawing.Size(1252, 465);
             this.panelContent.TabIndex = 17;
             // 
             // FormQuanLyLuuTruDuLieu

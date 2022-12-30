@@ -15,14 +15,30 @@ namespace ManagementSoftware.DAL
         public static async Task Add(Analog d)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            await dbContext.Analogs.AddAsync(d);
+            try
+            {
+                await dbContext.Analogs.AddAsync(d);
+
+            }
+            catch
+            {
+
+            }
             await dbContext.SaveChangesAsync();
         }
 
         public static async Task AddRange(List<Analog> list)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            await dbContext.Analogs.AddRangeAsync(list);
+            try
+            {
+                await dbContext.Analogs.AddRangeAsync(list);
+
+            }
+            catch
+            {
+
+            }
             await dbContext.SaveChangesAsync();
         }
     }

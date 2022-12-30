@@ -42,7 +42,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         void LoadFormThongKe(List<Alert>? list)
         {
-            panelSearch.Enabled = false;
+            this.Enabled = false;
 
 
             DataTable dt = new DataTable();
@@ -66,7 +66,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             }
             dataGridView1.DataSource = dt;
             //mo thanh search
-            panelSearch.Enabled = true;
+            this.Enabled = true;
 
             this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -80,7 +80,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 if (changeColor)
                 {
-                    row.DefaultCellStyle.BackColor = Color.Tan;
+                    row.DefaultCellStyle.BackColor = Color.Crimson;
                 }
                 changeColor = !changeColor; 
             }
@@ -92,15 +92,19 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             DALAlertHistory.DeleteAllAlertHistory();
         }
 
-        private async void buttonClear_Click(object sender, EventArgs e)
-        {
-            await taskDelete();
-            LoadFormThongKe(await plc.GetListDataAlertTrue());
-        }
-
         private async void TableAlert_FormClosing(object sender, FormClosingEventArgs e)
         {
             await plc.Close();
+        }
+
+        private async void buttonClear_Click_1(object sender, EventArgs e)
+        {
+            await taskDelete();
+        }
+
+        private async void timer1_Tick(object sender, EventArgs e)
+        {
+            LoadFormThongKe(await plc.GetListDataAlertTrue());
         }
     }
 }

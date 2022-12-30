@@ -16,6 +16,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 {
     public partial class ToanCanhTramBom : Form
     {
+
         PLCAnalog plcAnalog;
         PLCDigital plcDigital;
 
@@ -28,6 +29,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             plcDigital = new PLCDigital();
             analogCommon = new AnalogCommon();
             digitalCommon = new DigitalCommon();
+
         }
         async Task LoadTextAnalog(Label btn, Analog a)
         {

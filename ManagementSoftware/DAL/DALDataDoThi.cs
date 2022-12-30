@@ -19,40 +19,47 @@ namespace ManagementSoftware.DAL
         public List<DataDoThi>? GetListDataOn1Hour(string tinHieu,double checkAnalogOrDigital)
         {
             DataBaseContext dbContext = new DataBaseContext();
-
-
             List<DataDoThi>? dataDoThi = new List<DataDoThi>();
 
-            System.DateTime end = System.DateTime.Now;
-            System.DateTime start = end.AddHours(-1);
+            try
+            {
+                System.DateTime end = System.DateTime.Now;
+                System.DateTime start = end.AddHours(-1);
 
-            if (checkAnalogOrDigital > 1)
-            {
-                List<Analog> analogs = dbContext.Analogs.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
-                if(analogs!=null && analogs.Count > 0)
+                if (checkAnalogOrDigital > 1)
                 {
-                    foreach (var item in analogs)
+                    List<Analog> analogs = dbContext.Analogs.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
+                    if (analogs != null && analogs.Count > 0)
                     {
-                        DataDoThi data = new DataDoThi();
-                        data.time = item.ThoiGian;
-                        data.value = item.GiaTriDong;
-                        dataDoThi.Add(data);
+                        foreach (var item in analogs)
+                        {
+                            DataDoThi data = new DataDoThi();
+                            data.time = item.ThoiGian;
+                            data.value = item.GiaTriDong;
+                            dataDoThi.Add(data);
+                        }
+                    }
+                }
+                else
+                {
+                    List<Digital> analogs = dbContext.Digitals.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
+                    if (analogs != null && analogs.Count > 0)
+                    {
+                        foreach (var item in analogs)
+                        {
+                            DataDoThi data = new DataDoThi();
+                            data.time = item.ThoiGian;
+                            data.value = item.TrangThai == true ? 1 : 0;
+                        }
                     }
                 }
             }
-            else
+
+            catch
             {
-                List<Digital> analogs = dbContext.Digitals.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
-                if (analogs != null && analogs.Count > 0)
-                {
-                    foreach (var item in analogs)
-                    {
-                        DataDoThi data = new DataDoThi();
-                        data.time = item.ThoiGian;
-                        data.value = item.TrangThai == true ? 1 : 0;
-                    }
-                }
+
             }
+           
 
            
 
@@ -79,33 +86,40 @@ namespace ManagementSoftware.DAL
 
 
             List<DataDoThi>? dataDoThi = new List<DataDoThi>();
-
-            if (checkAnalogOrDigital > 1)
+            try
             {
-                List<Analog> analogs = dbContext.Analogs.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
-                if (analogs != null && analogs.Count > 0)
+                if (checkAnalogOrDigital > 1)
                 {
-                    foreach (var item in analogs)
+                    List<Analog> analogs = dbContext.Analogs.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
+                    if (analogs != null && analogs.Count > 0)
                     {
-                        DataDoThi data = new DataDoThi();
-                        data.time = item.ThoiGian;
-                        data.value = item.GiaTriDong;
-                        dataDoThi.Add(data);
+                        foreach (var item in analogs)
+                        {
+                            DataDoThi data = new DataDoThi();
+                            data.time = item.ThoiGian;
+                            data.value = item.GiaTriDong;
+                            dataDoThi.Add(data);
+                        }
+                    }
+                }
+                else
+                {
+                    List<Digital> analogs = dbContext.Digitals.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
+                    if (analogs != null && analogs.Count > 0)
+                    {
+                        foreach (var item in analogs)
+                        {
+                            DataDoThi data = new DataDoThi();
+                            data.time = item.ThoiGian;
+                            data.value = item.TrangThai == true ? 1 : 0;
+                        }
                     }
                 }
             }
-            else
+
+            catch
             {
-                List<Digital> analogs = dbContext.Digitals.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
-                if (analogs != null && analogs.Count > 0)
-                {
-                    foreach (var item in analogs)
-                    {
-                        DataDoThi data = new DataDoThi();
-                        data.time = item.ThoiGian;
-                        data.value = item.TrangThai == true ? 1 : 0;
-                    }
-                }
+
             }
 
 

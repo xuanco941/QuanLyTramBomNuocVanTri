@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ManagementSoftware.DAL
 {
@@ -14,30 +15,44 @@ namespace ManagementSoftware.DAL
         public static int Add(string name, List<XuHuongVaTinHieu> x)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            DoThiKhuynhHuong doThiKhuynhHuong = new DoThiKhuynhHuong();
-            doThiKhuynhHuong.TenDoThi = name;
-            dbContext.DoThiKhuynhHuongs.Add(doThiKhuynhHuong);
-            dbContext.SaveChanges();
-
-            foreach (XuHuongVaTinHieu item in x)
+            try
             {
-                item.DoThiKhuynhHuongID = doThiKhuynhHuong.DoThiKhuynhHuongID;
+                DoThiKhuynhHuong doThiKhuynhHuong = new DoThiKhuynhHuong();
+                doThiKhuynhHuong.TenDoThi = name;
+                dbContext.DoThiKhuynhHuongs.Add(doThiKhuynhHuong);
+                dbContext.SaveChanges();
+
+                foreach (XuHuongVaTinHieu item in x)
+                {
+                    item.DoThiKhuynhHuongID = doThiKhuynhHuong.DoThiKhuynhHuongID;
+                }
+                dbContext.XuHuongVaTinHieus.AddRange(x);
             }
-            dbContext.XuHuongVaTinHieus.AddRange(x);
+            catch
+            {
+            }
             return dbContext.SaveChanges();
+
         }
         public static bool Update(string name, List<XuHuongVaTinHieu> newTinHieus)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            var userUpdate = dbContext.DoThiKhuynhHuongs.FirstOrDefault(u => u.TenDoThi == name);
-            if (userUpdate != null)
+            try
             {
-                dbContext.XuHuongVaTinHieus.RemoveRange(dbContext.XuHuongVaTinHieus.Where(x => x.DoThiKhuynhHuongID == userUpdate.DoThiKhuynhHuongID));
-                foreach (XuHuongVaTinHieu item in newTinHieus)
+                var userUpdate = dbContext.DoThiKhuynhHuongs.FirstOrDefault(u => u.TenDoThi == name);
+                if (userUpdate != null)
                 {
-                    item.DoThiKhuynhHuongID = userUpdate.DoThiKhuynhHuongID;
+                    dbContext.XuHuongVaTinHieus.RemoveRange(dbContext.XuHuongVaTinHieus.Where(x => x.DoThiKhuynhHuongID == userUpdate.DoThiKhuynhHuongID));
+                    foreach (XuHuongVaTinHieu item in newTinHieus)
+                    {
+                        item.DoThiKhuynhHuongID = userUpdate.DoThiKhuynhHuongID;
+                    }
+                    dbContext.XuHuongVaTinHieus.AddRange(newTinHieus);
                 }
-                dbContext.XuHuongVaTinHieus.AddRange(newTinHieus);
+            }
+            catch
+            {
+
             }
 
             return dbContext.SaveChanges() > 0;
@@ -46,41 +61,79 @@ namespace ManagementSoftware.DAL
         public static bool Delete(string name)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            var userDelete = dbContext.DoThiKhuynhHuongs.FirstOrDefault(u => u.TenDoThi == name);
-            if (userDelete != null)
+            try
             {
-                dbContext.DoThiKhuynhHuongs.Remove(userDelete);
+                var userDelete = dbContext.DoThiKhuynhHuongs.FirstOrDefault(u => u.TenDoThi == name);
+                if (userDelete != null)
+                {
+                    dbContext.DoThiKhuynhHuongs.Remove(userDelete);
+                }
             }
+            catch
+            {
+
+            }
+
             return dbContext.SaveChanges() > 0;
 
         }
         public static bool CheckName(string name)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            int count = dbContext.DoThiKhuynhHuongs.Where(d => d.TenDoThi == name).ToList().Count;
-            return count <= 0 ? true : false;
+            try
+            {
+                DataBaseContext dbContext = new DataBaseContext();
+                int count = dbContext.DoThiKhuynhHuongs.Where(d => d.TenDoThi == name).ToList().Count;
+                return count <= 0 ? true : false;
+            }
+            catch
+            {
+                return false;
+            }
+
         }
         public static List<DoThiKhuynhHuong>? GetAll()
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            return dbContext.DoThiKhuynhHuongs.ToList();
+            try
+            {
+                DataBaseContext dbContext = new DataBaseContext();
+                return dbContext.DoThiKhuynhHuongs.ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
         public static DoThiKhuynhHuong? GetAKhuynhHuong(int id)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            return dbContext.DoThiKhuynhHuongs.Where(a => a.DoThiKhuynhHuongID == id).FirstOrDefault();
+            try
+            {
+                DataBaseContext dbContext = new DataBaseContext();
+                return dbContext.DoThiKhuynhHuongs.Where(a => a.DoThiKhuynhHuongID == id).FirstOrDefault();
+            }
+            catch
+            {
+                return null;
+            }
+
         }
 
         public static List<XuHuongVaTinHieu>? GetAListXuHuongFromName(string nameDT)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            DoThiKhuynhHuong? dt = dbContext.DoThiKhuynhHuongs.Where(a => a.TenDoThi == nameDT).FirstOrDefault();
-            List<XuHuongVaTinHieu> listXuHuong = new List<XuHuongVaTinHieu>();
-            if (dt != null)
+            try
             {
-                listXuHuong = dbContext.XuHuongVaTinHieus.Where(x => x.DoThiKhuynhHuongID == dt.DoThiKhuynhHuongID).ToList();
+                DataBaseContext dbContext = new DataBaseContext();
+                DoThiKhuynhHuong? dt = dbContext.DoThiKhuynhHuongs.Where(a => a.TenDoThi == nameDT).FirstOrDefault();
+                List<XuHuongVaTinHieu> listXuHuong = new List<XuHuongVaTinHieu>();
+                if (dt != null)
+                {
+                    listXuHuong = dbContext.XuHuongVaTinHieus.Where(x => x.DoThiKhuynhHuongID == dt.DoThiKhuynhHuongID).ToList();
+                }
+                return listXuHuong;
             }
-            return listXuHuong;
+            catch
+            {
+                return null;
+            }
         }
 
     }

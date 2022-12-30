@@ -53,41 +53,47 @@
             // 
             // buttonBaoCaoNgay
             // 
+            this.buttonBaoCaoNgay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(75)))), ((int)(((byte)(103)))));
             this.buttonBaoCaoNgay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBaoCaoNgay.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoNgay.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoNgay.Location = new System.Drawing.Point(0, 0);
             this.buttonBaoCaoNgay.Name = "buttonBaoCaoNgay";
             this.gridLayout1.SetParticipateInLayout(this.buttonBaoCaoNgay, true);
             this.buttonBaoCaoNgay.Size = new System.Drawing.Size(447, 74);
             this.buttonBaoCaoNgay.TabIndex = 2;
             this.buttonBaoCaoNgay.Text = "Báo cáo ngày";
-            this.buttonBaoCaoNgay.UseVisualStyleBackColor = true;
+            this.buttonBaoCaoNgay.UseVisualStyleBackColor = false;
             this.buttonBaoCaoNgay.Click += new System.EventHandler(this.button3_Click);
             // 
             // buttonBaoCaoThang
             // 
+            this.buttonBaoCaoThang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(75)))), ((int)(((byte)(103)))));
             this.buttonBaoCaoThang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBaoCaoThang.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoThang.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoThang.Location = new System.Drawing.Point(447, 0);
             this.buttonBaoCaoThang.Name = "buttonBaoCaoThang";
             this.gridLayout1.SetParticipateInLayout(this.buttonBaoCaoThang, true);
             this.buttonBaoCaoThang.Size = new System.Drawing.Size(447, 74);
             this.buttonBaoCaoThang.TabIndex = 1;
             this.buttonBaoCaoThang.Text = "Báo cáo tháng";
-            this.buttonBaoCaoThang.UseVisualStyleBackColor = true;
+            this.buttonBaoCaoThang.UseVisualStyleBackColor = false;
             this.buttonBaoCaoThang.Click += new System.EventHandler(this.buttonBaoCaoThang_Click);
             // 
             // buttonBaoCaoNam
             // 
+            this.buttonBaoCaoNam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(75)))), ((int)(((byte)(103)))));
             this.buttonBaoCaoNam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBaoCaoNam.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonBaoCaoNam.ForeColor = System.Drawing.Color.LightSlateGray;
             this.buttonBaoCaoNam.Location = new System.Drawing.Point(894, 0);
             this.buttonBaoCaoNam.Name = "buttonBaoCaoNam";
             this.gridLayout1.SetParticipateInLayout(this.buttonBaoCaoNam, true);
             this.buttonBaoCaoNam.Size = new System.Drawing.Size(447, 74);
             this.buttonBaoCaoNam.TabIndex = 0;
             this.buttonBaoCaoNam.Text = "Báo cáo năm";
-            this.buttonBaoCaoNam.UseVisualStyleBackColor = true;
+            this.buttonBaoCaoNam.UseVisualStyleBackColor = false;
             this.buttonBaoCaoNam.Click += new System.EventHandler(this.buttonBaoCaoNam_Click);
             // 
             // panelContent

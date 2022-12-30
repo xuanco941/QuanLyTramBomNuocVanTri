@@ -50,7 +50,7 @@ namespace QuanLyTramBom
             this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yyyy";
 
 
-            comboBoxTimeInterval.DataSource = new List<string>() { "1 min", "1 hour", "1 day" };
+            comboBoxTimeInterval.DataSource = new List<string>() { "1 min", "1 hour", "1 day", "1 month", "1 year" };
 
             timeEnd = DateTime.Now;
             timeStart = timeEnd.AddDays(-1);
@@ -69,14 +69,13 @@ namespace QuanLyTramBom
         Syncfusion.Windows.Forms.Chart.ChartSeries? series6;
         Syncfusion.Windows.Forms.Chart.ChartSeries? series7;
         Syncfusion.Windows.Forms.Chart.ChartSeries? series8;
-        private void btnThietLap_Click(object sender, EventArgs e)
+
+        private void btnThietLap_Click_1(object sender, EventArgs e)
         {
             ChonKhuynhHuong form = new ChonKhuynhHuong();
             form.callBack = new ChonKhuynhHuong.CallBack(Set);
             form.ShowDialog();
         }
-
-
 
 
 
@@ -259,29 +258,63 @@ namespace QuanLyTramBom
             chartControl1.Series.Add(series);
 
         }
+
+
+
+
+
+
+        double maxTime = 15000;
+
         async void UpdateChart()
         {
+
             TimeSpan khoangCachTime = timeEnd - timeStart;
+            double khoangCachTimeDouble = 0;
+            string typeTime = "";
 
             if (typeInterval == ChartDateTimeIntervalType.Minutes)
             {
-                double x = khoangCachTime.TotalMinutes;
-                numberInterval = 120;
+                khoangCachTimeDouble = khoangCachTime.TotalMinutes;
+                typeTime = "phút";
+                numberInterval = 2;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Hours)
             {
-                double x = khoangCachTime.TotalMinutes;
-                numberInterval = 48;
+                khoangCachTimeDouble = khoangCachTime.TotalHours;
+                typeTime = "giờ";
+                numberInterval = 60;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Days)
             {
-                double x = khoangCachTime.TotalMinutes;
-                numberInterval = 2;
+                khoangCachTimeDouble = khoangCachTime.TotalDays;
+                typeTime = "ngày";
+                numberInterval = 1440;
+            }
+            else if (typeInterval == ChartDateTimeIntervalType.Months)
+            {
+                khoangCachTimeDouble = khoangCachTime.TotalDays/30;
+                typeTime = "tháng";
+                numberInterval = 17280;
+            }
+            else if (typeInterval == ChartDateTimeIntervalType.Years)
+            {
+                khoangCachTimeDouble = khoangCachTime.TotalDays/365;
+                typeTime = "năm";
+                numberInterval = 17280;
+            }
+            if (khoangCachTimeDouble > maxTime)
+            {
+                MessageBox.Show($"Dữ liệu quá lớn với {Math.Round(khoangCachTimeDouble, 0,MidpointRounding.AwayFromZero)} {typeTime}, bạn nên giới hạn dưới {maxTime} {typeTime} hoặc thay đổi kiểu hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                this.chartControl1.PrimaryXAxis.DateTimeInterval.Type = typeInterval;
+                this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(timeStart, timeEnd, numberInterval, typeInterval);
+                this.chartControl1.PrimaryXAxis.IntervalType = typeInterval;
             }
 
-            this.chartControl1.PrimaryXAxis.DateTimeInterval.Type = typeInterval;
-            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(timeStart, timeEnd, numberInterval, typeInterval);
-            this.chartControl1.PrimaryXAxis.IntervalType = typeInterval;
+
 
 
 
@@ -319,13 +352,11 @@ namespace QuanLyTramBom
             }
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             SetTime();
             UpdateChart();
         }
-
 
         void SetTime()
         {
@@ -342,6 +373,14 @@ namespace QuanLyTramBom
             else if (comboBoxTimeInterval.Text == "1 day")
             {
                 typeInterval = ChartDateTimeIntervalType.Days;
+            }
+            else if (comboBoxTimeInterval.Text == "1 month")
+            {
+                typeInterval = ChartDateTimeIntervalType.Months;
+            }
+            else if (comboBoxTimeInterval.Text == "1 year")
+            {
+                typeInterval = ChartDateTimeIntervalType.Years;
             }
         }
 
@@ -392,6 +431,7 @@ namespace QuanLyTramBom
                 await CloseFormItem(l);
             }
         }
+
 
     }
 }

@@ -13,17 +13,32 @@ namespace QuanLyTramBom
     public partial class Dashboard : Form
     {
         PLCAlert plcAlert;
-
+        private void GoFullscreen(bool fullscreen)
+        {
+            if (fullscreen)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                this.Bounds = Screen.PrimaryScreen.Bounds;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            }
+        }
         public Dashboard()
         {
             InitializeComponent();
 
 
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            this.WindowState = FormWindowState.Maximized;
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             //this.MaximizeBox = false;
-            //this.MinimizeBox= false;
+            //this.MinimizeBox = false;
             //this.FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
+            GoFullscreen(true);
+
             plcAlert = new PLCAlert();
 
 
@@ -35,26 +50,45 @@ namespace QuanLyTramBom
             Panel floater = CreateFloatingPanel(panel4);
             floater.BackColor = Color.Transparent;
             Clock clock1 = new Clock();
+            clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Digital;
             clock1.MinimumSize = new Size(65, 65);
-            clock1.Size = new System.Drawing.Size(65, 65);
-            floater.Location = new Point(1830, 1);
-            floater.Size = new Size(65, 65);
+            clock1.Size = new System.Drawing.Size(120, 90);
+            floater.Location = new Point(1780, 1);
+            floater.Size = new Size(120, 60);
             floater.Controls.Add(clock1);
 
 
             //printer
             Panel floater2 = CreateFloatingPanel(panel12);
-            floater.BackColor = Color.Transparent;
+            floater2.BackColor = Color.Transparent;
             PictureBox pic = new PictureBox();
             pic.Cursor = Cursors.Hand;
-            pic.Image = Resources.printer;
+            pic.Image = Resources._64printer;
+            pic.Dock = DockStyle.Fill;
             pic.SizeMode = PictureBoxSizeMode.StretchImage;
-            pic.MinimumSize = new Size(50, 50);
-            pic.Size = new Size(50, 50);
-            floater2.Location = new Point(1680, 4);
-            floater2.Size = new Size(50, 50);
+            //pic.MinimumSize = new Size(50, 50);
+            //pic.Size = new Size(50, 50);
+            floater2.Location = new Point(1613, 4);
+            floater2.Size = new Size(65, 65);
             floater2.Controls.Add(pic);
             pic.Click += new System.EventHandler(this.btnButton_Click);
+
+
+
+            //logout
+            Panel floater3 = CreateFloatingPanel(panel13);
+            floater3.BackColor = Color.Transparent;
+            PictureBox picLogOut = new PictureBox();
+            picLogOut.Cursor = Cursors.Hand;
+            picLogOut.Image = Resources._65logout;
+            picLogOut.Dock = DockStyle.Fill;
+            picLogOut.SizeMode = PictureBoxSizeMode.StretchImage;
+            //pic.MinimumSize = new Size(50, 50);
+            //pic.Size = new Size(50, 50);
+            floater3.Location = new Point(1709, 15);
+            floater3.Size = new Size(45, 45);
+            floater3.Controls.Add(picLogOut);
+            picLogOut.Click += new System.EventHandler(this.btnButton_ClickLogOut);
 
 
         }
@@ -64,6 +98,19 @@ namespace QuanLyTramBom
         {
             FormInBaoCao form = new FormInBaoCao();
             form.ShowDialog();
+        }
+
+
+        void btnButton_ClickLogOut(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show($"Bạn phải xác nhận tài khoản đăng nhập để thoát.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.OK)
+            {
+                XacNhanDangXuat form = new XacNhanDangXuat("Dashboard");
+                form.callback = new XacNhanDangXuat.Callback(CloseForm);
+                form.ShowDialog();
+            }
+
         }
 
         public Panel CreateFloatingPanel(Panel originalPanel)
@@ -127,6 +174,13 @@ namespace QuanLyTramBom
             }
             await plcAlert.Close();
         }
+
+        public void CloseForm()
+        {
+
+            this.Close();
+        }
+
 
         private async void timerGetNewAlert_Tick_1(object sender, EventArgs e)
         {

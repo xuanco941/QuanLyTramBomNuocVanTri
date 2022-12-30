@@ -83,21 +83,21 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
 
         private void buttonBaoCaoNgay_Click(object sender, EventArgs e)
         {
-            FormBaoCaoNgay form = new FormBaoCaoNgay();
+            FormBaoCaoNgayFitDashboard form = new FormBaoCaoNgayFitDashboard();
             ChuyenTrang(form);
             ButtonHandle((Button)sender);
         }
 
         private void buttonBaoCaoThang_Click(object sender, EventArgs e)
         {
-            FormBaoCaoThang form = new FormBaoCaoThang();
+            FormBaoCaoThangFitDashboard form = new FormBaoCaoThangFitDashboard();
             ChuyenTrang(form);
             ButtonHandle((Button)sender);
         }
 
         private void buttonBaoCaoNam_Click(object sender, EventArgs e)
         {
-            FormBaoCaoNam form = new FormBaoCaoNam();
+            FormBaoCaoNamFitDashboard form = new FormBaoCaoNamFitDashboard();
             ChuyenTrang(form);
             ButtonHandle((Button)sender);
         }

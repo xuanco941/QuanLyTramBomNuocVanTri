@@ -12,16 +12,32 @@ namespace ManagementSoftware.DAL
     {
         public static void Add(Digital d)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            dbContext.Digitals.Add(d);
-            dbContext.SaveChanges();
+            try
+            {
+                DataBaseContext dbContext = new DataBaseContext();
+                dbContext.Digitals.Add(d);
+                dbContext.SaveChanges();
+            }
+            catch
+            {
+
+            }
+
         }
 
         public static async Task AddRange(List<Digital> list)
         {
-            DataBaseContext dbContext = new DataBaseContext();
-            await dbContext.Digitals.AddRangeAsync(list);
-            await dbContext.SaveChangesAsync();
+            try
+            {
+                DataBaseContext dbContext = new DataBaseContext();
+                await dbContext.Digitals.AddRangeAsync(list);
+                await dbContext.SaveChangesAsync();
+            }
+            catch
+            {
+
+            }
+
         }
     }
 }

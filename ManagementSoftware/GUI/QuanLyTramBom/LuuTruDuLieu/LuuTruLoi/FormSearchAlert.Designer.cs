@@ -190,7 +190,7 @@
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.btnAccept);
             this.Name = "FormSearchAlert";
-            this.Text = "FormSearchAlert";
+            this.Text = "Tìm kiếm dữ liệu";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

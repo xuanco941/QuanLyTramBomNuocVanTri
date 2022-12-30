@@ -25,9 +25,23 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             form.Dock = DockStyle.Fill;
             form.Show();
         }
-
+        void ButtonHandle(Button btn)
+        {
+            foreach (Button item in panel1.Controls)
+            {
+                if (item.Text != btn.Text)
+                {
+                    item.ForeColor = Color.LightSlateGray;
+                }
+                else
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+        }
         private void button3_Click(object sender, EventArgs e)
         {
+            ButtonHandle((Button)sender);
             foreach (Form item in panelContent.Controls)
             {
                 item.Close();
@@ -45,6 +59,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         private void buttonBaoCaoThang_Click(object sender, EventArgs e)
         {
+            ButtonHandle((Button)sender);
             foreach (Form item in panelContent.Controls)
             {
                 item.Close();
@@ -60,6 +75,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         private void buttonBaoCaoNam_Click(object sender, EventArgs e)
         {
+            ButtonHandle((Button)sender);
             foreach (Form item in panelContent.Controls)
             {
                 item.Close();

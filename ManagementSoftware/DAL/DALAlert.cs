@@ -13,20 +13,41 @@ namespace ManagementSoftware.DAL
         public static void Add(Alert d)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            dbContext.Alerts.Add(d);
+            try
+            {
+                dbContext.Alerts.Add(d);
+
+            }
+            catch
+            {
+
+            }
             dbContext.SaveChanges();
         }
 
         public static async Task AddRange(List<Alert> list)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            await dbContext.Alerts.AddRangeAsync(list);
-            await dbContext.SaveChangesAsync();
+            try
+            {
+                await dbContext.Alerts.AddRangeAsync(list);
+            }
+            catch
+            {
+                await dbContext.SaveChangesAsync();
+            }
         }
         public static void DeleteRange(List<Alert> list)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            dbContext.Alerts.RemoveRange(list);
+            try
+            {
+                dbContext.Alerts.RemoveRange(list);
+            }
+            catch
+            {
+
+            }
             dbContext.SaveChanges();
         }
 

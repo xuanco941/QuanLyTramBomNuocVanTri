@@ -59,11 +59,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelContentToanCanh = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -79,7 +79,6 @@
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel4
@@ -415,6 +414,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel13);
             this.panel3.Controls.Add(this.panel12);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -428,15 +428,15 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(89, 28);
+            this.panel12.Size = new System.Drawing.Size(59, 28);
             this.panel12.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(111, 0);
+            this.panel4.Location = new System.Drawing.Point(128, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(81, 28);
+            this.panel4.Size = new System.Drawing.Size(64, 28);
             this.panel4.TabIndex = 0;
             // 
             // panel1
@@ -455,7 +455,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -467,45 +467,29 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.tableLayoutPanel3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Controls.Add(this.panelContentToanCanh);
+            this.tabPage1.Location = new System.Drawing.Point(4, 46);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1135, 513);
+            this.tabPage1.Size = new System.Drawing.Size(1135, 499);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Màn hình đồ họa";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
-            this.tableLayoutPanel3.Controls.Add(this.panelContentToanCanh, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1129, 507);
-            this.tableLayoutPanel3.TabIndex = 9;
             // 
             // panelContentToanCanh
             // 
             this.panelContentToanCanh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentToanCanh.Location = new System.Drawing.Point(87, 3);
+            this.panelContentToanCanh.Location = new System.Drawing.Point(3, 3);
             this.panelContentToanCanh.Name = "panelContentToanCanh";
-            this.panelContentToanCanh.Size = new System.Drawing.Size(953, 501);
-            this.panelContentToanCanh.TabIndex = 11;
+            this.panelContentToanCanh.Size = new System.Drawing.Size(1129, 493);
+            this.panelContentToanCanh.TabIndex = 12;
             // 
             // tabPage2
             // 
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 46);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1135, 513);
+            this.tabPage2.Size = new System.Drawing.Size(1135, 499);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Đồ thị khuynh hướng";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -513,22 +497,30 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Location = new System.Drawing.Point(4, 46);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1135, 513);
+            this.tabPage3.Size = new System.Drawing.Size(1135, 499);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lưu trữ dữ liệu";
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 32);
+            this.tabPage4.Location = new System.Drawing.Point(4, 46);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1135, 513);
+            this.tabPage4.Size = new System.Drawing.Size(1135, 499);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Danh sách vào ra";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel13.Location = new System.Drawing.Point(59, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(59, 28);
+            this.panel13.TabIndex = 2;
             // 
             // Dashboard
             // 
@@ -558,7 +550,6 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -600,5 +591,7 @@
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonBangLoi;
         private Panel panel12;
         private Panel panel4;
+        private Panel paneltextHeader;
+        private Panel panel13;
     }
 }

@@ -136,9 +136,6 @@
   <data name="Settings-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BomChinh4Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BomChinh4Do1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-close-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-close-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -207,9 +204,6 @@
   </data>
   <data name="M10079xam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10079xam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BomChinh3Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BomChinh3Xanh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="M10174" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\M10174.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,9 +313,6 @@
   <data name="loupe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loupe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BomChinh2Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BomChinh2Xanh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ToanCanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ToanCanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -400,23 +391,20 @@
   <data name="BomChinh2Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BomChinh2Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BomChinh2Xanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="BomChinh2Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BomChinh2Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BomChinh3Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BomChinh3Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BomChinh3Xanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="BomChinh3Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BomChinh3Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BomChinh4Do1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="BomChinh4Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BomChinh4Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BomChinh4Xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BomChinh4Xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BomMoi1Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BomMoi1Do .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BomMoi2Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BomMoi2Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -540,5 +528,14 @@
   </data>
   <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BomMoi1Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BomMoi1Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="64printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\64printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="65logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\65logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

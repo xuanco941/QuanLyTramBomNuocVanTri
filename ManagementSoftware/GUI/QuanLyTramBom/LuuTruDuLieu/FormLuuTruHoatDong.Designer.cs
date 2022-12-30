@@ -93,10 +93,10 @@
             this.panelSearch.Controls.Add(this.buttonCustomGoPage);
             this.panelSearch.Controls.Add(this.inputNumPageGo);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelSearch.Location = new System.Drawing.Point(0, 457);
+            this.panelSearch.Location = new System.Drawing.Point(0, 473);
             this.panelSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(971, 57);
+            this.panelSearch.Size = new System.Drawing.Size(971, 41);
             this.panelSearch.TabIndex = 24;
             // 
             // tableLayoutPanel5
@@ -115,7 +115,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(969, 55);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(969, 39);
             this.tableLayoutPanel5.TabIndex = 35;
             // 
             // tableLayoutPanel7
@@ -130,7 +130,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(90, 49);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(90, 33);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // panel52
@@ -140,7 +140,7 @@
             this.panel52.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel52.Location = new System.Drawing.Point(3, 3);
             this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(84, 13);
+            this.panel52.Size = new System.Drawing.Size(84, 7);
             this.panel52.TabIndex = 0;
             // 
             // label22
@@ -150,7 +150,7 @@
             this.label22.ForeColor = System.Drawing.Color.SkyBlue;
             this.label22.Location = new System.Drawing.Point(0, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(82, 11);
+            this.label22.Size = new System.Drawing.Size(82, 5);
             this.label22.TabIndex = 4;
             this.label22.Text = "Tổng trang";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,9 +160,9 @@
             this.panel53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel53.Controls.Add(this.lbTotalPages);
             this.panel53.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel53.Location = new System.Drawing.Point(3, 22);
+            this.panel53.Location = new System.Drawing.Point(3, 16);
             this.panel53.Name = "panel53";
-            this.panel53.Size = new System.Drawing.Size(84, 24);
+            this.panel53.Size = new System.Drawing.Size(84, 14);
             this.panel53.TabIndex = 1;
             // 
             // lbTotalPages
@@ -172,7 +172,7 @@
             this.lbTotalPages.ForeColor = System.Drawing.Color.SpringGreen;
             this.lbTotalPages.Location = new System.Drawing.Point(0, 0);
             this.lbTotalPages.Name = "lbTotalPages";
-            this.lbTotalPages.Size = new System.Drawing.Size(82, 22);
+            this.lbTotalPages.Size = new System.Drawing.Size(82, 12);
             this.lbTotalPages.TabIndex = 5;
             this.lbTotalPages.Text = "1";
             this.lbTotalPages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,7 +185,7 @@
             this.panel47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel47.Location = new System.Drawing.Point(825, 3);
             this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(141, 49);
+            this.panel47.Size = new System.Drawing.Size(141, 33);
             this.panel47.TabIndex = 2;
             // 
             // buttonGoto
@@ -193,7 +193,7 @@
             this.buttonGoto.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonGoto.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.buttonGoto.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonGoto.BorderRadius = 3;
+            this.buttonGoto.BorderRadius = -2;
             this.buttonGoto.BorderSize = 0;
             this.buttonGoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonGoto.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -205,7 +205,7 @@
             this.buttonGoto.Location = new System.Drawing.Point(0, 33);
             this.buttonGoto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonGoto.Name = "buttonGoto";
-            this.buttonGoto.Size = new System.Drawing.Size(139, 14);
+            this.buttonGoto.Size = new System.Drawing.Size(139, 0);
             this.buttonGoto.TabIndex = 34;
             this.buttonGoto.Text = "Tới trang";
             this.buttonGoto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -237,7 +237,7 @@
             this.panel46.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel46.Location = new System.Drawing.Point(312, 3);
             this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(507, 49);
+            this.panel46.Size = new System.Drawing.Size(507, 33);
             this.panel46.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -255,7 +255,7 @@
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(400, 47);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(400, 31);
             this.tableLayoutPanel6.TabIndex = 33;
             // 
             // panel51
@@ -263,9 +263,9 @@
             this.panel51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel51.Controls.Add(this.TimeEnd);
             this.panel51.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel51.Location = new System.Drawing.Point(203, 26);
+            this.panel51.Location = new System.Drawing.Point(203, 18);
             this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(194, 18);
+            this.panel51.Size = new System.Drawing.Size(194, 10);
             this.panel51.TabIndex = 3;
             // 
             // TimeEnd
@@ -273,7 +273,7 @@
             this.TimeEnd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TimeEnd.Location = new System.Drawing.Point(0, 0);
             this.TimeEnd.Name = "TimeEnd";
-            this.TimeEnd.Size = new System.Drawing.Size(192, 16);
+            this.TimeEnd.Size = new System.Drawing.Size(192, 8);
             this.TimeEnd.TabIndex = 35;
             // 
             // panel50
@@ -281,9 +281,9 @@
             this.panel50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel50.Controls.Add(this.TimeStart);
             this.panel50.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel50.Location = new System.Drawing.Point(3, 26);
+            this.panel50.Location = new System.Drawing.Point(3, 18);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(194, 18);
+            this.panel50.Size = new System.Drawing.Size(194, 10);
             this.panel50.TabIndex = 2;
             // 
             // TimeStart
@@ -291,7 +291,7 @@
             this.TimeStart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TimeStart.Location = new System.Drawing.Point(0, 0);
             this.TimeStart.Name = "TimeStart";
-            this.TimeStart.Size = new System.Drawing.Size(192, 16);
+            this.TimeStart.Size = new System.Drawing.Size(192, 8);
             this.TimeStart.TabIndex = 34;
             // 
             // panel49
@@ -301,7 +301,7 @@
             this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel49.Location = new System.Drawing.Point(203, 3);
             this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(194, 17);
+            this.panel49.Size = new System.Drawing.Size(194, 9);
             this.panel49.TabIndex = 1;
             // 
             // label21
@@ -311,7 +311,7 @@
             this.label21.ForeColor = System.Drawing.Color.SkyBlue;
             this.label21.Location = new System.Drawing.Point(0, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(192, 15);
+            this.label21.Size = new System.Drawing.Size(192, 7);
             this.label21.TabIndex = 4;
             this.label21.Text = "Đến ngày";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,7 +323,7 @@
             this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel48.Location = new System.Drawing.Point(3, 3);
             this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(194, 17);
+            this.panel48.Size = new System.Drawing.Size(194, 9);
             this.panel48.TabIndex = 0;
             // 
             // label20
@@ -333,7 +333,7 @@
             this.label20.ForeColor = System.Drawing.Color.SkyBlue;
             this.label20.Location = new System.Drawing.Point(0, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(192, 15);
+            this.label20.Size = new System.Drawing.Size(192, 7);
             this.label20.TabIndex = 3;
             this.label20.Text = "Từ ngày";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -354,7 +354,7 @@
             this.buttonSearch.Location = new System.Drawing.Point(400, 0);
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(105, 47);
+            this.buttonSearch.Size = new System.Drawing.Size(105, 31);
             this.buttonSearch.TabIndex = 32;
             this.buttonSearch.Text = "Tìm kiếm";
             this.buttonSearch.TextColor = System.Drawing.Color.Black;
@@ -371,7 +371,7 @@
             this.panel45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel45.Location = new System.Drawing.Point(3, 3);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(207, 49);
+            this.panel45.Size = new System.Drawing.Size(207, 33);
             this.panel45.TabIndex = 0;
             // 
             // buttonPage
@@ -391,7 +391,7 @@
             this.buttonPage.Location = new System.Drawing.Point(60, 0);
             this.buttonPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonPage.Name = "buttonPage";
-            this.buttonPage.Size = new System.Drawing.Size(85, 47);
+            this.buttonPage.Size = new System.Drawing.Size(85, 31);
             this.buttonPage.TabIndex = 32;
             this.buttonPage.Text = "1";
             this.buttonPage.TextColor = System.Drawing.Color.Black;
@@ -414,7 +414,7 @@
             this.buttonNextPage.Location = new System.Drawing.Point(145, 0);
             this.buttonNextPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonNextPage.Name = "buttonNextPage";
-            this.buttonNextPage.Size = new System.Drawing.Size(60, 47);
+            this.buttonNextPage.Size = new System.Drawing.Size(60, 31);
             this.buttonNextPage.TabIndex = 31;
             this.buttonNextPage.Text = ">";
             this.buttonNextPage.TextColor = System.Drawing.Color.Black;
@@ -438,7 +438,7 @@
             this.buttonPreviousPage.Location = new System.Drawing.Point(0, 0);
             this.buttonPreviousPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonPreviousPage.Name = "buttonPreviousPage";
-            this.buttonPreviousPage.Size = new System.Drawing.Size(60, 47);
+            this.buttonPreviousPage.Size = new System.Drawing.Size(60, 31);
             this.buttonPreviousPage.TabIndex = 29;
             this.buttonPreviousPage.Text = "<";
             this.buttonPreviousPage.TextColor = System.Drawing.Color.Black;
@@ -459,7 +459,7 @@
             this.buttonCustomGoPage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCustomGoPage.ForeColor = System.Drawing.Color.Black;
             this.buttonCustomGoPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCustomGoPage.Location = new System.Drawing.Point(4109, -163);
+            this.buttonCustomGoPage.Location = new System.Drawing.Point(4109, -179);
             this.buttonCustomGoPage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustomGoPage.Name = "buttonCustomGoPage";
             this.buttonCustomGoPage.Size = new System.Drawing.Size(93, 35);
@@ -477,7 +477,7 @@
             this.inputNumPageGo.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.inputNumPageGo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputNumPageGo.IntegerValue = ((long)(1));
-            this.inputNumPageGo.Location = new System.Drawing.Point(4039, -161);
+            this.inputNumPageGo.Location = new System.Drawing.Point(4039, -177);
             this.inputNumPageGo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.inputNumPageGo.Multiline = true;
             this.inputNumPageGo.Name = "inputNumPageGo";
@@ -498,7 +498,7 @@
             this.btnSerachBox.Location = new System.Drawing.Point(0, 0);
             this.btnSerachBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSerachBox.Name = "btnSerachBox";
-            this.btnSerachBox.Size = new System.Drawing.Size(160, 40);
+            this.btnSerachBox.Size = new System.Drawing.Size(160, 23);
             this.btnSerachBox.TabIndex = 21;
             this.btnSerachBox.Text = "Tìm dữ liệu";
             this.btnSerachBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -523,16 +523,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(971, 40);
+            this.panel1.Size = new System.Drawing.Size(971, 23);
             this.panel1.TabIndex = 23;
             // 
             // panelThongKe
             // 
             this.panelThongKe.Controls.Add(this.dataGridView1);
             this.panelThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelThongKe.Location = new System.Drawing.Point(0, 40);
+            this.panelThongKe.Location = new System.Drawing.Point(0, 23);
             this.panelThongKe.Name = "panelThongKe";
-            this.panelThongKe.Size = new System.Drawing.Size(971, 417);
+            this.panelThongKe.Size = new System.Drawing.Size(971, 450);
             this.panelThongKe.TabIndex = 25;
             // 
             // dataGridView1
@@ -544,7 +544,7 @@
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -572,10 +572,10 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(971, 417);
+            this.dataGridView1.Size = new System.Drawing.Size(971, 450);
             this.dataGridView1.TabIndex = 27;
             // 
             // FormLuuTruHoatDong

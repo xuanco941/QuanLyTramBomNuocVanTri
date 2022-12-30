@@ -17,7 +17,15 @@ namespace ManagementSoftware.DAL
             DataBaseContext dbContext = new DataBaseContext();
             AlertHistory alertHistory = new AlertHistory(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu);
             alertHistory.TrangThai = d.TrangThai;
-            await dbContext.AlertHistorys.AddAsync(alertHistory);
+            try
+            {
+                await dbContext.AlertHistorys.AddAsync(alertHistory);
+
+            }
+            catch
+            {
+
+            }
             await dbContext.SaveChangesAsync();
         }
 
@@ -32,22 +40,46 @@ namespace ManagementSoftware.DAL
                 list.Add(a);
                 
             }
-            await dbContext.AlertHistorys.AddRangeAsync(list);
+            try
+            {
+                await dbContext.AlertHistorys.AddRangeAsync(list);
+
+            }
+            catch
+            {
+
+            }
             await dbContext.SaveChangesAsync();
         }
 
         public static void DeleteAllAlertHistory()
         {
             DataBaseContext dbContext = new DataBaseContext();
-            dbContext.AlertHistorys.RemoveRange(dbContext.AlertHistorys);
+            try
+            {
+                dbContext.AlertHistorys.RemoveRange(dbContext.AlertHistorys);
+
+            }
+            catch
+            {
+
+            }
             dbContext.SaveChanges();
         }
         public static AlertHistory? GetNewestAlertHistory()
         {
             DataBaseContext dbContext = new DataBaseContext();
-            int max = dbContext.AlertHistorys.Max(a => a.IDAlert);
-            AlertHistory? alertERR = dbContext.AlertHistorys.Where((a) => a.IDAlert == max).FirstOrDefault();
-            return alertERR;
+            try
+            {
+                int max = dbContext.AlertHistorys.Max(a => a.IDAlert);
+                AlertHistory? alertERR = dbContext.AlertHistorys.Where((a) => a.IDAlert == max).FirstOrDefault();
+                return alertERR;
+
+            }
+            catch
+            {
+                return null;
+            }
         }
         public static List<AlertHistory>? GetAllAlertHistory()
         {

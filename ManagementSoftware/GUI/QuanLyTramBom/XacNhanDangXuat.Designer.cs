@@ -164,7 +164,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(642, 104);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Theo dõi trạm bơm";
+            this.label3.Text = "Xác nhận thoát hệ thống";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -207,7 +207,7 @@
             this.MinimizeBox = false;
             this.Name = "XacNhanDangXuat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "XacNhanDangXuat";
+            this.Text = "Xác nhận thoát hệ thống";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

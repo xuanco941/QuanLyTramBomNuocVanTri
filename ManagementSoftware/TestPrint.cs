@@ -14,7 +14,7 @@ namespace ManagementSoftware
 {
     public partial class TestPrint : Form
     {
-        public TestPrint()
+       /* public TestPrint()
         {
             InitializeComponent();
             printDocument1.PrintPage += new PrintPageEventHandler(printdoc1_PrintPage);
@@ -75,5 +75,6 @@ namespace ManagementSoftware
         {
 
         }
+       */
     }
 }
