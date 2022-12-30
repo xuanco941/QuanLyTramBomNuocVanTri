@@ -122,7 +122,7 @@
             this.Controls.Add(this.buttonClear);
             this.Name = "TableAlert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TableAlert";
+            this.Text = "Bảng lỗi";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TableAlert_FormClosing);
             this.Load += new System.EventHandler(this.TableAlert_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

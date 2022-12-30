@@ -1080,7 +1080,7 @@
             this.MaximizeBox = false;
             this.Name = "CapNhatKhuynhHuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CapNhatKhuynhHuong";
+            this.Text = "Cập nhật";
             this.Load += new System.EventHandler(this.CapNhatKhuynhHuong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
