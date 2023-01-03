@@ -48,6 +48,7 @@ namespace ManagementSoftware.GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelAleart = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonHelp = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelItemMenu.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,6 +76,7 @@ namespace ManagementSoftware.GUI
             this.panelItemMenu.AutoScroll = true;
             this.panelItemMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelItemMenu.Controls.Add(this.buttonDangXuat);
+            this.panelItemMenu.Controls.Add(this.buttonHelp);
             this.panelItemMenu.Controls.Add(this.buttonSetting);
             this.panelItemMenu.Controls.Add(this.buttonActivity);
             this.panelItemMenu.Controls.Add(this.buttonEmployee);
@@ -94,7 +96,7 @@ namespace ManagementSoftware.GUI
             this.buttonDangXuat.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonDangXuat.ForeColor = System.Drawing.Color.White;
             this.buttonDangXuat.Image = global::ManagementSoftware.Properties.Resources.red_x_10333;
-            this.buttonDangXuat.Location = new System.Drawing.Point(0, 316);
+            this.buttonDangXuat.Location = new System.Drawing.Point(0, 395);
             this.buttonDangXuat.Name = "buttonDangXuat";
             this.buttonDangXuat.Size = new System.Drawing.Size(174, 79);
             this.buttonDangXuat.TabIndex = 12;
@@ -290,6 +292,25 @@ namespace ManagementSoftware.GUI
             this.panel2.Size = new System.Drawing.Size(187, 70);
             this.panel2.TabIndex = 0;
             // 
+            // buttonHelp
+            // 
+            this.buttonHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHelp.FlatAppearance.BorderSize = 0;
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonHelp.ForeColor = System.Drawing.Color.White;
+            this.buttonHelp.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp.Image")));
+            this.buttonHelp.Location = new System.Drawing.Point(0, 316);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(174, 79);
+            this.buttonHelp.TabIndex = 13;
+            this.buttonHelp.Text = "Trợ giúp";
+            this.buttonHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -336,6 +357,7 @@ namespace ManagementSoftware.GUI
         private Button buttonEmployee;
         private Button buttonTheoDoiTramBom;
         private PictureBox pictureBox2;
+        private Button buttonHelp;
     }
 }
 

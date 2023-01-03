@@ -112,11 +112,7 @@ namespace ManagementSoftware.GUI
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    new XacNhanDangXuat("Main").ShowDialog();
-                }
+                Application.Exit();
             }
            
         }
@@ -138,6 +134,12 @@ namespace ManagementSoftware.GUI
             {
 
             }
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            Help form = new Help();
+            ChangeFormContent(form, sender);
         }
     }
 }

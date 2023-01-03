@@ -37,20 +37,31 @@ namespace ManagementSoftware
                 MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+
+
+
+
             new Thread(() =>
             {
-                new DataAlert().StartTimer(60000);
-
+                new DeleteAllData().StartTimer(86400000);
             }).Start();
+            new Thread(() =>
+            {
+                new DataDigital().StartTimer(55000);
+            }).Start();
+
             new Thread(() =>
             {
                 new DataAnalog().StartTimer(60000);
 
             }).Start();
+
             new Thread(() =>
             {
-                new DataDigital().StartTimer(60000);
+                new DataAlert().StartTimer(65000);
+
             }).Start();
+
 
 
             Application.Run(new Login());

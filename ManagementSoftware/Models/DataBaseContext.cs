@@ -18,7 +18,7 @@ namespace ManagementSoftware.Models
         public DbSet<DoThiKhuynhHuong> DoThiKhuynhHuongs { get; set; }
         public DbSet<XuHuongVaTinHieu> XuHuongVaTinHieus { get; set; }
 
-
+        public DbSet<DateInitDatabase> DateInitDatabases { get; set; }
 
 
 
@@ -89,6 +89,11 @@ namespace ManagementSoftware.Models
                 entity.HasIndex(e => e.TenDoThi).IsUnique();
             });
 
+            //db
+            modelBuilder.Entity<DateInitDatabase>(entity => {
+                entity.Property(e => e.CreateAt).HasDefaultValueSql("(getdate())");
+            });
+
 
         }
         public void CreateDatabase()
@@ -96,6 +101,11 @@ namespace ManagementSoftware.Models
             //this.Database.EnsureDeleted();
             if (this.Database.EnsureCreated() == true)
             {
+
+                this.DateInitDatabases.Add(new DateInitDatabase());
+                this.SaveChanges();
+
+
                 //tao quuyen cho admin
                 DALGroup.AddGroup(Common.GroupAdmin);
                 //tao tai khoan admin
@@ -104,32 +114,7 @@ namespace ManagementSoftware.Models
                 DALActivity.AddActivity(new Activity("Hệ thống", "Khởi tạo tài khoản admin.", Common.UserAdmin.Username));
             }
         }
-        public bool ResetDB()
-        {
-            try
-            {
-                if (this.Database.EnsureDeleted() == true && this.Database.EnsureCreated() == true)
-                {
-                    //tao quuyen cho admin
-                    DALGroup.AddGroup(Common.GroupAdmin);
-                    //tao tai khoan admin
-                    DALUser.AddUser(Common.UserAdmin);
-                    DALActivity.AddActivity(new Activity("Hệ thống", "Khởi tạo tài khoản admin.", Common.UserAdmin.Username));
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch
-            {
-                return false;
-            }
-
-
-
-        }
+       
 
     }
 }

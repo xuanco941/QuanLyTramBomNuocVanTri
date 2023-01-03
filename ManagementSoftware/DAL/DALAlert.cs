@@ -16,13 +16,12 @@ namespace ManagementSoftware.DAL
             try
             {
                 dbContext.Alerts.Add(d);
-
+                dbContext.SaveChanges();
             }
             catch
             {
 
             }
-            dbContext.SaveChanges();
         }
 
         public static async Task AddRange(List<Alert> list)
@@ -31,10 +30,10 @@ namespace ManagementSoftware.DAL
             try
             {
                 await dbContext.Alerts.AddRangeAsync(list);
+                await dbContext.SaveChangesAsync();
             }
             catch
             {
-                await dbContext.SaveChangesAsync();
             }
         }
         public static void DeleteRange(List<Alert> list)
@@ -43,12 +42,12 @@ namespace ManagementSoftware.DAL
             try
             {
                 dbContext.Alerts.RemoveRange(list);
+                dbContext.SaveChanges();
             }
             catch
             {
 
             }
-            dbContext.SaveChanges();
         }
 
     }

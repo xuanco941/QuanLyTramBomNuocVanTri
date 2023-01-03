@@ -20,13 +20,13 @@ namespace ManagementSoftware.DAL
             try
             {
                 await dbContext.AlertHistorys.AddAsync(alertHistory);
+                await dbContext.SaveChangesAsync();
 
             }
             catch
             {
 
             }
-            await dbContext.SaveChangesAsync();
         }
 
         public static async Task AddRangeHistory(List<Alert> d)
@@ -58,13 +58,13 @@ namespace ManagementSoftware.DAL
             try
             {
                 dbContext.AlertHistorys.RemoveRange(dbContext.AlertHistorys);
+                dbContext.SaveChanges();
 
             }
             catch
             {
 
             }
-            dbContext.SaveChanges();
         }
         public static AlertHistory? GetNewestAlertHistory()
         {
