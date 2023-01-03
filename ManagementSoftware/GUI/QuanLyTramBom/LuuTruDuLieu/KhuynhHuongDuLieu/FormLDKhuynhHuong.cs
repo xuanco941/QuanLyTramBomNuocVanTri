@@ -264,8 +264,6 @@ namespace QuanLyTramBom
 
 
 
-        double maxTime = 15000;
-
         async void UpdateChart()
         {
 
@@ -277,35 +275,35 @@ namespace QuanLyTramBom
             {
                 khoangCachTimeDouble = khoangCachTime.TotalMinutes;
                 typeTime = "phút";
-                numberInterval = 2;
+                numberInterval = 30;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Hours)
             {
                 khoangCachTimeDouble = khoangCachTime.TotalHours;
                 typeTime = "giờ";
-                numberInterval = 60;
+                numberInterval = 12;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Days)
             {
                 khoangCachTimeDouble = khoangCachTime.TotalDays;
                 typeTime = "ngày";
-                numberInterval = 1440;
+                numberInterval = 5;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Months)
             {
                 khoangCachTimeDouble = khoangCachTime.TotalDays/30;
                 typeTime = "tháng";
-                numberInterval = 17280;
+                numberInterval = 3;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Years)
             {
                 khoangCachTimeDouble = khoangCachTime.TotalDays/365;
                 typeTime = "năm";
-                numberInterval = 17280;
+                numberInterval = 1;
             }
-            if (khoangCachTimeDouble > maxTime)
+            if ((khoangCachTimeDouble/numberInterval)>25)
             {
-                MessageBox.Show($"Dữ liệu quá lớn với {Math.Round(khoangCachTimeDouble, 0,MidpointRounding.AwayFromZero)} {typeTime}, bạn nên giới hạn dưới {maxTime} {typeTime} hoặc thay đổi kiểu hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Dữ liệu quá lớn với {Math.Round(khoangCachTimeDouble, 0,MidpointRounding.AwayFromZero)} {typeTime}, bạn nên thay đổi kiểu hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

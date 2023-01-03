@@ -367,7 +367,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 }
                 catch
                 {
-
+                    text = "";
                 }
             }
             finally
