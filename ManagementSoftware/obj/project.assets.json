@@ -3918,7 +3918,7 @@
       ]
     },
     "Syncfusion.Licensing/20.2.0.36": {
-      "sha512": "+tqb0Bl9Ip1/hu1tDOUbJx524q3G3nY46vSXbUBQpJKE7nuWSkTDHLycvnK4/aw32Amn8FP4yPS59iXXZKIBew==",
+      "sha512": "J91BSHE2vXfCO6N8SEm+8b3AvjUJuuAim8v0jP3W4r+Lz6hWJDwZXsUM+3lPAcbqDs9BCVui1tmzqMJaj1/g0A==",
       "type": "package",
       "path": "syncfusion.licensing/20.2.0.36",
       "files": [
@@ -7858,19 +7858,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xuanc\\.nuget\\packages\\": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\lastfix\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
       "projectName": "ManagementSoftware",
-      "projectPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
-      "packagesPath": "C:\\Users\\xuanc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\lastfix\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\lastfix\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xuanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
