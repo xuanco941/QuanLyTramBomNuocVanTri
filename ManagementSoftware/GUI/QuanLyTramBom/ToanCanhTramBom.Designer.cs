@@ -1185,7 +1185,7 @@
             // 
             this.pictureBoxBangTaiThang.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxBangTaiThang.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBangTaiThang.Image")));
-            this.pictureBoxBangTaiThang.Location = new System.Drawing.Point(272, 95);
+            this.pictureBoxBangTaiThang.Location = new System.Drawing.Point(272, 97);
             this.pictureBoxBangTaiThang.Name = "pictureBoxBangTaiThang";
             this.pictureBoxBangTaiThang.Size = new System.Drawing.Size(15, 227);
             this.pictureBoxBangTaiThang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
