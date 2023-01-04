@@ -18,7 +18,7 @@ namespace ManagementSoftware
         public static Font FontHeaderColumnDGV = new Font("Segoe UI", 12, FontStyle.Regular);
 
         //Connect
-        public static string ConnectionString = @"Data Source=DESKTOP-P4IC2M8\SQLEXPRESS;Initial Catalog=TramBomNuoc;User ID=sa;Password=942001xX";
+        public static string ConnectionString = @"Data Source=NAME_DB;Initial Catalog=TramBomNuoc;User ID=sa;Password=";
         public const string LicenseSyncfusion = "NzE5NjE0QDMyMzAyZTMyMmUzMFlqaFh1Qk9GKytyNHNaaE16dktXZFg0cERMU2Qvai9KQmdEYUZSL0U4OE09";
 
         //App

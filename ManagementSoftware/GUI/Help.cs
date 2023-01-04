@@ -16,5 +16,10 @@ namespace ManagementSoftware.GUI
         {
             InitializeComponent();
         }
+
+        private void Help_Load(object sender, EventArgs e)
+        {
+            pdfDocumentView1.Load("HDSD.pdf");
+        }
     }
 }
