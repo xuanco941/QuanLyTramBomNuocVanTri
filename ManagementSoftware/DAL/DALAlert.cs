@@ -10,13 +10,17 @@ namespace ManagementSoftware.DAL
 {
     public class DALAlert
     {
-        public static void Add(Alert d)
+        public static async Task Add(Alert? d)
         {
             DataBaseContext dbContext = new DataBaseContext();
             try
             {
-                dbContext.Alerts.Add(d);
-                dbContext.SaveChanges();
+                if (d != null)
+                {
+                    dbContext.Alerts.Add(d);
+                    await dbContext.SaveChangesAsync();
+                }
+
             }
             catch
             {

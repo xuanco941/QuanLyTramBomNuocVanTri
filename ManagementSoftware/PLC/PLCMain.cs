@@ -74,6 +74,9 @@ namespace ManagementSoftware.PLC
             return task.Result;
         }
 
+
+
+
         //public void GetData()
         //{
         //    int a;

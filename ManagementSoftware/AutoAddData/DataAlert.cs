@@ -15,14 +15,35 @@ namespace ManagementSoftware.AutoAddData
             plc = new PLCAlert();
         }
 
+
+        public static List<Alert> list = new AlertCommon().ListAllAlerts;
+
         async void SaveData()
         {
             await plc.Open();
-            List<Alert>? l = await plc.GetListDataAlert(new AlertCommon().ListAllAlerts);
-            if (l != null && l.Count > 0)
+
+
+
+            List<Alert>? listAll = await plc.GetListDataAlert(new AlertCommon().ListAllAlerts);
+
+            if (listAll != null && listAll.Count > 0)
             {
-                await DALAlert.AddRange(l);
+                foreach (var item in list)
+                {
+                    Alert? d = listAll.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                    if (d != null)
+                    {
+                        await DALAlert.Add(d);
+                    }
+                }
+                list.Clear();
+                list = listAll;
             }
+
+
+
+
+
             await plc.Close();
         }
         private void MyTimer_Tick(object sender, EventArgs e)

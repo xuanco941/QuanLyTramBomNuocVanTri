@@ -19,19 +19,35 @@ namespace ManagementSoftware.AutoAddData
             plc = new PLCDigital();
         }
 
-        async void SaveData()
+        async Task SaveData()
         {
+
             await plc.Open();
-            List<Digital>? l = await plc.GetListDataDigital(new DigitalCommon().ListAllDigitals);
-            if (l != null && l.Count > 0)
+
+            List<DigitalHistory> list = DALDigitalHistory.GetAll();
+
+            List<Digital>? listAll = await plc.GetListDataDigital(new DigitalCommon().ListAllDigitals);
+
+            if (listAll != null && listAll.Count > 0)
             {
-                await DALDigital.AddRange(l);
+                foreach (var item in list)
+                {
+                    Digital? d = listAll.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                    if (d != null)
+                    {
+                        await DALDigital.Add(d);
+                        DALDigitalHistory.Update(d);
+                    }
+                }
             }
+
+
+
             await plc.Close();
         }
-        private void MyTimer_Tick(object sender, EventArgs e)
+        private async void MyTimer_Tick(object sender, EventArgs e)
         {
-            SaveData();
+            await SaveData();
         }
         public void StopTimer()
         {

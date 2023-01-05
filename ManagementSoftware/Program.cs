@@ -5,6 +5,8 @@ using ManagementSoftware.AutoAddData;
 using ManagementSoftware.PLC;
 using ManagementSoftware.GUI.QuanLyTramBom;
 using QuanLyTramBom;
+using ManagementSoftware.DAL;
+using ManagementSoftware.Models.DuLieuMayPLC;
 
 namespace ManagementSoftware
 {
@@ -54,9 +56,18 @@ namespace ManagementSoftware
             //    new DeleteAllData().StartTimer(86400000);
             //}).Start();
 
+
+
+
             new Thread(() =>
             {
-                new DataDigital().StartTimer(57000);
+                new DataAlert().StartTimer(11000);
+
+            }).Start();
+
+            new Thread(() =>
+            {
+                new DataDigital().StartTimer(15000);
             }).Start();
 
             new Thread(() =>
@@ -65,11 +76,7 @@ namespace ManagementSoftware
 
             }).Start();
 
-            new Thread(() =>
-            {
-                new DataAlert().StartTimer(67000);
 
-            }).Start();
 
 
 
@@ -83,6 +90,7 @@ namespace ManagementSoftware
                 try
                 {
                     Application.Run(new Main());
+
                 }
                 catch
                 {

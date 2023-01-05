@@ -1,4 +1,5 @@
 ﻿using ManagementSoftware.DAL;
+using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -12,6 +13,8 @@ namespace ManagementSoftware.Models
         public DbSet<Activity> Activities { get; set; }
 
         public DbSet<Digital> Digitals { get; set; }
+        public DbSet<DigitalHistory> DigitalHistories { get; set; }
+
         public DbSet<Analog> Analogs { get; set; }
         public DbSet<Alert> Alerts { get; set; }
         public DbSet<AlertHistory> AlertHistorys { get; set; }
@@ -70,6 +73,11 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
             });
+            //digital hisstory
+            modelBuilder.Entity<DigitalHistory>(entity =>
+            {
+                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
+            });
             //analog
             modelBuilder.Entity<Analog>(entity =>
             {
@@ -96,7 +104,7 @@ namespace ManagementSoftware.Models
 
 
         }
-        public void CreateDatabase()
+        public async void CreateDatabase()
         {
             //this.Database.EnsureDeleted();
             if (this.Database.EnsureCreated() == true)
@@ -112,6 +120,21 @@ namespace ManagementSoftware.Models
                 DALUser.AddUser(Common.UserAdmin);
 
                 DALActivity.AddActivity(new Activity("Hệ thống", "Khởi tạo tài khoản admin.", Common.UserAdmin.Username));
+
+                try
+                {
+                    var x = DALDigitalHistory.GetAll();
+                    if (x==null || x.Count < 1)
+                    {
+                        await DALDigitalHistory.AddRangeHistory(new DigitalCommon().ListAllDigitals);
+                    }
+                }
+                catch
+                {
+
+                }
+               
+                    
             }
         }
        

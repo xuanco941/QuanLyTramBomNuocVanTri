@@ -2,6 +2,7 @@
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
 using ManagementSoftware.Properties;
+using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ManagementSoftware.GUI.QuanLyTramBom
 {
@@ -41,9 +43,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     if (analog != null)
                     {
                         string str = String.Format("{0:0.00}", analog.GiaTriDong);
-                        if(a.DiaChiPLC=="D10000" || a.DiaChiPLC == "D10004" || a.DiaChiPLC =="D10002" || a.DiaChiPLC == "D10006")
+                        if (a.DiaChiPLC == "D10000" || a.DiaChiPLC == "D10004" || a.DiaChiPLC == "D10002" || a.DiaChiPLC == "D10006")
                         {
-                            str = str +"  "+ a.DonVi;
+                            str = str + "  " + a.DonVi;
                         }
                         btn.Text = str;
                     }
@@ -116,13 +118,16 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 AutoUpdateAnalog();
             }).Start();
 
+
             AutoUpdateDigital();
+
         }
         private async void ToanCanhTramBom_Load(object sender, EventArgs e)
         {
-            timer1.Start();
             await plcAnalog.Open();
             await plcDigital.Open();
+
+            timer1.Start();
         }
 
         private async void ToanCanhTramBom_FormClosing(object sender, FormClosingEventArgs e)
@@ -836,7 +841,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 pictureBoxPheu1.Image = Resources.PheuTrenDo;
             }
             //đen
-            else if (((M10041!=null && M10041.TrangThai==true) && (M10040 != null && M10040.TrangThai == true))
+            else if (((M10041 != null && M10041.TrangThai == true) && (M10040 != null && M10040.TrangThai == true))
                 || ((M10041 != null && M10041.TrangThai == true) && (M10039 != null && M10039.TrangThai == true))
                 || ((M10042 != null && M10042.TrangThai == true) && (M10039 != null && M10039.TrangThai == true))
                 || ((M10042 != null && M10042.TrangThai == true) && (M10040 != null && M10040.TrangThai == true)))
@@ -898,7 +903,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 }
             }
             //vàng đỏ
-            else if ((M10038 != null && M10038.TrangThai == true)&& (M10040 != null && M10040.TrangThai == true))
+            else if ((M10038 != null && M10038.TrangThai == true) && (M10040 != null && M10040.TrangThai == true))
             {
                 CLearTimer(TimerCheckColorPheuSo1M10038);
                 CLearTimer(TimerCheckColorPheuSo1M10040);

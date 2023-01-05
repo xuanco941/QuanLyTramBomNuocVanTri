@@ -10,13 +10,13 @@ namespace ManagementSoftware.DAL
 {
     public class DALDigital
     {
-        public static void Add(Digital d)
+        public static async Task Add(Digital d)
         {
             try
             {
                 DataBaseContext dbContext = new DataBaseContext();
-                dbContext.Digitals.Add(d);
-                dbContext.SaveChanges();
+                await dbContext.Digitals.AddAsync(d);
+                await dbContext.SaveChangesAsync();
             }
             catch
             {

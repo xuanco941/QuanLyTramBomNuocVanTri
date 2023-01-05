@@ -45,25 +45,19 @@ namespace ManagementSoftware.PLC
         }
         public async Task<List<Digital>?> GetListDataDigital(List<Digital> list)
         {
-            List<Digital> result = new List<Digital>();
-            List<Task> taskList = new List<Task>();
-            foreach (var digital in list)
-            {
-                Task task = new Task(() =>
-                {
-                    int? r = this.QueryDigital(digital.DiaChiPLC);
-                    if (r != null)
-                    {
-                        digital.TrangThai = r == 0 ? false : true;
-                    }
-                    result.Add(digital);
-                });
-                task.Start();
-                taskList.Add(task);
 
+            List<Digital> result = new List<Digital>();
+            foreach (Digital a in list)
+            {
+                int? r = await Query(a.DiaChiPLC);
+                if (r != null)
+                {
+                    a.TrangThai = r == 0 ? false : true;
+                }
+                result.Add(a);
             }
-            await Task.WhenAll(taskList);
             return result;
+
 
         }
 

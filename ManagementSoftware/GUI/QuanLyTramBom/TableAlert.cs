@@ -85,6 +85,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 changeColor = !changeColor; 
             }
 
+
+            timer1.Start();
         }
 
         async Task taskDelete()
@@ -94,6 +96,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         private async void TableAlert_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if(timer1 != null && timer1.Enabled == true)
+            {
+                timer1.Stop();
+                timer1.Dispose();
+            }
             await plc.Close();
         }
 

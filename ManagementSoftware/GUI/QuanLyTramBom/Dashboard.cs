@@ -12,6 +12,7 @@ namespace QuanLyTramBom
 {
     public partial class Dashboard : Form
     {
+
         PLCAlert plcAlert;
         private void GoFullscreen(bool fullscreen)
         {
@@ -166,10 +167,10 @@ namespace QuanLyTramBom
 
         private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (timer1 != null && timer1.Enabled == true)
+            if (timer2 != null && timer2.Enabled == true)
             {
-                timer1.Stop();
-                timer1.Dispose();
+                timer2.Stop();
+                timer2.Dispose();
             }
             await plcAlert.Close();
         }
@@ -214,7 +215,8 @@ namespace QuanLyTramBom
             formToanCanh.Show();
 
             //timer new alert
-            timer1.Start();
+            timer2.Start();
+
 
         }
 
@@ -311,43 +313,59 @@ namespace QuanLyTramBom
             }
         }
 
-        private async void timer1_Tick(object sender, EventArgs e)
+
+
+
+
+
+        public static List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
+
+
+        private async void timer2_Tick(object sender, EventArgs e)
         {
-            new Thread(async () =>
+            List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
+            if (alertTrue != null && alertTrue.Count > 0)
             {
-                List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
-                List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
-                if (alertTrue != null && alertTrue.Count > 0)
+
+                if (alertHistories != null && alertHistories.Count > 0)
                 {
 
-                    if (alertHistories != null && alertHistories.Count > 0)
+                    foreach (var i in alertTrue)
                     {
-
-                        foreach (var i in alertTrue)
+                        bool check = false;
+                        foreach (var j in alertHistories.ToList())
                         {
-                            bool check = false;
-                            foreach (var j in alertHistories.ToList())
+                            if (i.TinHieu != j.TinHieu)
                             {
-                                if (i.TinHieu != j.TinHieu)
-                                {
-                                    check = true;
-                                }
-                                else
-                                {
-                                    check = false;
-                                    break;
-                                }
+                                check = true;
                             }
-                            if (check == true)
+                            else
                             {
-                                await DALAlertHistory.AddAlertHistory(i);
+                                check = false;
+                                break;
                             }
                         }
-
+                        if (check == true)
+                        {
+                            await DALAlertHistory.AddAlertHistory(i);
+                            AlertHistory a = new AlertHistory(i.DiaChiPLC, i.GanThe, i.DieuKien, i.Nhom, i.TinHieu);
+                            a.TrangThai = i.TrangThai;
+                            alertHistories.Add(a);
+                        }
                     }
-                    else
+
+                }
+                else
+                {
+                    await DALAlertHistory.AddRangeHistory(alertTrue);
+
+                    foreach (var item in alertTrue)
                     {
-                        await DALAlertHistory.AddRangeHistory(alertTrue);
+                        alertHistories = new List<AlertHistory>();
+                        AlertHistory b = new AlertHistory(item.DiaChiPLC, item.GanThe, item.DieuKien, item.Nhom, item.TinHieu);
+                        b.TrangThai = item.TrangThai;
+                        alertHistories.Add(b);
+
                     }
 
 
@@ -377,10 +395,29 @@ namespace QuanLyTramBom
                     SetTextControl(labelDieuKien, "");
                     SetTextControl(labelGiaTri, "");
                 }
-            }).Start();
 
-            
+
+
+            }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

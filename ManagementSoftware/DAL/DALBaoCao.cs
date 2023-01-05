@@ -49,7 +49,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a1 = analogs.Where(a => a.GanThe == ganTheMucNuocBeHut).ToList();
                     if (a1 != null && a1.Count > 0)
                     {
-                        MucNuocBeHut = Math.Round(a1.Sum(a => a.GiaTriDong) / a1.Count, 2, MidpointRounding.ToPositiveInfinity);
+                        MucNuocBeHut = Math.Round(a1.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -60,7 +60,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a2 = analogs.Where(a => a.GanThe == ganTheMucNuocBeXa).ToList();
                     if (a2 != null && a2.Count > 0)
                     {
-                        MucNuocBeXa = Math.Round(a2.Sum(a => a.GiaTriDong) / a2.Count, 2, MidpointRounding.ToPositiveInfinity);
+                        MucNuocBeXa = Math.Round(a2.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -170,7 +170,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a1 = analogs.Where(a => a.GanThe == ganTheMucNuocBeHut).ToList();
                     if (a1 != null && a1.Count > 0)
                     {
-                        MucNuocBeHut = Math.Round(a1.Sum(a => a.GiaTriDong) / a1.Count, 2, MidpointRounding.ToPositiveInfinity);
+                        MucNuocBeHut = Math.Round(a1.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -181,7 +181,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a2 = analogs.Where(a => a.GanThe == ganTheMucNuocBeXa).ToList();
                     if (a2 != null && a2.Count > 0)
                     {
-                        MucNuocBeXa = Math.Round(a2.Sum(a => a.GiaTriDong) / a2.Count, 2, MidpointRounding.ToPositiveInfinity);
+                        MucNuocBeXa = Math.Round(a2.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -295,7 +295,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a1 = analogs.Where(a => a.GanThe == ganTheMucNuocBeHut).ToList();
                     if (a1 != null && a1.Count > 0)
                     {
-                        MucNuocBeHut = Math.Round(a1.Sum(a => a.GiaTriDong) / a1.Count, 2, MidpointRounding.ToPositiveInfinity);
+                        MucNuocBeHut = Math.Round(a1.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -306,7 +306,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a2 = analogs.Where(a => a.GanThe == ganTheMucNuocBeXa).ToList();
                     if (a2 != null && a2.Count > 0)
                     {
-                        MucNuocBeXa = Math.Round(a2.Sum(a => a.GiaTriDong) / a2.Count, 2, MidpointRounding.ToPositiveInfinity);
+                        MucNuocBeXa = Math.Round(a2.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
