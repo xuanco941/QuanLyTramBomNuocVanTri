@@ -76,7 +76,7 @@ namespace ManagementSoftware
 
 
 
-            Application.Run(new Login());
+            Application.Run(new Dashboard());
 
             if (Common.USERSESSION != null)
             {

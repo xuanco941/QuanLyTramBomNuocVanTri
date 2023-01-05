@@ -60,7 +60,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
                 Analog? x = await plc.GetAnAnalog(analog);
                 if (x != null)
                 {
-                    labelValue.Text = String.Format("{0:0.00}", Math.Round((double)x.GiaTriDong, 2, MidpointRounding.AwayFromZero));
+                    labelValue.Text = String.Format("{0:0.00}", Math.Round((double)x.GiaTriDong, 2, MidpointRounding.ToPositiveInfinity));
                 }
             }
             else

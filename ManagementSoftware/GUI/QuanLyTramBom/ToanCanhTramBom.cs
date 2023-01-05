@@ -75,14 +75,18 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         }
         async void AutoUpdateDigital()
         {
-            //digital
             CheckColorBangTaiThang(await plcDigital.GetADigital(digitalCommon.M10065), await plcDigital.GetADigital(digitalCommon.M10066), await plcDigital.GetADigital(digitalCommon.M10067), await plcDigital.GetADigital(digitalCommon.M10064));
+
+
             CheckColorBangTaiXien(await plcDigital.GetADigital(digitalCommon.M10069), await plcDigital.GetADigital(digitalCommon.M10070), await plcDigital.GetADigital(digitalCommon.M10071), await plcDigital.GetADigital(digitalCommon.M10068));
+
 
             CheckColorBomThoat1(await plcDigital.GetADigital(digitalCommon.M10077));
             CheckColorBomThoat2(await plcDigital.GetADigital(digitalCommon.M10079));
 
             CheckColorTrangThaiBom2(await plcDigital.GetADigital(digitalCommon.M10144), await plcDigital.GetADigital(digitalCommon.M10145), await plcDigital.GetADigital(digitalCommon.M10167));
+
+
             CheckColorTrangThaiBom3(await plcDigital.GetADigital(digitalCommon.M10193), await plcDigital.GetADigital(digitalCommon.M10194), await plcDigital.GetADigital(digitalCommon.M10216));
             CheckColorTrangThaiBom4(await plcDigital.GetADigital(digitalCommon.M10242), await plcDigital.GetADigital(digitalCommon.M10243), await plcDigital.GetADigital(digitalCommon.M10265));
             CheckColorBomMoi1(await plcDigital.GetADigital(digitalCommon.M10059));
@@ -379,7 +383,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             if (M10077 != null)
             {
                 //xanh
-                if (M10077.TrangThai)
+                if (M10077.TrangThai == false)
                 {
                     BomThoat1.Image = Resources.BomThoat1Xanh;
                 }
@@ -400,7 +404,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             if (M10079 != null)
             {
                 //xanh
-                if (M10079.TrangThai)
+                if (M10079.TrangThai == false)
                 {
                     BomThoat2.Image = Resources.BomThoat2Xanh;
                 }

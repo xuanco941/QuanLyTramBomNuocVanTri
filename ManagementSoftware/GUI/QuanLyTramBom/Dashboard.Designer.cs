@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonBangLoi = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,7 +65,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -423,6 +425,14 @@
             this.panel3.Size = new System.Drawing.Size(192, 28);
             this.panel3.TabIndex = 8;
             // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel13.Location = new System.Drawing.Point(59, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(59, 28);
+            this.panel13.TabIndex = 2;
+            // 
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
@@ -514,13 +524,10 @@
             this.tabPage4.Text = "Danh sách vào ra";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // panel13
+            // timer1
             // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel13.Location = new System.Drawing.Point(59, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(59, 28);
-            this.panel13.TabIndex = 2;
+            this.timer1.Interval = 2500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Dashboard
             // 
@@ -593,5 +600,6 @@
         private Panel panel4;
         private Panel paneltextHeader;
         private Panel panel13;
+        private System.Windows.Forms.Timer timer1;
     }
 }

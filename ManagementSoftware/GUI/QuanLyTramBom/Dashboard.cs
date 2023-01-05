@@ -163,14 +163,13 @@ namespace QuanLyTramBom
             }
 
         }
-        System.Timers.Timer timer;
 
         private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (timer != null && timer.Enabled == true)
+            if (timer1 != null && timer1.Enabled == true)
             {
-                timer.Stop();
-                timer.Dispose();
+                timer1.Stop();
+                timer1.Dispose();
             }
             await plcAlert.Close();
         }
@@ -182,71 +181,7 @@ namespace QuanLyTramBom
         }
 
 
-        private async void timerGetNewAlert_Tick_1(object sender, EventArgs e)
-        {
-            List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
-            List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
-            if (alertTrue != null && alertTrue.Count > 0)
-            {
 
-                if (alertHistories != null && alertHistories.Count > 0)
-                {
-
-                    foreach (var i in alertTrue)
-                    {
-                        bool check = false;
-                        foreach (var j in alertHistories.ToList())
-                        {
-                            if (i.TinHieu != j.TinHieu)
-                            {
-                                check = true;
-                            }
-                            else
-                            {
-                                check = false;
-                                break;
-                            }
-                        }
-                        if (check == true)
-                        {
-                            await DALAlertHistory.AddAlertHistory(i);
-                        }
-                    }
-
-                }
-                else
-                {
-                    await DALAlertHistory.AddRangeHistory(alertTrue);
-                }
-
-
-            }
-
-            if (alertHistories != null && alertHistories.Count > 0)
-            {
-                AlertHistory? alertERR = DALAlertHistory.GetNewestAlertHistory();
-                if (alertERR != null)
-                {
-                    SetTextControl(labelNgay, alertERR.ThoiGian.ToString("dd/MM/yyyy"));
-                    SetTextControl(labelNhom, alertERR.Nhom);
-                    SetTextControl(labelMoTa, alertERR.TinHieu);
-                    SetTextControl(labelGanThe, alertERR.GanThe);
-                    SetTextControl(labelThoiGian, alertERR.ThoiGian.ToString("hh:mm:ss"));
-                    SetTextControl(labelDieuKien, alertERR.DieuKien);
-                    SetTextControl(labelGiaTri, alertHistories.Count.ToString());
-                }
-            }
-            else
-            {
-                SetTextControl(labelNgay, "");
-                SetTextControl(labelNhom, "");
-                SetTextControl(labelMoTa, "");
-                SetTextControl(labelGanThe, "");
-                SetTextControl(labelThoiGian, "");
-                SetTextControl(labelDieuKien, "");
-                SetTextControl(labelGiaTri, "");
-            }
-        }
         private void buttonBangLoi_Click(object sender, EventArgs e)
         {
             TableAlert tb = new TableAlert();
@@ -279,14 +214,7 @@ namespace QuanLyTramBom
             formToanCanh.Show();
 
             //timer new alert
-            new Thread(() =>
-            {
-                timer = new System.Timers.Timer();
-                timer.Elapsed += timerGetNewAlert_Tick_1;
-                timer.Interval = 1500;
-                timer.Start();
-
-            }).Start();
+            timer1.Start();
 
         }
 
@@ -381,6 +309,77 @@ namespace QuanLyTramBom
                 form.FormBorderStyle = FormBorderStyle.None;
                 form.Show();
             }
+        }
+
+        private async void timer1_Tick(object sender, EventArgs e)
+        {
+            new Thread(async () =>
+            {
+                List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
+                List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
+                if (alertTrue != null && alertTrue.Count > 0)
+                {
+
+                    if (alertHistories != null && alertHistories.Count > 0)
+                    {
+
+                        foreach (var i in alertTrue)
+                        {
+                            bool check = false;
+                            foreach (var j in alertHistories.ToList())
+                            {
+                                if (i.TinHieu != j.TinHieu)
+                                {
+                                    check = true;
+                                }
+                                else
+                                {
+                                    check = false;
+                                    break;
+                                }
+                            }
+                            if (check == true)
+                            {
+                                await DALAlertHistory.AddAlertHistory(i);
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        await DALAlertHistory.AddRangeHistory(alertTrue);
+                    }
+
+
+                }
+
+                if (alertHistories != null && alertHistories.Count > 0)
+                {
+                    AlertHistory? alertERR = DALAlertHistory.GetNewestAlertHistory();
+                    if (alertERR != null)
+                    {
+                        SetTextControl(labelNgay, alertERR.ThoiGian.ToString("dd/MM/yyyy"));
+                        SetTextControl(labelNhom, alertERR.Nhom);
+                        SetTextControl(labelMoTa, alertERR.TinHieu);
+                        SetTextControl(labelGanThe, alertERR.GanThe);
+                        SetTextControl(labelThoiGian, alertERR.ThoiGian.ToString("hh:mm:ss"));
+                        SetTextControl(labelDieuKien, alertERR.DieuKien);
+                        SetTextControl(labelGiaTri, alertHistories.Count.ToString());
+                    }
+                }
+                else
+                {
+                    SetTextControl(labelNgay, "");
+                    SetTextControl(labelNhom, "");
+                    SetTextControl(labelMoTa, "");
+                    SetTextControl(labelGanThe, "");
+                    SetTextControl(labelThoiGian, "");
+                    SetTextControl(labelDieuKien, "");
+                    SetTextControl(labelGiaTri, "");
+                }
+            }).Start();
+
+            
         }
 
 

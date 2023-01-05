@@ -49,8 +49,8 @@ namespace QuanLyTramBom
             int i = 1;
             foreach (BaoCao item in list)
             {
-                double xa = Math.Round((item.MucNuocBeXa / list.Count), 2, MidpointRounding.AwayFromZero);
-                double hut = Math.Round((item.MucNuocBeHut / list.Count), 2, MidpointRounding.AwayFromZero);
+                double xa = Math.Round((item.MucNuocBeXa / list.Count), 2, MidpointRounding.ToPositiveInfinity);
+                double hut = Math.Round((item.MucNuocBeHut / list.Count), 2, MidpointRounding.ToPositiveInfinity);
 
 
                 string tongTime1 = item.ThoiGianChayBom1.Hours.ToString() + " h " + item.ThoiGianChayBom1.Minutes.ToString() + " min ";
@@ -94,9 +94,9 @@ namespace QuanLyTramBom
 
             }
             //label
-            labelTBXa.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)) + " m";
+            labelTBXa.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.ToPositiveInfinity)) + " m";
             // b dùng hàm Math.Round để giới hạn còn 2 chữ số sau thập phân
-            labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)) + " m";
+            labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.ToPositiveInfinity)) + " m";
 
             labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + " h " + TongThoiGianChayBom1.Minutes.ToString() + " min";
             labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + " h " + TongThoiGianChayBom2.Minutes.ToString() + " min";
@@ -105,7 +105,7 @@ namespace QuanLyTramBom
 
             dt.Rows.Add("Tổng", "", "", TongThoiGianChayBom1.Hours.ToString() + " h " + TongThoiGianChayBom1.Minutes.ToString() + " min ", TongThoiGianChayBom2.Hours.ToString() + " h " + TongThoiGianChayBom2.Minutes.ToString() + " min ",
       TongThoiGianChayBom3.Hours.ToString() + " h  " + TongThoiGianChayBom3.Minutes.ToString() + " min ", TongThoiGianChayBom4.Hours.ToString() + " h " + TongThoiGianChayBom4.Minutes.ToString() + " min ");
-            dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)), "", "", "", "");
+            dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.ToPositiveInfinity)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.ToPositiveInfinity)), "", "", "", "");
             dataGridView1.DataSource = dt;
 
             foreach (DataGridViewRow item in dataGridView1.Rows)
@@ -294,8 +294,8 @@ namespace QuanLyTramBom
 
                                 }
 
-                                ws.Cell("B35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
-                                ws.Cell("C35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero));
+                                ws.Cell("B35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.ToPositiveInfinity));
+                                ws.Cell("C35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.ToPositiveInfinity));
                                 ws.Cell("D34").Value = TongThoiGianChayBom1.Hours.ToString() + "h " + TongThoiGianChayBom1.Minutes.ToString() + "min";
                                 ws.Cell("E34").Value = TongThoiGianChayBom2.Hours.ToString() + "h " + TongThoiGianChayBom2.Minutes.ToString() + "min";
                                 ws.Cell("F34").Value = TongThoiGianChayBom3.Hours.ToString() + "h " + TongThoiGianChayBom3.Minutes.ToString() + "min";

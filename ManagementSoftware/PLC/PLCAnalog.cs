@@ -32,7 +32,7 @@ namespace ManagementSoftware.PLC
                 {
                     int temp = (int)(tempH * 65536 + tempL);
                     PLCConvertTypeData.Types.Double km = new PLCConvertTypeData.Types.Double();
-                    a.GiaTriDong = Math.Round(km.FromDWord(temp), 2, MidpointRounding.AwayFromZero);
+                    a.GiaTriDong = Math.Round(km.FromDWord(temp), 2, MidpointRounding.ToPositiveInfinity);
                 }
                 result.Add(a);
             }
@@ -57,7 +57,7 @@ namespace ManagementSoftware.PLC
             {
                 int temp = (int)(tempH * 65536 + tempL);
                 PLCConvertTypeData.Types.Double km = new PLCConvertTypeData.Types.Double();
-                analog.GiaTriDong = Math.Round(km.FromDWord(temp), 2, MidpointRounding.AwayFromZero);
+                analog.GiaTriDong = Math.Round(km.FromDWord(temp), 2, MidpointRounding.ToPositiveInfinity);
 
                 return analog;
             }
@@ -88,7 +88,7 @@ namespace ManagementSoftware.PLC
             {
                 int temp = (int)(tempH * 65536 + tempL);
                 PLCConvertTypeData.Types.Double km = new PLCConvertTypeData.Types.Double();
-                analog.GiaTriDong = Math.Round(km.FromDWord(temp), 2, MidpointRounding.AwayFromZero);
+                analog.GiaTriDong = Math.Round(km.FromDWord(temp), 2, MidpointRounding.ToPositiveInfinity);
 
                 return analog;
             }

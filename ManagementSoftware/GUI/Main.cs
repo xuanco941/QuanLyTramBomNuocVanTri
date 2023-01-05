@@ -16,11 +16,11 @@ namespace ManagementSoftware.GUI
 {
     public partial class Main : Form
     {
-        
+
         public Main()
         {
             InitializeComponent();
-            this.FormBorderStyle= FormBorderStyle.None;
+            this.FormBorderStyle = FormBorderStyle.None;
 
         }
 
@@ -102,7 +102,7 @@ namespace ManagementSoftware.GUI
         {
             //Common.USERSESSION = null;
             //Application.Restart();
-            if(Common.USERSESSION.Username == "admin")
+            if (Common.USERSESSION.Username == "admin")
             {
                 DialogResult dialogResult = MessageBox.Show($"Bạn có chắc muốn thoát? Đồng nghĩa với việc dữ liệu sẽ không được tự động lưu nữa! Hãy xác nhận tài khoản admin để tiếp tục thoát.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
@@ -114,7 +114,7 @@ namespace ManagementSoftware.GUI
             {
                 Application.Exit();
             }
-           
+
         }
 
         private void buttonSetting_Click(object sender, EventArgs e)
@@ -126,14 +126,9 @@ namespace ManagementSoftware.GUI
         private void buttonTheoDoiTramBom_Click(object sender, EventArgs e)
         {
             Dashboard form = new Dashboard();
-            try
-            {
-                form.ShowDialog();
-            }
-            catch
-            {
 
-            }
+            form.ShowDialog();
+
         }
 
         private void buttonHelp_Click(object sender, EventArgs e)
