@@ -21,6 +21,15 @@ namespace ManagementSoftware
 
             ApplicationConfiguration.Initialize();
 
+
+            Application.ThreadException += new ThreadExceptionEventHandler(MyCommonExceptionHandlingMethod);
+
+            static void MyCommonExceptionHandlingMethod(object sender, ThreadExceptionEventArgs t)
+            {
+                //Exception handling...
+            }
+
+
             //Syncfusion
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Common.LicenseSyncfusion);
 
@@ -40,10 +49,11 @@ namespace ManagementSoftware
                 MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            new Thread(() =>
-            {
-                new DeleteAllData().StartTimer(86400000);
-            }).Start();
+            //new Thread(() =>
+            //{
+            //    new DeleteAllData().StartTimer(86400000);
+            //}).Start();
+
             new Thread(() =>
             {
                 new DataDigital().StartTimer(57000);
@@ -70,7 +80,14 @@ namespace ManagementSoftware
 
             if (Common.USERSESSION != null)
             {
-                Application.Run(new Main());
+                try
+                {
+                    Application.Run(new Main());
+                }
+                catch
+                {
+
+                }
             }
         }
     }
