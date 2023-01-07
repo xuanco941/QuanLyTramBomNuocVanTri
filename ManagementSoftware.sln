@@ -5,10 +5,6 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagementSoftware", "ManagementSoftware\ManagementSoftware.csproj", "{0D95702E-496A-4FFE-87B9-F30A5FCE08EE}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TramBomClient", "TramBomClient\TramBomClient.vdproj", "{F1B72958-671B-4BF7-BDE5-A2FFEB84F26A}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Server", "Server\Server.vdproj", "{331A5D6F-EDF7-41B0-BC6B-A91437584D47}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,10 +15,6 @@ Global
 		{0D95702E-496A-4FFE-87B9-F30A5FCE08EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D95702E-496A-4FFE-87B9-F30A5FCE08EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D95702E-496A-4FFE-87B9-F30A5FCE08EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1B72958-671B-4BF7-BDE5-A2FFEB84F26A}.Debug|Any CPU.ActiveCfg = Debug
-		{F1B72958-671B-4BF7-BDE5-A2FFEB84F26A}.Release|Any CPU.ActiveCfg = Release
-		{331A5D6F-EDF7-41B0-BC6B-A91437584D47}.Debug|Any CPU.ActiveCfg = Debug
-		{331A5D6F-EDF7-41B0-BC6B-A91437584D47}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

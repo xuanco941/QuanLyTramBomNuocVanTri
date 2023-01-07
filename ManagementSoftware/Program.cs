@@ -82,15 +82,9 @@ namespace ManagementSoftware
 
             if (Common.USERSESSION != null)
             {
-                try
-                {
-                    Application.Run(new Main());
 
-                }
-                catch
-                {
+                Application.Run(new Main());
 
-                }
             }
         }
     }
