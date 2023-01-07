@@ -141,7 +141,7 @@
             this.gridLayout3 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.gridLayout4 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.gridLayoutDauVao = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panelContent.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelDauVao.SuspendLayout();
@@ -1509,10 +1509,10 @@
             this.gridLayoutDauVao.ContainerControl = this.panelDauVao;
             this.gridLayoutDauVao.Rows = 3;
             // 
-            // timer1
+            // timer2
             // 
-            this.timer1.Interval = 1200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            this.timer2.Interval = 1300;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // ToanCanhTramBom
             // 
@@ -1687,8 +1687,8 @@
         private Label label54;
         private Label D10000;
         private Label D10004;
-        private System.Windows.Forms.Timer timer1;
         private Panel paneltextHeader;
         private Label label27;
+        private System.Windows.Forms.Timer timer2;
     }
 }

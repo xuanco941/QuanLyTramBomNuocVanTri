@@ -7,6 +7,7 @@ using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
 using ManagementSoftware.Properties;
 using Syncfusion.Windows.Forms.Tools;
+using System.Diagnostics;
 
 namespace QuanLyTramBom
 {
@@ -14,6 +15,7 @@ namespace QuanLyTramBom
     {
 
         PLCAlert plcAlert;
+
         private void GoFullscreen(bool fullscreen)
         {
             if (fullscreen)
@@ -149,75 +151,10 @@ namespace QuanLyTramBom
 
 
 
-
-
-
-        void SetTextControl(Label label, string text)
-        {
-            if (IsHandleCreated)
-            {
-                BeginInvoke(() =>
-                {
-                    label.Text = text;
-                });
-                return;
-            }
-
-        }
-
-        private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (timer2 != null && timer2.Enabled == true)
-            {
-                timer2.Stop();
-                timer2.Dispose();
-            }
-            await plcAlert.Close();
-        }
-
-        public void CloseForm()
-        {
-
-            this.Close();
-        }
-
-
-
         private void buttonBangLoi_Click(object sender, EventArgs e)
         {
             TableAlert tb = new TableAlert();
             tb.ShowDialog();
-        }
-
-
-
-
-
-
-
-
-        /// <summary>
-        /// ///////////////////////
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
-
-        private async void Dashboard_Load(object sender, EventArgs e)
-        {
-            await plcAlert.Open();
-
-            ToanCanhTramBom formToanCanh = new ToanCanhTramBom();
-            formToanCanh.TopLevel = false;
-            panelContentToanCanh.Controls.Add(formToanCanh);
-            formToanCanh.Dock = DockStyle.Fill;
-            formToanCanh.FormBorderStyle = FormBorderStyle.None;
-            formToanCanh.Show();
-
-            //timer new alert
-            timer2.Start();
-
-
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
@@ -318,12 +255,87 @@ namespace QuanLyTramBom
 
 
 
-        public static List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
 
 
-        private async void timer2_Tick(object sender, EventArgs e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        System.Threading.Timer timer;
+        int TIME_INTERVAL_IN_MILLISECONDS = 2000;
+
+
+        private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (timer != null)
+            {
+                this.timer.Change(Timeout.Infinite, Timeout.Infinite);
+            }
+            await plcAlert.Close();
+        }
+
+        public void CloseForm()
+        {
+            this.Close();
+            this.Dispose();
+        }
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// ///////////////////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+
+        private async void Dashboard_Load(object sender, EventArgs e)
+        {
+
+
+            ToanCanhTramBom formToanCanh = new ToanCanhTramBom();
+            formToanCanh.TopLevel = false;
+            panelContentToanCanh.Controls.Add(formToanCanh);
+            formToanCanh.Dock = DockStyle.Fill;
+            formToanCanh.FormBorderStyle = FormBorderStyle.None;
+            formToanCanh.Show();
+
+            await plcAlert.Open();
+
+            timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+
+        }
+
+
+
+        private async void Callback(Object state)
+        {
+            Stopwatch watch = new Stopwatch();
+
+            watch.Start();
+
+
+            // update data
+            // Long running operation
+
             List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
+            List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
             if (alertTrue != null && alertTrue.Count > 0)
             {
 
@@ -348,9 +360,6 @@ namespace QuanLyTramBom
                         if (check == true)
                         {
                             await DALAlertHistory.AddAlertHistory(i);
-                            AlertHistory a = new AlertHistory(i.DiaChiPLC, i.GanThe, i.DieuKien, i.Nhom, i.TinHieu);
-                            a.TrangThai = i.TrangThai;
-                            alertHistories.Add(a);
                         }
                     }
 
@@ -358,128 +367,62 @@ namespace QuanLyTramBom
                 else
                 {
                     await DALAlertHistory.AddRangeHistory(alertTrue);
-
-                    foreach (var item in alertTrue)
-                    {
-                        alertHistories = new List<AlertHistory>();
-                        AlertHistory b = new AlertHistory(item.DiaChiPLC, item.GanThe, item.DieuKien, item.Nhom, item.TinHieu);
-                        b.TrangThai = item.TrangThai;
-                        alertHistories.Add(b);
-
-                    }
-
-
                 }
-
-                if (alertHistories != null && alertHistories.Count > 0)
-                {
-                    AlertHistory? alertERR = DALAlertHistory.GetNewestAlertHistory();
-                    if (alertERR != null)
-                    {
-                        SetTextControl(labelNgay, alertERR.ThoiGian.ToString("dd/MM/yyyy"));
-                        SetTextControl(labelNhom, alertERR.Nhom);
-                        SetTextControl(labelMoTa, alertERR.TinHieu);
-                        SetTextControl(labelGanThe, alertERR.GanThe);
-                        SetTextControl(labelThoiGian, alertERR.ThoiGian.ToString("hh:mm:ss"));
-                        SetTextControl(labelDieuKien, alertERR.DieuKien);
-                        SetTextControl(labelGiaTri, alertHistories.Count.ToString());
-                    }
-                }
-                else
-                {
-                    SetTextControl(labelNgay, "");
-                    SetTextControl(labelNhom, "");
-                    SetTextControl(labelMoTa, "");
-                    SetTextControl(labelGanThe, "");
-                    SetTextControl(labelThoiGian, "");
-                    SetTextControl(labelDieuKien, "");
-                    SetTextControl(labelGiaTri, "");
-                }
-
 
 
             }
+            if (alertHistories != null && alertHistories.Count > 0)
+            {
+                UpdateData(alertHistories);
+            }
+
+
+            timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
         }
 
 
 
+        private void UpdateData(List<AlertHistory> alertHistories)
+        {
+
+            if (IsHandleCreated && InvokeRequired)
+            {
+                BeginInvoke(new Action<List<AlertHistory>>(UpdateData), alertHistories);
+                return;
+            }
+
+
+            //update gui
+
+            if (alertHistories != null && alertHistories.Count > 0)
+            {
+                AlertHistory? alertERR = DALAlertHistory.GetNewestAlertHistory();
+                if (alertERR != null)
+                {
+                    labelNgay.Text = alertERR.ThoiGian.ToString("dd/MM/yyyy");
+                    labelNhom.Text = alertERR.Nhom;
+                    labelMoTa.Text = alertERR.TinHieu;
+                    labelGanThe.Text = alertERR.GanThe;
+                    labelThoiGian.Text = alertERR.ThoiGian.ToString("hh:mm:ss");
+                    labelDieuKien.Text = alertERR.DieuKien;
+                    labelGiaTri.Text = alertHistories.Count.ToString();
+                }
+            }
+            else
+            {
+                labelNgay.Text = "";
+                labelNhom.Text = "";
+                labelMoTa.Text = "";
+                labelGanThe.Text = "";
+                labelThoiGian.Text = "";
+                labelDieuKien.Text = "";
+                labelGiaTri.Text = "";
+            }
+
+
+        }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //ToanCanhTramBom DformToanCanh;
-        //bool checkLoadedDformToanCanh = false;
-
-        //FormKHThoiGianThuc DformKHThoiGianThuc;
-        //bool checkLoadedDformKHThoiGianThuc = false;
-
-        //FormQuanLyLuuTruDuLieu DformQuanLyDuLieu;
-        //bool checkLoadedDformQuanLyDuLieu = false;
-
-        //FormQuanLyDSVaoRa DformQuanLyDSVaoRa;
-        //bool checkLoadedDformQuanLyDSVaoRa = false;
-
-
-
-
-        //void DashboardLoad()
-        //{
-        //    if (checkLoadedDformToanCanh == false)
-        //    {
-        //        DformToanCanh = new ToanCanhTramBom();
-        //        DformToanCanh.TopLevel = false;
-        //        panelContentToanCanh.Controls.Add(DformToanCanh);
-        //        DformToanCanh.Dock = DockStyle.Fill;
-        //        DformToanCanh.FormBorderStyle = FormBorderStyle.None;
-        //        DformToanCanh.Show();
-
-        //        checkLoadedDformToanCanh = true;
-        //    }
-        //    if(checkLoadedDformKHThoiGianThuc == false)
-        //    {
-        //        DformKHThoiGianThuc = new FormKHThoiGianThuc();
-        //        DformKHThoiGianThuc.TopLevel = false;
-        //        tabPage2.Controls.Add(DformKHThoiGianThuc);
-        //        DformKHThoiGianThuc.Dock = DockStyle.Fill;
-        //        DformKHThoiGianThuc.FormBorderStyle = FormBorderStyle.None;
-        //        DformKHThoiGianThuc.Show();
-
-        //        c
-        //    }
-
-
-        //    FormQuanLyLuuTruDuLieu form = new FormQuanLyLuuTruDuLieu();
-        //    form.TopLevel = false;
-        //    tabPage3.Controls.Add(form);
-        //    form.Dock = DockStyle.Fill;
-        //    form.FormBorderStyle = FormBorderStyle.None;
-        //    form.Show();
-
-        //    FormQuanLyDSVaoRa form = new FormQuanLyDSVaoRa();
-        //    form.TopLevel = false;
-        //    tabPage4.Controls.Add(form);
-        //    form.Dock = DockStyle.Fill;
-        //    form.FormBorderStyle = FormBorderStyle.None;
-        //    form.Show();
-
-
-        //}
     }
 }

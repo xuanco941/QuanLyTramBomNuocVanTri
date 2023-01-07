@@ -18,6 +18,8 @@ namespace ManagementSoftware.Models
         public DbSet<Analog> Analogs { get; set; }
         public DbSet<Alert> Alerts { get; set; }
         public DbSet<AlertHistory> AlertHistorys { get; set; }
+        public DbSet<AlertHistory2> AlertHistory2s { get; set; }
+
         public DbSet<DoThiKhuynhHuong> DoThiKhuynhHuongs { get; set; }
         public DbSet<XuHuongVaTinHieu> XuHuongVaTinHieus { get; set; }
 
@@ -93,6 +95,10 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
             });
+            modelBuilder.Entity<AlertHistory2>(entity =>
+            {
+                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
+            });
             modelBuilder.Entity<DoThiKhuynhHuong>(entity => {
                 entity.HasIndex(e => e.TenDoThi).IsUnique();
             });
@@ -127,6 +133,12 @@ namespace ManagementSoftware.Models
                     if (x==null || x.Count < 1)
                     {
                         await DALDigitalHistory.AddRangeHistory(new DigitalCommon().ListAllDigitals);
+                    }
+
+                    var xs = DALAlertHistory2.GetAll();
+                    if (xs == null || xs.Count < 1)
+                    {
+                        await DALAlertHistory2.AddRangeHistory(new AlertCommon().ListAllAlerts);
                     }
                 }
                 catch

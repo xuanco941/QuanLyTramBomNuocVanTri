@@ -1,5 +1,6 @@
 ﻿using ManagementSoftware.DAL.DALPagination;
 using ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa;
+using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
 
         private List<Alert>? ListResults;
 
+        List<Digital> listDigital = new DigitalCommon().ListAllDigitals;
+
         void ShowDGV(List<Alert>? digitals)
         {
             if (digitals != null && digitals.Count > 0)
@@ -40,7 +43,23 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                 foreach (Alert d in digitals.ToList())
                 {
                     string createAt = d.ThoiGian.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
+
                     string trangthai = d.TrangThai.ToString();
+
+
+                    Digital? digital = listDigital.Where(a => a.TinHieu == d.TinHieu).FirstOrDefault();
+                    if (digital != null)
+                    {
+                        if (d.TrangThai == true)
+                        {
+                            trangthai = digital.Bat;
+                        }
+                        else
+                        {
+                            trangthai = digital.Tat;
+                        }
+                    }
+
                     if (IsHandleCreated)
                     {
                         BeginInvoke(() =>

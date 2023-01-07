@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         AnalogCommon analogCommon;
         DigitalCommon digitalCommon;
+
+
         public ToanCanhTramBom()
         {
             InitializeComponent();
@@ -33,48 +36,25 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             digitalCommon = new DigitalCommon();
 
         }
-        async Task LoadTextAnalog(Label btn, Analog a)
+        void LoadTextAnalog(Label btn, Analog? a)
         {
-            Analog? analog = await plcAnalog.GetAnAnalog(a);
-            if (IsHandleCreated)
+
+            if (a != null)
             {
-                BeginInvoke(() =>
+                string str = String.Format("{0:0.00}", a.GiaTriDong);
+                if (a.DiaChiPLC == "D10000" || a.DiaChiPLC == "D10004" || a.DiaChiPLC == "D10002" || a.DiaChiPLC == "D10006")
                 {
-                    if (analog != null)
-                    {
-                        string str = String.Format("{0:0.00}", analog.GiaTriDong);
-                        if (a.DiaChiPLC == "D10000" || a.DiaChiPLC == "D10004" || a.DiaChiPLC == "D10002" || a.DiaChiPLC == "D10006")
-                        {
-                            str = str + "  " + a.DonVi;
-                        }
-                        btn.Text = str;
-                    }
-                    else
-                    {
-                        btn.Text = "N/A";
-                    }
-                });
-                return;
+                    str = str + "  " + a.DonVi;
+                }
+                btn.Text = str;
             }
+            else
+            {
+                btn.Text = "N/A";
+            }
+
         }
-        async void AutoUpdateAnalog()
-        {
-            //analog
-            await LoadTextAnalog(D10000, analogCommon.D10000);
-            await LoadTextAnalog(D10002, analogCommon.D10002);
-            await LoadTextAnalog(D10004, analogCommon.D10004);
-            await LoadTextAnalog(D10006, analogCommon.D10006);
-            await LoadTextAnalog(D10008, analogCommon.D10008);
-            await LoadTextAnalog(D10010, analogCommon.D10010);
-            await LoadTextAnalog(D10022, analogCommon.D10022);
-            await LoadTextAnalog(D10024, analogCommon.D10024);
-            await LoadTextAnalog(D10036, analogCommon.D10036);
-            await LoadTextAnalog(D10038, analogCommon.D10038);
-            await LoadTextAnalog(D10050, analogCommon.D10050);
-            await LoadTextAnalog(D10052, analogCommon.D10052);
-            await LoadTextAnalog(D10064, analogCommon.D10064);
-            await LoadTextAnalog(D10066, analogCommon.D10066);
-        }
+
         async void AutoUpdateDigital()
         {
             CheckColorBangTaiThang(await plcDigital.GetADigital(digitalCommon.M10065), await plcDigital.GetADigital(digitalCommon.M10066), await plcDigital.GetADigital(digitalCommon.M10067), await plcDigital.GetADigital(digitalCommon.M10064));
@@ -111,40 +91,138 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             CheckColorCaoRac3(await plcDigital.GetADigital(digitalCommon.M10235), await plcDigital.GetADigital(digitalCommon.M10236), await plcDigital.GetADigital(digitalCommon.M10237));
             CheckColorCaoRac4(await plcDigital.GetADigital(digitalCommon.M10284), await plcDigital.GetADigital(digitalCommon.M10285), await plcDigital.GetADigital(digitalCommon.M10286));
         }
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            new Thread(() =>
-            {
-                AutoUpdateAnalog();
-            }).Start();
 
 
-            AutoUpdateDigital();
+        System.Threading.Timer timer1;
 
-        }
+        int TIME_INTERVAL_IN_MILLISECONDS = 1000;
+
+
         private async void ToanCanhTramBom_Load(object sender, EventArgs e)
         {
-            await plcAnalog.Open();
+            if (await plcAnalog.Open() == 0)
+            {
+                timer1 = new System.Threading.Timer(Callback1, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+            }
             await plcDigital.Open();
 
-            timer1.Start();
+            timer2.Start();
+
+
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            AutoUpdateDigital();
+        }
+
+        private async void Callback1(Object state)
+        {
+            Stopwatch watch = new Stopwatch();
+
+            watch.Start();
+
+
+            // update data
+            // Long running operation
+
+            Analog? D10000c = await plcAnalog.GetAnAnalog(analogCommon.D10000);
+            Analog? D10002c = await plcAnalog.GetAnAnalog(analogCommon.D10002);
+            Analog? D10004c = await plcAnalog.GetAnAnalog(analogCommon.D10004);
+            Analog? D10006c = await plcAnalog.GetAnAnalog(analogCommon.D10006);
+            Analog? D10008c = await plcAnalog.GetAnAnalog(analogCommon.D10008);
+            Analog? D10010c = await plcAnalog.GetAnAnalog(analogCommon.D10010);
+            Analog? D10022c = await plcAnalog.GetAnAnalog(analogCommon.D10022);
+            Analog? D10024c = await plcAnalog.GetAnAnalog(analogCommon.D10024);
+            Analog? D10036c = await plcAnalog.GetAnAnalog(analogCommon.D10036);
+            Analog? D10038c = await plcAnalog.GetAnAnalog(analogCommon.D10038);
+            Analog? D10050c = await plcAnalog.GetAnAnalog(analogCommon.D10050);
+            Analog? D10052c = await plcAnalog.GetAnAnalog(analogCommon.D10052);
+            Analog? D10064c = await plcAnalog.GetAnAnalog(analogCommon.D10064);
+            Analog? D10066c = await plcAnalog.GetAnAnalog(analogCommon.D10066);
+
+
+
+
+            UpdateDataAnalog(D10000c, D10002c, D10004c, D10006c, D10008c, D10010c, D10022c, D10024c, D10036c, D10038c, D10050c, D10052c, D10064c, D10066c);
+
+
+            timer1.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+        }
+
+      
+
+
+        private void UpdateDataAnalog(Analog? D10000c, Analog? D10002c, Analog? D10004c, Analog? D10006c, Analog? D10008c, Analog? D10010c, Analog? D10022c,
+            Analog? D10024c, Analog? D10036c, Analog? D10038c, Analog? D10050c, Analog? D10052c, Analog? D10064c, Analog? D10066c)
+        {
+
+            if (IsHandleCreated && InvokeRequired)
+            {
+                BeginInvoke(new Action<Analog?, Analog?, Analog?, Analog?, Analog?, Analog?, Analog?, Analog?, Analog?, Analog?, Analog?, Analog?, Analog?, Analog?>(UpdateDataAnalog), D10000c, D10002c, D10004c, D10006c, D10008c, D10010c, D10022c, D10024c, D10036c, D10038c, D10050c, D10052c, D10064c, D10066c);
+                return;
+            }
+
+
+            //update gui
+
+            LoadTextAnalog(D10000, D10000c);
+            LoadTextAnalog(D10002, D10002c);
+            LoadTextAnalog(D10004, D10004c);
+            LoadTextAnalog(D10006, D10006c);
+            LoadTextAnalog(D10008, D10008c);
+            LoadTextAnalog(D10010, D10010c);
+            LoadTextAnalog(D10022, D10022c);
+            LoadTextAnalog(D10024, D10024c);
+            LoadTextAnalog(D10036, D10036c);
+            LoadTextAnalog(D10038, D10038c);
+            LoadTextAnalog(D10050, D10050c);
+            LoadTextAnalog(D10052, D10052c);
+            LoadTextAnalog(D10064, D10064c);
+            LoadTextAnalog(D10066, D10066c);
+        }
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        void CloseTimer()
+        {
+            if (timer1 != null)
+            {
+                this.timer1.Change(Timeout.Infinite, Timeout.Infinite);
+            }
+
+            if(timer2!=null && timer2.Enabled == true)
+            {
+                timer2.Stop();
+                timer2.Dispose();
+            }
+        }
+
+
+
+
 
         private async void ToanCanhTramBom_FormClosing(object sender, FormClosingEventArgs e)
         {
+
             await plcAnalog.Close();
             await plcDigital.Close();
             CloseForm();
         }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -553,9 +631,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             CLearTimer(TimerBTXienDo);
             CLearTimer(TimerBTXienVang);
 
-            timer1.Stop();
-            timer1.Dispose();
 
+            CloseTimer();
         }
 
 
@@ -1867,6 +1944,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 pictureBoxVan4.Image = Resources.VanTim;
             }
         }
+
 
     }
 }

@@ -19,26 +19,48 @@ namespace ManagementSoftware.AutoAddData
             plc = new PLCDigital();
         }
 
+
+
         async Task SaveData()
         {
 
             await plc.Open();
 
             List<DigitalHistory> list = DALDigitalHistory.GetAll();
+            List<AlertHistory2> list2 = DALAlertHistory2.GetAll();
+
 
             List<Digital>? listAll = await plc.GetListDataDigital(new DigitalCommon().ListAllDigitals);
 
             if (listAll != null && listAll.Count > 0)
             {
-                foreach (var item in list)
+                foreach (var item in listAll)
                 {
-                    Digital? d = listAll.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+
+                    AlertHistory2? alert = list2.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                    if (alert != null)
+                    {
+                        Alert x = new Alert(alert.DiaChiPLC, alert.GanThe, alert.DieuKien, alert.Nhom, alert.TinHieu);
+                        x.TrangThai = alert.TrangThai;
+                        await DALAlert.Add(x);
+                        DALAlertHistory2.Update(x);
+                    }
+
+
+                    DigitalHistory? d = list.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
                     if (d != null)
                     {
-                        await DALDigital.Add(d);
-                        DALDigitalHistory.Update(d);
+                        Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
+                        x.TrangThai = d.TrangThai;
+                        await DALDigital.Add(x);
+                        DALDigitalHistory.Update(x);
                     }
+
+                    
                 }
+
+
+       
             }
 
 

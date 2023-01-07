@@ -59,20 +59,15 @@ namespace ManagementSoftware
 
 
 
+
             new Thread(() =>
             {
-                new DataAlert().StartTimer(11000);
-
+                new DataDigital().StartTimer(8000);
             }).Start();
 
             new Thread(() =>
             {
-                new DataDigital().StartTimer(15000);
-            }).Start();
-
-            new Thread(() =>
-            {
-                new DataAnalog().StartTimer(62000);
+                new DataAnalog().StartTimer(60000);
 
             }).Start();
 

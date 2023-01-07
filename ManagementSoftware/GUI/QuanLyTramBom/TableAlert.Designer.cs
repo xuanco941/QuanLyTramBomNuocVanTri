@@ -28,21 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonClear = new LW_PhanMemBaoGia.MyControls.ButtonCustom();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 3100;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // dataGridView1
             // 
@@ -131,7 +124,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
         private DataGridView dataGridView1;
         private LW_PhanMemBaoGia.MyControls.ButtonCustom buttonClear;
     }
