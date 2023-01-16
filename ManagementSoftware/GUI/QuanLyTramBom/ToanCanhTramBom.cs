@@ -13,7 +13,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ManagementSoftware.GUI.QuanLyTramBom
 {
@@ -22,20 +21,19 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         PLCAnalog plcAnalog;
         PLCDigital plcDigital;
+        PLCDigital plcDigital2;
+        PLCDigital plcDigital3;
+        PLCDigital plcDigital4;
+        PLCDigital plcDigital5;
+        PLCDigital plcDigital6;
+        PLCDigital plcDigital7;
+
 
         AnalogCommon analogCommon;
         DigitalCommon digitalCommon;
 
 
-        public ToanCanhTramBom()
-        {
-            InitializeComponent();
-            plcAnalog = new PLCAnalog();
-            plcDigital = new PLCDigital();
-            analogCommon = new AnalogCommon();
-            digitalCommon = new DigitalCommon();
 
-        }
         void LoadTextAnalog(Label btn, Analog? a)
         {
 
@@ -55,66 +53,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         }
 
-        async void AutoUpdateDigital()
-        {
-            CheckColorBangTaiThang(await plcDigital.GetADigital(digitalCommon.M10065), await plcDigital.GetADigital(digitalCommon.M10066), await plcDigital.GetADigital(digitalCommon.M10067), await plcDigital.GetADigital(digitalCommon.M10064));
-
-
-            CheckColorBangTaiXien(await plcDigital.GetADigital(digitalCommon.M10069), await plcDigital.GetADigital(digitalCommon.M10070), await plcDigital.GetADigital(digitalCommon.M10071), await plcDigital.GetADigital(digitalCommon.M10068));
-
-
-            CheckColorBomThoat1(await plcDigital.GetADigital(digitalCommon.M10077));
-            CheckColorBomThoat2(await plcDigital.GetADigital(digitalCommon.M10079));
-
-            CheckColorTrangThaiBom2(await plcDigital.GetADigital(digitalCommon.M10144), await plcDigital.GetADigital(digitalCommon.M10145), await plcDigital.GetADigital(digitalCommon.M10167));
-
-
-            CheckColorTrangThaiBom3(await plcDigital.GetADigital(digitalCommon.M10193), await plcDigital.GetADigital(digitalCommon.M10194), await plcDigital.GetADigital(digitalCommon.M10216));
-            CheckColorTrangThaiBom4(await plcDigital.GetADigital(digitalCommon.M10242), await plcDigital.GetADigital(digitalCommon.M10243), await plcDigital.GetADigital(digitalCommon.M10265));
-            CheckColorBomMoi1(await plcDigital.GetADigital(digitalCommon.M10059));
-            CheckColorBomMoi2(await plcDigital.GetADigital(digitalCommon.M10061));
-            CheckTinHieuMayBom(await plcDigital.GetADigital(digitalCommon.M10097), await plcDigital.GetADigital(digitalCommon.M10146), await plcDigital.GetADigital(digitalCommon.M10195), await plcDigital.GetADigital(digitalCommon.M10244));
-
-
-            CheckColorPheuSo1(await plcDigital.GetADigital(digitalCommon.M10042), await plcDigital.GetADigital(digitalCommon.M10041), await plcDigital.GetADigital(digitalCommon.M10039), await plcDigital.GetADigital(digitalCommon.M10040), await plcDigital.GetADigital(digitalCommon.M10038));
-            CheckColorPheuSo2(await plcDigital.GetADigital(digitalCommon.M10051), await plcDigital.GetADigital(digitalCommon.M10050), await plcDigital.GetADigital(digitalCommon.M10048), await plcDigital.GetADigital(digitalCommon.M10049), await plcDigital.GetADigital(digitalCommon.M10047));
-            CheckColorVan1(await plcDigital.GetADigital(digitalCommon.M10125), await plcDigital.GetADigital(digitalCommon.M10124), await plcDigital.GetADigital(digitalCommon.M10122), await plcDigital.GetADigital(digitalCommon.M10123));
-            CheckColorVan2(await plcDigital.GetADigital(digitalCommon.M10174), await plcDigital.GetADigital(digitalCommon.M10173), await plcDigital.GetADigital(digitalCommon.M10171), await plcDigital.GetADigital(digitalCommon.M10172));
-            CheckColorVan3(await plcDigital.GetADigital(digitalCommon.M10223), await plcDigital.GetADigital(digitalCommon.M10222), await plcDigital.GetADigital(digitalCommon.M10220), await plcDigital.GetADigital(digitalCommon.M10221));
-            CheckColorVan4(await plcDigital.GetADigital(digitalCommon.M10272), await plcDigital.GetADigital(digitalCommon.M10271), await plcDigital.GetADigital(digitalCommon.M10269), await plcDigital.GetADigital(digitalCommon.M10270));
-            CheckColorTrangThaiBom1(await plcDigital.GetADigital(digitalCommon.M10095), await plcDigital.GetADigital(digitalCommon.M10096), await plcDigital.GetADigital(digitalCommon.M10118));
-
-
-            CheckColorCaoRac1(await plcDigital.GetADigital(digitalCommon.M10137), await plcDigital.GetADigital(digitalCommon.M10138), await plcDigital.GetADigital(digitalCommon.M10139));
-
-            CheckColorCaoRac2(await plcDigital.GetADigital(digitalCommon.M10186), await plcDigital.GetADigital(digitalCommon.M10187), await plcDigital.GetADigital(digitalCommon.M10188));
-            CheckColorCaoRac3(await plcDigital.GetADigital(digitalCommon.M10235), await plcDigital.GetADigital(digitalCommon.M10236), await plcDigital.GetADigital(digitalCommon.M10237));
-            CheckColorCaoRac4(await plcDigital.GetADigital(digitalCommon.M10284), await plcDigital.GetADigital(digitalCommon.M10285), await plcDigital.GetADigital(digitalCommon.M10286));
-        }
-
 
         System.Threading.Timer timer1;
+        System.Threading.Timer timer2;
 
         int TIME_INTERVAL_IN_MILLISECONDS = 1000;
 
 
-        private async void ToanCanhTramBom_Load(object sender, EventArgs e)
-        {
-            if (await plcAnalog.Open() == 0)
-            {
-                timer1 = new System.Threading.Timer(Callback1, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
-            }
-            await plcDigital.Open();
 
-            timer2.Start();
-
-
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            AutoUpdateDigital();
-        }
 
         private async void Callback1(Object state)
         {
@@ -150,7 +96,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             timer1.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
         }
 
-      
+
 
 
         private void UpdateDataAnalog(Analog? D10000c, Analog? D10002c, Analog? D10004c, Analog? D10006c, Analog? D10008c, Analog? D10010c, Analog? D10022c,
@@ -183,19 +129,24 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         }
 
 
-      
+
+        public ToanCanhTramBom()
+        {
+            InitializeComponent();
+            plcAnalog = new PLCAnalog();
+            plcDigital = new PLCDigital();
+            plcDigital2 = new PLCDigital();
+            plcDigital3 = new PLCDigital();
+            plcDigital4 = new PLCDigital();
+            plcDigital5 = new PLCDigital();
+            plcDigital6 = new PLCDigital();
+            plcDigital7 = new PLCDigital();
 
 
+            analogCommon = new AnalogCommon();
+            digitalCommon = new DigitalCommon();
 
-
-
-
-
-
-
-
-
-
+        }
 
 
         void CloseTimer()
@@ -204,16 +155,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 this.timer1.Change(Timeout.Infinite, Timeout.Infinite);
             }
-
-            if(timer2!=null && timer2.Enabled == true)
+            if (timer2 != null)
             {
-                timer2.Stop();
-                timer2.Dispose();
+                this.timer2.Change(Timeout.Infinite, Timeout.Infinite);
             }
         }
-
-
-
 
 
         private async void ToanCanhTramBom_FormClosing(object sender, FormClosingEventArgs e)
@@ -221,8 +167,257 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
             await plcAnalog.Close();
             await plcDigital.Close();
-            CloseForm();
+            await plcDigital2.Close();
+            await plcDigital3.Close();
+            await plcDigital4.Close();
+            await plcDigital5.Close();
+            await plcDigital6.Close();
+            await plcDigital7.Close();
+
+            CloseTimer();
         }
+
+
+        private async void ToanCanhTramBom_Load(object sender, EventArgs e)
+        {
+            if (await plcAnalog.Open() == 0)
+            {
+                timer1 = new System.Threading.Timer(Callback1, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+            }
+            if (await plcDigital.Open() == 0)
+            {
+                timer2 = new System.Threading.Timer(Callback2, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // DIGITAL -----------------------------------------------------------------------------------
+
+        private async void Callback2(Object state)
+        {
+            Stopwatch watch = new Stopwatch();
+
+            watch.Start();
+
+
+            // update data
+            // Long running operation
+
+
+
+
+
+
+
+            //BangTaiThang
+
+            Digital? M10065 = await plcDigital.GetADigital(digitalCommon.M10065);
+            Digital? M10066 = await plcDigital.GetADigital(digitalCommon.M10066);
+            Digital? M10067 = await plcDigital.GetADigital(digitalCommon.M10067);
+            Digital? M10064 = await plcDigital.GetADigital(digitalCommon.M10064);
+
+            //BangTaiXien 
+
+            Digital? M10069 = await plcDigital.GetADigital(digitalCommon.M10069);
+            Digital? M10070 = await plcDigital.GetADigital(digitalCommon.M10070);
+            Digital? M10071 = await plcDigital.GetADigital(digitalCommon.M10071);
+            Digital? M10068 = await plcDigital.GetADigital(digitalCommon.M10068);
+
+            //BomThoat1 
+            Digital? M10077 = await plcDigital.GetADigital(digitalCommon.M10077);
+
+            //BomThoat2
+            Digital? M10079 = await plcDigital.GetADigital(digitalCommon.M10079);
+
+            //TrangThaiBom2 
+            Digital? M10144 = await plcDigital.GetADigital(digitalCommon.M10144);
+            Digital? M10145 = await plcDigital.GetADigital(digitalCommon.M10145);
+            Digital? M10167 = await plcDigital.GetADigital(digitalCommon.M10167);
+
+            //TrangThaiBom3
+            Digital? M10193 = await plcDigital.GetADigital(digitalCommon.M10193);
+            Digital? M10194 = await plcDigital.GetADigital(digitalCommon.M10194);
+            Digital? M10216 = await plcDigital.GetADigital(digitalCommon.M10216);
+
+            //TrangThaiBom4
+            Digital? M10242 = await plcDigital.GetADigital(digitalCommon.M10242);
+            Digital? M10243 = await plcDigital.GetADigital(digitalCommon.M10243);
+            Digital? M10265 = await plcDigital.GetADigital(digitalCommon.M10265);
+
+            //BomMoi1
+            Digital? M10059 = await plcDigital.GetADigital(digitalCommon.M10059);
+
+            //BomMoi2
+            Digital? M10061 = await plcDigital.GetADigital(digitalCommon.M10061);
+
+            //PheuSo1
+            Digital? M10042 = await plcDigital.GetADigital(digitalCommon.M10042);
+            Digital? M10041 = await plcDigital.GetADigital(digitalCommon.M10041);
+            Digital? M10039 = await plcDigital.GetADigital(digitalCommon.M10039);
+            Digital? M10040 = await plcDigital.GetADigital(digitalCommon.M10040);
+            Digital? M10038 = await plcDigital.GetADigital(digitalCommon.M10038);
+
+            //PheuSo2
+            Digital? M10051 = await plcDigital.GetADigital(digitalCommon.M10051);
+            Digital? M10050 = await plcDigital.GetADigital(digitalCommon.M10050);
+            Digital? M10048 = await plcDigital.GetADigital(digitalCommon.M10048);
+            Digital? M10049 = await plcDigital.GetADigital(digitalCommon.M10049);
+            Digital? M10047 = await plcDigital.GetADigital(digitalCommon.M10047);
+
+            //Van1
+            Digital? M10125 = await plcDigital.GetADigital(digitalCommon.M10125);
+            Digital? M10124 = await plcDigital.GetADigital(digitalCommon.M10124);
+            Digital? M10122 = await plcDigital.GetADigital(digitalCommon.M10122);
+            Digital? M10123 = await plcDigital.GetADigital(digitalCommon.M10123);
+
+            //Van2
+            Digital? M10174 = await plcDigital.GetADigital(digitalCommon.M10174);
+            Digital? M10173 = await plcDigital.GetADigital(digitalCommon.M10173);
+            Digital? M10171 = await plcDigital.GetADigital(digitalCommon.M10171);
+            Digital? M10172 = await plcDigital.GetADigital(digitalCommon.M10172);
+
+            //Van3
+            Digital? M10223 = await plcDigital.GetADigital(digitalCommon.M10223);
+            Digital? M10222 = await plcDigital.GetADigital(digitalCommon.M10222);
+            Digital? M10220 = await plcDigital.GetADigital(digitalCommon.M10220);
+            Digital? M10221 = await plcDigital.GetADigital(digitalCommon.M10221);
+
+            //Van4
+            Digital? M10272 = await plcDigital.GetADigital(digitalCommon.M10272);
+            Digital? M10271 = await plcDigital.GetADigital(digitalCommon.M10271);
+            Digital? M10269 = await plcDigital.GetADigital(digitalCommon.M10269);
+            Digital? M10270 = await plcDigital.GetADigital(digitalCommon.M10270);
+
+            // TrangThaiBom1
+            Digital? M10095 = await plcDigital.GetADigital(digitalCommon.M10095);
+            Digital? M10096 = await plcDigital.GetADigital(digitalCommon.M10096);
+            Digital? M10118 = await plcDigital.GetADigital(digitalCommon.M10118);
+
+            //tin hieu may bom
+            Digital? M10097 = await plcDigital.GetADigital(digitalCommon.M10097);
+            Digital? M10146 = await plcDigital.GetADigital(digitalCommon.M10146);
+            Digital? M10195 = await plcDigital.GetADigital(digitalCommon.M10195);
+            Digital? M10244 = await plcDigital.GetADigital(digitalCommon.M10244);
+
+
+
+            //CaoRac1
+            Digital? M10137 = await plcDigital.GetADigital(digitalCommon.M10137);
+            Digital? M10138 = await plcDigital.GetADigital(digitalCommon.M10138);
+            Digital? M10139 = await plcDigital.GetADigital(digitalCommon.M10139);
+
+            //CaoRac2
+            Digital? M10186 = await plcDigital.GetADigital(digitalCommon.M10186);
+            Digital? M10187 = await plcDigital.GetADigital(digitalCommon.M10187);
+            Digital? M10188 = await plcDigital.GetADigital(digitalCommon.M10188);
+
+            //CaoRac3
+            Digital? M10235 = await plcDigital.GetADigital(digitalCommon.M10235);
+            Digital? M10236 = await plcDigital.GetADigital(digitalCommon.M10236);
+            Digital? M10237 = await plcDigital.GetADigital(digitalCommon.M10237);
+
+            //CaoRac4
+            Digital? M10284 = await plcDigital.GetADigital(digitalCommon.M10284);
+            Digital? M10285 = await plcDigital.GetADigital(digitalCommon.M10285);
+            Digital? M10286 = await plcDigital.GetADigital(digitalCommon.M10286);
+
+
+
+            UpdateDataDigital(M10065, M10066, M10067, M10064, M10069, M10070, M10071, M10068, M10077, M10079, M10144, M10145, M10167, M10193, M10194, M10216, M10243, M10265, M10242, M10059, M10061, M10042, M10041, M10039, M10040, M10038, M10051, M10050, M10048, M10049, M10047, M10125, M10124, M10122, M10123, M10174, M10173, M10171, M10172,
+  M10223, M10222, M10220, M10221, M10272, M10271, M10269, M10270, M10095, M10096, M10118, M10137, M10138, M10139, M10186, M10187, M10188, M10235, M10236, M10237, M10284, M10285, M10286, M10097, M10146, M10195, M10244);
+
+
+            timer2.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+        }
+
+        private void UpdateDataDigital(Digital? M10065c, Digital? M10066c, Digital? M10067c, Digital? M10064c, Digital? M10069c, Digital? M10070c, Digital? M10071c, Digital? M10068c,
+            Digital? M10077c, Digital? M10079c, Digital? M10144c, Digital? M10145c, Digital? M10167c, Digital? M10193c, Digital? M10194c, Digital? M10216c,
+            Digital? M10243c, Digital? M10265c, Digital? M10242c, Digital? M10059c, Digital? M10061c, Digital? M10042c, Digital? M10041c, Digital? M10039c, Digital? M10040c,
+            Digital? M10038c, Digital? M10051c, Digital? M10050c, Digital? M10048c, Digital? M10049c, Digital? M10047c, Digital? M10125c, Digital? M10124c, Digital? M10122c,
+            Digital? M10123c, Digital? M10174c, Digital? M10173c, Digital? M10171c, Digital? M10172c, Digital? M10223c, Digital? M10222c, Digital? M10220c, Digital? M10221c,
+            Digital? M10272c, Digital? M10271c, Digital? M10269c, Digital? M10270c, Digital? M10095c, Digital? M10096c, Digital? M10118c, Digital? M10137c, Digital? M10138c,
+            Digital? M10139c, Digital? M10186c, Digital? M10187c, Digital? M10188c, Digital? M10235c, Digital? M10236c, Digital? M10237c, Digital? M10284c, Digital? M10285c,
+            Digital? M10286c, Digital? M10097c, Digital? M10146c, Digital? M10195c, Digital? M10244c)
+        {
+            //          if (IsHandleCreated && InvokeRequired)
+            //          {
+            //              BeginInvoke(new System.Action<Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?,
+            //          Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?,
+            //          Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?,
+            //          Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?,
+            //          Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?,
+            //          Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?,
+            //          Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?, Digital?,
+            //          Digital?, Digital?, Digital?, Digital?, Digital?>(UpdateDataDigital), M10065c, M10066c, M10067c, M10064c, M10069c, M10070c, M10071c, M10068c, M10077c, M10079c, M10144c, M10145c, M10167c, M10193c, M10194c, M10216c, M10243c, M10265c, M10242c, M10059c, M10061c, M10042c, M10041c, M10039c, M10040c, M10038c, M10051c, M10050c, M10048c, M10049c, M10047c, M10125c, M10124c, M10122c, M10123c, M10174c, M10173c, M10171c, M10172c,
+            //M10223c, M10222c, M10220c, M10221c, M10272c, M10271c, M10269c, M10270c, M10095c, M10096c, M10118c, M10137c, M10138c, M10139c, M10186c, M10187c, M10188c, M10235c, M10236c, M10237c, M10284c, M10285c, M10286c, M10097c, M10146c, M10195c, M10244c);
+            //              return;
+            //          }
+
+            if (IsHandleCreated && InvokeRequired)
+            {
+                BeginInvoke(() => UpdateDataDigital(M10065c, M10066c, M10067c, M10064c, M10069c, M10070c, M10071c, M10068c, M10077c, M10079c, M10144c, M10145c, M10167c, M10193c, M10194c, M10216c, M10243c, M10265c, M10242c, M10059c, M10061c, M10042c, M10041c, M10039c, M10040c, M10038c, M10051c, M10050c, M10048c, M10049c, M10047c, M10125c, M10124c, M10122c, M10123c, M10174c, M10173c, M10171c, M10172c,
+  M10223c, M10222c, M10220c, M10221c, M10272c, M10271c, M10269c, M10270c, M10095c, M10096c, M10118c, M10137c, M10138c, M10139c, M10186c, M10187c, M10188c, M10235c, M10236c, M10237c, M10284c, M10285c, M10286c, M10097c, M10146c, M10195c, M10244c));
+                return;
+            }
+
+
+
+
+
+
+
+
+
+
+            CheckColorBangTaiThang(M10065c, M10066c, M10067c, M10064c);
+
+
+            CheckColorBangTaiXien(M10069c, M10070c, M10071c, M10068c);
+
+
+            CheckColorBomThoat1(M10077c);
+            CheckColorBomThoat2(M10079c);
+
+            CheckColorTrangThaiBom1(M10095c, M10096c, M10118c);
+            CheckColorTrangThaiBom2(M10144c, M10145c, M10167c);
+
+
+            CheckColorTrangThaiBom3(M10193c, M10194c, M10216c);
+            CheckColorTrangThaiBom4(M10242c, M10243c, M10265c);
+            CheckColorBomMoi1(M10059c);
+            CheckColorBomMoi2(M10061c);
+            CheckTinHieuMayBom(M10097c, M10146c, M10195c, M10244c);
+
+
+            CheckColorPheuSo1(M10042c, M10041c, M10039c, M10040c, M10038c);
+            CheckColorPheuSo2(M10051c, M10050c, M10048c, M10049c, M10047c);
+            CheckColorVan1(M10125c, M10124c, M10122c, M10123c);
+            CheckColorVan2(M10174c, M10173c, M10171c, M10172c);
+            CheckColorVan3(M10223c, M10222c, M10220c, M10221c);
+            CheckColorVan4(M10272c, M10271c, M10269c, M10270c);
+
+
+            CheckColorCaoRac1(M10137c, M10138c, M10139c);
+
+            CheckColorCaoRac2(M10186c, M10187c, M10188c);
+            CheckColorCaoRac3(M10235c, M10236c, M10237c);
+            CheckColorCaoRac4(M10284c, M10285c, M10286c);
+        }
+
+
+
 
 
 
@@ -525,155 +720,50 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
-        //timer digital nhấp nháy
-        System.Timers.Timer TimerCheckColorPheuSo1M10039; // đỏ tím
-        System.Timers.Timer TimerCheckColorPheuSo1M10040; // xanh tím
-        System.Timers.Timer TimerCheckColorPheuSo1M10038; // vàng tím
-        System.Timers.Timer TimerCheckColorPheuSo1M10038va40; // vàng đỏ
-        System.Timers.Timer TimerCheckColorPheuSo1M10038va39; // vàng xanh
-        bool nhapNhayPheuSo1;
 
-        System.Timers.Timer TimerCheckColorPheuSo2M10048; // đỏ tím
-        System.Timers.Timer TimerCheckColorPheuSo2M10049; //xanh tím
-        System.Timers.Timer TimerCheckColorPheuSo2M10047; // vàng tím
-        System.Timers.Timer TimerCheckColorPheuSo2M10047va10048; //vàng đỏ
-        System.Timers.Timer TimerCheckColorPheuSo2M10047va10049; //vàng xanh
-        bool nhapNhayPheuSo2;
+        bool nhapNhayPheuSo1 = false;
 
-        System.Timers.Timer TimerCheckColorCaoRacSo1VangXanh; // vàng xanh
-        System.Timers.Timer TimerCheckColorCaoRacSo1VangDo; //vàng đỏ
-        bool nhapNhayCaoRacSo1;
+        bool nhapNhayPheuSo2 = false;
 
-        System.Timers.Timer TimerCheckColorCaoRacSo2VangXanh; // vàng xanh
-        System.Timers.Timer TimerCheckColorCaoRacSo2VangDo; //vàng đỏ
-        bool nhapNhayCaoRacSo2;
+        bool nhapNhayCaoRacSo1 = false;
 
-        System.Timers.Timer TimerCheckColorCaoRacSo3VangXanh; // vàng xanh
-        System.Timers.Timer TimerCheckColorCaoRacSo3VangDo; //vàng đỏ
-        bool nhapNhayCaoRacSo3;
+        bool nhapNhayCaoRacSo2 = false;
 
-        System.Timers.Timer TimerCheckColorCaoRacSo4VangXanh; // vàng xanh
-        System.Timers.Timer TimerCheckColorCaoRacSo4VangDo; //vàng đỏ
-        bool nhapNhayCaoRacSo4;
+        bool nhapNhayCaoRacSo3 = false;
 
+        bool nhapNhayCaoRacSo4 = false;
 
-        System.Timers.Timer TimerTinHieuVan1M10122; //đỏ tím
-        System.Timers.Timer TimerTinHieuVan1M10123; //xanh tím
-        bool nhapNhayTinHieuVan1;
+        bool nhapNhayTinHieuVan1 = false;
 
-        System.Timers.Timer TimerTinHieuVan2M10171; //đỏ tím
-        System.Timers.Timer TimerTinHieuVan2M10172; //xanh tím
-        bool nhapNhayTinHieuVan2;
+        bool nhapNhayTinHieuVan2 = false;
 
-        System.Timers.Timer TimerTinHieuVan3M10220; //đỏ tím
-        System.Timers.Timer TimerTinHieuVan3M10221; //xanh tím
-        bool nhapNhayTinHieuVan3;
+        bool nhapNhayTinHieuVan3 = false;
 
-        System.Timers.Timer TimerTinHieuVan4M10270; //đỏ tím
-        System.Timers.Timer TimerTinHieuVan4M10271; //xanh tím
-        bool nhapNhayTinHieuVan4;
+        bool nhapNhayTinHieuVan4 = false;
 
+        bool nhapNhayBTDoc = false;
 
-        System.Timers.Timer TimerBTDocDo; //đỏ xanh
-        System.Timers.Timer TimerBTDocVang; //vàng xanh
-        bool nhapNhayBTDoc;
-
-
-        System.Timers.Timer TimerBTXienDo; //đỏ xanh
-        System.Timers.Timer TimerBTXienVang; //vàng xanh
-        bool nhapNhayBTXien;
-
-
-
-        public void CloseForm()
-        {
-            CLearTimer(TimerCheckColorPheuSo1M10039);
-            CLearTimer(TimerCheckColorPheuSo1M10040);
-            CLearTimer(TimerCheckColorPheuSo1M10038);
-            CLearTimer(TimerCheckColorPheuSo1M10038va39);
-            CLearTimer(TimerCheckColorPheuSo1M10038va40);
-
-
-            CLearTimer(TimerCheckColorPheuSo2M10048);
-            CLearTimer(TimerCheckColorPheuSo2M10049);
-            CLearTimer(TimerCheckColorPheuSo2M10047);
-            CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-            CLearTimer(TimerCheckColorPheuSo2M10047va10049);
-
-
-            CLearTimer(TimerCheckColorCaoRacSo1VangXanh);
-            CLearTimer(TimerCheckColorCaoRacSo1VangDo);
-
-            CLearTimer(TimerCheckColorCaoRacSo2VangXanh);
-            CLearTimer(TimerCheckColorCaoRacSo2VangDo);
-
-            CLearTimer(TimerCheckColorCaoRacSo3VangXanh);
-            CLearTimer(TimerCheckColorCaoRacSo3VangDo);
-
-            CLearTimer(TimerCheckColorCaoRacSo4VangXanh);
-            CLearTimer(TimerCheckColorCaoRacSo4VangDo);
-
-            CLearTimer(TimerTinHieuVan1M10122);
-            CLearTimer(TimerTinHieuVan1M10123);
-
-            CLearTimer(TimerTinHieuVan2M10171);
-            CLearTimer(TimerTinHieuVan2M10172);
-
-            CLearTimer(TimerTinHieuVan3M10220);
-            CLearTimer(TimerTinHieuVan3M10221);
-
-            CLearTimer(TimerTinHieuVan4M10270);
-            CLearTimer(TimerTinHieuVan4M10271);
-
-            CLearTimer(TimerBTDocDo);
-            CLearTimer(TimerBTDocVang);
-
-            CLearTimer(TimerBTXienDo);
-            CLearTimer(TimerBTXienVang);
-
-
-            CloseTimer();
-        }
-
-
-        int intervalNhapNhay = 800; //ms
-
-        void CLearTimer(System.Timers.Timer timer)
-        {
-            if (timer != null && timer.Enabled == true)
-            {
-                timer.Stop();
-                timer.Dispose();
-            }
-        }
-
-
-
-
-
-
-
+        bool nhapNhayBTXien = false;
 
 
 
         //đỏ - xanh
-        private void Timer_Tick_CheckColorBTDocDo(object sender, EventArgs e)
+        void BangTaiDocDoXanh()
         {
             if (nhapNhayBTDoc)
             {
                 pictureBoxBangTaiThang.Image = Resources.BangTaiThangDo;
-                nhapNhayBTDoc = false;
             }
             else
             {
                 pictureBoxBangTaiThang.Image = Resources.BangTaiThangXanh;
-                nhapNhayBTDoc = true;
             }
+            nhapNhayBTDoc = !nhapNhayBTDoc;
         }
 
 
         //vàng - xanh
-        private void Timer_Tick_CheckColorBTDocVang(object sender, EventArgs e)
+        private void BangTaiDocVangXanh()
         {
             if (nhapNhayBTDoc)
             {
@@ -682,8 +772,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             else
             {
                 pictureBoxBangTaiThang.Image = Resources.BangTaiThangXanh;
-                nhapNhayBTDoc = true;
             }
+            nhapNhayBTDoc = !nhapNhayBTDoc;
+
         }
 
 
@@ -695,33 +786,15 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             // nhap nhay vang bang tai thang
             if ((M10064 != null && M10064.TrangThai) && (M10067 != null && M10067.TrangThai))
             {
-                CLearTimer(TimerBTDocDo);
-                if (TimerBTDocVang == null || TimerBTDocVang.Enabled == false)
-                {
-                    pictureBoxBangTaiThang.Image = Resources.BangTaiThangVang;
-                    TimerBTDocVang = new System.Timers.Timer();
-                    TimerBTDocVang.Interval = intervalNhapNhay;
-                    TimerBTDocVang.Elapsed += Timer_Tick_CheckColorBTDocVang;
-                    TimerBTDocVang.Start();
-                }
+                BangTaiDocVangXanh();
             }
             // nhap nhay do
             else if ((M10066 != null && M10066.TrangThai) && (M10065 != null && M10065.TrangThai))
             {
-                CLearTimer(TimerBTDocVang);
-                if (TimerBTDocDo == null || TimerBTDocDo.Enabled == false)
-                {
-                    pictureBoxBangTaiThang.Image = Resources.BangTaiThangDo;
-                    TimerBTDocDo = new System.Timers.Timer();
-                    TimerBTDocDo.Interval = intervalNhapNhay;
-                    TimerBTDocDo.Elapsed += Timer_Tick_CheckColorBTDocDo;
-                    TimerBTDocDo.Start();
-                }
+                BangTaiDocDoXanh();
             }
             else
             {
-                CLearTimer(TimerBTDocVang);
-                CLearTimer(TimerBTDocDo);
                 pictureBoxBangTaiThang.Image = Resources.BangTaiThangXanh;
             }
 
@@ -746,34 +819,32 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         //băng tải xiên
 
         //đỏ - xanh
-        private void Timer_Tick_CheckColorBTXienDo(object sender, EventArgs e)
+        private void BTXienDoXanh()
         {
             if (nhapNhayBTXien)
             {
                 pictureBoxBangTaiXien.Image = Resources.BangTaiXienDo;
-                nhapNhayBTXien = false;
             }
             else
             {
                 pictureBoxBangTaiXien.Image = Resources.BangTaiXienXanh;
-                nhapNhayBTXien = true;
             }
+            nhapNhayBTXien = !nhapNhayBTXien;
         }
 
 
         //vàng - xanh
-        private void Timer_Tick_CheckColorBTXienVang(object sender, EventArgs e)
+        private void BTXienVangXanh()
         {
             if (nhapNhayBTXien)
             {
                 pictureBoxBangTaiXien.Image = Resources.BangTaiXienVang;
-                nhapNhayBTXien = false;
             }
             else
             {
                 pictureBoxBangTaiXien.Image = Resources.BangTaiXienXanh;
-                nhapNhayBTXien = true;
             }
+            nhapNhayBTXien = !nhapNhayBTXien;
         }
         void CheckColorBangTaiXien(Digital? M10069, Digital? M10070, Digital? M10071, Digital? M10068)
         {
@@ -781,33 +852,15 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //nhap nhay vang xanh
             if ((M10071 != null && M10071.TrangThai) && (M10068 != null && M10068.TrangThai))
             {
-                CLearTimer(TimerBTXienDo);
-                if (TimerBTXienVang == null || TimerBTXienVang.Enabled == false)
-                {
-                    pictureBoxBangTaiXien.Image = Resources.BangTaiXienVang;
-                    TimerBTXienVang = new System.Timers.Timer();
-                    TimerBTXienVang.Interval = intervalNhapNhay;
-                    TimerBTXienVang.Elapsed += Timer_Tick_CheckColorBTXienVang;
-                    TimerBTXienVang.Start();
-                }
+                BTXienVangXanh();
             }
             //chi mau đỏ
             else if ((M10069 != null && M10069.TrangThai) && (M10070 != null && M10070.TrangThai))
             {
-                CLearTimer(TimerBTXienVang);
-                if (TimerBTXienVang == null || TimerBTXienVang.Enabled == false)
-                {
-                    pictureBoxBangTaiXien.Image = Resources.BangTaiXienDo;
-                    TimerBTXienDo = new System.Timers.Timer();
-                    TimerBTXienDo.Interval = intervalNhapNhay;
-                    TimerBTXienDo.Elapsed += Timer_Tick_CheckColorBTXienDo;
-                    TimerBTXienDo.Start();
-                }
+                BTXienDoXanh();
             }
             else //mau xanh
             {
-                CLearTimer(TimerBTXienVang);
-                CLearTimer(TimerBTXienDo);
                 pictureBoxBangTaiXien.Image = Resources.BangTaiXienXanh;
 
             }
@@ -826,95 +879,81 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         // PHỄU SÔ 1
 
         //đỏ - tím - 10039
-        private void Timer_Tick_CheckColorPheuSo1M10039(object sender, EventArgs e)
+        private void PheuSo1DoTim()
         {
             if (nhapNhayPheuSo1)
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenDo;
-                nhapNhayPheuSo1 = false;
             }
             else
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenTim;
-                nhapNhayPheuSo1 = true;
             }
+            nhapNhayPheuSo1 = !nhapNhayPheuSo1;
         }
         //xanh tím 10040
-        private void Timer_Tick_CheckColorPheuSo1M10040(object sender, EventArgs e)
+        private void PheuSo1XanhTim()
         {
             if (nhapNhayPheuSo1)
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenXanh;
-                nhapNhayPheuSo1 = false;
             }
             else
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenTim;
-                nhapNhayPheuSo1 = true;
             }
+            nhapNhayPheuSo1 = !nhapNhayPheuSo1;
+
         }
         //vàng tím 10038
-        private void Timer_Tick_CheckColorPheuSo1M10038(object sender, EventArgs e)
+        private void PheuSo1VangTim()
         {
             if (nhapNhayPheuSo1)
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenVang;
-                nhapNhayPheuSo1 = false;
             }
             else
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenTim;
-                nhapNhayPheuSo1 = true;
             }
+            nhapNhayPheuSo1 = !nhapNhayPheuSo1;
         }
         //vàng đỏ 10038 - 10040
-        private void Timer_Tick_CheckColorPheuSo1M10038va10040(object sender, EventArgs e)
+        private void PheuSo1VangDo()
         {
             if (nhapNhayPheuSo1)
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenVang;
-                nhapNhayPheuSo1 = false;
             }
             else
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenDo;
-                nhapNhayPheuSo1 = true;
             }
+            nhapNhayPheuSo1 = !nhapNhayPheuSo1;
         }
         //vàng xanh 10038 - 10039
-        private void Timer_Tick_CheckColorPheuSo1M10038va10039(object sender, EventArgs e)
+        private void PheuSo1VangXanh()
         {
             if (nhapNhayPheuSo1)
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenVang;
-                nhapNhayPheuSo1 = false;
             }
             else
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenXanh;
-                nhapNhayPheuSo1 = true;
             }
+            nhapNhayPheuSo1 = !nhapNhayPheuSo1;
         }
         void CheckColorPheuSo1(Digital? M10042, Digital? M10041, Digital? M10039, Digital? M10040, Digital? M10038)
         {
             //xanh
             if (M10042 != null && M10042.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo1M10039);
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10038);
-                CLearTimer(TimerCheckColorPheuSo1M10038va39);
-                CLearTimer(TimerCheckColorPheuSo1M10038va40);
                 pictureBoxPheu1.Image = Resources.PheuTrenXanh;
             }
             //đỏ
             else if (M10041 != null && M10041.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo1M10039);
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10038);
-                CLearTimer(TimerCheckColorPheuSo1M10038va39);
-                CLearTimer(TimerCheckColorPheuSo1M10038va40);
                 pictureBoxPheu1.Image = Resources.PheuTrenDo;
             }
             //đen
@@ -923,102 +962,36 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 || ((M10042 != null && M10042.TrangThai == true) && (M10039 != null && M10039.TrangThai == true))
                 || ((M10042 != null && M10042.TrangThai == true) && (M10040 != null && M10040.TrangThai == true)))
             {
-                CLearTimer(TimerCheckColorPheuSo1M10039);
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10038);
-                CLearTimer(TimerCheckColorPheuSo1M10038va39);
-                CLearTimer(TimerCheckColorPheuSo1M10038va40);
                 pictureBoxPheu1.Image = Resources.PheuTrenDen;
             }
             //đỏ tím
             else if (M10039 != null && M10039.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10038);
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-
-                if (TimerCheckColorPheuSo1M10039 == null || TimerCheckColorPheuSo1M10039.Enabled == false)
-                {
-                    pictureBoxPheu1.Image = Resources.PheuTrenTim;
-                    TimerCheckColorPheuSo1M10039 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo1M10039.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo1M10039.Elapsed += Timer_Tick_CheckColorPheuSo1M10039;
-                    TimerCheckColorPheuSo1M10039.Start();
-                }
+                PheuSo1DoTim();
             }
             //xanh tím
             else if (M10040 != null && M10040.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo1M10039);
-                CLearTimer(TimerCheckColorPheuSo1M10038);
-                CLearTimer(TimerCheckColorPheuSo1M10038va39);
-                CLearTimer(TimerCheckColorPheuSo1M10038va40);
-                if (TimerCheckColorPheuSo1M10040 == null || TimerCheckColorPheuSo1M10040.Enabled == false)
-                {
-                    pictureBoxPheu1.Image = Resources.Pheu1Tim;
-                    TimerCheckColorPheuSo1M10040 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo1M10040.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo1M10040.Elapsed += Timer_Tick_CheckColorPheuSo1M10040;
-                    TimerCheckColorPheuSo1M10040.Start();
-                }
+                PheuSo1XanhTim();
             }
             //vàng tím
             else if (M10038 != null && M10038.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10039);
-                CLearTimer(TimerCheckColorPheuSo1M10038va39);
-                CLearTimer(TimerCheckColorPheuSo1M10038va40);
-                if (TimerCheckColorPheuSo1M10038 == null || TimerCheckColorPheuSo1M10038.Enabled == false)
-                {
-                    pictureBoxPheu1.Image = Resources.Pheu1Tim;
-                    TimerCheckColorPheuSo1M10038 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo1M10038.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo1M10038.Elapsed += Timer_Tick_CheckColorPheuSo1M10038;
-                    TimerCheckColorPheuSo1M10038.Start();
-                }
+                PheuSo1VangTim();
             }
             //vàng đỏ
             else if ((M10038 != null && M10038.TrangThai == true) && (M10040 != null && M10040.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorPheuSo1M10038);
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10039);
-                CLearTimer(TimerCheckColorPheuSo1M10038va39);
-                if (TimerCheckColorPheuSo1M10038va40 == null || TimerCheckColorPheuSo1M10038va40.Enabled == false)
-                {
-                    pictureBoxPheu1.Image = Resources.Pheu1Tim;
-                    TimerCheckColorPheuSo1M10038va40 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo1M10038va40.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo1M10038va40.Elapsed += Timer_Tick_CheckColorPheuSo1M10038va10040;
-                    TimerCheckColorPheuSo1M10038va40.Start();
-                }
+                PheuSo1VangDo();
             }
             //vàng xanh
             else if ((M10038 != null && M10038.TrangThai == true) && (M10039 != null && M10039.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorPheuSo1M10038va40);
-                CLearTimer(TimerCheckColorPheuSo1M10038);
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10039);
-                if (TimerCheckColorPheuSo1M10038va39 == null || TimerCheckColorPheuSo1M10038va39.Enabled == false)
-                {
-                    pictureBoxPheu1.Image = Resources.Pheu1Tim;
-                    TimerCheckColorPheuSo1M10038va39 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo1M10038va39.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo1M10038va39.Elapsed += Timer_Tick_CheckColorPheuSo1M10038va10039;
-                    TimerCheckColorPheuSo1M10038va39.Start();
-                }
+                PheuSo1VangXanh();
             }
             // tím
             else
             {
-                CLearTimer(TimerCheckColorPheuSo1M10039);
-                CLearTimer(TimerCheckColorPheuSo1M10040);
-                CLearTimer(TimerCheckColorPheuSo1M10038);
-                CLearTimer(TimerCheckColorPheuSo1M10038va39);
-                CLearTimer(TimerCheckColorPheuSo1M10038va40);
                 pictureBoxPheu1.Image = Resources.PheuTrenTim;
             }
         }
@@ -1040,74 +1013,70 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
         //đỏ - tím
-        private void Timer_Tick_CheckColorPheuSo2M10048(object sender, EventArgs e)
+        private void PheuSo2DoTim()
         {
             if (nhapNhayPheuSo2)
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiTim;
-                nhapNhayPheuSo2 = false;
             }
             else
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiDo;
-                nhapNhayPheuSo2 = true;
             }
+            nhapNhayPheuSo2 = !nhapNhayPheuSo2;
         }
         //xanh tím
-        private void Timer_Tick_CheckColorPheuSo2M10049(object sender, EventArgs e)
+        private void PheuSo2XanhTim()
         {
             if (nhapNhayPheuSo2)
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiTim;
-                nhapNhayPheuSo2 = false;
             }
             else
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiXanh;
-                nhapNhayPheuSo2 = true;
             }
+            nhapNhayPheuSo2 = !nhapNhayPheuSo2;
         }
         //vàng tím
-        private void Timer_Tick_CheckColorPheuSo2M10047(object sender, EventArgs e)
+        private void PheuSo2VangTim()
         {
             if (nhapNhayPheuSo2)
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiTim;
-                nhapNhayPheuSo2 = false;
             }
             else
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiVang;
-                nhapNhayPheuSo2 = true;
             }
+            nhapNhayPheuSo2 = !nhapNhayPheuSo2;
         }
         //vàng đỏ
-        private void Timer_Tick_CheckColorPheuSo2M10047va10048(object sender, EventArgs e)
+        private void PheuSo2VangDo()
         {
             if (nhapNhayPheuSo2)
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiDo;
-                nhapNhayPheuSo2 = false;
             }
             else
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiVang;
-                nhapNhayPheuSo2 = true;
             }
+            nhapNhayPheuSo2 = !nhapNhayPheuSo2;
+
         }
         //vàng xanh
-        private void Timer_Tick_CheckColorPheuSo2M10047va10049(object sender, EventArgs e)
+        private void PheuSo2VangXanh()
         {
             if (nhapNhayPheuSo2)
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiXanh;
-                nhapNhayPheuSo2 = false;
             }
             else
             {
                 pictureBoxPheu2.Image = Resources.PheuDuoiVang;
-                nhapNhayPheuSo2 = true;
             }
+            nhapNhayPheuSo2 = !nhapNhayPheuSo2;
         }
 
         void CheckColorPheuSo2(Digital? M10051, Digital? M10050, Digital? M10048, Digital? M10049, Digital? M10047)
@@ -1115,21 +1084,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //xanh
             if (M10051 != null && M10051.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo2M10048);
-                CLearTimer(TimerCheckColorPheuSo2M10049);
-                CLearTimer(TimerCheckColorPheuSo2M10047);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10049);
                 pictureBoxPheu2.Image = Resources.PheuDuoiXanh;
             }
             //đỏ
             else if (M10050 != null && M10050.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo2M10048);
-                CLearTimer(TimerCheckColorPheuSo2M10049);
-                CLearTimer(TimerCheckColorPheuSo2M10047);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10049);
                 pictureBoxPheu2.Image = Resources.PheuDuoiDo;
             }
             //đen
@@ -1138,101 +1097,36 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 || ((M10051 != null && M10051.TrangThai == true) && (M10049 != null && M10049.TrangThai == true))
                 || ((M10051 != null && M10051.TrangThai == true) && (M10048 != null && M10048.TrangThai == true)))
             {
-                CLearTimer(TimerCheckColorPheuSo2M10048);
-                CLearTimer(TimerCheckColorPheuSo2M10049);
-                CLearTimer(TimerCheckColorPheuSo2M10047);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10049);
                 pictureBoxPheu2.Image = Resources.PheuDuoiDen;
             }
             //đỏ tím
             else if (M10048 != null && M10048.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo2M10049);
-                CLearTimer(TimerCheckColorPheuSo2M10047);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10049);
-                if (TimerCheckColorPheuSo2M10048 == null || TimerCheckColorPheuSo2M10048.Enabled == false)
-                {
-                    pictureBoxPheu2.Image = Resources.PheuDuoiTim;
-                    TimerCheckColorPheuSo2M10048 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo2M10048.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo2M10048.Elapsed += Timer_Tick_CheckColorPheuSo2M10048;
-                    TimerCheckColorPheuSo2M10048.Start();
-                }
+                PheuSo2DoTim();
             }
             //xanh tím
             else if (M10049 != null && M10049.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo2M10048);
-                CLearTimer(TimerCheckColorPheuSo2M10047);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10049);
-                if (TimerCheckColorPheuSo2M10049 == null || TimerCheckColorPheuSo2M10049.Enabled == false)
-                {
-                    pictureBoxPheu2.Image = Resources.PheuDuoiTim;
-                    TimerCheckColorPheuSo2M10049 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo2M10049.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo2M10049.Elapsed += Timer_Tick_CheckColorPheuSo2M10049;
-                    TimerCheckColorPheuSo2M10049.Start();
-                }
+                PheuSo2XanhTim();
             }
             //vàng tím
             else if (M10047 != null && M10047.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorPheuSo2M10048);
-                CLearTimer(TimerCheckColorPheuSo2M10049);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10049);
-                if (TimerCheckColorPheuSo2M10047 == null || TimerCheckColorPheuSo2M10047.Enabled == false)
-                {
-                    pictureBoxPheu2.Image = Resources.PheuDuoiTim;
-                    TimerCheckColorPheuSo2M10047 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo2M10047.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo2M10047.Elapsed += Timer_Tick_CheckColorPheuSo2M10047;
-                    TimerCheckColorPheuSo2M10047.Start();
-                }
+                PheuSo2VangTim();
             }
             //vàng đỏ
             else if ((M10047 != null && M10047.TrangThai == true) && (M10048 != null && M10048.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorPheuSo2M10047);
-                CLearTimer(TimerCheckColorPheuSo2M10048);
-                CLearTimer(TimerCheckColorPheuSo2M10049);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10049);
-                if (TimerCheckColorPheuSo2M10047va10048 == null || TimerCheckColorPheuSo2M10047va10048.Enabled == false)
-                {
-                    pictureBoxPheu2.Image = Resources.PheuDuoiDo;
-                    TimerCheckColorPheuSo2M10047va10048 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo2M10047va10048.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo2M10047va10048.Elapsed += Timer_Tick_CheckColorPheuSo2M10047va10048;
-                    TimerCheckColorPheuSo2M10047va10048.Start();
-                }
+                PheuSo2VangDo();
             }
             //vàng xanh
             else if ((M10047 != null && M10047.TrangThai == true) && (M10049 != null && M10049.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorPheuSo2M10047);
-                CLearTimer(TimerCheckColorPheuSo2M10048);
-                CLearTimer(TimerCheckColorPheuSo2M10049);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-                if (TimerCheckColorPheuSo2M10047va10049 == null || TimerCheckColorPheuSo2M10047va10049.Enabled == false)
-                {
-                    pictureBoxPheu2.Image = Resources.PheuDuoiDo;
-                    TimerCheckColorPheuSo2M10047va10049 = new System.Timers.Timer();
-                    TimerCheckColorPheuSo2M10047va10049.Interval = intervalNhapNhay;
-                    TimerCheckColorPheuSo2M10047va10049.Elapsed += Timer_Tick_CheckColorPheuSo2M10047va10049;
-                    TimerCheckColorPheuSo2M10047va10049.Start();
-                }
+                PheuSo2VangXanh();
             }
             //tím
             else
             {
-                CLearTimer(TimerCheckColorPheuSo2M10048);
-                CLearTimer(TimerCheckColorPheuSo2M10049);
-                CLearTimer(TimerCheckColorPheuSo2M10047);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10048);
-                CLearTimer(TimerCheckColorPheuSo2M10047va10049); ;
                 pictureBoxPheu2.Image = Resources.PheuDuoiTim;
             }
         }
@@ -1253,73 +1147,52 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         //Cào Rác
         //1
         //vàng xanh
-        private void Timer_Tick_CheckColorCaoRac1VangXanh(object sender, EventArgs e)
+        private void CaoRac1VangXanh()
         {
             if (nhapNhayCaoRacSo1)
             {
                 pictureBoxCaoRac1.Image = Resources.CaoRac1Vang;
-                nhapNhayCaoRacSo1 = false;
             }
             else
             {
                 pictureBoxCaoRac1.Image = Resources.CaoRac1Xanh;
-                nhapNhayCaoRacSo1 = true;
             }
+            nhapNhayCaoRacSo1 = !nhapNhayCaoRacSo1;
         }
         //vàng đỏ
-        private void Timer_Tick_CheckColorCaoRac1VangDo(object sender, EventArgs e)
+        private void CaoRac1VangDo()
         {
             if (nhapNhayCaoRacSo1)
             {
                 pictureBoxCaoRac1.Image = Resources.CaoRac1Vang;
-                nhapNhayCaoRacSo1 = false;
             }
             else
             {
                 pictureBoxCaoRac1.Image = Resources.CaoRac1Do;
-                nhapNhayCaoRacSo1 = true;
             }
+            nhapNhayCaoRacSo1 = !nhapNhayCaoRacSo1;
+
         }
         void CheckColorCaoRac1(Digital? M10137, Digital? M10138, Digital? M10139)
         {
             //đỏ
             if ((M10137 != null && M10137.TrangThai == true) || (M10138 != null && M10138.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorCaoRacSo1VangXanh);
-                CLearTimer(TimerCheckColorCaoRacSo1VangDo);
                 pictureBoxCaoRac1.Image = Resources.CaoRac1Do;
             }
             //vàng xanh
             else if (M10139 != null && M10139.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorCaoRacSo1VangDo);
-                if (TimerCheckColorCaoRacSo1VangXanh == null || TimerCheckColorCaoRacSo1VangXanh.Enabled == false)
-                {
-                    pictureBoxCaoRac1.Image = Resources.CaoRac1Vang;
-                    TimerCheckColorCaoRacSo1VangXanh = new System.Timers.Timer();
-                    TimerCheckColorCaoRacSo1VangXanh.Interval = intervalNhapNhay;
-                    TimerCheckColorCaoRacSo1VangXanh.Elapsed += Timer_Tick_CheckColorCaoRac1VangXanh;
-                    TimerCheckColorCaoRacSo1VangXanh.Start();
-                }
+                CaoRac1VangXanh();
             }
             //vàng đỏ
             else if ((M10137 != null && M10137.TrangThai == true) && (M10139 != null && M10139.TrangThai == true)
                 || (M10138 != null && M10138.TrangThai == true) && (M10139 != null && M10139.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorCaoRacSo1VangXanh);
-                if (TimerCheckColorCaoRacSo1VangDo == null || TimerCheckColorCaoRacSo1VangDo.Enabled == false)
-                {
-                    pictureBoxCaoRac1.Image = Resources.CaoRac1Vang;
-                    TimerCheckColorCaoRacSo1VangDo = new System.Timers.Timer();
-                    TimerCheckColorCaoRacSo1VangDo.Interval = intervalNhapNhay;
-                    TimerCheckColorCaoRacSo1VangDo.Elapsed += Timer_Tick_CheckColorCaoRac1VangDo;
-                    TimerCheckColorCaoRacSo1VangDo.Start();
-                }
+                CaoRac1VangDo();
             }
             else
             {
-                CLearTimer(TimerCheckColorCaoRacSo1VangXanh);
-                CLearTimer(TimerCheckColorCaoRacSo1VangXanh);
                 pictureBoxCaoRac1.Image = Resources.CaoRac1Xanh;
 
             }
@@ -1332,73 +1205,53 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         //2
         //vàng xanh
-        private void Timer_Tick_CheckColorCaoRac2VangXanh(object sender, EventArgs e)
+        private void CaoRacSo2VangXanh()
         {
             if (nhapNhayCaoRacSo2)
             {
                 pictureBoxCaoRac2.Image = Resources.CaoRac2Vang;
-                nhapNhayCaoRacSo2 = false;
             }
             else
             {
                 pictureBoxCaoRac2.Image = Resources.CaoRac2Xanh;
-                nhapNhayCaoRacSo2 = true;
             }
+            nhapNhayCaoRacSo2 = !nhapNhayCaoRacSo2;
         }
         //vàng đỏ
-        private void Timer_Tick_CheckColorCaoRac2VangDo(object sender, EventArgs e)
+        private void CaoRacSo2VangDo()
         {
             if (nhapNhayCaoRacSo2)
             {
                 pictureBoxCaoRac2.Image = Resources.CaoRac2Vang;
-                nhapNhayCaoRacSo2 = false;
             }
             else
             {
                 pictureBoxCaoRac2.Image = Resources.CaoRac2Do;
-                nhapNhayCaoRacSo2 = true;
             }
+            nhapNhayCaoRacSo2 = !nhapNhayCaoRacSo2;
+
         }
         void CheckColorCaoRac2(Digital? M10186, Digital? M10187, Digital? M10188)
         {
             //đỏ
             if ((M10186 != null && M10186.TrangThai == true) || (M10187 != null && M10187.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorCaoRacSo2VangXanh);
-                CLearTimer(TimerCheckColorCaoRacSo2VangDo);
                 pictureBoxCaoRac2.Image = Resources.CaoRac2Do;
             }
             //vàng xanh
             else if (M10188 != null && M10188.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorCaoRacSo2VangDo);
-                if (TimerCheckColorCaoRacSo2VangXanh == null || TimerCheckColorCaoRacSo2VangXanh.Enabled == false)
-                {
-                    pictureBoxCaoRac2.Image = Resources.CaoRac2Vang;
-                    TimerCheckColorCaoRacSo2VangXanh = new System.Timers.Timer();
-                    TimerCheckColorCaoRacSo2VangXanh.Interval = intervalNhapNhay;
-                    TimerCheckColorCaoRacSo2VangXanh.Elapsed += Timer_Tick_CheckColorCaoRac2VangXanh;
-                    TimerCheckColorCaoRacSo2VangXanh.Start();
-                }
+                CaoRacSo2VangXanh();
             }
             //vàng đỏ
             else if ((M10186 != null && M10186.TrangThai == true) && (M10188 != null && M10188.TrangThai == true)
                 || (M10187 != null && M10187.TrangThai == true) && (M10188 != null && M10188.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorCaoRacSo2VangXanh);
-                if (TimerCheckColorCaoRacSo2VangDo == null || TimerCheckColorCaoRacSo2VangDo.Enabled == false)
-                {
-                    pictureBoxCaoRac2.Image = Resources.CaoRac2Vang;
-                    TimerCheckColorCaoRacSo2VangDo = new System.Timers.Timer();
-                    TimerCheckColorCaoRacSo2VangDo.Interval = intervalNhapNhay;
-                    TimerCheckColorCaoRacSo2VangDo.Elapsed += Timer_Tick_CheckColorCaoRac2VangDo;
-                    TimerCheckColorCaoRacSo2VangDo.Start();
-                }
+                CaoRacSo2VangDo();
             }
+
             else
             {
-                CLearTimer(TimerCheckColorCaoRacSo2VangXanh);
-                CLearTimer(TimerCheckColorCaoRacSo2VangXanh);
                 pictureBoxCaoRac2.Image = Resources.CaoRac2Xanh;
 
             }
@@ -1412,73 +1265,51 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         //3
         //vàng xanh
-        private void Timer_Tick_CheckColorCaoRac3VangXanh(object sender, EventArgs e)
+        private void CaoRacSo3VangXanh()
         {
             if (nhapNhayCaoRacSo3)
             {
                 pictureBoxCaoRac3.Image = Resources.CaoRac3Vang;
-                nhapNhayCaoRacSo3 = false;
             }
             else
             {
                 pictureBoxCaoRac3.Image = Resources.CaoRac3Xanh;
-                nhapNhayCaoRacSo3 = true;
             }
+            nhapNhayCaoRacSo3 = !nhapNhayCaoRacSo3;
         }
         //vàng đỏ
-        private void Timer_Tick_CheckColorCaoRac3VangDo(object sender, EventArgs e)
+        private void CaoRacSo3VangDo()
         {
             if (nhapNhayCaoRacSo3)
             {
                 pictureBoxCaoRac3.Image = Resources.CaoRac3Vang;
-                nhapNhayCaoRacSo3 = false;
             }
             else
             {
                 pictureBoxCaoRac3.Image = Resources.CaoRac3Do;
-                nhapNhayCaoRacSo3 = true;
             }
+            nhapNhayCaoRacSo3 = !nhapNhayCaoRacSo3;
         }
         void CheckColorCaoRac3(Digital? M10235, Digital? M10236, Digital? M10237)
         {
             //đỏ
             if ((M10235 != null && M10235.TrangThai == true) || (M10236 != null && M10236.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorCaoRacSo3VangXanh);
-                CLearTimer(TimerCheckColorCaoRacSo3VangDo);
                 pictureBoxCaoRac3.Image = Resources.CaoRac3Do;
             }
             //vàng xanh
             else if (M10237 != null && M10237.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorCaoRacSo3VangDo);
-                if (TimerCheckColorCaoRacSo3VangXanh == null || TimerCheckColorCaoRacSo3VangXanh.Enabled == false)
-                {
-                    pictureBoxCaoRac3.Image = Resources.CaoRac3Vang;
-                    TimerCheckColorCaoRacSo3VangXanh = new System.Timers.Timer();
-                    TimerCheckColorCaoRacSo3VangXanh.Interval = intervalNhapNhay;
-                    TimerCheckColorCaoRacSo3VangXanh.Elapsed += Timer_Tick_CheckColorCaoRac3VangXanh;
-                    TimerCheckColorCaoRacSo3VangXanh.Start();
-                }
+                CaoRacSo3VangXanh();
             }
             //vàng đỏ
             else if ((M10235 != null && M10235.TrangThai == true) && (M10237 != null && M10237.TrangThai == true)
                 || (M10236 != null && M10236.TrangThai == true) && (M10237 != null && M10237.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorCaoRacSo3VangXanh);
-                if (TimerCheckColorCaoRacSo3VangDo == null || TimerCheckColorCaoRacSo3VangDo.Enabled == false)
-                {
-                    pictureBoxCaoRac3.Image = Resources.CaoRac3Vang;
-                    TimerCheckColorCaoRacSo3VangDo = new System.Timers.Timer();
-                    TimerCheckColorCaoRacSo3VangDo.Interval = intervalNhapNhay;
-                    TimerCheckColorCaoRacSo3VangDo.Elapsed += Timer_Tick_CheckColorCaoRac3VangDo;
-                    TimerCheckColorCaoRacSo3VangDo.Start();
-                }
+                CaoRacSo3VangDo();
             }
             else
             {
-                CLearTimer(TimerCheckColorCaoRacSo3VangXanh);
-                CLearTimer(TimerCheckColorCaoRacSo3VangXanh);
                 pictureBoxCaoRac3.Image = Resources.CaoRac3Xanh;
 
             }
@@ -1495,73 +1326,52 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         //4
         //vàng xanh
-        private void Timer_Tick_CheckColorCaoRac4VangXanh(object sender, EventArgs e)
+        private void CaoRacSo4VangXanh()
         {
             if (nhapNhayCaoRacSo4)
             {
                 pictureBoxCaoRac4.Image = Resources.CaoRac4Vang;
-                nhapNhayCaoRacSo4 = false;
             }
             else
             {
                 pictureBoxCaoRac4.Image = Resources.CaoRac4Xanh;
-                nhapNhayCaoRacSo4 = true;
             }
+            nhapNhayCaoRacSo4 = !nhapNhayCaoRacSo4;
         }
         //vàng đỏ
-        private void Timer_Tick_CheckColorCaoRac4VangDo(object sender, EventArgs e)
+        private void CaoRacSo4VangDo()
         {
             if (nhapNhayCaoRacSo4)
             {
                 pictureBoxCaoRac4.Image = Resources.CaoRac4Vang;
-                nhapNhayCaoRacSo4 = false;
             }
             else
             {
                 pictureBoxCaoRac4.Image = Resources.CaoRac4Do;
-                nhapNhayCaoRacSo4 = true;
             }
+            nhapNhayCaoRacSo4 = !nhapNhayCaoRacSo4;
+
         }
         void CheckColorCaoRac4(Digital? M10284, Digital? M10285, Digital? M10286)
         {
             //đỏ
             if ((M10284 != null && M10284.TrangThai == true) || (M10285 != null && M10285.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorCaoRacSo4VangXanh);
-                CLearTimer(TimerCheckColorCaoRacSo4VangDo);
                 pictureBoxCaoRac4.Image = Resources.CaoRac4Do;
             }
             //vàng xanh
             else if (M10286 != null && M10286.TrangThai == true)
             {
-                CLearTimer(TimerCheckColorCaoRacSo4VangDo);
-                if (TimerCheckColorCaoRacSo4VangXanh == null || TimerCheckColorCaoRacSo4VangXanh.Enabled == false)
-                {
-                    pictureBoxCaoRac4.Image = Resources.CaoRac4Vang;
-                    TimerCheckColorCaoRacSo4VangXanh = new System.Timers.Timer();
-                    TimerCheckColorCaoRacSo4VangXanh.Interval = intervalNhapNhay;
-                    TimerCheckColorCaoRacSo4VangXanh.Elapsed += Timer_Tick_CheckColorCaoRac4VangXanh;
-                    TimerCheckColorCaoRacSo4VangXanh.Start();
-                }
+                CaoRacSo4VangXanh();
             }
             //vàng đỏ
             else if ((M10284 != null && M10284.TrangThai == true) && (M10286 != null && M10286.TrangThai == true)
                 || (M10285 != null && M10285.TrangThai == true) && (M10286 != null && M10286.TrangThai == true))
             {
-                CLearTimer(TimerCheckColorCaoRacSo4VangXanh);
-                if (TimerCheckColorCaoRacSo4VangDo == null || TimerCheckColorCaoRacSo4VangDo.Enabled == false)
-                {
-                    pictureBoxCaoRac4.Image = Resources.CaoRac4Vang;
-                    TimerCheckColorCaoRacSo4VangDo = new System.Timers.Timer();
-                    TimerCheckColorCaoRacSo4VangDo.Interval = intervalNhapNhay;
-                    TimerCheckColorCaoRacSo4VangDo.Elapsed += Timer_Tick_CheckColorCaoRac4VangDo;
-                    TimerCheckColorCaoRacSo4VangDo.Start();
-                }
+                CaoRacSo4VangDo();
             }
             else
             {
-                CLearTimer(TimerCheckColorCaoRacSo4VangXanh);
-                CLearTimer(TimerCheckColorCaoRacSo4VangXanh);
                 pictureBoxCaoRac4.Image = Resources.CaoRac4Xanh;
 
             }
@@ -1586,32 +1396,31 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         // Tín hiệu van 1
 
         //đỏ - tím
-        private void Timer_Tick_CheckColorTinHieuVan1M10122(object sender, EventArgs e)
+        private void Van1DoTim()
         {
             if (nhapNhayTinHieuVan1)
             {
                 pictureBoxVan1.Image = Resources.VanDo;
-                nhapNhayTinHieuVan1 = false;
             }
             else
             {
                 pictureBoxVan1.Image = Resources.VanTim;
-                nhapNhayTinHieuVan1 = true;
             }
+            nhapNhayTinHieuVan1 = !nhapNhayTinHieuVan1;
         }
         //xanh tím
-        private void Timer_Tick_CheckColorTinHieuVan1M10123(object sender, EventArgs e)
+        private void Van1XanhTim()
         {
             if (nhapNhayTinHieuVan1)
             {
                 pictureBoxVan1.Image = Resources.VanXanh;
-                nhapNhayTinHieuVan1 = false;
             }
             else
             {
                 pictureBoxVan1.Image = Resources.VanTim;
-                nhapNhayTinHieuVan1 = true;
             }
+            nhapNhayTinHieuVan1 = !nhapNhayTinHieuVan1;
+
         }
 
         void CheckColorVan1(Digital? M10125, Digital? M10124, Digital? M10122, Digital? M10123)
@@ -1619,48 +1428,27 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //xanh
             if (M10125 != null && M10125.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan1M10122);
-                CLearTimer(TimerTinHieuVan1M10123);
                 pictureBoxVan1.Image = Resources.VanXanh;
             }
             //đỏ
             else if (M10124 != null && M10124.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan1M10122);
-                CLearTimer(TimerTinHieuVan1M10123);
+
                 pictureBoxVan1.Image = Resources.VanDo;
             }
             //đỏ tím
             else if (M10122 != null && M10122.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan1M10123);
-                if (TimerTinHieuVan1M10122 == null || TimerTinHieuVan1M10122.Enabled == false)
-                {
-                    pictureBoxVan1.Image = Resources.VanTim;
-                    TimerTinHieuVan1M10122 = new System.Timers.Timer();
-                    TimerTinHieuVan1M10122.Interval = intervalNhapNhay;
-                    TimerTinHieuVan1M10122.Elapsed += Timer_Tick_CheckColorTinHieuVan1M10122;
-                    TimerTinHieuVan1M10122.Start();
-                }
+                Van1DoTim();
             }
             //xanh tím
             else if (M10123 != null && M10123.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan1M10122);
-                if (TimerTinHieuVan1M10123 == null || TimerTinHieuVan1M10123.Enabled == false)
-                {
-                    pictureBoxVan1.Image = Resources.VanTim;
-                    TimerTinHieuVan1M10123 = new System.Timers.Timer();
-                    TimerTinHieuVan1M10123.Interval = intervalNhapNhay;
-                    TimerTinHieuVan1M10123.Elapsed += Timer_Tick_CheckColorTinHieuVan1M10123;
-                    TimerTinHieuVan1M10123.Start();
-                }
+                Van1XanhTim();
             }
             //tím
             else
             {
-                CLearTimer(TimerTinHieuVan1M10122);
-                CLearTimer(TimerTinHieuVan1M10123);
                 pictureBoxVan1.Image = Resources.VanTim;
             }
         }
@@ -1683,32 +1471,31 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         // Tín hiệu van 2
 
         //đỏ - tím
-        private void Timer_Tick_CheckColorTinHieuVan2M10171(object sender, EventArgs e)
+        private void Van2DoTim()
         {
             if (nhapNhayTinHieuVan2)
             {
                 pictureBoxVan2.Image = Resources.VanDo;
-                nhapNhayTinHieuVan2 = false;
             }
             else
             {
                 pictureBoxVan2.Image = Resources.VanTim;
-                nhapNhayTinHieuVan2 = true;
             }
+            nhapNhayTinHieuVan2 = !nhapNhayTinHieuVan2;
         }
         //xanh tím
-        private void Timer_Tick_CheckColorTinHieuVan2M10172(object sender, EventArgs e)
+        private void Van2XanhTim()
         {
             if (nhapNhayTinHieuVan2)
             {
                 pictureBoxVan2.Image = Resources.VanXanh;
-                nhapNhayTinHieuVan2 = false;
             }
             else
             {
                 pictureBoxVan2.Image = Resources.VanTim;
-                nhapNhayTinHieuVan2 = true;
             }
+            nhapNhayTinHieuVan2 = !nhapNhayTinHieuVan2;
+
         }
 
         void CheckColorVan2(Digital? M10174, Digital? M10173, Digital? M10171, Digital? M10172)
@@ -1716,48 +1503,26 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //xanh
             if (M10174 != null && M10174.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan2M10171);
-                CLearTimer(TimerTinHieuVan2M10172);
                 pictureBoxVan2.Image = Resources.VanXanh;
             }
             //đỏ
             else if (M10173 != null && M10173.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan2M10171);
-                CLearTimer(TimerTinHieuVan2M10172);
                 pictureBoxVan2.Image = Resources.VanDo;
             }
             //đỏ tím
             else if (M10171 != null && M10171.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan2M10172);
-                if (TimerTinHieuVan2M10171 == null || TimerTinHieuVan2M10171.Enabled == false)
-                {
-                    pictureBoxVan2.Image = Resources.VanTim;
-                    TimerTinHieuVan2M10171 = new System.Timers.Timer();
-                    TimerTinHieuVan2M10171.Interval = intervalNhapNhay;
-                    TimerTinHieuVan2M10171.Elapsed += Timer_Tick_CheckColorTinHieuVan2M10171;
-                    TimerTinHieuVan2M10171.Start();
-                }
+                Van2DoTim();
             }
             //xanh tím
             else if (M10172 != null && M10172.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan2M10171);
-                if (TimerTinHieuVan2M10172 == null || TimerTinHieuVan2M10172.Enabled == false)
-                {
-                    pictureBoxVan2.Image = Resources.VanTim;
-                    TimerTinHieuVan2M10172 = new System.Timers.Timer();
-                    TimerTinHieuVan2M10172.Interval = intervalNhapNhay;
-                    TimerTinHieuVan2M10172.Elapsed += Timer_Tick_CheckColorTinHieuVan2M10172;
-                    TimerTinHieuVan2M10172.Start();
-                }
+                Van2XanhTim();
             }
             //tím
             else
             {
-                CLearTimer(TimerTinHieuVan2M10171);
-                CLearTimer(TimerTinHieuVan2M10172);
                 pictureBoxVan2.Image = Resources.VanTim;
             }
         }
@@ -1773,32 +1538,30 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         // Tín hiệu van 3
 
         //đỏ - tím
-        private void Timer_Tick_CheckColorTinHieuVan3M10220(object sender, EventArgs e)
+        private void Van3DoTim()
         {
             if (nhapNhayTinHieuVan3)
             {
                 pictureBoxVan3.Image = Resources.VanTim;
-                nhapNhayTinHieuVan3 = false;
             }
             else
             {
                 pictureBoxVan3.Image = Resources.VanDo;
-                nhapNhayTinHieuVan3 = true;
             }
+            nhapNhayTinHieuVan3 = !nhapNhayTinHieuVan3;
         }
         //xanh tím
-        private void Timer_Tick_CheckColorTinHieuVan3M10221(object sender, EventArgs e)
+        private void Van3XanhTim()
         {
             if (nhapNhayTinHieuVan3)
             {
                 pictureBoxVan3.Image = Resources.VanTim;
-                nhapNhayTinHieuVan3 = false;
             }
             else
             {
                 pictureBoxVan3.Image = Resources.VanXanh;
-                nhapNhayTinHieuVan3 = true;
             }
+            nhapNhayTinHieuVan3 = !nhapNhayTinHieuVan3;
         }
 
         void CheckColorVan3(Digital? M10223, Digital? M10222, Digital? M10220, Digital? M10221)
@@ -1806,48 +1569,26 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //xanh
             if (M10223 != null && M10223.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan3M10220);
-                CLearTimer(TimerTinHieuVan3M10221);
                 pictureBoxVan3.Image = Resources.VanXanh;
             }
             //đỏ
             else if (M10222 != null && M10222.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan3M10220);
-                CLearTimer(TimerTinHieuVan3M10221);
                 pictureBoxVan3.Image = Resources.VanDo;
             }
             //đỏ tím
             else if (M10220 != null && M10220.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan3M10221);
-                if (TimerTinHieuVan3M10220 == null || TimerTinHieuVan3M10220.Enabled == false)
-                {
-                    pictureBoxVan3.Image = Resources.VanTim;
-                    TimerTinHieuVan3M10220 = new System.Timers.Timer();
-                    TimerTinHieuVan3M10220.Interval = intervalNhapNhay;
-                    TimerTinHieuVan3M10220.Elapsed += Timer_Tick_CheckColorTinHieuVan3M10220;
-                    TimerTinHieuVan3M10220.Start();
-                }
+                Van3DoTim();
             }
             //xanh tím
             else if (M10221 != null && M10221.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan3M10220);
-                if (TimerTinHieuVan3M10221 == null || TimerTinHieuVan3M10221.Enabled == false)
-                {
-                    pictureBoxVan3.Image = Resources.VanTim;
-                    TimerTinHieuVan3M10221 = new System.Timers.Timer();
-                    TimerTinHieuVan3M10221.Interval = intervalNhapNhay;
-                    TimerTinHieuVan3M10221.Elapsed += Timer_Tick_CheckColorTinHieuVan3M10221;
-                    TimerTinHieuVan3M10221.Start();
-                }
+                Van3XanhTim();
             }
             //tím
             else
             {
-                CLearTimer(TimerTinHieuVan3M10220);
-                CLearTimer(TimerTinHieuVan3M10221);
                 pictureBoxVan3.Image = Resources.VanTim;
             }
         }
@@ -1866,32 +1607,32 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         // Tín hiệu van 4
 
         //đỏ - tím
-        private void Timer_Tick_CheckColorTinHieuVan4M10270(object sender, EventArgs e)
+        private void Van4DoTim()
         {
             if (nhapNhayTinHieuVan4)
             {
                 pictureBoxVan4.Image = Resources.VanTim;
-                nhapNhayTinHieuVan4 = false;
             }
             else
             {
                 pictureBoxVan4.Image = Resources.VanDo;
-                nhapNhayTinHieuVan4 = true;
             }
+            nhapNhayTinHieuVan4 = !nhapNhayTinHieuVan4;
+
         }
         //xanh tím
-        private void Timer_Tick_CheckColorTinHieuVan4M10271(object sender, EventArgs e)
+        private void Van4XanhTim()
         {
             if (nhapNhayTinHieuVan4)
             {
                 pictureBoxVan4.Image = Resources.VanTim;
-                nhapNhayTinHieuVan4 = false;
             }
             else
             {
                 pictureBoxVan4.Image = Resources.VanXanh;
-                nhapNhayTinHieuVan4 = true;
             }
+            nhapNhayTinHieuVan4 = !nhapNhayTinHieuVan4;
+
         }
 
         void CheckColorVan4(Digital? M10272, Digital? M10271, Digital? M10269, Digital? M10270)
@@ -1899,48 +1640,26 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //xanh
             if (M10272 != null && M10272.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan4M10270);
-                CLearTimer(TimerTinHieuVan4M10271);
                 pictureBoxVan4.Image = Resources.VanXanh;
             }
             //đỏ
             else if (M10271 != null && M10271.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan4M10270);
-                CLearTimer(TimerTinHieuVan4M10271);
                 pictureBoxVan4.Image = Resources.VanDo;
             }
             //đỏ tím
             else if (M10269 != null && M10269.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan4M10271);
-                if (TimerTinHieuVan4M10270 == null || TimerTinHieuVan4M10270.Enabled == false)
-                {
-                    pictureBoxVan4.Image = Resources.VanTim;
-                    TimerTinHieuVan4M10270 = new System.Timers.Timer();
-                    TimerTinHieuVan4M10270.Interval = intervalNhapNhay;
-                    TimerTinHieuVan4M10270.Elapsed += Timer_Tick_CheckColorTinHieuVan4M10270;
-                    TimerTinHieuVan4M10270.Start();
-                }
+                Van4DoTim();
             }
             //xanh tím
             else if (M10270 != null && M10270.TrangThai == true)
             {
-                CLearTimer(TimerTinHieuVan4M10270);
-                if (TimerTinHieuVan4M10271 == null || TimerTinHieuVan4M10271.Enabled == false)
-                {
-                    pictureBoxVan4.Image = Resources.VanTim;
-                    TimerTinHieuVan4M10271 = new System.Timers.Timer();
-                    TimerTinHieuVan4M10271.Interval = intervalNhapNhay;
-                    TimerTinHieuVan4M10271.Elapsed += Timer_Tick_CheckColorTinHieuVan4M10271;
-                    TimerTinHieuVan4M10271.Start();
-                }
+                Van4XanhTim();
             }
             //tím
             else
             {
-                CLearTimer(TimerTinHieuVan4M10270);
-                CLearTimer(TimerTinHieuVan4M10271);
                 pictureBoxVan4.Image = Resources.VanTim;
             }
         }
