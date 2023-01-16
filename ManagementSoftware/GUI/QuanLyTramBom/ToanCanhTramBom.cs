@@ -142,6 +142,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             if (timer1 != null)
             {
                 this.timer1.Change(Timeout.Infinite, Timeout.Infinite);
+                
             }
             if (timer2 != null)
             {

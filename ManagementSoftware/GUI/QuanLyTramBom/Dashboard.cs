@@ -164,15 +164,20 @@ namespace QuanLyTramBom
                 foreach (FormKHThoiGianThuc f in tabPage2.Controls)
                 {
                     f.Close();
+                    f.Dispose();
                 }
                 foreach (FormQuanLyLuuTruDuLieu f in tabPage3.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
 
                 foreach (FormQuanLyDSVaoRa f in tabPage4.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
                 ToanCanhTramBom form = new ToanCanhTramBom();
                 form.TopLevel = false;
@@ -187,15 +192,21 @@ namespace QuanLyTramBom
                 foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
                 foreach (FormQuanLyLuuTruDuLieu f in tabPage3.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
 
                 foreach (FormQuanLyDSVaoRa f in tabPage4.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
                 FormKHThoiGianThuc form = new FormKHThoiGianThuc();
                 form.TopLevel = false;
@@ -209,15 +220,21 @@ namespace QuanLyTramBom
                 foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
                 foreach (FormKHThoiGianThuc f in tabPage2.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
 
                 foreach (FormQuanLyDSVaoRa f in tabPage4.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
                 FormQuanLyLuuTruDuLieu form = new FormQuanLyLuuTruDuLieu();
                 form.TopLevel = false;
@@ -231,15 +248,21 @@ namespace QuanLyTramBom
                 foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
                 foreach (FormKHThoiGianThuc f in tabPage2.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
 
                 foreach (FormQuanLyLuuTruDuLieu f in tabPage3.Controls)
                 {
                     f.Close();
+                    f.Dispose();
+
                 }
                 FormQuanLyDSVaoRa form = new FormQuanLyDSVaoRa();
                 form.TopLevel = false;
