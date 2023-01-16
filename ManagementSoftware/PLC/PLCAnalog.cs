@@ -11,6 +11,7 @@ namespace ManagementSoftware.PLC
     public class PLCAnalog : PLCMain
     {
 
+
         //get list analog
         public async Task<List<Analog>?> GetListDataAnalog(List<Analog> list)
         {

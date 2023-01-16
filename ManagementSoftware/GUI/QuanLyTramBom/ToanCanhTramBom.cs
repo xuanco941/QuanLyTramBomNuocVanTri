@@ -55,7 +55,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
-
         private async void Callback1(Object state)
         {
             Stopwatch watch = new Stopwatch();
@@ -82,12 +81,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             Analog? D10066c = await plcAnalog.GetAnAnalog(analogCommon.D10066);
 
 
-
+            
 
             UpdateDataAnalog(D10000c, D10002c, D10004c, D10006c, D10008c, D10010c, D10022c, D10024c, D10036c, D10038c, D10050c, D10052c, D10064c, D10066c);
 
-
-            timer1.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+            if (timer1 != null)
+            {
+                timer1.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+            }
         }
 
 
@@ -136,18 +137,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         }
 
-
-        void CloseTimer()
+        ~ToanCanhTramBom()
         {
-            if (timer1 != null)
-            {
-                this.timer1.Change(Timeout.Infinite, Timeout.Infinite);
-                
-            }
-            if (timer2 != null)
-            {
-                this.timer2.Change(Timeout.Infinite, Timeout.Infinite);
-            }
+           
         }
 
 
@@ -157,8 +149,19 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             await plcAnalog.Close();
             await plcDigital.Close();
 
+            if (timer1 != null)
+            {
+                this.timer1.Change(Timeout.Infinite, Timeout.Infinite);
+                timer1.Dispose();
+                timer1 = null;
+            }
+            if (timer2 != null)
+            {
+                this.timer2.Change(Timeout.Infinite, Timeout.Infinite);
+                timer2.Dispose();
+                timer2 = null;
+            }
 
-            CloseTimer();
         }
 
 
@@ -323,8 +326,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             UpdateDataDigital(M10065, M10066, M10067, M10064, M10069, M10070, M10071, M10068, M10077, M10079, M10144, M10145, M10167, M10193, M10194, M10216, M10243, M10265, M10242, M10059, M10061, M10042, M10041, M10039, M10040, M10038, M10051, M10050, M10048, M10049, M10047, M10125, M10124, M10122, M10123, M10174, M10173, M10171, M10172,
   M10223, M10222, M10220, M10221, M10272, M10271, M10269, M10270, M10095, M10096, M10118, M10137, M10138, M10139, M10186, M10187, M10188, M10235, M10236, M10237, M10284, M10285, M10286, M10097, M10146, M10195, M10244);
 
-
-            timer2.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+            if (timer2 != null)
+            {
+                timer2.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+            }
         }
 
 

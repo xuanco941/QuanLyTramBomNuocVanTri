@@ -11,7 +11,7 @@ namespace ManagementSoftware.PLC
 {
     public class PLCDigital : PLCMain
     {
-        
+
         //get a digital
         public async Task<Digital?> GetADigital(Digital d)
         {

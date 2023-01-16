@@ -103,6 +103,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             if (timer != null)
             {
                 this.timer.Change(Timeout.Infinite, Timeout.Infinite);
+                timer.Dispose();
+                timer = null;
             }
             await plc.Close();
         }
@@ -127,7 +129,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 await plc.Close();
 
             }
-            timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+            if (timer != null)
+            {
+                timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+            }
 
 
 
@@ -135,7 +140,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
         System.Threading.Timer timer;
-        int TIME_INTERVAL_IN_MILLISECONDS = 3500;
+        int TIME_INTERVAL_IN_MILLISECONDS = 2500;
         private async void buttonClear_Click_1(object sender, EventArgs e)
         {
             this.Enabled = false;

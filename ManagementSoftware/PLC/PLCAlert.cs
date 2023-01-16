@@ -12,6 +12,7 @@ namespace ManagementSoftware.PLC
     public class PLCAlert : PLCMain
     {
 
+
         //get list alert true
         public async Task<List<Alert>?> GetListDataAlertTrue()
         {

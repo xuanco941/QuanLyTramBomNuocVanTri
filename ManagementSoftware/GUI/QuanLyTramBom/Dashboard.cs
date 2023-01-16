@@ -318,7 +318,7 @@ namespace QuanLyTramBom
 
 
         System.Threading.Timer timer;
-        int TIME_INTERVAL_IN_MILLISECONDS = 3000;
+        int TIME_INTERVAL_IN_MILLISECONDS = 2500;
 
 
         private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
@@ -326,6 +326,8 @@ namespace QuanLyTramBom
             if (timer != null)
             {
                 this.timer.Change(Timeout.Infinite, Timeout.Infinite);
+                timer.Dispose();
+                timer = null;
             }
             await plcAlert.Close();
         }
@@ -368,9 +370,9 @@ namespace QuanLyTramBom
         }
 
 
-
         private async void Callback(Object state)
         {
+
             Stopwatch watch = new Stopwatch();
 
             watch.Start();
@@ -422,7 +424,10 @@ namespace QuanLyTramBom
             }
 
 
-            timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+            if (timer != null)
+            {
+                timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+            }
         }
 
 
