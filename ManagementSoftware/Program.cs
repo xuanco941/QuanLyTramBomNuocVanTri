@@ -42,14 +42,14 @@ namespace ManagementSoftware
 
 
 
-            //try
-            //{
-            //    new DataBaseContext().CreateDatabase();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            try
+            {
+                new DataBaseContext().CreateDatabase();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
             //delete data after 2 years
@@ -62,16 +62,16 @@ namespace ManagementSoftware
 
 
 
-            //new Thread(() =>
-            //{
-            //    new DataDigital().StartTimer(9000);
-            //}).Start();
+            new Thread(() =>
+            {
+                new DataDigital().StartTimer(9000);
+            }).Start();
 
-            //new Thread(() =>
-            //{
-            //    new DataAnalog().StartTimer(60000);
+            new Thread(() =>
+            {
+                new DataAnalog().StartTimer(60000);
 
-            //}).Start();
+            }).Start();
 
 
 

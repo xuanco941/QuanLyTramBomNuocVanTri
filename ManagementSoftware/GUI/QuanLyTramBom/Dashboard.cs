@@ -163,11 +163,13 @@ namespace QuanLyTramBom
             {
                 foreach (FormKHThoiGianThuc f in tabPage2.Controls)
                 {
+                    f.Enabled = false;
                     f.Close();
                     f.Dispose();
                 }
                 foreach (FormQuanLyLuuTruDuLieu f in tabPage3.Controls)
                 {
+                    f.Enabled = false;
                     f.Close();
                     f.Dispose();
 
@@ -175,6 +177,8 @@ namespace QuanLyTramBom
 
                 foreach (FormQuanLyDSVaoRa f in tabPage4.Controls)
                 {
+
+                    f.Enabled = false;
                     f.Close();
                     f.Dispose();
 
@@ -191,12 +195,16 @@ namespace QuanLyTramBom
             {
                 foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
                 }
                 foreach (FormQuanLyLuuTruDuLieu f in tabPage3.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
@@ -204,6 +212,8 @@ namespace QuanLyTramBom
 
                 foreach (FormQuanLyDSVaoRa f in tabPage4.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
@@ -219,12 +229,16 @@ namespace QuanLyTramBom
             {
                 foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
                 }
                 foreach (FormKHThoiGianThuc f in tabPage2.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
@@ -232,6 +246,8 @@ namespace QuanLyTramBom
 
                 foreach (FormQuanLyDSVaoRa f in tabPage4.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
@@ -247,12 +263,16 @@ namespace QuanLyTramBom
             {
                 foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
                 }
                 foreach (FormKHThoiGianThuc f in tabPage2.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
@@ -260,6 +280,8 @@ namespace QuanLyTramBom
 
                 foreach (FormQuanLyLuuTruDuLieu f in tabPage3.Controls)
                 {
+                    f.Enabled = false;
+
                     f.Close();
                     f.Dispose();
 
