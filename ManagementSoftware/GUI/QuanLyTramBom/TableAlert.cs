@@ -135,7 +135,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
         System.Threading.Timer timer;
-        int TIME_INTERVAL_IN_MILLISECONDS = 2000;
+        int TIME_INTERVAL_IN_MILLISECONDS = 3500;
         private async void buttonClear_Click_1(object sender, EventArgs e)
         {
             this.Enabled = false;

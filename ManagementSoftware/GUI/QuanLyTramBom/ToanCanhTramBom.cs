@@ -21,12 +21,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         PLCAnalog plcAnalog;
         PLCDigital plcDigital;
-        PLCDigital plcDigital2;
-        PLCDigital plcDigital3;
-        PLCDigital plcDigital4;
-        PLCDigital plcDigital5;
-        PLCDigital plcDigital6;
-        PLCDigital plcDigital7;
 
 
         AnalogCommon analogCommon;
@@ -135,12 +129,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             InitializeComponent();
             plcAnalog = new PLCAnalog();
             plcDigital = new PLCDigital();
-            plcDigital2 = new PLCDigital();
-            plcDigital3 = new PLCDigital();
-            plcDigital4 = new PLCDigital();
-            plcDigital5 = new PLCDigital();
-            plcDigital6 = new PLCDigital();
-            plcDigital7 = new PLCDigital();
 
 
             analogCommon = new AnalogCommon();
@@ -167,12 +155,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
             await plcAnalog.Close();
             await plcDigital.Close();
-            await plcDigital2.Close();
-            await plcDigital3.Close();
-            await plcDigital4.Close();
-            await plcDigital5.Close();
-            await plcDigital6.Close();
-            await plcDigital7.Close();
+
 
             CloseTimer();
         }
@@ -335,12 +318,23 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
+
             UpdateDataDigital(M10065, M10066, M10067, M10064, M10069, M10070, M10071, M10068, M10077, M10079, M10144, M10145, M10167, M10193, M10194, M10216, M10243, M10265, M10242, M10059, M10061, M10042, M10041, M10039, M10040, M10038, M10051, M10050, M10048, M10049, M10047, M10125, M10124, M10122, M10123, M10174, M10173, M10171, M10172,
   M10223, M10222, M10220, M10221, M10272, M10271, M10269, M10270, M10095, M10096, M10118, M10137, M10138, M10139, M10186, M10187, M10188, M10235, M10236, M10237, M10284, M10285, M10286, M10097, M10146, M10195, M10244);
 
 
             timer2.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
         }
+
+
+        public delegate void Del(Digital? M10065c, Digital? M10066c, Digital? M10067c, Digital? M10064c, Digital? M10069c, Digital? M10070c, Digital? M10071c, Digital? M10068c,
+            Digital? M10077c, Digital? M10079c, Digital? M10144c, Digital? M10145c, Digital? M10167c, Digital? M10193c, Digital? M10194c, Digital? M10216c,
+            Digital? M10243c, Digital? M10265c, Digital? M10242c, Digital? M10059c, Digital? M10061c, Digital? M10042c, Digital? M10041c, Digital? M10039c, Digital? M10040c,
+            Digital? M10038c, Digital? M10051c, Digital? M10050c, Digital? M10048c, Digital? M10049c, Digital? M10047c, Digital? M10125c, Digital? M10124c, Digital? M10122c,
+            Digital? M10123c, Digital? M10174c, Digital? M10173c, Digital? M10171c, Digital? M10172c, Digital? M10223c, Digital? M10222c, Digital? M10220c, Digital? M10221c,
+            Digital? M10272c, Digital? M10271c, Digital? M10269c, Digital? M10270c, Digital? M10095c, Digital? M10096c, Digital? M10118c, Digital? M10137c, Digital? M10138c,
+            Digital? M10139c, Digital? M10186c, Digital? M10187c, Digital? M10188c, Digital? M10235c, Digital? M10236c, Digital? M10237c, Digital? M10284c, Digital? M10285c,
+            Digital? M10286c, Digital? M10097c, Digital? M10146c, Digital? M10195c, Digital? M10244c);
 
         private void UpdateDataDigital(Digital? M10065c, Digital? M10066c, Digital? M10067c, Digital? M10064c, Digital? M10069c, Digital? M10070c, Digital? M10071c, Digital? M10068c,
             Digital? M10077c, Digital? M10079c, Digital? M10144c, Digital? M10145c, Digital? M10167c, Digital? M10193c, Digital? M10194c, Digital? M10216c,
@@ -367,8 +361,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
             if (IsHandleCreated && InvokeRequired)
             {
-                BeginInvoke(() => UpdateDataDigital(M10065c, M10066c, M10067c, M10064c, M10069c, M10070c, M10071c, M10068c, M10077c, M10079c, M10144c, M10145c, M10167c, M10193c, M10194c, M10216c, M10243c, M10265c, M10242c, M10059c, M10061c, M10042c, M10041c, M10039c, M10040c, M10038c, M10051c, M10050c, M10048c, M10049c, M10047c, M10125c, M10124c, M10122c, M10123c, M10174c, M10173c, M10171c, M10172c,
-  M10223c, M10222c, M10220c, M10221c, M10272c, M10271c, M10269c, M10270c, M10095c, M10096c, M10118c, M10137c, M10138c, M10139c, M10186c, M10187c, M10188c, M10235c, M10236c, M10237c, M10284c, M10285c, M10286c, M10097c, M10146c, M10195c, M10244c));
+                Del del = UpdateDataDigital;
+                BeginInvoke(del, M10065c, M10066c, M10067c, M10064c, M10069c, M10070c, M10071c, M10068c, M10077c, M10079c, M10144c, M10145c, M10167c, M10193c, M10194c, M10216c, M10243c, M10265c, M10242c, M10059c, M10061c, M10042c, M10041c, M10039c, M10040c, M10038c, M10051c, M10050c, M10048c, M10049c, M10047c, M10125c, M10124c, M10122c, M10123c, M10174c, M10173c, M10171c, M10172c,
+  M10223c, M10222c, M10220c, M10221c, M10272c, M10271c, M10269c, M10270c, M10095c, M10096c, M10118c, M10137c, M10138c, M10139c, M10186c, M10187c, M10188c, M10235c, M10236c, M10237c, M10284c, M10285c, M10286c, M10097c, M10146c, M10195c, M10244c);
                 return;
             }
 

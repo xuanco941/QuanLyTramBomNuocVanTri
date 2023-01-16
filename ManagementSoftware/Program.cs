@@ -64,7 +64,7 @@ namespace ManagementSoftware
 
             new Thread(() =>
             {
-                new DataDigital().StartTimer(5000);
+                new DataDigital().StartTimer(8000);
             }).Start();
 
             new Thread(() =>

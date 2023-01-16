@@ -273,7 +273,7 @@ namespace QuanLyTramBom
 
 
         System.Threading.Timer timer;
-        int TIME_INTERVAL_IN_MILLISECONDS = 2000;
+        int TIME_INTERVAL_IN_MILLISECONDS = 3000;
 
 
         private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
