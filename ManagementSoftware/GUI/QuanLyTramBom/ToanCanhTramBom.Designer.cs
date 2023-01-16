@@ -323,7 +323,7 @@
             this.gridLayoutDauVao.SetParticipateInLayout(this.D10000, true);
             this.D10000.Size = new System.Drawing.Size(114, 25);
             this.D10000.TabIndex = 3;
-            this.D10000.Text = "D10000";
+            this.D10000.Text = "0.0";
             this.D10000.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // D10004
@@ -336,7 +336,7 @@
             this.gridLayoutDauVao.SetParticipateInLayout(this.D10004, true);
             this.D10004.Size = new System.Drawing.Size(114, 25);
             this.D10004.TabIndex = 2;
-            this.D10004.Text = "D10004";
+            this.D10004.Text = "0.0";
             this.D10004.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // D10002
@@ -348,7 +348,7 @@
             this.gridLayoutDauVao.SetParticipateInLayout(this.D10002, true);
             this.D10002.Size = new System.Drawing.Size(114, 25);
             this.D10002.TabIndex = 1;
-            this.D10002.Text = "D10002";
+            this.D10002.Text = "0.0";
             this.D10002.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // D10006
@@ -360,7 +360,7 @@
             this.gridLayoutDauVao.SetParticipateInLayout(this.D10006, true);
             this.D10006.Size = new System.Drawing.Size(114, 25);
             this.D10006.TabIndex = 0;
-            this.D10006.Text = "D10006";
+            this.D10006.Text = "0.0";
             this.D10006.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // paneltextHeader
@@ -1376,9 +1376,9 @@
             this.D10010.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D10010.Location = new System.Drawing.Point(657, 194);
             this.D10010.Name = "D10010";
-            this.D10010.Size = new System.Drawing.Size(63, 32);
+            this.D10010.Size = new System.Drawing.Size(49, 32);
             this.D10010.TabIndex = 9;
-            this.D10010.Text = "5.03";
+            this.D10010.Text = "0.0";
             // 
             // D10066
             // 
@@ -1433,7 +1433,7 @@
             this.D10064.Name = "D10064";
             this.D10064.Size = new System.Drawing.Size(49, 32);
             this.D10064.TabIndex = 4;
-            this.D10064.Text = "3.4";
+            this.D10064.Text = "0.0";
             // 
             // D10050
             // 
@@ -1444,7 +1444,7 @@
             this.D10050.Name = "D10050";
             this.D10050.Size = new System.Drawing.Size(49, 32);
             this.D10050.TabIndex = 3;
-            this.D10050.Text = "3.2";
+            this.D10050.Text = "0.0";
             // 
             // D10036
             // 
@@ -1455,7 +1455,7 @@
             this.D10036.Name = "D10036";
             this.D10036.Size = new System.Drawing.Size(49, 32);
             this.D10036.TabIndex = 2;
-            this.D10036.Text = "5.4";
+            this.D10036.Text = "0.0";
             // 
             // D10022
             // 
@@ -1475,9 +1475,9 @@
             this.D10008.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.D10008.Location = new System.Drawing.Point(101, 194);
             this.D10008.Name = "D10008";
-            this.D10008.Size = new System.Drawing.Size(63, 32);
+            this.D10008.Size = new System.Drawing.Size(49, 32);
             this.D10008.TabIndex = 0;
-            this.D10008.Text = "5.78";
+            this.D10008.Text = "0.0";
             // 
             // gridLayout1
             // 

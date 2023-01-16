@@ -266,6 +266,7 @@ namespace QuanLyTramBom
 
         async void UpdateChart()
         {
+            this.Enabled = false;
 
             TimeSpan khoangCachTime = timeEnd - timeStart;
             double khoangCachTimeDouble = 0;
@@ -314,8 +315,6 @@ namespace QuanLyTramBom
 
 
 
-
-
             if (series1 != null)
             {
                 await SetValueSeries(series1);
@@ -348,6 +347,8 @@ namespace QuanLyTramBom
             {
                 await SetValueSeries(series8);
             }
+            this.Enabled = true;
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -380,6 +381,8 @@ namespace QuanLyTramBom
             {
                 typeInterval = ChartDateTimeIntervalType.Years;
             }
+
+
         }
 
 

@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             dataGridView1.RowTemplate.Height = 40;
         }
 
-        private async void TableAlert_Load(object sender, EventArgs e)
+        private void TableAlert_Load(object sender, EventArgs e)
         {
             List<AlertHistory>? list = DALAlertHistory.GetAllAlertHistory();
             List<Alert>? list2 = new List<Alert>();
@@ -36,13 +37,18 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 list2.Add(new Alert() { DiaChiPLC = item.DiaChiPLC, DieuKien = item.DieuKien, GanThe = item.GanThe, Nhom = item.Nhom, ThoiGian = item.ThoiGian, TinHieu = item.TinHieu, TrangThai = item.TrangThai });
             }
-            await plc.Open();
             LoadFormThongKe(list2);
         }
 
         void LoadFormThongKe(List<Alert>? list)
         {
-            this.Enabled = false;
+
+            if (IsHandleCreated && InvokeRequired)
+            {
+                BeginInvoke(new Action<List<Alert>?>(LoadFormThongKe), list);
+                return;
+            }
+
 
 
             DataTable dt = new DataTable();
@@ -60,13 +66,13 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     string createAt = alert.ThoiGian.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
                     string thoiGian = alert.ThoiGian.ToString("HH:mm:ss", CultureInfo.InvariantCulture);
 
-                    string c = alert.TrangThai.ToString();
-                    dt.Rows.Add(alert.GanThe, createAt, thoiGian, alert.DieuKien, alert.Nhom, alert.TinHieu, c);
+                    //string c = alert.TrangThai.ToString();
+                    dt.Rows.Add(alert.GanThe, createAt, thoiGian, alert.DieuKien, alert.Nhom, alert.TinHieu, "Lỗi");
                 }
             }
             dataGridView1.DataSource = dt;
             //mo thanh search
-            this.Enabled = true;
+
 
             this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -93,13 +99,49 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         private async void TableAlert_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+
+            if (timer != null)
+            {
+                this.timer.Change(Timeout.Infinite, Timeout.Infinite);
+            }
             await plc.Close();
         }
 
+
+        private async void Callback(Object state)
+        {
+            Stopwatch watch = new Stopwatch();
+
+            watch.Start();
+
+
+            // update data
+            // Long running operation
+            if(await plc.Open() == 0)
+            {
+                List<Alert>? list = await plc.GetListDataAlertTrue();
+                if (list != null && list.Count > 0)
+                {
+                    LoadFormThongKe(list);
+                }
+                await plc.Close();
+
+            }
+            timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
+
+
+
+        }
+
+
+        System.Threading.Timer timer;
+        int TIME_INTERVAL_IN_MILLISECONDS = 2000;
         private async void buttonClear_Click_1(object sender, EventArgs e)
         {
+            this.Enabled = false;
             await taskDelete();
+            timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+            this.Enabled = true;
         }
 
     }

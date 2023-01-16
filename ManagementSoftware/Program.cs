@@ -51,6 +51,8 @@ namespace ManagementSoftware
                 MessageBox.Show("Lỗi khởi tạo cơ sở dữ liệu, hãy thử xem lại đường dẫn kết nối của bạn.", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+
+            //delete data after 2 years
             //new Thread(() =>
             //{
             //    new DeleteAllData().StartTimer(86400000);
@@ -62,7 +64,7 @@ namespace ManagementSoftware
 
             new Thread(() =>
             {
-                new DataDigital().StartTimer(8000);
+                new DataDigital().StartTimer(5000);
             }).Start();
 
             new Thread(() =>
