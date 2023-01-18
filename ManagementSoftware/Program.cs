@@ -69,7 +69,7 @@ namespace ManagementSoftware
 
             new Thread(() =>
             {
-                new DataAnalog().StartTimer(120000);
+                new DataAnalog().StartTimer(60000);
 
             }).Start();
 
