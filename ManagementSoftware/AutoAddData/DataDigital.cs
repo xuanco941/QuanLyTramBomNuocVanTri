@@ -19,56 +19,61 @@ namespace ManagementSoftware.AutoAddData
         public DataDigital()
         {
             plc = new PLCDigital();
+            listAllDigitals = new DigitalCommon().ListAllDigitals;
         }
 
 
-
-        void SaveData()
+        List<Digital> listAllDigitals = new DigitalCommon().ListAllDigitals;
+        async Task SaveData()
         {
-
-            Task<List<DigitalHistory>> task1 = Task.Run(() => DALDigitalHistory.GetAll());
-            Task<List<AlertHistory2>> task2 = Task.Run(() => DALAlertHistory2.GetAll());
-
-            Task<List<Digital>?> task3 = Task.Run(() => plc.GetListDataDigital(new DigitalCommon().ListAllDigitals));
-
-            Task.WhenAll(task1, task2, task3).ContinueWith(async (t) =>
+            if (await plc.Open() == 0)
             {
-                List<DigitalHistory> list = task1.Result;
-                List<AlertHistory2> list2 = task2.Result;
-                List<Digital>? listAll = task3.Result;
+                Task<List<DigitalHistory>> task1 = Task.Run(() => DALDigitalHistory.GetAll());
+                Task<List<AlertHistory2>> task2 = Task.Run(() => DALAlertHistory2.GetAll());
 
-                if (listAll != null && listAll.Count > 0)
+                Task<List<Digital>?> task3 = Task.Run(() => plc.GetListDataDigital(listAllDigitals));
+
+                await Task.WhenAll(task1, task2, task3).ContinueWith(async (t) =>
                 {
-                    foreach (var item in listAll)
+                    List<DigitalHistory> list = task1.Result;
+                    List<AlertHistory2> list2 = task2.Result;
+                    List<Digital>? listAll = task3.Result;
+
+                    if (listAll != null && listAll.Count > 0)
                     {
-
-                        AlertHistory2? alert = list2.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
-                        if (alert != null)
+                        foreach (var item in listAll)
                         {
-                            Alert x = new Alert(alert.DiaChiPLC, alert.GanThe, alert.DieuKien, alert.Nhom, alert.TinHieu);
-                            x.TrangThai = alert.TrangThai;
-                            await DALAlert.Add(x);
-                            DALAlertHistory2.Update(x);
+
+                            AlertHistory2? alert = list2.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                            if (alert != null)
+                            {
+                                Alert x = new Alert(alert.DiaChiPLC, alert.GanThe, alert.DieuKien, alert.Nhom, alert.TinHieu);
+                                x.TrangThai = alert.TrangThai;
+                                await DALAlert.Add(x);
+                                DALAlertHistory2.Update(x);
+                            }
+
+
+                            DigitalHistory? d = list.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                            if (d != null)
+                            {
+                                Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
+                                x.TrangThai = d.TrangThai;
+                                await DALDigital.Add(x);
+                                DALDigitalHistory.Update(x);
+                            }
+
+
                         }
 
-
-                        DigitalHistory? d = list.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
-                        if (d != null)
-                        {
-                            Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
-                            x.TrangThai = d.TrangThai;
-                            await DALDigital.Add(x);
-                            DALDigitalHistory.Update(x);
-                        }
 
 
                     }
+                });
 
+            }
 
-
-                }
-            });
-
+            await plc.Close();
 
         }
 
@@ -86,11 +91,9 @@ namespace ManagementSoftware.AutoAddData
 
 
             // Long running operation
-            if (await plc.Open() == 0)
-            {
-                SaveData();
-                await plc.Close();
-            }
+
+            await SaveData();
+
 
 
 

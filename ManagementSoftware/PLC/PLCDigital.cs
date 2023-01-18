@@ -54,6 +54,11 @@ namespace ManagementSoftware.PLC
                 {
                     a.TrangThai = r == 0 ? false : true;
                 }
+                if (a.DiaChiPLC == "M10044")
+                {
+                    System.Diagnostics.Debug.WriteLine(a.TinHieu);
+                    System.Diagnostics.Debug.WriteLine(a.TrangThai);
+                }
                 result.Add(a);
             }
             return result;
