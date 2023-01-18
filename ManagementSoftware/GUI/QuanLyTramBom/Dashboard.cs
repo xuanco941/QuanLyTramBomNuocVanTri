@@ -457,6 +457,16 @@ namespace QuanLyTramBom
                     labelDieuKien.Text = alertERR.DieuKien;
                     labelGiaTri.Text = alertHistories.Count.ToString();
                 }
+                else
+                {
+                    labelNgay.Text = "";
+                    labelNhom.Text = "";
+                    labelMoTa.Text = "";
+                    labelGanThe.Text = "";
+                    labelThoiGian.Text = "";
+                    labelDieuKien.Text = "";
+                    labelGiaTri.Text = "";
+                }
             }
             else
             {

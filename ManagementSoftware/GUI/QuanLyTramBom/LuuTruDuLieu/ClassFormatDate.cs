@@ -8,7 +8,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
 {
     public class ClassFormatDate
     {
-        public int ThoiGian { get; set; }
+        public string ThoiGian { get; set; }
         public double MucNuocHut { get; set; }
         public double MucNuocXa { get; set; }
         public string ThoiGianChayBom1 { get; set; }

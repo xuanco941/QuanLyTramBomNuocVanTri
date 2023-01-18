@@ -60,7 +60,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                 string tongTime3 = item.ThoiGianChayBom3.Hours.ToString() + " h " + item.ThoiGianChayBom3.Minutes.ToString() + " min ";
                 string tongTime4 = item.ThoiGianChayBom4.Hours.ToString() + " h " + item.ThoiGianChayBom4.Minutes.ToString() + " min ";
 
-                dt.Rows.Add(i, xa, hut, tongTime1, tongTime2, tongTime3, tongTime4);
+                dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, tongTime1, tongTime2, tongTime3, tongTime4);
                 i++;
             }
 
@@ -238,10 +238,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                                 //add du lieu vao excel
 
                                 List<ClassFormatDate> listData = new List<ClassFormatDate>();
-
+                                int i = 1;
                                 foreach (var item in list)
                                 {
                                     ClassFormatDate c = new ClassFormatDate();
+                                    c.ThoiGian = (i - 1).ToString() + " - " + i.ToString();
                                     c.MucNuocHut = item.MucNuocBeHut;
                                     c.MucNuocXa = item.MucNuocBeXa;
                                     c.ThoiGianChayBom1 = item.ThoiGianChayBom1.Hours.ToString() + "h " + item.ThoiGianChayBom1.Minutes.ToString() + "min";
