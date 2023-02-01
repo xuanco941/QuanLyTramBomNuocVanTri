@@ -421,7 +421,15 @@ namespace QuanLyTramBom
 
             }
 
-            UpdateData(alertHistories);
+
+            if(alertTrue==null || alertTrue.Count < 1)
+            {
+                UpdateData(null);
+            }
+            else
+            {
+                UpdateData(alertHistories);
+            }
 
 
             if (timer != null)

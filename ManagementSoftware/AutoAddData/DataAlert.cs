@@ -26,37 +26,41 @@ namespace ManagementSoftware.AutoAddData
         public List<Alert> listAllAlerts = new AlertCommon().ListAllAlerts;
         public static List<Alert> ListAllAlertsStatic = new AlertCommon().ListAllAlerts;
 
+
         async Task SaveData()
         {
             if (await plc.Open() == 0)
             {
 
-                Task<List<Alert>?> task3 = Task.Run(() => plc.GetListDataAlert(listAllAlerts));
+                List<Alert>? listAll = await plc.GetListDataAlert(listAllAlerts);
 
-                await Task.WhenAll(task3).ContinueWith(async (t) =>
+                foreach (var item in ListAllAlertsStatic)
                 {
-                    List<Alert>? listAll = task3.Result;
-
-                    if (listAll != null && listAll.Count > 0)
+                    if (item.TrangThai == true)
                     {
-                        foreach (var item in listAll)
-                        {
-
-                            Alert? d = ListAllAlertsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
-                            if (d != null)
-                            {
-                                Alert x = new Alert(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
-                                x.TrangThai = d.TrangThai;
-                                await DALAlert.Add(x);
-                            }
-                        }
-
-
-
+                        System.Diagnostics.Debug.WriteLine(item.TinHieu + " " + item.TrangThai.ToString());
                     }
-                    ListAllAlertsStatic = listAll;
 
-                });
+                }
+
+                if (listAll != null && listAll.Count > 0)
+                {
+                    foreach (var item in listAll)
+                    {
+
+                        Alert? d = ListAllAlertsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                        if (d != null)
+                        {
+                            Alert x = new Alert(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
+                            x.TrangThai = d.TrangThai;
+                            await DALAlert.Add(x);
+                        }
+                    }
+
+                    ListAllAlertsStatic.Clear();
+                    ListAllAlertsStatic.AddRange(listAll);
+
+                }
 
             }
 

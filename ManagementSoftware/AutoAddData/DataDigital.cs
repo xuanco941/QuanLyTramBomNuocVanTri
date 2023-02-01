@@ -29,40 +29,31 @@ namespace ManagementSoftware.AutoAddData
         async Task SaveData()
         {
 
-
-            foreach (var item in ListAllDigitalsStatic)
-            {
-                System.Diagnostics.Debug.WriteLine(item.TinHieu + " " + item.TrangThai.ToString());
-            }
-
             if (await plc.Open() == 0)
             {
 
-                Task<List<Digital>?> task3 = Task.Run(() => plc.GetListDataDigital(listAllDigitals));
 
-                await Task.WhenAll(task3).ContinueWith(async (t) =>
+                List<Digital>? listAll = await plc.GetListDataDigital(listAllDigitals);
+
+                if (listAll != null && listAll.Count > 0)
                 {
-                    List<Digital>? listAll = task3.Result;
-
-                    if (listAll != null && listAll.Count > 0)
+                    foreach (var item in listAll)
                     {
-                        foreach (var item in listAll)
+
+                        Digital? d = ListAllDigitalsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                        if (d != null)
                         {
-
-                            Digital? d = ListAllDigitalsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
-                            if (d != null)
-                            {
-                                Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
-                                x.TrangThai = d.TrangThai;
-                                await DALDigital.Add(x);
-                            }
+                            Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
+                            x.TrangThai = d.TrangThai;
+                            await DALDigital.Add(x);
                         }
-                        ListAllDigitalsStatic = listAll;
-
-
-
                     }
-                });
+                    ListAllDigitalsStatic.Clear();
+                    ListAllDigitalsStatic.AddRange(listAll);
+
+
+
+                }
 
             }
 
