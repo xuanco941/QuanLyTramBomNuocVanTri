@@ -897,7 +897,7 @@
             // TinHieuMayBom4
             // 
             this.TinHieuMayBom4.BackColor = System.Drawing.Color.Transparent;
-            this.TinHieuMayBom4.Image = global::ManagementSoftware.Properties.Resources.BomChinh4Do;
+            this.TinHieuMayBom4.Image = global::ManagementSoftware.Properties.Resources.BomChinh4Xanh;
             this.TinHieuMayBom4.Location = new System.Drawing.Point(459, 245);
             this.TinHieuMayBom4.Name = "TinHieuMayBom4";
             this.TinHieuMayBom4.Size = new System.Drawing.Size(27, 21);
@@ -930,7 +930,7 @@
             // TinHieuMayBom1
             // 
             this.TinHieuMayBom1.BackColor = System.Drawing.Color.Transparent;
-            this.TinHieuMayBom1.Image = global::ManagementSoftware.Properties.Resources.M10097___Đỏ;
+            this.TinHieuMayBom1.Image = global::ManagementSoftware.Properties.Resources.M10097___Xanh;
             this.TinHieuMayBom1.Location = new System.Drawing.Point(459, 142);
             this.TinHieuMayBom1.Name = "TinHieuMayBom1";
             this.TinHieuMayBom1.Size = new System.Drawing.Size(27, 21);
@@ -1095,7 +1095,7 @@
             // BomThoat2
             // 
             this.BomThoat2.BackColor = System.Drawing.Color.Transparent;
-            this.BomThoat2.Image = ((System.Drawing.Image)(resources.GetObject("BomThoat2.Image")));
+            this.BomThoat2.Image = global::ManagementSoftware.Properties.Resources.BomThoat2Xanh;
             this.BomThoat2.Location = new System.Drawing.Point(712, 353);
             this.BomThoat2.Name = "BomThoat2";
             this.BomThoat2.Size = new System.Drawing.Size(16, 14);
@@ -1106,7 +1106,7 @@
             // BomThoat1
             // 
             this.BomThoat1.BackColor = System.Drawing.Color.Transparent;
-            this.BomThoat1.Image = ((System.Drawing.Image)(resources.GetObject("BomThoat1.Image")));
+            this.BomThoat1.Image = global::ManagementSoftware.Properties.Resources.BomThoat1Xanh;
             this.BomThoat1.Location = new System.Drawing.Point(692, 353);
             this.BomThoat1.Name = "BomThoat1";
             this.BomThoat1.Size = new System.Drawing.Size(16, 14);
@@ -1117,7 +1117,7 @@
             // BomMoi1
             // 
             this.BomMoi1.BackColor = System.Drawing.Color.Transparent;
-            this.BomMoi1.Image = ((System.Drawing.Image)(resources.GetObject("BomMoi1.Image")));
+            this.BomMoi1.Image = global::ManagementSoftware.Properties.Resources.BomMoiXanh;
             this.BomMoi1.Location = new System.Drawing.Point(565, 350);
             this.BomMoi1.Name = "BomMoi1";
             this.BomMoi1.Size = new System.Drawing.Size(18, 17);
@@ -1128,7 +1128,7 @@
             // pictureBoxVan3
             // 
             this.pictureBoxVan3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxVan3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVan3.Image")));
+            this.pictureBoxVan3.Image = global::ManagementSoftware.Properties.Resources.VanTim;
             this.pictureBoxVan3.Location = new System.Drawing.Point(519, 214);
             this.pictureBoxVan3.Name = "pictureBoxVan3";
             this.pictureBoxVan3.Size = new System.Drawing.Size(10, 12);
@@ -1139,7 +1139,7 @@
             // pictureBoxVan4
             // 
             this.pictureBoxVan4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxVan4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVan4.Image")));
+            this.pictureBoxVan4.Image = global::ManagementSoftware.Properties.Resources.VanTim;
             this.pictureBoxVan4.Location = new System.Drawing.Point(519, 249);
             this.pictureBoxVan4.Name = "pictureBoxVan4";
             this.pictureBoxVan4.Size = new System.Drawing.Size(10, 12);
@@ -1150,7 +1150,7 @@
             // pictureBoxVan1
             // 
             this.pictureBoxVan1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxVan1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVan1.Image")));
+            this.pictureBoxVan1.Image = global::ManagementSoftware.Properties.Resources.VanTim;
             this.pictureBoxVan1.Location = new System.Drawing.Point(519, 146);
             this.pictureBoxVan1.Name = "pictureBoxVan1";
             this.pictureBoxVan1.Size = new System.Drawing.Size(10, 12);
@@ -1172,7 +1172,7 @@
             // pictureBoxBangTaiXien
             // 
             this.pictureBoxBangTaiXien.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxBangTaiXien.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBangTaiXien.Image")));
+            this.pictureBoxBangTaiXien.Image = global::ManagementSoftware.Properties.Resources.BangTaiXienXanh;
             this.pictureBoxBangTaiXien.Location = new System.Drawing.Point(162, 280);
             this.pictureBoxBangTaiXien.Name = "pictureBoxBangTaiXien";
             this.pictureBoxBangTaiXien.Size = new System.Drawing.Size(129, 52);
@@ -1183,7 +1183,7 @@
             // pictureBoxBangTaiThang
             // 
             this.pictureBoxBangTaiThang.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxBangTaiThang.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBangTaiThang.Image")));
+            this.pictureBoxBangTaiThang.Image = global::ManagementSoftware.Properties.Resources.BangTaiThangXanh;
             this.pictureBoxBangTaiThang.Location = new System.Drawing.Point(272, 97);
             this.pictureBoxBangTaiThang.Name = "pictureBoxBangTaiThang";
             this.pictureBoxBangTaiThang.Size = new System.Drawing.Size(15, 227);
@@ -1194,7 +1194,7 @@
             // pictureBoxPheu2
             // 
             this.pictureBoxPheu2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPheu2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPheu2.Image")));
+            this.pictureBoxPheu2.Image = global::ManagementSoftware.Properties.Resources.PheuDuoiTim;
             this.pictureBoxPheu2.Location = new System.Drawing.Point(175, 360);
             this.pictureBoxPheu2.Name = "pictureBoxPheu2";
             this.pictureBoxPheu2.Size = new System.Drawing.Size(21, 19);
@@ -1205,7 +1205,7 @@
             // pictureBoxPheu1
             // 
             this.pictureBoxPheu1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPheu1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPheu1.Image")));
+            this.pictureBoxPheu1.Image = global::ManagementSoftware.Properties.Resources.PheuTrenTim;
             this.pictureBoxPheu1.Location = new System.Drawing.Point(113, 287);
             this.pictureBoxPheu1.Name = "pictureBoxPheu1";
             this.pictureBoxPheu1.Size = new System.Drawing.Size(21, 19);
@@ -1216,7 +1216,7 @@
             // pictureBoxCaoRac3
             // 
             this.pictureBoxCaoRac3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxCaoRac3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCaoRac3.Image")));
+            this.pictureBoxCaoRac3.Image = global::ManagementSoftware.Properties.Resources.CaoRac3Xanh;
             this.pictureBoxCaoRac3.Location = new System.Drawing.Point(241, 206);
             this.pictureBoxCaoRac3.Name = "pictureBoxCaoRac3";
             this.pictureBoxCaoRac3.Size = new System.Drawing.Size(31, 29);
@@ -1238,7 +1238,7 @@
             // pictureBoxCaoRac2
             // 
             this.pictureBoxCaoRac2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxCaoRac2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCaoRac2.Image")));
+            this.pictureBoxCaoRac2.Image = global::ManagementSoftware.Properties.Resources.CaoRac2Xanh;
             this.pictureBoxCaoRac2.Location = new System.Drawing.Point(241, 171);
             this.pictureBoxCaoRac2.Name = "pictureBoxCaoRac2";
             this.pictureBoxCaoRac2.Size = new System.Drawing.Size(31, 29);
@@ -1250,7 +1250,7 @@
             // 
             this.pictureBoxCaoRac1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxCaoRac1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxCaoRac1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCaoRac1.Image")));
+            this.pictureBoxCaoRac1.Image = global::ManagementSoftware.Properties.Resources.CaoRac1Xanh;
             this.pictureBoxCaoRac1.Location = new System.Drawing.Point(241, 137);
             this.pictureBoxCaoRac1.Name = "pictureBoxCaoRac1";
             this.pictureBoxCaoRac1.Size = new System.Drawing.Size(31, 29);

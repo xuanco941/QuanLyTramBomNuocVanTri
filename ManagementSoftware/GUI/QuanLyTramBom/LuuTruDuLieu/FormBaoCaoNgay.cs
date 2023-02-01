@@ -53,12 +53,12 @@ namespace QuanLyTramBom
                 double hut = item.MucNuocBeHut;
 
 
-                string tongTime1 = item.ThoiGianChayBom1.Hours.ToString() + " h " + item.ThoiGianChayBom1.Minutes.ToString() + " min ";
-                string tongTime2 = item.ThoiGianChayBom2.Hours.ToString() + " h " + item.ThoiGianChayBom2.Minutes.ToString() + " min ";
-                string tongTime3 = item.ThoiGianChayBom3.Hours.ToString() + " h " + item.ThoiGianChayBom3.Minutes.ToString() + " min ";
-                string tongTime4 = item.ThoiGianChayBom4.Hours.ToString() + " h " + item.ThoiGianChayBom4.Minutes.ToString() + " min ";
+                string tongTime1 = Math.Floor(item.ThoiGianChayBom1 / 60).ToString() + " h " + (item.ThoiGianChayBom1 % 60).ToString() + " min ";
+                string tongTime2 = Math.Floor(item.ThoiGianChayBom2 / 60).ToString() + " h " + (item.ThoiGianChayBom2 % 60).ToString() + " min ";
+                string tongTime3 = Math.Floor(item.ThoiGianChayBom3 / 60).ToString() + " h " + (item.ThoiGianChayBom3 % 60).ToString() + " min ";
+                string tongTime4 = Math.Floor(item.ThoiGianChayBom4 / 60).ToString() + " h " + (item.ThoiGianChayBom4 % 60).ToString() + " min ";
 
-                dt.Rows.Add((i - 1).ToString() + " - " + (i).ToString(), xa, hut, tongTime1, tongTime2, tongTime3, tongTime4);
+                dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, tongTime1, tongTime2, tongTime3, tongTime4);
                 i++;
             }
 
@@ -68,43 +68,40 @@ namespace QuanLyTramBom
             double trungBinhBeXa = 0;
             double trungBinhBeHut = 0;
 
-            TimeSpan TongThoiGianChayBom1 = TimeSpan.FromMinutes(0);
-            TimeSpan TongThoiGianChayBom2 = TimeSpan.FromMinutes(0);
-            TimeSpan TongThoiGianChayBom3 = TimeSpan.FromMinutes(0);
-            TimeSpan TongThoiGianChayBom4 = TimeSpan.FromMinutes(0);
+            double TongThoiGianChayBom1 = 0;
+            double TongThoiGianChayBom2 = 0;
+            double TongThoiGianChayBom3 = 0;
+            double TongThoiGianChayBom4 = 0;
 
             foreach (BaoCao item in list)
             {
                 trungBinhBeHut = trungBinhBeHut + item.MucNuocBeHut;
                 trungBinhBeXa = trungBinhBeXa + item.MucNuocBeXa;
 
-                double minute1 = TongThoiGianChayBom1.TotalMinutes;
-                double minute2 = item.ThoiGianChayBom1.TotalMinutes;
-                double minute3 = TongThoiGianChayBom2.TotalMinutes;
-                double minute4 = item.ThoiGianChayBom2.TotalMinutes;
-                double minute5 = TongThoiGianChayBom3.TotalMinutes;
-                double minute6 = item.ThoiGianChayBom3.TotalMinutes;
-                double minute7 = TongThoiGianChayBom4.TotalMinutes;
-                double minute8 = item.ThoiGianChayBom4.TotalMinutes;
 
-                TongThoiGianChayBom1 = TimeSpan.FromMinutes(minute2 + minute1);
-                TongThoiGianChayBom2 = TimeSpan.FromMinutes(minute3 + minute4);
-                TongThoiGianChayBom3 = TimeSpan.FromMinutes(minute5 + minute6);
-                TongThoiGianChayBom4 = TimeSpan.FromMinutes(minute8 + minute7);
+                TongThoiGianChayBom1 = TongThoiGianChayBom1 + item.ThoiGianChayBom1;
+                TongThoiGianChayBom2 = TongThoiGianChayBom2 + item.ThoiGianChayBom2;
+                TongThoiGianChayBom3 = TongThoiGianChayBom3 + item.ThoiGianChayBom3;
+                TongThoiGianChayBom4 = TongThoiGianChayBom4 + item.ThoiGianChayBom4;
 
             }
+
             //label
             labelTBXa.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)) + " m";
             // b dùng hàm Math.Round để giới hạn còn 2 chữ số sau thập phân
             labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)) + " m";
 
-            labelTongTime1.Text = TongThoiGianChayBom1.Hours.ToString() + " h " + TongThoiGianChayBom1.Minutes.ToString() + " min";
-            labelTongTime2.Text = TongThoiGianChayBom2.Hours.ToString() + " h " + TongThoiGianChayBom2.Minutes.ToString() + " min";
-            labelTongTime3.Text = TongThoiGianChayBom3.Hours.ToString() + " h " + TongThoiGianChayBom3.Minutes.ToString() + " min";
-            labelTongTime4.Text = TongThoiGianChayBom4.Hours.ToString() + " h " + TongThoiGianChayBom4.Minutes.ToString() + " min";
+            labelTongTime1.Text = Math.Floor(TongThoiGianChayBom1 / 60).ToString() + " h " + (TongThoiGianChayBom1 % 60).ToString() + " min ";
+            labelTongTime2.Text = Math.Floor(TongThoiGianChayBom2 / 60).ToString() + " h " + (TongThoiGianChayBom2 % 60).ToString() + " min ";
+            labelTongTime3.Text = Math.Floor(TongThoiGianChayBom3 / 60).ToString() + " h " + (TongThoiGianChayBom3 % 60).ToString() + " min ";
+            labelTongTime4.Text = Math.Floor(TongThoiGianChayBom4 / 60).ToString() + " h " + (TongThoiGianChayBom4 % 60).ToString() + " min ";
 
-            dt.Rows.Add("Tổng", "", "", TongThoiGianChayBom1.Hours.ToString() + " h " + TongThoiGianChayBom1.Minutes.ToString() + " min ", TongThoiGianChayBom2.Hours.ToString() + " h " + TongThoiGianChayBom2.Minutes.ToString() + " min ",
-      TongThoiGianChayBom3.Hours.ToString() + " h  " + TongThoiGianChayBom3.Minutes.ToString() + " min ", TongThoiGianChayBom4.Hours.ToString() + " h " + TongThoiGianChayBom4.Minutes.ToString() + " min ");
+
+
+            dt.Rows.Add("Tổng", "", "", Math.Floor(TongThoiGianChayBom1 / 60).ToString() + " h " + (TongThoiGianChayBom1 % 60).ToString() + " min ",
+                Math.Floor(TongThoiGianChayBom2 / 60).ToString() + " h " + (TongThoiGianChayBom2 % 60).ToString() + " min ",
+Math.Floor(TongThoiGianChayBom3 / 60).ToString() + " h " + (TongThoiGianChayBom3 % 60).ToString() + " min ",
+Math.Floor(TongThoiGianChayBom4 / 60).ToString() + " h " + (TongThoiGianChayBom4 % 60).ToString() + " min ");
             dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)), "", "", "", "");
             dataGridView1.DataSource = dt;
 
@@ -239,20 +236,20 @@ namespace QuanLyTramBom
                                 ws.Cell("G7").Style.Font.Bold = true;
                                 //add du lieu vao excel
 
-
-
                                 List<ClassFormatDate> listData = new List<ClassFormatDate>();
+
                                 int i = 1;
+
                                 foreach (var item in list)
                                 {
                                     ClassFormatDate c = new ClassFormatDate();
-                                    c.ThoiGian = (i - 1).ToString() + " - " + (i).ToString();
+                                    c.ThoiGian = (i - 1).ToString() + " - " + i.ToString();
                                     c.MucNuocHut = item.MucNuocBeHut;
                                     c.MucNuocXa = item.MucNuocBeXa;
-                                    c.ThoiGianChayBom1 = item.ThoiGianChayBom1.Hours.ToString() + "h " + item.ThoiGianChayBom1.Minutes.ToString() + "min";
-                                    c.ThoiGianChayBom2 = item.ThoiGianChayBom2.Hours.ToString() + "h " + item.ThoiGianChayBom2.Minutes.ToString() + "min";
-                                    c.ThoiGianChayBom3 = item.ThoiGianChayBom3.Hours.ToString() + "h " + item.ThoiGianChayBom3.Minutes.ToString() + "min";
-                                    c.ThoiGianChayBom4 = item.ThoiGianChayBom4.Hours.ToString() + "h " + item.ThoiGianChayBom4.Minutes.ToString() + "min";
+                                    c.ThoiGianChayBom1 = Math.Floor(item.ThoiGianChayBom1 / 60).ToString() + " h " + (item.ThoiGianChayBom1 % 60).ToString() + " min ";
+                                    c.ThoiGianChayBom2 = Math.Floor(item.ThoiGianChayBom2 / 60).ToString() + " h " + (item.ThoiGianChayBom2 % 60).ToString() + " min ";
+                                    c.ThoiGianChayBom3 = Math.Floor(item.ThoiGianChayBom3 / 60).ToString() + " h " + (item.ThoiGianChayBom3 % 60).ToString() + " min ";
+                                    c.ThoiGianChayBom4 = Math.Floor(item.ThoiGianChayBom4 / 60).ToString() + " h " + (item.ThoiGianChayBom4 % 60).ToString() + " min ";
 
 
                                     listData.Add(c);
@@ -267,41 +264,34 @@ namespace QuanLyTramBom
                                 ws.Range("A10:G35").Style.Font.FontSize = 14;
                                 ws.Range("B7:G7").Style.Font.FontSize = 12;
 
+                                //tính tổng, tb
                                 double trungBinhBeXa = 0;
                                 double trungBinhBeHut = 0;
-                                TimeSpan TongThoiGianChayBom1 = TimeSpan.FromMinutes(0);
-                                TimeSpan TongThoiGianChayBom2 = TimeSpan.FromMinutes(0);
-                                TimeSpan TongThoiGianChayBom3 = TimeSpan.FromMinutes(0);
-                                TimeSpan TongThoiGianChayBom4 = TimeSpan.FromMinutes(0);
 
+                                double TongThoiGianChayBom1 = 0;
+                                double TongThoiGianChayBom2 = 0;
+                                double TongThoiGianChayBom3 = 0;
+                                double TongThoiGianChayBom4 = 0;
 
                                 foreach (BaoCao item in list)
                                 {
                                     trungBinhBeHut = trungBinhBeHut + item.MucNuocBeHut;
                                     trungBinhBeXa = trungBinhBeXa + item.MucNuocBeXa;
 
-                                    double minute1 = TongThoiGianChayBom1.TotalMinutes;
-                                    double minute2 = item.ThoiGianChayBom1.TotalMinutes;
-                                    double minute3 = TongThoiGianChayBom2.TotalMinutes;
-                                    double minute4 = item.ThoiGianChayBom2.TotalMinutes;
-                                    double minute5 = TongThoiGianChayBom3.TotalMinutes;
-                                    double minute6 = item.ThoiGianChayBom3.TotalMinutes;
-                                    double minute7 = TongThoiGianChayBom4.TotalMinutes;
-                                    double minute8 = item.ThoiGianChayBom4.TotalMinutes;
 
-                                    TongThoiGianChayBom1 = TimeSpan.FromMinutes(minute2 + minute1);
-                                    TongThoiGianChayBom2 = TimeSpan.FromMinutes(minute3 + minute4);
-                                    TongThoiGianChayBom3 = TimeSpan.FromMinutes(minute5 + minute6);
-                                    TongThoiGianChayBom4 = TimeSpan.FromMinutes(minute8 + minute7);
+                                    TongThoiGianChayBom1 = TongThoiGianChayBom1 + item.ThoiGianChayBom1;
+                                    TongThoiGianChayBom2 = TongThoiGianChayBom2 + item.ThoiGianChayBom2;
+                                    TongThoiGianChayBom3 = TongThoiGianChayBom3 + item.ThoiGianChayBom3;
+                                    TongThoiGianChayBom4 = TongThoiGianChayBom4 + item.ThoiGianChayBom4;
 
                                 }
 
                                 ws.Cell("B35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
                                 ws.Cell("C35").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero));
-                                ws.Cell("D34").Value = TongThoiGianChayBom1.Hours.ToString() + "h " + TongThoiGianChayBom1.Minutes.ToString() + "min";
-                                ws.Cell("E34").Value = TongThoiGianChayBom2.Hours.ToString() + "h " + TongThoiGianChayBom2.Minutes.ToString() + "min";
-                                ws.Cell("F34").Value = TongThoiGianChayBom3.Hours.ToString() + "h " + TongThoiGianChayBom3.Minutes.ToString() + "min";
-                                ws.Cell("G34").Value = TongThoiGianChayBom4.Hours.ToString() + "h " + TongThoiGianChayBom4.Minutes.ToString() + "min";
+                                ws.Cell("D34").Value = Math.Floor(TongThoiGianChayBom1 / 60).ToString() + " h " + (TongThoiGianChayBom1 % 60).ToString() + " min ";
+                                ws.Cell("E34").Value = Math.Floor(TongThoiGianChayBom2 / 60).ToString() + " h " + (TongThoiGianChayBom2 % 60).ToString() + " min ";
+                                ws.Cell("F34").Value = Math.Floor(TongThoiGianChayBom3 / 60).ToString() + " h " + (TongThoiGianChayBom3 % 60).ToString() + " min ";
+                                ws.Cell("G34").Value = Math.Floor(TongThoiGianChayBom4 / 60).ToString() + " h " + (TongThoiGianChayBom4 % 60).ToString() + " min ";
 
 
 

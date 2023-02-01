@@ -11,12 +11,12 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public int ThoiGian { get; set; }
         public double MucNuocBeHut { get; set; }
         public double MucNuocBeXa { get; set; }
-        public TimeSpan ThoiGianChayBom1 { get; set; }
-        public TimeSpan ThoiGianChayBom2 { get; set; }
-        public TimeSpan ThoiGianChayBom3 { get; set; }
-        public TimeSpan ThoiGianChayBom4 { get; set; }
+        public double ThoiGianChayBom1 { get; set; }
+        public double ThoiGianChayBom2 { get; set; }
+        public double ThoiGianChayBom3 { get; set; }
+        public double ThoiGianChayBom4 { get; set; }
 
-        public BaoCao(int thoiGian, double mucNuocBeHut, double mucNuocBeXa, TimeSpan thoiGianChayBom1, TimeSpan thoiGianChayBom2, TimeSpan thoiGianChayBom3, TimeSpan thoiGianChayBom4)
+        public BaoCao(int thoiGian, double mucNuocBeHut, double mucNuocBeXa, double thoiGianChayBom1, double thoiGianChayBom2, double thoiGianChayBom3, double thoiGianChayBom4)
         {
             ThoiGian = thoiGian;
             MucNuocBeHut = mucNuocBeHut;

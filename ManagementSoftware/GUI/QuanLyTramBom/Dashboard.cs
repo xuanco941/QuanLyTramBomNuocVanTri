@@ -153,8 +153,10 @@ namespace QuanLyTramBom
 
         private void buttonBangLoi_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
             TableAlert tb = new TableAlert();
             tb.ShowDialog();
+            this.Enabled = true;
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
@@ -318,7 +320,7 @@ namespace QuanLyTramBom
 
 
         System.Threading.Timer timer;
-        int TIME_INTERVAL_IN_MILLISECONDS = 2500;
+        int TIME_INTERVAL_IN_MILLISECONDS = 1500;
 
 
         private async void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
@@ -418,10 +420,8 @@ namespace QuanLyTramBom
 
 
             }
-            if (alertHistories != null && alertHistories.Count > 0)
-            {
-                UpdateData(alertHistories);
-            }
+
+            UpdateData(alertHistories);
 
 
             if (timer != null)
@@ -432,7 +432,7 @@ namespace QuanLyTramBom
 
 
 
-        private void UpdateData(List<AlertHistory> alertHistories)
+        private void UpdateData(List<AlertHistory>? alertHistories)
         {
 
             if (IsHandleCreated && InvokeRequired)
