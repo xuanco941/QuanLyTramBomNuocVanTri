@@ -52,7 +52,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         System.Threading.Timer timer1;
         System.Threading.Timer timer2;
 
-        int TIME_INTERVAL_IN_MILLISECONDS = 1000;
+        //int TIME_INTERVAL_Analog = 1000;
+        int TIME_INTERVAL_IN_MILLISECONDS = 750;
 
 
 
@@ -979,7 +980,26 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 pictureBoxPheu1.Image = Resources.PheuTrenDen;
             }
-            //đỏ tím
+
+            //vàng đỏ
+            else if ((M10038 != null && M10038.TrangThai == true) && (M10040 != null && M10040.TrangThai == true))
+            {
+                PheuSo1VangDo();
+            }
+            //vàng xanh
+            else if ((M10038 != null && M10038.TrangThai == true) && (M10039 != null && M10039.TrangThai == true))
+            {
+                PheuSo1VangXanh();
+            }//xanh
+            else if (M10042 != null && M10042.TrangThai == true)
+            {
+                pictureBoxPheu1.Image = Resources.PheuTrenXanh;
+            }
+            //đỏ
+            else if (M10041 != null && M10041.TrangThai == true)
+            {
+                pictureBoxPheu1.Image = Resources.PheuTrenDo;
+            } //đỏ tím
             else if (M10039 != null && M10039.TrangThai == true)
             {
                 PheuSo1DoTim();
@@ -993,25 +1013,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             else if (M10038 != null && M10038.TrangThai == true)
             {
                 PheuSo1VangTim();
-            }
-            //vàng đỏ
-            else if ((M10038 != null && M10038.TrangThai == true) && (M10040 != null && M10040.TrangThai == true))
-            {
-                PheuSo1VangDo();
-            }
-            //vàng xanh
-            else if ((M10038 != null && M10038.TrangThai == true) && (M10039 != null && M10039.TrangThai == true))
-            {
-                PheuSo1VangXanh();
-            }//xanh
-            if (M10042 != null && M10042.TrangThai == true)
-            {
-                pictureBoxPheu1.Image = Resources.PheuTrenXanh;
-            }
-            //đỏ
-            else if (M10041 != null && M10041.TrangThai == true)
-            {
-                pictureBoxPheu1.Image = Resources.PheuTrenDo;
             }
             // tím
             else
@@ -1202,21 +1203,21 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         void CheckColorCaoRac1(Digital? M10137, Digital? M10138, Digital? M10139)
         {
 
-            //vàng xanh
-
             //vàng đỏ
             if ((M10137 != null && M10137.TrangThai == true) && (M10139 != null && M10139.TrangThai == true)// sai 
                 || (M10138 != null && M10138.TrangThai == true) && (M10139 != null && M10139.TrangThai == true))
             {
                 CaoRac1VangDo();
             }
-            else if (M10139 != null && M10139.TrangThai == true)
-            {
-                CaoRac1VangXanh();
-            } //đỏ
+            //đỏ
             else if ((M10137 != null && M10137.TrangThai == true) || (M10138 != null && M10138.TrangThai == true))
             {
                 pictureBoxCaoRac1.Image = Resources.CaoRac1Do;
+            }
+            //vang xanh
+            else if (M10139 != null && M10139.TrangThai == true)
+            {
+                CaoRac1VangXanh();
             }
             else
             {
@@ -1453,7 +1454,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         void CheckColorVan1(Digital? M10125, Digital? M10124, Digital? M10122, Digital? M10123)
         {
-           
+
             //đỏ
             if (M10124 != null && M10124.TrangThai == true)
             {

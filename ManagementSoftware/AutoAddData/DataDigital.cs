@@ -26,6 +26,28 @@ namespace ManagementSoftware.AutoAddData
         public List<Digital> listAllDigitals = new DigitalCommon().ListAllDigitals;
         public static List<Digital> ListAllDigitalsStatic = new DigitalCommon().ListAllDigitals;
 
+
+        async Task Task1(List<Digital>? listAll)
+        {
+            foreach (var item in listAll)
+            {
+
+                Digital? d = ListAllDigitalsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                if (d != null)
+                {
+                    Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
+                    x.TrangThai = d.TrangThai;
+                    await DALDigital.Add(x);
+                }
+            }
+        }
+        async Task Task2(List<Digital>? listAll)
+        {
+            ListAllDigitalsStatic.Clear();
+            ListAllDigitalsStatic.AddRange(listAll);
+        }
+
+
         async Task SaveData()
         {
 
@@ -37,21 +59,8 @@ namespace ManagementSoftware.AutoAddData
 
                 if (listAll != null && listAll.Count > 0)
                 {
-                    foreach (var item in listAll)
-                    {
-
-                        Digital? d = ListAllDigitalsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
-                        if (d != null)
-                        {
-                            Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
-                            x.TrangThai = d.TrangThai;
-                            await DALDigital.Add(x);
-                        }
-                    }
-                    ListAllDigitalsStatic.Clear();
-                    ListAllDigitalsStatic.AddRange(listAll);
-
-
+                    await Task1(listAll);
+                    await Task2(listAll);
 
                 }
 
