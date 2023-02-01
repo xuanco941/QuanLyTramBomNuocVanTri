@@ -73,7 +73,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                             row.Cells[4].Value = d.TinHieu;
                             row.Cells[5].Value = trangthai;
                             row.Cells[6].Value = createAt;
-
+                            row.Cells[7].Value = d.Bat;
+                            row.Cells[8].Value = d.Tat;
                             if (d.TrangThai == true)
                             {
                                 row.DefaultCellStyle.ForeColor = Color.Red;
@@ -149,7 +150,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
             DataGridViewColumn ThoiGian = new DataGridViewTextBoxColumn();
             ThoiGian.HeaderText = "Thời gian";
             ThoiGian.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
+            DataGridViewColumn bat = new DataGridViewTextBoxColumn();
+            bat.HeaderText = "Bật";
+            DataGridViewColumn tat = new DataGridViewTextBoxColumn();
+            tat.HeaderText = "Tắt";
 
 
             dataGridView1.Columns.Add(STT);
@@ -159,6 +163,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
             dataGridView1.Columns.Add(TinHieu);
             dataGridView1.Columns.Add(TrangThai);
             dataGridView1.Columns.Add(ThoiGian);
+            dataGridView1.Columns.Add(bat);
+            dataGridView1.Columns.Add(tat);
 
             dataGridView1.RowTemplate.Height = 40;
 

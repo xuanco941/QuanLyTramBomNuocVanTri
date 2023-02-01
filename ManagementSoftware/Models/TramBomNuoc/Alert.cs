@@ -17,18 +17,21 @@ namespace ManagementSoftware.Models.TramBomNuoc
         public string TinHieu { get; set; }
         public bool TrangThai { get; set; }
         public DateTime ThoiGian { get; set; }
-
+        public string Bat { get; set; }
+        public string Tat { get; set; }
         public Alert()
         {
         }
 
-        public Alert(string diaChiPLC, string ganThe, string dieuKien, string nhom, string tinHieu)
+        public Alert(string diaChiPLC, string ganThe, string dieuKien, string nhom, string tinHieu, string bat, string tat)
         {
             DiaChiPLC = diaChiPLC;
             GanThe = ganThe;
             DieuKien = dieuKien;
             Nhom = nhom;
             TinHieu = tinHieu;
+            Bat = bat;
+            Tat = tat;
         }
 
     }

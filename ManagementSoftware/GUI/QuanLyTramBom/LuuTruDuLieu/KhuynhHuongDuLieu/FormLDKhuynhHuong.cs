@@ -302,7 +302,7 @@ namespace QuanLyTramBom
                 typeTime = "năm";
                 numberInterval = 1;
             }
-            if ((khoangCachTimeDouble/numberInterval)>25)
+            if ((khoangCachTimeDouble/numberInterval)>30)
             {
                 MessageBox.Show($"Dữ liệu quá lớn với {Math.Round(khoangCachTimeDouble, 0,MidpointRounding.ToPositiveInfinity)} {typeTime}, bạn nên thay đổi kiểu hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

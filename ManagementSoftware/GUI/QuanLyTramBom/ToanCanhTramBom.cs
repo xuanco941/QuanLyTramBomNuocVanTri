@@ -1,4 +1,5 @@
-﻿using ManagementSoftware.Models.DuLieuMayPLC;
+﻿using ActUtlTypeLib;
+using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
 using ManagementSoftware.Properties;
@@ -81,7 +82,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             Analog? D10066c = await plcAnalog.GetAnAnalog(analogCommon.D10066);
 
 
-            
+
 
             UpdateDataAnalog(D10000c, D10002c, D10004c, D10006c, D10008c, D10010c, D10022c, D10024c, D10036c, D10038c, D10050c, D10052c, D10064c, D10066c);
 
@@ -137,11 +138,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         }
 
-        ~ToanCanhTramBom()
-        {
-           
-        }
-
 
         private async void ToanCanhTramBom_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -192,6 +188,34 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         // DIGITAL -----------------------------------------------------------------------------------
 
+
+
+        private void GetADigitalAsync(Digital digital)
+        {
+            try
+            {
+                ActUtlType plcD = new ActUtlType();
+                plcD.ActLogicalStationNumber = 1;
+
+                plcD.Open();
+
+                int value;
+                int status = plcD.GetDevice(digital.DiaChiPLC, out value);
+                if (status == 0) //0 = true
+                {
+                    digital.TrangThai = value == 0 ? false : true;
+                }
+
+
+                plcD.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
+
         private async void Callback2(Object state)
         {
             Stopwatch watch = new Stopwatch();
@@ -201,7 +225,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
             // update data
             // Long running operation
-
 
 
 

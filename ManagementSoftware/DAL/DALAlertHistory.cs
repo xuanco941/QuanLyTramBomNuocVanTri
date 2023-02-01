@@ -15,7 +15,7 @@ namespace ManagementSoftware.DAL
         public static async Task AddAlertHistory(Alert d)
         {
             DataBaseContext dbContext = new DataBaseContext();
-            AlertHistory alertHistory = new AlertHistory(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu);
+            AlertHistory alertHistory = new AlertHistory(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
             alertHistory.TrangThai = d.TrangThai;
             try
             {
@@ -35,7 +35,7 @@ namespace ManagementSoftware.DAL
             List<AlertHistory> list = new List<AlertHistory>();
             foreach (var item in d)
             {
-                AlertHistory a = new AlertHistory(item.DiaChiPLC, item.GanThe, item.DieuKien, item.Nhom, item.TinHieu);
+                AlertHistory a = new AlertHistory(item.DiaChiPLC, item.GanThe, item.DieuKien, item.Nhom, item.TinHieu, item.Bat, item.Tat);
                 a.TrangThai = item.TrangThai;
                 list.Add(a);
                 

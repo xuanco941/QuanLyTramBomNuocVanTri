@@ -255,6 +255,8 @@ namespace ManagementSoftware.Models.DuLieuMayPLC
 
 
 
+
+
         public List<Digital> ListAllDigitals { get; set; }
         public DigitalCommon()
         {
@@ -269,7 +271,7 @@ namespace ManagementSoftware.Models.DuLieuMayPLC
                                                                  M10206,  M10207,  M10208,  M10209,  M10210,  M10211,  M10212,  M10214,  M10216,  M10217,  M10218 , M10219,  M10220,  M10221,  M10222,  M10223,  M10224,  M10225,  M10226 ,
                                                                  M10227,  M10228,  M10229,  M10234,  M10235,  M10236,  M10237,  M10238,  M10242,  M10243,  M10244 , M10245,  M10246,  M10247,  M10248 , M10249,  M10250,  M10252, M10253,
                                                                  M10254,  M10255,  M10256,  M10257,  M10258,  M10259,  M10260,  M10261,  M10263,  M10265,  M10266,  M10267,  M10268 , M10269 , M10270,  M10271,  M10272,  M10273,  M10274,
-                                                                 M10275,  M10276,  M10277,  M10278 , M10283,  M10284,  M10285,  M10286,  M10287};
+                                                                 M10275,  M10276,  M10277,  M10278 , M10283,  M10284,  M10285,  M10286,  M10287 , M10041, M10042,M10043 };
         }
 
     }

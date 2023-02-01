@@ -14,12 +14,10 @@ namespace ManagementSoftware.Models
         public DbSet<Activity> Activities { get; set; }
 
         public DbSet<Digital> Digitals { get; set; }
-        public DbSet<DigitalHistory> DigitalHistories { get; set; }
 
         public DbSet<Analog> Analogs { get; set; }
         public DbSet<Alert> Alerts { get; set; }
         public DbSet<AlertHistory> AlertHistorys { get; set; }
-        public DbSet<AlertHistory2> AlertHistory2s { get; set; }
 
         public DbSet<DoThiKhuynhHuong> DoThiKhuynhHuongs { get; set; }
         public DbSet<XuHuongVaTinHieu> XuHuongVaTinHieus { get; set; }
@@ -76,11 +74,7 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
             });
-            //digital hisstory
-            modelBuilder.Entity<DigitalHistory>(entity =>
-            {
-                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
-            });
+
             //analog
             modelBuilder.Entity<Analog>(entity =>
             {
@@ -96,10 +90,7 @@ namespace ManagementSoftware.Models
             {
                 entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
             });
-            modelBuilder.Entity<AlertHistory2>(entity =>
-            {
-                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
-            });
+           
             modelBuilder.Entity<DoThiKhuynhHuong>(entity =>
             {
                 entity.HasIndex(e => e.TenDoThi).IsUnique();
@@ -129,89 +120,6 @@ namespace ManagementSoftware.Models
                 DALUser.AddUser(Common.UserAdmin);
 
                 DALActivity.AddActivity(new Activity("Hệ thống", "Khởi tạo tài khoản admin.", Common.UserAdmin.Username));
-
-                try
-                {
-
-
-                    var x = DALDigitalHistory.GetAll();
-                    if (x == null || x.Count < 1)
-                    {
-                        PLCDigital plcDigital = new PLCDigital();
-                        if (await plcDigital.Open() == 0)
-                        {
-                            List<Digital>? listDigital = await plcDigital.GetListDataDigital(new DigitalCommon().ListAllDigitals);
-                            if (listDigital != null && listDigital.Count > 0)
-                            {
-                                await DALDigitalHistory.AddRangeHistory(listDigital);
-                            }
-                            else
-                            {
-                                this.Database.EnsureDeleted();
-                                Application.Restart();
-                            }
-
-                            await plcDigital.Close();
-                        }
-                        else
-                        {
-                            this.Database.EnsureDeleted();
-                            Application.Restart();
-                        }
-                    }
-                    else
-                    {
-                        this.Database.EnsureDeleted();
-                        Application.Restart();
-                    }
-
-
-
-
-
-
-
-                    var xs = DALAlertHistory2.GetAll();
-                    if (xs == null || xs.Count < 1)
-                    {
-                        PLCAlert plcAlert = new PLCAlert();
-                        if (await plcAlert.Open() == 0)
-                        {
-                            List<Alert>? listAlert = await plcAlert.GetListDataAlert(new AlertCommon().ListAllAlerts);
-                            if (listAlert != null && listAlert.Count > 0)
-                            {
-                                await DALAlertHistory2.AddRangeHistory(listAlert);
-                            }
-                            else
-                            {
-                                this.Database.EnsureDeleted();
-                                Application.Restart();
-                            }
-
-                            await plcAlert.Close();
-                        }
-                        else
-                        {
-                            this.Database.EnsureDeleted();
-                            Application.Restart();
-                        }
-                    }
-                    else
-                    {
-                        this.Database.EnsureDeleted();
-                        Application.Restart();
-                    }
-
-
-
-                 
-                }
-                catch
-                {
-                    this.Database.EnsureDeleted();
-                    Application.Restart();
-                }
-
 
             }
         }

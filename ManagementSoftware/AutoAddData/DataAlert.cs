@@ -11,57 +11,51 @@ using System.Threading.Tasks;
 
 namespace ManagementSoftware.AutoAddData
 {
-    public class DataDigital
+    public class DataAlert
     {
-        public PLCDigital plc;
+        public PLCAlert plc;
         System.Threading.Timer timer;
-        int TIME_INTERVAL_IN_MILLISECONDS = 4500;
-        public DataDigital()
+        int TIME_INTERVAL_IN_MILLISECONDS = 4000;
+        public DataAlert()
         {
-            plc = new PLCDigital();
-            listAllDigitals = new DigitalCommon().ListAllDigitals;
-            ListAllDigitalsStatic = listAllDigitals;
+            plc = new PLCAlert();
+            listAllAlerts = new AlertCommon().ListAllAlerts;
+            ListAllAlertsStatic = listAllAlerts;
         }
 
-        public List<Digital> listAllDigitals = new DigitalCommon().ListAllDigitals;
-        public static List<Digital> ListAllDigitalsStatic = new DigitalCommon().ListAllDigitals;
+        public List<Alert> listAllAlerts = new AlertCommon().ListAllAlerts;
+        public static List<Alert> ListAllAlertsStatic = new AlertCommon().ListAllAlerts;
 
         async Task SaveData()
         {
-
-
-            foreach (var item in ListAllDigitalsStatic)
-            {
-                System.Diagnostics.Debug.WriteLine(item.TinHieu + " " + item.TrangThai.ToString());
-            }
-
             if (await plc.Open() == 0)
             {
 
-                Task<List<Digital>?> task3 = Task.Run(() => plc.GetListDataDigital(listAllDigitals));
+                Task<List<Alert>?> task3 = Task.Run(() => plc.GetListDataAlert(listAllAlerts));
 
                 await Task.WhenAll(task3).ContinueWith(async (t) =>
                 {
-                    List<Digital>? listAll = task3.Result;
+                    List<Alert>? listAll = task3.Result;
 
                     if (listAll != null && listAll.Count > 0)
                     {
                         foreach (var item in listAll)
                         {
 
-                            Digital? d = ListAllDigitalsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
+                            Alert? d = ListAllAlertsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
                             if (d != null)
                             {
-                                Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
+                                Alert x = new Alert(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
                                 x.TrangThai = d.TrangThai;
-                                await DALDigital.Add(x);
+                                await DALAlert.Add(x);
                             }
                         }
-                        ListAllDigitalsStatic = listAll;
 
 
 
                     }
+                    ListAllAlertsStatic = listAll;
+
                 });
 
             }
@@ -94,15 +88,15 @@ namespace ManagementSoftware.AutoAddData
             timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
         }
 
-
         public async Task Init()
         {
             if (await plc.Open() == 0)
             {
-                ListAllDigitalsStatic = await plc.GetListDataDigital(listAllDigitals);
+                ListAllAlertsStatic = await plc.GetListDataAlert(listAllAlerts);
                 await plc.Close();
             }
 
         }
+
     }
 }

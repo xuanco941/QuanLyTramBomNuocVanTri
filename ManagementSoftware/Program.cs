@@ -62,9 +62,18 @@ namespace ManagementSoftware
 
 
 
-            new Thread(() =>
+            new Thread( async () =>
             {
-                new DataDigital().StartTimer(5000);
+                DataDigital d = new DataDigital();
+                await d.Init();
+                d.StartTimer(4500);
+            }).Start();
+
+            new Thread(async () =>
+            {
+                DataAlert d = new DataAlert();
+                await d.Init();
+                d.StartTimer(4000);
             }).Start();
 
             new Thread(() =>

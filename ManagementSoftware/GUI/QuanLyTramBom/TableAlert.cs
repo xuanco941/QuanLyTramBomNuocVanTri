@@ -35,7 +35,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             List<Alert>? list2 = new List<Alert>();
             foreach (var item in list)
             {
-                list2.Add(new Alert() { DiaChiPLC = item.DiaChiPLC, DieuKien = item.DieuKien, GanThe = item.GanThe, Nhom = item.Nhom, ThoiGian = item.ThoiGian, TinHieu = item.TinHieu, TrangThai = item.TrangThai });
+                list2.Add(new Alert() { DiaChiPLC = item.DiaChiPLC, DieuKien = item.DieuKien, GanThe = item.GanThe, Nhom = item.Nhom, ThoiGian = item.ThoiGian, TinHieu = item.TinHieu, TrangThai = item.TrangThai, Bat = item.Bat, Tat = item.Tat });
             }
             LoadFormThongKe(list2);
         }
@@ -67,7 +67,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     string thoiGian = alert.ThoiGian.ToString("HH:mm:ss", CultureInfo.InvariantCulture);
 
                     //string c = alert.TrangThai.ToString();
-                    dt.Rows.Add(alert.GanThe, createAt, thoiGian, alert.DieuKien, alert.Nhom, alert.TinHieu, "Lỗi");
+                    dt.Rows.Add(alert.GanThe, createAt, thoiGian, alert.DieuKien, alert.Nhom, alert.TinHieu, alert.Bat);
                 }
             }
             dataGridView1.DataSource = dt;
