@@ -53,10 +53,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         System.Threading.Timer timer2;
 
         //int TIME_INTERVAL_Analog = 1000;
-        int TIME_INTERVAL_IN_MILLISECONDS = 750;
+        int TIME_INTERVAL_IN_MILLISECONDS = 0;
 
 
-
+        
         private async void Callback1(Object state)
         {
             Stopwatch watch = new Stopwatch();
@@ -81,7 +81,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             Analog? D10052c = await plcAnalog.GetAnAnalog(analogCommon.D10052);
             Analog? D10064c = await plcAnalog.GetAnAnalog(analogCommon.D10064);
             Analog? D10066c = await plcAnalog.GetAnAnalog(analogCommon.D10066);
-
 
 
 
@@ -396,11 +395,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
   M10223c, M10222c, M10220c, M10221c, M10272c, M10271c, M10269c, M10270c, M10095c, M10096c, M10118c, M10137c, M10138c, M10139c, M10186c, M10187c, M10188c, M10235c, M10236c, M10237c, M10284c, M10285c, M10286c, M10097c, M10146c, M10195c, M10244c);
                 return;
             }
-
-
-
-
-
 
 
 
@@ -1327,15 +1321,16 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 || (M10236 != null && M10236.TrangThai == true) && (M10237 != null && M10237.TrangThai == true))
             {
                 CaoRacSo3VangDo();
-            }//đỏ
-            if ((M10235 != null && M10235.TrangThai == true) || (M10236 != null && M10236.TrangThai == true))
-            {
-                pictureBoxCaoRac3.Image = Resources.CaoRac3Do;
             }
             //vàng xanh
             else if (M10237 != null && M10237.TrangThai == true)
             {
                 CaoRacSo3VangXanh();
+            }
+            //đỏ
+            else if ((M10235 != null && M10235.TrangThai == true) || (M10236 != null && M10236.TrangThai == true))
+            {
+                pictureBoxCaoRac3.Image = Resources.CaoRac3Do;
             }
             else
             {
@@ -1385,19 +1380,20 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         {
 
             //vàng đỏ
-            if ((M10284 != null && M10284.TrangThai == true) && (M10286 != null && M10286.TrangThai == true)
-                || (M10285 != null && M10285.TrangThai == true) && (M10286 != null && M10286.TrangThai == true))
+            if ((M10284 != null && M10284.TrangThai == true) && (M10285 != null && M10285.TrangThai == true)
+                || (M10284 != null && M10284.TrangThai == true) && (M10286 != null && M10286.TrangThai == true))
             {
                 CaoRacSo4VangDo();
-            }//đỏ
-            if ((M10284 != null && M10284.TrangThai == true) || (M10285 != null && M10285.TrangThai == true))
-            {
-                pictureBoxCaoRac4.Image = Resources.CaoRac4Do;
             }
             //vàng xanh
             else if (M10286 != null && M10286.TrangThai == true)
             {
                 CaoRacSo4VangXanh();
+            }
+            //đỏ
+            else if ((M10284 != null && M10284.TrangThai == true) || (M10285 != null && M10285.TrangThai == true))
+            {
+                pictureBoxCaoRac4.Image = Resources.CaoRac4Do;
             }
             else
             {
@@ -1455,14 +1451,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         void CheckColorVan1(Digital? M10125, Digital? M10124, Digital? M10122, Digital? M10123)
         {
 
-            //đỏ
-            if (M10124 != null && M10124.TrangThai == true)
-            {
-
-                pictureBoxVan1.Image = Resources.VanDo;
-            }
+            
             //đỏ tím
-            else if (M10122 != null && M10122.TrangThai == true)
+             if (M10122 != null && M10122.TrangThai == true)
             {
                 Van1DoTim();
             }
@@ -1475,6 +1466,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             else if (M10125 != null && M10125.TrangThai == true)
             {
                 pictureBoxVan1.Image = Resources.VanXanh;
+            }
+            //đỏ
+            else if (M10124 != null && M10124.TrangThai == true)
+            {
+
+                pictureBoxVan1.Image = Resources.VanDo;
             }
             //tím
             else
@@ -1535,7 +1532,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 Van2DoTim();
             }
-            //xanh
+            
+            //xanh tím
+            else if (M10172 != null && M10172.TrangThai == true)
+            {
+                Van2XanhTim();
+            }//xanh
             else if (M10174 != null && M10174.TrangThai == true)
             {
                 pictureBoxVan2.Image = Resources.VanXanh;
@@ -1546,11 +1548,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 pictureBoxVan2.Image = Resources.VanDo;
             }
 
-            //xanh tím
-            else if (M10172 != null && M10172.TrangThai == true)
-            {
-                Van2XanhTim();
-            }
             //tím
             else
             {
@@ -1597,18 +1594,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         void CheckColorVan3(Digital? M10223, Digital? M10222, Digital? M10220, Digital? M10221)
         {
-            //xanh
-            if (M10223 != null && M10223.TrangThai == true)
-            {
-                pictureBoxVan3.Image = Resources.VanXanh;
-            }
-            //đỏ
-            else if (M10222 != null && M10222.TrangThai == true)
-            {
-                pictureBoxVan3.Image = Resources.VanDo;
-            }
+           
             //đỏ tím
-            else if (M10220 != null && M10220.TrangThai == true)
+             if (M10220 != null && M10220.TrangThai == true)
             {
                 Van3DoTim();
             }
@@ -1616,6 +1604,15 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             else if (M10221 != null && M10221.TrangThai == true)
             {
                 Van3XanhTim();
+            } //xanh
+            else if (M10223 != null && M10223.TrangThai == true)
+            {
+                pictureBoxVan3.Image = Resources.VanXanh;
+            }
+            //đỏ
+            else if (M10222 != null && M10222.TrangThai == true)
+            {
+                pictureBoxVan3.Image = Resources.VanDo;
             }
             //tím
             else
@@ -1668,18 +1665,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         void CheckColorVan4(Digital? M10272, Digital? M10271, Digital? M10269, Digital? M10270)
         {
-            //xanh
-            if (M10272 != null && M10272.TrangThai == true)
-            {
-                pictureBoxVan4.Image = Resources.VanXanh;
-            }
-            //đỏ
-            else if (M10271 != null && M10271.TrangThai == true)
-            {
-                pictureBoxVan4.Image = Resources.VanDo;
-            }
+            
             //đỏ tím
-            else if (M10269 != null && M10269.TrangThai == true)
+             if (M10269 != null && M10269.TrangThai == true)
             {
                 Van4DoTim();
             }
@@ -1687,6 +1675,15 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             else if (M10270 != null && M10270.TrangThai == true)
             {
                 Van4XanhTim();
+            }//xanh
+            else if (M10272 != null && M10272.TrangThai == true)
+            {
+                pictureBoxVan4.Image = Resources.VanXanh;
+            }
+            //đỏ
+            else if (M10271 != null && M10271.TrangThai == true)
+            {
+                pictureBoxVan4.Image = Resources.VanDo;
             }
             //tím
             else

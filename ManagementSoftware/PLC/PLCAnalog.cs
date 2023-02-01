@@ -41,7 +41,7 @@ namespace ManagementSoftware.PLC
                         s = await this.Query("D10099");
                     }
 
-                    if (r != null)
+                    if (r != null && s !=null)
                     {
                         a.GiaTriDong = (double)(s * 65536 + r);
                     }

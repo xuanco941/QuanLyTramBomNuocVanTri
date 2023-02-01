@@ -24,14 +24,14 @@ namespace ManagementSoftware.AutoAddData
         }
 
         public List<Alert> listAllAlerts = new AlertCommon().ListAllAlerts;
-        public static List<Alert> ListAllAlertsStatic = new AlertCommon().ListAllAlerts;
+        public static List<Alert>? ListAllAlertsStatic = new AlertCommon().ListAllAlerts;
 
-
-        async Task Task1(List<Alert>? listAll)
+        async Task Task1(List<Alert> listAll)
         {
+            
             foreach (var item in listAll)
             {
-
+                
                 Alert? d = ListAllAlertsStatic.Where(a => a.TinHieu == item.TinHieu && a.TrangThai != item.TrangThai).FirstOrDefault();
                 if (d != null)
                 {
@@ -41,11 +41,25 @@ namespace ManagementSoftware.AutoAddData
                 }
             }
         }
-        async Task Task2(List<Alert>? listAll)
+
+        async Task Task2(List<Alert> listAll)
         {
-            ListAllAlertsStatic.Clear();
-            ListAllAlertsStatic.AddRange(listAll);
+            if (ListAllAlertsStatic != null)
+            {
+                ListAllAlertsStatic.Clear();
+                ListAllAlertsStatic = new List<Alert>();
+
+                foreach (var item in listAll)
+                {
+                    Alert z = new Alert(item.DiaChiPLC, item.GanThe, item.DieuKien, item.Nhom, item.TinHieu, item.Bat, item.Tat);
+                    z.TrangThai = item.TrangThai;
+                    ListAllAlertsStatic.Add(z);
+                }
+            }
+            
         }
+
+
         async Task SaveData()
         {
             if (await plc.Open() == 0)
@@ -53,19 +67,14 @@ namespace ManagementSoftware.AutoAddData
 
                 List<Alert>? listAll = await plc.GetListDataAlert(listAllAlerts);
 
-                //foreach (var item in ListAllAlertsStatic)
-                //{
-                //    if (item.TrangThai == true)
-                //    {
-                //        System.Diagnostics.Debug.WriteLine(item.TinHieu + " " + item.TrangThai.ToString());
-                //    }
-
-                //}
 
                 if (listAll != null && listAll.Count > 0)
                 {
+
                     await Task1(listAll);
                     await Task2(listAll);
+
+
                 }
 
             }

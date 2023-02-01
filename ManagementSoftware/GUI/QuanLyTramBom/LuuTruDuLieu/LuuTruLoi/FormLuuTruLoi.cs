@@ -32,31 +32,28 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
 
         private List<Alert>? ListResults;
 
-        List<Digital> listDigital = new DigitalCommon().ListAllDigitals;
-
-        void ShowDGV(List<Alert>? digitals)
+        void ShowDGV(List<Alert>? alerts)
         {
-            if (digitals != null && digitals.Count > 0)
+            if (alerts != null && alerts.Count > 0)
             {
                 bool checkColor = false;
                 int i = 1;
-                foreach (Alert d in digitals.ToList())
+                foreach (Alert d in alerts.ToList())
                 {
                     string createAt = d.ThoiGian.ToString("HH:mm:ss dd/MM/yyyy", CultureInfo.InvariantCulture);
 
                     string trangthai = d.TrangThai.ToString();
 
 
-                    Digital? digital = listDigital.Where(a => a.TinHieu == d.TinHieu).FirstOrDefault();
-                    if (digital != null)
+                    if (d != null)
                     {
                         if (d.TrangThai == true)
                         {
-                            trangthai = digital.Bat;
+                            trangthai = d.Bat;
                         }
                         else
                         {
-                            trangthai = digital.Tat;
+                            trangthai = d.Tat;
                         }
                     }
 

@@ -27,7 +27,9 @@ namespace ManagementSoftware.AutoAddData
         public static List<Digital> ListAllDigitalsStatic = new DigitalCommon().ListAllDigitals;
 
 
-        async Task Task1(List<Digital>? listAll)
+
+
+        async Task Task1(List<Digital> listAll)
         {
             foreach (var item in listAll)
             {
@@ -41,12 +43,22 @@ namespace ManagementSoftware.AutoAddData
                 }
             }
         }
-        async Task Task2(List<Digital>? listAll)
+        async Task Task2(List<Digital> listAll)
         {
-            ListAllDigitalsStatic.Clear();
-            ListAllDigitalsStatic.AddRange(listAll);
-        }
+            if (ListAllDigitalsStatic != null)
+            {
+                ListAllDigitalsStatic.Clear();
+                ListAllDigitalsStatic = new List<Digital>();
 
+                foreach (var item in listAll)
+                {
+                    Digital z = new Digital(item.DiaChiPLC, item.GanThe, item.DieuKien, item.Nhom, item.TinHieu, item.Bat, item.Tat);
+                    z.TrangThai = item.TrangThai;
+                    ListAllDigitalsStatic.Add(z);
+                }
+            }
+           
+        }
 
         async Task SaveData()
         {
@@ -63,6 +75,8 @@ namespace ManagementSoftware.AutoAddData
                     await Task2(listAll);
 
                 }
+
+
 
             }
 
