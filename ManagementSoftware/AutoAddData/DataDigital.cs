@@ -38,7 +38,7 @@ namespace ManagementSoftware.AutoAddData
                 if (d != null)
                 {
                     Digital x = new Digital(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
-                    x.TrangThai = d.TrangThai;
+                    x.TrangThai = !d.TrangThai;
                     await DALDigital.Add(x);
                 }
             }

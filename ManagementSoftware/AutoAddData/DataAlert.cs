@@ -36,7 +36,7 @@ namespace ManagementSoftware.AutoAddData
                 if (d != null)
                 {
                     Alert x = new Alert(d.DiaChiPLC, d.GanThe, d.DieuKien, d.Nhom, d.TinHieu, d.Bat, d.Tat);
-                    x.TrangThai = d.TrangThai;
+                    x.TrangThai = !d.TrangThai;
                     await DALAlert.Add(x);
                 }
             }

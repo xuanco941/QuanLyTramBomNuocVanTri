@@ -94,6 +94,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         async Task taskDelete()
         {
+            dataGridView1.DataSource = null;
             DALAlertHistory.DeleteAllAlertHistory();
         }
 
