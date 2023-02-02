@@ -94,8 +94,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         async Task taskDelete()
         {
-            dataGridView1.DataSource = null;
             DALAlertHistory.DeleteAllAlertHistory();
+            dataGridView1.DataSource = null;
         }
 
         private async void TableAlert_FormClosing(object sender, FormClosingEventArgs e)

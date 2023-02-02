@@ -66,14 +66,14 @@ namespace ManagementSoftware
             {
                 DataDigital d = new DataDigital();
                 await d.Init();
-                d.StartTimer(500);
+                d.StartTimer(400);
             }).Start();
 
             new Thread(async () =>
             {
                 DataAlert d = new DataAlert();
                 await d.Init();
-                d.StartTimer(500);
+                d.StartTimer(400);
             }).Start();
 
             new Thread(() =>

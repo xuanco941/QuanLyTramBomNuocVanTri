@@ -4,6 +4,9 @@
     <Compile Update="GUI\Help.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\QuanLyTramBom\DigitalClock.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\QuanLyTramBom\LuuTruDuLieu\FormBaoCaoNamFitDashboard.cs">
       <SubType>Form</SubType>
     </Compile>

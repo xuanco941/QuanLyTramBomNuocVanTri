@@ -6,6 +6,7 @@ using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
 using ManagementSoftware.Properties;
+using Microsoft.VisualBasic.Devices;
 using Syncfusion.Windows.Forms.Tools;
 using System.Diagnostics;
 
@@ -52,13 +53,21 @@ namespace QuanLyTramBom
 
             Panel floater = CreateFloatingPanel(panel4);
             floater.BackColor = Color.Transparent;
-            Clock clock1 = new Clock();
-            clock1.ClockType = Syncfusion.Windows.Forms.Tools.ClockTypes.Digital;
+            DigitalClock clock1 = new DigitalClock();
+            clock1.TopLevel = false;
             clock1.MinimumSize = new Size(65, 65);
             clock1.Size = new System.Drawing.Size(120, 90);
+            clock1.Dock = DockStyle.Fill;
+            clock1.FormBorderStyle = FormBorderStyle.None;
             floater.Location = new Point(1780, 1);
             floater.Size = new Size(120, 60);
             floater.Controls.Add(clock1);
+            clock1.Show();
+
+
+
+
+
 
 
             //printer
@@ -422,13 +431,20 @@ namespace QuanLyTramBom
             }
 
 
-            if(alertTrue==null || alertTrue.Count < 1)
+            if (alertTrue == null || alertTrue.Count < 1)
             {
-                UpdateData(null);
+                UpdateData(null, "");
             }
             else
             {
-                UpdateData(alertHistories);
+                if (alertHistories != null && alertHistories.Count > 0)
+                {
+                    UpdateData(alertTrue, alertHistories.Count.ToString());
+                }
+                else
+                {
+                    UpdateData(alertTrue, "");
+                }
             }
 
 
@@ -440,41 +456,35 @@ namespace QuanLyTramBom
 
 
 
-        private void UpdateData(List<AlertHistory>? alertHistories)
+        private void UpdateData(List<Alert>? alertHistories, string str)
         {
 
             if (IsHandleCreated && InvokeRequired)
             {
-                BeginInvoke(new Action<List<AlertHistory>>(UpdateData), alertHistories);
+                BeginInvoke(new Action<List<Alert>?, string>(UpdateData), alertHistories, str);
                 return;
             }
 
 
             //update gui
+            labelGiaTri.Text = str;
+
 
             if (alertHistories != null && alertHistories.Count > 0)
             {
-                AlertHistory? alertERR = DALAlertHistory.GetNewestAlertHistory();
-                if (alertERR != null)
+                Alert alertERR = alertHistories[alertHistories.Count - 1];
+
+                if(alertERR.GanThe != labelGanThe.Text)
                 {
                     labelNgay.Text = alertERR.ThoiGian.ToString("dd/MM/yyyy");
-                    labelNhom.Text = alertERR.Nhom;
-                    labelMoTa.Text = alertERR.TinHieu;
-                    labelGanThe.Text = alertERR.GanThe;
                     labelThoiGian.Text = alertERR.ThoiGian.ToString("hh:mm:ss");
-                    labelDieuKien.Text = alertERR.DieuKien;
-                    labelGiaTri.Text = alertHistories.Count.ToString();
                 }
-                else
-                {
-                    labelNgay.Text = "";
-                    labelNhom.Text = "";
-                    labelMoTa.Text = "";
-                    labelGanThe.Text = "";
-                    labelThoiGian.Text = "";
-                    labelDieuKien.Text = "";
-                    labelGiaTri.Text = "";
-                }
+
+                labelNhom.Text = alertERR.Nhom;
+                labelMoTa.Text = alertERR.TinHieu;
+                labelGanThe.Text = alertERR.GanThe;
+                labelDieuKien.Text = alertERR.DieuKien;
+
             }
             else
             {
@@ -484,7 +494,6 @@ namespace QuanLyTramBom
                 labelGanThe.Text = "";
                 labelThoiGian.Text = "";
                 labelDieuKien.Text = "";
-                labelGiaTri.Text = "";
             }
 
 
