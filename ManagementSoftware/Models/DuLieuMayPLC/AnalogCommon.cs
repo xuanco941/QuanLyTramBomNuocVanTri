@@ -21,7 +21,7 @@ namespace ManagementSoftware.Models.DuLieuMayPLC
         public Analog D10020 = new Analog("D10020", "CP2_AI103C00", "DPS", NhomBom.Bom1, "Nhiệt độ cuộn dây pha W ĐC bơm 1", "℃", 150, 0);
         public Analog D10022 = new Analog("D10022", "CP2_AI104C00", "DPS", NhomBom.Bom1, "Dòng điện động cơ bơm số 1", "A", 100, 0);
         public Analog D10024 = new Analog("D10024", "CP2_AI105C00", "DPS", NhomBom.Bom1, "Độ mở van xả bơm số 1", "%", 100, 0);
-        public Analog D10092 = new Analog("D10092", "CP2_AI109C00", "DPS", NhomBom.Bom1, "Tổng số giờ bơm 1 chạy", "Min", 9999999, 0);
+        public Analog D10092 = new Analog("D10092", "CP2_AI199C00", "DPS", NhomBom.Bom1, "Tổng số giờ bơm 1 chạy", "Min", 9999999, 0);
         public Analog D10030 = new Analog("D10030", "CP2_AI201C00", "DPS", NhomBom.Bom2, "Nhiệt độ cuộn dây pha U ĐC bơm 2", "℃", 150, 0);
         public Analog D10032 = new Analog("D10032", "CP2_AI202C00", "DPS", NhomBom.Bom2, "Nhiệt độ cuộn dây pha V ĐC bơm 2", "℃", 150, 0);
         public Analog D10034 = new Analog("D10034", "CP2_AI203C00", "DPS", NhomBom.Bom2, "Nhiệt độ cuộn dây pha W ĐC bơm 2", "℃", 150, 0);
