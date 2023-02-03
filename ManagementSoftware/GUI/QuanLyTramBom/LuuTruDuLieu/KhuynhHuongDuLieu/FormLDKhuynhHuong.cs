@@ -433,6 +433,42 @@ namespace QuanLyTramBom
             }
         }
 
+        private void FormLDKhuynhHuong_Load(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            dateTimePickerTuNgay.Value = now.AddMinutes(-1);
+            dateTimePickerDenNgay.Value = now;
+        }
 
+        private void comboBoxTimeInterval_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+
+            if (comboBoxTimeInterval.Text == "1 min")
+            {
+                dateTimePickerTuNgay.Value = now.AddMinutes(-1);
+                dateTimePickerDenNgay.Value = now;
+            }
+            else if (comboBoxTimeInterval.Text == "1 hour")
+            {
+                dateTimePickerTuNgay.Value = now.AddHours(-1);
+                dateTimePickerDenNgay.Value = now;
+            }
+            else if (comboBoxTimeInterval.Text == "1 day")
+            {
+                dateTimePickerTuNgay.Value = now.AddDays(-1);
+                dateTimePickerDenNgay.Value = now;
+            }
+            else if (comboBoxTimeInterval.Text == "1 month")
+            {
+                dateTimePickerTuNgay.Value = now.AddMonths(-1);
+                dateTimePickerDenNgay.Value = now;
+            }
+            else if (comboBoxTimeInterval.Text == "1 year")
+            {
+                dateTimePickerTuNgay.Value = now.AddYears(-1);
+                dateTimePickerDenNgay.Value = now;
+            }
+        }
     }
 }

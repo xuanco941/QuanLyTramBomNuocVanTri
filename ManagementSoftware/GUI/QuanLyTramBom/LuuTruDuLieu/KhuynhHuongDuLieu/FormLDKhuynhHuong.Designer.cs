@@ -419,6 +419,7 @@
             this.comboBoxTimeInterval.Name = "comboBoxTimeInterval";
             this.comboBoxTimeInterval.Size = new System.Drawing.Size(176, 38);
             this.comboBoxTimeInterval.TabIndex = 23;
+            this.comboBoxTimeInterval.SelectedIndexChanged += new System.EventHandler(this.comboBoxTimeInterval_SelectedIndexChanged);
             // 
             // FormLDKhuynhHuong
             // 
@@ -431,6 +432,7 @@
             this.Name = "FormLDKhuynhHuong";
             this.Text = "FormLDKhuynhHuong";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLDKhuynhHuong_FormClosing);
+            this.Load += new System.EventHandler(this.FormLDKhuynhHuong_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
