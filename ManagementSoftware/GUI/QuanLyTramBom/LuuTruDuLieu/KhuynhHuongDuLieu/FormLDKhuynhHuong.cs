@@ -270,48 +270,40 @@ namespace QuanLyTramBom
 
             TimeSpan khoangCachTime = timeEnd - timeStart;
             double khoangCachTimeDouble = 0;
-            string typeTime = "";
 
             if (typeInterval == ChartDateTimeIntervalType.Minutes)
             {
                 khoangCachTimeDouble = khoangCachTime.TotalMinutes;
-                typeTime = "phút";
                 numberInterval = 30;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Hours)
             {
                 khoangCachTimeDouble = khoangCachTime.TotalHours;
-                typeTime = "giờ";
                 numberInterval = 12;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Days)
             {
                 khoangCachTimeDouble = khoangCachTime.TotalDays;
-                typeTime = "ngày";
                 numberInterval = 5;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Months)
             {
-                khoangCachTimeDouble = khoangCachTime.TotalDays/30;
-                typeTime = "tháng";
+                khoangCachTimeDouble = khoangCachTime.TotalDays / 30;
                 numberInterval = 3;
             }
             else if (typeInterval == ChartDateTimeIntervalType.Years)
             {
-                khoangCachTimeDouble = khoangCachTime.TotalDays/365;
-                typeTime = "năm";
+                khoangCachTimeDouble = khoangCachTime.TotalDays / 365;
                 numberInterval = 1;
             }
-            if ((khoangCachTimeDouble/numberInterval)>30)
+            if ((khoangCachTimeDouble / numberInterval) > 20)
             {
-                MessageBox.Show($"Dữ liệu quá lớn với {Math.Round(khoangCachTimeDouble, 0,MidpointRounding.ToPositiveInfinity)} {typeTime}, bạn nên thay đổi kiểu hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                numberInterval = khoangCachTimeDouble / 20;
             }
-            else
-            {
-                this.chartControl1.PrimaryXAxis.DateTimeInterval.Type = typeInterval;
-                this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(timeStart, timeEnd, numberInterval, typeInterval);
-                this.chartControl1.PrimaryXAxis.IntervalType = typeInterval;
-            }
+
+            this.chartControl1.PrimaryXAxis.DateTimeInterval.Type = typeInterval;
+            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(timeStart, timeEnd, numberInterval, typeInterval);
+            this.chartControl1.PrimaryXAxis.IntervalType = typeInterval;
 
 
 
@@ -436,39 +428,18 @@ namespace QuanLyTramBom
         private void FormLDKhuynhHuong_Load(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
-            dateTimePickerTuNgay.Value = now.AddMinutes(-1);
-            dateTimePickerDenNgay.Value = now;
+            dateTimePickerTuNgay.Value = now.AddDays(-1);
+            dateTimePickerDenNgay.Value = now.AddDays(1);
         }
 
         private void comboBoxTimeInterval_SelectedIndexChanged(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
 
-            if (comboBoxTimeInterval.Text == "1 min")
-            {
-                dateTimePickerTuNgay.Value = now.AddMinutes(-1);
-                dateTimePickerDenNgay.Value = now;
-            }
-            else if (comboBoxTimeInterval.Text == "1 hour")
-            {
-                dateTimePickerTuNgay.Value = now.AddHours(-1);
-                dateTimePickerDenNgay.Value = now;
-            }
-            else if (comboBoxTimeInterval.Text == "1 day")
-            {
-                dateTimePickerTuNgay.Value = now.AddDays(-1);
-                dateTimePickerDenNgay.Value = now;
-            }
-            else if (comboBoxTimeInterval.Text == "1 month")
-            {
-                dateTimePickerTuNgay.Value = now.AddMonths(-1);
-                dateTimePickerDenNgay.Value = now;
-            }
-            else if (comboBoxTimeInterval.Text == "1 year")
-            {
-                dateTimePickerTuNgay.Value = now.AddYears(-1);
-                dateTimePickerDenNgay.Value = now;
-            }
+
+            dateTimePickerTuNgay.Value = now.AddDays(-1);
+            dateTimePickerDenNgay.Value = now.AddDays(1);
+
         }
     }
 }

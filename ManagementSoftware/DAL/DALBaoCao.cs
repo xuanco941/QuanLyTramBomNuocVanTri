@@ -18,6 +18,7 @@ namespace ManagementSoftware.DAL
         private const string ganTheTongSoGioBom4Chay = "CP2_AI499C00";
 
 
+
         //ngày
         public static List<BaoCao> BaoCaoNgay(DateTime date)
         {
@@ -48,11 +49,10 @@ namespace ManagementSoftware.DAL
                     double ThoiGianChayBom4;
 
 
-
                     List<Analog> a1 = analogs.Where(a => a.GanThe == ganTheMucNuocBeHut).ToList();
                     if (a1 != null && a1.Count > 0)
                     {
-                        MucNuocBeHut = Math.Round(a1.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
+                        MucNuocBeHut = Math.Round(a1.Select(a => a.GiaTriDong).Average(), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -63,7 +63,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a2 = analogs.Where(a => a.GanThe == ganTheMucNuocBeXa).ToList();
                     if (a2 != null && a2.Count > 0)
                     {
-                        MucNuocBeXa = Math.Round(a2.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
+                        MucNuocBeXa = Math.Round(a2.Select(a => a.GiaTriDong).Average(), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -221,7 +221,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a1 = analogs.Where(a => a.GanThe == ganTheMucNuocBeHut).ToList();
                     if (a1 != null && a1.Count > 0)
                     {
-                        MucNuocBeHut = Math.Round(a1.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
+                        MucNuocBeHut = Math.Round(a1.Select(a => a.GiaTriDong).Average(), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -232,7 +232,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a2 = analogs.Where(a => a.GanThe == ganTheMucNuocBeXa).ToList();
                     if (a2 != null && a2.Count > 0)
                     {
-                        MucNuocBeXa = Math.Round(a2.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
+                        MucNuocBeXa = Math.Round(a2.Select(a => a.GiaTriDong).Average(), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -395,7 +395,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a1 = analogs.Where(a => a.GanThe == ganTheMucNuocBeHut).ToList();
                     if (a1 != null && a1.Count > 0)
                     {
-                        MucNuocBeHut = Math.Round(a1.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
+                        MucNuocBeHut = Math.Round(a1.Select(a => a.GiaTriDong).Average(), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {
@@ -406,7 +406,7 @@ namespace ManagementSoftware.DAL
                     List<Analog> a2 = analogs.Where(a => a.GanThe == ganTheMucNuocBeXa).ToList();
                     if (a2 != null && a2.Count > 0)
                     {
-                        MucNuocBeXa = Math.Round(a2.Max(a => a.GiaTriDong), 2, MidpointRounding.AwayFromZero);
+                        MucNuocBeXa = Math.Round(a2.Select(a => a.GiaTriDong).Average(), 2, MidpointRounding.AwayFromZero);
                     }
                     else
                     {

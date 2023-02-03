@@ -112,7 +112,6 @@ Math.Floor(TongThoiGianChayBom4 / 60).ToString() + " h " + (TongThoiGianChayBom4
 
 
         }
-
         private void button1_Click_2(object sender, EventArgs e)
         {
             if (list == null || list.Count <= 0)

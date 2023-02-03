@@ -363,6 +363,16 @@ namespace ManagementSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BomThoatDo {
+            get {
+                object obj = ResourceManager.GetObject("BomThoatDo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bomxa2 {
             get {
                 object obj = ResourceManager.GetObject("Bomxa2", resourceCulture);

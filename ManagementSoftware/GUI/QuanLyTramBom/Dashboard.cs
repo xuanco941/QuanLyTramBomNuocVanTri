@@ -394,6 +394,9 @@ namespace QuanLyTramBom
 
             List<Alert>? alertTrue = await plcAlert.GetListDataAlertTrue();
             List<AlertHistory>? alertHistories = DALAlertHistory.GetAllAlertHistory();
+
+
+            //server
             if (alertTrue != null && alertTrue.Count > 0)
             {
 
