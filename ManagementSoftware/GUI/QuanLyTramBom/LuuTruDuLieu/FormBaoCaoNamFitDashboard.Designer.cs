@@ -785,6 +785,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "FormBaoCaoNamFitDashboard";
             this.Text = "FormBaoCaoNamFitDashboad";
+            this.Load += new System.EventHandler(this.FormBaoCaoNamFitDashboard_Load);
             this.panel17.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel18.ResumeLayout(false);

@@ -820,6 +820,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "FormBaoCaoThangFitDashboard";
             this.Text = "FormBaoCaoThang";
+            this.Load += new System.EventHandler(this.FormBaoCaoThangFitDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);

@@ -734,6 +734,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormBaoCaoNam";
             this.Text = "FormBaoCaoNam";
+            this.Load += new System.EventHandler(this.FormBaoCaoNam_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);

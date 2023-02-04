@@ -30,7 +30,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
         DateTime d;
         List<BaoCao> list;
 
-        private void btnSerachBox_Click_1(object sender, EventArgs e)
+        void SearchData()
         {
             // d là dữ liệu đầu vào
             d = dateTimePicker1.Value;
@@ -39,15 +39,27 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
             // 
 
             list = DALBaoCao.BaoCaoThang(d);
+
             DataTable dt = new DataTable();
             dt.Columns.Add("THỜI GIAN");
             dt.Columns.Add("MỰC NƯỚC\nBƠM XẢ\n(m)");
             dt.Columns.Add("MỰC NƯỚC\nBƠM HÚT\n(m)");
-            dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 1\n(m)");
-            dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 2\n(m)");
-            dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 3\n(m)");
-            dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 4\n(m)");
-
+            if (checkBoxBom1.Checked == true)
+            {
+                dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 1\n(h)");
+            }
+            if (checkBoxBom2.Checked == true)
+            {
+                dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 2\n(h)");
+            }
+            if (checkBoxBom3.Checked == true)
+            {
+                dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 3\n(h)");
+            }
+            if (checkBoxBom4.Checked == true)
+            {
+                dt.Columns.Add("THỜI GIAN\nCHẠY BƠM 4\n(h)");
+            }
 
             int i = 1;
             foreach (BaoCao item in list)
@@ -56,14 +68,63 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                 double hut = item.MucNuocBeHut;
 
 
-                string tongTime1 = Math.Floor(item.ThoiGianChayBom1 / 60).ToString() + " h " + (item.ThoiGianChayBom1 % 60).ToString() + " min ";
-                string tongTime2 = Math.Floor(item.ThoiGianChayBom2 / 60).ToString() + " h " + (item.ThoiGianChayBom2 % 60).ToString() + " min ";
-                string tongTime3 = Math.Floor(item.ThoiGianChayBom3 / 60).ToString() + " h " + (item.ThoiGianChayBom3 % 60).ToString() + " min ";
-                string tongTime4 = Math.Floor(item.ThoiGianChayBom4 / 60).ToString() + " h " + (item.ThoiGianChayBom4 % 60).ToString() + " min ";
+                string tongTime1 = "";
+                string tongTime2 = "";
+                string tongTime3 = "";
+                string tongTime4 = "";
 
-                dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, tongTime1, tongTime2, tongTime3, tongTime4);
+                List<string> listStr = new List<string>();
+
+                if (checkBoxBom1.Checked == true)
+                {
+                    tongTime1 = Math.Floor(item.ThoiGianChayBom1 / 60).ToString() + " h " + (item.ThoiGianChayBom1 % 60).ToString() + " min ";
+                    listStr.Add(tongTime1);
+                }
+                if (checkBoxBom2.Checked == true)
+                {
+                    tongTime2 = Math.Floor(item.ThoiGianChayBom2 / 60).ToString() + " h " + (item.ThoiGianChayBom2 % 60).ToString() + " min ";
+                    listStr.Add(tongTime2);
+                }
+                if (checkBoxBom3.Checked == true)
+                {
+                    tongTime3 = Math.Floor(item.ThoiGianChayBom3 / 60).ToString() + " h " + (item.ThoiGianChayBom3 % 60).ToString() + " min ";
+                    listStr.Add(tongTime3);
+                }
+                if (checkBoxBom4.Checked == true)
+                {
+                    tongTime4 = Math.Floor(item.ThoiGianChayBom4 / 60).ToString() + " h " + (item.ThoiGianChayBom4 % 60).ToString() + " min ";
+                    listStr.Add(tongTime4);
+                }
+
+                if (listStr != null && listStr.Count > 0)
+                {
+                    if (listStr.Count == 1)
+                    {
+                        dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, listStr[0]);
+                    }
+                    if (listStr.Count == 2)
+                    {
+                        dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, listStr[0], listStr[1]);
+                    }
+                    if (listStr.Count == 3)
+                    {
+                        dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, listStr[0], listStr[1], listStr[2]);
+                    }
+                    if (listStr.Count == 4)
+                    {
+                        dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, listStr[0], listStr[1], listStr[2], listStr[3]);
+                    }
+                }
+                else
+                {
+                    dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut);
+                }
+
+
+
                 i++;
             }
+
 
             //tính tổng, tb
             double trungBinhBeXa = 0;
@@ -84,12 +145,10 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                 TongThoiGianChayBom2 = TongThoiGianChayBom2 + item.ThoiGianChayBom2;
                 TongThoiGianChayBom3 = TongThoiGianChayBom3 + item.ThoiGianChayBom3;
                 TongThoiGianChayBom4 = TongThoiGianChayBom4 + item.ThoiGianChayBom4;
-
             }
 
             //label
             labelTBXa.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)) + " m";
-            // b dùng hàm Math.Round để giới hạn còn 2 chữ số sau thập phân
             labelTBHut.Text = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)) + " m";
 
             labelTongTime1.Text = Math.Floor(TongThoiGianChayBom1 / 60).ToString() + " h " + (TongThoiGianChayBom1 % 60).ToString() + " min ";
@@ -99,17 +158,75 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
 
 
 
-            dt.Rows.Add("Tổng", "", "", Math.Floor(TongThoiGianChayBom1 / 60).ToString() + " h " + (TongThoiGianChayBom1 % 60).ToString() + " min ",
-                Math.Floor(TongThoiGianChayBom2 / 60).ToString() + " h " + (TongThoiGianChayBom2 % 60).ToString() + " min ",
-Math.Floor(TongThoiGianChayBom3 / 60).ToString() + " h " + (TongThoiGianChayBom3 % 60).ToString() + " min ",
-Math.Floor(TongThoiGianChayBom4 / 60).ToString() + " h " + (TongThoiGianChayBom4 % 60).ToString() + " min ");
-            dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)), "", "", "", "");
+
+            List<string> listTong = new List<string>();
+            if (checkBoxBom1.Checked == true)
+            {
+                string tong1 = Math.Floor(TongThoiGianChayBom1 / 60).ToString() + " h " + (TongThoiGianChayBom1 % 60).ToString() + " min ";
+                listTong.Add(tong1);
+            }
+            if (checkBoxBom2.Checked == true)
+            {
+                string tong2 = Math.Floor(TongThoiGianChayBom2 / 60).ToString() + " h " + (TongThoiGianChayBom2 % 60).ToString() + " min ";
+                listTong.Add(tong2);
+            }
+            if (checkBoxBom3.Checked == true)
+            {
+                string tong3 = Math.Floor(TongThoiGianChayBom3 / 60).ToString() + " h " + (TongThoiGianChayBom3 % 60).ToString() + " min ";
+                listTong.Add(tong3);
+            }
+            if (checkBoxBom4.Checked == true)
+            {
+                string tong4 = Math.Floor(TongThoiGianChayBom4 / 60).ToString() + " h " + (TongThoiGianChayBom4 % 60).ToString() + " min ";
+                listTong.Add(tong4);
+            }
+
+            if (listTong != null && listTong.Count > 0)
+            {
+                if (listTong.Count == 1)
+                {
+                    dt.Rows.Add("Tổng", "", "", listTong[0]);
+                    dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)), "");
+                }
+                if (listTong.Count == 2)
+                {
+                    dt.Rows.Add("Tổng", "", "", listTong[0], listTong[1]);
+                    dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)), "", "");
+                }
+                if (listTong.Count == 3)
+                {
+                    dt.Rows.Add("Tổng", "", "", listTong[0], listTong[1], listTong[2]);
+                    dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)), "", "", "");
+                }
+                if (listTong.Count == 4)
+                {
+                    dt.Rows.Add("Tổng", "", "", listTong[0], listTong[1], listTong[2], listTong[3]);
+                    dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)), "", "", "", "");
+                }
+            }
+            else
+            {
+                dt.Rows.Add("T.Bình", String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero)), String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero)));
+            }
+
+
+
+
+
+
+
+
             dataGridView1.DataSource = dt;
 
             foreach (DataGridViewRow item in dataGridView1.Rows)
             {
                 item.Cells[0].Style.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             }
+        }
+
+        private void btnSerachBox_Click_1(object sender, EventArgs e)
+        {
+            SearchData();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -347,6 +464,17 @@ Math.Floor(TongThoiGianChayBom4 / 60).ToString() + " h " + (TongThoiGianChayBom4
             {
                 MessageBox.Show("Không tìm thấy dữ liệu để in báo cáo.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void FormBaoCaoThangFitDashboard_Load(object sender, EventArgs e)
+        {
+            dateTimePicker1.Value = DateTime.Now;
+            checkBoxBom1.Checked = true;
+            checkBoxBom2.Checked = true;
+            checkBoxBom3.Checked = true;
+            checkBoxBom4.Checked = true;
+
+            SearchData();
         }
     }
 }

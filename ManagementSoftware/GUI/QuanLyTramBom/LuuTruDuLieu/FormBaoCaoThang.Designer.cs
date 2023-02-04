@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,6 +49,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TrungBinhHut = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelChonBom = new System.Windows.Forms.Panel();
+            this.checkBoxBom1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom4 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new ManagementSoftware.GUI.ControlButton.CusDatetimepickers();
             this.buttonPrinter = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -82,11 +87,6 @@
             this.TongBom2 = new System.Windows.Forms.Label();
             this.TrungBinhXa = new System.Windows.Forms.Label();
             this.TongBom3 = new System.Windows.Forms.Label();
-            this.panelChonBom = new System.Windows.Forms.Panel();
-            this.checkBoxBom1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxBom2 = new System.Windows.Forms.CheckBox();
-            this.checkBoxBom3 = new System.Windows.Forms.CheckBox();
-            this.checkBoxBom4 = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel8.SuspendLayout();
@@ -98,6 +98,7 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelChonBom.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel17.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -115,7 +116,6 @@
             this.panel11.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panelChonBom.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -133,23 +133,23 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -344,6 +344,59 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1103, 76);
             this.panel1.TabIndex = 18;
+            // 
+            // panelChonBom
+            // 
+            this.panelChonBom.Controls.Add(this.checkBoxBom1);
+            this.panelChonBom.Controls.Add(this.checkBoxBom2);
+            this.panelChonBom.Controls.Add(this.checkBoxBom3);
+            this.panelChonBom.Controls.Add(this.checkBoxBom4);
+            this.panelChonBom.Location = new System.Drawing.Point(16, 12);
+            this.panelChonBom.Name = "panelChonBom";
+            this.panelChonBom.Size = new System.Drawing.Size(181, 48);
+            this.panelChonBom.TabIndex = 34;
+            // 
+            // checkBoxBom1
+            // 
+            this.checkBoxBom1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom1.Location = new System.Drawing.Point(1, 0);
+            this.checkBoxBom1.Name = "checkBoxBom1";
+            this.checkBoxBom1.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxBom1.TabIndex = 3;
+            this.checkBoxBom1.Text = "Bơm 1";
+            this.checkBoxBom1.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom2
+            // 
+            this.checkBoxBom2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom2.Location = new System.Drawing.Point(91, 0);
+            this.checkBoxBom2.Name = "checkBoxBom2";
+            this.checkBoxBom2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxBom2.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxBom2.TabIndex = 2;
+            this.checkBoxBom2.Text = "Bơm 2";
+            this.checkBoxBom2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom3
+            // 
+            this.checkBoxBom3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom3.Location = new System.Drawing.Point(1, 24);
+            this.checkBoxBom3.Name = "checkBoxBom3";
+            this.checkBoxBom3.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxBom3.TabIndex = 1;
+            this.checkBoxBom3.Text = "Bơm 3";
+            this.checkBoxBom3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom4
+            // 
+            this.checkBoxBom4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom4.Location = new System.Drawing.Point(91, 24);
+            this.checkBoxBom4.Name = "checkBoxBom4";
+            this.checkBoxBom4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxBom4.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxBom4.TabIndex = 0;
+            this.checkBoxBom4.Text = "Bơm 4";
+            this.checkBoxBom4.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -719,59 +772,6 @@
             this.TongBom3.TabIndex = 10;
             this.TongBom3.Text = "Tổng TG Bơm 3 chạy";
             // 
-            // panelChonBom
-            // 
-            this.panelChonBom.Controls.Add(this.checkBoxBom1);
-            this.panelChonBom.Controls.Add(this.checkBoxBom2);
-            this.panelChonBom.Controls.Add(this.checkBoxBom3);
-            this.panelChonBom.Controls.Add(this.checkBoxBom4);
-            this.panelChonBom.Location = new System.Drawing.Point(16, 12);
-            this.panelChonBom.Name = "panelChonBom";
-            this.panelChonBom.Size = new System.Drawing.Size(181, 48);
-            this.panelChonBom.TabIndex = 34;
-            // 
-            // checkBoxBom1
-            // 
-            this.checkBoxBom1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxBom1.Location = new System.Drawing.Point(1, 0);
-            this.checkBoxBom1.Name = "checkBoxBom1";
-            this.checkBoxBom1.Size = new System.Drawing.Size(90, 24);
-            this.checkBoxBom1.TabIndex = 3;
-            this.checkBoxBom1.Text = "Bơm 1";
-            this.checkBoxBom1.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBom2
-            // 
-            this.checkBoxBom2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxBom2.Location = new System.Drawing.Point(91, 0);
-            this.checkBoxBom2.Name = "checkBoxBom2";
-            this.checkBoxBom2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBoxBom2.Size = new System.Drawing.Size(90, 24);
-            this.checkBoxBom2.TabIndex = 2;
-            this.checkBoxBom2.Text = "Bơm 2";
-            this.checkBoxBom2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBom3
-            // 
-            this.checkBoxBom3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxBom3.Location = new System.Drawing.Point(1, 24);
-            this.checkBoxBom3.Name = "checkBoxBom3";
-            this.checkBoxBom3.Size = new System.Drawing.Size(90, 24);
-            this.checkBoxBom3.TabIndex = 1;
-            this.checkBoxBom3.Text = "Bơm 3";
-            this.checkBoxBom3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBom4
-            // 
-            this.checkBoxBom4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxBom4.Location = new System.Drawing.Point(91, 24);
-            this.checkBoxBom4.Name = "checkBoxBom4";
-            this.checkBoxBom4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkBoxBom4.Size = new System.Drawing.Size(90, 24);
-            this.checkBoxBom4.TabIndex = 0;
-            this.checkBoxBom4.Text = "Bơm 4";
-            this.checkBoxBom4.UseVisualStyleBackColor = true;
-            // 
             // FormBaoCaoThang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -782,6 +782,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormBaoCaoThang";
             this.Text = "FormBaoCaoThang";
+            this.Load += new System.EventHandler(this.FormBaoCaoThang_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel8.ResumeLayout(false);
@@ -793,6 +794,7 @@
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panelChonBom.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -811,7 +813,6 @@
             this.panel11.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            this.panelChonBom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

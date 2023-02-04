@@ -783,6 +783,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "FormBaoCaoNgayFitDashboard";
             this.Text = "FormBaoCaoNgayFitDashboard";
+            this.Load += new System.EventHandler(this.FormBaoCaoNgayFitDashboard_Load);
             this.panel14.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
