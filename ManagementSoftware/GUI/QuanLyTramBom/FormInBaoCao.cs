@@ -18,12 +18,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             InitializeComponent();
            
 
-            FormBaoCaoNgay form = new FormBaoCaoNgay();
-            form.TopLevel = false;
-            panelContent.Controls.Add(form);
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            form.Show();
+           
         }
         void ButtonHandle(Button btn)
         {
@@ -82,6 +77,18 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 item.Dispose();
             }
             FormBaoCaoNam form = new FormBaoCaoNam();
+            form.TopLevel = false;
+            panelContent.Controls.Add(form);
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void FormInBaoCao_Load(object sender, EventArgs e)
+        {
+            buttonBaoCaoNgay.ForeColor = Color.White;
+
+            FormBaoCaoNgay form = new FormBaoCaoNgay();
             form.TopLevel = false;
             panelContent.Controls.Add(form);
             form.FormBorderStyle = FormBorderStyle.None;

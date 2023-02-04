@@ -930,7 +930,7 @@
             // TinHieuMayBom1
             // 
             this.TinHieuMayBom1.BackColor = System.Drawing.Color.Transparent;
-            this.TinHieuMayBom1.Image = global::ManagementSoftware.Properties.Resources.M10097___Xanh;
+            this.TinHieuMayBom1.Image = global::ManagementSoftware.Properties.Resources.BomChinh1Xanh;
             this.TinHieuMayBom1.Location = new System.Drawing.Point(459, 142);
             this.TinHieuMayBom1.Name = "TinHieuMayBom1";
             this.TinHieuMayBom1.Size = new System.Drawing.Size(27, 21);
@@ -1084,7 +1084,7 @@
             // BomMoi2
             // 
             this.BomMoi2.BackColor = System.Drawing.Color.Transparent;
-            this.BomMoi2.Image = ((System.Drawing.Image)(resources.GetObject("BomMoi2.Image")));
+            this.BomMoi2.Image = global::ManagementSoftware.Properties.Resources.BomMoi2Xanh;
             this.BomMoi2.Location = new System.Drawing.Point(565, 376);
             this.BomMoi2.Name = "BomMoi2";
             this.BomMoi2.Size = new System.Drawing.Size(18, 17);

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TongBom1 = new System.Windows.Forms.Label();
             this.TongBom4 = new System.Windows.Forms.Label();
             this.TongBom2 = new System.Windows.Forms.Label();
@@ -78,11 +78,15 @@
             this.buttonPrinter = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSerachBox = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.panelChonBom = new System.Windows.Forms.Panel();
+            this.checkBoxBom1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom4 = new System.Windows.Forms.CheckBox();
             this.panel4.SuspendLayout();
             this.panel20.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -111,6 +115,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panelChonBom.SuspendLayout();
             this.SuspendLayout();
             // 
             // TongBom1
@@ -594,10 +599,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelChonBom);
             this.panel1.Controls.Add(this.buttonPrinter);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnSerachBox);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -613,7 +618,7 @@
             this.buttonPrinter.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.buttonPrinter.Image = global::ManagementSoftware.Properties.Resources.printEXCEL;
             this.buttonPrinter.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPrinter.Location = new System.Drawing.Point(795, 16);
+            this.buttonPrinter.Location = new System.Drawing.Point(815, 16);
             this.buttonPrinter.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonPrinter.Name = "buttonPrinter";
             this.buttonPrinter.Size = new System.Drawing.Size(179, 41);
@@ -632,7 +637,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Image = global::ManagementSoftware.Properties.Resources.Logoexe;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(597, 16);
+            this.button1.Location = new System.Drawing.Point(617, 16);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 41);
@@ -651,7 +656,7 @@
             this.btnSerachBox.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSerachBox.Image = global::ManagementSoftware.Properties.Resources.loupe;
             this.btnSerachBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSerachBox.Location = new System.Drawing.Point(377, 16);
+            this.btnSerachBox.Location = new System.Drawing.Point(397, 16);
             this.btnSerachBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSerachBox.Name = "btnSerachBox";
             this.btnSerachBox.Size = new System.Drawing.Size(198, 41);
@@ -662,22 +667,12 @@
             this.btnSerachBox.UseVisualStyleBackColor = false;
             this.btnSerachBox.Click += new System.EventHandler(this.btnSerachBox_Click_1);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(21, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Trình đơn ngày";
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(194, 23);
+            this.dateTimePicker1.Location = new System.Drawing.Point(214, 23);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(150, 29);
             this.dateTimePicker1.TabIndex = 1;
@@ -688,23 +683,23 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -721,6 +716,59 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(743, 506);
             this.panel2.TabIndex = 16;
+            // 
+            // panelChonBom
+            // 
+            this.panelChonBom.Controls.Add(this.checkBoxBom1);
+            this.panelChonBom.Controls.Add(this.checkBoxBom2);
+            this.panelChonBom.Controls.Add(this.checkBoxBom3);
+            this.panelChonBom.Controls.Add(this.checkBoxBom4);
+            this.panelChonBom.Location = new System.Drawing.Point(16, 12);
+            this.panelChonBom.Name = "panelChonBom";
+            this.panelChonBom.Size = new System.Drawing.Size(181, 48);
+            this.panelChonBom.TabIndex = 33;
+            // 
+            // checkBoxBom1
+            // 
+            this.checkBoxBom1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom1.Location = new System.Drawing.Point(1, 0);
+            this.checkBoxBom1.Name = "checkBoxBom1";
+            this.checkBoxBom1.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxBom1.TabIndex = 3;
+            this.checkBoxBom1.Text = "Bơm 1";
+            this.checkBoxBom1.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom2
+            // 
+            this.checkBoxBom2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom2.Location = new System.Drawing.Point(91, 0);
+            this.checkBoxBom2.Name = "checkBoxBom2";
+            this.checkBoxBom2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxBom2.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxBom2.TabIndex = 2;
+            this.checkBoxBom2.Text = "Bơm 2";
+            this.checkBoxBom2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom3
+            // 
+            this.checkBoxBom3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom3.Location = new System.Drawing.Point(1, 24);
+            this.checkBoxBom3.Name = "checkBoxBom3";
+            this.checkBoxBom3.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxBom3.TabIndex = 1;
+            this.checkBoxBom3.Text = "Bơm 3";
+            this.checkBoxBom3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom4
+            // 
+            this.checkBoxBom4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom4.Location = new System.Drawing.Point(91, 24);
+            this.checkBoxBom4.Name = "checkBoxBom4";
+            this.checkBoxBom4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxBom4.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxBom4.TabIndex = 0;
+            this.checkBoxBom4.Text = "Bơm 4";
+            this.checkBoxBom4.UseVisualStyleBackColor = true;
             // 
             // FormBaoCaoNgay
             // 
@@ -759,9 +807,9 @@
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panelChonBom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -777,7 +825,6 @@
         private Panel panel1;
         private Button button1;
         private Button btnSerachBox;
-        private Label label1;
         private DateTimePicker dateTimePicker1;
         private DataGridView dataGridView1;
         private Panel panel2;
@@ -820,5 +867,10 @@
         private Label label3;
         private Label label4;
         private Button buttonPrinter;
+        private Panel panelChonBom;
+        private CheckBox checkBoxBom1;
+        private CheckBox checkBoxBom2;
+        private CheckBox checkBoxBom3;
+        private CheckBox checkBoxBom4;
     }
 }

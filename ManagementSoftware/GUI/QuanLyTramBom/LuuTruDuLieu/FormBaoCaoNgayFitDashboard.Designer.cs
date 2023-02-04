@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label11 = new System.Windows.Forms.Label();
@@ -69,8 +70,11 @@
             this.btnSerachBox = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelChonBom = new System.Windows.Forms.Panel();
+            this.checkBoxBom1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxBom4 = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -82,6 +86,7 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridLayout1 = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.panel14.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -106,7 +111,7 @@
             this.panel26.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel24.SuspendLayout();
-            this.panel23.SuspendLayout();
+            this.panelChonBom.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel20.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -115,6 +120,7 @@
             this.panel17.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -425,18 +431,19 @@
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 6;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
+            this.tableLayoutPanel7.ColumnCount = 7;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.5F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.5F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.panel27, 5, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel26, 4, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel25, 3, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel24, 2, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel23, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel27, 6, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel26, 5, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel25, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel24, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panelChonBom, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.MaximumSize = new System.Drawing.Size(0, 26);
@@ -554,26 +561,63 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(140, 35);
             this.dateTimePicker1.TabIndex = 3;
             // 
-            // panel23
+            // panelChonBom
             // 
-            this.panel23.Controls.Add(this.label1);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(37, 3);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(157, 20);
-            this.panel23.TabIndex = 0;
+            this.panelChonBom.Controls.Add(this.checkBoxBom1);
+            this.panelChonBom.Controls.Add(this.checkBoxBom2);
+            this.panelChonBom.Controls.Add(this.checkBoxBom3);
+            this.panelChonBom.Controls.Add(this.checkBoxBom4);
+            this.panelChonBom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChonBom.Location = new System.Drawing.Point(41, 3);
+            this.panelChonBom.Name = "panelChonBom";
+            this.panelChonBom.Size = new System.Drawing.Size(149, 20);
+            this.panelChonBom.TabIndex = 5;
             // 
-            // label1
+            // checkBoxBom1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.label1.Size = new System.Drawing.Size(157, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Trình đơn ngày :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxBom1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom1.Location = new System.Drawing.Point(1, 0);
+            this.checkBoxBom1.Name = "checkBoxBom1";
+            this.gridLayout1.SetParticipateInLayout(this.checkBoxBom1, true);
+            this.checkBoxBom1.Size = new System.Drawing.Size(74, 10);
+            this.checkBoxBom1.TabIndex = 7;
+            this.checkBoxBom1.Text = "Bơm 1";
+            this.checkBoxBom1.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom2
+            // 
+            this.checkBoxBom2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom2.Location = new System.Drawing.Point(75, 0);
+            this.checkBoxBom2.Name = "checkBoxBom2";
+            this.gridLayout1.SetParticipateInLayout(this.checkBoxBom2, true);
+            this.checkBoxBom2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxBom2.Size = new System.Drawing.Size(74, 10);
+            this.checkBoxBom2.TabIndex = 6;
+            this.checkBoxBom2.Text = "Bơm 2";
+            this.checkBoxBom2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom3
+            // 
+            this.checkBoxBom3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom3.Location = new System.Drawing.Point(1, 10);
+            this.checkBoxBom3.Name = "checkBoxBom3";
+            this.gridLayout1.SetParticipateInLayout(this.checkBoxBom3, true);
+            this.checkBoxBom3.Size = new System.Drawing.Size(74, 10);
+            this.checkBoxBom3.TabIndex = 5;
+            this.checkBoxBom3.Text = "Bơm 3";
+            this.checkBoxBom3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBom4
+            // 
+            this.checkBoxBom4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxBom4.Location = new System.Drawing.Point(75, 10);
+            this.checkBoxBom4.Name = "checkBoxBom4";
+            this.gridLayout1.SetParticipateInLayout(this.checkBoxBom4, true);
+            this.checkBoxBom4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBoxBom4.Size = new System.Drawing.Size(74, 10);
+            this.checkBoxBom4.TabIndex = 4;
+            this.checkBoxBom4.Text = "Bơm 4";
+            this.checkBoxBom4.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -723,6 +767,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(863, 556);
             this.dataGridView1.TabIndex = 39;
             // 
+            // gridLayout1
+            // 
+            this.gridLayout1.Columns = 2;
+            this.gridLayout1.ContainerControl = this.panelChonBom;
+            this.gridLayout1.Rows = 2;
+            // 
             // FormBaoCaoNgayFitDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -757,7 +807,7 @@
             this.panel26.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
+            this.panelChonBom.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -766,6 +816,7 @@
             this.panel17.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -811,9 +862,7 @@
         private Button btnSerachBox;
         private Panel panel24;
         private TableLayoutPanel tableLayoutPanel9;
-        private Panel panel1;
-        private Panel panel23;
-        private Label label1;
+        private Panel panelChonBom;
         private Label label4;
         private Panel panel4;
         private Panel panel20;
@@ -826,5 +875,10 @@
         private TableLayoutPanel tableLayoutPanel5;
         private DateTimePicker dateTimePicker1;
         private DataGridView dataGridView1;
+        private Syncfusion.Windows.Forms.Tools.GridLayout gridLayout1;
+        private CheckBox checkBoxBom1;
+        private CheckBox checkBoxBom2;
+        private CheckBox checkBoxBom3;
+        private CheckBox checkBoxBom4;
     }
 }

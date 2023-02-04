@@ -121,6 +121,7 @@
             this.Name = "FormInBaoCao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "In báo cáo";
+            this.Load += new System.EventHandler(this.FormInBaoCao_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridLayout1)).EndInit();
             this.ResumeLayout(false);
