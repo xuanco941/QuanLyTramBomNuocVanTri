@@ -248,60 +248,26 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                         {
                             using (var workBook = new XLWorkbook())
                             {
+                                
                                 var ws = workBook.Worksheets.Add("Báo cáo năm");
-
                                 ws.Cell("D2").Value = "CP2 BÁO CÁO NĂM";
                                 ws.Cell("D2").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Cell("D2").Style.Font.Bold = true;
                                 ws.Cell("D2").Style.Font.FontSize = 18;
 
-                                ws.Cell("B9").Value = "m";
-                                ws.Cell("B9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("B9").Style.Font.Bold = true;
-                                ws.Cell("B9").Style.Font.FontSize = 14;
-
-                                ws.Cell("C9").Value = "m";
-                                ws.Cell("C9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("C9").Style.Font.Bold = true;
-                                ws.Cell("C9").Style.Font.FontSize = 14;
-
-                                ws.Cell("D9").Value = "h";
-                                ws.Cell("D9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("D9").Style.Font.Bold = true;
-                                ws.Cell("D9").Style.Font.FontSize = 14;
-
-                                ws.Cell("E9").Value = "h";
-                                ws.Cell("E9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("E9").Style.Font.Bold = true;
-                                ws.Cell("E9").Style.Font.FontSize = 14;
-
-                                ws.Cell("F9").Value = "h";
-                                ws.Cell("F9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("F9").Style.Font.Bold = true;
-                                ws.Cell("F9").Style.Font.FontSize = 14;
-
-                                ws.Cell("G9").Value = "h";
-                                ws.Cell("G9").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("G9").Style.Font.Bold = true;
-                                ws.Cell("G9").Style.Font.FontSize = 14;
-
-                                ws.Cell("A5").Value = d.ToString("yyyy");
+                                ws.Cell("A5").Value = d.ToString("dd/MM/yyyy");
                                 ws.Cell("A5").Style.Font.Underline = XLFontUnderlineValues.Double;
                                 ws.Cell("A5").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
+                                ws.Cell("A34").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                ws.Cell("A34").Style.Font.Bold = true;
 
-                                ws.Cell("A22").Value = "TỔNG";
-                                ws.Cell("A22").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("A22").Style.Font.Bold = true;
-                                ws.Cell("A23").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("A23").Style.Font.Bold = true;
-                                ws.Cell("A23").Value = "TBÌNH";
+                                ws.Cell("A35").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                ws.Cell("A35").Style.Font.Bold = true;
 
-
-                                ws.Range("A7:B9").Column(1).Merge();
                                 ws.Cell("A7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Cell("A7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
-                                ws.Cell("A7").Value = "THỜI GIAN";
+
                                 ws.Cell("A7").Style.Font.Bold = true;
                                 ws.Cell("A7").Style.Font.FontSize = 14;
                                 //chieu rong cell
@@ -325,101 +291,52 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                                 col8.Width = 20;
                                 #endregion
 
-                                ws.Range("B7:G7").Style.Font.FontSize = 12;
-
-                                ws.Range("B7:B8").Column(1).Merge();
-                                ws.Cell("B7").Value = "MỰC NƯỚC\r\nBỂ HÚT";
                                 ws.Cell("B7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                ws.Cell("B7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
                                 ws.Cell("B7").Style.Font.Bold = true;
 
-                                ws.Range("C7:C8").Column(1).Merge();
-                                ws.Cell("C7").Value = "MỰC NƯỚC\r\nBỂ XẢ";
                                 ws.Cell("C7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Cell("C7").Style.Font.Bold = true;
+                                ws.Cell("C7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
 
-                                ws.Range("D7:D8").Column(1).Merge();
-                                ws.Cell("D7").Value = "BƠM 1\r\nTHỜI GIAN CHẠY";
                                 ws.Cell("D7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Cell("D7").Style.Font.Bold = true;
+                                ws.Cell("D7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
 
-                                ws.Range("E7:E8").Column(1).Merge();
-                                ws.Cell("E7").Value = "BƠM 2\r\nTHỜI GIAN CHẠY";
                                 ws.Cell("E7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Cell("E7").Style.Font.Bold = true;
+                                ws.Cell("E7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
 
-                                ws.Range("F7:F8").Column(1).Merge();
-                                ws.Cell("F7").Value = "BƠM 3\r\nTHỜI GIAN CHẠY";
                                 ws.Cell("F7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Cell("F7").Style.Font.Bold = true;
+                                ws.Cell("F7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
 
-
-                                ws.Range("G7:G8").Column(1).Merge();
-                                ws.Cell("G7").Value = "BƠM 4\r\nTHỜI GIAN CHẠY";
                                 ws.Cell("G7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                                 ws.Cell("G7").Style.Font.Bold = true;
+                                ws.Cell("G7").Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
+
+                                ws.Row(7).Style.Font.FontSize = 14;
+                                ws.Row(7).Height = 55;
+                                ws.Row(7).Style.Alignment.WrapText = true;
+
+                                ws.Range("A8:G21").Style.Font.FontSize = 14;
+                                ws.Range("A8:G21").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
 
 
 
-
-                                //add du lieu vao excel
-
-                                List<ClassFormatDate> listData = new List<ClassFormatDate>();
-
-                                int i = 1;
-
-                                foreach (var item in list)
+                                for (int i = 0; i < dataGridView1.Columns.Count; i++)
                                 {
-                                    ClassFormatDate c = new ClassFormatDate();
-                                    c.ThoiGian = (i - 1).ToString() + " - " + i.ToString();
-                                    c.MucNuocHut = item.MucNuocBeHut;
-                                    c.MucNuocXa = item.MucNuocBeXa;
-                                    c.ThoiGianChayBom1 = Math.Floor(item.ThoiGianChayBom1 / 60).ToString() + " h " + (item.ThoiGianChayBom1 % 60).ToString() + " min ";
-                                    c.ThoiGianChayBom2 = Math.Floor(item.ThoiGianChayBom2 / 60).ToString() + " h " + (item.ThoiGianChayBom2 % 60).ToString() + " min ";
-                                    c.ThoiGianChayBom3 = Math.Floor(item.ThoiGianChayBom3 / 60).ToString() + " h " + (item.ThoiGianChayBom3 % 60).ToString() + " min ";
-                                    c.ThoiGianChayBom4 = Math.Floor(item.ThoiGianChayBom4 / 60).ToString() + " h " + (item.ThoiGianChayBom4 % 60).ToString() + " min ";
-
-
-                                    listData.Add(c);
-                                    i++;
-                                }
-                                var a = from p in listData
-                                        select new { p.ThoiGian, p.MucNuocHut, p.MucNuocXa, p.ThoiGianChayBom1, p.ThoiGianChayBom2, p.ThoiGianChayBom3, p.ThoiGianChayBom4 };
-                                var range = ws.Cell(10, 1).InsertData(a.AsEnumerable());
-
-                                ws.Range("A10:G35").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Range("A10:G35").Style.Font.FontSize = 14;
-                                ws.Rows().Height = 20;
-
-                                //tính tổng, tb
-                                double trungBinhBeXa = 0;
-                                double trungBinhBeHut = 0;
-
-                                double TongThoiGianChayBom1 = 0;
-                                double TongThoiGianChayBom2 = 0;
-                                double TongThoiGianChayBom3 = 0;
-                                double TongThoiGianChayBom4 = 0;
-
-                                foreach (BaoCao item in list)
-                                {
-                                    trungBinhBeHut = trungBinhBeHut + item.MucNuocBeHut;
-                                    trungBinhBeXa = trungBinhBeXa + item.MucNuocBeXa;
-
-
-                                    TongThoiGianChayBom1 = TongThoiGianChayBom1 + item.ThoiGianChayBom1;
-                                    TongThoiGianChayBom2 = TongThoiGianChayBom2 + item.ThoiGianChayBom2;
-                                    TongThoiGianChayBom3 = TongThoiGianChayBom3 + item.ThoiGianChayBom3;
-                                    TongThoiGianChayBom4 = TongThoiGianChayBom4 + item.ThoiGianChayBom4;
-
+                                    ws.Cell(7, 1 + i).Value = dataGridView1.Columns[i].HeaderText;
                                 }
 
-                                ws.Cell("B23").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeHut / list.Count), 2, MidpointRounding.AwayFromZero));
-                                ws.Cell("C23").Value = String.Format("{0:0.00}", Math.Round((trungBinhBeXa / list.Count), 2, MidpointRounding.AwayFromZero));
-                                ws.Cell("D22").Value = Math.Floor(TongThoiGianChayBom1 / 60).ToString() + " h " + (TongThoiGianChayBom1 % 60).ToString() + " min ";
-                                ws.Cell("E22").Value = Math.Floor(TongThoiGianChayBom2 / 60).ToString() + " h " + (TongThoiGianChayBom2 % 60).ToString() + " min ";
-                                ws.Cell("F22").Value = Math.Floor(TongThoiGianChayBom3 / 60).ToString() + " h " + (TongThoiGianChayBom3 % 60).ToString() + " min ";
-                                ws.Cell("G22").Value = Math.Floor(TongThoiGianChayBom4 / 60).ToString() + " h " + (TongThoiGianChayBom4 % 60).ToString() + " min ";
-
+                                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                                {
+                                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                                    {
+                                        ws.Cell(i + 8, j + 1).Value = dataGridView1.Rows[i].Cells[j].Value;
+                                    }
+                                }
 
                                 string tenfile = ".xlsx";
                                 workBook.SaveAs(sfd.FileName + DateTime.Now.ToString("dd_MM_yyyy_hhmmss") + tenfile);
