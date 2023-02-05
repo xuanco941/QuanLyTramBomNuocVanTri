@@ -96,24 +96,24 @@ namespace QuanLyTramBom
                 {
                     if (listStr.Count == 1)
                     {
-                        dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, listStr[0]);
+                        dt.Rows.Add((i - 1).ToString() + " -> " + i.ToString(), xa, hut, listStr[0]);
                     }
                     if (listStr.Count == 2)
                     {
-                        dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, listStr[0], listStr[1]);
+                        dt.Rows.Add((i - 1).ToString() + " -> " + i.ToString(), xa, hut, listStr[0], listStr[1]);
                     }
                     if (listStr.Count == 3)
                     {
-                        dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, listStr[0], listStr[1], listStr[2]);
+                        dt.Rows.Add((i - 1).ToString() + " -> " + i.ToString(), xa, hut, listStr[0], listStr[1], listStr[2]);
                     }
                     if (listStr.Count == 4)
                     {
-                        dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut, listStr[0], listStr[1], listStr[2], listStr[3]);
+                        dt.Rows.Add((i - 1).ToString() + " -> " + i.ToString(), xa, hut, listStr[0], listStr[1], listStr[2], listStr[3]);
                     }
                 }
                 else
                 {
-                    dt.Rows.Add((i - 1).ToString() + " - " + i.ToString(), xa, hut);
+                    dt.Rows.Add((i - 1).ToString() + " -> " + i.ToString(), xa, hut);
                 }
 
 
