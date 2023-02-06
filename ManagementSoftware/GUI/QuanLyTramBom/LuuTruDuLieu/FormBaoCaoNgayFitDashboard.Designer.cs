@@ -583,6 +583,7 @@
             this.checkBoxBom1.TabIndex = 7;
             this.checkBoxBom1.Text = "Bơm 1";
             this.checkBoxBom1.UseVisualStyleBackColor = true;
+            this.checkBoxBom1.CheckedChanged += new System.EventHandler(this.checkBoxBom1_CheckedChanged);
             // 
             // checkBoxBom2
             // 
@@ -595,6 +596,7 @@
             this.checkBoxBom2.TabIndex = 6;
             this.checkBoxBom2.Text = "Bơm 2";
             this.checkBoxBom2.UseVisualStyleBackColor = true;
+            this.checkBoxBom2.CheckedChanged += new System.EventHandler(this.checkBoxBom2_CheckedChanged);
             // 
             // checkBoxBom3
             // 
@@ -606,6 +608,7 @@
             this.checkBoxBom3.TabIndex = 5;
             this.checkBoxBom3.Text = "Bơm 3";
             this.checkBoxBom3.UseVisualStyleBackColor = true;
+            this.checkBoxBom3.CheckedChanged += new System.EventHandler(this.checkBoxBom3_CheckedChanged);
             // 
             // checkBoxBom4
             // 
@@ -618,6 +621,7 @@
             this.checkBoxBom4.TabIndex = 4;
             this.checkBoxBom4.Text = "Bơm 4";
             this.checkBoxBom4.UseVisualStyleBackColor = true;
+            this.checkBoxBom4.CheckedChanged += new System.EventHandler(this.checkBoxBom4_CheckedChanged);
             // 
             // label4
             // 

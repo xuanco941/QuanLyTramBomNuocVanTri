@@ -246,7 +246,7 @@
             // dateTimePickerTuNgay
             // 
             this.dateTimePickerTuNgay.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerTuNgay.CustomFormat = "dd/MM/yyyy   HH:m";
+            this.dateTimePickerTuNgay.CustomFormat = "dd/MM/yyyy   HH:mm";
             this.dateTimePickerTuNgay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePickerTuNgay.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -258,7 +258,7 @@
             // 
             // dateTimePickerDenNgay
             // 
-            this.dateTimePickerDenNgay.CustomFormat = "dd/MM/yyyy   HH:m";
+            this.dateTimePickerDenNgay.CustomFormat = "dd/MM/yyyy   HH:mm";
             this.dateTimePickerDenNgay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePickerDenNgay.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;

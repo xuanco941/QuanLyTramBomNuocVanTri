@@ -226,12 +226,32 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
             {
                 item.Cells[0].Style.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             }
+
+
+
+            z = 0;
+            if (checkBoxBom1.Checked == true)
+            {
+                z++;
+            }
+            if (checkBoxBom2.Checked == true)
+            {
+                z++;
+            }
+            if (checkBoxBom3.Checked == true)
+            {
+                z++;
+            }
+            if (checkBoxBom4.Checked == true)
+            {
+                z++;
+            }
         }
         private void btnSerachBox_Click(object sender, EventArgs e)
         {
             SearchData();
         }
-
+        int z = 0;
         private void button1_Click(object sender, EventArgs e)
         {
             if (list == null || list.Count <= 0)
@@ -249,13 +269,50 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                             using (var workBook = new XLWorkbook())
                             {
                                 
-                                var ws = workBook.Worksheets.Add("Báo cáo năm");
-                                ws.Cell("D2").Value = "CP2 BÁO CÁO NĂM";
-                                ws.Cell("D2").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                                ws.Cell("D2").Style.Font.Bold = true;
-                                ws.Cell("D2").Style.Font.FontSize = 18;
 
-                                ws.Cell("A5").Value = d.ToString("dd/MM/yyyy");
+                                var ws = workBook.Worksheets.Add("Báo cáo năm");
+                                if (z == 0)
+                                {
+                                    ws.Cell("B2").Value = "CP2 BÁO CÁO NĂM";
+                                    ws.Cell("B2").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                    ws.Cell("B2").Style.Font.Bold = true;
+                                    ws.Cell("B2").Style.Font.FontSize = 18;
+                                }
+                                else if (z == 1)
+                                {
+                                    ws.Range(ws.Cell("B2"), ws.Cell("C2")).Merge();
+                                    ws.Range(ws.Cell("B2"), ws.Cell("C2")).Value = "CP2 BÁO CÁO NĂM";
+                                    ws.Range(ws.Cell("B2"), ws.Cell("C2")).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                    ws.Range(ws.Cell("B2"), ws.Cell("C2")).Style.Font.Bold = true;
+                                    ws.Range(ws.Cell("B2"), ws.Cell("C2")).Style.Font.FontSize = 18;
+
+                                }
+                                else if (z == 2)
+                                {
+                                    ws.Cell("C2").Value = "CP2 BÁO CÁO NĂM";
+                                    ws.Cell("C2").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                    ws.Cell("C2").Style.Font.Bold = true;
+                                    ws.Cell("C2").Style.Font.FontSize = 18;
+                                }
+                                else if (z == 3)
+                                {
+                                    ws.Range(ws.Cell("C2"), ws.Cell("D2")).Merge();
+                                    ws.Range(ws.Cell("C2"), ws.Cell("D2")).Value = "CP2 BÁO CÁO NĂM";
+                                    ws.Range(ws.Cell("C2"), ws.Cell("D2")).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                    ws.Range(ws.Cell("C2"), ws.Cell("D2")).Style.Font.Bold = true;
+                                    ws.Range(ws.Cell("C2"), ws.Cell("D2")).Style.Font.FontSize = 18;
+                                }
+                                else
+                                {
+                                    ws.Cell("D2").Value = "CP2 BÁO CÁO NĂM";
+                                    ws.Cell("D2").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                                    ws.Cell("D2").Style.Font.Bold = true;
+                                    ws.Cell("D2").Style.Font.FontSize = 18;
+                                }
+
+
+
+                                ws.Cell("A5").Value = d.ToString("yyyy");
                                 ws.Cell("A5").Style.Font.Underline = XLFontUnderlineValues.Double;
                                 ws.Cell("A5").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
 
@@ -272,23 +329,40 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                                 ws.Cell("A7").Style.Font.FontSize = 14;
                                 //chieu rong cell
                                 #region 
-                                var col1 = ws.Column("A");
-                                var col2 = ws.Column("B");
-                                var col3 = ws.Column("C");
-                                var col4 = ws.Column("D");
-                                var col5 = ws.Column("E");
-                                var col6 = ws.Column("F");
-                                var col7 = ws.Column("G");
-                                var col8 = ws.Column("H");
 
+
+
+                                var col1 = ws.Column("A");
                                 col1.Width = 15;
+
+                                var col2 = ws.Column("B");
                                 col2.Width = 20;
+
+                                var col3 = ws.Column("C");
                                 col3.Width = 20;
-                                col4.Width = 20;
-                                col5.Width = 20;
-                                col6.Width = 20;
-                                col7.Width = 20;
-                                col8.Width = 20;
+
+                                if (z >= 1)
+                                {
+                                    var col4 = ws.Column("D");
+                                    col4.Width = 20;
+                                }
+                                if (z >= 2)
+                                {
+                                    var col5 = ws.Column("E");
+                                    col5.Width = 20;
+                                }
+                                if (z >= 3)
+                                {
+                                    var col6 = ws.Column("F");
+                                    col6.Width = 20;
+                                }
+                                if (z >= 4)
+                                {
+                                    var col7 = ws.Column("G");
+                                    col7.Width = 20;
+                                }
+
+
                                 #endregion
 
                                 ws.Cell("B7").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
@@ -319,8 +393,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
                                 ws.Row(7).Height = 55;
                                 ws.Row(7).Style.Alignment.WrapText = true;
 
+
+
                                 ws.Range("A8:G21").Style.Font.FontSize = 14;
                                 ws.Range("A8:G21").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+
 
 
 
@@ -405,6 +483,29 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
             checkBoxBom4.Checked = true;
 
             SearchData();
+        }
+
+        private void checkBoxBom2_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchData();
+        }
+
+        private void checkBoxBom1_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchData();
+
+        }
+
+        private void checkBoxBom3_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchData();
+
+        }
+
+        private void checkBoxBom4_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchData();
+
         }
     }
 }
