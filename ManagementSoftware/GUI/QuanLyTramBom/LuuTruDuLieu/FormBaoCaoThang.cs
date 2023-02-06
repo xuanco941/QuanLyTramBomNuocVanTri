@@ -32,6 +32,7 @@ namespace QuanLyTramBom
 
         void SearchData()
         {
+            dataGridView1.DataSource = null;
             // d là dữ liệu đầu vào
             d = dateTimePicker1.Value;
             //real Date thuong la no tu lay giờ hiện tại của minh

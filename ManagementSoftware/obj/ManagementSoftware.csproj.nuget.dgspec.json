@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xuanc\\OneDrive\\Desktop\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {}
+    "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xuanc\\OneDrive\\Desktop\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {
+    "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xuanc\\OneDrive\\Desktop\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+        "projectUniqueName": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
         "projectName": "ManagementSoftware",
-        "projectPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
+        "projectPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\ManagementSoftware.csproj",
         "packagesPath": "C:\\Users\\xuanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
+        "outputPath": "C:\\Users\\xuanc\\OneDrive\\Desktop\\WorkPlace\\C-Sharp\\Working\\DESKTOP\\Phan Mem Bom\\Code\\QuanLyTramBomNuocVanTri\\ManagementSoftware\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xuanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
