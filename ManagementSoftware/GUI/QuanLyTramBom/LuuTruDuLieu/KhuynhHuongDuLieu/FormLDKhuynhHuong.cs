@@ -1,5 +1,6 @@
 ﻿using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong;
+using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using Syncfusion.Drawing;
 using Syncfusion.Windows.Forms.Chart;
@@ -88,7 +89,9 @@ namespace QuanLyTramBom
                 {
                     BeginInvoke(() =>
                     {
-                        FormItemChuThich form = new FormItemChuThich(x);
+                        bool exists = new AnalogCommon().listAllAnalogs.Any(a => a.DiaChiPLC == x.DiaChiPLC);
+
+                        FormItemChuThich form = new FormItemChuThich(x, exists);
                         form.TopLevel = false;
                         panelChuThich.Controls.Add(form);
                         form.FormBorderStyle = FormBorderStyle.None;
@@ -382,6 +385,7 @@ namespace QuanLyTramBom
 
 
 
+        DateTime date = DateTime.Now;
 
         private void chartControl1_MouseMove_1(object sender, MouseEventArgs e)
         {
@@ -390,19 +394,25 @@ namespace QuanLyTramBom
             //string text = "Result of method GetValueByPoint - {" + point.X.ToString() + "," + point.YValues[0].ToString() + "}";
             Point clickPoint = new Point(e.X, e.Y);
             string text = "";
+
+            date = DateTime.Now;
+
             try
             {
-                text = this.chartControl1.ChartArea.GetValueByPoint(clickPoint).DateX.ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
+                date = this.chartControl1.ChartArea.GetValueByPoint(clickPoint).DateX;
+                text = date.ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
             }
             catch
             {
                 try
                 {
                     text = DateTime.FromOADate(point.X).ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
+                    date = DateTime.FromOADate(point.X);
                 }
                 catch
                 {
-
+                    text = "";
+                    date = DateTime.Now;
                 }
             }
             finally
@@ -411,6 +421,17 @@ namespace QuanLyTramBom
             }
 
         }
+
+        private void chartControl1_ChartRegionClick(object sender, ChartRegionMouseEventArgs e)
+        {
+            label1.Text = "12312";
+            foreach (FormItemChuThich i in panelChuThich.Controls)
+            {
+                i.UpdateLabel(date);
+            }
+        }
+
+
 
         private async void FormLDKhuynhHuong_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -441,5 +462,6 @@ namespace QuanLyTramBom
             dateTimePickerDenNgay.Value = now.AddDays(1);
 
         }
+
     }
 }

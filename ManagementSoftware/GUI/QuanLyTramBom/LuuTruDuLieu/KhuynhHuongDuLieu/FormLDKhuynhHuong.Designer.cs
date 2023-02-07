@@ -98,6 +98,7 @@
             this.chartControl1.Title.Name = "Default";
             this.chartControl1.Titles.Add(this.chartControl1.Title);
             this.chartControl1.VisualTheme = "";
+            this.chartControl1.ChartRegionClick += new Syncfusion.Windows.Forms.Chart.ChartRegionMouseEventHandler(this.chartControl1_ChartRegionClick);
             this.chartControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chartControl1_MouseMove_1);
             // 
             // panelChuThich

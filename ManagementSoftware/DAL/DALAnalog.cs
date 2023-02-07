@@ -41,6 +41,32 @@ namespace ManagementSoftware.DAL
             }
             await dbContext.SaveChangesAsync();
         }
+
+        public double GetAValue(string diachiPLC, DateTime date)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            try
+            {
+
+                Analog? a1 = dbContext.Analogs
+                     .Where(a => a.DiaChiPLC == diachiPLC && a.ThoiGian >= date.AddMinutes(-1) && a.ThoiGian <= date.AddMinutes(1))
+                    .OrderByDescending(a => a.ThoiGian)
+                    .FirstOrDefault();
+
+                if (a1 != null)
+                {
+                    return a1.GiaTriDong;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
     }
 
 }

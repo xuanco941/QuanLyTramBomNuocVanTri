@@ -1,4 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Office.CustomUI;
+using ManagementSoftware.DAL;
+using ManagementSoftware.GUI.Section;
 using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using ManagementSoftware.PLC;
@@ -17,91 +19,62 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
     public partial class FormItemChuThich : Form
     {
         XuHuongVaTinHieu xuHuongVaTinHieu;
-        PLCAnalog plc;
-        PLCDigital plc2;
+        bool checkAnalog;
+        DALAnalog dalAnalog;
+        DALDigital dalDigital;
 
-        Analog? analog = null;
-        public FormItemChuThich(XuHuongVaTinHieu xuHuong)
+        public FormItemChuThich(XuHuongVaTinHieu xuHuong, bool isAnalog)
         {
             InitializeComponent();
 
             xuHuongVaTinHieu = xuHuong;
-            labelValue.Text = xuHuongVaTinHieu.Min.ToString();
-            labelTinHieu.Text = xuHuongVaTinHieu.TinHieu;
-            labelDonVi.Text = xuHuongVaTinHieu.DonVi;
-            labelanThe.Text = xuHuong.GanThe;
-
-            labelanThe.ForeColor = Color.FromName(xuHuong.Color);
-            labelValue.ForeColor = Color.FromName(xuHuong.Color);
-            labelDonVi.ForeColor = Color.FromName(xuHuong.Color);
-            labelTinHieu.ForeColor = Color.FromName(xuHuong.Color);
-
-            List<Analog> analogs = new AnalogCommon().listAllAnalogs;
-
-            List<Analog> listCheck = analogs.Where(a => a.TinHieu == xuHuongVaTinHieu.TinHieu && a.DiaChiPLC == xuHuongVaTinHieu.DiaChiPLC).ToList();
-            if (listCheck!=null && listCheck.Count > 0)
-            {
-                plc = new PLCAnalog();
-                analog = listCheck[0];
-            }
-            else {
-                plc2 = new PLCDigital();
-            }
-
-        }
-
-
-
-
-        private async void timer1_Tick(object sender, EventArgs e)
-        {
-            if(analog !=null)
-            {
-                Analog? x = await plc.GetAnAnalog(analog);
-                if (x != null)
-                {
-                    labelValue.Text = String.Format("{0:0.00}", Math.Round((double)x.GiaTriDong, 2, MidpointRounding.ToPositiveInfinity));
-                }
-            }
-            else
-            {
-                int? x = await plc2.Query(xuHuongVaTinHieu.DiaChiPLC);
-                if (x != null)
-                {
-                    labelValue.Text = x.ToString();
-                }
-
-            }
-
+            checkAnalog = isAnalog;
+            dalAnalog = new DALAnalog();
+            dalDigital = new DALDigital();
         }
 
         private async void FormItemChuThich_Load(object sender, EventArgs e)
         {
-            if(plc != null)
+            if(checkAnalog == true)
             {
-                await plc.Open();
+                labelValue.Text = String.Format("{0:0.00}", Math.Round((double)xuHuongVaTinHieu.Min, 2, MidpointRounding.ToPositiveInfinity));
             }
-            if (plc2 != null)
+            else
             {
-                await plc2.Open();
+                labelValue.Text = "0";
             }
 
-            timer1.Start();
+            labelTinHieu.Text = xuHuongVaTinHieu.TinHieu;
+            labelDonVi.Text = xuHuongVaTinHieu.DonVi;
+            labelanThe.Text = xuHuongVaTinHieu.GanThe;
+
+            labelanThe.ForeColor = Color.FromName(xuHuongVaTinHieu.Color);
+            labelValue.ForeColor = Color.FromName(xuHuongVaTinHieu.Color);
+            labelDonVi.ForeColor = Color.FromName(xuHuongVaTinHieu.Color);
+            labelTinHieu.ForeColor = Color.FromName(xuHuongVaTinHieu.Color);
+            labelDate.ForeColor = Color.FromName(xuHuongVaTinHieu.Color);
         }
 
-        private async void FormItemChuThich_FormClosing(object sender, FormClosingEventArgs e)
+
+
+        public void UpdateLabel(DateTime date)
         {
-            timer1.Stop();
-            timer1.Dispose();
-            if (plc != null)
+            if (checkAnalog == true)
             {
-                await plc.Close();
+                double value = dalAnalog.GetAValue(xuHuongVaTinHieu.DiaChiPLC, date);
+
+                labelValue.Text = String.Format("{0:0.00}", Math.Round(value, 2, MidpointRounding.ToPositiveInfinity));
             }
-            if (plc2 != null)
+            else
             {
-                await plc2.Close();
+                bool value = dalDigital.GetAValue(xuHuongVaTinHieu.DiaChiPLC, date);
+                labelValue.Text = value == true ? "1" : "0";
             }
 
+            labelDate.Text = date.ToString("HH:mm:ss dd/MM/yyyy");
+            labelValue.Refresh();
+            labelDate.Refresh();
         }
+
     }
 }

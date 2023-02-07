@@ -1,5 +1,6 @@
 ﻿using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong;
+using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using Syncfusion.Drawing;
 using Syncfusion.Windows.Forms.Chart;
@@ -9,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,6 +27,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         {
 
             InitializeComponent();
+
 
             chartControl1.Title.Text = "Khuynh Hướng Thời Gian Thực";
             this.chartControl1.Title.Font = new System.Drawing.Font("Candara", 20F, System.Drawing.FontStyle.Bold);
@@ -46,7 +49,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             //this.chartControl1.PrimaryXAxis.TickLabelsDrawingMode = ChartAxisTickLabelDrawingMode.UserMode;
 
 
-    
+
 
 
 
@@ -85,6 +88,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
+
         void SetChuThich(XuHuongVaTinHieu x)
         {
             new Thread(() =>
@@ -93,7 +97,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 {
                     BeginInvoke(() =>
                     {
-                        FormItemChuThich form = new FormItemChuThich(x);
+                        bool exists = new AnalogCommon().listAllAnalogs.Any(a => a.DiaChiPLC == x.DiaChiPLC);
+
+                        FormItemChuThich form = new FormItemChuThich(x, exists);
                         form.TopLevel = false;
                         panelChuThich.Controls.Add(form);
                         form.FormBorderStyle = FormBorderStyle.None;
@@ -119,6 +125,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         }
         async void Set(string name)
         {
+
             List<FormItemChuThich> l = new List<FormItemChuThich>();
             foreach (FormItemChuThich i in panelChuThich.Controls)
             {
@@ -154,7 +161,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                         series1.Style.Border.Width = 5;
                         series1.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series1.Tag = item.Max;
-                       series1.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red,Color.FromName(item.Color));
+                        series1.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
                         SetChuThich(item);
 
                     }
@@ -266,7 +273,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             await wait(series);
             double a = (double)series.Tag;
             List<DataDoThi>? list = new DALDataDoThi().GetListDataOn1Hour(series.Text, a);
-            if (list != null && list.Count>0)
+            if (list != null && list.Count > 0)
             {
                 foreach (DataDoThi item in list)
                 {
@@ -341,33 +348,47 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 l.Add(i);
             }
-            if (l!=null && l.Count > 0)
+            if (l != null && l.Count > 0)
             {
                 await CloseFormItem(l);
             }
         }
 
+
+
+
+       
+
+        DateTime date = DateTime.Now;
+       
+
         private void chartControl1_MouseMove(object sender, MouseEventArgs e)
         {
+
             ChartPoint point = this.chartControl1.ChartArea.GetValueByPoint(new Point(e.X, e.Y));
 
             //string text = "Result of method GetValueByPoint - {" + point.X.ToString() + "," + point.YValues[0].ToString() + "}";
             Point clickPoint = new Point(e.X, e.Y);
             string text = "";
+
+            date = DateTime.Now;
+
             try
             {
-                text = this.chartControl1.ChartArea.GetValueByPoint(clickPoint).DateX.ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
+                date = this.chartControl1.ChartArea.GetValueByPoint(clickPoint).DateX;
+                text = date.ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
             }
             catch
             {
                 try
                 {
                     text = DateTime.FromOADate(point.X).ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
-
+                    date = DateTime.FromOADate(point.X);
                 }
                 catch
                 {
                     text = "";
+                    date = DateTime.Now;
                 }
             }
             finally
@@ -375,7 +396,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 toolTip1.SetToolTip(chartControl1, text);
             }
 
+        }
 
+        private void chartControl1_ChartRegionClick(object sender, ChartRegionMouseEventArgs e)
+        {
+            foreach (FormItemChuThich i in panelChuThich.Controls)
+            {
+                i.UpdateLabel(date);
+            }
         }
     }
 }
