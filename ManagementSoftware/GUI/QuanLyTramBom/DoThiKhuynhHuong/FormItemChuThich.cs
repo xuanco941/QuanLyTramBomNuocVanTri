@@ -53,6 +53,12 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong
             labelDonVi.ForeColor = Color.FromName(xuHuongVaTinHieu.Color);
             labelTinHieu.ForeColor = Color.FromName(xuHuongVaTinHieu.Color);
             labelDate.ForeColor = Color.FromName(xuHuongVaTinHieu.Color);
+
+            labelanThe.Refresh();
+            labelValue.Refresh();
+            labelDonVi.Refresh();
+            labelTinHieu.Refresh();
+            labelDate.Refresh();
         }
 
 

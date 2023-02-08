@@ -757,7 +757,6 @@ C:\Users\LENOVO\Desktop\lastfix\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\D
 C:\Users\LENOVO\Desktop\lastfix\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\lastfix\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.Help.resources
-C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\bin\Debug\net6.0-windows\HDSD.pdf
 C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.GUI.QuanLyTramBom.DigitalClock.resources
 C:\Users\LENOVO\Desktop\donebc\QuanLyTramBomNuocVanTri\ManagementSoftware\bin\Debug\net6.0-windows\ManagementSoftware.exe
 C:\Users\LENOVO\Desktop\donebc\QuanLyTramBomNuocVanTri\ManagementSoftware\bin\Debug\net6.0-windows\ConnectStringDB.txt
@@ -1005,3 +1004,5 @@ C:\Users\xuanc\OneDrive\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\D
 C:\Users\xuanc\OneDrive\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.pdb
 C:\Users\xuanc\OneDrive\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ManagementSoftware.genruntimeconfig.cache
 C:\Users\xuanc\OneDrive\Desktop\QuanLyTramBomNuocVanTri\ManagementSoftware\obj\Debug\net6.0-windows\ref\ManagementSoftware.dll
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\bin\Debug\net6.0-windows\Caidat.pdf
+C:\Users\xuanc\OneDrive\Desktop\WorkPlace\C-Sharp\Working\DESKTOP\Phan Mem Bom\Code\QuanLyTramBomNuocVanTri\ManagementSoftware\bin\Debug\net6.0-windows\VanHanh.pdf

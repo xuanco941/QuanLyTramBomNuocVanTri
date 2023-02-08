@@ -62,7 +62,7 @@ namespace ManagementSoftware
 
 
 
-            new Thread( async () =>
+            new Thread(async () =>
             {
                 DataDigital d = new DataDigital();
                 await d.Init();

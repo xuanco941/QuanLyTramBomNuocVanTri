@@ -19,7 +19,7 @@ namespace ManagementSoftware.GUI
 
         private void Help_Load(object sender, EventArgs e)
         {
-            pdfDocumentView1.Load("HDSD.pdf");
+            pdfDocumentView1.Load("VanHanh.pdf");
         }
     }
 }

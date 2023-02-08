@@ -424,7 +424,6 @@ namespace QuanLyTramBom
 
         private void chartControl1_ChartRegionClick(object sender, ChartRegionMouseEventArgs e)
         {
-            label1.Text = "12312";
             foreach (FormItemChuThich i in panelChuThich.Controls)
             {
                 i.UpdateLabel(date);

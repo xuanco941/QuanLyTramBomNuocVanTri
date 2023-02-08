@@ -37,6 +37,42 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 list2.Add(new Alert() { DiaChiPLC = item.DiaChiPLC, DieuKien = item.DieuKien, GanThe = item.GanThe, Nhom = item.Nhom, ThoiGian = item.ThoiGian, TinHieu = item.TinHieu, TrangThai = item.TrangThai, Bat = item.Bat, Tat = item.Tat });
             }
+            DataGridViewColumn GanThe = new DataGridViewTextBoxColumn();
+            GanThe.HeaderText = "Gắn thẻ";
+            GanThe.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DataGridViewColumn ngay= new DataGridViewTextBoxColumn();
+            ngay.HeaderText = "Ngày";
+            ngay.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            DataGridViewColumn ThoiGian = new DataGridViewTextBoxColumn();
+            ThoiGian.HeaderText = "Thời gian";
+            ThoiGian.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            DataGridViewColumn dieuKien = new DataGridViewTextBoxColumn();
+            dieuKien.HeaderText = "Điều kiện";
+            dieuKien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            DataGridViewColumn nhom = new DataGridViewTextBoxColumn();
+            nhom.HeaderText = "Nhóm";
+
+            DataGridViewColumn mota = new DataGridViewTextBoxColumn();
+            mota.HeaderText = "Mô tả";
+            mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            DataGridViewColumn giatri = new DataGridViewTextBoxColumn();
+            giatri.HeaderText = "Giá trị";
+
+
+            dataGridView1.Columns.Add(GanThe);
+            dataGridView1.Columns.Add(ngay);
+            dataGridView1.Columns.Add(ThoiGian);
+            dataGridView1.Columns.Add(dieuKien);
+            dataGridView1.Columns.Add(nhom);
+            dataGridView1.Columns.Add(mota);
+            dataGridView1.Columns.Add(giatri);
+
+
+
             LoadFormThongKe(list2);
         }
 
@@ -49,16 +85,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 return;
             }
 
+            dataGridView1.Rows.Clear();
 
 
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Gắn thẻ");
-            dt.Columns.Add("Ngày");
-            dt.Columns.Add("Thời gian");
-            dt.Columns.Add("Điều kiện");
-            dt.Columns.Add("Nhóm");
-            dt.Columns.Add("Mô tả");
-            dt.Columns.Add("Giá trị");
             if (list != null && list.Count>0)
             {
                 foreach (Alert alert in list.ToList())
@@ -66,19 +95,18 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     string createAt = alert.ThoiGian.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
                     string thoiGian = alert.ThoiGian.ToString("HH:mm:ss", CultureInfo.InvariantCulture);
 
-                    //string c = alert.TrangThai.ToString();
-                    dt.Rows.Add(alert.GanThe, createAt, thoiGian, alert.DieuKien, alert.Nhom, alert.TinHieu, alert.Bat);
+                    int rowId = dataGridView1.Rows.Add();
+                    DataGridViewRow row = dataGridView1.Rows[rowId];
+                    row.Cells[0].Value = alert.GanThe;
+                    row.Cells[1].Value = createAt;
+                    row.Cells[2].Value = thoiGian;
+                    row.Cells[3].Value = alert.DieuKien;
+                    row.Cells[4].Value = alert.Nhom;
+                    row.Cells[5].Value = alert.TinHieu;
+                    row.Cells[6].Value = alert.Bat;
+
                 }
             }
-            dataGridView1.DataSource = dt;
-            //mo thanh search
-
-
-            this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
 
             bool changeColor = false;
@@ -144,9 +172,18 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         int TIME_INTERVAL_IN_MILLISECONDS = 0;
         private async void buttonClear_Click_1(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+
             this.Enabled = false;
             await taskDelete();
-            timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+            if (timer != null)
+            {
+                this.timer.Change(Timeout.Infinite, Timeout.Infinite);
+                timer.Dispose();
+                timer = null;
+
+                timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+            }
             this.Enabled = true;
         }
 

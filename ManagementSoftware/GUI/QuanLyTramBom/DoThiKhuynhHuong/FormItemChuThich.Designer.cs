@@ -53,7 +53,6 @@
             this.gridLayout1.SetParticipateInLayout(this.labelDonVi, true);
             this.labelDonVi.Size = new System.Drawing.Size(100, 17);
             this.labelDonVi.TabIndex = 32;
-            this.labelDonVi.Text = "donVi";
             this.labelDonVi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelValue
@@ -65,7 +64,6 @@
             this.gridLayout1.SetParticipateInLayout(this.labelValue, true);
             this.labelValue.Size = new System.Drawing.Size(100, 17);
             this.labelValue.TabIndex = 33;
-            this.labelValue.Text = "valuelb";
             this.labelValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelTinHieu
@@ -76,9 +74,8 @@
             this.labelTinHieu.Location = new System.Drawing.Point(101, 0);
             this.labelTinHieu.Name = "labelTinHieu";
             this.gridLayout1.SetParticipateInLayout(this.labelTinHieu, true);
-            this.labelTinHieu.Size = new System.Drawing.Size(54, 17);
+            this.labelTinHieu.Size = new System.Drawing.Size(0, 17);
             this.labelTinHieu.TabIndex = 34;
-            this.labelTinHieu.Text = "tinHieu";
             // 
             // labelanThe
             // 
@@ -89,9 +86,8 @@
             this.labelanThe.Name = "labelanThe";
             this.labelanThe.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.gridLayout1.SetParticipateInLayout(this.labelanThe, true);
-            this.labelanThe.Size = new System.Drawing.Size(59, 17);
+            this.labelanThe.Size = new System.Drawing.Size(5, 17);
             this.labelanThe.TabIndex = 35;
-            this.labelanThe.Text = "ganThe";
             // 
             // labelDate
             // 
@@ -102,7 +98,6 @@
             this.gridLayout1.SetParticipateInLayout(this.labelDate, true);
             this.labelDate.Size = new System.Drawing.Size(100, 17);
             this.labelDate.TabIndex = 36;
-            this.labelDate.Text = "sad";
             this.labelDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormItemChuThich

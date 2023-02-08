@@ -16,5 +16,11 @@ namespace ManagementSoftware.GUI
         {
             InitializeComponent();
         }
+
+        private void Settings_Load(object sender, EventArgs e)
+        {
+            pdfDocumentView1.Load("Caidat.pdf");
+
+        }
     }
 }
