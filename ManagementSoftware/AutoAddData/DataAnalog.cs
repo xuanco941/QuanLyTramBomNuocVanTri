@@ -25,21 +25,11 @@ namespace ManagementSoftware.AutoAddData
             List<Analog>? l = await plc.GetListDataAnalog(new AnalogCommon().listAllAnalogs);
             if (l != null && l.Count > 0)
             {
-                List<Analog>? listS = new List<Analog>();
-                foreach (var a in l)
+                double x = l.Sum(v => v.GiaTriDong);
+                if (x != 0)
                 {
-                    if ((a.DiaChiPLC == "D10092" && a.GiaTriDong == 0) || (a.DiaChiPLC == "D10094" && a.GiaTriDong == 0)
-                        || (a.DiaChiPLC == "D10096" && a.GiaTriDong == 0) || (a.DiaChiPLC == "D10098" && a.GiaTriDong == 0))
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        listS.Add(a);
-                    }
-
+                    await DALAnalog.AddRange(l);
                 }
-                await DALAnalog.AddRange(listS);
             }
             await plc.Close();
         }
