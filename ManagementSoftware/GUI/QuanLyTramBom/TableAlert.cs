@@ -29,7 +29,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             dataGridView1.RowTemplate.Height = 40;
         }
 
-        private void TableAlert_Load(object sender, EventArgs e)
+        private async void TableAlert_Load(object sender, EventArgs e)
         {
             List<AlertHistory>? list = DALAlertHistory.GetAllAlertHistory();
             List<Alert>? list2 = new List<Alert>();
@@ -40,7 +40,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             DataGridViewColumn GanThe = new DataGridViewTextBoxColumn();
             GanThe.HeaderText = "Gắn thẻ";
             GanThe.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DataGridViewColumn ngay= new DataGridViewTextBoxColumn();
+            DataGridViewColumn ngay = new DataGridViewTextBoxColumn();
             ngay.HeaderText = "Ngày";
             ngay.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
@@ -74,6 +74,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
             LoadFormThongKe(list2);
+
+            await plc.Open();
+
         }
 
         void LoadFormThongKe(List<Alert>? list)
@@ -88,7 +91,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             dataGridView1.Rows.Clear();
 
 
-            if (list != null && list.Count>0)
+            if (list != null && list.Count > 0)
             {
                 foreach (Alert alert in list.ToList())
                 {
@@ -116,7 +119,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 {
                     row.DefaultCellStyle.BackColor = Color.Crimson;
                 }
-                changeColor = !changeColor; 
+                changeColor = !changeColor;
             }
         }
 
@@ -148,16 +151,13 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
             // update data
             // Long running operation
-            if(await plc.Open() == 0)
-            {
-                List<Alert>? list = await plc.GetListDataAlertTrue();
-                if (list != null && list.Count > 0)
-                {
-                    LoadFormThongKe(list);
-                }
-                await plc.Close();
 
+            List<Alert>? list = await plc.GetListDataAlertTrue();
+            if (list != null && list.Count > 0)
+            {
+                LoadFormThongKe(list);
             }
+
             if (timer != null)
             {
                 timer.Change(Math.Max(0, TIME_INTERVAL_IN_MILLISECONDS - watch.ElapsedMilliseconds), Timeout.Infinite);
@@ -181,9 +181,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 this.timer.Change(Timeout.Infinite, Timeout.Infinite);
                 timer.Dispose();
                 timer = null;
-
-                timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
             }
+            timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+
             this.Enabled = true;
         }
 
