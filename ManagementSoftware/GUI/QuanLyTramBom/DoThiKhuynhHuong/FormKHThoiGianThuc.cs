@@ -158,7 +158,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     if (item.Number == 1)
                     {
                         series1 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series1.Style.Border.Width = 5;
+                        series1.Style.Border.Width = 1;
                         series1.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series1.Tag = item.Max;
                         series1.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
@@ -168,7 +168,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     else if (item.Number == 2)
                     {
                         series2 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series2.Style.Border.Width = 5;
+                        series2.Style.Border.Width = 1;
                         series2.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series2.Tag = item.Max;
                         series2.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
@@ -179,7 +179,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     else if (item.Number == 3)
                     {
                         series3 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series3.Style.Border.Width = 5;
+                        series3.Style.Border.Width = 1;
                         series3.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series3.Tag = item.Max;
                         series3.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
@@ -190,7 +190,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     else if (item.Number == 4)
                     {
                         series4 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series4.Style.Border.Width = 5;
+                        series4.Style.Border.Width = 1;
                         series4.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series4.Tag = item.Max;
                         series4.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
@@ -201,7 +201,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     else if (item.Number == 5)
                     {
                         series5 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series5.Style.Border.Width = 5;
+                        series5.Style.Border.Width = 1;
                         series5.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series5.Tag = item.Max;
                         series5.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
@@ -212,7 +212,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     else if (item.Number == 6)
                     {
                         series6 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series6.Style.Border.Width = 5;
+                        series6.Style.Border.Width = 1;
                         series6.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series6.Tag = item.Max;
                         series6.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
@@ -223,7 +223,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     else if (item.Number == 7)
                     {
                         series7 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series7.Style.Border.Width = 5;
+                        series7.Style.Border.Width = 1;
                         series7.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series7.Tag = item.Max;
                         series7.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));
@@ -234,7 +234,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                     else if (item.Number == 8)
                     {
                         series8 = new ChartSeries(item.TinHieu, ChartSeriesType.Line);
-                        series8.Style.Border.Width = 5;
+                        series8.Style.Border.Width = 1;
                         series8.PointsToolTipFormat = "{3} " + item.TinHieu + " : {4} " + item.DonVi;
                         series8.Tag = item.Max;
                         series8.Style.Interior = new BrushInfo(PatternStyle.None, Color.Red, Color.FromName(item.Color));

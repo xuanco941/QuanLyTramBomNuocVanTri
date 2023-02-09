@@ -130,6 +130,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
 
         private void FormLuuTruLoi_Load(object sender, EventArgs e)
         {
+            dataGridView1.ReadOnly = true;
+
             DataGridViewColumn STT = new DataGridViewTextBoxColumn();
             STT.HeaderText = "STT";
             DataGridViewColumn GanThe = new DataGridViewTextBoxColumn();

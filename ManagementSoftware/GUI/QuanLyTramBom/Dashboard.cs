@@ -162,10 +162,8 @@ namespace QuanLyTramBom
 
         private void buttonBangLoi_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
             TableAlert tb = new TableAlert();
             tb.ShowDialog();
-            this.Enabled = true;
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)

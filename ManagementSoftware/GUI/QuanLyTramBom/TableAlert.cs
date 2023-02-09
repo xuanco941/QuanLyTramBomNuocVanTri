@@ -126,7 +126,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         async Task taskDelete()
         {
             DALAlertHistory.DeleteAllAlertHistory();
-            dataGridView1.DataSource = null;
         }
 
         private async void TableAlert_FormClosing(object sender, FormClosingEventArgs e)
@@ -170,21 +169,28 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         System.Threading.Timer timer;
         int TIME_INTERVAL_IN_MILLISECONDS = 0;
+
+        bool checkbtnClear = false;
         private async void buttonClear_Click_1(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
 
-            this.Enabled = false;
-            await taskDelete();
-            if (timer != null)
+            if (checkbtnClear == false)
             {
-                this.timer.Change(Timeout.Infinite, Timeout.Infinite);
-                timer.Dispose();
-                timer = null;
-            }
-            timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+                checkbtnClear = true;
 
-            this.Enabled = true;
+                await taskDelete();
+                if (timer != null)
+                {
+                    this.timer.Change(Timeout.Infinite, Timeout.Infinite);
+                    timer.Dispose();
+                    timer = null;
+                }
+                timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
+
+            }
+
+            
         }
 
     }

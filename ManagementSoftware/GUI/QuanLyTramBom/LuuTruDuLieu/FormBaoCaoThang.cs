@@ -483,6 +483,8 @@ namespace QuanLyTramBom
 
         private void FormBaoCaoThang_Load(object sender, EventArgs e)
         {
+            dataGridView1.ReadOnly = true;
+
             dateTimePicker1.Value = DateTime.Now;
             checkBoxBom1.Checked = true;
             checkBoxBom2.Checked = true;

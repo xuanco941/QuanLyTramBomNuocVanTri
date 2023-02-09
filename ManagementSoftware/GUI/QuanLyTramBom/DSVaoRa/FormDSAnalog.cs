@@ -31,6 +31,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.DSVaoRa
 
         private async void FormDSAnalog_Load(object sender, EventArgs e)
         {
+            dataGridView1.ReadOnly = true;
+
             await plcAnalog.Open();
 
             DataGridViewProgressColumn columnProgress = new DataGridViewProgressColumn();

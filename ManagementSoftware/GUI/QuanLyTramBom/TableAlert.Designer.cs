@@ -113,6 +113,8 @@
             this.ClientSize = new System.Drawing.Size(1443, 755);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonClear);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TableAlert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bảng lỗi";

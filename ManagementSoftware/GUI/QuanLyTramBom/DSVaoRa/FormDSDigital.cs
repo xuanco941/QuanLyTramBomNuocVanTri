@@ -159,6 +159,8 @@ namespace QuanLyTramBom
 
         private async void FormDSDigital_Load(object sender, EventArgs e)
         {
+            dataGridView1.ReadOnly = true;
+
             await plcDigital.Open();
             CreateColumn();
 
