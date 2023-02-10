@@ -192,24 +192,12 @@ namespace QuanLyTramBom
                     f.Dispose();
 
                 }
-                ToanCanhTramBom form = new ToanCanhTramBom();
-                form.TopLevel = false;
-                panelContentToanCanh.Controls.Add(form);
-                form.Dock = DockStyle.Fill;
-                form.FormBorderStyle = FormBorderStyle.None;
-                form.Show();
+                formToanCanh.StartTimer();
 
             }
             else if (e.TabPage == tabPage2)
             {
-                foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
-                {
-                    f.Enabled = false;
-
-                    f.Close();
-                    f.Dispose();
-
-                }
+                formToanCanh.StopTimer();
                 foreach (FormQuanLyLuuTruDuLieu f in tabPage3.Controls)
                 {
                     f.Enabled = false;
@@ -236,14 +224,8 @@ namespace QuanLyTramBom
             }
             else if (e.TabPage == tabPage3)
             {
-                foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
-                {
-                    f.Enabled = false;
+                formToanCanh.StopTimer();
 
-                    f.Close();
-                    f.Dispose();
-
-                }
                 foreach (FormKHThoiGianThuc f in tabPage2.Controls)
                 {
                     f.Enabled = false;
@@ -270,14 +252,8 @@ namespace QuanLyTramBom
             }
             else if (e.TabPage == tabPage4)
             {
-                foreach (ToanCanhTramBom f in panelContentToanCanh.Controls)
-                {
-                    f.Enabled = false;
+                formToanCanh.StopTimer();
 
-                    f.Close();
-                    f.Dispose();
-
-                }
                 foreach (FormKHThoiGianThuc f in tabPage2.Controls)
                 {
                     f.Enabled = false;
@@ -360,17 +336,19 @@ namespace QuanLyTramBom
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-
+        ToanCanhTramBom formToanCanh;
         private async void Dashboard_Load(object sender, EventArgs e)
         {
 
 
-            ToanCanhTramBom formToanCanh = new ToanCanhTramBom();
+            formToanCanh = new ToanCanhTramBom();
             formToanCanh.TopLevel = false;
             panelContentToanCanh.Controls.Add(formToanCanh);
             formToanCanh.Dock = DockStyle.Fill;
             formToanCanh.FormBorderStyle = FormBorderStyle.None;
             formToanCanh.Show();
+
+            formToanCanh.StartTimer();
 
             await plcAlert.Open();
 

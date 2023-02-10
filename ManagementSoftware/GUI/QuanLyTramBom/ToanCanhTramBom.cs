@@ -49,14 +49,14 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         }
 
 
-        System.Threading.Timer timer1;
-        System.Threading.Timer timer2;
+        System.Threading.Timer? timer1 = null;
+        System.Threading.Timer? timer2 = null;
 
         //int TIME_INTERVAL_Analog = 1000;
         int TIME_INTERVAL_IN_MILLISECONDS = 0;
 
 
-        
+
         private async void Callback1(Object state)
         {
             Stopwatch watch = new Stopwatch();
@@ -163,17 +163,36 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         private async void ToanCanhTramBom_Load(object sender, EventArgs e)
         {
-            if (await plcAnalog.Open() == 0)
+            await plcAnalog.Open();
+            await plcDigital.Open();
+        }
+
+
+        public void StartTimer()
+        {
+            if(timer1==null && timer2 == null)
             {
                 timer1 = new System.Threading.Timer(Callback1, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
-            }
-            if (await plcDigital.Open() == 0)
-            {
                 timer2 = new System.Threading.Timer(Callback2, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
             }
 
         }
 
+        public void StopTimer()
+        {
+            if (timer1 != null)
+            {
+                this.timer1.Change(Timeout.Infinite, Timeout.Infinite);
+                timer1.Dispose();
+                timer1 = null;
+            }
+            if (timer2 != null)
+            {
+                this.timer2.Change(Timeout.Infinite, Timeout.Infinite);
+                timer2.Dispose();
+                timer2 = null;
+            }
+        }
 
 
 
@@ -1451,9 +1470,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         void CheckColorVan1(Digital? M10125, Digital? M10124, Digital? M10122, Digital? M10123)
         {
 
-            
+
             //đỏ tím
-             if (M10122 != null && M10122.TrangThai == true)
+            if (M10122 != null && M10122.TrangThai == true)
             {
                 Van1DoTim();
             }
@@ -1532,7 +1551,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             {
                 Van2DoTim();
             }
-            
+
             //xanh tím
             else if (M10172 != null && M10172.TrangThai == true)
             {
@@ -1594,9 +1613,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         void CheckColorVan3(Digital? M10223, Digital? M10222, Digital? M10220, Digital? M10221)
         {
-           
+
             //đỏ tím
-             if (M10220 != null && M10220.TrangThai == true)
+            if (M10220 != null && M10220.TrangThai == true)
             {
                 Van3DoTim();
             }
@@ -1665,9 +1684,9 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
         void CheckColorVan4(Digital? M10272, Digital? M10271, Digital? M10269, Digital? M10270)
         {
-            
+
             //đỏ tím
-             if (M10269 != null && M10269.TrangThai == true)
+            if (M10269 != null && M10269.TrangThai == true)
             {
                 Van4DoTim();
             }
