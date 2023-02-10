@@ -389,36 +389,42 @@ namespace QuanLyTramBom
 
         private void chartControl1_MouseMove_1(object sender, MouseEventArgs e)
         {
-            ChartPoint point = this.chartControl1.ChartArea.GetValueByPoint(new Point(e.X, e.Y));
+            var selectedArea = new Rectangle(55, 100, 1827, 495);
 
-            //string text = "Result of method GetValueByPoint - {" + point.X.ToString() + "," + point.YValues[0].ToString() + "}";
-            Point clickPoint = new Point(e.X, e.Y);
-            string text = "";
-
-            date = DateTime.Now;
-
-            try
+            if (selectedArea.Contains(e.Location))
             {
-                date = this.chartControl1.ChartArea.GetValueByPoint(clickPoint).DateX;
-                text = date.ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
-            }
-            catch
-            {
+                ChartPoint point = this.chartControl1.ChartArea.GetValueByPoint(new Point(e.X, e.Y));
+
+                //string text = "Result of method GetValueByPoint - {" + point.X.ToString() + "," + point.YValues[0].ToString() + "}";
+                Point clickPoint = new Point(e.X, e.Y);
+                string text = "";
+
+                date = DateTime.Now;
+
                 try
                 {
-                    text = DateTime.FromOADate(point.X).ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
-                    date = DateTime.FromOADate(point.X);
+                    date = this.chartControl1.ChartArea.GetValueByPoint(clickPoint).DateX;
+                    text = date.ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
                 }
                 catch
                 {
-                    text = "";
-                    date = DateTime.Now;
+                    try
+                    {
+                        text = DateTime.FromOADate(point.X).ToString("HH:mm:ss dd/MM/yyyy") + " : " + String.Format("{0:0.00}", Math.Round(point.YValues[0], 2, MidpointRounding.ToPositiveInfinity));
+                        date = DateTime.FromOADate(point.X);
+                    }
+                    catch
+                    {
+                        text = "";
+                        date = DateTime.Now;
+                    }
+                }
+                finally
+                {
+                    toolTip1.SetToolTip(chartControl1, text);
                 }
             }
-            finally
-            {
-                toolTip1.SetToolTip(chartControl1, text);
-            }
+
 
         }
 
