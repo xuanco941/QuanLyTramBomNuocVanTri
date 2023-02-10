@@ -180,12 +180,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
                 checkbtnClear = true;
 
                 await taskDelete();
-                if (timer != null)
-                {
-                    this.timer.Change(Timeout.Infinite, Timeout.Infinite);
-                    timer.Dispose();
-                    timer = null;
-                }
                 timer = new System.Threading.Timer(Callback, null, TIME_INTERVAL_IN_MILLISECONDS, Timeout.Infinite);
 
             }

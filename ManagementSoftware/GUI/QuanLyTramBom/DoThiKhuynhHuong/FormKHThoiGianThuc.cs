@@ -16,7 +16,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace ManagementSoftware.GUI.QuanLyTramBom
 {
@@ -357,14 +356,21 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
 
 
-       
+
 
         DateTime date = DateTime.Now;
-       
+
+
+        private void chartControl1_ChartRegionClick(object sender, ChartRegionMouseEventArgs e)
+        {
+            foreach (FormItemChuThich i in panelChuThich.Controls)
+            {
+                i.UpdateLabel(date);
+            }
+        }
 
         private void chartControl1_MouseMove(object sender, MouseEventArgs e)
         {
-
             ChartPoint point = this.chartControl1.ChartArea.GetValueByPoint(new Point(e.X, e.Y));
 
             //string text = "Result of method GetValueByPoint - {" + point.X.ToString() + "," + point.YValues[0].ToString() + "}";
@@ -394,15 +400,6 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             finally
             {
                 toolTip1.SetToolTip(chartControl1, text);
-            }
-
-        }
-
-        private void chartControl1_ChartRegionClick(object sender, ChartRegionMouseEventArgs e)
-        {
-            foreach (FormItemChuThich i in panelChuThich.Controls)
-            {
-                i.UpdateLabel(date);
             }
         }
     }
