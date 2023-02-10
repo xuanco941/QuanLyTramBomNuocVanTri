@@ -64,7 +64,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
             this.chartControl1.PrimaryXAxis.DateTimeInterval.Type = ChartDateTimeIntervalType.Minutes;
             DateTime end = DateTime.Now;
             DateTime start = end.AddHours(-1);
-            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 3.5, ChartDateTimeIntervalType.Minutes);
+            this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(start, end, 4, ChartDateTimeIntervalType.Minutes);
 
             this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yyyy";
 
