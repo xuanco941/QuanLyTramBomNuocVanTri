@@ -68,6 +68,43 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
 
             this.chartControl1.PrimaryXAxis.DateTimeFormat = "HH:mm:ss dd/MM/yyyy";
 
+
+
+
+
+
+
+
+
+
+
+            this.chartControl1.Trackball.Visible = true;
+            this.chartControl1.Trackball.DisplayMode = TrackballTooltipDisplayMode.Float;
+
+            this.chartControl1.Trackball.Line.Color = Color.FromArgb(128, 0, 0);
+
+            this.chartControl1.Trackball.Line.Width = 3;
+
+            this.chartControl1.Trackball.Symbol.Shape = ChartSymbolShape.Circle;
+
+
+            this.chartControl1.Trackball.Symbol.Border.Width = 1;
+
+            this.chartControl1.Trackball.Symbol.Border.Color = Color.White;
+
+            this.chartControl1.Trackball.Symbol.Size = new Size(7, 7);
+
+            this.chartControl1.Trackball.Tooltip.YValueFormat = "0.00";
+
+            ChartFontInfo c = new ChartFontInfo();
+            c.FontFamilyTemplate = FontFamily.GenericSerif;
+            c.FontStyle = FontStyle.Regular;
+            c.Size = 10;
+
+            this.chartControl1.Trackball.Tooltip.Font = c;
+
+
+
         }
 
 
@@ -373,6 +410,8 @@ namespace ManagementSoftware.GUI.QuanLyTramBom
         {
             if (e.X >= 43 && e.X <= 1878 && e.Y >= 100 && e.Y <= 719)
             {
+
+
                 ChartPoint point = this.chartControl1.ChartArea.GetValueByPoint(new Point(e.X, e.Y));
 
                 //string text = "Result of method GetValueByPoint - {" + point.X.ToString() + "," + point.YValues[0].ToString() + "}";

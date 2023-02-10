@@ -58,6 +58,43 @@ namespace QuanLyTramBom
             typeInterval = ChartDateTimeIntervalType.Hours;
             numberInterval = 6;
 
+
+
+
+
+
+
+
+            this.chartControl1.Trackball.Visible = true;
+            this.chartControl1.Trackball.DisplayMode = TrackballTooltipDisplayMode.Float;
+
+            this.chartControl1.Trackball.Line.Color = Color.FromArgb(128, 0, 0);
+
+            this.chartControl1.Trackball.Line.Width = 3;
+
+            this.chartControl1.Trackball.Symbol.Shape = ChartSymbolShape.Circle;
+
+
+            this.chartControl1.Trackball.Symbol.Border.Width = 1;
+
+            this.chartControl1.Trackball.Symbol.Border.Color = Color.White;
+
+            this.chartControl1.Trackball.Symbol.Size = new Size(7, 7);
+
+            this.chartControl1.Trackball.Tooltip.YValueFormat = "0.00";
+
+            ChartFontInfo c = new ChartFontInfo();
+            c.FontFamilyTemplate = FontFamily.GenericSerif;
+            c.FontStyle = FontStyle.Regular;
+            c.Size = 10;
+
+            this.chartControl1.Trackball.Tooltip.Font = c;
+
+
+
+
+
+
             UpdateChart();
 
         }
