@@ -24,18 +24,29 @@ namespace QuanLyTramBom
             dataGridView1.RowTemplate.Height = 35;
 
         }
-        List<BaoCao> list;
+        List<BaoCao>? list;
         DateTime d;
 
-        void SearchData()
+        void SearchData(bool checkReload)
         {
+
+
+
             dataGridView1.DataSource = null;
             // d là dữ liệu đầu vào
             d = dateTimePicker1.Value;
             //real Date thuong la no tu lay giờ hiện tại của minh
             // 
+            if (checkReload == true)
+            {
+                list = DALBaoCaoV2.BaoCaoNgay(d);
+            }
 
-            list = DALBaoCao.BaoCaoNgay(d);
+
+            if (list == null)
+            {
+                return;
+            }
 
             DataTable dt = new DataTable();
             dt.Columns.Add("THỜI GIAN");
@@ -241,7 +252,7 @@ namespace QuanLyTramBom
 
         private void btnSerachBox_Click_1(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(true);
 
         }
 
@@ -491,29 +502,29 @@ namespace QuanLyTramBom
             checkBoxBom3.Checked = true;
             checkBoxBom4.Checked = true;
 
-            SearchData();
+            SearchData(true);
         }
 
         private void checkBoxBom2_CheckedChanged(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(false);
         }
 
         private void checkBoxBom1_CheckedChanged(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(false);
 
         }
 
         private void checkBoxBom3_CheckedChanged(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(false);
 
         }
 
         private void checkBoxBom4_CheckedChanged(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(false);
 
         }
     }

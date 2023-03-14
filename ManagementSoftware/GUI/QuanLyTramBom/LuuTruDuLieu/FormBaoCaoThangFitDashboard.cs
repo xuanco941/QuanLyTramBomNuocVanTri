@@ -28,10 +28,11 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
 
         }
         DateTime d;
-        List<BaoCao> list;
+        List<BaoCao>? list;
 
-        void SearchData()
+        void SearchData(bool checkReload)
         {
+
             dataGridView1.DataSource = null;
             // d là dữ liệu đầu vào
             d = dateTimePicker1.Value;
@@ -39,7 +40,18 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
             // nên t bảo bạn nếu báo cáo ngày thì chuyển dữ liệu đầu vào về 0 giờ thì mới lấy đc đủ 24 tiếng, báo cáo tháng với năm thì kh ảnh hưởng
             // 
 
-            list = DALBaoCao.BaoCaoThang(d);
+            if (checkReload == true)
+            {
+                list = DALBaoCaoV2.BaoCaoThang(d);
+            }
+
+
+
+            if (list == null)
+            {
+                return;
+            }
+
 
             DataTable dt = new DataTable();
             dt.Columns.Add("THỜI GIAN");
@@ -246,7 +258,7 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
 
         private void btnSerachBox_Click_1(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(true);
         }
         int z = 0;
 
@@ -489,29 +501,29 @@ namespace ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu
             checkBoxBom3.Checked = true;
             checkBoxBom4.Checked = true;
 
-            SearchData();
+            SearchData(true);
         }
 
         private void checkBoxBom2_CheckedChanged(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(false);
         }
 
         private void checkBoxBom3_CheckedChanged(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(false);
 
         }
 
         private void checkBoxBom1_CheckedChanged(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(false);
 
         }
 
         private void checkBoxBom4_CheckedChanged(object sender, EventArgs e)
         {
-            SearchData();
+            SearchData(false);
 
         }
     }
