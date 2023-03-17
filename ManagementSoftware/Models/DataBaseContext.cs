@@ -24,7 +24,7 @@ namespace ManagementSoftware.Models
 
         public DbSet<DateInitDatabase> DateInitDatabases { get; set; }
 
-
+        public DbSet<DataBaoCao> DataBaoCaos { get; set; }
 
 
         // Tạo ILoggerFactory 
@@ -77,6 +77,11 @@ namespace ManagementSoftware.Models
 
             //analog
             modelBuilder.Entity<Analog>(entity =>
+            {
+                entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
+            });
+            //data bao cao
+            modelBuilder.Entity<DataBaoCao>(entity =>
             {
                 entity.Property(e => e.ThoiGian).HasDefaultValueSql("(getdate())");
             });

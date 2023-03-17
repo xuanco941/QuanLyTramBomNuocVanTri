@@ -82,7 +82,11 @@ namespace ManagementSoftware
 
             }).Start();
 
+            new Thread(() =>
+            {
+                new DataBaoCaoSave().StartTimer(60000);
 
+            }).Start();
 
 
 

@@ -12,6 +12,22 @@ namespace ManagementSoftware.DAL
 {
     public class DALBaoCaoV2
     {
+        public static async Task AddRange(List<DataBaoCao> list)
+        {
+            DataBaseContext dbContext = new DataBaseContext();
+            try
+            {
+                await dbContext.DataBaoCaos.AddRangeAsync(list);
+
+            }
+            catch
+            {
+
+            }
+            await dbContext.SaveChangesAsync();
+        }
+
+
         private const string ganTheMucNuocBeHut = "CP2_AI011C00";
         private const string ganTheMucNuocBeXa = "CP2_AI012C00";
         private const string ganTheTongSoGioBom1Chay = "CP2_AI199C00";
@@ -42,10 +58,10 @@ namespace ManagementSoftware.DAL
                 while (dateTime.Date != endDate.Date)
                 {
                     DateTime nextDateTime = dateTime.AddHours(1);
-                    var analogs = dbContext.Analogs.AsNoTracking().Where(a => dateTime <= a.ThoiGian && nextDateTime >= a.ThoiGian)
+                    var analogs = dbContext.DataBaoCaos.AsNoTracking().Where(a => dateTime <= a.ThoiGian && nextDateTime >= a.ThoiGian)
                         .Select(a => new { a.GanThe, a.GiaTriDong }).ToList();
 
-                    var analogsBefore = dbContext.Analogs.AsNoTracking().Where(a => dateTime.AddHours(-1) <= a.ThoiGian && dateTime >= a.ThoiGian)
+                    var analogsBefore = dbContext.DataBaoCaos.AsNoTracking().Where(a => dateTime.AddHours(-1) <= a.ThoiGian && dateTime >= a.ThoiGian)
                         .Select(a => new { a.GanThe, a.GiaTriDong }).ToList();
 
 
@@ -191,10 +207,10 @@ namespace ManagementSoftware.DAL
                 while (dateTime.Date != endDate.Date)
                 {
                     DateTime nextDateTime = dateTime.AddDays(1);
-                    var analogs = dbContext.Analogs.AsNoTracking().Where(a => dateTime <= a.ThoiGian && nextDateTime >= a.ThoiGian)
+                    var analogs = dbContext.DataBaoCaos.AsNoTracking().Where(a => dateTime <= a.ThoiGian && nextDateTime >= a.ThoiGian)
                         .Select(a => new { a.GanThe, a.GiaTriDong }).ToList();
 
-                    var analogsBefore = dbContext.Analogs.AsNoTracking().Where(a => dateTime.AddDays(-1) <= a.ThoiGian && dateTime >= a.ThoiGian)
+                    var analogsBefore = dbContext.DataBaoCaos.AsNoTracking().Where(a => dateTime.AddDays(-1) <= a.ThoiGian && dateTime >= a.ThoiGian)
                         .Select(a => new { a.GanThe, a.GiaTriDong }).ToList();
 
 
@@ -339,10 +355,10 @@ namespace ManagementSoftware.DAL
                 while (dateTime.Date != endDate.Date)
                 {
                     DateTime nextDateTime = dateTime.AddMonths(1);
-                    var analogs = dbContext.Analogs.AsNoTracking().Where(a => dateTime <= a.ThoiGian && nextDateTime >= a.ThoiGian)
+                    var analogs = dbContext.DataBaoCaos.AsNoTracking().Where(a => dateTime <= a.ThoiGian && nextDateTime >= a.ThoiGian)
                         .Select(a => new { a.GanThe, a.GiaTriDong }).ToList();
 
-                    var analogsBefore = dbContext.Analogs.AsNoTracking().Where(a => dateTime.AddMonths(-1) <= a.ThoiGian && dateTime >= a.ThoiGian)
+                    var analogsBefore = dbContext.DataBaoCaos.AsNoTracking().Where(a => dateTime.AddMonths(-1) <= a.ThoiGian && dateTime >= a.ThoiGian)
                         .Select(a => new { a.GanThe, a.GiaTriDong }).ToList();
 
 
