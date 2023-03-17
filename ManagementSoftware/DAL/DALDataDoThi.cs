@@ -90,7 +90,26 @@ namespace ManagementSoftware.DAL
             {
                 if (checkAnalogOrDigital > 1)
                 {
-                    List<Analog> analogs = dbContext.Analogs.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
+                    //List<Analog> analogs = dbContext.Analogs.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
+                    int maxDataPoints = 6000;
+                    List<Analog> analogs = dbContext.Analogs
+                        .Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu))
+                        .OrderBy(x => x.ThoiGian)
+                        .ToList();
+
+                    if (analogs.Count > maxDataPoints)
+                    {
+                        double step = (double)analogs.Count / maxDataPoints;
+                        List<Analog> filteredAnalogs = new List<Analog>();
+                        for (double i = 0; i < analogs.Count; i += step)
+                        {
+                            filteredAnalogs.Add(analogs[(int)Math.Round(i)]);
+                        }
+                        analogs = filteredAnalogs;
+                    }
+
+
+                    //
                     if (analogs != null && analogs.Count > 0)
                     {
                         foreach (var item in analogs)

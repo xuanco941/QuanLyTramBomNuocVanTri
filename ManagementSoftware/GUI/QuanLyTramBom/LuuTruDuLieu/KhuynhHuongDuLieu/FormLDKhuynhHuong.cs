@@ -4,7 +4,6 @@ using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using Syncfusion.Drawing;
 using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.XPS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -279,15 +278,46 @@ namespace QuanLyTramBom
         }
 
 
-        async Task wait(ChartSeries series)
+        async Task waitClearSeries()
         {
-            series.Points.Clear();
+
+            if (series1 != null)
+            {
+                series1.Points.Clear();
+            }
+            if (series2 != null)
+            {
+                series2.Points.Clear();
+            }
+            if (series3 != null)
+            {
+                series3.Points.Clear();
+            }
+            if (series4 != null)
+            {
+                series4.Points.Clear();
+            }
+            if (series5 != null)
+            {
+                series5.Points.Clear();
+            }
+            if (series6 != null)
+            {
+                series6.Points.Clear();
+            }
+            if (series7 != null)
+            {
+                series7.Points.Clear();
+            }
+            if (series8 != null)
+            {
+                series8.Points.Clear();
+            }
         }
         async Task SetValueSeries(ChartSeries series)
         {
-            await wait(series);
             double a = (double)series.Tag;
-            List<DataDoThi>? list = new DALDataDoThi().GetListDataHistory(series.Text, a, timeStart, timeEnd);
+            List<DataDoThi>? list = await Task.Run(() => new DALDataDoThi().GetListDataHistory(series.Text, a, timeStart, timeEnd));
             if (list != null && list.Count > 0)
             {
                 foreach (DataDoThi item in list)
@@ -295,10 +325,17 @@ namespace QuanLyTramBom
                     series.Points.Add(item.time, item.value);
                 }
             }
-            chartControl1.Series.Add(series);
 
+
+            if (IsHandleCreated)
+            {
+                BeginInvoke(() =>
+                {
+                    chartControl1.Series.Add(series);
+                });
+                return;
+            }
         }
-
 
 
 
@@ -345,47 +382,87 @@ namespace QuanLyTramBom
             this.chartControl1.PrimaryXAxis.DateTimeRange = new ChartDateTimeRange(timeStart, timeEnd, numberInterval, typeInterval);
             this.chartControl1.PrimaryXAxis.IntervalType = typeInterval;
 
+            await waitClearSeries();
 
+
+            List<Task> tasks = new List<Task>();
 
             if (series1 != null)
             {
-                await SetValueSeries(series1);
+                tasks.Add(SetValueSeries(series1));
             }
             if (series2 != null)
             {
-                await SetValueSeries(series2);
+                tasks.Add(SetValueSeries(series2));
             }
             if (series3 != null)
             {
-                await SetValueSeries(series3);
+                tasks.Add(SetValueSeries(series3));
             }
             if (series4 != null)
-            {
-                await SetValueSeries(series4);
+            {             
+                tasks.Add(SetValueSeries(series4));
             }
             if (series5 != null)
             {
-                await SetValueSeries(series5);
+                tasks.Add(SetValueSeries(series5));
             }
             if (series6 != null)
             {
-                await SetValueSeries(series6);
+                tasks.Add(SetValueSeries(series6));
             }
             if (series7 != null)
             {
-                await SetValueSeries(series7);
+                tasks.Add(SetValueSeries(series7));
             }
             if (series8 != null)
             {
-                await SetValueSeries(series8);
+                tasks.Add(SetValueSeries(series8));
             }
+
+            await Task.WhenAll(tasks);
+
             this.Enabled = true;
 
         }
 
+        string txtType = "1 min";
         private void button1_Click_1(object sender, EventArgs e)
         {
-            SetTime();
+            if(timeStart==dateTimePickerTuNgay.Value && timeEnd == dateTimePickerDenNgay.Value && txtType == comboBoxTimeInterval.Text)
+            {
+                return;
+            }
+
+            timeStart = dateTimePickerTuNgay.Value;
+            timeEnd = dateTimePickerDenNgay.Value;
+
+
+            if (comboBoxTimeInterval.Text == "1 min")
+            {
+                typeInterval = ChartDateTimeIntervalType.Minutes;
+                txtType = "1 min";
+            }
+            else if (comboBoxTimeInterval.Text == "1 hour")
+            {
+                typeInterval = ChartDateTimeIntervalType.Hours;
+                txtType = "1 hour";
+            }
+            else if (comboBoxTimeInterval.Text == "1 day")
+            {
+                typeInterval = ChartDateTimeIntervalType.Days;
+                txtType = "1 day";
+            }
+            else if (comboBoxTimeInterval.Text == "1 month")
+            {
+                typeInterval = ChartDateTimeIntervalType.Months;
+                txtType = "1 month";
+            }
+            else if (comboBoxTimeInterval.Text == "1 year")
+            {
+                typeInterval = ChartDateTimeIntervalType.Years;
+                txtType = "1 year";
+            }
             UpdateChart();
         }
 
@@ -416,7 +493,6 @@ namespace QuanLyTramBom
 
 
         }
-
 
 
 
@@ -493,6 +569,9 @@ namespace QuanLyTramBom
             DateTime now = DateTime.Now;
             dateTimePickerTuNgay.Value = now.AddDays(-1);
             dateTimePickerDenNgay.Value = now.AddDays(1);
+
+            timeStart = dateTimePickerTuNgay.Value;
+            timeEnd = dateTimePickerDenNgay.Value;
         }
 
         private void comboBoxTimeInterval_SelectedIndexChanged(object sender, EventArgs e)

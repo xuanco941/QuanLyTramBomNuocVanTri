@@ -84,7 +84,7 @@ namespace ManagementSoftware
 
             new Thread(() =>
             {
-                new DataBaoCaoSave().StartTimer(60000);
+                new DataBaoCaoSave().StartTimer(90000);
 
             }).Start();
 
