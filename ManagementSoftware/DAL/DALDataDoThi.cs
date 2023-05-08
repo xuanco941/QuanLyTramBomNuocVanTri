@@ -91,7 +91,7 @@ namespace ManagementSoftware.DAL
                 if (checkAnalogOrDigital > 1)
                 {
                     //List<Analog> analogs = dbContext.Analogs.Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu)).ToList();
-                    int maxDataPoints = 10000;
+                    int maxDataPoints = 8000;
                     List<Analog> analogs = dbContext.Analogs
                         .Where(x => (start <= x.ThoiGian && end >= x.ThoiGian) && (x.TinHieu == tinHieu))
                         .OrderBy(x => x.ThoiGian)

@@ -1,6 +1,4 @@
-﻿using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.KhuynhHuongDuLieu;
-using ManagementSoftware.Models;
-using ManagementSoftware.Models.TramBomNuoc;
+﻿using ManagementSoftware.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +30,6 @@ namespace ManagementSoftware
         public const string USERS = "NV";
         public const string GROUPS = "GR";
         public const string ACTIVITIES = "A";
-
-        public static ClassDefaultH DefaultH { get; set; }
 
     }
 }
