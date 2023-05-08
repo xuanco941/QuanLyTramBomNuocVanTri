@@ -1,5 +1,7 @@
-﻿using ManagementSoftware.DAL;
+﻿using ManagementSoftware;
+using ManagementSoftware.DAL;
 using ManagementSoftware.GUI.QuanLyTramBom.DoThiKhuynhHuong;
+using ManagementSoftware.GUI.QuanLyTramBom.LuuTruDuLieu.KhuynhHuongDuLieu;
 using ManagementSoftware.Models.DuLieuMayPLC;
 using ManagementSoftware.Models.TramBomNuoc;
 using Syncfusion.Drawing;
@@ -275,6 +277,25 @@ namespace QuanLyTramBom
             }
 
 
+
+            Common.DefaultH = new ClassDefaultH();
+            Common.DefaultH.timeStart = dateTimePickerTuNgay.Value;
+            Common.DefaultH.timerEnd = dateTimePickerDenNgay.Value;
+            Common.DefaultH.typeInterval = typeInterval;
+            Common.DefaultH.textBoxTenKhuynhHuong = textBoxTenKhuynhHuong.Texts;
+            Common.DefaultH.textTimeI = comboBoxTimeInterval.Text;
+            Common.DefaultH.chartSeries1 = series1;
+            Common.DefaultH.chartSeries2 = series2;
+            Common.DefaultH.chartSeries3 = series3;
+            Common.DefaultH.chartSeries4 = series4;
+            Common.DefaultH.chartSeries5 = series5;
+            Common.DefaultH.chartSeries6 = series6;
+            Common.DefaultH.chartSeries7 = series7;
+            Common.DefaultH.chartSeries8 = series8;
+            Common.DefaultH.listXuHuong = this.listXuHuong;
+
+
+
         }
 
 
@@ -400,7 +421,7 @@ namespace QuanLyTramBom
                 tasks.Add(SetValueSeries(series3));
             }
             if (series4 != null)
-            {             
+            {
                 tasks.Add(SetValueSeries(series4));
             }
             if (series5 != null)
@@ -429,7 +450,7 @@ namespace QuanLyTramBom
         string txtType = "1 min";
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if(timeStart==dateTimePickerTuNgay.Value && timeEnd == dateTimePickerDenNgay.Value && txtType == comboBoxTimeInterval.Text)
+            if (timeStart == dateTimePickerTuNgay.Value && timeEnd == dateTimePickerDenNgay.Value && txtType == comboBoxTimeInterval.Text)
             {
                 return;
             }
@@ -572,6 +593,13 @@ namespace QuanLyTramBom
 
             timeStart = dateTimePickerTuNgay.Value;
             timeEnd = dateTimePickerDenNgay.Value;
+
+            if(Common.DefaultH != null)
+            {
+                SetDefault();
+            }
+
+
         }
 
         private void comboBoxTimeInterval_SelectedIndexChanged(object sender, EventArgs e)
@@ -584,5 +612,110 @@ namespace QuanLyTramBom
 
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // set Default
+        async void SetDefault()
+        {
+            if (Common.DefaultH.listXuHuong != null && Common.DefaultH.listXuHuong.Count > 0)
+            {
+                chartControl1.Series.Clear();
+
+                comboBoxTimeInterval.Text = Common.DefaultH.comboBoxTimeInterval;
+                textBoxTenKhuynhHuong.Texts = Common.DefaultH.textBoxTenKhuynhHuong;
+                dateTimePickerTuNgay.Value = Common.DefaultH.timeStart;
+                dateTimePickerDenNgay.Value = Common.DefaultH.timerEnd;
+                comboBoxTimeInterval.Text = Common.DefaultH.textTimeI;
+
+                series1 = Common.DefaultH.chartSeries1;
+                series2 = Common.DefaultH.chartSeries2;
+                series3 = Common.DefaultH.chartSeries3;
+                series4 = Common.DefaultH.chartSeries4;
+                series5 = Common.DefaultH.chartSeries5;
+                series6 = Common.DefaultH.chartSeries6;
+                series7 = Common.DefaultH.chartSeries7;
+                series8 = Common.DefaultH.chartSeries8;
+
+
+
+
+                List<FormItemChuThich> l = new List<FormItemChuThich>();
+                foreach (FormItemChuThich i in panelChuThich.Controls)
+                {
+                    l.Add(i);
+                }
+                if (l != null && l.Count > 0)
+                {
+                    await CloseFormItem(l);
+                }
+
+                foreach (var item in Common.DefaultH.listXuHuong)
+                {
+                    SetChuThich(item);
+                }
+            }
+
+
+
+
+            UpdateChart();
+        }
+
+
     }
+
+
+
+
+
+
+
+
+
+
 }
